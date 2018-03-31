@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<acteurs>
+    <acteur
+      siteweb="http://lafeintedelours.fr"
+      image="images/acteurs/feinte.jpg" 
+      nom="la Feinte de l'Ours"
+      type="Jeux de plateau"
+      desc="Faire découvrir aux visiteurs des jeux de société dans l'esprit de l'activité de la Feinte de l'Ours. Public : adulte ou famille (enfants accompagnés) "
+      horaire="14h-18h"
+    />
+    <acteur
+      siteweb="https://www.facebook.com/ApollineDanse"
+      image="images/animations/apolline.jpg" 
+      nom="Apolline"
+      type="Danse"
+      desc="Danseuse orientale et tribale : Spectacles Stages Cours Conférences / Fondatrice et directrice de la cie 'Apsaras' (tribal fusion) / Modèle dessin et photo / Performeuse. Mother de la Cie ATS 'Bohemian Spells' (à présent dissoute)"
+      horaire="15h"
+    />   
+    <acteur
+      siteweb="http://www.max-ollier.fr"
+      image="images/animations/max-ollier.jpg" 
+      nom="Max Ollier"
+      type="Déambulations intimistes"
+      desc="Un colporteur vous ouvre sa valise à chansons, en echange d'un souvenir! 'raconte moi Ta chanson et je te chanterai des histoires!'"
+      horaire="16h, 18h"
+    />   
+    <acteur
+      siteweb="https://www.facebook.com/pepsimpro"
+      image="images/animations/pepsimpro.jpg" 
+      nom="IMPRO PEP'S"
+      type="Match d'improvisation"
+      desc="Amitié, esprit d'équipe et bonne humeur sont les mots d'ordre de la troupe d'improvisation PEP'S !"
+      horaire="17h"
+    />   
+    <acteur
+	    siteweb="http://www.aissate.com"
+      image="images/animations/aissateba.jpg" 
+      nom="Aissate Ba"
+      type="Concert Afro Pop"
+      desc="Bercée dans une Afrique vosgienne, je chante en Peul dans la foret et en Francais sous l'arbre a palabres."
+      horaire="19h"
+    />   
+    <acteur
+      siteweb="http://venusdust.wixsite.com/venus-in-the-dust"
+      image="images/animations/venusinthedust.jpg" 
+      nom="Venus in the Dust"
+      type="Concert Rock"
+      desc="Entre textes à la poèsie singulière, et décharges électriques rythmées par des sonorités tribales envoûtantes, le groupe pratique un clair-obscur aux accents dark-wave, empruntant aussi bien aux ballades atmosphériques d'un Nick Cave, qu'aux expérimentations sensuelles et tourmentées de Chelsea Wolfe."
+      horaire="20h"
+    />   
+    <acteur
+      siteweb="https://www.facebook.com/lafonteband"
+      image="images/animations/lafonte.jpg" 
+      nom="La Fonte"
+      type="Concert Rock Folk"
+      desc="Ovni lorrain à découvrir"
+      horaire="21h"
+    />   
+    <acteur
+      siteweb="https://www.facebook.com/spuckakasludovic.richard"
+      image="images/animations/spuck.jpg" 
+      nom="Spuck"
+      type="DJ"
+      desc="Un vieux de la vieille, mais avec un brin de jeunesse éternel, il vous ouvrira les portes dune techno aux grooves inégalable 100 % vinyles !"
+      horaire="22h"
+    />   
+</acteurs>
+
