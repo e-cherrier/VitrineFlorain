@@ -1,0 +1,1295 @@
+﻿<?xml version="1.0" encoding="utf8"?>
+<?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
+<categories titre ="Liste des acteurs agréés au 15 février 2018" sstitre="Mise à jour du 15 février 2018 www.florain.fr pour la dernière version" comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert.">
+    <categorie type="Se nourrir">
+        <scat type="Épiceries">
+
+         <acteur
+           siteweb="www.lachouettebio.fr"
+           image="lachouette.jpg"
+           titre="La Chouette BIO"
+           bref="Magasin BIO"
+           type="Magasin BIO"
+           desc="Nous proposons une grande sélection de produits BIO en alimentaire et non alimentaire: fruits et légumes, épicerie sucrée et salée, produits en vrac, fromages à la coupe, pains, produits d'hygiène, cosmétiques, compléments alimentaires… et bien sûr des produits locaux !"
+           adresse="ZAC Grand Air 14, rue du bois, 54390 Frouard"
+           latitude="6.150376"
+           longitude="48.740646"
+           telephone="09 72 58 65 21"
+           message=""
+/>
+         <acteur
+           fete="oui"
+           siteweb="www.mrsimmsnancy.fr"
+           image="MrSimms.jpg"
+           titre="Mr Simms"
+	   code="-1"
+           type="Confiserie"
+           bref="Confiserie"
+           desc="Mr Simms fait redécouvrir les confiseries aux petits et grands gourmands. Des ateliers fabriquent depuis 1891 quelques unes des sucreries que vous trouverez chez Mr Simms. Nous les avons visité et avons salivé devant les chaudrons en cuivre remplis de sucre bouilli, et les chocolats préparés et emballés à la main pour ne vous rapporter que le meilleur ! Nous avons aussi pour vous des confiseries sans sucre, sans gluten, sans lactose et sans matière animale."
+           adresse="76 grande rue Nancy"
+           defi="Augmentation de l'offre de produits locaux"
+           latitude="6.178726"
+           longitude="48.697974"
+    />
+         <acteur
+           siteweb="www.lesmalicesdesuzette.fr"
+           image="LesMalicesDeSuzette.jpg"
+           titre="Malice de Suzette"
+	   code="2"
+           bref="Magasin de Producteurs"
+           type="Alimentation"
+           adresse="Dombasle"
+           desc="Les Malices de Suzette est une sorte de boutique 'Vivante',un concept 100% Local à Dombasle-sur-Meurthe. L'activité principale est la vente en boutique et en ligne de produits du terroir de producteurs régionaux et objets d'artisanat d'art Lorrains. Et surtout, au coeur de ce projet, l'idée est de créer du lien entre les habitants et les acteurs locaux grâce à la rencontre, l'échange et le partage par le biais d'atelier et événements organisés au sein du magasin."
+           latitude="6.34754419327"
+           longitude="48.6257821472"
+           telephone=""
+	/>
+            <acteur
+          siteweb="www.legoupilvert.fr"
+          image="biocoop.jpg"
+          titre="Biocoop Le Goupil Vert"
+	  code="3"
+          bref="Magasin BIO"
+          desc="Ouvert depuis janvier 2007, le magasin propose un grand choix alimentaire BIO, mais également des cosmétiques, un univers bébé, des articles pour la maison. C'est aussi un espace de vie, avec l'accueil d'associations et la mise à disposition d'une salle de réunion."
+          type="Alimentation"
+          comptoir="oui"
+          telephone="03 83 39 01 99"
+          latitude="6.20315551758"
+          longitude="48.68223421510"
+          adresse="34-38, rue Marcel Brot, Nancy"
+          defi="Bureau de change"
+    >
+    <h l="le lundi" t="14H00 - 19H00"/>
+    <h l="du mardi au jeudi" t="09H30 - 12H30"/>
+    <h l="" t="14H00 - 19H00"/>
+    <h l="le vendredi" t="09H30 - 19H00"/>
+    <h l="le samedi" t="09H00 - 19H00"/>
+    </acteur>
+     <acteur
+          siteweb="www.croc-us.fr"
+          image="crocus.jpg"
+	  code="3"
+          titre="Croc-Us"
+          comptoir="oui"
+          type="Alimentation"
+          bref="Magasin indépendant BIO"
+          desc="Epicerie / primeur respectant la saisonnalité des produits et les circuits courts. Croc-Us est aussi présent au marché couvert de Nancy"
+          adresse="137 rue Mac Mahon Nancy"
+          defi="Changement de banque d'ici deux ans"
+          latitude="6.183714866646"
+          longitude="48.7046274157"
+      >
+      <h l="le mardi" t="14H00 - 19H00"/>
+      <h l="du mercredi au samedi" t="10H00 - 19H00"/>
+      </acteur>
+      <acteur
+          siteweb=""
+          image="defaut.jpg"
+          titre="Épicerie Elles"
+	  code="-1"
+          bref="Épicerie de quartier"
+          type="Alimentation"
+          desc="Épicerie de quartier"
+          adresse="93 Rue de Mon Désert, Nancy"
+          latitude="6.172199"
+          longitude="48.683184"
+          telephone=""
+      />
+<acteur
+          image="DayByDay.jpg"
+          titre="Day By Day"
+          type="Alimentation"
+	  code="0"
+          bref="Epicerie - Vrac"
+          desc="Cécilia vous accueillera avec le sourire pour vos courses en vrac : alimentaire, produits d'hygiène et d'entretien, vous y trouverez beaucoup de produits. Vous pourrez ainsi participer à une meilleure gestion des déchets."
+          adresse="37 bd Charles V Nancy"
+          defi="Développer une offre de paniers de produits frais locaux"
+          latitude="6.176497"
+          longitude="48.700953"
+    />
+   <acteur_en_attente
+          attente="true"
+          siteweb="facebook Le-Gramme-de-Folie-Nancy"
+          image="grammedefolie.jpg"
+          titre="Le Gramme de Folie"
+          type="Alimentation"
+          bref="Vrac, Local et BIO"
+          desc="Le Gramme de Folie, épicerie sur-mesure, propose des produits en vrac et sans emballages, de production française et bio au maximum. N'oubliez pas vos contenants ;-)"
+          adresse="95 rue de Mon Désert Nancy"
+          defi=""
+          latitude="6.171838"
+          longitude="48.683053"
+    />
+  <acteur
+      siteweb="www.eau-vive.fr"
+          image="LEauVive.jpg"
+          titre="L'Eau Vive"
+	  code="0"
+          bref="Magasin BIO"
+          type="Alimentation"
+          desc="Magasin BIO. Produits frais, fruits et légumes, épicerie, pain bio cuit sur place, vrac, produits locaux, sans gluten, cosmétiques, compléments alimentaires... Des naturopathes vous conseillent, nhésitez pas à demander conseil !"
+          adresse="Rue Roberval, 54500 Vandoeuvre-lès-Nancy"
+          latitude="6.179869"
+          longitude="48.653389"
+          comptoir="oui"
+          telephone="03 83 44 10 33"
+	  message_comptoir="Pas de change les samedi.">
+      <h l="du lundi au samedi" t="9H30 - 19H15"/>
+      </acteur>
+                   
+
+        </scat>
+        <scat type="Producteurs">
+            <acteur
+          siteweb="www.lafermerome.fr"
+          image="lafermerome.jpg"
+          titre="La Ferme Romé"
+          type="Alimentation"
+          bref="Maraicher BIO"
+          desc="Exploitation agricole de production laitière et maraîchère en agriculture biologique depuis 1989 et certifié Biocohérence (approche éthique de l'AB) depuis 2016. Nous produisons une grande variété de légumes en tunnel et en plein champ tout au long de l'année et sommes présents dans différents points de vente Amap/marché. Charly est présent au marché de Vandoeuvre le vendredi de 16h à 20h"
+          adresse="8 Rue de la République, 54200 Royaumeix"
+          defi=""
+          latitude="5.868389"
+          longitude="48.779581"
+    />
+            <acteur
+          image="fix.jpg"
+          titre="Fix Houillon"
+          type="Alimentation"
+          bref="Maraicher BIO"
+          desc="Maraicher BIO en AMAP"
+          adresse="65 grande rue 54200 Lucey"
+          defi="Expérimentation Florain en AMAP"
+          latitude="5.841637"
+          longitude="48.722226"
+      />
+            <acteur
+          fete="oui"
+        siteweb="facebook Mirabio55"
+        image="mirabio.jpg"
+        titre="Mirabio"
+        type="Alimentation"
+        bref="Arboriculture BIO"
+        desc="Mirabio est une SCIC: ce sont quatre copains qui font pousser plein de fruits bio : pommes, poires, coings, noix, fraises, groseilles, mirabelles, quetsches, reines-claudes, ... Avec des produits transformés tels que jus, nectars, confitures, fruits séchés, ...  Accompagnement de propriétaires d'anciens vergers familiaux pour les réhabiliter en BIO. Chantiers de réinsertion sociale. Utilisation des matières premières issues du commerce équitable."
+        adresse="St Maurice sous les Côtes (55)"
+        defi="Passer au ENR pour l'électricité"
+        latitude="5.677933"
+        longitude="49.015167"
+      />
+         <acteur
+            fete="oui"
+          siteweb="www.glaces-marchetto.fr"
+          image="omaribelle.jpg"
+          titre="O Maribelle"
+          type="Alimentation"
+          bref="Paysan Glacier BIO"
+          desc="Paysan Glacier en agriculture biologique. Production fruitière: mirabelle, quetsche, cerise, pomme, fraise, petits fruits. Transformation en: sorbets-glaces - pâtisseries glacées - nectar/jus de fruit - confitures."
+          comptoir="oui"
+          telephone="06 29 60 17 40"
+          latitude="5.94489097595"
+          longitude="48.5837972914"
+          adresse="44, rue Andre David, 54170 Ochey"
+          defi="Bureau de change"
+    >
+    <h l="du mardi au vendredi" t="16h00 - 19h00"/>
+    <h l="le samedi" t="10h00 - 19h00"/>
+    <h l="le dimanche" t="10h00 - 13h00"/>
+    </acteur>
+        <acteur
+          image="mariegauvain.jpg"
+          titre="Marie Gauvain"
+          type="Alimentation"
+          bref="Volaille et Porc BIO"
+          desc="Marie propose des volailles: Poulets, pintades, dindes, poulardes... ainsi que du porc élevé en plein air et ses charcuteries. Nature et Progrès
+      Marie est présente au marché de Vandoeuvre le vendredi de 16h à 20h"
+          adresse="2 r Derrière l'Eglise 54470 Grosrouvres"
+	  telephone="03 83 23 37 76"
+          defi="Pérenniser l'activité"
+          latitude="5.84022045135"
+          longitude="48.8299780972"
+	  labels="Nature et Progrès"
+    />
+        <acteur
+            fete="oui"
+          image="porcquidore.jpg"
+          titre="La Ferme du porc qui dore"
+          type="Alimentation"
+          bref="Élevage de Porcs"
+          desc="Sonia RIGOT a mis en place un élevage de porcs gascons, reconnus pour la qualité gustative de leur chair, de plusieurs races rustiques adaptées à l'élevage en plein air, des génisses et broutards de race à viande également. Les conditions d'élevage en plein air et sa conduite de façon extensive créent cette différence. Exploitation en conversion BIO, 100% BIO pour 2019. Sonia est présente au marché de Vandoeuvre le vendredi de 16h à 20h"
+          adresse="3 Grande Rue 54450 Gondrexon"
+          defi="Accueil de classes et d'actions pédagogiques"
+          latitude="6.76985263824"
+          longitude="48.6056170296"
+    />
+         <acteur
+          siteweb=""
+          image="domainedessaveurs.jpg"
+          titre="Le Domaine des Saveurs"
+          type="Alimentation"
+          bref="producteurs de volailles BIO"
+          desc="Le Domaine des Saveurs propose des volailles issu de l'agriculture biologique.
+Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
+          adresse="18 chemin des Baillouteux 54220 Malzéville"
+          defi=""
+          latitude="6.193532"
+          longitude="48.7068"
+    />
+       <acteur
+          siteweb="www.lesfermesvertes.com"
+          image="lesfermesvertes.jpg"
+          titre="Jean-Paul André"
+          type="Alimentation"
+          bref="Polyculture élevage BIO"
+          desc="Elevage de bovins limousins. Chaque vendredi, de 17h à 19h, Jean-Paul accueille dans son local ses clients. «C'est une formidable occasion de mieux connaître notre clientèle qui est extrêmement diverse entre végétariens, adeptes du bio et simple curieux désireux de faire un essai.» Jean-paul est passionné par son métier, un artisan promoteur convaincu !"
+          adresse="27 grande rue 54450 Reillon"
+          defi=""
+          latitude="6.738982"
+          longitude="48.597677"
+    />
+        <acteur
+          siteweb="www.lesfermesvertes.com"
+          image="lesfermesvertes.jpg"
+          titre="Ferme de la petite Seille"
+          type="Alimentation"
+          bref="Produits Laitiers"
+          desc="Ferme familiale de 55 ha, reconvertie en bio en 2000 ayant comme production principale le lait. Le troupeau laitier est nourri principalement l?été de pâturage et l?hiver de foin et regain. Après une formation en homéopathie et phytothérapie le troupeau est soigné de manière naturelle."
+          adresse="6 Rue du Château, 54760 Arraye-et-Han"
+          defi="Être autonome en électricité"
+          latitude="6.292710"
+          longitude="48.8397450"
+    />
+        <acteur
+          siteweb="www.lesfermesvertes.com"
+          image="lesfermesvertes.jpg"
+          titre="Ferme de la Saule"
+          type="Alimentation"
+          bref="Polyculture élevage BIO"
+          desc="Des cultures céréalières diversifiées (blé, orge, avoine, triticale, seigle, épeautre, lentilles, sarrasin,...) et de la viande bovine (vaches limousines)"
+          adresse="10 rue de la halle 54760 Montenoy"
+          defi=""
+          latitude="6.228016000"
+          longitude="48.7943140"
+    />
+        <acteur
+          siteweb="www.lesfermesvertes.com"
+          image="lesfermesvertes.jpg"
+          titre="Les Fermes Vertes"
+          type="SARL"
+          bref="Vente Collective"
+          desc="Une organisation de vente collective de produits biologiques à la ferme. Les «Fermes Vertes», près de chez vous, vous accueillent. 8 fermes vous proposent leurs produits: Certifiés bio et d'abord Lorrains. Vente de proximité et en réseau. Vente sur commande et point de vente sur les fermes."
+          adresse="10 Rue de la Halle, 54760 Montenoy, France"
+          defi=""
+          latitude  ="6.22801"
+          longitude="48.79401"
+    />
+         <acteur
+                 siteweb="www.lesfermesvertes.com"
+                 image="lesfermesvertes.jpg"
+                 titre="Ferme du Sillon"
+                 bref="Polyculture elevage"
+                 type="Alimentation"
+                 desc="4 associés forment aujourd'hui le GAEC du sillon, Jean-Michel, Bernard, Ludovic et Dominique. L'exploitation s'équilibre avec l'élevage laitier (5 races différentes) : production de lait, une grande diversité de cultures (céréales, lentilles, colza, tournesol, soja, pois, luzerne, prairie...), l'élevage porcin, l'activité de 'ferme pédagogique' et la production d'huile de colza et de tournesol pressées à froid sur la ferme."
+                 adresse="14 Rue de France, 54570 Lay-Saint-Remy"
+                 latitude="5.760585"
+                 longitude="48.681191"
+                 telephone="06 58 38 05 06"
+      />
+         <acteur
+            fete="oui"
+          siteweb="facebook lepetitatelieranancy"
+          image="petitatelier.jpg"
+          titre="Le Petit Atelier"
+          type="Alimentation"
+          bref="Patisserie Chocolaterie"
+          desc="Atelier de boulangerie-pâtisserie-chocolaterie labellisé bio pour une gourmandise responsable.
+     Basé à Saulxures-Les-Nancy, c'est au coeur même de notre laboratoire de fabrication que nous vous accueillons. Nous travaillons à la commande pour éviter tout gaspillage alimentaire et avons le plaisir de ne choisir que des fruits de saison pour garnir nos pâtisseries. Nous sélectionnons avec soin les produits issus de l'agriculture biologique en favorisant les produits locaux au maximum."
+          adresse="30 rue Louis Bleriot 54420 Saulxures Les Nancy"
+          defi="Travailler à l'ouverture d'un point de vente en ville"
+          latitude="6.24018073082"
+          longitude="48.6888568976"
+    />
+        <acteur
+            fete="oui"
+          siteweb="www.lecoindelabeletteunblog.fr"
+          image="coinbelette.jpg"
+          titre="Le coin de la belette"
+          type="Alimentation"
+          bref="Plantes sauvages"
+          desc="Préparations maison à l'ancienne et de façon traditionnelle, à base de plantes sauvages ou cultivées: confitures, sirops... Préparations de plantes séchées: reine des prés, achillée.... Nous cueillons à la main, dans le respect de l'environnement, les plantes sauvages pour nos préparations. Vous nous trouverez aussi au marché de Vandoeuvre le vendredi de 16h à 20h"
+          adresse="3 rue François EVRARD  54140 Jarville"
+          defi="Augmenter les achats locaux et baisser les achats en grande surface"
+          latitude="6.202037"
+          longitude="48.667067"
+      comptoir="oui"
+          telephone="06 41 21 49 69"
+          message="Au marché BIO de Vandoeuvre. Un vendredi sur deux."
+          message_comptoir="Au marché BIO de Vandoeuvre. Un vendredi sur deux."
+    >
+    <h l="un vendredi sur deux" t="16h30 - 20h00"/>
+    </acteur>
+            <acteur
+          fete="oui"
+          image="marianne.jpg"
+          titre="Marianne Louis"
+          bref="Fromagère"
+          type="Alimentation"
+          desc="Fromagère - Tommes - Munsters. Marianne est présente au marché de Vandoeuvre le vendredi de 16h à 20h"
+          adresse="Ambulante sur marchés"
+          defi="Faire dans le local / écolo pour les outils de communication"
+      />
+        <acteur
+      siteweb="www.fontenellebio.fr"
+          image="fontenelle.jpg"
+          titre="Ferme de Fontenelle"
+          bref="Produits Laitiers BIO"
+          type="Alimentation"
+          desc="Produits Laitiers BIO"
+          adresse="36 Rue Grande Rue, 88260 Relanges"
+          latitude="6.017011"
+          longitude="48.114156"
+          telephone=""
+          message=""
+      />
+        <acteur
+            fete="oui"
+          siteweb=""
+          image="bierequiroule.jpg"
+          titre="Bière qui roule"
+          type="Bière BIO Artisanale"
+	  code="-1"
+          bref="Revente bières locales"
+          desc="Mise en avant des brasseries bio de la région en proposant leurs différentes bières sur les marchés et foires locales."
+          adresse="Vente sur marchés"
+          defi="Ecocups et triporteur élec pour livraisons"
+          latitude="6.164457"
+          longitude="48.706645"
+    />
+        <acteur
+          siteweb="chaouette.blogspot.fr"
+          image="chaouette.jpg"
+          titre="Brasserie la Châouette "
+          type="Biere BIO Artisanale"
+	  code="0"
+          desc="La Châouette est une bière bio de fabrication artisanale et traditionnelle. Elle se décline en Ambrée, Blonde ,Blanche et de saison (Printemps, Hiver). Ce sont toutes des bières pur malts de fermentation haute, finement houblonnées et épicées ce qui leur confère une rondeur en bouche typique et des caractères bien différents. Elles ne sont ni filtrées ni pasteurisées afin de préserver l’ensemble des arômes subtiles qui en font leur singularité."
+          adresse="22 route nationale 54380 Saizerais"
+          defi="Audit conso énergie + eau"
+          latitude="6.04473352432"
+          longitude="48.7929803746"
+    />
+        <acteur
+          siteweb="grenaille.blogspot.fr"
+          image="lagrenaille.jpg"
+          titre="La Grenaille"
+          type="Biere BIO Artisanale"
+          bref="Brasserie"
+	  code="-1"
+          desc="Toutes les bières de la Microbrasserie GRENAILLE sont brassées sur place à Jarville-La-Malgrange, selon une méthode artisanale, à la main.
+Ce sont des bières de fermentation haute, non filtrées, non pasteurisées et refermentées en bouteille. Elles sont produites sous mention Nature &amp; Progrès."
+          adresse="9 rue d'Alsace 54140 Jarville-la-Malgrange"
+          defi=""
+          latitude="6.199764"
+          longitude="48.675132"
+    />
+      <acteur
+        siteweb="www.brasseriecoincoin.fr"
+        image="coincoin.jpg"
+        titre="Brasserie Coin-Coin"
+        type="Brasserie"
+        desc="Toutes nos bières sont élaborées, brassées et embouteillées à la main et de façon artisanale, dans notre local à Ménil-la-Tour par Mélaine COLSON.
+Ce sont des bières de garde dites 'vivantes', non-pasteurisées, non-filtrées, qui refermentent en bouteille. Les bières sont certifiées bio depuis septembre 2017.
+Depuis 2014, la brasserie est membre de l'Union des Brasseurs du Grand Est (anciennement l'UBL).
+Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des côtes de Toul."
+        adresse="5 Rue Saint Laurent 54200 Mènil-la-Tour"
+        latitude="5.864654"
+        longitude="48.766246"
+        telephone="06 20 02 04 00"
+        message=""
+      />
+        <acteur
+          siteweb="www.arbrevike.fr"
+          image="larbrevike.jpg"
+          titre="L'Arbre Viké"
+	  code="0"
+          type="Vigneron"
+          bref="Vigneron en conversion BIO"
+          desc="Producteur de vins sur les Côtes de Toul, création du domaine en 2015. Vins blancs, gris, rouges et effervescents. Après la troisième vendange de 2017, la volonté est toujours de respecter au maximum la nature en accompagnant la vigne par une conduite viticole la moins dure possible. Le travail en cave suit les même principes en limitant les interventions au stricte nécessaire."
+          adresse="54113 Bulligny"
+          defi=""
+          latitude="5.852342"
+          longitude="48.574884"
+    />
+        </scat>
+        <scat type="Paysans Boulangers et Boulangers">
+            <acteur
+          fete="oui"
+          siteweb="unpaindecote.free.fr"
+          image="un-pain-de-cote.jpg"
+          titre="Un Pain de Côté"
+          bref="Boulangers BIO"
+          type="Alimentation"
+          desc=" Nous avons créé notre fournil dans notre maison, en 2009 après avoir démissionné de l'éducation nationale.  Nous n'avons pas de magasins, et travaillons quasi exclusivement (hormis le marché du jeudi) sur commande, afin d'éviter le gaspillage. Nous produisons donc nos pains et viennoiseries pour des Amaps, des magasins Bio, et des cantines, ainsi qu'une vente au fournil le vendredi soir sur réservation. Notre matière première principale, la farine, provient du Moulin du Petit Poucet"
+          adresse="7, rue Saint Arnou 54690 Lay St Christophe"
+          defi="Réactivité sur les commandes"
+          latitude="6.191482543956"
+          longitude="48.7489453434"
+      />
+        <acteur
+          image="moulinpetitpoucet.jpg"
+          titre="Le Moulin du Petit Poucet"
+          type="Alimentation"
+          bref="paysans - boulangers"
+          desc="Notre pain et nos farines sont issus des céréales produites localement et transformées sur notre ferme. Les céréales sont moulues sur meule de pierre. Nos pains au levain naturel sont façonnés à la main et cuits dans un four chauffé au bois.
+      Christelle est présente au marché de Vandoeuvre le vendredi de 16h à 20h"
+          adresse="10b rue d'Alsace 54200 Royaumeix"
+          defi="Intégrer produits du commerce équitable"
+          latitude="5.870572328576"
+          longitude="48.7816173421"
+    />
+       <acteur
+            fete="oui"
+          image="charles.jpg"
+          titre="Charles Dimitriou"
+          type="Alimentation"
+          bref="Pains - Pizza"
+          desc="Pains - Pizza. Charles est présent au marché de Vandoeuvre le vendredi de 16h à 20h"
+          adresse="Ambulant sur marchés"
+          defi="Développer des circuits locaux avec magasins clients à Nancy"
+    />
+        <acteur
+          image="defaut.jpg"
+          titre="La P'tite Laur'Reine du Pain"
+          bref="Boulangere"
+          type="Alimentation"
+          desc="Fabrication artisanale de pains et viennoiseries avec de la farine biologique locale et cuit au feu de bois"
+          adresse="3 rue de la ferme 54170 Germiny"
+          latitude="5.99810600281"
+          longitude="48.5474101183"
+          telephone="06 66 32 91 51"
+          message=""
+      />
+       
+        </scat>
+	<scat type="Traiteurs"> 
+        <acteur
+            fete="oui"
+          siteweb="www.fermiersdici.com"
+          image="LesFermiersDIci.jpg"
+          titre="Les Fermiers d'Ici"
+          type="Alimentation"
+          bref="Traiteur"
+          desc="Les Fermiers d'ici proposent un service traiteur avec des produits bio et locaux. Dégustez notre charcuterie sans conservateur produite par Sonia à Gondrexon. Cela vous aura mis en appétit pour déguster de savoureux légumes produits par Charly à Royaumeix. Appreciez un munster vosgien, accompagné du pain de Maryse et Vincent pétris avec la Farine du Moulin du petit Poucet. Enfin, nous vous laissons savourer ce tiramisu aux mirabelles cueillies par Eric dans les Vosges."
+          adresse="87 av. Gal Leclerc Nancy"
+          defi="Travail sur réduction des déchets"
+          latitude="6.179026"
+          longitude="48.677501"
+    />
+</scat>
+    </categorie>
+    <categorie type ="Les Marchés">
+        <scat>
+              <acteur
+          image="marche.jpg"
+          titre="au Marché Central de Nancy"
+          bref="Marché"
+          type="Marché"
+          desc="Retrouvez au marché central de Nancy: Croc-Us (Epicerie/Primeurs), Le P'tit BIO (Restaurant)"
+          adresse="Marché Central Nancy"
+          latitude="6.18302285671"
+          longitude="48.6892039446"
+      />
+        <acteur
+          siteweb=""
+          image="marche.jpg"
+          titre="au Marché de Maxéville"
+	  code="3"
+          bref="Marché"
+          type="Marché"
+          desc="Retrouvez les jeudi de 16h à 19h: Marianne (Fromages), Biere Qui Roule (Bieres Locales), Le Domaine Des Saveurs (Volailles), Un Pain De Cote (Boulangers)"
+          adresse="Rue des brasseries Maxeville"
+          latitude="6.164457"
+          longitude="48.706645"
+    />
+        <acteur
+          image="marche.jpg"
+          titre="au Marché Local BIO de Vandoeuvre"
+          bref="Marché"
+          type="Marché"
+	  code="2"
+          desc="Retrouvez les vendredi de 16h à 20h: Le Coin De La Belette (plantes sauvages), Marianne (Tomes, Munsters), Marie (Volailles...), Charles (Pains, Pizza), Le Moulin Du Petit Poucet (Pain, Farine, Pates...), La Ferme Du Porc Qui Dore (Charcuterie), La Savonnerie Clandestine, La Ferme Rome (Primeurs), Ferme de Fontenelle (Produits laitiers)"
+          adresse="Marché BIO Vandoeuvre"
+          latitude="6.1737"
+          longitude="48.6653"
+      comptoir="oui"
+          telephone="06 41 21 49 69"
+          message_comptoir="Le comptoir est tenu par le Coin de La Belette un vendredi sur deux."
+      >
+      <h l="un vendredi sur deux" t="16h00 - 20h00"/>
+    </acteur>
+
+        </scat>
+          </categorie>
+    <categorie type ="Sortir">
+        <scat type="Se restaurer et boire un verre">
+            <acteur
+          siteweb="facebook les7bourriches"
+          image="les7bourriches.jpg"
+          titre="Les 7 Bourriches"
+          type="Alimentation"
+          bref="Bar a Huîtres"
+          desc="Huîtres de qualité, du bon vin, des produits de la mer sélectionnés."
+          adresse="15 rue Stanislas, Nancy"
+          defi=""
+          latitude="6.1818030"
+          longitude="48.6929550"
+    />
+        <acteur
+          siteweb="www.lappetit-bio.fr"
+          image="appetitbio.jpg"
+          titre="L'Appétit BIO"
+          type="Alimentation"
+          bref="Fast Food BIO et Local"
+          desc="Produits frais, locaux, 100% BIO. Que ton aliment soit ta prémiere médecine."
+          adresse="153 rue Saint Dizier Nancy"
+          defi="Comptoir de change"
+          latitude="6.18598937988"
+          longitude="48.6860875181"
+      />
+        <acteur
+          image="auptitbio.jpg"
+          titre="Au P'tit BIO"
+          type="Alimentation"
+          bref="Restaurant"
+          desc="Restaurant"
+          adresse="Marché Couvert Place Henri Mangin Nancy"
+          defi="Abonnement Enercoop"
+          latitude="6.18302285671"
+          longitude="48.6892039446"
+    />
+        <acteur
+          siteweb="facebook troispetitspointsnancy"
+          image="troispp-nancy.jpg"
+          titre="Trois Petits Points"
+          type="Alimentation"
+          bref="Restaurant"
+          desc="Un bazar culturel, événementiel, culinaire et populaire. Bar Concert. Restauration Africaine 'Le Palais Exotique'. Catering (concert et film) : Cuisine du Monde. Expo, Débat, Evènement, Journée Découverte, Mise à disposition..."
+          adresse="3 rue de l'île de Corse Nancy"
+          defi=""
+          latitude="6.18945479393"
+          longitude="48.6934391424"
+    />
+        <acteur
+          siteweb="facebook : melanie TroisPetitsPoints"
+          comptoir="oui"
+          image="3ppToul.jpg"
+          titre="Les 3 Petits Points"
+          type="Alimentation"
+          bref="Bar Brasserie"
+      desc="Bar Brasserie, restauration avec des produits frais et maison. Diffusion des différents événements sportifs. Soirée à thème. Ouvert tous les jours. Du Lundi au Samedi de 11h à 2h. Le Dimanche de 11h à 23h. Restauration de 11h30 à 22h non stop tous les jours"
+      message="Nous avons mis en place une formule repas pour les personnes qui nous paieront en Florain - 10% sur leur addition, ainsi qu'un repas cinéma 3.50E la place pour le cinéma de Toul valable 1 an."
+          adresse="place du Couarail 54200 Toul"
+          telephone="03 83 64 14 53"
+          defi=""
+          latitude="5.889084"
+          longitude="48.675028"
+    >
+    <h l="du lundi au samedi" t="11h00 - 02h00"/>
+    <h l="le dimanche" t="11h00 - 23h00"/>
+    </acteur>
+         <acteur
+           siteweb="Facebook Le-Royal-Royal"
+           image="royalroyal.jpg"
+           titre="Le Royal Royal"
+           bref="Bar Restaurant"
+           type="Bar Restaurant"
+           desc="Bar Restaurant emblématique de Nancy - Concerts - expos et plus encore!"
+           adresse="22 rue de mon désert, Nancy"
+           latitude="6.178083"
+           longitude="48.6844950"
+           telephone="03 83 28 07 67"
+           message=""
+      />
+         <acteur
+           siteweb=""
+           image="torrefactionfaubourg.jpg"
+           titre="Torréfaction du Faubourg"
+           bref="Torréfaction artisanale"
+           type="Torréfaction artisanale"
+           desc="Torréfaction artisanale - café, thé, tisanes."
+           adresse="44 Rue du Faubourg des Trois Maisons, Nancy"
+           latitude="6.175955"
+           longitude="48.702238"
+           telephone="03 83 32 24 89"
+           message=""
+      />
+         <acteur
+           siteweb="www.aubistronome-nancy.fr"
+           image="bistronome.jpg"
+           titre="Au Bistronome"
+           bref="Restaurant"
+           type="Alimentation"
+           desc="Restaurant traditionnel, cuisine de bistrot qui met en valeur les producteurs locaux et leur savoir faire."
+           adresse="19 Rue Saint-Michel, Nancy"
+           latitude="6.178226"
+           longitude="48.696198"
+           telephone="03 83 30 59 17"
+      />
+<acteur
+  siteweb="www.labdm.net"
+  image="brasseriedumarche.jpg"
+  titre="Brasserie du marché"
+  bref="restaurant"
+  type="Alimentation"
+  desc="Restaurant"
+  adresse="2 Rue du Cardinal Mathieu, Nancy"
+  latitude="6.166836"
+  longitude="48.671391"
+  telephone="03 72 14 97 31"
+  message=""
+/>
+<acteur
+  siteweb=""
+  image="legrandserieux.jpg"
+  titre="Le Grand Sérieux"
+  bref="bistrot restaurant"
+  type="Alimentation"
+  desc="bistrot restaurant, pas de carte, pas de congélateur, pas de micro onde... mais de la convivialité !"
+  adresse="27 Rue Raugraff, Nancy"
+  latitude="6.182097"
+  longitude="48.689727"
+  telephone="0383366887"
+  message=""
+/>
+      
+        </scat>
+        <scat type="Se cultiver, se divertir, se détendre">
+            <acteur
+           siteweb="www.cameo-nancy.fr"
+       image="cameo-stseb.jpg"
+           titre="Caméo St Sébastien"
+           bref="Cinema"
+           type="Cinema"
+           desc="Deux cinémas Art et Essai en plein coeur de Nancy."
+           adresse="6 rue Léopold Lallement, Nancy"
+           latitude="6.178472"
+           longitude="48.688928"
+           telephone="03 83 35 47 76"
+	/>
+        <acteur
+           siteweb="www.cameo-nancy.fr"
+           image="cameo-commanderie.jpg"
+           titre="Caméo Commanderie"
+           bref="Cinema"
+           type="Cinema"
+           desc="Deux cinémas Art et Essai en plein coeur de Nancy."
+           adresse="16 Rue de la Commanderie, Nancy"
+           latitude="6.172233"
+           longitude="48.68707"
+           telephone="03 83 28 41 00"
+      />
+   
+            <acteur
+          siteweb="www.paulettepubrock.com"
+          image="chezpaulette.jpg"
+          titre="Chez Paulette"
+          type="Pub Rock"
+          bref="Salle de spectacles"
+          desc="Depuis plus de 50 ans, le pub rock Chez Paulette propose tous les week-end des concerts. Chanteurs/groupes de musique connus et en devenir viennent dans ce bar rock à la gestion familiale, au style convivial. Des dimanches après-midi culturels sont également organisés"
+          adresse="343 Rue Regina Kricq 54200 Pagney-derrière-Barine"
+          defi=""
+          latitude="5.842096"
+          longitude="48.693067"
+    />
+            <acteur
+               fete="oui"
+             siteweb="www.lafeintedelours.fr"
+             image="feinte.jpg"
+             titre="La Feinte de l'Ours"
+             type="Association"
+             bref="café-jeux associatif"
+             desc="La Feinte de l'Ours est un café-jeux associatif lorrain dont l'objectif est de rendre le jeu de société accessible à tous dans une ambiance chaleureuse et conviviale."
+             adresse="2 avenue du Général Leclerc Nancy"
+             defi="Augmenter les achats locaux et bio"
+             latitude="6.186746"
+             longitude="48.684862"
+    />
+         <acteur
+           siteweb="nancy.curieux.net"
+           image="nancycurieux.jpg"
+           titre="Nancy Curieux"
+           bref="La culture pour tous."
+           type="Sortir"
+           desc="Faciliter l’accès à la culture pour tous et favoriser la collaboration des acteurs"
+           adresse=""
+           telephone=""
+           message=""
+      />
+
+        <acteur_en_attente
+          attente="true"
+          siteweb=""
+          image="latavernedulivre.jpg"
+          titre="La Taverne du Livre"
+          type="Café Librairie"
+          bref="Café Librairie"
+          desc="Café Librairie"
+          adresse="11, rue des Quatre Eglises, Nancy"
+          defi=""
+          latitude="6.181638"
+          longitude="48.690212"
+    />
+        <acteur
+          siteweb="www.centremalraux.com"
+          image="ccam.jpg"
+          titre="Centre Culturel André Malraux"
+          type="Centre Culturel"
+          bref="Centre Culturel"
+          desc="Le Centre Culturel André Malraux est un lieu de fabrique et de diffusion dédié à la création d'aujourd'hui. Pluridisciplinaire, le CCAM favorise la rencontre entre les citoyens et l'art de notre époque. Il porte Musique Action, un festival dédié aux musiques contemporaines. Le CCAM prête une attention particulière aux arts de la scène, à la photographie et aux arts graphiques. Il réserve une place singulière aux démarches artistiques qui s'adressent à l'enfance et à la jeunesse."
+          adresse="Rue de Parme 54500 Vandoeuvre"
+          defi=""
+          latitude="6.172948"
+          longitude="48.659714"
+	/>
+         <acteur
+           siteweb="www.mjclorraine.com"
+           image="mjclorraine.jpg"
+           titre="MJC Lorraine"
+           type="MJC"
+           desc="MJC"
+           adresse="1 Rue de Lorraine, 54500 Vandœuvre-lès-Nancy"
+           latitude="6.16816"
+           longitude="48.660747"
+           telephone="03 83 15 90 00"
+      />
+         <acteur_en_attente
+          attente="true"
+           siteweb=""
+           image="defaut.jpg"
+           titre="Centre socio-culturel Nomade"
+           bref=""
+           type=""
+           desc=""
+           adresse=""
+           latitude="6"
+           longitude="48"
+           telephone=""
+      />
+                
+        </scat>
+    </categorie>
+    <categorie type ="Prendre soin de soi">
+        <scat>
+            
+        <acteur
+            fete="oui"
+          siteweb="www.shiatsu54.com"
+          image="nathalieMartin.jpg"
+          titre="Nathalie Martin"
+          type="Sante"
+          bref="Shiatsu"
+          desc="Praticienne Shiatsu agréée par la FFST
+(Fédération Française de Shiatsu Traditionnel)
+Energétique chinoise"
+          adresse="22 route de Xeuilley 54550 Maizières"
+          defi="S'approvisionner en local pour ce qui peut l'être"
+          latitude="6.064699"
+          longitude="48.581933"
+    />
+    <acteur
+          siteweb="www.unnidpournaitre.fr"
+          image="unnid.jpg"
+          titre="Un nid pour naitre"
+          type="Sante"
+          bref="Maison de naissance"
+          desc="L'association Un Nid Pour Naître a pour but de promouvoir la physiologie de la grossesse et de l'accouchement et de réunir autour de la parentalité."
+          adresse="10 rue du Dr Heydenreich, Nancy"
+          defi=""
+          latitude="6.190236"
+          longitude="48.681002"
+    />
+        <acteur_en_attente
+          attente="true"
+          image="shiatsu.jpg"
+          titre="Ludivine Dumontet"
+          type="Sante"
+          bref="Praticienne Shiatsu"
+          desc="Praticienne Shiatsu"
+          adresse="Activité au domicile des personnes"
+          defi="Compte en banque ouvert dans une banque éthique"
+          latitude="6"
+          longitude="48"
+    />
+        <acteur_en_attente
+          attente="true"
+          image="reiki.jpg"
+          titre="Balland Frédéric"
+          type="Sante"
+          bref="Kinésiologue"
+          desc="Kinésiologue"
+          adresse="56 r Charles III, Nancy"
+          defi="Abonnement Enercoop"
+          latitude="6.189189"
+          longitude="48.687964"
+    />
+        <acteur
+          siteweb=""
+          image="shiatsu.jpg"
+          titre="Sylvie Kapp"
+          type="Sante"
+          bref="Ostéopathe"
+          desc="Ostéopathe"
+          adresse="820 av. du Bon Curé 54710 Ludres"
+          latitude="6.172953"
+          longitude="48.616185"
+          defi=""
+    />
+        <acteur_en_attente
+          siteweb=""
+          attente="true"
+          image="shiatsu.jpg"
+          titre="Sophie Schrammeck"
+          type="Sante"
+          bref="Kinésithérapeute"
+          desc="Kinésithérapeute"
+          adresse="9 rue Victor de Lorraine Nancy"
+          defi=""
+    />
+        <acteur
+          siteweb="www.monpilatesanancy.fr"
+          image="pilatesinspire.jpg"
+          titre="Home Studio Pilates Inspire"
+          type="Sante"
+          desc="Vous serez accueilli.e dans un cadre très privilégié pour des cours individuels ou semi-collectifs (5 personnes maximum). Laurence enseigne la Méthode Pilates comme approche préventive en matière de santé et de bien-être. Vous apprendrez aussi de façon très concrète comment changer vos habitudes de mouvement au quotidien pour pallier les effets de la sédentarité."
+          adresse="47 rue Charles Martel, Nancy"
+          telephone="06 45 09 27 89"
+          defi=""
+          latitude="6.174116000"
+          longitude="48.6763350"
+    />
+        <acteur
+          siteweb="www.ish-a.fr"
+          image="isha.jpg"
+          titre="Isabelle Hameau"
+          bref="Bien-être et accompagnement"
+          type="Sante"
+          desc="Massages bien-être: polarités, pressions shiatsu, relaxation coréenne, harmonisation corporelle à l'huile, en particulier pour les futures mamans, massage bébé avec ses parents, massage sur chaise ergonomique en entreprise. Non thérapeutique. Relation d'aide par le toucher, ou somatothérapie. Éducation kinesthésique ou Brain Gym. Formation d'adultes des métiers de l'humain, ateliers d'analyse de pratique professionnelle."
+          adresse="Espace Corbin, 5 rue Morey, Nancy"
+          latitude="6.176574826246"
+          longitude="48.6902521538"
+          telephone=""
+    />
+        <acteur
+          siteweb="coursdeyoga.weebly.com"
+          image="jardinvieom.jpg"
+          titre="Jardin Vie Om"
+          bref="Yoga - Cuisine végétarienne"
+          type="Bien etre"
+          desc="Yoga individuel: séance adaptée selon les besoins et capacités de la personne. Séance expliquée, faite sur place et donnée par écrit. 45 euros/h Yoga cours collectifs (6 personnes maxi) 10 euros pour 1h15, 7 euros étudiants, chômeurs Ateliers cuisine bio-végétarienne (option sans gluten ni produits laitiers ni oeufs). Cours et repas préparé ensemble : 25 euros. Conseils en phytothérapie, aromathérapie et diététique: 45 euros."
+          adresse="24 Rue de Crévic, 54500 Vandoeuvre-lès-Nancy"
+          latitude="6.175754"
+          longitude="48.6512"
+          telephone="06 72 16 45 92"
+      />
+      <acteur
+        siteweb="www.viesensetmouvement.fr"
+        image="viesensetmouvement.jpg"
+        titre="Nathalie Boulliung"
+        bref="Massages -  Qi Gong"
+        type="Bien etre"
+        desc="Enseignante certifiée de Qi Gong et d'Idogo et praticienne de
+ massages bien-être. Le Qi Gong art énergétique ancestral permet par la respiration
+ et le mouvement, un relâchement et une dynamisation. La prise de
+ contact avec son corps est un chemin de découvertes sensorielles
+ et posturales. Les bienfaits sont multiples: une meilleure
+ vitalité, une meilleure récupération en cas de fatigue, plus
+ de souplesse et d'équilibre. Le tout dans un esprit non compétitif."
+        adresse="MJC Pichon - MJC Toul - ONPA Jardins d'Arcadie"
+        telephone="06 01 75 53 14"
+        message=""
+      />
+<acteur
+  siteweb="facebook pharmaciesaintetherese"
+  image="lapharmaciesaintetherese.jpg"
+  titre="La pharmacie Sainte Thérèse"
+  type="Pharmacie"
+  desc="La pharmacie Sainte Thérèse vous apporte une expertise en solutions naturelles en vous proposant une large gamme de produits ainsi que des mélanges d’huiles essentielles préparés sur demande."
+  adresse="38 Boulevard de Baudricourt
+Villers-lès-Nancy"
+  latitude="6.162236"
+  longitude="48.6753"
+  telephone="03 83 27 75 47"
+  message=""
+/>
+        </scat>
+    </categorie>
+    <categorie type ="S'habiller, s'équiper">
+        <scat>
+
+        <acteur
+          siteweb="www.un-des-sens-atelier.fr"
+          image="undessens.jpg"
+          titre="Un Des Sens"
+          type="Sante"
+          bref="Atelier Cosmétique"
+          desc="Des ateliers pour apprendre à créer ses propres cosmétiques personnalisés. Le but étant de maîtriser ce que nous consommons et appliquons sur notre peau pour respecter sa santé et son environnement. La boutique commercialise tous les ingrédients et matériel utilisés pendant les ateliers, mais également des produits finis pour la plupart français, référencés avec soin, non testés sur animaux, bio, et en privilégiant les petits artisans et producteurs engagés dans une démarche de développement durable. La qualité des ingrédients et produits est primordiale."
+          adresse="6 rue Lafayette Nancy"
+          defi=""
+          latitude="6.174116000"
+          longitude="48.6763350"
+    />
+         <acteur
+           siteweb="www.fleurs-de-peau.fr"
+           image="fleursdepeau.jpg"
+           titre="Fleurs de peau"
+           bref="Cosmétiques Bio"
+           type="Cosmétiques Bio"
+           desc="Fleurs de peau est une entreprise artisanale, qui fabrique ses cosmétiques naturels et écologiques à partir de sa propre culture de plantes médicinales. Dorothée, pharmacienne, spécialisée en phytothérapie et aromathérapie, assure la production artisanale d'huiles, sticks à lèvres, baumes, laits.., d'hydrolats obtenus par distillation à la vapeur d'eau de plantes et de savons artisanaux obtenus par saponification à froid. Tous ses produits sont labellisés 'Nature et Progrès'."
+           adresse="12 Chemin du Diaho, 54113 Blénod-lès-Toul"
+           latitude="5.847814"
+           longitude="48.599249"
+           telephone="06 76 56 99 66"
+      />
+        <acteur
+            fete="oui"
+          siteweb="www.vetethic.fr"
+          image="vetethic.jpg"
+          titre="Vêt'Ethic"
+          type="Vêtements"
+          bref="Magasin de Vêtements issus du commerce équitable"
+          desc="Depuis 8 ans à Nancy et dans la région VET'ETHIC diffuse des vêtements issus du commerce équitable et agit avec ses coopérateurs militants pour la promotion de ce commerce équitable (Nord/Sud mais aussi local)"
+          comptoir="oui"
+          telephone="06 88 56 91 95"
+          latitude="6.17721319199"
+          longitude="48.69586111870"
+          adresse="33 rue Saint Michel Nancy"
+          defi="Créer un second emploi"
+    >
+    <h l="le lundi" t="14h00 - 19h00"/>
+    <h l="du mardi au samedi" t="10h00 - 19h00"/>
+    </acteur>
+        <acteur
+          siteweb="alterego-friperie.wifeo.com"
+          image="alterego.jpg"
+          titre="Alter Ego"
+          type="Friperie"
+          bref="Friperie"
+          desc="ALTER EGO est une friperie proposant tout l'univers féminin vintage et contemporain. Du seconde main choisi avec soin par Corinne, passionnée de mode et de belles matières. Une adresse chaleureuse pour faire un shopping intelligent !"
+          adresse="30 rue Alfred Mézières Nancy"
+          defi=""
+          latitude="6.170943"
+          longitude="48.701329"
+    />
+       <acteur
+            fete="oui"
+          siteweb="www.lespetitescigognes.fr"
+          image="lespetitescigognes.jpg"
+          titre="Les Petites Cigognes"
+          type="Puériculture"
+          bref="Puériculture, jeux durables et vêtements BIO"
+          desc="Puériculture, jeux durables et vêtements BIO"
+          adresse="45 rue de Metz Nancy"
+          defi="Trouver des fournisseurs plus locaux"
+          latitude="6.172005"
+          longitude="48.700735"
+      />
+
+         <acteur
+           siteweb="www.savonnerieclandestine.com"
+           image="savClan.jpg"
+           titre="La Savonnerie clandestine"
+           type="Sante"
+           bref="Savonnerie artisanale"
+           desc="Petite fabrique artisanale, privilégiant les circuits courts et une consommation responsable. Savons et shampooings sont créés avec des ingrédients végétaux ou issus du minéral. Nos produits sont 100 % artisanaux, naturels et végans!
+      Vous nous trouverez aussi au marché de Vandoeuvre le vendredi de 16h à 20h"
+           adresse="9, rue d'Alsace 54140 Jarville-la-Malgrange"
+           defi="Labelisation bio d'ici 2-3 ans"
+           latitude="6.199764"
+           longitude="48.675132"
+    />
+<acteur
+  siteweb="daodavy.com"
+  image="dao.jpg"
+  titre="DAO"
+  bref="Jeans 'made in France', fabriqués à Nancy par un artisan."
+  type="jeans"
+  desc="Jeans 'made in France', fabriqués à Nancy par un artisan."
+  adresse="5 Rue Saint-Nicolas, Nancy"
+  latitude="6.18459"
+  longitude="48.690151"
+  telephone="03 55 20 75 41"
+  message=""
+/>
+        </scat>
+    </categorie>
+    <categorie type="Se déplacer">
+        <scat>
+            
+        <acteur
+            fete="oui"
+          siteweb="www.atelierdynamo.fr"
+          image="dynamo.jpg"
+          titre="Dynamo"
+          type="Association"
+          bref="l'atelier du vélo."
+          desc="Lassociation Dynamo, créée en juillet 2007, s'articule autour de questions environnementales, sociales et économiques. Environnementales dans le domaine du recyclage et de la réutilisation de vélos inutilisés; sociales à travers son projet d'apprentissage et d'échange de savoirs; économiques parce qu'elle permet à tous, quel que soit son budget de se déplacer à vélo et dans de bonnes conditions de sécurité."
+          adresse="35 Gd rue Nancy"
+          defi="Développer une filière « locale » pour les pièces détachées"
+          latitude="6.180453300486"
+          longitude="48.6957619758"
+      />
+        <acteur
+           siteweb="www.laclefduvelo.fr"
+           image="laclefduvelo.jpg"
+           titre="La Clef du Vélo"
+           bref="Réparation vélo"
+           type="Réparation vélo"
+           desc="Réparation tous types de vélos ainsi que vente d'accessoires et vélos neufs pour la pratique en ville et le voyage. Le tout dans une ambiance de petit commerce de proximité!"
+           adresse="27 rue Montesquieu, Nancy"
+           latitude="6.186219"
+           longitude="48.690082"
+           telephone=""
+	/>
+  
+        </scat>
+    </categorie>
+    <categorie type ="Se meubler, décorer, aménager">
+        <scat>
+            
+        <acteur
+          siteweb="www.choeur-dartisans.com"
+          image="helmutetpetula.jpg"
+          titre="Helmut et Pétula"
+          type="Art"
+          bref="Boutique de créateurs et d'artisans d'art"
+          desc="Bijoux, décoration pour la maison ou le jardin, vêtements pour enfant, luminaires...
+Venez découvrir l'espace réservé aux stages donnés tout au long de l'année par des créateurs professionnels!    Des anniversaires sous forme d'ateliers sont également proposés."
+          adresse="Passage Bleu, 14 rue Notre-Dame Nancy"
+          defi=""
+          latitude="6.179654"
+          longitude="48.689233"
+          comptoir="oui"
+          telephone="03 83 29 44 77"
+    >
+    <h l="du mardi au vendredi" t="11h00 - 19h00"/>
+    <h l="le samedi" t="10h00 - 19h00"/>
+    </acteur>
+        <acteur
+          siteweb="www.wellidjou.com"
+          image="petiterecyclerie.jpg"
+          titre="La Petite Recyclerie"
+          type="Réemplois"
+          bref="Créations, objets recyclés, dégustations BIO"
+          desc="Custom, objets recyclés, objets détournés, luminaires, arts, cadeaux originaux et uniques, petits mobiliers, curiosités... mais également découvertes d'artistes sélectionnés par La Petite Recyclerie."
+          adresse="En recherche de local"
+          defi="Mettre en place un système de cafés suspendus"
+    />
+        <acteur
+          fete="oui"
+          siteweb="facebook microdomus54"
+          image="microdomus.jpg"
+          titre="Microdomus"
+          type="Decoration d'interieur"
+          bref="Terrarium"
+          desc="Fabrication de terrariums, décoratifs et autonomes"
+          adresse="Vente sur événements"
+          defi="Mise en place de tarifs sociaux"
+    />
+        <acteur
+          siteweb="www.mndl.fr"
+          image="mndl.jpg"
+          titre="Matériaux Naturels de Lorraine"
+          type="Habitat sain"
+          bref="Matériaux de construction"
+          desc="Matériaux Naturels De Lorraine SARL est membre et créateur du GIE Nature et Développement regroupant à ce jour 25 négoces sur le territoire national. Nous vous proposons une gamme complète de produits écologiques et naturels pour un habitat sain et économe en énergie."
+          adresse="26 grande rue, Thezey St Martin"
+          defi="Passage Enercoop"
+          latitude="6.294387"
+          longitude="48.899532"
+    />
+      <acteur
+        siteweb="www.ayudart.org"
+        image="ayudart.jpg"
+        titre="Ayud'Art"
+        bref=""
+        type=""
+        desc="Vente de produits au profit des enfants des rues du Pérou"
+        adresse="26B Rue Hermite, Nancy"
+        latitude="6.173063"
+        longitude="48.696527"
+        telephone=""
+      />
+ 
+        </scat>
+    </categorie>
+    <categorie type ="Et aussi...">
+        <scat>
+
+         <acteur
+           siteweb="facebook lafabrique54"
+           image="lafabrique.jpg"
+           titre="La Fabrique"
+           bref="Entreprise à But d'Emploi"
+           type="Entreprise à But d'Emploi"
+           desc="Entreprise à But d'Emploi"
+           adresse="Route de Crézilles 54113 Bulligny"
+           latitude="5.858493"
+           longitude="48.582242"
+           telephone="09 67 63 03 52"
+      />
+        <acteur
+          siteweb="www.adegemlafibreverte.com"
+          image="LaFibreVerte.jpg"
+          titre="La Fibre Verte"
+          type="Marketing"
+          bref="Textile et objets publicitaires éthiques"
+          desc="Textile et objets publicitaires éthiques"
+          adresse="58 rue de la commanderie Nancy"
+          defi="Gamme « artistes »"
+          latitude="6.168219"
+          longitude="48.685948"
+    />
+        <acteur
+      siteweb="www.conceptify.fr"
+          image="Conceptify.jpg"
+      titre="Conceptify"
+          bref="Imprimerie 3D"
+          type=""
+          desc="Imprimerie 3D"
+          adresse="159B Rue Saint-Dizier, Nancy"
+          latitude="6.185965"
+          longitude="48.686256"
+	/>
+        <acteur
+           siteweb="www.associationalain.fr"
+           image="alain.jpg"
+           titre="ALAIN"
+           bref="Dépannage informatique"
+           type="Informatique"
+           desc="Association Lorraine Aide Informatique Nancéienne. Dépannage informatique, duplication CD-DVD et super 8, petite imprimerie."
+           adresse="1 rue de la pallée 54270 Essey-lès-Nancy"
+           latitude="6.2491310"
+           longitude="48.711979"
+      />
+ 
+<acteur
+  siteweb=""
+  image="etudesetchantiers.jpg"
+  titre="Etudes et Chantiers"
+  bref="Chantiers de volontaires internationaux"
+  type=""
+  desc="Chantiers de volontaires internationaux"
+  adresse=""
+  latitude="6.2"
+  longitude="48.7"
+  telephone=""
+  message=""
+/>
+ 
+        </scat> 
+    </categorie>
+    <categorie type ="S'engager">
+        <scat>
+            
+        <acteur
+          siteweb="www.amap-provencal.org"
+          image="provencal.jpg"
+          titre="Amap Provencal"
+          type="Association"
+          bref="AMAP"
+          desc="Association pour le Maintien de l'Agriculture Paysanne"
+          adresse="Mjc Centre Social Nomade 8 rue de Norvège 54500 Vandoeuvre"
+          defi=""
+          latitude="6.181145"
+          longitude="48.666985"
+	/>
+        <acteur
+      siteweb="www.jardins-de-la-chaudeau.fr"
+          image="jardinschaudeau.jpg"
+          titre="Jardins de la Chaudeau"
+          bref="AMAP"
+          type="Association"
+          desc="Association pour le Maintien de l'Agriculture Paysanne a Pierre la Treiche"
+          adresse="54200 Pierre-la-Treiche"
+          latitude="5.931616"
+          longitude="48.643115"
+          telephone=""
+      />
+        <acteur
+          siteweb="www.nonviolence.fr/Nancy"
+          image="man.jpg"
+          titre="Mouvement pour une alternative non violente"
+          type="Association"
+          bref="Formations, soirées-débats, actions"
+          desc="Le MAN Nancy organise et propose : - des soirées-débats sur des questions de société, - des interventions dans les quartiers, les établissements scolaires et la vie associative, - des actions de solidarité, - des formations à la régulation non-violente des conflits et à l'action non-violente, - un bimestriel « les Échos du MAN Nancy », - une newsletter mensuelle MAN Nancy Actions. Vous pouvez aussi nous retrouver sur Facebook"
+          adresse="man.nancy@nonviolence.fr"
+          defi=""
+    />
+        <acteur
+          siteweb="www.greenpeace.fr"
+          image="GreenPeaceNancy.jpg"
+          titre="Green Peace Nancy"
+          type="Association"
+          desc="Groupe Local"
+          adresse=""
+      />
+<acteur
+  siteweb=""
+  image="lesamisdelaterre.jpg"
+  titre="Les Amis de la Terre"
+  bref="Association"
+  type="Association"
+  desc="Association"
+  adresse=""
+  telephone=""
+  message=""
+/>
+  
+<acteur
+  siteweb="facebook cocagnelortie"
+  image="lortie.jpg"
+  titre="LORTIE"
+  bref="jardins de cocagne chantier d'insertion maraîchage"
+  type="chantier insertion"
+  desc="Lortie (LORraine Territoire d'Insertion par l'activité Economique) est un des 98 jardins de cocagne de France respectant 4 principes:
+     - accueillir des personnes éloignées de l'emploi
+     - respecter la charte de l'agriculture biologique
+     - Commercialiser sous formes de paniers de légumes en circuits courts à des adhérents
+     - Travailler en local en partenariat avec d'autres producteurs bio"
+  adresse="2 rue Mathieu de Dombasme 54220 MALZEVILLE"
+  latitude="6.18107020855"
+  longitude="48.7249652902"
+  telephone="0652198399"
+  message=""
+/>
+<acteur
+  siteweb=""
+  image="amapdelavalotte.jpg"
+  titre="AMAP de la Valotte"
+  bref="AMAP"
+  type="S'investir"
+  desc="AMAP"
+  adresse=""
+  latitude="6.2"
+  longitude="48.7"
+  telephone=""
+  message=""
+/>
+        </scat>
+    </categorie>
+</categories>
+
+
+<!--
+      <acteur
+        siteweb=""
+        image="defaut.jpg"
+        titre=""
+        bref=""
+        type=""
+        desc=""
+        adresse=""
+        latitude="6"
+        longitude="48"
+        telephone=""
+        message=""
+      />
+-->
