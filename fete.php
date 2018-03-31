@@ -27,7 +27,7 @@ $header = new Header();
 $header->display();
 ?>
 
-      <section id="accueil" class="main style2 right fullscreen">
+      <section id="fete" class="main style2 right fullscreen">
         <div class="content box style1">
           <header>
 	  <h2>Samedi 7 octobre 2017 14h-24h</h2>

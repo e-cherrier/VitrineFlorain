@@ -3944,6 +3944,15 @@ text-decoration: none; }
 		padding-top: 0;
 		background-color: #cdde13;
 	}
+	#fete {
+		background: url("../../images/fete/FetedeLancement.png");
+		background-size: 50% auto;
+		background-attachment: fixed;
+		background-position: center left ;
+		background-repeat: no-repeat;
+		padding-top: 0;
+		background-color: #cdde13;
+	}
 	#jarville {
 		background: url("../../images/journeetransition.jpg");
 		background-size: 100% auto;
@@ -3962,7 +3971,7 @@ text-decoration: none; }
 		background-color: #cdde13;
 	}
 	#restauration {
-		background: url("../../images/cantoche.jpg");
+		background: url("../../images/fete/cantoche.jpg");
 		background-size: 100% auto;
 		background-attachment: fixed;
 		background-position: center center;
@@ -3980,7 +3989,7 @@ text-decoration: none; }
 		background-color: #000;
 	}
 	#comment {
-		background: url("../../images/cercle.png");
+		background: url("../../images/fete/cercle.png");
 		background-size: 70% auto;
 		background-attachment: fixed, fixed;
 		background-position: right center, right center;
