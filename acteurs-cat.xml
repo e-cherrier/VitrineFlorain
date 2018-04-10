@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?>
 <?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories titre ="Liste des acteurs agréés au 21 mars 2018" sstitre="Mise à jour du 15 février 2018 www.florain.fr pour la dernière version" comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert.">
+<categories titre ="Liste des acteurs agréés au 21 mars 2018" sstitre="Mise à jour du 21 mars 2018 www.florain.fr pour la dernière version" comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert.">
     <categorie type="Se nourrir">
         <scat type="Épiceries">
 
@@ -136,7 +136,7 @@
 	  message_comptoir="Pas de change les samedi.">
       <h l="du lundi au samedi" t="9H30 - 19H15"/>
       </acteur>
-                   
+
 
         </scat>
         <scat type="Producteurs">
@@ -467,9 +467,9 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           telephone="06 66 32 91 51"
           message=""
       />
-       
+
         </scat>
-	<scat type="Traiteurs"> 
+	<scat type="Traiteurs">
         <acteur
             fete="oui"
           siteweb="www.fermiersdici.com"
@@ -639,7 +639,8 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
   titre="Brasserie du marché"
   bref="restaurant"
   type="Alimentation"
-  desc="Restaurant"
+  desc="À la BDM nous avons une charte, nous équilibrons les menus, nous respectons les saisons, nous varions les gouts, nos produits sont frais et fabriqués sur place.
+La BDM vous propose en plus un événement le premier jeudi du mois."
   adresse="2 Rue du Cardinal Mathieu, Nancy"
   latitude="6.166836"
   longitude="48.671391"
@@ -659,7 +660,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
   telephone="0383366887"
   message=""
 />
-      
+
         </scat>
         <scat type="Se cultiver, se divertir, se détendre">
             <acteur
@@ -686,7 +687,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
            longitude="48.68707"
            telephone="03 83 28 41 00"
       />
-   
+
             <acteur
           siteweb="www.paulettepubrock.com"
           image="chezpaulette.jpg"
@@ -773,12 +774,12 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
            longitude="48"
            telephone=""
       />
-                
+
         </scat>
     </categorie>
     <categorie type ="Prendre soin de soi">
         <scat>
-            
+
         <acteur
             fete="oui"
           siteweb="www.shiatsu54.com"
@@ -872,10 +873,10 @@ Energétique chinoise"
           bref="Bien-être et accompagnement"
           type="Sante"
           desc="Massages bien-être: polarités, pressions shiatsu, relaxation coréenne, harmonisation corporelle à l'huile, en particulier pour les futures mamans, massage bébé avec ses parents, massage sur chaise ergonomique en entreprise. Non thérapeutique. Relation d'aide par le toucher, ou somatothérapie. Éducation kinesthésique ou Brain Gym. Formation d'adultes des métiers de l'humain, ateliers d'analyse de pratique professionnelle."
-          adresse="Espace Corbin, 5 rue Morey, Nancy"
+          adresse="8, rue du Moulin, 54113 Bulligny"
           latitude="6.176574826246"
           longitude="48.6902521538"
-          telephone=""
+          telephone="06 79 98 48 69"
     />
         <acteur
           siteweb="coursdeyoga.weebly.com"
@@ -1022,7 +1023,7 @@ Villers-lès-Nancy"
     </categorie>
     <categorie type="Se déplacer">
         <scat>
-            
+
         <acteur
             fete="oui"
           siteweb="www.atelierdynamo.fr"
@@ -1048,12 +1049,12 @@ Villers-lès-Nancy"
            longitude="48.690082"
            telephone=""
 	/>
-  
+
         </scat>
     </categorie>
     <categorie type ="Se meubler, décorer, aménager">
         <scat>
-            
+
         <acteur
           siteweb="www.choeur-dartisans.com"
           image="helmutetpetula.jpg"
@@ -1117,7 +1118,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
         longitude="48.696527"
         telephone=""
       />
- 
+
         </scat>
     </categorie>
     <categorie type ="Et aussi...">
@@ -1169,7 +1170,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
            latitude="6.2491310"
            longitude="48.711979"
       />
- 
+
 <acteur
   siteweb=""
   image="etudesetchantiers.jpg"
@@ -1183,12 +1184,12 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   telephone=""
   message=""
 />
- 
-        </scat> 
+
+        </scat>
     </categorie>
     <categorie type ="S'engager">
         <scat>
-            
+
         <acteur
           siteweb="www.amap-provencal.org"
           image="provencal.jpg"
@@ -1242,7 +1243,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   telephone=""
   message=""
 />
-  
+
 <acteur
   siteweb="facebook cocagnelortie"
   image="lortie.jpg"
