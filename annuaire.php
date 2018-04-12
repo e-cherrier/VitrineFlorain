@@ -1,18 +1,19 @@
 <?php
 require('fpdf/fpdf.php');
 require('fpdf/categorie.php');
+require('fpdf/marche.php');
 include('pix_tools.php');
 
 /**************************************************************************/
 class Annuaire extends FPDF
 {
+public $doc = null; // the xml doc.
 public $col = 0; // Current column
 public $top_col;      // Ordinate of column start
 public $bas_col0;      // Ordinate of column 1 end
 public $bas_col1;      // Ordinate of column 2 end
-public $mode = 0; // 0 == 1 column, 1 == 2 columns
 public $nbSubPages = 4; // A page is split in 4 ssPages containing 2 columns each => 8 columns
-public $subPage = 0; // Current ssPage 
+public $subPage = 0; // Current ssPage
 public $topSubPage = 3; // Ordinate of sub page start
 
 function Header()
@@ -164,9 +165,9 @@ function PrintCouverture() {
     $this->Image('images/FlorainFA5-vert.jpg',
         ($this->GetPageWidth()-60)/2, 20, 60
     );
-    
+
     $this->SetFont('Steelfish','',98);
-    
+
     $this->SetY(120);
     $w = $this->GetStringWidth("Le Florain")+6;
     $this->SetLeftMargin(($this->GetPageWidth()-$w)/2);
@@ -174,7 +175,7 @@ function PrintCouverture() {
     $this->SetFont('Futura','',34);
     $this->Cell( $w, 20, "Monnaie Locale", 0, 1 );
     $this->SetFont('Futura','',19);
-    $this->Cell( $w, 5, "de l'Aire de Vie Nancéienne"  );
+    $this->Cell( $w, 5, "de l'Aire de Vie NancÃ©ienne"  );
 
     $this->SetFont('Futura','',78);
     $this->SetY($this->GetPageHeight()/1.3);
@@ -220,9 +221,10 @@ function PrintCharte() {
     $this->Image('images/FlorainFA5-vert.jpg',
         ($this->GetPageWidth()/2-20)/2, $this->GetPageheight()*.2, 20
     );
-    
+
     // site web
     $this->SetFont('Futura','B',28);
+    $this->SetTextColor( 112, 112, 111 );
     $this->SetY($this->GetPageheight()*.4);
     $w = $this->GetStringWidth("www.florain.fr")+6;
     $this->SetX(($this->GetPageWidth()/2-$w)/2);
@@ -238,6 +240,8 @@ function PrintCharte() {
 function PrintAnnuaire( $x ) {
     global $no_footer;
     global $no_header;
+
+    $this->doc = $x;
     $this->AddPage();
 
     $this->PrintCouverture();
@@ -256,7 +260,7 @@ function PrintAnnuaire( $x ) {
     // get the current number of pages + the 4eme de couv
     $nbpages = $this->PageNo() + 1;
     if( $force_toc ) {
-	$nbpages = $nbpages + 1;
+    	  $nbpages = $nbpages + 1;
     }
 
     // we want a multiple of 4 to print it as a booklet.
@@ -296,10 +300,21 @@ function PrintAllCategories( $x ) {
     for($cat=0; $cat<$nb_cat; $cat++) {
 
         $categorie = $categories[$cat];
-    
+
         $myCat = new CategorieLivret( $this, $categorie );
         $toc[$cat] = $myCat->display();
     }
+
+    $marches = $x->getElementsByTagName( "marches" );
+    $nb_mar = $marches->length;
+    for($mar=0; $mar<$nb_mar; $mar++) {
+
+        $marche = $marches[$mar];
+
+        $myMar = new CategorieMarcheLivret( $this, $marche );
+        $toc[$cat+$mar] = $myMar->display();
+    }
+
     return $toc;
 }
 
@@ -315,7 +330,7 @@ function TocPrintCat( $name, $page ) {
 
 function TocPrintSCat( $name, $page ) {
     if( $name == "none" ) {
-    return;
+        return;
     }
     $this->SetX(55);
     // Font
@@ -353,7 +368,7 @@ function PrintComptoirs( $x ) {
     for($a=0; $a<$nb_acteurs; $a++) {
 
         $acteur = $acteurs[$a];
-    
+
         $myA = new ActeurLivret( $this, $acteur );
         if( $myA->isComptoir() ) {
             $myA->display_comptoir( $c % 2, $c );
@@ -379,7 +394,7 @@ function PrintComptoirsTOC( $toc ) {
             $acount = count( $toc[$cat][$s] );
             for( $a = 0; $a < $acount-2; $a++) {
                 if( $toc[$cat][$s][$a]['c'] == true ) {
-                    $this->TocPrintCat( $toc[$cat][$s][$a]['a'], $toc[$cat][$s][$a]['p'] ); 
+                    $this->TocPrintCat( $toc[$cat][$s][$a]['a'], $toc[$cat][$s][$a]['p'] );
                 }
             }
         }
@@ -421,15 +436,15 @@ function PrintTOC( $toc ) {
     for( $cat = 0; $cat < $count; $cat++) {
         $scount = count( $toc[$cat] );
 
-    $this->TocPrintCat( $toc[$cat]['type'], $toc[$cat]['page'] ); 
+        $this->TocPrintCat( $toc[$cat]['type'], $toc[$cat]['page'] );
         for( $s = 0; $s < $scount-2; $s++) {
-        $this->TocPrintSCat( $toc[$cat][$s]['type'], $toc[$cat][$s]['page'] ); 
-        /*
-            for( $a = 0; $a < $acount; $a++) {
-            $message = " index " . $toc[$c][$s][$a];
-            $this->PrintText( $message ); 
-        }
-        */
+            $this->TocPrintSCat( $toc[$cat][$s]['type'], $toc[$cat][$s]['page'] );
+            /*
+                for( $a = 0; $a < $acount; $a++) {
+                $message = " index " . $toc[$c][$s][$a];
+                $this->PrintText( $message );
+            }
+            */
         }
     }
 
@@ -473,7 +488,7 @@ function AddSubPage()
     if( $this->nbSubPages <= 1 ) {
         return;
     }
-    
+
     if( $this->subPage == ($this->nbSubPages - 1) ) {
         $this->subPage = 0;
         $this->addPage('L');
@@ -497,9 +512,9 @@ function PrintCouverture() {
     $this->Rect( $margin-$this->colMargin, 0, $this->GetColumnWidth()*2+$this->colMargin*3, $this->GetPageHeight(), "F" );
 
     $this->Image('images/FlorainFA5-vert.jpg',  $margin + ($cellwidth-40)/2, 20, 40);
-    
+
     $this->SetFont('Steelfish','',48);
-    
+
     $this->SetY(80);
     $w = $this->GetStringWidth("Le Florain")+6;
     $this->SetLeftMargin($margin+($cellwidth-$w)/2);
@@ -511,9 +526,9 @@ function PrintCouverture() {
     $this->Cell( $w, 7, "Monnaie Locale", 0, 1 );
 
     $this->SetFont('Futura','',9);
-    $w = $this->GetStringWidth("de l'Aire de Vie Nancéienne")+6;
+    $w = $this->GetStringWidth("de l'Aire de Vie NancÃ©ienne")+6;
     $this->SetLeftMargin($margin+($cellwidth-$w)/2);
-    $this->Cell( $w, 5, "de l'Aire de Vie Nancéienne"  );
+    $this->Cell( $w, 5, "de l'Aire de Vie NancÃ©ienne"  );
 
     $this->SetFont('Futura','',40);
     $this->SetY($this->GetPageHeight()/1.5);
@@ -574,6 +589,7 @@ function PrintCharte() {
 
 function PrintAnnuaire( $x ) {
 
+    $this->doc = $x;
     $this->AddPage('L');
 
     $this->PrintAllCategories( $x );
@@ -605,9 +621,19 @@ function PrintAllCategories( $x ) {
     for($cat=0; $cat<$nb_cat; $cat++) {
 
         $categorie = $categories[$cat];
-    
+
         $myCat = new CategoriePoche( $this, $categorie );
         $myCat->display();
+    }
+
+    $marches = $x->getElementsByTagName( "marches" );
+    $nb_mar = $marches->length;
+    for($mar=0; $mar<$nb_mar; $mar++) {
+
+        $marche = $marches[$mar];
+
+        $myMar = new CategorieMarchePoche( $this, $marche );
+        $myMar->display();
     }
 }
 

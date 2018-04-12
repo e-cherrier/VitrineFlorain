@@ -3,7 +3,7 @@ require('souscategorie.php');
 
 
 class Categorie {
-	
+
 protected $a;
 protected $cat_;
 
@@ -31,6 +31,9 @@ function needNewPage( $offset=0 ) {
     return $mySsCat->needNewPage( $offset + $this->title_height() );
 }
 
+function typeAttribute() {
+    return "type";
+}
 
 }
 
@@ -42,10 +45,10 @@ function NewSousCategorie( $a, $sscat ) {
 
 function displayType( $suite=false )
 {
-    if( ! $this->cat_->hasAttribute( "type" ) ) {
+    if( ! $this->cat_->hasAttribute( $this->typeAttribute() ) ) {
         return "none";
     }
-    $type = utf8_decode( $this->cat_->getAttribute( "type" ) );
+    $type = utf8_decode( $this->cat_->getAttribute( $this->typeAttribute() ) );
 
     //$this->a->resetColumn();  //MBN ICI
     $this->a->SetCol(0);
@@ -54,7 +57,7 @@ function displayType( $suite=false )
     if( $suite == true ) {
         $label = $label . "  (suite)";
     }
-    
+
     $y1 = $this->a->GetY();
     $this->a->SetFont('Futura','B',18);
     $this->a->SetFillColor(204,220,62);
@@ -75,7 +78,7 @@ function display() {
     $toc = array();
     $this->a->resetColumn();
     if( $this->needNewPage() ) {
-	$this->a->addPage();
+        $this->a->addPage();
     }
 
     $toc['type'] = $this->displayType();
@@ -87,8 +90,8 @@ function display() {
     for($sscat=0; $sscat<$nb_sscat; $sscat++) {
         $sscategorie = $sscategories[$sscat];
 
-	$mySsCat = new SousCategorieLivret( $this->a, $this, $sscategorie );
-	$toc[$sscat] = $mySsCat->display();
+				$mySsCat = $this->NewSousCategorie( $this->a, $sscategorie );
+				$toc[$sscat] = $mySsCat->display();
     }
 
     return $toc;
@@ -104,10 +107,10 @@ function NewSousCategorie( $a, $sscat ) {
 
 function displayType( $suite=false )
 {
-    if( ! $this->cat_->hasAttribute( "type" ) ) {
+    if( ! $this->cat_->hasAttribute( $this->typeAttribute() ) ) {
         return "none";
     }
-    $type = utf8_decode( $this->cat_->getAttribute( "type" ) );
+    $type = utf8_decode( $this->cat_->getAttribute( $this->typeAttribute() ) );
 
     //$this->a->resetColumn();  //MBN ICI
     $this->a->SetCol(0);
@@ -116,7 +119,7 @@ function displayType( $suite=false )
     if( $suite == true ) {
         $label = $label . "  (suite)";
     }
-    
+
     $y1 = $this->a->GetY();
     $this->a->SetFont('Futura','B',11);
     $this->a->SetFont('Steelfish','',14);
@@ -147,10 +150,9 @@ function display() {
 
     for($sscat=0; $sscat<$nb_sscat; $sscat++) {
         $sscategorie = $sscategories[$sscat];
-	$mySsCat = new SousCategoriePoche( $this->a, $this, $sscategorie );
-	$mySsCat->display();
+				$mySsCat = $this->NewSousCategorie( $this->a, $sscategorie );
+				$mySsCat->display();
     }
 }
 
 }
-

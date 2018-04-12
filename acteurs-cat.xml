@@ -67,6 +67,7 @@
     </acteur>
      <acteur
           siteweb="www.croc-us.fr"
+          marche="central"
           image="crocus.jpg"
 	  code="3"
           titre="Croc-Us"
@@ -142,6 +143,7 @@
         <scat type="Producteurs">
             <acteur
           siteweb="www.lafermerome.fr"
+          marche="vandoeuvre"
           image="lafermerome.jpg"
           titre="La Ferme Romé"
           type="Alimentation"
@@ -197,6 +199,7 @@
     </acteur>
         <acteur
           image="mariegauvain.jpg"
+          marche="vandoeuvre"
           titre="Marie Gauvain"
           type="Alimentation"
           bref="Volaille et Porc BIO"
@@ -212,6 +215,7 @@
         <acteur
             fete="oui"
           image="porcquidore.jpg"
+          marche="vandoeuvre"
           titre="La Ferme du porc qui dore"
           type="Alimentation"
           bref="Élevage de Porcs"
@@ -310,6 +314,7 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
     />
         <acteur
             fete="oui"
+            marche="vandoeuvre"
           siteweb="www.lecoindelabeletteunblog.fr"
           image="coinbelette.jpg"
           titre="Le coin de la belette"
@@ -329,6 +334,7 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
     </acteur>
             <acteur
           fete="oui"
+          marche="vandoeuvre maxeville"
           image="marianne.jpg"
           titre="Marianne Louis"
           bref="Fromagère"
@@ -339,6 +345,7 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
       />
         <acteur
       siteweb="www.fontenellebio.fr"
+      marche="vandoeuvre"
           image="fontenelle.jpg"
           titre="Ferme de Fontenelle"
           bref="Produits Laitiers BIO"
@@ -353,6 +360,7 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
         <acteur
             fete="oui"
           siteweb=""
+          marche="maxeville"
           image="bierequiroule.jpg"
           titre="Bière qui roule"
           type="Bière BIO Artisanale"
@@ -435,6 +443,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
       />
         <acteur
           image="moulinpetitpoucet.jpg"
+          marche="vandoeuvre"
           titre="Le Moulin du Petit Poucet"
           type="Alimentation"
           bref="paysans - boulangers"
@@ -448,6 +457,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
        <acteur
             fete="oui"
           image="charles.jpg"
+          marche="vandoeuvre"
           titre="Charles Dimitriou"
           type="Alimentation"
           bref="Pains - Pizza"
@@ -484,10 +494,10 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           longitude="48.677501"
     />
 </scat>
-    </categorie>
-    <categorie type ="Les Marchés">
-        <scat>
-              <acteur
+  </categorie>
+    <marches type ="Les Marchés">
+        <scat
+          id="central"
           image="marche.jpg"
           titre="au Marché Central de Nancy"
           bref="Marché"
@@ -497,11 +507,12 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           latitude="6.18302285671"
           longitude="48.6892039446"
       />
-        <acteur
+        <scat
+          id="maxeville"
           siteweb=""
           image="marche.jpg"
           titre="au Marché de Maxéville"
-	  code="3"
+	        code="3"
           bref="Marché"
           type="Marché"
           desc="Retrouvez les jeudi de 16h à 19h: Marianne (Fromages), Biere Qui Roule (Bieres Locales), Le Domaine Des Saveurs (Volailles), Un Pain De Cote (Boulangers)"
@@ -509,25 +520,24 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           latitude="6.164457"
           longitude="48.706645"
     />
-        <acteur
+        <scat
+          id="vandoeuvre"
           image="marche.jpg"
           titre="au Marché Local BIO de Vandoeuvre"
           bref="Marché"
           type="Marché"
-	  code="2"
+	        code="2"
           desc="Retrouvez les vendredi de 16h à 20h: Le Coin De La Belette (plantes sauvages), Marianne (Tomes, Munsters), Marie (Volailles...), Charles (Pains, Pizza), Le Moulin Du Petit Poucet (Pain, Farine, Pates...), La Ferme Du Porc Qui Dore (Charcuterie), La Savonnerie Clandestine, La Ferme Rome (Primeurs), Ferme de Fontenelle (Produits laitiers)"
           adresse="Marché BIO Vandoeuvre"
           latitude="6.1737"
           longitude="48.6653"
-      comptoir="oui"
+          comptoir="oui"
           telephone="06 41 21 49 69"
           message_comptoir="Le comptoir est tenu par le Coin de La Belette un vendredi sur deux."
       >
-      <h l="un vendredi sur deux" t="16h00 - 20h00"/>
-    </acteur>
-
-        </scat>
-          </categorie>
+        <h l="un vendredi sur deux" t="16h00 - 20h00"/>
+      </scat>
+  </marches>
     <categorie type ="Sortir">
         <scat type="Se restaurer et boire un verre">
             <acteur
@@ -556,6 +566,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
       />
         <acteur
           image="auptitbio.jpg"
+          marche="central"
           titre="Au P'tit BIO"
           type="Alimentation"
           bref="Restaurant"
@@ -939,6 +950,7 @@ Villers-lès-Nancy"
     />
          <acteur
            siteweb="www.fleurs-de-peau.fr"
+           marche="vandoeuvre"
            image="fleursdepeau.jpg"
            titre="Fleurs de peau"
            bref="Cosmétiques Bio"
@@ -995,6 +1007,7 @@ Villers-lès-Nancy"
 
          <acteur
            siteweb="www.savonnerieclandestine.com"
+           marche="vandoeuvre"
            image="savClan.jpg"
            titre="La Savonnerie clandestine"
            type="Sante"
@@ -1010,7 +1023,7 @@ Villers-lès-Nancy"
   siteweb="daodavy.com"
   image="dao.jpg"
   titre="DAO"
-  bref="Jeans 'made in France', fabriqués à Nancy par un artisan."
+  bref="Jeans fabriqués à Nancy."
   type="jeans"
   desc="Jeans 'made in France', fabriqués à Nancy par un artisan."
   adresse="5 Rue Saint-Nicolas, Nancy"
@@ -1233,12 +1246,11 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           adresse=""
       />
 <acteur
-  siteweb=""
+  siteweb="www.amisdelaterre.org"
   image="lesamisdelaterre.jpg"
   titre="Les Amis de la Terre"
-  bref="Association"
   type="Association"
-  desc="Association"
+  desc="Groupe Local"
   adresse=""
   telephone=""
   message=""
@@ -1262,15 +1274,15 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   message=""
 />
 <acteur
-  siteweb=""
+  siteweb="amapdelavallotte.fr"
   image="amapdelavalotte.jpg"
   titre="AMAP de la Valotte"
   bref="AMAP"
   type="S'investir"
   desc="AMAP"
-  adresse=""
-  latitude="6.2"
-  longitude="48.7"
+  adresse="MJC Beauregard Place Maurice Ravel, Nancy"
+  latitude="6.139748"
+  longitude="48.692578"
   telephone=""
   message=""
 />
