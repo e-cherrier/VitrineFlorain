@@ -67,7 +67,7 @@ $header->display_acteurs_nav();
         </td>
         <td>
           <fieldset id="layer3">
-	    <input id="visible3" class="visible" type="checkbox"/>
+        <input id="visible3" class="visible" type="checkbox"/>
             <label class="css-label jaune" for="visible3"> Marchés </label>
           </fieldset>
         </td>
@@ -91,6 +91,58 @@ $header->display_acteurs_nav();
             var afeature;
 <?php
 
+function add_acteur( $acteur ) {
+  if( $acteur->hasAttribute( "attente" ) ) {
+      return;
+  }
+  if( ! $acteur->hasAttribute( "longitude" ) ) {
+      return;
+  }
+  if( ! $acteur->hasAttribute( "latitude" ) ) {
+      return;
+  }
+  $titre = $acteur->getAttribute( "titre" );
+  $desc = $acteur->getAttribute( "bref" );
+  $web = $acteur->getAttribute( "siteweb" );
+  $lon = $acteur->getAttribute( "longitude" );
+  $lat = $acteur->getAttribute( "latitude" );
+  $r = 255; $g = 0; $b = 0;
+  $type = $acteur->getAttribute( "type" );
+  if( $type == "Alimentation" ) {
+      $r = 0; $g = 255; $b = 0;
+  }
+  $punaise = "'https://openlayers.org/en/v4.2.0/examples/data/dot.png'";
+  if( $desc == "Marché" ) {
+      $r = 255; $g = 255; $b = 0;
+      $desc = $acteur->getAttribute( "desc" );
+  }
+?>
+afeature = new ol.Feature({
+geometry: new ol.geom.Point(ol.proj.fromLonLat([<?php echo $lat?>, <?php echo $lon?>])),
+name: "<?php echo $titre?>",
+desc: "<?php echo $desc . " <br/><a href='http://" . $web . "'>".$web."</a>" ?>"
+});
+
+afeature.setStyle(
+new ol.style.Style({
+   image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+     color: [<?php echo $r . "," . $g . "," . $b?> ],
+     crossOrigin: 'anonymous',
+ src: <?php echo $punaise ?>
+   }))
+})
+);
+<?php
+  if( $type == "Alimentation" ) {
+      echo "alimentation_features.push( afeature );";
+  } else if( $type == "Marché" ) {
+      echo "marche_features.push( afeature );";
+  } else {
+      echo "autres_features.push( afeature );";
+  }
+
+}
+
       $xmlDoc = new DOMDocument();
       $xmlDoc->load("acteurs-cat.xml");
 
@@ -98,55 +150,15 @@ $header->display_acteurs_nav();
       $acteurs = $x->getElementsByTagName( "acteur" );
       $nb = $acteurs->length;
       for($pos=0; $pos<$nb; $pos++) {
-	if( $acteurs[$pos]->hasAttribute( "attente" ) ) {
-	    continue;
-	}
-	if( ! $acteurs[$pos]->hasAttribute( "longitude" ) ) {
-	    continue;
-	}
-	if( ! $acteurs[$pos]->hasAttribute( "latitude" ) ) {
-	    continue;
-	}
-	$titre = $acteurs[$pos]->getAttribute( "titre" );
-	$desc = $acteurs[$pos]->getAttribute( "bref" );
-	$web = $acteurs[$pos]->getAttribute( "siteweb" );
-	$lon = $acteurs[$pos]->getAttribute( "longitude" );
-	$lat = $acteurs[$pos]->getAttribute( "latitude" );
-	$r = 255; $g = 0; $b = 0;
-	$type = $acteurs[$pos]->getAttribute( "type" );
-	if( $type == "Alimentation" ) {
-	    $r = 0; $g = 255; $b = 0;
-	}
-        $punaise = "'https://openlayers.org/en/v4.2.0/examples/data/dot.png'";
-	if( $desc == "Marché" ) {
-	    $r = 255; $g = 255; $b = 0;
-	    $desc = $acteurs[$pos]->getAttribute( "desc" );
-	}
-?>
-      afeature = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([<?php echo $lat?>, <?php echo $lon?>])),
-        name: "<?php echo $titre?>",
-        desc: "<?php echo $desc . " <br/><a href='http://" . $web . "'>".$web."</a>" ?>"
-      });
+            add_acteur( $acteurs[$pos] );
+      }
 
-      afeature.setStyle(
-        new ol.style.Style({
-           image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-             color: [<?php echo $r . "," . $g . "," . $b?> ],
-             crossOrigin: 'anonymous',
-	     src: <?php echo $punaise ?>
-           }))
-        })
-      );
-<?php
-	if( $type == "Alimentation" ) {
-		echo "alimentation_features.push( afeature );";
-	} else if( $type == "Marché" ) {
-		echo "marche_features.push( afeature );";
-	} else {
-		echo "autres_features.push( afeature );";
-	}
+      $marche_cat = $x->getElementsByTagName( "marches" );
+      $marches = $marche_cat[0]->getElementsByTagName( "scat" );
+      $nb_marches = $marches->length;
 
+      for($pos=0; $pos<$nb_marches; $pos++) {
+        add_acteur( $marches[$pos] );
       }
 ?>
 
@@ -160,11 +172,11 @@ $header->display_acteurs_nav();
 */
 
       var map = new ol.Map({
-	layers: [
-	    new ol.layer.Tile({ preload: 4, source: new ol.source.OSM() }),
-	    new ol.layer.Vector({ source: new ol.source.Vector({ features: alimentation_features }) }),
-	    new ol.layer.Vector({ source: new ol.source.Vector({ features: autres_features }) }),
-	    new ol.layer.Vector({ source: new ol.source.Vector({ features: marche_features }) })
+    layers: [
+        new ol.layer.Tile({ preload: 4, source: new ol.source.OSM() }),
+        new ol.layer.Vector({ source: new ol.source.Vector({ features: alimentation_features }) }),
+        new ol.layer.Vector({ source: new ol.source.Vector({ features: autres_features }) }),
+        new ol.layer.Vector({ source: new ol.source.Vector({ features: marche_features }) })
         ],
         target: document.getElementById('map'),
         view: new ol.View({
@@ -196,8 +208,8 @@ $header->display_acteurs_nav();
             'placement': 'top',
             'html': true,
           });
-	  $(element).data('bs.popover').options.title = feature.get('name');
-	  $(element).data('bs.popover').options.content = feature.get('desc');
+      $(element).data('bs.popover').options.title = feature.get('name');
+      $(element).data('bs.popover').options.content = feature.get('desc');
           $(element).popover('show');
         } else {
           $(element).popover('destroy');
@@ -219,7 +231,7 @@ $header->display_acteurs_nav();
           </div> <!-- OSM -->
           </div>
 
- 
+
       <footer id="footer">
 <!-- Icons -->
           <ul class="actions">
@@ -228,14 +240,14 @@ $header->display_acteurs_nav();
         </ul>
 
         <!-- Menu -->
-          <ul class="menu"> <li>&copy; Le Florain</li></ul> 
+          <ul class="menu"> <li>&copy; Le Florain</li></ul>
       </footer>
       </div>
 
-    <!-- Scripts --> 
- 
+    <!-- Scripts -->
+
       <script>
-     
+
       function bindInputs(layerid, layer) {
         var visibilityInput = $(layerid + ' input.visible');
         visibilityInput.on('change', function() {

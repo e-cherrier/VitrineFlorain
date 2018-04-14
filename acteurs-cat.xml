@@ -8,6 +8,7 @@
            siteweb="www.lachouettebio.fr"
            image="lachouette.jpg"
            titre="La Chouette BIO"
+           comptoir="oui"
            bref="Magasin BIO"
            type="Magasin BIO"
            desc="Nous proposons une grande sélection de produits BIO en alimentaire et non alimentaire: fruits et légumes, épicerie sucrée et salée, produits en vrac, fromages à la coupe, pains, produits d'hygiène, cosmétiques, compléments alimentaires… et bien sûr des produits locaux !"
@@ -16,7 +17,10 @@
            longitude="48.740646"
            telephone="09 72 58 65 21"
            message=""
-/>
+        >
+        <h l="du lundi au vendredi" t="09h30 - 19h00"/>
+        <h l="le samedi" t="09h00 - 19h00"/>
+      </acteur>
          <acteur
            fete="oui"
            siteweb="www.mrsimmsnancy.fr"
@@ -502,8 +506,8 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           titre="au Marché Central de Nancy"
           bref="Marché"
           type="Marché"
-          desc="Retrouvez au marché central de Nancy: Croc-Us (Epicerie/Primeurs), Le P'tit BIO (Restaurant)"
-          adresse="Marché Central Nancy"
+          desc="du mardi au samedi de 7h à 19h"
+          adresse="  "
           latitude="6.18302285671"
           longitude="48.6892039446"
       />
@@ -515,7 +519,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
 	        code="3"
           bref="Marché"
           type="Marché"
-          desc="Retrouvez les jeudi de 16h à 19h: Marianne (Fromages), Biere Qui Roule (Bieres Locales), Le Domaine Des Saveurs (Volailles), Un Pain De Cote (Boulangers)"
+          desc="les jeudi de 16h à 19h"
           adresse="Rue des brasseries Maxeville"
           latitude="6.164457"
           longitude="48.706645"
@@ -527,13 +531,13 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           bref="Marché"
           type="Marché"
 	        code="2"
-          desc="Retrouvez les vendredi de 16h à 20h: Le Coin De La Belette (plantes sauvages), Marianne (Tomes, Munsters), Marie (Volailles...), Charles (Pains, Pizza), Le Moulin Du Petit Poucet (Pain, Farine, Pates...), La Ferme Du Porc Qui Dore (Charcuterie), La Savonnerie Clandestine, La Ferme Rome (Primeurs), Ferme de Fontenelle (Produits laitiers)"
-          adresse="Marché BIO Vandoeuvre"
+          desc="les vendredi de 16h à 20h"
+          adresse="  "
           latitude="6.1737"
           longitude="48.6653"
           comptoir="oui"
           telephone="06 41 21 49 69"
-          message_comptoir="Le comptoir est tenu par le Coin de La Belette un vendredi sur deux."
+          message_comptoir="Comptoir de Change tenu par le Coin de La Belette un vendredi sur deux."
       >
         <h l="un vendredi sur deux" t="16h00 - 20h00"/>
       </scat>
