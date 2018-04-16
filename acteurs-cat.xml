@@ -318,18 +318,16 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
     />
         <acteur
             fete="oui"
-            marche="vandoeuvre"
           siteweb="www.lecoindelabeletteunblog.fr"
           image="coinbelette.jpg"
           titre="Le coin de la belette"
           type="Alimentation"
           bref="Plantes sauvages"
-          desc="Préparations maison à l'ancienne et de façon traditionnelle, à base de plantes sauvages ou cultivées: confitures, sirops... Préparations de plantes séchées: reine des prés, achillée.... Nous cueillons à la main, dans le respect de l'environnement, les plantes sauvages pour nos préparations. Vous nous trouverez aussi au marché de Vandoeuvre le vendredi de 16h à 20h"
+          desc="Préparations maison à l'ancienne et de façon traditionnelle, à base de plantes sauvages ou cultivées: confitures, sirops... Préparations de plantes séchées: reine des prés, achillée.... Nous cueillons à la main, dans le respect de l'environnement, les plantes sauvages pour nos préparations."
           adresse="3 rue François EVRARD  54140 Jarville"
           defi="Augmenter les achats locaux et baisser les achats en grande surface"
           latitude="6.202037"
           longitude="48.667067"
-      comptoir="oui"
           telephone="06 41 21 49 69"
           message="Au marché BIO de Vandoeuvre. Un vendredi sur deux."
           message_comptoir="Au marché BIO de Vandoeuvre. Un vendredi sur deux."
@@ -535,9 +533,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           adresse="  "
           latitude="6.1737"
           longitude="48.6653"
-          comptoir="oui"
           telephone="06 41 21 49 69"
-          message_comptoir="Comptoir de Change tenu par le Coin de La Belette un vendredi sur deux."
       >
         <h l="un vendredi sur deux" t="16h00 - 20h00"/>
       </scat>

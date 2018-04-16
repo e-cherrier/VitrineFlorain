@@ -36,7 +36,7 @@ $header->display();
 
 <h4>Plus de 500 adhérents</h4>
 <h4>Un réseau de plus de 80 professionnels,</h4>
-<h4>9 comptoirs de change,</h4>
+<h4>8 comptoirs de change,</h4>
 <h4>1000 Florains de plus par semaine dans le circuit.</h4>
 <br/>
 <h3>Vous aussi, entrez dans la dynamique !</h3>
@@ -53,7 +53,7 @@ $header->display();
         <footer>
           <a href="#monnaie" class="button style2 down anchored">More</a>
         </footer>
-        <slider> <img class="slide" src="images/accueil.png"> </slider> 
+        <slider> <img class="slide" src="images/accueil.png"> </slider>
       </section>
 <!--
       <section id="accueil" class="main style2 right dark fullscreen">
