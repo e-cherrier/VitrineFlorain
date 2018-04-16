@@ -53,7 +53,7 @@ $header->display();
         <footer>
           <a href="#monnaie" class="button style2 down anchored">More</a>
         </footer>
-        <!-- <slider> <img class="slide" src="images/accueil.png"> </slider> -->
+        <slider> <img class="slide" src="images/accueil.png"> </slider> 
       </section>
 <!--
       <section id="accueil" class="main style2 right dark fullscreen">
@@ -397,6 +397,7 @@ while(x=eval(x));
 		   	});
 
 		</script>
+-->
      <script>
         var Images = new Array('images/accueil.png', 'images/cerclevertueux.png');
         var Pointeur = 0;
@@ -406,6 +407,5 @@ while(x=eval(x));
          Pointeur++;
         }
     </script>
--->
   </body>
 </html>

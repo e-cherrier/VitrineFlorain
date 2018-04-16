@@ -574,11 +574,11 @@
 				margin-bottom: 1em;
 			}
 			.style2 p , .style2 li{
-			
+
 				font-size: 0.8em;
 				line-height: 1.5;
 				color: #FFF;
-				
+
 			}
 			.style2 h4 , .style2 h2{
 				color: #FFF;
@@ -606,7 +606,7 @@
 			}
 			.carousel article p + a:hover, .carousel article header + a:hover {
 				background-color: #cdde13;
-			
+
 			}
 
 			section.carousel > header > p {
@@ -721,7 +721,7 @@
              column-count: 2;
 		     color: #FFF;
      }
-	
+
 	}
 
 	@media screen and (max-width: 736px) {
@@ -2349,9 +2349,9 @@
 		.box.style1 footer, #one footer{
 		text-align: center;
 				position: relative;
-	
 
-		
+
+
 	}
 
 	.box h5 {
@@ -2366,7 +2366,7 @@
 
 				margin-top: 0;
 
-		
+
 	}
 
 	#quartierbtn {
@@ -2377,7 +2377,7 @@
 	}
 	#quartierbtn:hover {
 		background: #cdde13;
-	
+
 	}
 
 	.map-cover {
@@ -2410,7 +2410,7 @@ text-decoration: none; }
 
 			#nav > ul > li {
 				display: inline-block;
-			
+
 				-moz-transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
 				-webkit-transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
 				-ms-transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
@@ -2514,13 +2514,13 @@ text-decoration: none; }
 		font-size: 15pt;
 		line-height: 1.75em;
 		color: #39454b;
-		
+
 	}
 	body p, body a {
 
 		font-size: 13pt;
 
-		
+
 	}
 
 		body.is-loading *, body.is-resizing * {
@@ -2621,7 +2621,7 @@ text-decoration: none; }
 
 
 	footer {
-		
+
 	}
 
 	br.clear {
@@ -2984,7 +2984,7 @@ text-decoration: none; }
 			input[type="reset"].style2.down,
 			.button.style2.down,
 			button.style2.down {
-		
+
 			}
 
 /* Box */
@@ -3010,7 +3010,7 @@ text-decoration: none; }
 			position: absolute;
 			right: 0;
 			bottom: 0;
-	
+
 		}
 		.box footer a.button {
 			border-radius: 0 0 0 0;
@@ -3029,22 +3029,22 @@ text-decoration: none; }
 		}
 
 		.red .box footer a.button {
-			
+
 			background: #cdde13;
 
 		}
 		.box footer a.button:hover {
-			
+
 			background: #cdde13;
 
 		}
 		.red .box footer a.button:hover {
-			
+
 			background: #c1a544;
 
 		}
 			.box footer a.button:before {
-	
+
 			font-size: 0.7em;
 			margin-right: 3px;
 
@@ -3058,7 +3058,7 @@ text-decoration: none; }
 			float: left;
 
 		}
-		
+
 #map {
 	padding: 0;
 }
@@ -3208,7 +3208,7 @@ text-decoration: none; }
 /* Dark */
 
 	.color {
-		
+
 		width: 500px;
 
 		height: 200px;
@@ -3751,7 +3751,7 @@ text-decoration: none; }
 		padding-top: 3em;
 	}
 
-	
+
 
 	#logo {
 		position: absolute;
@@ -3809,18 +3809,18 @@ text-decoration: none; }
 				#nav ul li a a {
 
 					text-decoration: none;
-			
+
 				}
 				#nav ul li a:hover, #nav ul li a.active {
 					color: #fff;
 				}
 				#nav ul li a.button{
-		
+
 					color: #cdde13;
 				}
 				#nav ul li a.button:hover {
 					background-color: #fff;
-				
+
 				}
 
 				#nav ul li a.icon {
@@ -3828,7 +3828,7 @@ text-decoration: none; }
 					display: inline;
 				}
 
-				
+
 #navPanel{
 	display: none;
 }
@@ -3936,7 +3936,6 @@ text-decoration: none; }
 		background-color: #fff;
 	}
 	#accueil {
-		background: url("../../images/Printemps de l'eco 2018.jpg");
 		background-size: 50% auto;
 		background-attachment: fixed;
 		background-position: center left ;
@@ -4013,7 +4012,7 @@ text-decoration: none; }
 		font-weight: normal;
 	}
 
-	
+
 	#faq h2 {
 		color: #cdde13;
 		font-size: 3.0em;
@@ -4318,7 +4317,7 @@ h5:hover a {
 			position: relative;
 			bottom: 0;
 			background: #edece4;
-			
+
 		}
 
 		#contact.inactive .box {
@@ -4936,6 +4935,5 @@ slider {
 }
 
 slider img {
-	width: 40%;
+	width: 50%;
 }
-

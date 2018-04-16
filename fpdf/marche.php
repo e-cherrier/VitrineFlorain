@@ -1,8 +1,28 @@
 <?php
 require_once('souscategorie.php');
 
+class Exposant extends Acteur {
+protected $is_comptoir_;
 
-class ExposantPoche extends Acteur {
+function setIsComptoir( $is_comptoir ) {
+    $this->is_comptoir_ = $is_comptoir;
+}
+
+function isComptoir() {
+
+    if( $this->is_comptoir_ and $this->acteur_->hasAttribute( "comptoir" ) ) {
+        $c = $this->acteur_->getAttribute( "comptoir" );
+      	if( $c == "oui" ) {
+            return true;
+      	}
+    }
+    return false;
+}
+
+}
+
+
+class ExposantPoche extends Exposant {
 
 function EnteteHeight() {
     $h = $this->getAttributeHeight( "titre", 10, 'B' );
@@ -54,7 +74,7 @@ function Entete() {
     // get the y max
     if( $cury < $y ) {
         //$this->a->SetY( $top_entete + $this->EnteteHeight() );
-		$this->a->debug("Curry : " . $cury . " ; y " . $y);
+		    $this->a->debug("Curry : " . $cury . " ; y " . $y);
     }
 }
 
@@ -67,9 +87,9 @@ function display( $col, $deb_i ) {
     $this->acteur_->setAttribute( "displayed", "true" );
 
     if( $col == 0 ) {
-	$this->a->bas_col0 = $this->a->GetY();
+	      $this->a->bas_col0 = $this->a->GetY();
     } else {
-	$this->a->bas_col1 = $this->a->GetY();
+	      $this->a->bas_col1 = $this->a->GetY();
     }
 }
 }
@@ -77,7 +97,7 @@ function display( $col, $deb_i ) {
 
 /**************************************************************************/
 
-class ExposantLivret extends Acteur {
+class ExposantLivret extends Exposant {
 
 function height() {
 
@@ -163,7 +183,9 @@ function typeAttribute() {
 class MarcheLivret extends Marche {
 
 function NewActeur(  $annuaire, $acteur ) {
-    return new ExposantLivret( $annuaire, $acteur );
+    $expo = new ExposantLivret( $annuaire, $acteur );
+    $expo->setIsComptoir( $this->scat_->hasAttribute( "message_comptoir" ));
+    return $expo;
 }
 
 
@@ -202,7 +224,9 @@ function displayType( $suite=false )
 class MarchePoche extends Marche {
 
 function NewActeur( $annuaire, $acteur ) {
-    return new ExposantPoche( $annuaire, $acteur );
+    $expo = new ExposantPoche( $annuaire, $acteur );
+    $expo->setIsComptoir( $this->scat_->hasAttribute( "message_comptoir" ));
+    return $expo;
 }
 
 function displayType( $suite=false )

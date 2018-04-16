@@ -1208,16 +1208,18 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
         <scat>
 
         <acteur
-          siteweb="www.amap-provencal.org"
-          image="provencal.jpg"
-          titre="Amap Provencal"
+          siteweb="www.amap-larainette.org"
+          image="amaplarainette.jpg"
+          titre="AMAP la Rainette"
           type="Association"
-          bref="AMAP"
-          desc="Association pour le Maintien de l'Agriculture Paysanne"
+          bref="AMAP (ex Provencal)"
+          desc="L'AMAP la Rainette (ex Provencal) distribue à ses adhérents des produits bios et locaux le vendredi de 18h à 19h45. Les adhérents peuvent obtenir des légumes produits par Fix Houillon, des fruits de Mirabio, des fromages d'Hélène Lebas, du pain du Moulin du Petit Poucet, des oeufs et de la volaille produits par Marie Gauvain."
           adresse="Mjc Centre Social Nomade 8 rue de Norvège 54500 Vandoeuvre"
           defi=""
           latitude="6.181145"
           longitude="48.666985"
+          citation="Intégrer le Florain, c'est permettre à notre
+     AMAP de renforcer sa démarche de soutien aux paysans locaux."
 	/>
         <acteur
       siteweb="www.jardins-de-la-chaudeau.fr"
