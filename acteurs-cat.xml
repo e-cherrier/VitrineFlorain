@@ -26,7 +26,7 @@
            siteweb="www.mrsimmsnancy.fr"
            image="MrSimms.jpg"
            titre="Mr Simms"
-	   code="-1"
+	         code="-1"
            type="Confiserie"
            bref="Confiserie"
            desc="Mr Simms fait redécouvrir les confiseries aux petits et grands gourmands. Des ateliers fabriquent depuis 1891 quelques unes des sucreries que vous trouverez chez Mr Simms. Nous les avons visité et avons salivé devant les chaudrons en cuivre remplis de sucre bouilli, et les chocolats préparés et emballés à la main pour ne vous rapporter que le meilleur ! Nous avons aussi pour vous des confiseries sans sucre, sans gluten, sans lactose et sans matière animale."
@@ -112,9 +112,8 @@
           latitude="6.176497"
           longitude="48.700953"
     />
-   <acteur_en_attente
-          attente="true"
-          siteweb="facebook Le-Gramme-de-Folie-Nancy"
+   <acteur
+          siteweb="facebook @legrammedefolie"
           image="grammedefolie.jpg"
           titre="Le Gramme de Folie"
           type="Alimentation"
@@ -145,6 +144,20 @@
 
         </scat>
         <scat type="Producteurs">
+          <acteur
+            date="0418"
+            siteweb="facebook Chèvrerie des Quatre Vents"
+            image="chevrerie4vents.jpg"
+            titre="Chèvrerie des Quatre Vents"
+            bref="Elevage de Chèvres"
+            type="Alimentation"
+            desc="La Chèvrerie des Quatre Vents élabore ses yaourts grâce à son troupeau de chèvres de race « lorraine » et « anglo-nubienne ». Les produits proposés, en vente directe à la ferme, sont des yaourts au lait de chèvre ainsi que des terrines de chevreau nature, à la mirabelle ou au pain d’épices. Vente directe à la ferme les vendredi de 17h à 19h."
+            adresse="Rue de Liverdun, 54380 Saizerais"
+            latitude="6.052444"
+            longitude="48.781446"
+            telephone="06 50 63 79 65"
+            message=""
+        />
             <acteur
           siteweb="www.lafermerome.fr"
           marche="vandoeuvre"
@@ -671,6 +684,34 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
   telephone="0383366887"
   message=""
 />
+<acteur
+  date="0418"
+  siteweb="www.latabledestan.com"
+  image="tabledubonroistanislas.jpg"
+  titre="A la Table du Bon Roi Stanislas"
+  bref="Restaurant"
+  type="Alimentation"
+  desc="Restaurant historique autour de la personnalité de Stanislas. Nous puisons dans les recettes lorraines, polonaises et françaises de l'époque pour re-découvrir les saveurs de sa table."
+  adresse="7 Rue Gustave Simon, Nancy"
+  latitude="6.180963"
+  longitude="48.693722"
+  telephone="03 83 35 36 52"
+  message=""
+/>
+<acteur
+  date="0418"
+  siteweb=""
+  image="vindiou.jpg"
+  titre="Vindiou"
+  bref="Cave/Bar à vins spécialisée"
+  type="Alimentation"
+  desc="Cave/Bar à vins spécialisée proposant des canons bios et natures de copains vignerons. Pour enfin savoir ce que nous buvons!"
+  adresse="1 Rue Saint-Michel, 54000 Nancy"
+  latitude="6.179183"
+  longitude="48.696832"
+  telephone="09 86 17 34 24"
+  message=""
+/>
 
         </scat>
         <scat type="Se cultiver, se divertir, se détendre">
@@ -771,6 +812,16 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
            latitude="6.16816"
            longitude="48.660747"
            telephone="03 83 15 90 00"
+      />
+      <acteur
+        siteweb="www.curionomie.fr"
+        image="curionomie.jpg"
+        titre="Curionomie"
+        bref="Escapades mystères"
+        type=""
+        desc="La Curionomie est l'art de s'émerveiller. Curionomie est une entreprise innovante qui propose des escapades mystères sous forme de pochette surprise. (Re)découvrez votre ville de manière authentique et ludique au gré des manifestations et des initiatives locales, des ateliers d'artistes et d'artisans"
+        adresse=""
+        telephone=""
       />
          <acteur_en_attente
           attente="true"
@@ -979,6 +1030,18 @@ Villers-lès-Nancy"
     <h l="le lundi" t="14h00 - 19h00"/>
     <h l="du mardi au samedi" t="10h00 - 19h00"/>
     </acteur>
+      <acteur
+        siteweb="www.ayudart.org"
+        image="ayudart.jpg"
+        titre="Ayud'Art"
+        bref="artisanat péruvien équitable"
+        type=""
+        desc="artisanat péruvien équitable au profit des enfants des rues du Pérou"
+        adresse="26B Rue Hermite, Nancy"
+        latitude="6.173063"
+        longitude="48.696527"
+        telephone=""
+      />
         <acteur
           siteweb="alterego-friperie.wifeo.com"
           image="alterego.jpg"
@@ -1119,25 +1182,55 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           latitude="6.294387"
           longitude="48.899532"
     />
-      <acteur
-        siteweb="www.ayudart.org"
-        image="ayudart.jpg"
-        titre="Ayud'Art"
-        bref=""
-        type=""
-        desc="Vente de produits au profit des enfants des rues du Pérou"
-        adresse="26B Rue Hermite, Nancy"
-        latitude="6.173063"
-        longitude="48.696527"
-        telephone=""
-      />
+    <acteur
+      date="0418"
+      siteweb="facebook Barbara-K-Fée-de-Papier"
+      image="feedepapier.jpg"
+      titre="La fée de papier"
+      bref="Créations"
+      type=""
+      desc="Cadeaux et/ou déco uniques et personnalisés pour tous types d'occasions (anniversaire, baptême, remerciements, félicitations, déclaration d'amour, encouragements, demande en mariage...) --> Sculptures en papier, mobiles en origami... "
+      adresse="Malzéville"
+      latitude="6.183463"
+      longitude="48.708323"
+      telephone=""
+      message=""
+    />
+    <acteur
+      date="0418"
+      siteweb="facebook trocnancypulnoy"
+      image="troc.jpg"
+      titre="Troc"
+      bref="Depot vente meubles"
+      type=""
+      desc="Dépôt vente et déstockage neuf à prix troc: venez chiner et trouver la perle rare dans les 3000 m2 de notre espace de vente avec des arrivages quotidiens."
+      adresse="1 Rue des Trezelots, 54425 Pulnoy"
+      latitude="6.252521"
+      longitude="48.70635"
+      telephone="03 83 33 17 83"
+      message=""
+    />
 
         </scat>
     </categorie>
     <categorie type ="Et aussi...">
         <scat>
+        <acteur
+          date="0418"
+          siteweb="lacasavictoria.fr"
+          image="lacasavictoria.jpg"
+          titre="La Casa Victoria"
+          bref="Appartement à louer"
+          type=""
+          desc="Située dans le centre-ville de Nancy, à 10 minutes à pied de la gare, La Casa Victoria vous propose un appartement de 2 chambres, d'une superficie de 62 m²"
+          adresse="21 Rue du Pont Mouja, 54000 Nancy"
+          latitude=""
+          longitude=""
+          telephone="06 22 53 09 75"
+          message=""
+        />
 
-         <acteur
+         <acteur_en_attente
            siteweb="facebook lafabrique54"
            image="lafabrique.jpg"
            titre="La Fabrique"
@@ -1269,7 +1362,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
      - respecter la charte de l'agriculture biologique
      - Commercialiser sous formes de paniers de légumes en circuits courts à des adhérents
      - Travailler en local en partenariat avec d'autres producteurs bio"
-  adresse="2 rue Mathieu de Dombasme 54220 MALZEVILLE"
+  adresse="2 rue Mathieu de Dombasle 54220 MALZEVILLE"
   latitude="6.18107020855"
   longitude="48.7249652902"
   telephone="0652198399"
@@ -1288,13 +1381,27 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   telephone=""
   message=""
 />
+<acteur
+  siteweb="www.racines-carrees.fr"
+  image="racinescarrees.jpg"
+  titre="Racines Carrées"
+  bref="Agroécologie urbaine"
+  type="association"
+  desc="association qui a pour objet
+     de sensibiliser et de développer l’agroécologie urbaine sur
+     le territoire du Grand Nancy"
+  adresse=""
+  telephone=""
+/>
         </scat>
     </categorie>
 </categories>
 
 
+
 <!--
       <acteur
+        date="0418"
         siteweb=""
         image="defaut.jpg"
         titre=""
