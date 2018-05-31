@@ -594,15 +594,20 @@ function PrintAnnuaire( $x ) {
 
     $this->PrintAllCategories( $x );
 
+    $pagesave = $this->subPage;
+    $this->subPage = 0;
     $this->setCol( 0 );
-    $this->SetY($this->GetPageheight()-20);
+    $this->SetY($this->GetPageheight()-7);
 
+    $texte_width = $this->marginLeft + $this->colMargin*6 + $this->GetColumnWidth()*6;
     $texte = utf8_decode( $x->getAttribute( "comptoirs" ) );
-    $h = $this->MultiCellHeight( $this->GetColumnWidth()*2, 5, $texte, 0, 'C' );
+    $h = $this->MultiCellHeight( $texte_width, 5, $texte, 0, 'C' );
     $this->SetFillColor(234,250,180);
-    $this->Rect( $this->GetX()-1, $this->GetY()-1, $this->GetColumnWidth()*2, $h+6, "F" );
+    $this->Rect( $this->GetX()-1, $this->GetY()-1, $texte_width, $h+6, "F" );
 
-    $this->PrintName( $texte, $this->GetColumnWidth()*2 );
+    $this->PrintName( $texte, $texte_width );
+
+    $this->subPage = $pagesave;
 
     $this->AddSubPage();
     $this->SetCol( 0 );
