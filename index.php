@@ -35,7 +35,7 @@ $header->display();
 <h3>Depuis la fete de lancement le 7 octobre 2017, le Florain c'est:</h3>
 
 <h4>Plus de 500 adhérents</h4>
-<h4>Un réseau de plus de 80 professionnels,</h4>
+<h4>Un réseau de près de 100 professionnels,</h4>
 <h4>8 comptoirs de change,</h4>
 <h4>1000 Florains de plus par semaine dans le circuit.</h4>
 <br/>
