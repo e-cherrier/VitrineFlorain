@@ -17,27 +17,86 @@ include('nav.php');
     <link rel="stylesheet" href="style.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<?php
+      $xmlDoc = new DOMDocument();
+      $xmlDoc->load("acteurs-cat.xml");
+      $x = $xmlDoc->documentElement;
+
+      // Generate the script to show / hide categories
+      $cat_ids = array();
+      $btn_ids = array();
+      $idx = 0;
+
+      $categories = $x->getElementsByTagName( "categorie" );
+      $nb_cat = $categories->length;
+
+      for( $cat=0; $cat<$nb_cat; $cat++ ) {
+          $categorie = $categories[$cat];
+          if( $categorie->hasAttribute( "type" ) &&
+              $categorie->getAttribute( "type" ) != ""
+          ) {
+              $sous_categories = $categorie->getElementsByTagName( "scat" );
+              $nb_sous_cat = $sous_categories->length;
+              if( $nb_sous_cat > 1 ) {
+                for( $scat=0; $scat<$nb_sous_cat; $scat++ ) {
+                  $id = "#cat" . $cat . "scat" . $scat;
+                  $cat_ids[$idx] = $id ;
+                  $id = "#press_cat" . $cat . "scat" . $scat;
+                  $btn_ids[$idx] = $id ;
+                  $idx = $idx+1;
+                }
+              } else {
+                  $id = "#cat" . $cat;
+                  $cat_ids[$idx] = $id ;
+                  $id = "#press_cat" . $cat;
+                  $btn_ids[$idx] = $id ;
+                  $idx = $idx+1;
+              }
+          }
+      }
+
+      $cat_ids[$idx] = "#marches";
+      $btn_ids[$idx] = "#press_marches";
+
+      $cat_displayed = rand( 0, count( $btn_ids )-1 );
+      print "<script>\n";
+      print "$(document).ready(function(){\n";
+      for( $b=0; $b < count( $btn_ids ); $b++ ) {
+          print "$('" . $btn_ids[$b] . "').click(function(){\n";
+          for( $c=0; $c < count( $cat_ids ); $c++ ) {
+            if( $b == $c ) {
+              print "$('" . $cat_ids[$c] . "').show();";
+            } else {
+              print "$('" . $cat_ids[$c] . "').hide();";
+            }
+          }
+          print "});\n";
+      }
+      print "});\n";
+      print "</script>\n";
+
+ ?>
+
   </head>
   <body id="top">
 <?php
-$header = new Header();
-$header->display();
-?>
 
-        <!-- Main -->
-          <div id="acteurs">
-<?php
+function is_hidden( $cat, $cat_displayed ) {
+  if( $cat != $cat_displayed ) {
+    return "hidden";
+  }
+  return "";
+}
+      $header = new Header();
+      $header->display();
+
+      print "<div id='acteurs'>";
       $header->display_acteurs_nav();
 
-      $xmlDoc = new DOMDocument();
-      $xmlDoc->load("acteurs-cat.xml");
-
-      $x = $xmlDoc->documentElement;
       print "<h2>" . $x->getAttribute( "titre" ) . "</h2>";
 
       print "<section class='paragraphe'>";
-      $categories = $x->getElementsByTagName( "categorie" );
-      $nb_cat = $categories->length;
 
       print "<section class='column toc'>";
 
@@ -48,7 +107,7 @@ $header->display();
           ) {
               $acteurs = $categorie->getElementsByTagName( "acteur" );
               $nb = $acteurs->length;
-              print "<h4 class='toc'><a href='#cat" . $cat . "'>" . $categorie->getAttribute( "type" ) . " (" . $nb . ")</a></h4>";
+              print "<h4 class='toc'><a href='#acteurs' id='press_cat" . $cat . "'>" . $categorie->getAttribute( "type" ) . " (" . $nb . ")</a></h4>";
               $sous_categories = $categorie->getElementsByTagName( "scat" );
               $nb_sous_cat = $sous_categories->length;
               for($scat=0; $scat<$nb_sous_cat; $scat++) {
@@ -58,7 +117,7 @@ $header->display();
                   ) {
                       $acteurs = $sous_categorie->getElementsByTagName( "acteur" );
                       $nb = $acteurs->length;
-                      print "<h5 class='toc'><a href='#cat" . $cat . "scat" . $scat . "'>" . $sous_categorie->getAttribute( "type" ) . " (" . $nb . ")</a></h5>";
+                      print "<h5 class='toc' ><a href='#acteurs' id='press_cat" . $cat . "scat" . $scat . "'>" . $sous_categorie->getAttribute( "type" ) . " (" . $nb . ")</a></h5>";
                   }
               }
           }
@@ -66,24 +125,36 @@ $header->display();
       $marche_cat = $x->getElementsByTagName( "marches" );
       $marches = $marche_cat[0]->getElementsByTagName( "scat" );
       $nb_marches = $marches->length;
-      print "<h4 class='toc'><a href='#marches'>" . $marche_cat[0]->getAttribute( "type" ) . " (" . $nb_marches . ")</a></h4>";
+      print "<h4 class='toc'><a href='#acteurs' id='press_marches'>" . $marche_cat[0]->getAttribute( "type" ) . " (" . $nb_marches . ")</a></h4>";
       print "</section>";
 
+      print "<div id='show'>";
+      $cat_idx=0;
       for($cat=0; $cat<$nb_cat; $cat++) {
 
           $categorie = $categories[$cat];
-          if( $categorie->hasAttribute( "type" ) ) {
+          $sous_categories = $categorie->getElementsByTagName( "scat" );
+          $nb_sous_cat = $sous_categories->length;
+          if( ! $categorie->hasAttribute( "type" ) ) {
+              continue;
+          }
+          if( $nb_sous_cat > 1 ) {
+              print "<div id='cat" . $cat . "'>";
+          } else {
+              print "<div id='cat" . $cat . "' ". is_hidden( $cat_idx++, $cat_displayed ) . ">";
               print "<h1 id='cat" . $cat . "'>" . $categorie->getAttribute( "type" ) . "</h1>";
           }
 
-          $sous_categories = $categorie->getElementsByTagName( "scat" );
-          $nb_sous_cat = $sous_categories->length;
           for($scat=0; $scat<$nb_sous_cat; $scat++) {
               $sous_categorie = $sous_categories[$scat];
+
               if( $sous_categorie->hasAttribute( "type" ) &&
                   $sous_categorie->getAttribute( "type" ) != ""
               ) {
-                  print "<h2 id='cat" . $cat . "scat" . $scat . "'>" . $sous_categorie->getAttribute( "type" ) . "</h2>";
+                  print "<div id='cat" . $cat . "scat" . $scat . "' ". is_hidden( $cat_idx++, $cat_displayed ) . ">";
+                  print "<h1>" . $categorie->getAttribute( "type" ) . " / " . $sous_categorie->getAttribute( "type" ) . "</h1>";
+              } else {
+                  print "<div id='cat" . $cat . "scat" . $scat . "'>";
               }
               $acteurs = $sous_categorie->getElementsByTagName( "acteur" );
               $nb = $acteurs->length;
@@ -137,7 +208,9 @@ EOD;
                   print "</acteur>";
               }
               print "</section>";
+              print "</div>";
           }
+          print "</div>";
       }
 
       /* marches */
@@ -168,7 +241,8 @@ EOD;
 
       $indexes = range(0, $nb_marches-1);
       shuffle($indexes);
-      print "<h1 id='marches'>" . $marche_cat[0]->getAttribute( "type" ) . "</h1>";
+      print "<div id='marches' ". is_hidden( $cat_idx++, $cat_displayed ) . ">";
+      print "<h1>" . $marche_cat[0]->getAttribute( "type" ) . "</h1>";
       print "<section class='column'>";
       for( $pos=0; $pos<$nb_marches; $pos++ ) {
         $acteur = $marches[$indexes[$pos]];
@@ -251,8 +325,10 @@ EOD;
         print "</acteur>";
       }
       print "</section>";
+      print "</div>";
 ?>
-              </section> <!-- Liste -->
+</div> <!-- top -->
+</section> <!-- paragraphe -->
 
 
           </div>
