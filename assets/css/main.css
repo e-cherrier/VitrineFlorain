@@ -441,15 +441,15 @@
 
 	}
 
-.style1 .mention, .style2 .mention {
+  .style1 .mention, .style2 .mention {
 		background: #be7fb1;
 		padding: 2px 5px;
 		line-height: 30px;
 		color: #fff;
 		text-transform: uppercase;
 		font-size: 0.7em;
-
 	}
+
 	.style1 .mention.place, .style2 .mention.place {
 		background: #39454B;
 		font-weight: bold;
@@ -561,6 +561,25 @@
 			transition: opacity 0.75s ease-in-out;
 		}
 
+    		.carousel.documents article {
+        		position: relative;
+        		top: 0;
+        		left: 0;
+
+  		    	width: 250px;
+      			padding: 0 1em 3em 1em;
+      			margin: 0 1em 0 0;
+            height: auto;
+        }
+
+    		.carousel.documents p:hover {
+        	  color: #000;
+      			-moz-transition: color 0.75s ease-in-out;
+      			-webkit-transition: color 0.75s ease-in-out;
+      			-ms-transition: color 0.75s ease-in-out;
+      			transition: color 0.75s ease-in-out;
+        }
+
 			.carousel article.loading {
 				opacity: 0;
 			}
@@ -591,10 +610,14 @@
 				line-height: 1.5;
 				height: 120px;
 			}
+			.carousel.documents article p {
+				height: inherit;
+			}
 			.programme .carousel article p, #ps.carousel article p {
 
 				height: 30px;
 			}
+
 
 			.carousel article p + a , .carousel article header + a {
 				background-color: #39454b;
@@ -608,6 +631,7 @@
 				background-color: #cdde13;
 
 			}
+
 
 			section.carousel > header > p {
 				color: #FFF;
