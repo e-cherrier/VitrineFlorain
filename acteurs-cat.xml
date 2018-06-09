@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?>
 <?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories titre ="Liste des acteurs agréés au 24 avril 2018" sstitre="Mise à jour du 24 avril 2018 www.florain.fr pour la dernière version" comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert.">
+<categories titre ="Liste des acteurs agréés au 30 mai 2018" sstitre="Mise à jour du 30 mai 2018 www.florain.fr pour la dernière version" comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert.">
     <categorie type="Se nourrir">
         <scat type="Épiceries">
 
@@ -151,7 +151,7 @@
             titre="Chèvrerie des Quatre Vents"
             bref="Elevage de Chèvres"
             type="Alimentation"
-            desc="La Chèvrerie des Quatre Vents élabore ses yaourts grâce à son troupeau de chèvres de race « lorraine » et « anglo-nubienne ». Les produits proposés, en vente directe à la ferme, sont des yaourts au lait de chèvre ainsi que des terrines de chevreau nature, à la mirabelle ou au pain d’épices. Vente directe à la ferme les vendredi de 17h à 19h."
+            desc="La Chèvrerie des Quatre Vents élabore ses yaourts grâce à son troupeau de chèvres de race « lorraine » et « anglo-nubienne ». Les produits proposés, en vente directe à la ferme, sont des yaourts au lait de chèvre ainsi que des terrines de chevreau nature, à la mirabelle ou au pain d'épices. Vente directe à la ferme les vendredi de 17h à 19h."
             adresse="Rue de Liverdun, 54380 Saizerais"
             latitude="6.052444"
             longitude="48.781446"
@@ -393,7 +393,7 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
           titre="Brasserie la Châouette "
           type="Biere BIO Artisanale"
 	  code="0"
-          desc="La Châouette est une bière bio de fabrication artisanale et traditionnelle. Elle se décline en Ambrée, Blonde ,Blanche et de saison (Printemps, Hiver). Ce sont toutes des bières pur malts de fermentation haute, finement houblonnées et épicées ce qui leur confère une rondeur en bouche typique et des caractères bien différents. Elles ne sont ni filtrées ni pasteurisées afin de préserver l’ensemble des arômes subtiles qui en font leur singularité."
+          desc="La Châouette est une bière bio de fabrication artisanale et traditionnelle. Elle se décline en Ambrée, Blonde ,Blanche et de saison (Printemps, Hiver). Ce sont toutes des bières pur malts de fermentation haute, finement houblonnées et épicées ce qui leur confère une rondeur en bouche typique et des caractères bien différents. Elles ne sont ni filtrées ni pasteurisées afin de préserver l'ensemble des arômes subtiles qui en font leur singularité."
           adresse="22 route nationale 54380 Saizerais"
           defi="Audit conso énergie + eau"
           latitude="6.04473352432"
@@ -448,6 +448,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           siteweb="unpaindecote.free.fr"
           image="un-pain-de-cote.jpg"
           titre="Un Pain de Côté"
+          marche="maxeville"
           bref="Boulangers BIO"
           type="Alimentation"
           desc=" Nous avons créé notre fournil dans notre maison, en 2009 après avoir démissionné de l'éducation nationale.  Nous n'avons pas de magasins, et travaillons quasi exclusivement (hormis le marché du jeudi) sur commande, afin d'éviter le gaspillage. Nous produisons donc nos pains et viennoiseries pour des Amaps, des magasins Bio, et des cantines, ainsi qu'une vente au fournil le vendredi soir sur réservation. Notre matière première principale, la farine, provient du Moulin du Petit Poucet"
@@ -715,6 +716,22 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
 
         </scat>
         <scat type="Se cultiver, se divertir, se détendre">
+
+          <acteur
+            date="0518"
+            siteweb="facebook lamaisondubeau"
+            image="maisondubeau.jpg"
+            titre="La Maison du Beau"
+            bref="Colos dans les Vosges"
+            type="Colos"
+            desc="Nous organisons des colos de 1 à 3 semaines pour des enfants de 5 à 11 ans au coeur des Vosges pour s'amuser en pleine nature, vivre en groupe, rêver un peu et surtout grandir avec ses copains. Pour les plus grands (12 à 14 ans) nous proposons des séjours sous tente de deux semaines pour randonner, cuisiner et monter des projets avec d'autres jeunes."
+            adresse="20 rue de la république 54320 Maxeville"
+            latitude="6.161818"
+            longitude="48.712968"
+            telephone=""
+            message=""
+          />
+
             <acteur
            siteweb="www.cameo-nancy.fr"
        image="cameo-stseb.jpg"
@@ -771,7 +788,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
            titre="Nancy Curieux"
            bref="La culture pour tous."
            type="Sortir"
-           desc="Faciliter l’accès à la culture pour tous et favoriser la collaboration des acteurs"
+           desc="Faciliter l'accès à la culture pour tous et favoriser la collaboration des acteurs"
            adresse=""
            telephone=""
            message=""
@@ -841,7 +858,46 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
     </categorie>
     <categorie type ="Prendre soin de soi">
         <scat>
+          <acteur
+            date="0518"
+            siteweb="www.essencielonaturel.fr"
+            image="essencielonaturel.jpg"
+            titre="Essenciel O Naturel"
+            bref="Naturopathie"
+            desc="Praticien de santé Naturopathe sur la région de Nancy, je travaille en collaboration avec le magasin bio Envie De Bien-Etre, implanté au 65 rue Carnot à Dombasle-sur-Meurthe. J'interviens au sein de ce magasin les mardis, jeudis et samedis. La première consultation dure 2h et la consultation de suivi ne dépasse pas 1h. Je vous propose un accompagnement dédié à votre santé et votre bien-être et personnalisé. J'utilise plusieurs techniques relatives à l'aromathérapie, la  nutrition, les massages naturopathiques, et anime des ateliers santé."
+            adresse="65 rue carnot 54110 Dombasle sur Meurthe"
+            latitude="6.349915"
+            longitude="48.622827"
+            telephone="06.58.83.86.41"
+            message=""
+          />
+          <acteur
+            date="0518"
+            siteweb="www.bio-est-ethique.fr"
+            image="bioestethique.jpg"
+            titre="Bio Est Ethique"
+            bref="Bio Estheticienne"
+            desc="Beauté et bien-être au naturel Soins du visage et du corps, modelages et soins ayurvediques. Tous les soins sont doux pour la peau et doux pour la planète. Vente de cosmétiques bio et accessoires de beauté et de bien-être écologiques et zéro déchet."
+            adresse="14 avenue Général Leclerc 54700 Pont à Mousson"
+            latitude="6.061597"
+            longitude="48.906857"
+            telephone="06.81.24.49.40"
+            message=""
+          />
 
+          <acteur
+            date="0518"
+            siteweb="www.osteopathie-nancy.fr"
+            image="osteopathienancy.jpg"
+            titre="Lysiane CAMMAS Ostéopathe"
+            bref="Ostéopathe"
+            desc="Ostéopathe"
+            adresse="12 Rue de la Salle 54000 Nancy"
+            latitude="6.189856"
+            longitude="48.686635"
+            telephone="03 83 31 27 56"
+            message=""
+          />
         <acteur
             fete="oui"
           siteweb="www.shiatsu54.com"
@@ -974,7 +1030,7 @@ Energétique chinoise"
   image="lapharmaciesaintetherese.jpg"
   titre="La pharmacie Sainte Thérèse"
   type="Pharmacie"
-  desc="La pharmacie Sainte Thérèse vous apporte une expertise en solutions naturelles en vous proposant une large gamme de produits ainsi que des mélanges d’huiles essentielles préparés sur demande."
+  desc="La pharmacie Sainte Thérèse vous apporte une expertise en solutions naturelles en vous proposant une large gamme de produits ainsi que des mélanges d'huiles essentielles préparés sur demande."
   adresse="38 Boulevard de Baudricourt
 Villers-lès-Nancy"
   latitude="6.162236"
@@ -1215,6 +1271,21 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
     </categorie>
     <categorie type ="Et aussi...">
         <scat>
+          <acteur
+            date="0518"
+            siteweb="www.xipio.fr"
+            image="xipio.jpg"
+            titre="Xipio"
+            bref="Création pour bébés et/ou zéro déchet."
+            type="Couture"
+            desc="Création main d'objets en textile pour bébés et/ou dans un objectif zéro déchet."
+            adresse="3 rue JF Kennedy 54130 Saint-Max"
+            latitude="6.20642"
+            longitude="48.698609"
+            telephone=""
+            message=""
+          />
+
         <acteur
           date="0418"
           siteweb="lacasavictoria.fr"
@@ -1295,6 +1366,21 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
     </categorie>
     <categorie type ="S'engager">
         <scat>
+
+          <acteur
+            date="0518"
+            siteweb="www.avec-nancy.fr"
+            image="avecnancy.jpg"
+            titre="A.V.E.C. Nancy"
+            bref="Association d'acteurs économiques"
+            type="Association"
+            desc="Association pour la Vie Economique du Coeur de Nancy, a vocation à fédérer tous les acteurs économiques du périmètre concerné autour d'un projet commun : développer des actions en faveur du dynamisme économique de ce territoire."
+            adresse="Rue des Ponts, CC St Sébastien, BP 108"
+            latitude="6.181255"
+            longitude="48.688078"
+            telephone=""
+            message=""
+          />
 
         <acteur
           siteweb="www.amap-larainette.org"
@@ -1388,7 +1474,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   bref="Agroécologie urbaine"
   type="association"
   desc="association qui a pour objet
-     de sensibiliser et de développer l’agroécologie urbaine sur
+     de sensibiliser et de développer l'agroécologie urbaine sur
      le territoire du Grand Nancy"
   adresse=""
   telephone=""

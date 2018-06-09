@@ -472,7 +472,7 @@ class AnnuairePoche extends Annuaire
 
 public $bottomMargin = 3;
 public $colMargin = 2;
-public $cellHeight = 4;
+public $cellHeight = 3;
 public $marginLeft = 0; // 1 if there is a margin at left (and right) 0 if no margin.
 
 function GetColumnWidth()
@@ -564,7 +564,7 @@ function PrintCharte() {
     // green bg
     $this->SetFillColor(204,220,62);
     $this->SetTextColor(112,112,111);
-    $this->Rect( $margin+$this->GetColumnWidth()*1.6, 0, $this->GetColumnWidth()*.5, $this->GetPageHeight(), "F" );
+    $this->Rect( $margin+$this->GetColumnWidth()*1.65, 0, $this->GetColumnWidth()*.39, $this->GetPageHeight(), "F" );
 
     // charte
     $this->SetY( $this->GetPageHeight()*.05 );
@@ -594,28 +594,29 @@ function PrintAnnuaire( $x ) {
 
     $this->PrintAllCategories( $x );
 
-    $pagesave = $this->subPage;
-    $this->subPage = 0;
-    $this->setCol( 0 );
-    $this->SetY($this->GetPageheight()-7);
+    // print the charte if enough space
+    if( $this->subPage == 1 ) {
+        $this->AddSubPage();
+        $this->SetCol( 0 );
+        $this->PrintCharte();
+    }
 
-    $texte_width = $this->marginLeft + $this->colMargin*6 + $this->GetColumnWidth()*6;
+    // print the comptoir advice
+    $this->setCol( 0 );
+    $this->SetY($this->GetPageheight()-15);
+
+    // for one line text $texte_width = $this->marginLeft + $this->colMargin*6 + $this->GetColumnWidth()*6;
+    $texte_width = $this->GetColumnWidth()*2;
     $texte = utf8_decode( $x->getAttribute( "comptoirs" ) );
-    $h = $this->MultiCellHeight( $texte_width, 5, $texte, 0, 'C' );
+    $h = $this->MultiCellHeight( $texte_width, 4, $texte, 0, 'C' );
     $this->SetFillColor(234,250,180);
-    $this->Rect( $this->GetX()-1, $this->GetY()-1, $texte_width, $h+6, "F" );
+    $this->Rect( $this->GetX()-1, $this->GetY()-3, $texte_width, $h+2, "F" );
 
     $this->PrintName( $texte, $texte_width );
 
-    $this->subPage = $pagesave;
-
+    // at last print the couverture
     $this->AddSubPage();
     $this->SetCol( 0 );
-    if( $this->subPage == 2 ) {
-        $this->PrintCharte();
-        $this->AddSubPage();
-        $this->SetCol( 0 );
-    }
     $this->PrintCouverture();
 }
 
