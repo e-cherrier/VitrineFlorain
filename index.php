@@ -14,12 +14,13 @@ include('nav.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/slider.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   </head>
-  <body id="top" onload="ImageSlider()">
+  <body id="top">
 
 <?php
 $header = new Header();
@@ -35,7 +36,7 @@ $header->display();
 <h3>Depuis la fete de lancement le 7 octobre 2017, le Florain c'est:</h3>
 
 <h4>Plus de 500 adhérents</h4>
-<h4>Un réseau de près de 100 professionnels,</h4>
+<h4>Un réseau de plus de 100 professionnels,</h4>
 <h4>8 comptoirs de change,</h4>
 <h4>1000 Florains de plus par semaine dans le circuit.</h4>
 <br/>
@@ -50,10 +51,76 @@ $header->display();
 	</ul>
       </footer>
         </div>
+
+
+        <!--
+        	<div id="slider_agrees" class="slider top box red">
+                  <h4>Les derniers agrees:</h4>
+                  <ul>
+        	   <li><img src="http://localhost/github/VitrineFlorain/images/acteurs/mndl.jpg" /></li>
+        	   <li><img src="http://localhost/github/VitrineFlorain/images/acteurs/troc.jpg" /></li>
+        	   <li><img src="http://localhost/github/VitrineFlorain/images/acteurs/helmutetpetula.jpg" /></li>
+        	   <li><img src="http://localhost/monnaielocalenancyOnLine/images/acteurs/LesMalicesDeSuzette.jpg" /></li>
+        	   <li><img src="http://localhost/monnaielocalenancyOnLine/images/acteurs/DayByDay.jpg" /></li>
+        	   <li><img src="http://localhost/monnaielocalenancyOnLine/images/acteurs/crocus.jpg" /></li>
+        	   <li><img src="http://localhost/github/VitrineFlorain/images/acteurs/mndl.jpg" /></li>
+        	   <li><img src="http://localhost/github/VitrineFlorain/images/acteurs/troc.jpg" /></li>
+        	   <li><img src="http://localhost/github/VitrineFlorain/images/acteurs/helmutetpetula.jpg" /></li>
+                  </ul>
+                </div>
+        -->
+
+      	<div id="slider_news" class="slider base box red">
+          <h3> Les dernières nouvelles</h3>
+        <table>
+        <?php
+        require_once( "../wp.monnaielocalenancy.fr/wp-load.php");
+        // Set up the WordPress query.
+        //wp();
+        // Connexion a la base de donnees
+        try
+        {
+        	$str = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME;
+        	$bdd = new PDO( $str, DB_USER, DB_PASSWORD );
+        }
+        catch(Exception $e)
+        {
+                die('Erreur : '.$e->getMessage());
+        }
+
+        // Recuperation des 3 derniers messages
+        $reponse = $bdd->query("SELECT guid, post_title, post_content FROM wp_posts WHERE post_status='publish' ORDER BY post_date DESC LIMIT 3") or die(print_r($bdd->errorInfo()));
+
+        // Affichage de chaque message (toutes les donnï¿½es sont protï¿½gï¿½es par htmlspecialchars)
+        while ($donnees = $reponse->fetch())
+        {
+        	$post_content = $donnees['post_content'];
+          $xmlDoc = new DOMDocument();
+          $xmlDoc->loadHTML( $post_content );
+          $x = $xmlDoc->documentElement;
+          $images = $x->getElementsByTagName( "img" );
+        	if( count( $images ) > 0 ) {
+        	    print '<tr>';
+        	    print ' <td>';
+              print " <a href='" . $donnees['guid'] . "'>";
+        	    print '  <h2>' . iconv( "CP1252", "UTF-8",  $donnees['post_title'] ) . '</h2>' ;
+        	    $src = $images[0]->getAttribute( "src" );
+        	    print "  <img src='" . $src . "' />";
+        	    print ' </a>';
+        	    print ' </td>';
+        	    print '</tr>';
+        	}
+        }
+
+        $reponse->closeCursor();
+        ?>
+          </table>
+        </div>
+
         <footer>
           <a href="#monnaie" class="button style2 down anchored">More</a>
         </footer>
-        <slider> <img class="slide" src="images/accueil.png"> </slider>
+      <!--  <slider> <img class="slide" src="images/accueil.png"> </slider> -->
       </section>
 <!--
       <section id="accueil" class="main style2 right dark fullscreen">
@@ -397,7 +464,6 @@ while(x=eval(x));
 		   	});
 
 		</script>
--->
      <script>
         var Images = new Array('images/accueil.png', 'images/cerclevertueux.png');
         var Pointeur = 0;
@@ -407,5 +473,6 @@ while(x=eval(x));
          Pointeur++;
         }
     </script>
+-->
   </body>
 </html>
