@@ -10,7 +10,7 @@
            titre="La Chouette BIO"
            comptoir="oui"
            bref="Magasin BIO"
-           type="Magasin BIO"
+           type="Alimentation"
            desc="Nous proposons une grande sélection de produits BIO en alimentaire et non alimentaire: fruits et légumes, épicerie sucrée et salée, produits en vrac, fromages à la coupe, pains, produits d'hygiène, cosmétiques, compléments alimentaires… et bien sûr des produits locaux !"
            adresse="ZAC Grand Air 14, rue du bois, 54390 Frouard"
            latitude="6.150376"
@@ -220,14 +220,13 @@
           titre="Marie Gauvain"
           type="Alimentation"
           bref="Volaille et Porc BIO"
-          desc="Marie propose des volailles: Poulets, pintades, dindes, poulardes... ainsi que du porc élevé en plein air et ses charcuteries. Nature et Progrès
-      Marie est présente au marché de Vandoeuvre le vendredi de 16h à 20h"
+          desc="Marie propose des volailles: Poulets, pintades, dindes, poulardes... ainsi que du porc élevé en plein air et ses charcuteries. Marie est présente au marché de Vandoeuvre le vendredi de 16h à 20h"
           adresse="2 r Derrière l'Eglise 54470 Grosrouvres"
-	  telephone="03 83 23 37 76"
+	        telephone="03 83 23 37 76"
           defi="Pérenniser l'activité"
           latitude="5.84022045135"
           longitude="48.8299780972"
-	  labels="Nature et Progrès"
+	        labels="Nature et Progrès"
     />
         <acteur
             fete="oui"
@@ -373,9 +372,9 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
           message=""
       />
         <acteur
-            fete="oui"
+          fete="oui"
           siteweb=""
-          marche="maxeville"
+          marche="maxeville vandoeuvre"
           image="bierequiroule.jpg"
           titre="Bière qui roule"
           type="Bière BIO Artisanale"
@@ -625,7 +624,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
            image="royalroyal.jpg"
            titre="Le Royal Royal"
            bref="Bar Restaurant"
-           type="Bar Restaurant"
+           type="Alimentation"
            desc="Bar Restaurant emblématique de Nancy - Concerts - expos et plus encore!"
            adresse="22 rue de mon désert, Nancy"
            latitude="6.178083"
@@ -705,9 +704,9 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
   image="vindiou.jpg"
   titre="Vindiou"
   bref="Cave/Bar à vins spécialisée"
-  type="Alimentation"
+  type="Bar"
   desc="Cave/Bar à vins spécialisée proposant des canons bios et natures de copains vignerons. Pour enfin savoir ce que nous buvons!"
-  adresse="1 Rue Saint-Michel, 54000 Nancy"
+  adresse="1 Rue Saint-Michel, Nancy"
   latitude="6.179183"
   longitude="48.696832"
   telephone="09 86 17 34 24"
@@ -830,6 +829,17 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
            longitude="48.660747"
            telephone="03 83 15 90 00"
       />
+             <acteur
+               siteweb="www.mjc-etoile.com"
+               image="mjcetoile.jpg"
+               titre="MJC Étoile"
+               bref="loisirs, convivialité, faire ensemble"
+               desc="Activités de loisirs, culturelles, sportives, éducatives, sociales pour tous publics. La MJC Étoile est aussi une scène culturelle de proximité ou le public peut aussi être acteur de ce qui se passe sur les planches du théâtre de l'Étoile"
+               adresse="1 place de Londres, 54500 Vandœuvre-lès-Nancy"
+               latitude="6.182307"
+               longitude="48.659872"
+               telephone="03 83 55 53 35"
+          />
       <acteur
         siteweb="www.curionomie.fr"
         image="curionomie.jpg"
@@ -864,7 +874,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             image="essencielonaturel.jpg"
             titre="Essenciel O Naturel"
             bref="Naturopathie"
-            desc="Praticien de santé Naturopathe sur la région de Nancy, je travaille en collaboration avec le magasin bio Envie De Bien-Etre, implanté au 65 rue Carnot à Dombasle-sur-Meurthe. J'interviens au sein de ce magasin les mardis, jeudis et samedis. La première consultation dure 2h et la consultation de suivi ne dépasse pas 1h. Je vous propose un accompagnement dédié à votre santé et votre bien-être et personnalisé. J'utilise plusieurs techniques relatives à l'aromathérapie, la  nutrition, les massages naturopathiques, et anime des ateliers santé."
+            desc="Patrice Raganelli, Praticien de santé Naturopathe sur la région de Nancy, propose de vous  accompagner sur le chemin du bien-être et de la santé. Rééquilibrage alimentaire (plus saine et riche en nutriments), diabète, accompagnement cancers, allergies, diarrhée, constipation, mal de ventre, migraine, etc ...  Je vous propose mon savoir-faire en naturopathie afin de soulager vos troubles physiques, redynamiser votre corps afin de permettre à chacun de permettre l'auto-guérison et augmenter votre énergie vitale."
             adresse="65 rue carnot 54110 Dombasle sur Meurthe"
             latitude="6.349915"
             longitude="48.622827"
@@ -884,30 +894,52 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             telephone="06.81.24.49.40"
             message=""
           />
-
+          <acteur
+            date="0518"
+            siteweb="www.jphuber-osteopathe.com"
+            image="jeanphilippehuber.jpg"
+            titre="Huber Jean-Philippe"
+            bref="Ostéopathie Acupunture"
+            desc="Traitement des troubles mécaniques du corps humain en tant qu’ostéopathe et des déséquilibres énergétiques en tant qu'acupuncteur."
+            adresse="33 rue Déglin, Nancy"
+            latitude="6.18005"
+            longitude="48.700844"
+            telephone="03.83.32.31.30"
+            message=""
+          />
           <acteur
             date="0518"
             siteweb="www.osteopathie-nancy.fr"
             image="osteopathienancy.jpg"
-            titre="Lysiane CAMMAS Ostéopathe"
+            titre="Lysiane Cammas"
             bref="Ostéopathe"
             desc="Ostéopathe"
-            adresse="12 Rue de la Salle 54000 Nancy"
+            adresse="12 Rue de la Salle, Nancy"
             latitude="6.189856"
             longitude="48.686635"
             telephone="03 83 31 27 56"
             message=""
           />
         <acteur
-            fete="oui"
+          siteweb=""
+          image="guyfischer.jpg"
+          titre="Guy Fischer"
+          bref="Shiatsu"
+          desc="Praticien certifié de Shiatsu traditionnel. D'origine japonaise, ce soin holistique de bien-être s'inscrit dans la prévention de la santé. Ainsi, par des techniques de pressions et d'étirements, le Shiatsu s'inspire de la médecine traditionnelle chinoise. Il utilise les points d'acupuncture pour traiter les excès de la vie moderne, faire circuler l'énergie subtile du corps, harmoniser la force de vie et  contribuer à diffuser la joie de vivre"
+          adresse="200 rue Marguerite Roblot 54230 Chaligny"
+          defi=""
+          latitude="6.073814"
+          longitude="48.627313"
+          telephone="06 41 84 35 07"
+    />
+        <acteur
+          fete="oui"
           siteweb="www.shiatsu54.com"
           image="nathalieMartin.jpg"
           titre="Nathalie Martin"
           type="Sante"
           bref="Shiatsu"
-          desc="Praticienne Shiatsu agréée par la FFST
-(Fédération Française de Shiatsu Traditionnel)
-Energétique chinoise"
+          desc="Praticienne Shiatsu agréée par la FFST (Fédération Française de Shiatsu Traditionnel) Energétique chinoise"
           adresse="22 route de Xeuilley 54550 Maizières"
           defi="S'approvisionner en local pour ce qui peut l'être"
           latitude="6.064699"
@@ -1043,6 +1075,17 @@ Villers-lès-Nancy"
     <categorie type ="S'habiller, s'équiper">
         <scat>
 
+                  <acteur
+                    siteweb="sni-pam.fr"
+                    image="sni.jpg"
+                    titre="Solidarités Nationales et Internationales"
+                    bref="Vente, réemploi, prestations"
+                    desc="A travers ses chantiers d'insertion, SNI propose la vente de mobiliers, de décorations et de vêtements issues du réemploi. L'association propose également des prestations dans le domaine du nettoyage, des déménagements/débarras, des petits travaux, ou encore de l'entretien des espaces verts. Pour finir, l'association vend diverses productions de légumes issues de ses Jardins."
+                    adresse="13 Rue du Four"
+                    latitude="6.055855"
+                    longitude="48.900468"
+                    telephone="03 83 83 12 06"
+              />
         <acteur
           siteweb="www.un-des-sens-atelier.fr"
           image="undessens.jpg"
@@ -1273,6 +1316,19 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
         <scat>
           <acteur
             date="0518"
+            siteweb="www.presle-architectes.com"
+            image="presle.jpg"
+            titre="atelier PRESLE architectes"
+            bref="Architectes"
+            desc="Architectes"
+            adresse="50 Rue Raymond Poincaré, Nancy"
+            latitude="6.169833"
+            longitude="48.689544"
+            telephone="06 74 28 99 38"
+            message=""
+          />
+          <acteur
+            date="0518"
             siteweb="www.xipio.fr"
             image="xipio.jpg"
             titre="Xipio"
@@ -1294,7 +1350,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           bref="Appartement à louer"
           type=""
           desc="Située dans le centre-ville de Nancy, à 10 minutes à pied de la gare, La Casa Victoria vous propose un appartement de 2 chambres, d'une superficie de 62 m²"
-          adresse="21 Rue du Pont Mouja, 54000 Nancy"
+          adresse="21 Rue du Pont Mouja, Nancy"
           latitude=""
           longitude=""
           telephone="06 22 53 09 75"
@@ -1355,9 +1411,9 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   bref="Chantiers de volontaires internationaux"
   type=""
   desc="Chantiers de volontaires internationaux"
-  adresse=""
-  latitude="6.2"
-  longitude="48.7"
+  adresse="53 Rue de la Hache, Nancy"
+  latitude="6.182625"
+  longitude="48.687844"
   telephone=""
   message=""
 />
@@ -1366,7 +1422,19 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
     </categorie>
     <categorie type ="S'engager">
         <scat>
-
+          <acteur
+            date="0518"
+            siteweb="selest-bassin-pompey.communityforge.net"
+            image="selest.jpg"
+            titre="SEL'EST"
+            bref="échanges et entraide"
+            desc="Sel'Est du bassin de Pompey, système local d'échanges et d'entraide, est ouvert à toutes les personnes qui veulent échanger des services, des savoir-faire, des objets, de la convivialité."
+            adresse="13, rue Haute 54340 POMPEY"
+            latitude="6.118053"
+            longitude="48.764136"
+            telephone=""
+            message=""
+          />
           <acteur
             date="0518"
             siteweb="www.avec-nancy.fr"
@@ -1387,14 +1455,13 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           image="amaplarainette.jpg"
           titre="AMAP la Rainette"
           type="Association"
-          bref="AMAP (ex Provencal)"
+          bref="(ex Provencal)"
           desc="L'AMAP la Rainette (ex Provencal) distribue à ses adhérents des produits bios et locaux le vendredi de 18h à 19h45. Les adhérents peuvent obtenir des légumes produits par Fix Houillon, des fruits de Mirabio, des fromages d'Hélène Lebas, du pain du Moulin du Petit Poucet, des oeufs et de la volaille produits par Marie Gauvain."
           adresse="Mjc Centre Social Nomade 8 rue de Norvège 54500 Vandoeuvre"
           defi=""
           latitude="6.181145"
           longitude="48.666985"
-          citation="Intégrer le Florain, c'est permettre à notre
-     AMAP de renforcer sa démarche de soutien aux paysans locaux."
+          citation="Intégrer le Florain, c'est permettre à notre AMAP de renforcer sa démarche de soutien aux paysans locaux."
 	/>
         <acteur
       siteweb="www.jardins-de-la-chaudeau.fr"
@@ -1441,14 +1508,13 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   siteweb="facebook cocagnelortie"
   image="lortie.jpg"
   titre="LORTIE"
-  bref="jardins de cocagne chantier d'insertion maraîchage"
-  type="chantier insertion"
+  bref="Chantier d'insertion maraîchage"
   desc="Lortie (LORraine Territoire d'Insertion par l'activité Economique) est un des 98 jardins de cocagne de France respectant 4 principes:
      - accueillir des personnes éloignées de l'emploi
      - respecter la charte de l'agriculture biologique
      - Commercialiser sous formes de paniers de légumes en circuits courts à des adhérents
      - Travailler en local en partenariat avec d'autres producteurs bio"
-  adresse="2 rue Mathieu de Dombasle 54220 MALZEVILLE"
+  adresse="2 rue Mathieu de Dombasle 54220 Malzeville"
   latitude="6.18107020855"
   longitude="48.7249652902"
   telephone="0652198399"
@@ -1458,9 +1524,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   siteweb="amapdelavallotte.fr"
   image="amapdelavalotte.jpg"
   titre="AMAP de la Valotte"
-  bref="AMAP"
-  type="S'investir"
-  desc="AMAP"
+  desc="Association pour le Maintien de l'Agriculture Paysanne"
   adresse="MJC Beauregard Place Maurice Ravel, Nancy"
   latitude="6.139748"
   longitude="48.692578"
@@ -1472,7 +1536,6 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   image="racinescarrees.jpg"
   titre="Racines Carrées"
   bref="Agroécologie urbaine"
-  type="association"
   desc="association qui a pour objet
      de sensibiliser et de développer l'agroécologie urbaine sur
      le territoire du Grand Nancy"
@@ -1487,7 +1550,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
 
 <!--
       <acteur
-        date="0418"
+        date="0518"
         siteweb=""
         image="defaut.jpg"
         titre=""

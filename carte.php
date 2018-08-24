@@ -66,18 +66,18 @@ $header->display_acteurs_nav();
         <td>&nbsp;&nbsp;&nbsp;
         </td>
         <td>
+          <fieldset id="layer2">
+            <input id="visible2" class="visible" type="checkbox"/>
+            <label class="css-label rouge" for="visible2"> Autres </label>
+          </fieldset>
+        </td>
+        <td>
           <fieldset id="layer3">
         <input id="visible3" class="visible" type="checkbox"/>
             <label class="css-label jaune" for="visible3"> Marchés </label>
           </fieldset>
         </td>
         <td>&nbsp;&nbsp;&nbsp;
-        </td>
-        <td>
-          <fieldset id="layer2">
-            <input id="visible2" class="visible" type="checkbox"/>
-            <label class="css-label rouge" for="visible2"> Autres </label>
-          </fieldset>
         </td>
 <td width="100%"/>
       </tr></table>
@@ -107,7 +107,10 @@ function add_acteur( $acteur ) {
   $lon = $acteur->getAttribute( "longitude" );
   $lat = $acteur->getAttribute( "latitude" );
   $r = 255; $g = 0; $b = 0;
-  $type = $acteur->getAttribute( "type" );
+  $type = "autre";
+  if( $acteur->hasAttribute( "type" ) ) {
+      $type = $acteur->getAttribute( "type" );
+  }
   if( $type == "Alimentation" ) {
       $r = 0; $g = 255; $b = 0;
   }
@@ -149,6 +152,10 @@ new ol.style.Style({
       $x = $xmlDoc->documentElement;
       $acteurs = $x->getElementsByTagName( "acteur" );
       $nb = $acteurs->length;
+      // TODO! issue with a limited size of the OSM features
+      if( $nb > 90 ) {
+	      $nb = 90;
+      }
       for($pos=0; $pos<$nb; $pos++) {
             add_acteur( $acteurs[$pos] );
       }
