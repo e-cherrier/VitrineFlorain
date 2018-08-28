@@ -348,6 +348,42 @@ function typeAttribute() {
 
 /*************************************************************/
 
+class SousCategorieFiches extends SousCategorie {
+
+    function NewActeur( $annuaire, $acteur ) {
+        $cat = $this->cat_->type();
+        $sscat = $this->sousCatType();
+        return new ActeurFiches( $annuaire, $acteur, $cat, $sscat );
+    }
+
+    function sousCatType()
+    {
+        if( ! $this->scat_->hasAttribute( $this->typeAttribute() ) ) {
+            return "";
+        }
+        return $this->scat_->getAttribute( $this->typeAttribute() );
+    }
+    
+    function display() {
+        $acteurs = $this->get_elements();
+        $nb = $this->get_elements_count();
+        for( $a = 0; $a < $nb; $a++ ) {
+            
+            $acteur = $acteurs[$a];
+            if( $acteur->hasAttribute( "attente" ) ) {
+                continue;
+            }
+            if( $acteur->hasAttribute( "displayed" ) ) {
+                continue;
+            }
+	        $myActeur = $this->NewActeur( $this->a, $acteur );
+            $myActeur->display(0,0);
+        }
+    }
+}
+
+/*************************************************************/
+
 class SousCategorieLivret extends SousCategorie {
 
 function NewActeur(  $annuaire, $acteur ) {

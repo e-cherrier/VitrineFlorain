@@ -148,6 +148,46 @@ function debug( $message, $yoffs=-5, $w=100 ) {
 
 /******************************************************************/
 
+class AnnuaireFiches extends Annuaire {
+    
+    public $bottomMargin = 20;
+    public $colMargin = 40;
+    public $cellHeight = 12;
+    public $marginLeft = 1; // 1 if there is a margin at left (and right) 0 if no margin.
+
+    function PrintAnnuaire( $x ) {
+        global $no_footer;
+        global $no_header;
+    
+        $this->doc = $x;
+    
+        $no_footer = true;
+        $no_header = true;
+    
+        $this->PrintAllCategories( $x );
+    }
+
+    function PrintAllCategories( $x ) {
+
+        $categories = $x->getElementsByTagName( "categorie" );
+        $nb_cat = $categories->length;
+        for($cat=0; $cat<$nb_cat; $cat++) {
+    
+            $categorie = $categories[$cat];
+    
+            $myCat = new CategorieFiches( $this, $categorie );
+            $myCat->display();
+        }
+    }
+
+    // the column width is the width of the page without the margin size
+    // we have 2 margins: left,right.
+    function GetColumnWidth()
+    {
+        return ($this->GetPageWidth()-$this->colMargin*2);
+    }
+}
+
 class AnnuaireLivret extends Annuaire {
 
 public $bottomMargin = 20;
@@ -340,13 +380,6 @@ function TocPrintSCat( $name, $page ) {
     $this->Cell(50,5,$page,0,1,'R');
 }
 
-function PrintComptoir() {
-    // Font
-    $this->SetFont('Steelfish','',14);
-    $this->SetFillColor(255,255,255);
-    // Output text in a 3 cm width column
-    $this->Cell(30,5,"Comptoir de Change",0,1,'C', true);
-}
 
 function PrintComptoirs( $x ) {
     $this->resetColumn();
@@ -665,9 +698,12 @@ $a = NULL;
 if( $type == 'Poche' ) {
     $a = new AnnuairePoche();
     $filename = "Annuaire du Florain - format poche.pdf";
-} else {
+} else if( $type == 'Livret' ) {
     $a = new AnnuaireLivret();
     $filename = "Annuaire du Florain - format livret.pdf";
+} else {
+    $a = new AnnuaireFiches();
+    $filename = "Annuaire du Florain - format fiches.pdf";
 }
 
 $a->AddFont('Steelfish','','steelfishrg.php');

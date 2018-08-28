@@ -31,10 +31,38 @@ function needNewPage( $offset=0 ) {
     return $mySsCat->needNewPage( $offset + $this->title_height() );
 }
 
+function type() {
+    if( ! $this->cat_->hasAttribute( $this->typeAttribute() ) ) {
+        return "";
+    }
+    return $this->cat_->getAttribute( $this->typeAttribute() );
+}
+
 function typeAttribute() {
     return "type";
 }
 
+}
+
+class CategorieFiches extends Categorie {
+
+    function NewSousCategorie( $a, $sscat ) {
+        return new SousCategorieFiches( $a, $this, $sscat );
+    }
+    
+    function display() {
+    
+        $sscategories= $this->cat_->getElementsByTagName( "scat" );
+        $nb_sscat = $sscategories->length;
+    
+        for($sscat=0; $sscat<$nb_sscat; $sscat++) {
+            $sscategorie = $sscategories[$sscat];
+    
+            $mySsCat = $this->NewSousCategorie( $this->a, $sscategorie );
+            $mySsCat->display();
+        }
+    }
+    
 }
 
 class CategorieLivret extends Categorie {
