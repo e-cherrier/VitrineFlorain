@@ -341,8 +341,6 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
           latitude="6.202037"
           longitude="48.667067"
           telephone="06 41 21 49 69"
-          message="Au marché BIO de Vandoeuvre. Un vendredi sur deux."
-          message_comptoir="Au marché BIO de Vandoeuvre. Un vendredi sur deux."
     >
     <h l="un vendredi sur deux" t="16h30 - 20h00"/>
     </acteur>
@@ -565,18 +563,6 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           latitude="6.1818030"
           longitude="48.6929550"
     />
-        <acteur
-          siteweb="www.lappetit-bio.fr"
-          image="appetitbio.jpg"
-          titre="L'Appétit BIO"
-          type="Alimentation"
-          bref="Fast Food BIO et Local"
-          desc="Produits frais, locaux, 100% BIO. Que ton aliment soit ta prémiere médecine."
-          adresse="153 rue Saint Dizier Nancy"
-          defi="Comptoir de change"
-          latitude="6.18598937988"
-          longitude="48.6860875181"
-      />
         <acteur
           image="auptitbio.jpg"
           marche="central"
@@ -957,18 +943,20 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
           latitude="6.190236"
           longitude="48.681002"
     />
-        <acteur_en_attente
-          attente="true"
-          image="shiatsu.jpg"
+        <acteur
+          siteweb="www.bienetreparleshiatsuetledoin.com"
+          image="ludivinedumontet.jpg"
           titre="Ludivine Dumontet"
           type="Sante"
-          bref="Praticienne Shiatsu"
-          desc="Praticienne Shiatsu"
-          adresse="Activité au domicile des personnes"
+          bref="Shiatsu - Do In"
+          desc="Écouter et comprendre les messages de son corps pour être bien avec soi-même et les autres au quotidien. Par des acupressions sur l'ensemble du corps, le shiatsu agit en prévention pour le maintien d'une bonne santé. A pratiquer sans modération !"
           defi="Compte en banque ouvert dans une banque éthique"
-          latitude="6"
-          longitude="48"
-    />
+          latitude="6.209393"
+          longitude="48.702895"
+          telephone="06 44 03 35 17"
+          adresse="12 rue du clos pré, 54130 Saint Max"
+          citation="'Tout seul on va plus vite, ensemble on va plus loin'. Tous les acteurs de la monnaie locale, particuliers comme professionnels, participent à cette grande aventure qui est le bien vivre et grandir ensemble dans une économie solidaire, respectueuse de l'être humain et de son environnement. Je suis très heureuse d'en faire partie."
+        />
         <acteur_en_attente
           attente="true"
           image="reiki.jpg"
