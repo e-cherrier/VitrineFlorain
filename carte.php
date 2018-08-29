@@ -27,9 +27,44 @@ include('nav.php');
     <link rel="stylesheet" href="assets/css/cb.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <style>
-      #map {
-        position: relative;
+    
+    .fullscreen:-moz-full-screen {
+        height: 100%;
       }
+      .fullscreen:-webkit-full-screen {
+        height: 100%;
+      }
+      .fullscreen:-ms-fullscreen {
+        height: 100%;
+      }
+
+      .fullscreen:fullscreen {
+        height: 100%;
+      }
+
+      .fullscreen {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 70%;
+      }
+
+      .ol-rotate {
+        top: 3em;
+      }
+
+      .map {
+        width: 75%;
+        height: 100%;
+        float: right;
+      }
+
+      .sidepanel {
+        background: #cfdd3f;
+        width: 25%;
+        height: 100%;
+        float: right;
+      }
+
       #popup {
         background-color: white;
       }
@@ -56,42 +91,50 @@ $header->display_acteurs_nav();
 
 
     <!-- OSM -->
-      <table><tr>
-        <td>
-          <fieldset id="layer1">
-            <input id="visible1" class="visible" type="checkbox"/>
-            <label class="css-label vert" for="visible1"> Alimentation </label>
-          </fieldset>
-        </td>
-        <td>&nbsp;&nbsp;&nbsp;
-        </td>
-        <td>
-          <fieldset id="layer2">
-            <input id="visible2" class="visible" type="checkbox"/>
-            <label class="css-label rouge" for="visible2"> Autres </label>
-          </fieldset>
-        </td>
-        <td>
-          <fieldset id="layer3">
-        <input id="visible3" class="visible" type="checkbox"/>
-            <label class="css-label jaune" for="visible3"> Marchés </label>
-          </fieldset>
-        </td>
-        <td>&nbsp;&nbsp;&nbsp;
-        </td>
-<td width="100%"/>
-      </tr></table>
-    <div id="map" class="map"><div id="popup"></div></div>
+        
+    <div id="fullscreen" class="fullscreen">
+      <div id="map" class="map"><div id="popup"></div></div>
+      <div class="sidepanel">
+        <?php
+
+        $xmlDoc = new DOMDocument();
+        $xmlDoc->load("acteurs-cat.xml");
+
+        $x = $xmlDoc->documentElement;
+        $categories = $x->getElementsByTagName( "categorie" );
+        $nb_cat = $categories->length;
+
+        for($c=1; $c<=$nb_cat; $c++) {
+          echo "<p float='left'>\n";
+          echo "  <fieldset id='layer". $c . "'>\n";
+          echo "    <label>&nbsp;</label>\n";
+          echo "    <input id='visible". $c . "' class='visible' type='checkbox'/>\n";
+          echo "    <label class='css-label noir' for='visible". $c . "'>" . $categories[$c-1]->getAttribute( "type" ) . " </label>\n";
+          echo "  </fieldset>\n";
+          echo "</p>\n";
+        }
+          echo "<p float='left'>\n";
+          echo "  <fieldset id='layer". ($nb_cat+1) . "'>\n";
+          echo "    <label>&nbsp;</label>\n";
+          echo "    <input id='visible". ($nb_cat+1) . "' class='visible' type='checkbox'/>\n";
+          echo "    <label class='css-label noir' for='visible". ($nb_cat+1) . "'> Les marchés </label>\n";
+          echo "  </fieldset>\n";
+          echo "</p>\n";
+        ?>
+        </ul>
+      </div>
+    </div>
 
 
     <script>
-            var alimentation_features = new Array;
-            var marche_features = new Array;
-            var autres_features = new Array;
-            var afeature;
+             var afeature;
+             var feature_array = new Array;
 <?php
+for($c=0; $c<$nb_cat+1; $c++) {
+  echo "feature_array[" . $c . "] = new Array;\n";
+}
 
-function add_acteur( $acteur ) {
+function add_acteur( $f, $acteur ) {
   if( $acteur->hasAttribute( "attente" ) ) {
       return;
   }
@@ -106,17 +149,23 @@ function add_acteur( $acteur ) {
   $web = $acteur->getAttribute( "siteweb" );
   $lon = $acteur->getAttribute( "longitude" );
   $lat = $acteur->getAttribute( "latitude" );
-  $r = 255; $g = 0; $b = 0;
-  $type = "autre";
-  if( $acteur->hasAttribute( "type" ) ) {
-      $type = $acteur->getAttribute( "type" );
-  }
-  if( $type == "Alimentation" ) {
-      $r = 0; $g = 255; $b = 0;
-  }
+
+  // kriptic method to dispach colors
+  $color = array(
+    0 => 255,
+    1 => 0,
+    2 => 128,
+    3 => 84,
+    4 => 170,
+    5 => 42,
+    6 => 212,
+  );
+  $r =  $color[($f) % 7];
+  $g =  $color[($f/2) % 7];
+  $b =  $color[abs(1-($f/4)) % 7];
+
   $punaise = "'https://openlayers.org/en/v4.2.0/examples/data/dot.png'";
   if( $desc == "Marché" ) {
-      $r = 255; $g = 255; $b = 0;
       $desc = $acteur->getAttribute( "desc" );
   }
 ?>
@@ -136,28 +185,18 @@ new ol.style.Style({
 })
 );
 <?php
-  if( $type == "Alimentation" ) {
-      echo "alimentation_features.push( afeature );";
-  } else if( $type == "Marché" ) {
-      echo "marche_features.push( afeature );";
-  } else {
-      echo "autres_features.push( afeature );";
-  }
-
+    echo "feature_array[" . $f . "].push( afeature );\n";
 }
 
-      $xmlDoc = new DOMDocument();
-      $xmlDoc->load("acteurs-cat.xml");
+      // build features per categories
 
-      $x = $xmlDoc->documentElement;
-      $acteurs = $x->getElementsByTagName( "acteur" );
-      $nb = $acteurs->length;
-      // TODO! issue with a limited size of the OSM features
-      if( $nb > 90 ) {
-	      $nb = 90;
-      }
-      for($pos=0; $pos<$nb; $pos++) {
-            add_acteur( $acteurs[$pos] );
+      for($c=0; $c<$nb_cat; $c++) {
+
+        $acteurs = $categories[$c]->getElementsByTagName( "acteur" );
+        $nb = $acteurs->length;
+        for( $pos=0; $pos<$nb; $pos++ ) {
+            add_acteur( $c, $acteurs[$pos] );
+        }
       }
 
       $marche_cat = $x->getElementsByTagName( "marches" );
@@ -165,7 +204,8 @@ new ol.style.Style({
       $nb_marches = $marches->length;
 
       for($pos=0; $pos<$nb_marches; $pos++) {
-        add_acteur( $marches[$pos] );
+        // all marche must be added to the last feature.
+        add_acteur( $nb_cat, $marches[$pos] );
       }
 ?>
 
@@ -179,11 +219,19 @@ new ol.style.Style({
 */
 
       var map = new ol.Map({
+        controls: ol.control.defaults().extend([
+          new ol.control.FullScreen({
+            source: 'fullscreen'
+          })
+        ]),
     layers: [
         new ol.layer.Tile({ preload: 4, source: new ol.source.OSM() }),
-        new ol.layer.Vector({ source: new ol.source.Vector({ features: alimentation_features }) }),
-        new ol.layer.Vector({ source: new ol.source.Vector({ features: autres_features }) }),
-        new ol.layer.Vector({ source: new ol.source.Vector({ features: marche_features }) })
+        <?php
+
+        for($c=0; $c<$nb_cat+1; $c++) {
+          echo "new ol.layer.Vector({ source: new ol.source.Vector({ features: feature_array[" . $c . "] }) }),\n";
+        }
+         ?>
         ],
         target: document.getElementById('map'),
         view: new ol.View({
