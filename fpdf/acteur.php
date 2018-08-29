@@ -1,5 +1,8 @@
 <?php
 
+require('roundedrect.php');
+
+
 /**************************************************************************/
 
 class Acteur {
@@ -384,7 +387,7 @@ class ActeurFiches extends ActeurLivret {
         $this->a->Cell(60,15,"Comptoir de Change",0,1,'L', true);
     }
 
-    function Background() {
+    function Background( $h ) {
 
 
         // green background
@@ -406,10 +409,20 @@ class ActeurFiches extends ActeurLivret {
         $xshift = 40;
         // white identity area
         $this->a->SetFillColor(255,255,255);
-        $this->a->Rect( $this->a->colMargin+70, 20+$xshift, 90, 90, "F" );
+        //$this->a->Rect( $this->a->colMargin+70, 20+$xshift, 90, 90, "F" );
+        $rr = new RoundedRect();
+        $rr->_Rect( $this->a, $this->a->colMargin+70, 20+$xshift, 90, 90, 5, '1234', 'F');
 
         // white description area
-        $this->a->Rect( $this->a->colMargin/2, 120+$xshift, $this->a->getColumnWidth()+$this->a->colMargin, 120, "F" );
+        if( $h < 100 ) {
+            $x = $this->a->colMargin/2;
+            $w = $this->a->getColumnWidth()+$this->a->colMargin;
+        } else {
+            $x = $this->a->colMargin/4;
+            $w = $this->a->getColumnWidth()+$this->a->colMargin*1.5;
+        }
+        // $this->a->Rect( $this->a->colMargin/2, 120+$xshift, $this->a->getColumnWidth()+$this->a->colMargin, 120, "F" );
+        $rr->_Rect( $this->a, $x, 120+$xshift, $w, 120, 15, '1234', "F" );
     }
 
     function Entete() {
@@ -444,35 +457,48 @@ class ActeurFiches extends ActeurLivret {
     
         if( $this->acteur_->hasAttribute( "telephone" ) ) {
             $telephone = utf8_decode( $this->acteur_->getAttribute( "telephone" ) );
-        if( $telephone != "" ) {
-            $this->a->PrintText( $telephone, 90, 20 );
-        }
+            if( $telephone != "" ) {
+                $this->a->PrintText( $telephone, 90, 20 );
+            }
         }
         if( $this->acteur_->hasAttribute( "siteweb" ) ) {
             $siteweb = $this->acteur_->getAttribute( "siteweb" );
-        if( $siteweb != "" ) {
-                $this->a->PrintText( $siteweb, 90, 15, 'C' );
-        }
+            if( $siteweb != "" ) {
+                    $this->a->PrintText( $siteweb, 90, 15, 'C' );
+            }
         }
     
         // reset position
-        $this->a->SetLeftMargin($left_entete);
-        $this->a->SetX( $left_entete );
         $this->a->SetY( 170 );
     }
     
 function display( $col, $deb_i ) {
     $this->a->addPage();
 
-    $this->Background();
+    $desc = utf8_decode( $this->acteur_->getAttribute( "desc" ) );
+    $this->a->SetFont('Futura','',20);
+    $h = $this->a->MultiCellHeight($this->a->GetColumnWidth(),$this->a->cellHeight,$desc);
+
+    $this->Background( $h );
     
     $this->Entete();
 
-    $desc = utf8_decode( $this->acteur_->getAttribute( "desc" ) );
-    // Font
+    $ch = $this->a->cellHeight;
+    if( $h < 100 ) {
+        $x = $this->a->colMargin;
+        $w = $this->a->GetColumnWidth();
+    } else if( $h <150 ) {
+        $x = $this->a->colMargin/2;
+        $w = $this->a->GetColumnWidth()+$this->a->colMargin;
+    } else {
+        $ch = 10;
+        $x = $this->a->colMargin/2;
+        $w = $this->a->GetColumnWidth()+$this->a->colMargin;
+    }
+    
     $this->a->SetFont('Futura','',20);
-    // Output text in a 9 cm width column
-    $this->a->MultiCell($this->a->GetColumnWidth(),$this->a->cellHeight,$desc);
+    $this->a->SetX($x);
+    $this->a->MultiCell($w,$ch,$desc);
     $this->a->Ln();
 
     $message = "";
