@@ -40,7 +40,7 @@
 	blockquote, q {
 		quotes: none;
 	}
-
+	
 	blockquote:before, blockquote:after, q:before, q:after {
 		content: '';
 		content: none;
@@ -344,10 +344,10 @@
 				margin: -1.25em 0 0 -1.25em;
 			}
 
-				.tiles article {
-					width: calc(25% - 1.25em);
-					margin: 1.25em 0 0 1.25em;
-				}
+			.tiles article {
+				width: calc(25% - 1.25em);
+				margin: 1.25em 0 0 1.25em;
+			}
 
 		}
 
@@ -357,10 +357,10 @@
 				margin: -1.25em 0 0 -1.25em;
 			}
 
-				.tiles article {
-					width: calc(33.33333% - 1.25em);
-					margin: 1.25em 0 0 1.25em;
-				}
+			.tiles article {
+				width: calc(33.33333% - 1.25em);
+				margin: 1.25em 0 0 1.25em;
+			}
 
 		}
 
@@ -370,10 +370,10 @@
 				margin: -2.5em 0 0 -2.5em;
 			}
 
-				.tiles article {
-					width: calc(50% - 2.5em);
-					margin: 2.5em 0 0 2.5em;
-				}
+			.tiles article {
+				width: calc(50% - 2.5em);
+				margin: 2.5em 0 0 2.5em;
+			}
 
 		}
 
@@ -2685,7 +2685,7 @@ text-decoration: none; }
 			top: 0;
 			width: 100%;
 			height: 100%;
-			background: url("images/overlay.png"); // comment ?
+			/*background: url("images/overlay.png");*/
 		}
 
 		.image img {
@@ -3078,6 +3078,14 @@ text-decoration: none; }
 
 		}
 
+		
+		.red .box.anniv footer a.button {
+			background: #fff200;
+		}
+		.red .box.anniv footer a.button:hover {
+			background: #d7da23;
+		}
+
 		#prog-musique .box footer a.button {
 			float: left;
 
@@ -3300,8 +3308,94 @@ text-decoration: none; }
 		}
 
 
-	.green {
-		color: #199467;
+	.anniv {
+		color: #7ab311;
+		background: #6e6e6e;
+		opacity: 1;
+	} 
+	.anniv.menu {
+		background: #615f5f;
+		width: 47%;
+		float: left;
+	} 
+	.anniv.texte {
+		margin-left: 1em;
+		background: #615f5f;
+		width: 47%;
+		float: right;
+	} 
+	.anniv.menu div, .anniv.texte div {
+		margin: 1em;
+	} 
+	.anniv h1 {
+		color: #fff200;
+	}
+	.anniv h2 {
+		color: #fff200;
+	}
+	.anniv h3 {
+		color: #fff200;
+	}
+	.anniv h4 {
+		color: #fff;
+	}
+	.anniv h5 {
+		font-size: 1em;
+		color: #fff;
+		text-align: center;
+	}
+
+	.anniv li {
+		font-size: 1em;
+		color: #fff;
+	}
+	.anniv .plat {
+		font-family: "Averia Sans Libre", sans-serif;
+		font-size: 1.3em;
+		color: #fff200;
+	}
+
+	.anniv p {
+		font-family: "Averia Sans Libre", sans-serif;
+		font-size: 1.4em;
+		text-align: left;
+		color: #fff200;
+		font-weight: bold;
+	}
+
+	.anniv .bigref a {
+		font-family: "Averia Sans Libre", sans-serif;
+		font-size: 1.1em;
+		text-align: left;
+		color: #b4dd21;
+		font-weight: bold;
+	}
+	.anniv .bigref a:hover {
+		color: #ffc400;
+	}
+
+	.anniv img {
+		float: right;
+	}
+	
+	#reservation p {
+		color: #fff200;
+	}
+	#reservation a {
+		background: #fff200;
+		color: #000;
+	} 
+	#reservation a:hover {
+		background: #199467;
+		color: #615f5f;
+	} 
+	#reservation .warning p {
+		margin-left: 1em;
+		background: #ffffff;
+		color: #000;
+	}
+	header.anniv {
+		font-size: .7em;
 	}
 
 		.dark a, .dark h2 {
@@ -3960,16 +4054,17 @@ text-decoration: none; }
 		background-color: #fff;
 	}
 	#accueil {
-		background-size: 50% auto;
+		background: url("../../images/anniversaire.jpg");
+		background-size: auto 80%;
 		background-attachment: fixed;
 		background-position: center left ;
 		background-repeat: no-repeat;
-		padding-top: 0;
+		padding-top: 10;
 		background-color: #d7da23;
 	}
 	#fete {
-		background: url("../../images/fete/FetedeLancement.png");
-		background-size: 50% auto;
+		background: url("../../images/anniversaire.jpg");
+		background-size: auto 80%;
 		background-attachment: fixed;
 		background-position: center left ;
 		background-repeat: no-repeat;
@@ -3994,11 +4089,10 @@ text-decoration: none; }
 		background-color: #d7da23;
 	}
 	#restauration {
-		background: url("../../images/fete/cantoche.jpg");
-		background-size: 100% auto;
+		background: url("../../images/fete/Les-Fermiers-dici.jpg");
 		background-attachment: fixed;
 		background-position: center center;
-		background-repeat: no-repeat;
+		background-repeat: repeat;
 		padding-top: 0;
 		background-color: #000;
 	}
@@ -4022,7 +4116,6 @@ text-decoration: none; }
 	}
 
 	#accueil h2 {
-		color: #c1a544;
 		font-weight: bold;
 		font-size: 60px;
 	}
@@ -4054,7 +4147,7 @@ text-decoration: none; }
 		list-style-type: disc;
         }
 	#faq p {
-		color=#fff;
+		color: #fff;
 	}
 
 /* One */
@@ -4720,6 +4813,9 @@ h5:hover a {
 		        .slide {
 				display: block;
 			}
+			.anniv img.sf {
+				display: none;
+			}
 
                         .crowdf_right {
                         	background-color: rgba(51, 51, 51, 0.5);
@@ -4765,12 +4861,16 @@ h5:hover a {
 
 	@media screen and (max-width: 736px) {
 
-		        .slide {
+		    .slide {
 				display: none;
 			}
-	                #accueil {
-		                background: none;
-		                background-color: #d7da23;
+			.anniv img.sf {
+				display: block;
+			}
+
+			#accueil, #fete {
+				background: none;
+				background-color: #d7da23;
 			}
 		/* Basic */
 

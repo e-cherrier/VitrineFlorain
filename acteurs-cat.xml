@@ -88,10 +88,11 @@
       <h l="du mercredi au samedi" t="10H00 - 19H00"/>
       </acteur>
       <acteur
+          anniv="oui"
           siteweb=""
           image="defaut.jpg"
           titre="Épicerie Elles"
-	  code="-1"
+	        code="-1"
           bref="Épicerie de quartier"
           type="Alimentation"
           desc="Épicerie de quartier"
@@ -184,6 +185,7 @@
       />
             <acteur
           fete="oui"
+          anniv="oui"
         siteweb="facebook Mirabio55"
         image="mirabio.jpg"
         titre="Mirabio"
@@ -196,7 +198,8 @@
         longitude="49.015167"
       />
          <acteur
-            fete="oui"
+          anniv="oui"
+          fete="oui"
           siteweb="www.glaces-marchetto.fr"
           image="omaribelle.jpg"
           titre="O Maribelle"
@@ -229,6 +232,7 @@
 	        labels="Nature et Progrès"
     />
         <acteur
+          anniv="oui"
             fete="oui"
           image="porcquidore.jpg"
           marche="vandoeuvre"
@@ -330,6 +334,7 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
     />
         <acteur
             fete="oui"
+          anniv="oui"
           siteweb="www.lecoindelabeletteunblog.fr"
           image="coinbelette.jpg"
           titre="Le coin de la belette"
@@ -370,6 +375,7 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
           message=""
       />
         <acteur
+          anniv="oui"
           fete="oui"
           siteweb=""
           marche="maxeville vandoeuvre"
@@ -411,10 +417,12 @@ Ce sont des bières de fermentation haute, non filtrées, non pasteurisées et r
           longitude="48.675132"
     />
       <acteur
+        anniv="oui"
         siteweb="www.brasseriecoincoin.fr"
         image="coincoin.jpg"
         titre="Brasserie Coin-Coin"
         type="Brasserie"
+        bref="Brasserie Artisanale BIO"
         desc="Toutes nos bières sont élaborées, brassées et embouteillées à la main et de façon artisanale, dans notre local à Ménil-la-Tour par Mélaine COLSON.
 Ce sont des bières de garde dites 'vivantes', non-pasteurisées, non-filtrées, qui refermentent en bouteille. Les bières sont certifiées bio depuis septembre 2017.
 Depuis 2014, la brasserie est membre de l'Union des Brasseurs du Grand Est (anciennement l'UBL).
@@ -442,6 +450,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
         <scat type="Paysans Boulangers et Boulangers">
             <acteur
           fete="oui"
+          anniv="oui"
           siteweb="unpaindecote.free.fr"
           image="un-pain-de-cote.jpg"
           titre="Un Pain de Côté"
@@ -494,6 +503,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
         </scat>
 	<scat type="Traiteurs">
         <acteur
+          anniv="oui"
             fete="oui"
           siteweb="www.fermiersdici.com"
           image="LesFermiersDIci.jpg"
@@ -755,6 +765,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
           longitude="48.693067"
     />
             <acteur
+          anniv="oui"
                fete="oui"
              siteweb="www.lafeintedelours.fr"
              image="feinte.jpg"
@@ -944,6 +955,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
           longitude="48.681002"
     />
         <acteur
+          anniv="oui"
           siteweb="www.bienetreparleshiatsuetledoin.com"
           image="ludivinedumontet.jpg"
           titre="Ludivine Dumontet"
@@ -1100,7 +1112,8 @@ Villers-lès-Nancy"
            telephone="06 76 56 99 66"
       />
         <acteur
-            fete="oui"
+          fete="oui"
+          anniv="oui"
           siteweb="www.vetethic.fr"
           image="vetethic.jpg"
           titre="Vêt'Ethic"
@@ -1130,6 +1143,7 @@ Villers-lès-Nancy"
         telephone=""
       />
         <acteur
+          anniv="oui"
           siteweb="alterego-friperie.wifeo.com"
           image="alterego.jpg"
           titre="Alter Ego"
@@ -1156,6 +1170,7 @@ Villers-lès-Nancy"
       />
 
          <acteur
+          anniv="oui"
            siteweb="www.savonnerieclandestine.com"
            marche="vandoeuvre"
            image="savClan.jpg"
@@ -1188,6 +1203,7 @@ Villers-lès-Nancy"
         <scat>
 
         <acteur
+          anniv="oui"
             fete="oui"
           siteweb="www.atelierdynamo.fr"
           image="dynamo.jpg"
@@ -1219,6 +1235,7 @@ Villers-lès-Nancy"
         <scat>
 
         <acteur
+          anniv="oui"
           siteweb="www.choeur-dartisans.com"
           image="helmutetpetula.jpg"
           titre="Helmut et Pétula"
@@ -1247,6 +1264,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           defi="Mettre en place un système de cafés suspendus"
     />
         <acteur
+          anniv="oui"
           fete="oui"
           siteweb="facebook microdomus54"
           image="microdomus.jpg"
@@ -1271,11 +1289,12 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
     />
     <acteur
       date="0418"
+          anniv="oui"
       siteweb="facebook Barbara-K-Fée-de-Papier"
       image="feedepapier.jpg"
       titre="La fée de papier"
       bref="Créations"
-      type=""
+      type="Créations"
       desc="Cadeaux et/ou déco uniques et personnalisés pour tous types d'occasions (anniversaire, baptême, remerciements, félicitations, déclaration d'amour, encouragements, demande en mariage...) --> Sculptures en papier, mobiles en origami... "
       adresse="Malzéville"
       latitude="6.183463"
@@ -1332,11 +1351,12 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
 
         <acteur
           date="0418"
+          anniv="oui"
           siteweb="lacasavictoria.fr"
           image="lacasavictoria.jpg"
           titre="La Casa Victoria"
           bref="Appartement à louer"
-          type=""
+          type="Gite"
           desc="Située dans le centre-ville de Nancy, à 10 minutes à pied de la gare, La Casa Victoria vous propose un appartement de 2 chambres, d'une superficie de 62 m²"
           adresse="21 Rue du Pont Mouja, Nancy"
           latitude="6.184349"
@@ -1474,10 +1494,12 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           defi=""
     />
         <acteur
+          anniv="oui"
           siteweb="www.greenpeace.fr"
           image="GreenPeaceNancy.jpg"
           titre="Green Peace Nancy"
           type="Association"
+          bref="Association"
           desc="Groupe Local"
           adresse=""
       />
@@ -1520,6 +1542,8 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   message=""
 />
 <acteur
+          anniv="oui"
+          type="association"
   siteweb="www.racines-carrees.fr"
   image="racinescarrees.jpg"
   titre="Racines Carrées"

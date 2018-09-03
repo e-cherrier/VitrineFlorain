@@ -12,10 +12,7 @@ include('nav.php');
     <meta name="description" content="Site web dedié a la création de la monnaie locale solidaire et citoyenne pour Nancy et ses environs. Le Florain est la dénomination désignée par les futurs usagés!"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/comptoirs.css" />
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 <!--OSM-->
     <link rel="stylesheet" href="https://openlayers.org/en/v4.2.0/css/ol.css" type="text/css">
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
@@ -218,26 +215,35 @@ new ol.style.Style({
       });
 */
 
+      var logoElement = document.createElement('a');
+      logoElement.href = 'http://www.florain.fr/';
+      logoElement.target = '_blank';
+
+      var logoImage = document.createElement('img');
+      logoImage.src = 'http://www.monnaielocalenancy.fr/images/logo-monnaie-disquevert.png';
+
+      logoElement.appendChild(logoImage);
+
       var map = new ol.Map({
         controls: ol.control.defaults().extend([
           new ol.control.FullScreen({
             source: 'fullscreen'
           })
         ]),
-    layers: [
-        new ol.layer.Tile({ preload: 4, source: new ol.source.OSM() }),
-        <?php
-
-        for($c=0; $c<$nb_cat+1; $c++) {
-          echo "new ol.layer.Vector({ source: new ol.source.Vector({ features: feature_array[" . $c . "] }) }),\n";
-        }
-         ?>
+        layers: [
+          new ol.layer.Tile({ preload: 4, source: new ol.source.OSM() }),
+          <?php
+            for($c=0; $c<$nb_cat+1; $c++) {
+              echo "new ol.layer.Vector({ source: new ol.source.Vector({ features: feature_array[" . $c . "] }) }),\n";
+            }
+          ?>
         ],
         target: document.getElementById('map'),
         view: new ol.View({
           center: ol.proj.fromLonLat([6.08262588978, 48.650322978]),
           zoom: 10
-        })
+        }),
+        logo: logoElement
       });
 
       var element = document.getElementById('popup');

@@ -27,6 +27,42 @@ $header = new Header();
 $header->display();
 ?>
 
+
+      <section id="accueil" class="main style2 right red fullscreen">
+        <div class="content box anniv style1">
+          <header>
+            <h4>La monnaie locale de Nancy et ses alentours</h4>
+            <h2>Le Florain: 1 an déjà!</h2>
+          </header>
+          <h4>Venez féter avec nous le premier anniversaire de votre monnaie locale!</h4>
+          <h2>le 6 octobre 2018</h2>
+          <h5>dans les locaux du Conseil Départemental</h2>
+          <h5>48, Esplanade Jacques Baudot</h5>
+          <h5>de 10h à 18h</h5>
+
+          <img src="http://www.monnaielocalenancy.fr/images/fete/logoCR54.png" class="sf" width="100px" float="left"/>
+          <ul>
+          <li>&nbsp;Conférences,</li>
+          <li>&nbsp;&nbsp;&nbsp;Animations,</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buvette,</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Restauration (sur réservation)</li>
+          </ul>
+          <h3>Et le grand marché des acteurs du Florains.</h3>
+          <br/>
+          <footer>
+            <ul >
+            <li>  <a href="anniversaire.php#reservation" class="button">Réserver son repas</a></li>
+            <li>  <a href="anniversaire.php#benevolat" class="button">Bénévolat</a></li>
+            <li>  <a href="anniversaire.php" class="button">Le programme</a></li>
+            </ul>
+          </footer>
+        </div>
+        <footer>
+          <a href="#monnaie" class="button style2 down anchored">More</a>
+        </footer>
+      </section>
+
+<!--
       <section id="accueil" class="main style2 right dark fullscreen">
         <div class="content box style1">
           <header>
@@ -52,31 +88,11 @@ $header->display();
       </footer>
         </div>
 
-
-        <!--
-        	<div id="slider_agrees" class="slider top box red">
-                  <h4>Les derniers agrees:</h4>
-                  <ul>
-        	   <li><img src="http://localhost/github/VitrineFlorain/images/acteurs/mndl.jpg" /></li>
-        	   <li><img src="http://localhost/github/VitrineFlorain/images/acteurs/troc.jpg" /></li>
-        	   <li><img src="http://localhost/github/VitrineFlorain/images/acteurs/helmutetpetula.jpg" /></li>
-        	   <li><img src="http://localhost/monnaielocalenancyOnLine/images/acteurs/LesMalicesDeSuzette.jpg" /></li>
-        	   <li><img src="http://localhost/monnaielocalenancyOnLine/images/acteurs/DayByDay.jpg" /></li>
-        	   <li><img src="http://localhost/monnaielocalenancyOnLine/images/acteurs/crocus.jpg" /></li>
-        	   <li><img src="http://localhost/github/VitrineFlorain/images/acteurs/mndl.jpg" /></li>
-        	   <li><img src="http://localhost/github/VitrineFlorain/images/acteurs/troc.jpg" /></li>
-        	   <li><img src="http://localhost/github/VitrineFlorain/images/acteurs/helmutetpetula.jpg" /></li>
-                  </ul>
-                </div>
-        -->
-
       	<div id="slider_news" class="slider base box red">
           <h3> Les dernières nouvelles</h3>
         <table>
-        <?php
+        <php
         require_once( "../wp.monnaielocalenancy.fr/wp-load.php");
-        // Set up the WordPress query.
-        //wp();
         // Connexion a la base de donnees
         try
         {
@@ -120,8 +136,9 @@ $header->display();
         <footer>
           <a href="#monnaie" class="button style2 down anchored">More</a>
         </footer>
-      <!--  <slider> <img class="slide" src="images/accueil.png"> </slider> -->
       </section>
+-->
+
 <!--
       <section id="accueil" class="main style2 right dark fullscreen">
         <div class="content box style1">
@@ -365,7 +382,7 @@ while(x=eval(x));
                   <div class="6u 12u(mobile)"><input type="email" name="email" id="email" placeholder="Email"></div>
                 </div>
                 <div class="row 50%">
-                  <div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+                  <div class="12u"><textarea name="message" placeholder="Message" rows="4"></textarea></div>
                 </div>
                 <div class="row">
                   <div class="12u">

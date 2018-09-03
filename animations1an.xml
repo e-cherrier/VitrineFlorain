@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<acteurs>
+    <acteur
+      siteweb="http://www.max-ollier.fr"
+      image="images/animations/max-ollier.jpg" 
+      nom="Max Ollier"
+      type="Déambulations intimistes"
+      desc="Un colporteur vous ouvre sa valise à chansons, en échange d'un souvenir! 'raconte moi Ta chanson et je te chanterai des histoires!'"
+      horaire="10h30. Durée: 30'"
+    />   
+    <acteur
+      siteweb="http://www.lilawompa.fr"
+      image="images/animations/lilawompa.jpg" 
+      nom="Lila Wompa"
+      type="contes et ateliers pour enfants"
+      desc="Contes sur les gamins perdus ou coquins, les  femmes et  les créatures fantastiques, contes de la sagesse amérindienne (Premières nations du Canada, Inuit, Lakotas),  contes surréalistes, absurdes, comptines et jeux de doigts  pour les enfants , chansons médiévales, celtiques, slaves, qui s'invitent parfois lors d'un conte ou d'un spectacle."
+      horaire="11h. Durée: 1h"
+    />
+    <acteur
+      siteweb="http://www.max-ollier.fr"
+      image="images/animations/max-ollier.jpg" 
+      nom="Max Ollier"
+      type="Déambulations intimistes"
+      desc="Un colporteur vous ouvre sa valise à chansons, en échange d'un souvenir! 'raconte moi Ta chanson et je te chanterai des histoires!'"
+      horaire="13h. Durée: 30'"
+    />   
+    <acteur
+      siteweb="http://alterego-friperie.wifeo.com"
+      image="images/acteurs/alterego.jpg" 
+      nom="AlterEgo"
+      type="Défilé de mode"
+      desc="Friperie"
+      horaire="14h30"
+    />
+    <acteur
+      image="images/animations/fanfare.jpg" 
+      nom="Dìrektòbár"
+      type="fanfare"
+      desc="."
+      horaire="15h. Durée: 1h"
+    />   
+    <acteur
+      siteweb="http://www.lilawompa.fr"
+      image="images/animations/lilawompa.jpg" 
+      nom="Lila Wompa"
+      type="contes et ateliers pour enfants"
+      desc="Contes sur les gamins perdus ou coquins, les  femmes et  les créatures fantastiques, contes de la sagesse amérindienne (Premières nations du Canada, Inuit, Lakotas),  contes surréalistes, absurdes, comptines et jeux de doigts  pour les enfants , chansons médiévales, celtiques, slaves, qui s'invitent parfois lors d'un conte ou d'un spectacle."
+      horaire="15h30. Durée: 1h"
+    />   
+    <acteur
+      siteweb="https://daodavy.com/shop"
+      image="images/acteurs/dao.jpg" 
+      nom="DAO"
+      type="Défilé de mode"
+      desc="Jeans made in France"
+      horaire="16h30"
+    />
+    <acteur
+      siteweb="http://www.vetethic.fr"
+      image="images/acteurs/vetethic.jpg" 
+      nom="Vet'Ethic"
+      type="Défilé de mode"
+      desc="Commerce Equitable"
+      horaire="16h30"
+    />
+    <acteur
+      siteweb="https://www.facebook.com/Tapelanote-1900834033568188/"
+      image="images/animations/tapelanote.jpg" 
+      nom="Tape la Note"
+      type="Folk Trad"
+      desc="Groupe folk amateur de musiques traditionnelles européennes."
+      horaire="16h30. Durée: 1h30"
+    />
+</acteurs>
+
