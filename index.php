@@ -31,14 +31,13 @@ $header->display();
       <section id="accueil" class="main style2 right red fullscreen">
         <div class="content box anniv style1">
           <header>
-            <h4>La monnaie locale de Nancy et ses alentours</h4>
             <h2>Le Florain: 1 an déjà!</h2>
           </header>
-          <h4>Venez féter avec nous le premier anniversaire de votre monnaie locale!</h4>
-          <h2>le 6 octobre 2018</h2>
-          <h5>dans les locaux du Conseil Départemental</h2>
-          <h5>48, Esplanade Jacques Baudot</h5>
-          <h5>de 10h à 18h</h5>
+          <span>Venez féter avec nous le premier anniversaire de votre monnaie locale!<br/>
+          <span><b>le 6 octobre 2018</b>
+          dans les locaux du Conseil Départemental -
+          48, Esplanade Jacques Baudot -
+          de 10h à 18h</span>
 
           <img src="http://www.monnaielocalenancy.fr/images/fete/logoCR54.png" class="sf" width="100px" float="left"/>
           <ul>

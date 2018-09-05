@@ -495,6 +495,7 @@
 				-ms-transition: background-color 0.35s ease-in-out;
 				transition: background-color 0.35s ease-in-out;
 				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
 			}
 
 			.carousel .forward:after, .carousel .backward:after {
@@ -2644,10 +2645,6 @@ text-decoration: none; }
 		}
 
 
-	footer {
-
-	}
-
 	br.clear {
 		clear: both;
 	}
@@ -3008,7 +3005,7 @@ text-decoration: none; }
 			input[type="reset"].style2.down,
 			.button.style2.down,
 			button.style2.down {
-
+				background-color: inherit;
 			}
 
 /* Box */
@@ -3313,6 +3310,9 @@ text-decoration: none; }
 		background: #6e6e6e;
 		opacity: 1;
 	} 
+	.anniv.left {
+		float: left;
+	} 
 	.anniv.menu {
 		background: #615f5f;
 		width: 47%;
@@ -3357,15 +3357,22 @@ text-decoration: none; }
 
 	.anniv p {
 		font-family: "Averia Sans Libre", sans-serif;
-		font-size: 1.4em;
+		font-size: 1.2em;
 		text-align: left;
 		color: #fff200;
 		font-weight: bold;
 	}
 
+	.anniv span {
+		font-family: "Averia Sans Libre", sans-serif;
+		font-size: 1em;
+		text-align: center;
+		color: #fff;
+	}
+
 	.anniv .bigref a {
 		font-family: "Averia Sans Libre", sans-serif;
-		font-size: 1.1em;
+		font-size: .9em;
 		text-align: left;
 		color: #b4dd21;
 		font-weight: bold;
@@ -3381,12 +3388,12 @@ text-decoration: none; }
 	#reservation p {
 		color: #fff200;
 	}
-	#reservation a {
+	#reservation a.resa {
 		background: #fff200;
 		color: #000;
 	} 
-	#reservation a:hover {
-		background: #199467;
+	#reservation a.resa:hover {
+		background: #c1a544;
 		color: #615f5f;
 	} 
 	#reservation .warning p {
@@ -3881,9 +3888,6 @@ text-decoration: none; }
 	}
 
 
-		#logo a {
-		}
-
 			#logo a span {
 				color: #6e6e6e;
 			    font-weight: normal;
@@ -3942,7 +3946,6 @@ text-decoration: none; }
 				}
 
 				#nav ul li a.icon {
-					float: left;
 					display: inline;
 				}
 
@@ -4679,15 +4682,15 @@ h5:hover a {
 
 	@media screen and (min-width: 1921px) {
 			.main.style2 .content {
-				width: 50%;
+				width: 70%;
 			}
 
 			.main.style2.right .content {
-				left: 50%;
+				left: 30%;
 			}
 
 			.main.style2.inactive.left .content {
-				left: -50%;
+				left: -70%;
 			}
 	}
 	@media screen and (max-width: 1920px) {
@@ -4701,15 +4704,15 @@ h5:hover a {
 		/* Main */
 
 			.main.style2 .content {
-				width: 50%;
+				width: 70%;
 			}
 
 			.main.style2.right .content {
-				left: 50%;
+				left: 30%;
 			}
 
 			.main.style2.inactive.left .content {
-				left: -50%;
+				left: -70%;
 			}
 
 	}
@@ -4739,15 +4742,15 @@ h5:hover a {
 		/* Main */
 
 			.main.style2 .content {
-				width: 50%;
+				width: 70%;
 			}
 
 			.main.style2.right .content {
-				left: 50%;
+				left: 30%;
 			}
 
 			.main.style2.inactive.left .content {
-				left: -50%;
+				left: -70%;
 			}
 
 	}
@@ -4771,15 +4774,15 @@ h5:hover a {
 		/* Main */
 
 			.main.style2 .content {
-				width: 50%;
+				width: 70%;
 			}
 
 			.main.style2.right .content {
-				left: 50%;
+				left: 30%;
 			}
 
 			.main.style2.inactive.left .content {
-				left: -50%;
+				left: -70%;
 			}
 
 		/* Footer */
@@ -4854,7 +4857,7 @@ h5:hover a {
 				display:none;
 			}
 
-
+			
 	}
 
 /* Mobile */

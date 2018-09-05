@@ -14,6 +14,7 @@ include('nav.php');
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <link rel="stylesheet" href="assets/css/main.css" />
+      <script src="assets/js/jquery.min.js"></script>
 <!--OSM-->
     <link rel="stylesheet" href="https://openlayers.org/en/v4.2.0/css/ol.css" type="text/css">
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
@@ -376,7 +377,7 @@ $header->display();
           du lundi au samedi: 10h-18h30.<br/>
           Ou venez rencontrer les bénévoles du Florain lors des manifestations de septembre:<p>
 
-          <div float="left" margin="20px" style="overflow-x:auto;">
+          <div class="anniv left">
           <table class="calendar">
             <caption>passez la souris sur les cases surlignées</caption>
             <tr>
@@ -418,13 +419,13 @@ $header->display();
             <li>•	dimanche 30 septembre au marché d'automne de Villey le Sec (dans l'enceinte du fort)</li>
           </ul>
            -->
-          <div>
-         </div float="right">
-                <footer >
+          <div class="bottom">
+                <footer>
                   <ul class="anniv">
-                    <li><a target="_blank" href="https://framaforms.org/inscription-repas-fete-anniversaire-1-an-florain-1535628289" class="button tooltip">Pré-réserver en ligne<span class="tooltiptext">La réservation ne sera validée qu'une fois le paiement effectué</span></a></li>
+                    <li><a target="_blank" href="https://framaforms.org/inscription-repas-fete-anniversaire-1-an-florain-1535628289" class="button tooltip resa">Pré-réserver en ligne<span class="tooltiptext">La réservation ne sera validée qu'une fois le paiement effectué</span></a></li>
                   </ul>
                 </footer>
+         </div>
           </div>
         <a href="#jyvais" class="button style2 down anchored">Next</a>
       </section>
@@ -622,7 +623,6 @@ $header->display();
 
     <!-- Scripts -->
       
-      <script src="assets/js/jquery.min.js"></script>
        <script src="assets/js/jquery.poptrox.min.js"></script>
       <script src="assets/js/jquery.dropotron.min.js"></script>
       <script src="assets/js/jquery.scrolly.min.js"></script>
