@@ -499,14 +499,6 @@ function display( $col, $deb_i ) {
     $this->a->SetFont('Futura','',20);
     $this->a->SetX($x);
     $this->a->MultiCell($w,$ch,$desc);
-    $this->a->Ln();
-
-    $message = "";
-    if( $this->acteur_->hasAttribute( "message_comptoir" ) ) {
-        $message = utf8_decode( $this->acteur_->getAttribute( "message_comptoir" ) );
-        $this->a->PrintText( $message, $this->a->GetColumnWidth(), 20, 'C' );
-        $this->a->Ln();
-    }
 }
 
 }

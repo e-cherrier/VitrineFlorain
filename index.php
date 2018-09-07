@@ -33,7 +33,7 @@ $header->display();
           <header>
             <h2>Le Florain: 1 an déjà!</h2>
           </header>
-          <span>Venez féter avec nous le premier anniversaire de votre monnaie locale!<br/>
+          <span>Venez fêter avec nous le premier anniversaire de votre monnaie locale!<br/>
           <span><b>le 6 octobre 2018</b>
           dans les locaux du Conseil Départemental -
           48, Esplanade Jacques Baudot -

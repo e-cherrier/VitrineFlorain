@@ -8,7 +8,7 @@ include('nav.php');
 -->
 <html>
   <head>
-    <title>Le Florain fete son 1er anniversaire</title>
+    <title>Le Florain fête  son 1er anniversaire</title>
     <meta name="description" content="Site web dedié a la création de la monnaie locale solidaire et citoyenne pour Nancy et ses environs. Le Florain est la dénomination désignée par les futurs usagés!"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -394,7 +394,7 @@ $header->display();
               <td>13</td>
               <td>14</td>
               <td>15</td>
-              <td class="tooltip">16<span class="tooltiptext">Le 16 septembre à la Fête de la Nature à Laxou</span></td>
+              <td class="tooltip">16<span class="tooltiptext">Le 16 septembre à la Fête de la Nature: La campagne à la ville à Laxou</span></td>
             </tr><tr>
               <td>20</td>
               <td>21</td>
