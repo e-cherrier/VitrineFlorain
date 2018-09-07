@@ -144,7 +144,7 @@ function Entete() {
 	}
     }
     if( $this->acteur_->hasAttribute( "siteweb" ) ) {
-        $siteweb = $this->acteur_->getAttribute( "siteweb" );
+        $siteweb = utf8_decode( $this->acteur_->getAttribute( "siteweb" ) );
 	if( $siteweb != "" ) {
             $this->a->PrintText( $siteweb, $this->a->GetColumnWidth(), 6, 'C' );
 	}
@@ -270,7 +270,7 @@ function Entete() {
 	}
     }
     if( $this->acteur_->hasAttribute( "siteweb" ) ) {
-        $siteweb = $this->acteur_->getAttribute( "siteweb" );
+        $siteweb = utf8_decode( $this->acteur_->getAttribute( "siteweb" ) );
 	if( $siteweb != "" ) {
             $this->a->PrintText( $siteweb, 60, 8, 'C' );
 	}
@@ -305,7 +305,7 @@ function display_comptoir( $col, $c ) {
 	}
     }
     if( $this->acteur_->hasAttribute( "siteweb" ) ) {
-        $siteweb = $this->acteur_->getAttribute( "siteweb" );
+        $siteweb = utf8_decode( $this->acteur_->getAttribute( "siteweb" ));
 	if( $siteweb != "" ) {
             $this->a->PrintText( $siteweb, $this->a->GetColumnWidth(), 8, 'C' );
 	}
@@ -462,7 +462,7 @@ class ActeurFiches extends ActeurLivret {
             }
         }
         if( $this->acteur_->hasAttribute( "siteweb" ) ) {
-            $siteweb = $this->acteur_->getAttribute( "siteweb" );
+            $siteweb = utf8_decode( $this->acteur_->getAttribute( "siteweb" ) );
             if( $siteweb != "" ) {
                     $this->a->PrintText( $siteweb, 90, 15, 'C' );
             }
