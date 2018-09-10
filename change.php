@@ -42,7 +42,7 @@ include('nav.php');
 
 <?php
         $header = new Header();
-	$header->display();
+    $header->display();
 ?>
 
         <!-- Main -->
@@ -60,6 +60,101 @@ Pensez à venir jeter un oeil de temps en temps, de nouveaux comptoirs de change
               </header>
               <section class="column">
 <?php
+function print_comptoir( $acteur ) {
+  if(  ! $acteur->hasAttribute( "comptoir" ) ) {
+      return;
+  }
+
+  $image = $acteur->getAttribute( "image" );
+  $siteweb = $image;
+  if( $acteur->hasAttribute( "siteweb" ) ) {
+      $siteweb = $acteur->getAttribute( "siteweb" );
+  }
+
+  $titre = $acteur->getAttribute( "titre" );
+  $desc = $acteur->getAttribute( "desc" );
+  $telephone = $acteur->getAttribute( "telephone" );
+  $adresse = $acteur->getAttribute( "adresse" );
+
+  $p = <<<EOD
+      <acteur class="comptoir">
+      <img src="images/acteurs/$image" alt="$titre" />
+  <p>
+      <b>Nom:</b> $titre<br/>
+      <b>Adresse:</b> $adresse<br/>
+      <b>Téléphone:</b> $telephone<br/>
+  </p>
+EOD;
+  print $p;
+
+  $horaires = $acteur->getElementsByTagName( "h" );
+  $nbh = $horaires->length;
+
+  $p = <<<EOD
+  <p><b>Horaires:</b><br/>
+  <table class="horaires"><tbody>
+EOD;
+  print $p;
+  for($h=0; $h<$nbh; $h++) {
+      $l = $horaires[$h]->getAttribute( "l" );
+      $t = $horaires[$h]->getAttribute( "t" );
+      $p = <<<EOD
+      <tr><td>$l</td><td>$t</td></tr>
+EOD;
+      print $p;
+  }
+  $p = <<<EOD
+  </tbody></table></p>
+EOD;
+  print $p;
+
+  if( $acteur->hasAttribute( "siteweb" ) ) {
+      $siteweb = $acteur->getAttribute( "siteweb" );
+      $p = <<<EOD
+      <a href="http://$siteweb">$siteweb</a>
+EOD;
+      print $p;
+  }
+  if( $acteur->hasAttribute( "message_comptoir" ) ) {
+      print "<p class='message'>" . $acteur->getAttribute( "message_comptoir" ) . "</p>";
+  }
+  print "</acteur>";
+}
+
+function add_on_map($acteur) {
+  if(  ! $acteur->hasAttribute( "comptoir" ) ) {
+      return;
+  }
+  $titre = $acteur->getAttribute( "titre" );
+  $lon = $acteur->getAttribute( "longitude" );
+  $lat = $acteur->getAttribute( "latitude" );
+  $horaires = $acteur->getAttribute( "horaires" );
+
+  $r = 255; $g = 0; $b = 0;
+  $type = $acteur->getAttribute( "type" );
+  if( $acteur->hasAttribute( "attente" ) ) {
+      $r = 0; $g = 255; $b = 0;
+  }
+?>
+afeature = new ol.Feature({
+  geometry: new ol.geom.Point(ol.proj.fromLonLat([<?php echo $lat?>, <?php echo $lon?>])),
+  name: "<?php echo $titre?>",
+  desc: "<?php echo $horaires?>",
+  rainfall: 500
+});
+
+afeature.setStyle(
+  new ol.style.Style({
+     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+       color: [<?php echo $r . "," . $g . "," . $b?> ],
+       crossOrigin: 'anonymous',
+       src: 'https://openlayers.org/en/v4.2.0/examples/data/dot.png'
+     }))
+  })
+);
+features.push( afeature );
+<?php
+}
 
       $xmlDoc = new DOMDocument();
       $xmlDoc->load("acteurs-cat.xml");
@@ -69,76 +164,21 @@ Pensez à venir jeter un oeil de temps en temps, de nouveaux comptoirs de change
       $nb = $acteurs->length;
       $indexes = range(0, $nb-1);
       shuffle($indexes);
-      $istyle=0;
       for($pos=0; $pos<$nb; $pos++) {
-	$acteur = $acteurs[$indexes[$pos]];
-	if(  ! $acteur->hasAttribute( "comptoir" ) ) {
-	    continue;
-	}
-        $istyle = $istyle + 1;
-        if( $istyle > 6 ) {
-          $istyle = 1;
-        }
+        $acteur = $acteurs[$indexes[$pos]];
+        print_comptoir( $acteur );
+      }
 
-	$image = $acteur->getAttribute( "image" );
-	$siteweb = $image;
-	if( $acteur->hasAttribute( "siteweb" ) ) {
-	    $siteweb = $acteur->getAttribute( "siteweb" );
-	}
-	
-	$titre = $acteur->getAttribute( "titre" );
-	$desc = $acteur->getAttribute( "desc" );
-	$telephone = $acteur->getAttribute( "telephone" );
-	$adresse = $acteur->getAttribute( "adresse" );
+      $marche_cat = $x->getElementsByTagName( "marches" );
+      $marches = $marche_cat[0]->getElementsByTagName( "scat" );
+      $nb_marches = $marches->length;
 
-	    $p = <<<EOD
-            <acteur class="comptoir">
-            <img src="images/acteurs/$image" alt="$titre" />
-	    <p>
-            <b>Nom:</b> $titre<br/>
-            <b>Adresse:</b> $adresse<br/>
-            <b>Téléphone:</b> $telephone<br/>
-	    </p>
-EOD;
-            print $p;
-
-	$horaires = $acteur->getElementsByTagName( "h" );
-        $nbh = $horaires->length;
-
-        $p = <<<EOD
-        <p><b>Horaires:</b><br/>
-        <table class="horaires"><tbody>
-EOD;
-                print $p;
-	for($h=0; $h<$nbh; $h++) {
-	    $l = $horaires[$h]->getAttribute( "l" );
-	    $t = $horaires[$h]->getAttribute( "t" );
-            $p = <<<EOD
-            <tr><td>$l</td><td>$t</td></tr>
-EOD;
-                print $p;
-	}
-        $p = <<<EOD
-        </tbody></table></p>
-EOD;
-                print $p;
-
-	    if( $acteur->hasAttribute( "siteweb" ) ) {
-	        $siteweb = $acteur->getAttribute( "siteweb" );
-                $p = <<<EOD
-                <a href="http://$siteweb">$siteweb</a>
-EOD;
-                print $p;
-	    }
-	    if( $acteur->hasAttribute( "message" ) ) {
-	        print "<p class='message'>" . $acteur->getAttribute( "message" ) . "</p>";
-	    }
-            print "</acteur>";
-
+      for($pos=0; $pos<$nb_marches; $pos++) {
+        print_comptoir( $marches[$pos] );
       }
 
 ?>
-              </section>
+    </section>
 
     <!-- OSM -->
     <div id="map" class="map"><div id="osm_popup"></div></div>
@@ -147,42 +187,12 @@ EOD;
             var afeature;
 <?php
       for($pos=0; $pos<$nb; $pos++) {
-	$acteur = $acteurs[$indexes[$pos]];
-	if(  ! $acteur->hasAttribute( "comptoir" ) ) {
-	    continue;
-	}
-	$titre = $acteur->getAttribute( "titre" );
-	$lon = $acteur->getAttribute( "longitude" );
-	$lat = $acteur->getAttribute( "latitude" );
-	$horaires = $acteur->getAttribute( "horaires" );
-
-	$r = 255; $g = 0; $b = 0;
-	$type = $acteurs[$pos]->getAttribute( "type" );
-	if( $acteur->hasAttribute( "attente" ) ) {
-	    $r = 0; $g = 255; $b = 0;
-	}
+          add_on_map( $acteurs[$pos] );
+      }
+      for($pos=0; $pos<$nb_marches; $pos++) {
+          add_on_map( $marches[$pos] );
+      }
 ?>
-      afeature = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([<?php echo $lat?>, <?php echo $lon?>])),
-        name: "<?php echo $titre?>",
-        desc: "<?php echo $horaires?>",
-        rainfall: 500
-      });
-
-      afeature.setStyle(
-        new ol.style.Style({
-           image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-             color: [<?php echo $r . "," . $g . "," . $b?> ],
-             crossOrigin: 'anonymous',
-             src: 'https://openlayers.org/en/v4.2.0/examples/data/dot.png'
-           }))
-        })
-      );
-      features.push( afeature );
-
-      <?php }
-       ?>
-
       var vectorSource = new ol.source.Vector({
         features: features
       });
@@ -235,8 +245,8 @@ EOD;
             'placement': 'top',
             'html': true,
           });
-	  $(element).data('bs.popover').options.title = feature.get('name');
-	  $(element).data('bs.popover').options.content = feature.get('desc');
+      $(element).data('bs.popover').options.title = feature.get('name');
+      $(element).data('bs.popover').options.content = feature.get('desc');
           $(element).popover('show');
         } else {
           $(element).popover('destroy');
@@ -258,17 +268,17 @@ EOD;
           </div> <!-- OSM -->
           </div>
 
- 
+
       <footer id="footer">
 
         <!-- Icons -->
           <ul class="actions">
-            
+
             <li><a target="_blank" href="https://www.facebook.com/LeFlorain" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-            
+
             <li><a target="_blank" href="https://twitter.com/LeFlorain" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-        
-          
+
+
           </ul>
 
         <!-- Menu -->
@@ -278,9 +288,9 @@ EOD;
       </footer>
       </div>
 
-    <!-- Scripts --> 
- 
-      
+    <!-- Scripts -->
+
+
 <!-- OSM
       <script src="assets/js/jquery.min.js"></script>
 -->

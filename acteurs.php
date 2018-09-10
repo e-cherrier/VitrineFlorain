@@ -17,140 +17,323 @@ include('nav.php');
     <link rel="stylesheet" href="style.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-  </head>
-  <body id="top">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <?php
-$header = new Header();
-$header->display();
-?>
-
-        <!-- Main -->
-          <div id="acteurs">
-<?php
-$header->display_acteurs_nav();
-?>
-
-<?php
-
       $xmlDoc = new DOMDocument();
       $xmlDoc->load("acteurs-cat.xml");
-
       $x = $xmlDoc->documentElement;
-      $racine = $x->getElementsByTagName( "categories" );
-      print "<h2>" . $x->getAttribute( "titre" ) . "</h2>";
 
-      print "<section class='paragraphe'>";
+      // Generate the script to show / hide categories
+      $cat_ids = array();
+      $btn_ids = array();
+      $idx = 0;
+
       $categories = $x->getElementsByTagName( "categorie" );
       $nb_cat = $categories->length;
 
+      for( $cat=0; $cat<$nb_cat; $cat++ ) {
+          $categorie = $categories[$cat];
+          if( $categorie->hasAttribute( "type" ) &&
+              $categorie->getAttribute( "type" ) != ""
+          ) {
+              $sous_categories = $categorie->getElementsByTagName( "scat" );
+              $nb_sous_cat = $sous_categories->length;
+              if( $nb_sous_cat > 1 ) {
+                for( $scat=0; $scat<$nb_sous_cat; $scat++ ) {
+                  $id = "#cat" . $cat . "scat" . $scat;
+                  $cat_ids[$idx] = $id ;
+                  $id = "#press_cat" . $cat . "scat" . $scat;
+                  $btn_ids[$idx] = $id ;
+                  $idx = $idx+1;
+                }
+              } else {
+                  $id = "#cat" . $cat;
+                  $cat_ids[$idx] = $id ;
+                  $id = "#press_cat" . $cat;
+                  $btn_ids[$idx] = $id ;
+                  $idx = $idx+1;
+              }
+          }
+      }
+
+      $cat_ids[$idx] = "#marches";
+      $btn_ids[$idx] = "#press_marches";
+
+      $cat_displayed = rand( 0, count( $btn_ids )-1 );
+      print "<script>\n";
+      print "$(document).ready(function(){\n";
+      for( $b=0; $b < count( $btn_ids ); $b++ ) {
+          print "$('" . $btn_ids[$b] . "').click(function(){\n";
+          for( $c=0; $c < count( $cat_ids ); $c++ ) {
+            if( $b == $c ) {
+              print "$('" . $cat_ids[$c] . "').show();";
+            } else {
+              print "$('" . $cat_ids[$c] . "').hide();";
+            }
+          }
+          print "});\n";
+      }
+      print "});\n";
+      print "</script>\n";
+
+ ?>
+
+  </head>
+  <body id="top">
+<?php
+
+function is_hidden( $cat, $cat_displayed ) {
+  if( $cat != $cat_displayed ) {
+    return "hidden";
+  }
+  return "";
+}
+      $header = new Header();
+      $header->display();
+
+      print "<div id='acteurs'>";
+      $header->display_acteurs_nav();
+
+      print "<h2>" . $x->getAttribute( "titre" ) . "</h2>";
+
+      print "<section class='paragraphe'>";
+
       print "<section class='column toc'>";
-	   
+
       for($cat=0; $cat<$nb_cat; $cat++) {
           $categorie = $categories[$cat];
-	  if( $categorie->hasAttribute( "type" ) &&
+          if( $categorie->hasAttribute( "type" ) &&
               $categorie->getAttribute( "type" ) != ""
-	  ) {
-	      $acteurs = $categorie->getElementsByTagName( "acteur" );
+          ) {
+              $acteurs = $categorie->getElementsByTagName( "acteur" );
               $nb = $acteurs->length;
-	      print "<h4 class='toc'><a href='#cat" . $cat . "'>" . $categorie->getAttribute( "type" ) . " (" . $nb . ")</a></h4>";
+              print "<h4 class='toc'><a href='#acteurs' id='press_cat" . $cat . "'>" . $categorie->getAttribute( "type" ) . " (" . $nb . ")</a></h4>";
               $sous_categories = $categorie->getElementsByTagName( "scat" );
               $nb_sous_cat = $sous_categories->length;
               for($scat=0; $scat<$nb_sous_cat; $scat++) {
                   $sous_categorie = $sous_categories[$scat];
-	          if( $sous_categorie->hasAttribute( "type" ) &&
+                  if( $sous_categorie->hasAttribute( "type" ) &&
                       $sous_categorie->getAttribute( "type" ) != ""
-	          ) {
-	              $acteurs = $sous_categorie->getElementsByTagName( "acteur" );
+                  ) {
+                      $acteurs = $sous_categorie->getElementsByTagName( "acteur" );
                       $nb = $acteurs->length;
-	              print "<h5 class='toc'><a href='#cat" . $cat . "scat" . $scat . "'>" . $sous_categorie->getAttribute( "type" ) . " (" . $nb . ")</a></h5>";
-	          }
+                      print "<h5 class='toc' ><a href='#acteurs' id='press_cat" . $cat . "scat" . $scat . "'>" . $sous_categorie->getAttribute( "type" ) . " (" . $nb . ")</a></h5>";
+                  }
               }
-	  }
+          }
       }
+      $marche_cat = $x->getElementsByTagName( "marches" );
+      $marches = $marche_cat[0]->getElementsByTagName( "scat" );
+      $nb_marches = $marches->length;
+      print "<h4 class='toc'><a href='#acteurs' id='press_marches'>" . $marche_cat[0]->getAttribute( "type" ) . " (" . $nb_marches . ")</a></h4>";
       print "</section>";
 
+      print "<div id='show'>";
+      $cat_idx=0;
       for($cat=0; $cat<$nb_cat; $cat++) {
 
           $categorie = $categories[$cat];
-    	  if( $categorie->hasAttribute( "type" ) ) {
-	      print "<h1 id='cat" . $cat . "'>" . $categorie->getAttribute( "type" ) . "</h1>";
-	  }
-
-
           $sous_categories = $categorie->getElementsByTagName( "scat" );
           $nb_sous_cat = $sous_categories->length;
+          if( ! $categorie->hasAttribute( "type" ) ) {
+              continue;
+          }
+          if( $nb_sous_cat > 1 ) {
+              print "<div id='cat" . $cat . "'>";
+          } else {
+              print "<div id='cat" . $cat . "' ". is_hidden( $cat_idx++, $cat_displayed ) . ">";
+              print "<h1 id='cat" . $cat . "'>" . $categorie->getAttribute( "type" ) . "</h1>";
+          }
+
           for($scat=0; $scat<$nb_sous_cat; $scat++) {
               $sous_categorie = $sous_categories[$scat];
-	      if( $sous_categorie->hasAttribute( "type" ) &&
-                  $sous_categorie->getAttribute( "type" ) != ""
-	      ) {
-	          print "<h2 id='cat" . $cat . "scat" . $scat . "'>" . $sous_categorie->getAttribute( "type" ) . "</h2>";
 
-	      }
-	      $acteurs = $sous_categorie->getElementsByTagName( "acteur" );
+              if( $sous_categorie->hasAttribute( "type" ) &&
+                  $sous_categorie->getAttribute( "type" ) != ""
+              ) {
+                  print "<div id='cat" . $cat . "scat" . $scat . "' ". is_hidden( $cat_idx++, $cat_displayed ) . ">";
+                  print "<h1>" . $categorie->getAttribute( "type" ) . " / " . $sous_categorie->getAttribute( "type" ) . "</h1>";
+              } else {
+                  print "<div id='cat" . $cat . "scat" . $scat . "'>";
+              }
+              $acteurs = $sous_categorie->getElementsByTagName( "acteur" );
               $nb = $acteurs->length;
 
-	      print "<section class='column'>";
-
-
+              print "<section class='column'>";
 
               $indexes = range(0, $nb-1);
               shuffle($indexes);
               for($pos=0; $pos<$nb; $pos++) {
-                $acteur = $acteurs[$indexes[$pos]];
-    	        if( $acteur->hasAttribute( "attente" ) ) {
-	            continue;
-	        }
-	        $acteur_class = "commerce";
-	        if( $acteur->hasAttribute( "comptoir" ) &&
-		    $acteur->getAttribute( "comptoir" ) == "oui" ) {
-	            $acteur_class = "comptoir";
-	        }
+                  $acteur = $acteurs[$indexes[$pos]];
+                  if( $acteur->hasAttribute( "attente" ) ) {
+                      continue;
+                  }
+                  $acteur_class = "commerce";
+                  if( $acteur->hasAttribute( "comptoir" ) &&
+                      $acteur->getAttribute( "comptoir" ) == "oui" ) {
+                      $acteur_class = "comptoir";
+                  }
 
-	        $image = $acteur->getAttribute( "image" );
-	        $siteweb = "";
-	
-	        $titre = $acteur->getAttribute( "titre" );
-	        $desc = $acteur->getAttribute( "desc" );
-	        $adresse = $acteur->getAttribute( "adresse" );
+                  $image = $acteur->getAttribute( "image" );
+                  $siteweb = "";
 
-                $p = <<<EOD
-                <acteur class="$acteur_class">
+                  $titre = $acteur->getAttribute( "titre" );
+                  $desc = $acteur->getAttribute( "desc" );
+                  $adresse = $acteur->getAttribute( "adresse" );
+
+                  $p = <<<EOD
+                  <acteur class="$acteur_class">
                     <h2>$titre</h2>
                     <img src="images/acteurs/$image" alt="$titre" />
 EOD;
-                print $p;
-	        if( $acteur_class == "comptoir" ) {
-	            print "<h3>Comptoir de change</h3>";
-	        }
-	        if( $acteur->hasAttribute( "message" ) ) {
-	            print "<p class='message'>" . $acteur->getAttribute( "message" ) . "</p>";
-	        }
-                $p = <<<EOD
-                <p>$desc</p>
-                <p>$adresse</p>
+                  print $p;
+                  if( $acteur_class == "comptoir" ) {
+                      print "<h3>Comptoir de change</h3>";
+                  }
+                  if( $acteur->hasAttribute( "message" ) ) {
+                      print "<p class='message'>" . $acteur->getAttribute( "message" ) . "</p>";
+                  }
+                  $p = <<<EOD
+                  <p>$desc</p>
+                  <p>$adresse</p>
 EOD;
-                print $p;
-	        if( $acteur->hasAttribute( "siteweb" ) ) {
-	            $siteweb = $acteur->getAttribute( "siteweb" );
-                    $p = <<<EOD
-                    <a href="http://$siteweb">$siteweb</a>
+                  print $p;
+                  if( $acteur->hasAttribute( "siteweb" ) ) {
+                      $siteweb = $acteur->getAttribute( "siteweb" );
+                      $p = <<<EOD
+                      <a href="http://$siteweb">$siteweb</a>
 EOD;
-                    print $p;
-	        }
-                print "</acteur>";
+                      print $p;
+                  }
+                  print "</acteur>";
               }
-	      print "</section>";
+              print "</section>";
+              print "</div>";
           }
+          print "</div>";
       }
 
+      /* marches */
+
+      $tous_les_acteurs = $x->getElementsByTagName( "acteur" );
+      $nb_a = $tous_les_acteurs->length;
+
+      $exposants = array();
+
+      $indexes = array();
+      for($a=0; $a<$nb_a; $a++) {
+          $acteur = $tous_les_acteurs[$a];
+  		    if( ! $acteur->hasAttribute( "marche" ) ) {
+  			     continue;
+  		    }
+  		    $les_marches = utf8_decode( $acteur->getAttribute( "marche" ) );
+  		    $ids = preg_split("/[\s,]+/", $les_marches);
+  				$nb_ids = count( $ids );
+
+  				for( $i=0; $i<$nb_ids; $i++ ) {
+              if( empty( $indexes[$ids[$i]] ) ) {
+                  $indexes[$ids[$i]] = 0;
+              }
+					    $exposants[$ids[$i]][$indexes[$ids[$i]]] = $acteur;
+							$indexes[$ids[$i]]=$indexes[$ids[$i]]+1;
+  				}
+  		}
+
+      $indexes = range(0, $nb_marches-1);
+      shuffle($indexes);
+      print "<div id='marches' ". is_hidden( $cat_idx++, $cat_displayed ) . ">";
+      print "<h1>" . $marche_cat[0]->getAttribute( "type" ) . "</h1>";
+      print "<section class='column'>";
+      for( $pos=0; $pos<$nb_marches; $pos++ ) {
+        $acteur = $marches[$indexes[$pos]];
+        if( $acteur->hasAttribute( "attente" ) ) {
+            continue;
+        }
+        $acteur_class = "commerce";
+
+        $image = $acteur->getAttribute( "image" );
+        $siteweb = "";
+
+        $titre = $acteur->getAttribute( "titre" );
+        $desc = $acteur->getAttribute( "desc" );
+        $adresse = $acteur->getAttribute( "adresse" );
+
+        $p = <<<EOD
+        <acteur class="$acteur_class">
+          <h2>$titre</h2>
+          <img src="images/acteurs/$image" alt="$titre" />
+EOD;
+        print $p;
+        if( $acteur_class == "comptoir" ) {
+            print "<h3>Comptoir de change</h3>";
+        }
+        if( $acteur->hasAttribute( "message" ) ) {
+            print "<p class='message'>" . $acteur->getAttribute( "message" ) . "</p>";
+        }
+        $p = <<<EOD
+        <p>$desc</p>
+        <p>$adresse</p>
+EOD;
+        print $p;
+        if( $acteur->hasAttribute( "siteweb" ) ) {
+            $siteweb = $acteur->getAttribute( "siteweb" );
+            $p = <<<EOD
+            <a href="http://$siteweb">$siteweb</a>
+EOD;
+            print $p;
+        }
+
+        $p = <<<EOD
+        <p><b>Retrouvez:</b></p>
+EOD;
+        print $p;
+
+        $id = $acteur->getAttribute( "id" );
+        $nb_e = count( $exposants[$id]);
+        $idx_e = range(0, $nb_e-1);
+        shuffle($idx_e);
+        for( $e=0; $e<$nb_e; $e++ ) {
+          $expo = $exposants[$id][$idx_e[$e]];
+
+          if( $expo->hasAttribute( "attente" ) ) {
+              continue;
+          }
+          $message_comptoir = "none";
+          $acteur_class = "commerce";
+          if( $expo->hasAttribute( "comptoir" ) &&
+              $expo->getAttribute( "comptoir" ) == "oui" ) {
+              if( $acteur->hasAttribute( "message_comptoir")) {
+                  $acteur_class = "comptoir";
+                  $message_comptoir = $acteur->getAttribute( "message_comptoir" );
+
+                  $p = <<<EOD
+EOD;
+                  print $p;
+              }
+          }
+
+          $titre = $expo->getAttribute( "titre" );
+          $bref = $expo->getAttribute( "bref" );
+
+          print "<p class='". $acteur_class . "'><b>" . $titre . ":</b> " . $bref;
+          if( $message_comptoir != "none" ) {
+              print "<br/>" . $message_comptoir;
+          }
+          print "</p>";
+        }
+
+        print "</acteur>";
+      }
+      print "</section>";
+      print "</div>";
 ?>
-              </section> <!-- Liste -->
+</div> <!-- top -->
+</section> <!-- paragraphe -->
 
 
           </div>
 
- 
+
       <footer id="footer">
         <!-- Icons -->
           <ul class="actions">
@@ -162,9 +345,9 @@ EOD;
       </footer>
       </div>
 
-    <!-- Scripts --> 
- 
-      
+    <!-- Scripts -->
+
+
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/jquery.poptrox.min.js"></script>
       <script src="assets/js/jquery.dropotron.min.js"></script>

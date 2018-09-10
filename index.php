@@ -14,18 +14,54 @@ include('nav.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/slider.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   </head>
-  <body id="top" onload="ImageSlider()">
+  <body id="top">
 
 <?php
 $header = new Header();
 $header->display();
 ?>
 
+
+      <section id="accueil" class="main style2 right red fullscreen">
+        <div class="content box anniv style1">
+          <header>
+            <h2>Le Florain: 1 an déjà!</h2>
+          </header>
+          <span>Venez fêter avec nous le premier anniversaire de votre monnaie locale!<br/>
+          <span><b>le 6 octobre 2018</b>
+          dans les locaux du Conseil Départemental -
+          48, Esplanade Jacques Baudot -
+          de 10h à 18h</span>
+
+          <img src="http://www.monnaielocalenancy.fr/images/fete/logoCR54.png" class="sf" width="100px" float="left"/>
+          <ul>
+          <li>&nbsp;Conférences,</li>
+          <li>&nbsp;&nbsp;&nbsp;Animations,</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buvette,</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Restauration (sur réservation)</li>
+          </ul>
+          <h3>Et le grand marché des acteurs du Florains.</h3>
+          <br/>
+          <footer>
+            <ul >
+            <li>  <a href="anniversaire.php#reservation" class="button">Réserver son repas</a></li>
+            <li>  <a href="anniversaire.php#benevolat" class="button">Bénévolat</a></li>
+            <li>  <a href="anniversaire.php" class="button">Le programme</a></li>
+            </ul>
+          </footer>
+        </div>
+        <footer>
+          <a href="#monnaie" class="button style2 down anchored">More</a>
+        </footer>
+      </section>
+
+<!--
       <section id="accueil" class="main style2 right dark fullscreen">
         <div class="content box style1">
           <header>
@@ -35,7 +71,7 @@ $header->display();
 <h3>Depuis la fete de lancement le 7 octobre 2017, le Florain c'est:</h3>
 
 <h4>Plus de 500 adhérents</h4>
-<h4>Un réseau de plus de 80 professionnels,</h4>
+<h4>Un réseau de plus de 100 professionnels,</h4>
 <h4>8 comptoirs de change,</h4>
 <h4>1000 Florains de plus par semaine dans le circuit.</h4>
 <br/>
@@ -50,11 +86,58 @@ $header->display();
 	</ul>
       </footer>
         </div>
+
+      	<div id="slider_news" class="slider base box red">
+          <h3> Les dernières nouvelles</h3>
+        <table>
+        <php
+        require_once( "../wp.monnaielocalenancy.fr/wp-load.php");
+        // Connexion a la base de donnees
+        try
+        {
+        	$str = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME;
+        	$bdd = new PDO( $str, DB_USER, DB_PASSWORD );
+        }
+        catch(Exception $e)
+        {
+                die('Erreur : '.$e->getMessage());
+        }
+
+        // Recuperation des 3 derniers messages
+        $reponse = $bdd->query("SELECT guid, post_title, post_content FROM wp_posts WHERE post_status='publish' ORDER BY post_date DESC LIMIT 3") or die(print_r($bdd->errorInfo()));
+
+        // Affichage de chaque message (toutes les donnï¿½es sont protï¿½gï¿½es par htmlspecialchars)
+        while ($donnees = $reponse->fetch())
+        {
+        	$post_content = $donnees['post_content'];
+          $xmlDoc = new DOMDocument();
+          $xmlDoc->loadHTML( $post_content );
+          $x = $xmlDoc->documentElement;
+          $images = $x->getElementsByTagName( "img" );
+        	if( count( $images ) > 0 ) {
+        	    print '<tr>';
+        	    print ' <td>';
+              print " <a href='" . $donnees['guid'] . "'>";
+        	    print '  <h2>' . iconv( "CP1252", "UTF-8",  $donnees['post_title'] ) . '</h2>' ;
+        	    $src = $images[0]->getAttribute( "src" );
+        	    print "  <img src='" . $src . "' />";
+        	    print ' </a>';
+        	    print ' </td>';
+        	    print '</tr>';
+        	}
+        }
+
+        $reponse->closeCursor();
+        ?>
+          </table>
+        </div>
+
         <footer>
           <a href="#monnaie" class="button style2 down anchored">More</a>
         </footer>
-        <!-- <slider> <img class="slide" src="images/accueil.png"> </slider> -->
       </section>
+-->
+
 <!--
       <section id="accueil" class="main style2 right dark fullscreen">
         <div class="content box style1">
@@ -104,11 +187,11 @@ Vous êtes commerçant et vous voulez vous engager dans une transition écologiq
           <header>
             <h2>Pourquoi ?</h2>
           </header>
-          
+
           <h3>Monnaie locale et acte de liberté citoyenne.</h3><br>
           <p class="onecolumn">Une monnaie locale citoyenne permet de relocaliser l'économie, de rendre les citoyens maîtres de leurs échanges, acteurs du fonctionnement de leur économie et libres d'en définir les valeurs. <br> Pour plus d'informations sur les monnaies locales et sur leur rôle dans le système économique actuel :<br>
-            
-          <a target="_blank" href="http://monnaie-locale-complementaire.net/">Site Monnaie locale complémentaire</a> - 
+
+          <a target="_blank" href="http://monnaie-locale-complementaire.net/">Site Monnaie locale complémentaire</a> -
               <a target="_blank" href="https://mrmondialisation.org/la-monnaie-locale-cest-quoi/">Infographie </a></p>
           <footer><a target="_blank" class="button icon first" href="#orga">Les groupes de travail</a><footer>
         </div>
@@ -122,7 +205,7 @@ Vous êtes commerçant et vous voulez vous engager dans une transition écologiq
             <h2>GROUPES DE TRAVAIL</h2>
           </header>
 	  <p>Pour échanger sur la monnaie locale à Nancy, vous pouvez vous <b><a href="http://beta.monnaielocalenancy.fr/lettredinformations">inscrire à la lettre d'informations</a></b> ou rejoindre un groupe thématique :</p>
-        
+
 	    <!--
             <li>Le groupe <strong>
 <script type="text/javascript">
@@ -142,7 +225,7 @@ while(x=eval(x));
 //--
 //]]>
 </script>
-              
+
 
             </strong> a pour r&ocirc;le de déterminer les valeurs portées par la monnaie locale et les conditions à remplir pour pouvoir commercer avec cette monnaie.</li>
 	    -->
@@ -167,15 +250,15 @@ while(x=eval(x));
 //-->
 //]]>
 </script>
-              
-                                                </strong> travaille actuellement 
+
+                                                </strong> travaille actuellement
                         <ul>
                             <li>sur les outils de communication.<li>
                             <li>sur la communication autour du projet en général.</li>
                             <li>participe à de nombreuses manifestions.</li>
                         </ul>
-							
-							
+
+
 				</li>
             <li>Le groupe <strong>
 <script type="text/javascript">
@@ -203,7 +286,7 @@ while(x=eval(x));
 //-->
 //]]>
 </script>
-              
+
               </strong> a pour r&ocirc;le de déterminer et de monter la structure juridique de la monnaie locale à Nancy et de proposer un mode de gouvernance citoyen.</li>
                 <li>Le groupe <strong>
 <script type="text/javascript">
@@ -228,9 +311,9 @@ while(x=eval(x));
 //-->
 //]]>
 </script>
-                  
+
                   </strong>enrichi le reseau d'acteurs professionnels du Florain</li>
-            
+
         </div>
         <a href="#medias" class="button style2 down anchored">Next</a>
       </section>
@@ -242,14 +325,14 @@ while(x=eval(x));
         <h4>Notre Monnaie Locale, le Florain est en circulation!</h4>
         <h6>Reportage France3 8 octobre 2017</h6>
 	<a href="https://vimeo.com/237366914" width="50%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen><img src="images/caisse.jpg" height="250"/></a>
-        <br/>           
+        <br/>
         <h4>Interview de Steven sur France3 Lorraine</h4>
         <h6>(29 juin 2017)</h6>
 	<a href="https://player.vimeo.com/video/224298093" width="50%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen><img src="images/F3Steven.jpg"/></a>
                         </div>
       <a href="#contact" class="button style1 down anchored">Next</a>
-  
-      
+
+
       <!--
       <div id="fb-root"></div>
       <script>(function(d, s, id) {
@@ -272,9 +355,9 @@ while(x=eval(x));
       </blockquote>
   </div>
 </div>
-          
-          
-          
+
+
+
         </div>
         -->
       </section>
@@ -298,7 +381,7 @@ while(x=eval(x));
                   <div class="6u 12u(mobile)"><input type="email" name="email" id="email" placeholder="Email"></div>
                 </div>
                 <div class="row 50%">
-                  <div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+                  <div class="12u"><textarea name="message" placeholder="Message" rows="4"></textarea></div>
                 </div>
                 <div class="row">
                   <div class="12u">
@@ -313,17 +396,17 @@ while(x=eval(x));
         </div><a href="#top" class="button style2 down anchored">Next</a>
       </section>
 
-    
+
       <footer id="footer">
 
         <!-- Icons -->
           <ul class="actions">
-            
+
             <li><a target="_blank" href="https://www.facebook.com/LeFlorain" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-            
+
             <li><a target="_blank" href="https://twitter.com/LeFlorain" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-        
-          
+
+
           </ul>
 
         <!-- Menu -->
@@ -333,9 +416,9 @@ while(x=eval(x));
       </footer>
 
     <!-- Scripts -->
-      
-    
-      
+
+
+
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/jquery.poptrox.min.js"></script>
       <script src="assets/js/jquery.dropotron.min.js"></script>
@@ -348,10 +431,10 @@ while(x=eval(x));
       <script src="assets/js/main.js"></script>
       <script src="assets/js/main2.js"></script>
 <!--
-		<script type="text/javascript"> 
+		<script type="text/javascript">
 
 	 		/* une fois le document chargÃ©, executer la fonction suivante */
-	 		$(document).ready(function() {  
+	 		$(document).ready(function() {
 
 	 			/* On crÃ©e l'Ã©lÃ©ment html Ã  la fin de la page */
 				$('body').append('<a class="crowdf nav fa-angle-up nav scrollTo"> <p><b><font size="+2">Assemblée générale</font></b><br/> <font size="+1"><b> le 3 septembre 2017</b><br/> 15h à la MJC des 3 maisons<br> Nouveaux statuts,<br> projet de gouvernance...<br> Soyons nombreux,<br> parlez en autour de vous.<br> <b><font size="+2">Fête de lancement</font><br> le 7 Octobre 2017</b><br> 14h - minuit<br> <i><font size="-1">Le lieu sera communiqué<br> ultérieurement</font></i><br> le Florain sera émis,<br> de nombreux partenaires<br> seront présents!</p> </a>');
@@ -359,18 +442,18 @@ while(x=eval(x));
 				$('body').append('<a class="phone ban_tel"> <b> <font size="+1"> <font size="+2"> Assemblée générale </font> le 3 septembre 2017 <br/> <font size="+2"> Fête de lancement </font> le 7 Octobre 2017 </font> </b> </a>');
 
 	     		/* au scroll dans la fenÃªtre */
-			$(window).scroll(function(){  
+			$(window).scroll(function(){
 
 				var p = $( "article:last" );
                                 var offset = p.offset();
-	  			var posScroll = $(document).scrollTop(); 
-				
+	  			var posScroll = $(document).scrollTop();
+
 				if(
 					offset.top + 500 > posScroll &&
 					offset.top - 500 < posScroll
 				) {
-		        		$('.crowdf').fadeOut(600); 
-	        			$('.phone').fadeOut(600); 
+		        		$('.crowdf').fadeOut(600);
+	        			$('.phone').fadeOut(600);
 			        	return;
 				}
 
@@ -380,21 +463,21 @@ while(x=eval(x));
 				        $('.crowdf').removeClass( "crowdf_left" ).addClass( "crowdf_right" );
 				}
 
-				if( $('body').width() > 737 )  { 
-	        			$('.crowdf').fadeIn(600); 
-		        		$('.phone').fadeOut(600); 
-		        		$('.nophone').fadeIn(600); 
+				if( $('body').width() > 737 )  {
+	        			$('.crowdf').fadeIn(600);
+		        		$('.phone').fadeOut(600);
+		        		$('.nophone').fadeIn(600);
 					$('.ban_nophone').width( $('.box').width() * .7 );
 				}
-				else { 
-		        		$('.crowdf').fadeOut(600); 
-	        			$('.phone').fadeIn(600); 
+				else {
+		        		$('.crowdf').fadeOut(600);
+	        			$('.phone').fadeIn(600);
 					$('.ban_tel').width( $('body').width() );
-	        			$('.nophone').fadeOut(600); 
+	        			$('.nophone').fadeOut(600);
 				}
 
-				});  
-		   	}); 
+				});
+		   	});
 
 		</script>
      <script>

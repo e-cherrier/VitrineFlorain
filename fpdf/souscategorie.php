@@ -22,10 +22,18 @@ function title_height() {
     return 10; //  -> cell height = 6 + ln(4)
 }
 
+function get_elements() {
+  return $this->scat_->getElementsByTagName( "acteur" );
+}
+
+function get_elements_count() {
+    return $this->scat_->getElementsByTagName( "acteur" )->length;
+}
+
 // SousCategorie
 function full_height() {
-    $acteurs = $this->scat_->getElementsByTagName( "acteur" );
-    $nb = $acteurs->length;
+    $acteurs = $this->get_elements();
+    $nb = $this->get_elements_count();
     $indexes = range(0, $nb-1);
     $height = 0;
     for($pos=0; $pos<$nb; $pos++) {
@@ -61,9 +69,9 @@ function SpyType($label)
 
     $dy = $y2-$y1;
 
-    $this->a->SetY( $y1 ); 
+    $this->a->SetY( $y1 );
     $this->a->Cell( 0,6,"$dy",'B',1,'L',false );
-    $this->a->SetY( $y2 ); 
+    $this->a->SetY( $y2 );
 
     // Save ordinate
     $this->a->top_col = $this->a->GetY();
@@ -194,9 +202,9 @@ function optimizePair( $offset, $pair, $acteur ) {
     $h1=0;
     if( $pair[0] == null || $pair[0] == "none" ) {
 	    if( $this->a->SpaceLeftCol0( $offset ) > $height ) {
-                $pair[0] = $acteur;
-                $pair = $this->priority_swap( $pair );
-		return $pair;
+          $pair[0] = $acteur;
+          $pair = $this->priority_swap( $pair );
+		      return $pair;
 	    }
     } else {
         $p0 = $pair[0]->priority();
@@ -204,9 +212,9 @@ function optimizePair( $offset, $pair, $acteur ) {
     }
     if( $pair[1] == null || $pair[1] == "none" ) {
 	    if( $this->a->SpaceLeftCol1( $offset ) > $height ) {
-                $pair[1] = $acteur;
-                $pair = $this->priority_swap( $pair );
-		return $pair;
+          $pair[1] = $acteur;
+          $pair = $this->priority_swap( $pair );
+	        return $pair;
 	    }
     } else {
         $p1 = $pair[1]->priority();
@@ -219,7 +227,7 @@ function optimizePair( $offset, $pair, $acteur ) {
        $prioritaire = true;
     }
     if( $p < $p1 && $p < $p0 ) {
-	return $pair;
+        return $pair;
     }
 
     $pair = $this->priority_insert( $offset, $pair, $p0, $p1, $h0, $h1, $acteur );
@@ -229,19 +237,19 @@ function optimizePair( $offset, $pair, $acteur ) {
 
 function findBestActeurPair( $offset=0 ) {
     $pair = array( "none", "none" );
-    $acteurs = $this->scat_->getElementsByTagName( "acteur" );
-    $nb = $acteurs->length;
+    $acteurs = $this->get_elements();
+    $nb = $this->get_elements_count();
     for($pos=0; $pos<$nb; $pos++) {
         $acteur = $acteurs[$pos];
         if( $acteur->hasAttribute( "attente" ) ) {
             continue;
-	}
+	      }
         if( $acteur->hasAttribute( "displayed" ) ) {
             continue;
-	}
-	$myActeur = $this->NewActeur( $this->a, $acteur );
+	      }
+	      $myActeur = $this->NewActeur( $this->a, $acteur );
 
-	$pair = $this->optimizePair( $offset, $pair, $myActeur );
+      	$pair = $this->optimizePair( $offset, $pair, $myActeur );
     }
 
     return $pair;
@@ -259,15 +267,15 @@ function needNewPage( $offset=0 ) {
     $offset = $offset + $this->title_height();
     $pair = $this->findBestActeurPair( $offset );
 
-    $acteurs = $this->scat_->getElementsByTagName( "acteur" );
-    $nb = $acteurs->length;
+    $acteurs = $this->get_elements();
+    $nb = $this->get_elements_count();
 
     $p1 = $pair[1] == null || $pair[1] == "none";
     $p0 = $pair[0] == null || $pair[0] == "none";
     if( $nb == 1 && (( ! $p1 && $p0 )||( $p1 && !$p0) ) ) {
-	// s'il n'y a qu'un seul acteur et qu'un seul element
-	// tout est bon
-	return false;
+      	// s'il n'y a qu'un seul acteur et qu'un seul element
+      	// tout est bon
+      	return false;
     }
 
     if( $p1 || $p0 ) {
@@ -290,50 +298,88 @@ function display() {
     $toc['type'] = $type;
     $toc['page'] = $this->a->PageNo()-1;
 
-    $this->a->mode = 1;
-    $acteurs = $this->scat_->getElementsByTagName( "acteur" );
-    $nb = $acteurs->length;
+    $acteurs = $this->get_elements();
+    $nb = $this->get_elements_count();
     $nb_displayed = 0;
     $deb_i = 1;
     while( $nb_displayed < $nb ) {
 
-	$pair = $this->findBestActeurPair();
+	      $pair = $this->findBestActeurPair();
 
         if( $pair[0] != null && $pair[0] != "none" ) {
             $pair[0]->display( 0, $deb_i );
-	    $toc[$nb_displayed] = array();
-	    $toc[$nb_displayed]['a'] = $pair[0]->name();
-	    $toc[$nb_displayed]['p'] = $this->a->PageNo()-1;
-	    $toc[$nb_displayed]['c'] = $pair[0]->isComptoir();
-	    $nb_displayed++;
+      	    $toc[$nb_displayed] = array();
+      	    $toc[$nb_displayed]['a'] = $pair[0]->name();
+      	    $toc[$nb_displayed]['p'] = $this->a->PageNo()-1;
+      	    $toc[$nb_displayed]['c'] = $pair[0]->isComptoir();
+      	    $nb_displayed++;
         }
         if( $pair[1] != null && $pair[1] != "none" ) {
             $pair[1]->display( 1, $deb_i );
-	    $toc[$nb_displayed] = array();
-	    $toc[$nb_displayed]['a'] = $pair[1]->name();
-	    $toc[$nb_displayed]['p'] = $this->a->PageNo()-1;
-	    $toc[$nb_displayed]['c'] = $pair[1]->isComptoir();
-	    $nb_displayed++;
+      	    $toc[$nb_displayed] = array();
+      	    $toc[$nb_displayed]['a'] = $pair[1]->name();
+      	    $toc[$nb_displayed]['p'] = $this->a->PageNo()-1;
+      	    $toc[$nb_displayed]['c'] = $pair[1]->isComptoir();
+      	    $nb_displayed++;
         }
-	if( $nb_displayed < $nb && (
-	    $pair[0] == null || $pair[1] == null ||
-	    $pair[0] == "none" || $pair[1] == "none"
+      	if( $nb_displayed < $nb && (
+      	    $pair[0] == null || $pair[1] == null ||
+      	    $pair[0] == "none" || $pair[1] == "none"
         ) ) {
-	    $this->a->SetCol(0);
-	    $this->a->NextPage();
-	    $ret = $this->displayType( true );
-	    if( $ret=="none" ) {
-	        $this->cat_->displayType( true );
-	    }
-	    $deb_i = 0;
-	}
-	$deb_i = $deb_i + 1;
+      	    $this->a->SetCol(0);
+      	    $this->a->NextPage();
+      	    $ret = $this->displayType( true );
+      	    if( $ret=="none" ) {
+      	        $this->cat_->displayType( true );
+      	    }
+      	    $deb_i = 0;
+      	}
+    	$deb_i = $deb_i + 1;
     }
-    $this->a->mode = 0;
 
     return $toc;
 }
 
+function typeAttribute() {
+    return "type";
+}
+
+}
+
+/*************************************************************/
+
+class SousCategorieFiches extends SousCategorie {
+
+    function NewActeur( $annuaire, $acteur ) {
+        $cat = $this->cat_->type();
+        $sscat = $this->sousCatType();
+        return new ActeurFiches( $annuaire, $acteur, $cat, $sscat );
+    }
+
+    function sousCatType()
+    {
+        if( ! $this->scat_->hasAttribute( $this->typeAttribute() ) ) {
+            return "";
+        }
+        return $this->scat_->getAttribute( $this->typeAttribute() );
+    }
+    
+    function display() {
+        $acteurs = $this->get_elements();
+        $nb = $this->get_elements_count();
+        for( $a = 0; $a < $nb; $a++ ) {
+            
+            $acteur = $acteurs[$a];
+            if( $acteur->hasAttribute( "attente" ) ) {
+                continue;
+            }
+            if( $acteur->hasAttribute( "displayed" ) ) {
+                continue;
+            }
+	        $myActeur = $this->NewActeur( $this->a, $acteur );
+            $myActeur->display(0,0);
+        }
+    }
 }
 
 /*************************************************************/
@@ -347,12 +393,12 @@ function NewActeur(  $annuaire, $acteur ) {
 function displayType( $suite=false )
 {
 
-    if( ! $this->scat_->hasAttribute( "type" ) ) {
+    if( ! $this->scat_->hasAttribute( $this->typeAttribute() ) ) {
 	return "none";
     }
 
-    $type = utf8_decode( $this->scat_->getAttribute( "type" ) );
- 
+    $type = utf8_decode( $this->scat_->getAttribute( $this->typeAttribute() ) );
+
     // Title
     $label = "    " . $type;
     if( $suite == true ) {
@@ -382,12 +428,12 @@ function NewActeur(  $annuaire, $acteur ) {
 function displayType( $suite=false )
 {
 
-    if( ! $this->scat_->hasAttribute( "type" ) ) {
+    if( ! $this->scat_->hasAttribute( $this->typeAttribute() ) ) {
 	return "none";
     }
 
-    $type = utf8_decode( $this->scat_->getAttribute( "type" ) );
- 
+    $type = utf8_decode( $this->scat_->getAttribute( $this->typeAttribute() ) );
+
     // Title
     $label = "    " . $type;
     if( $suite == true ) {
@@ -406,4 +452,3 @@ function displayType( $suite=false )
     return $type;
 }
 }
-

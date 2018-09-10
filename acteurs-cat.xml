@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf8"?>
 <?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
 <categories titre ="Liste des acteurs agréés au 29 août 2018" sstitre="Mise à jour du 29 aout 2018 www.florain.fr pour la dernière version" comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert.">
+
     <categorie type="Se nourrir">
         <scat type="Épiceries">
 
@@ -140,18 +141,17 @@
           telephone="03 83 44 10 33"
 	  message_comptoir="Pas de change les samedi.">
       <h l="du lundi au samedi" t="9H30 - 19H15"/>
-      </acteur>
-	  
+          </acteur>
 	        <acteur
-          siteweb="https://envie-sante.fr"
+          siteweb="envie-sante.fr"
           image="envie-bien-etre.jpg"
           titre="Envie de bien être"
           bref="Épicerie"
           type="Alimentation"
           desc="Une boutique chaleureuse qui vous propose de nombreux produits bio, en alimentation ( Fruits et légumes, Épicerie  bio, Pain bio, produits frais, Alimentation sans gluten) mais aussi  pour le bien-être de toute la famille"
           adresse="65 rue Carnot 54110 DOMBASLE SUR MEURTHE"
-          latitude="6.349915000000000"
-          longitude="48.622827000000000"
+          latitude="6.349915"
+          longitude="48.622827"
           telephone="03.83.34.19.50"
       />
 
@@ -722,18 +722,18 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
   message=""
 />
         <acteur
-		  date="0818"
+	    	  date="0818"
           siteweb="facebook lemajeurnancy"
           image="lemajeur.jpg"
           titre="Le Majeur"
           bref="Restaurant"
-		  type="Alimentation"
+		      type="Alimentation"
           desc="Restaurant"
           adresse="13 rue du grand rabbin Haguenauer, Nancy"
           defi=""
-          latitude="6.180766000000000"
-          longitude="48.688166000000000"
-		  telephone=""
+          latitude="6.180766"
+          longitude="48.688166"
+	    	  telephone=""
           message=""
     />
 
@@ -891,14 +891,14 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
 	  
 	  <acteur
             date="0718"
-            siteweb="http://labridutemps.fr/"
+            siteweb="labridutemps.fr"
             image="abri_du_temps.jpg"
             titre="L'abri du temps"
             bref="Livres d'occasion et livres neufs à prix réduits"
             desc="Repérable à sa devanture bleue à l'ancienne, la librairie abrite un joli panel de livres d'occasion et de livres neufs à prix réduits (soldes d'éditeurs). La littérature française et étrangère y côtoie les ouvrages de cinéma, de théâtre ou encore de sciences humaines et sociales. L'Abri du Temps fait également office de galerie d'art pour les quelques artistes locaux qui y exposent régulièrement leurs estampes."
             adresse="21 Grande Rue, Nancy"
-            latitude="6.180943000000000"
-            longitude="48.695353000000000"
+            latitude="6.180943"
+            longitude="48.695353"
             telephone="09.54.96.63.36"
             message=""
           />
@@ -906,14 +906,14 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
 		  
 	  <acteur
             date="0818"
-            siteweb="http://www.rougge.com/"
+            siteweb="www.rougge.com"
             image="rougge.jpg"
             titre="Rougge"
             bref="Artiste"
             desc="On parle souvent de Radiohead pour le timbre de voix, d’Antony and the Johnsons pour la sensibilité, de Sigur Ros ou de Lisa Gerrard (Dead can dance) pour l’audace et la glossolalie. Rougge a en effet certainement un peu de tout cela, mais condensé en un projet solo piano-voix."
             adresse="31 Rue de Malzeville, Nancy"
-            latitude="6.180365000000000"
-            longitude="48.702450000000000"
+            latitude="6.180365"
+            longitude="48.70245"
             telephone=""
             message=""
           />
@@ -1299,8 +1299,8 @@ Villers-lès-Nancy"
           desc="Recyclune a ouvert la 1ère Recyclerie à Lunéville. Récupération, valorisation, revente à bas prix des objets dont vous ne voulez plus / ateliers créatifs."
           adresse="6 Rue du Coq, 54300 Lunéville"
           defi=""
-          latitude="6.488517000000000"
-          longitude="48.586487000000000"
+          latitude="6.488517"
+          longitude="48.586487"
 		  telephone="07.68.82.28.99"
           message=""
     />
@@ -1436,15 +1436,15 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
         />
         <acteur
           date="0718"
-          siteweb="http://www.colline-soleole.com"
+          siteweb="www.colline-soleole.com"
           image="soleole.jpg"
           titre="Gite Soleole"
           bref="Gîte refuge"
           type="Gite"
           desc="Au pied de la colline Sainte-Geneviève, le gîte de La Soléole fait le pari de l’auto-suffisance énergétique et mise davantage sur l’échange plus que sur la consommation. Dans ce lieu d’accueil touristique à part, trois chalets et une yourte peuvent accueillir une vingtaine de personnes. Des éoliennes et des panneaux photo-voltaïques produisent l’électricité. Du bois et du gaz assurent le chauffage. Et pour l’ambiance, des bénévoles, des chantiers participatifs, des ânes et la table d’hôtes concoctée avec des produits locaux. Le site est adapté pour accueillir des personnes handicapées."
-          adresse="Route de Bezaumont. 54380 Landremont"
-          latitude="6.125371456150000"
-          longitude="48.855213995500000"
+          adresse="Route de Bezaumont, 54380 Landremont"
+          latitude="6.12537145615"
+          longitude="48.8552139955"
           telephone="03.83.23.64.26"
           message=""
         />
@@ -1510,20 +1510,20 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
 />
 			<acteur
             date="0818"
-            siteweb="http://www.montetibou.org/"
+            siteweb="www.montetibou.org"
             image="montetibou.jpg"
             titre="Montetibou"
             bref="Espace Montessori pour les familles"
-            desc="Ouvert en 3007, cet espace se compose d'une école Montessori (enfants de 2 à 12 ans), d'ateliers parents/enfants (0 à 5 ans), d'ateliers d'éducation positive à destination des parents, d'un accueil de loisirs les mercredis des périodes scolaires et d'une pépinière de projets liés à Montessori et au bien-être des enfants"
+            desc="Ouvert en 2007, cet espace se compose d'une école Montessori (enfants de 2 à 12 ans), d'ateliers parents/enfants (0 à 5 ans), d'ateliers d'éducation positive à destination des parents, d'un accueil de loisirs les mercredis des périodes scolaires et d'une pépinière de projets liés à Montessori et au bien-être des enfants"
             adresse="39 Rue de Laxou, Nancy"
-            latitude="6.161976000000000"
-            longitude="48.685101000000000"
+            latitude="6.161976"
+            longitude="48.685101"
             telephone="03.83.31.23.26"
             message=""
           />
 		  
 		  	        <acteur
-          siteweb="http://www.clairlieuecodefi.fr/"
+          siteweb="www.clairlieuecodefi.fr"
           image="clairieu-ecodefi.jpg"
           titre="Clairieu Eco Défi"
           bref="Rénovation solidaire"
@@ -1534,21 +1534,20 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           telephone=""
       />
 
-	  
         </scat>
     </categorie>
     <categorie type ="S'engager">
         <scat>
 		<acteur
             date="0818"
-            siteweb="https://www.artisansdumonde.org/"
+            siteweb="www.artisansdumonde.org"
             image="artisans.jpg"
             titre="Artisans du monde"
             bref="Commerce équitable"
             desc="Artisans du Monde est un mouvement de commerce équitable qui compte actuellement plus de 140 boutiques associatives répandues dans toute la France et 6000 bénévoles. Ensemble, nous promouvons des activités de vente, éducation et mobilisation citoyenne."
             adresse="13 Rue des Carmes, Nancy"
-            latitude="6.180909000000000"
-            longitude="48.691257000000000"
+            latitude="6.180909"
+            longitude="48.691257"
             telephone="03.83.36.78.65"
             message=""
           />
@@ -1678,15 +1677,15 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
 />
         <acteur
 		  date="0818"
-          siteweb="https://www.colecosol.fr/accueil"
+          siteweb="www.colecosol.fr/accueil"
           image="colecosol.jpg"
           titre="Colecosol"
           bref="Association"
           desc="COLECOSOL est une association régionale qui a pour but de promouvoir dans le Grand Est le commerce équitable, la consommation responsable et l'économie solidaire."
           adresse="37 Route Nationale 74, 54280 Seichamps"
           defi=""
-          latitude="6.261721000000000"
-          longitude="48.717634000000000"
+          latitude="6.261721"
+          longitude="48.717634"
 		  telephone=""
           message=""
     />

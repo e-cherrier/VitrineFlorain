@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<acteurs>
+    <acteur
+      siteweb="https://reporterre.net/Buen-vivir"
+      image="images/conferences/buenvivir.jpg" 
+      nom="« buen vivir »"
+      type="Societé"
+      desc="Echanges et discussions à partir des propos de Patrick Viveret sur le « buen vivir ».
+Philosophe, économiste, fondateur du Mouvement Sol à l’origine des monnaies locales, Patrick Viveret nous invite à réfléchir à notre rapport au temps, et à reconsidérer nos richesses.  
+"
+      horaire="11h30 à 13h"
+    />   
+    <acteur
+      image="images/conferences/altereco.jpg" 
+      nom="Quelles alternatives économiques pour les citoyens?"
+      type="économie"
+      desc="
+Epargne solidaire, banque éthique, monnaie locale, … : même combat ?
+Venez découvrir les outils économiques qui existent tout près de chez vous :
+•	La Nef, banque éthique à laquelle nous avons confié le fonds de réserve du Florain,
+•	les Cigales (Club d’Investisseurs pour une Gestion Alternative et Locale de l’Epargne Solidaire)
+•	le Florain"
+      horaire="13h30 à 15h"
+    />
+    <acteur
+      image="images/conferences/benevolat2.jpg" 
+      nom="La force du bénévolat"
+      type="Citoyenneté"
+      desc="Etat des lieux et témoignages à partir de l'exemple du Florain.
+
+La dynamique du Florain ne serait pas ce qu’elle est sans l’énergie bénévole déployée depuis 2015. A travers nos premières expériences, nous souhaitons partager avec vous nos modes d’organisation et vous inviter à rejoindre le mouvement.
+"
+      horaire="15h30 à 17h"
+    />
+</acteurs>
+

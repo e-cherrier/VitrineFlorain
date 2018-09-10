@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf8"?>
+<docs titre="Documents publics pour diffusion">
+  <category id="com" title="Communication">
+    <doc name="L'annuaire de poche" img="images/articles/poche.jpg" url="annuaire.php?type=Poche" desc="Liste compacte des professionnels actuellement agréés. Cette liste est mise à jour une fois par mois."/>
+    <doc name="L'annuaire Livret" img="images/articles/annuaire.jpg" url="annuaire.php?type=Livret" desc="Annuaire des professionnels actuellement agréés avec une breve description pour chacun. Cet annuaire est mis à jour une fois par mois."/>
+  	<doc name="Plaquette Pro" img="images/com/ppro.jpg" url="doc/Plaquette Pro.pdf" desc="Plaquette de présentation destinée aux professionnels"/>
+  	<doc name="Plaquette Particulier" img="images/com/ppart.jpg" url="doc/Plaquette Particuliers.pdf" desc="Plaquette de présentation destinée aux particuliers"/>
+  </category>
+  <category id="logos" title="Logos de l'association">
+    	<doc name="Florain 1" img="images/com/FlorainFA5_VN.png" url="images/com/FlorainFA5_VN.png" desc="Gris sur fond vert"/>
+      <doc name="Florain 2" img="images/com/FlorainFA5_BN.png" url="images/com/FlorainFA5_BN.png" desc="Gris sur fond transparent"/>
+      <doc name="Florain 3" img="images/com/FlorainFA5_NV.png" url="images/com/FlorainFA5_NV.png" desc="Vert sur fond gris"/>
+      <doc name="Florain 4" img="images/com/FlorainFA5_V.png" url="images/com/FlorainFA5_V.png" desc="Vert sur fond transparent"/>
+    	<doc name="F 1" img="images/com/FlorainF_FA5_VG.png" url="images/com/FlorainF_FA5_VG.png" desc="Gris sur fond vert"/>
+      <doc name="F 2" img="images/com/FlorainF_FA5_TG.png" url="images/com/FlorainF_FA5_TG.png" desc="Gris sur fond transparent"/>
+      <doc name="F 3" img="images/com/FlorainF_FA5_GV.png" url="images/com/FlorainF_FA5_GV.png" desc="Vert sur fond gris"/>
+      <doc name="F 4" img="images/com/FlorainF_FA5_TV.png" url="images/com/FlorainF_FA5_TV.png" desc="Vert sur fond transparent"/>
+      <doc name="Bandeau Le Florain" img="images/com/bannerF.jpg" url="images/com/bannerF.jpg" desc="Gris sur fond vert"/>
+  </category>
+  <category id="fonct" title="Fonctionnement">
+    <doc name="Adhésion 2018" url="doc/adhesion.pdf"
+      desc="Bulletin d'adhésion pour 2018. Vous pouvez aussi prendre votre adhésion directement au comptoir de change de votre choix."/>
+    <doc name="Charte de valeur" url="doc/Charte de Valeurs.pdf"
+      desc="Charte de l'association, acceptée par chaque membre particulier comme professionnel."/>
+    <doc name="Statuts" url="doc/Statuts et Charte MLC Nancy.pdf"
+      desc="Statuts de l'association, votes à l'AG de janvier 2018."/>
+    <doc name="Les 36 points de fonctionnement" url="doc/Fonctionnement Florain.pdf"
+      desc="Règles de fonctionnements du Florain."/>
+  </category>
+  <category_pro>
+    <doc name="Ici on accepte le Florain" url="doc/icionaccepteleflorainA6-autoc.pdf" desc="Affichette destinée aux professionnels pour annoncer qu'ils acceptent le Florain" />
+    <doc name="Comptoir de Change" url="doc/comptoirdechange.pdf" desc="Affiche destinée aux professionnels pour annoncer qu'ils font comptoir de change pour le Florain" />
+  </category_pro>
+</docs>
