@@ -1098,6 +1098,20 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
           telephone="06 72 16 45 92"
       />
       <acteur
+        date="1809"
+        siteweb=""
+        image="ernst.jpg"
+        titre="Ghislaine Ernst"
+        bref="Méthode Feldenkrais™"
+        type="Prendre soin de soi"
+        desc="Méthode Feldenkrais™. Méthode d'éducation somatique fondée sur la prise de conscience du corps en mouvement."
+        adresse="10 rue Gustave Charpentier, Nancy"
+        latitude="6.139228"
+        longitude="48.690946"
+        telephone="06.07.60.78.32"
+        message=""
+      />
+      <acteur
         siteweb="www.viesensetmouvement.fr"
         image="viesensetmouvement.jpg"
         titre="Nathalie Boulliung"
@@ -1663,6 +1677,35 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   message=""
 />
 <acteur
+        date="1809"
+        siteweb="www.facebook.com/zerodechetnancy"
+        image="zerodechet.jpg"
+        titre="Zéro Déchet Nancy"
+        bref="Zéro déchet"
+        type="Association"
+        desc="Association promouvant la démarche zéro déchet et zéro gaspillage à l’échelle individuelle et collective."
+        adresse="7 rue Jacques Délivre, Nancy"
+        latitude="6.180221"
+        longitude="48.70532"
+        telephone="06.74.60.68.34"
+        message=""
+      />
+      <acteur
+        date="1809"
+        siteweb="www.movementfrance.com"
+        image="movementfrance.jpg"
+        titre="Movement France"
+        bref="Recyclage, équitable, éthique"
+        type="Association"
+        desc="Créer des emplois pour de jeunes femmes en précarité, grâce au recyclage des sachets d'eau usagés, par la couture et le tissage au Burkina Faso."
+        adresse="21 rue des noisetiers, Nancy"
+        latitude="6.258527"
+        longitude="48.775695"
+        telephone="06.11.53.01.45"
+        message=""
+        citation="Le développement d'une monnaie locale par nature permet la valorisation et la création d'un réseau d'artisans, commerçants et d'associations locales fort. Mais il peut également favoriser le développement de projets aux même valeurs au travers du Monde"
+      />
+<acteur
           anniv="oui"
           type="association"
   siteweb="www.racines-carrees.fr"
@@ -1709,5 +1752,6 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
         longitude="48"
         telephone=""
         message=""
+        citation=""
       />
 -->
