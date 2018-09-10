@@ -368,7 +368,7 @@ $header->display();
       <section id="reservation" class="main style1 left dark fullscreen">
         <div class="content box style1">
           <header class="anniv">
-            <h2>Je réserve mes repas</h2>
+            <h2>Je réserve mes repas</h2><h3>réservations possibles jusqu'au 29 septembre</h3>
           </header>
           <div class="warning"><p>Les réservations nous permettent de limiter le gaspillage alimentaire en prévoyant
              le nombre exact de repas, il ne sera donc pas possible de manger sur place sans réservation préalable.</p></div>
@@ -424,6 +424,7 @@ $header->display();
                   <ul class="anniv">
                     <li><a target="_blank" href="https://framaforms.org/inscription-repas-fete-anniversaire-1-an-florain-1535628289" class="button tooltip resa">Pré-réserver en ligne<span class="tooltiptext">La réservation ne sera validée qu'une fois le paiement effectué</span></a></li>
                   </ul>
+                  
                 </footer>
          </div>
           </div>
