@@ -26,7 +26,7 @@ class ExposantPoche extends Exposant {
 
 function EnteteHeight() {
     $h = $this->getAttributeHeight( "titre", 10, 'B' );
-    $h = $h + $this->getAttributeHeight( "bref",8 );
+    //$h = $h + $this->getAttributeHeight( "bref",8 );
     return $h;
 }
 
@@ -57,12 +57,14 @@ function Entete() {
     // Le nom
     $this->a->PrintName( $titre,$this->a->GetColumnWidth(), 10 );
 
+    /*
     if( $this->acteur_->hasAttribute( "bref" ) ) {
         $bref = utf8_decode( $this->acteur_->getAttribute( "bref" ) );
 				if( $bref != "" ) {
             $this->a->PrintText( $bref, $this->a->GetColumnWidth(), 8 );
 				}
     }
+    */
 
     $this->a->Ln( 2 );
 
