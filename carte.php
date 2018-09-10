@@ -106,7 +106,7 @@ $header->display_acteurs_nav();
           echo "  <fieldset id='layer". $c . "'>\n";
           echo "    <label>&nbsp;</label>\n";
           echo "    <input id='visible". $c . "' class='visible' type='checkbox'/>\n";
-          echo "    <label class='css-label noir' for='visible". $c . "'>" . $categories[$c-1]->getAttribute( "type" ) . " </label>\n";
+          echo "    <label class='css-label c".$c."' for='visible". $c . "'>" . $categories[$c-1]->getAttribute( "type" ) . " </label>\n";
           echo "  </fieldset>\n";
           echo "</p>\n";
         }
@@ -114,7 +114,7 @@ $header->display_acteurs_nav();
           echo "  <fieldset id='layer". ($nb_cat+1) . "'>\n";
           echo "    <label>&nbsp;</label>\n";
           echo "    <input id='visible". ($nb_cat+1) . "' class='visible' type='checkbox'/>\n";
-          echo "    <label class='css-label noir' for='visible". ($nb_cat+1) . "'> Les marchés </label>\n";
+          echo "    <label class='css-label c".($nb_cat+1)."' for='visible". ($nb_cat+1) . "'> Les marchés </label>\n";
           echo "  </fieldset>\n";
           echo "</p>\n";
         ?>
@@ -149,17 +149,19 @@ function add_acteur( $f, $acteur ) {
 
   // kriptic method to dispach colors
   $color = array(
-    0 => 255,
-    1 => 0,
-    2 => 128,
-    3 => 84,
-    4 => 170,
-    5 => 42,
-    6 => 212,
+    0 => array( "r" => 255, "g" => 0, "b" => 0 ),
+    1 => array( "r" => 255, "g" => 255, "b" => 0 ),
+    2 => array( "r" => 255, "g" => 170, "b" => 234 ),
+    3 => array( "r" => 174, "g" => 0, "b" => 255 ),
+    4 => array( "r" => 0, "g" => 255, "b" => 255 ),
+    5 => array( "r" => 119, "g" => 74, "b" => 74 ),
+    7 => array( "r" => 0, "g" => 0, "b" => 255 ),
+    6 => array( "r" => 255, "g" => 192, "b" => 0 ),
+    8 => array( "r" => 0, "g" => 255, "b" => 0 ),
   );
-  $r =  $color[($f) % 7];
-  $g =  $color[($f/2) % 7];
-  $b =  $color[abs(1-($f/4)) % 7];
+  $r =  $color[$f]["r"];
+  $g =  $color[$f]["g"];
+  $b =  $color[$f]["b"];
 
   $punaise = "'https://openlayers.org/en/v4.2.0/examples/data/dot.png'";
   if( $desc == "Marché" ) {

@@ -17,7 +17,7 @@ input[type=checkbox].visible + label.css-label {
 input[type=checkbox].visible:checked + label.css-label {
     background-position: 0 -25px;
 }
-label.rouge {
+label.c1 {
     background-image:url(http://monnaielocalenancy.fr/images/cb-rouge.png);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -26,16 +26,7 @@ label.rouge {
     -ms-user-select: none;
     user-select: none;
 }
-label.vert {
-    background-image:url(http://monnaielocalenancy.fr/images/cb-vert.png);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-label.jaune {
+label.c2 {
     background-image:url(http://monnaielocalenancy.fr/images/cb-jaune.png);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -44,8 +35,62 @@ label.jaune {
     -ms-user-select: none;
     user-select: none;
 }
-label.noir {
-    background-image:url(http://monnaielocalenancy.fr/images/cb-noir.png);
+label.c3 {
+    background-image:url(http://monnaielocalenancy.fr/images/cb-rose.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+label.c4 {
+    background-image:url(http://monnaielocalenancy.fr/images/cb-violet.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+label.c5 {
+    background-image:url(http://monnaielocalenancy.fr/images/cb-cyan.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+label.c6 {
+    background-image:url(http://monnaielocalenancy.fr/images/cb-brun.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+label.c7 {
+    background-image:url(http://monnaielocalenancy.fr/images/cb-orange.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+label.c8 {
+    background-image:url(http://monnaielocalenancy.fr/images/cb-bleu.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+label.c9 {
+    background-image:url(http://monnaielocalenancy.fr/images/cb-vert.png);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
