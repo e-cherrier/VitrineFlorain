@@ -102,7 +102,7 @@ $header->display_acteurs_nav();
         $nb_cat = $categories->length;
 
         for($c=1; $c<=$nb_cat; $c++) {
-          echo "<p float='left'>\n";
+          echo "<p>\n";
           echo "  <fieldset id='layer". $c . "'>\n";
           echo "    <label>&nbsp;</label>\n";
           echo "    <input id='visible". $c . "' class='visible' type='checkbox'/>\n";
@@ -110,7 +110,7 @@ $header->display_acteurs_nav();
           echo "  </fieldset>\n";
           echo "</p>\n";
         }
-          echo "<p float='left'>\n";
+          echo "<p>\n";
           echo "  <fieldset id='layer". ($nb_cat+1) . "'>\n";
           echo "    <label>&nbsp;</label>\n";
           echo "    <input id='visible". ($nb_cat+1) . "' class='visible' type='checkbox'/>\n";
@@ -118,14 +118,30 @@ $header->display_acteurs_nav();
           echo "  </fieldset>\n";
           echo "</p>\n";
         ?>
-        </ul>
+          <p>
+            <fieldset id='layer10'>
+              <label>&nbsp;</label>
+              <input id='visible10' class='visible' type='checkbox' value="false"/>
+              <label class='css-label c10' for='visible10'>Nombres</label>
+            </fieldset>
+            <fieldset>
+              <label style='margin-left: 20px; vertical-align: top;'>&nbsp;Distance:</label>
+              <input id="distance" type="range" min="10" max="500" step="1" value="40" />
+            </fieldset>
+          </p>
       </div>
     </div>
 
 
     <script>
+
+      var distance = document.getElementById('distance');
+
+
+
              var afeature;
              var feature_array = new Array;
+             var all_features = new Array;
 <?php
 for($c=0; $c<$nb_cat+1; $c++) {
   echo "feature_array[" . $c . "] = new Array;\n";
@@ -174,17 +190,20 @@ name: "<?php echo $titre?>",
 desc: "<?php echo $desc . " <br/><a href='http://" . $web . "'>".$web."</a>" ?>"
 });
 
+
 afeature.setStyle(
-new ol.style.Style({
-   image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-     color: [<?php echo $r . "," . $g . "," . $b?> ],
-     crossOrigin: 'anonymous',
- src: <?php echo $punaise ?>
-   }))
-})
+  new ol.style.Style({
+    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+      color: [<?php echo $r . "," . $g . "," . $b?> ],
+      crossOrigin: 'anonymous',
+      src: <?php echo $punaise ?>
+    }))
+  })
 );
+
 <?php
     echo "feature_array[" . $f . "].push( afeature );\n";
+    echo "all_features.push( afeature );\n";
 }
 
       // build features per categories
@@ -216,6 +235,57 @@ new ol.style.Style({
         })
       });
 */
+      layers = new Array;
+      layers[0]=new ol.layer.Tile({ preload: 4, source: new ol.source.OSM() });
+
+        var styleCache = {};
+      for( f=0; f<feature_array.length;f++) {
+           layers[f+1] = new ol.layer.Vector({ source: new ol.source.Vector({ features: feature_array[f] }) });
+      }
+
+
+        var source = new ol.source.Vector({
+          features: all_features
+        });
+        var clusterSource = new ol.source.Cluster({
+          distance: 100,
+          source: source
+        });
+
+        var clusters = new ol.layer.Vector({
+          source: clusterSource,
+          style: function(feature) {
+            var size = feature.get('features').length;
+            var style = styleCache[size];
+            if (!style) {
+              style = new ol.style.Style({
+                /*
+                image: new ol.style.Circle({
+                  radius: 40,
+                  stroke: new ol.style.Stroke({
+                    color: '#000',
+                    width: 3
+                  })
+                }),
+                */
+                text: new ol.style.Text({
+                  font: '50px helvetica,sans-serif',
+                  text: size.toString(),
+                  fill: new ol.style.Fill({
+                    color: '#fff'
+                  }),
+                  stroke: new ol.style.Stroke({
+                      color: '#000',
+                      width: 3
+                  })
+                })
+              });
+              styleCache[size] = style;
+            }
+            return style;
+          }
+        });
+        layers[feature_array.length+1] = clusters;
 
       var logoElement = document.createElement('a');
       logoElement.href = 'http://www.florain.fr/';
@@ -232,14 +302,7 @@ new ol.style.Style({
             source: 'fullscreen'
           })
         ]),
-        layers: [
-          new ol.layer.Tile({ preload: 4, source: new ol.source.OSM() }),
-          <?php
-            for($c=0; $c<$nb_cat+1; $c++) {
-              echo "new ol.layer.Vector({ source: new ol.source.Vector({ features: feature_array[" . $c . "] }) }),\n";
-            }
-          ?>
-        ],
+        layers: layers,
         target: document.getElementById('map'),
         view: new ol.View({
           center: ol.proj.fromLonLat([6.08262588978, 48.650322978]),
@@ -248,6 +311,9 @@ new ol.style.Style({
         logo: logoElement
       });
 
+      distance.addEventListener('input', function() {
+        clusterSource.setDistance(parseInt(distance.value, 10));
+      });
       var element = document.getElementById('popup');
 
       var osm_popup = new ol.Overlay({
