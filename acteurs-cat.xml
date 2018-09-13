@@ -917,6 +917,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             telephone=""
             message=""
           />
+		  <!--
 		   <acteur
             date="0818"
             siteweb="http://www.grainedecarrosse.fr/"
@@ -943,6 +944,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             telephone=""
             message=""
           />
+		  -->
         </scat>
     </categorie>
     <categorie type ="Prendre soin de soi">
