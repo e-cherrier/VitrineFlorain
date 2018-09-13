@@ -1168,6 +1168,21 @@ Villers-lès-Nancy"
   telephone="03 83 27 75 47"
   message=""
 />
+		<!--
+	<acteur
+          siteweb="https://www.studio-r-coiffure-nancy.fr/"
+          image="default.jpg"
+          titre="Studio R"
+          type="Coiffeur"
+          bref="Salon de coiffure"
+          desc=""
+          latitude="6.18071"
+          longitude="48.693695"
+          telephone="03.83.37.81.07"
+          adresse="11 rue Gustave Simon Nancy"
+          
+        />
+-->
         </scat>
     </categorie>
     <categorie type ="S'habiller, s'équiper">
