@@ -91,7 +91,7 @@
       <acteur
           anniv="oui"
           siteweb=""
-          image="defaut.jpg"
+          image="elles.jpg"
           titre="Épicerie Elles"
 	        code="-1"
           bref="Épicerie de quartier"
@@ -529,6 +529,19 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           latitude="6.179026"
           longitude="48.677501"
     />
+	 <acteur
+          siteweb="https://lacantoche.fr/"
+          image="LaCantoche.jpg"
+          titre="La Cantoche"
+          type="Alimentation"
+          bref="Traiteur"
+          desc="Des repas sains et savoureux, préparés avec amour par des personnes passionnées. Une cantine de midi pour tous : bienvenue aux travailleurs, étudiants, habitants du quartier ou d'ailleurs ! Une cuisine responsable et respectueuse des êtres vivants et de la nature. Des ingrédients frais, de saison, bio, principalement d'origine locale, issus du commerce équitable et de l'agriculture paysanne. Une cuisine visant le zéro déchet
+et la sobriété énergétique."
+          adresse="180 rue Jeanne d'Arc Nancy"
+          defi="Enercoop"
+          latitude="6.175713"
+          longitude="48.679843"
+    />
 </scat>
   </categorie>
     <marches type ="Les Marchés">
@@ -849,7 +862,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
            titre="MJC Lorraine"
            type="MJC"
            desc="MJC"
-           adresse="1 Rue de Lorraine, 54500 Vandœuvre-lès-Nancy"
+           adresse="1 Rue de Lorraine, 54500 Vandoeuvre-lès-Nancy"
            latitude="6.16816"
            longitude="48.660747"
            telephone="03 83 15 90 00"
@@ -860,7 +873,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
                titre="MJC Étoile"
                bref="loisirs, convivialité, faire ensemble"
                desc="Activités de loisirs, culturelles, sportives, éducatives, sociales pour tous publics. La MJC Étoile est aussi une scène culturelle de proximité ou le public peut aussi être acteur de ce qui se passe sur les planches du théâtre de l'Étoile"
-               adresse="1 place de Londres, 54500 Vandœuvre-lès-Nancy"
+               adresse="1 place de Londres, 54500 Vandoeuvre-lès-Nancy"
                latitude="6.182307"
                longitude="48.659872"
                telephone="03 83 55 53 35"
@@ -910,14 +923,41 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             image="rougge.jpg"
             titre="Rougge"
             bref="Artiste"
-            desc="On parle souvent de Radiohead pour le timbre de voix, d’Antony and the Johnsons pour la sensibilité, de Sigur Ros ou de Lisa Gerrard (Dead can dance) pour l’audace et la glossolalie. Rougge a en effet certainement un peu de tout cela, mais condensé en un projet solo piano-voix."
+            desc="On parle souvent de Radiohead pour le timbre de voix, d'Antony and the Johnsons pour la sensibilité, de Sigur Ros ou de Lisa Gerrard (Dead can dance) pour l'audace et la glossolalie. Rougge a en effet certainement un peu de tout cela, mais condensé en un projet solo piano-voix."
             adresse="31 Rue de Malzeville, Nancy"
             latitude="6.180365"
             longitude="48.70245"
             telephone=""
             message=""
           />
-
+		  
+		   <acteur
+            date="0818"
+            siteweb="http://www.grainedecarrosse.fr/"
+            image="graineDeCarrosse.jpg"
+            titre="Graine de carrosse"
+            bref="Atelier d'impressions typographiques création d'objets poétiques"
+            desc="Les gens qu'on aime méritent plus qu'un cadeau pré-pensé. C'est pourquoi j'ai crée mon MAGASIN de MOTS. Ce que je vous propose ? Transformer vos idées en Objets Poétiques OU imprimer joliment vos idées pour faire battre le coeur  briller les yeux de ceux que vous aimez.."
+            adresse="21 Rue de la Source, Nancy"
+            latitude="6.178501"
+            longitude="48.694563"
+            telephone="06.13.69.01.14"
+            message=""
+          />
+		  <acteur
+            date="0818"
+            siteweb="facebook dominique schweitzer Bouquiniste"
+            image="DominiqueSchweitzer.jpg"
+            titre="Bouquiniste Dominique Schweitzer"
+            bref="Au marché central de Nancy"
+            desc="Bouquiniste"
+            adresse="Marché central 52 Rue Saint-Dizier Nancy"
+            latitude="6.182779000000000"
+            longitude="48.689360000000000"
+            telephone=""
+            message=""
+          />
+		  
         </scat>
     </categorie>
     <categorie type ="Prendre soin de soi">
@@ -954,7 +994,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             image="jeanphilippehuber.jpg"
             titre="Huber Jean-Philippe"
             bref="Ostéopathie Acupunture"
-            desc="Traitement des troubles mécaniques du corps humain en tant qu’ostéopathe et des déséquilibres énergétiques en tant qu'acupuncteur."
+            desc="Traitement des troubles mécaniques du corps humain en tant qu'ostéopathe et des déséquilibres énergétiques en tant qu'acupuncteur."
             adresse="33 rue Déglin, Nancy"
             latitude="6.18005"
             longitude="48.700844"
@@ -1141,6 +1181,21 @@ Villers-lès-Nancy"
   telephone="03 83 27 75 47"
   message=""
 />
+		
+	<acteur
+          siteweb="https://www.studio-r-coiffure-nancy.fr/"
+          image="studioR.jpg"
+          titre="Studio R"
+          type="Coiffeur"
+          bref="Salon de coiffure"
+          desc="Le salon de coiffure Studio'R situé à proximité de la place Stanislas, coiffe les hommes, les femmes et les enfants. Des balayages, des mèches, des couleurs, des shampooings, des brushings, des brushings de soirée vous sont proposés, dans une ambiance musicale choisie par notre équipe."
+          latitude="6.18071"
+          longitude="48.693695"
+          telephone="03.83.37.81.07"
+          adresse="11 rue Gustave Simon Nancy"
+          
+        />
+
         </scat>
     </categorie>
     <categorie type ="S'habiller, s'équiper">
@@ -1455,7 +1510,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           titre="Gite Soleole"
           bref="Gîte refuge"
           type="Gite"
-          desc="Au pied de la colline Sainte-Geneviève, le gîte de La Soléole fait le pari de l’auto-suffisance énergétique et mise davantage sur l’échange plus que sur la consommation. Dans ce lieu d’accueil touristique à part, trois chalets et une yourte peuvent accueillir une vingtaine de personnes. Des éoliennes et des panneaux photo-voltaïques produisent l’électricité. Du bois et du gaz assurent le chauffage. Et pour l’ambiance, des bénévoles, des chantiers participatifs, des ânes et la table d’hôtes concoctée avec des produits locaux. Le site est adapté pour accueillir des personnes handicapées."
+          desc="Au pied de la colline Sainte-Geneviève, le gîte de La Soléole fait le pari de l'auto-suffisance énergétique et mise davantage sur l'échange plus que sur la consommation. Dans ce lieu d'accueil touristique à part, trois chalets et une yourte peuvent accueillir une vingtaine de personnes. Des éoliennes et des panneaux photo-voltaïques produisent l'électricité. Du bois et du gaz assurent le chauffage. Et pour l'ambiance, des bénévoles, des chantiers participatifs, des ânes et la table d'hôtes concoctée avec des produits locaux. Le site est adapté pour accueillir des personnes handicapées."
           adresse="Route de Bezaumont, 54380 Landremont"
           latitude="6.12537145615"
           longitude="48.8552139955"
@@ -1683,7 +1738,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
         titre="Zéro Déchet Nancy"
         bref="Zéro déchet"
         type="Association"
-        desc="Association promouvant la démarche zéro déchet et zéro gaspillage à l’échelle individuelle et collective."
+        desc="Association promouvant la démarche zéro déchet et zéro gaspillage à l'échelle individuelle et collective."
         adresse="7 rue Jacques Délivre, Nancy"
         latitude="6.180221"
         longitude="48.70532"
