@@ -901,6 +901,21 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
            longitude="48"
            telephone=""
       />
+      <acteur
+        date="0718"
+        siteweb="http://www.lepredenancy.fr"
+        image="lepredenancy.jpg"
+        titre="Maison du Tourisme Toul"
+        bref=""
+        type="Office Tourisme"
+        desc="Toul, Sion, Boucle de la Moselle"
+        adresse="Place Charles de Gaulle 54200 Toul"
+        latitude="5.893708"
+        longitude="48.675608"
+        telephone="03 83 64 90 60"
+        message=""
+        citation=""
+      />
 	  
 	  <acteur
             date="0718"
@@ -970,7 +985,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             bref="Naturopathie"
             desc="Patrice Raganelli, Praticien de santé Naturopathe sur la région de Nancy, propose de vous  accompagner sur le chemin du bien-être et de la santé. Rééquilibrage alimentaire (plus saine et riche en nutriments), diabète, accompagnement cancers, allergies, diarrhée, constipation, mal de ventre, migraine, etc ...  Je vous propose mon savoir-faire en naturopathie afin de soulager vos troubles physiques, redynamiser votre corps afin de permettre à chacun de permettre l'auto-guérison et augmenter votre énergie vitale."
             adresse="65 rue carnot 54110 Dombasle sur Meurthe"
-            latitude="6.349915"
+            latitude="6.349945"
             longitude="48.622827"
             telephone="06.58.83.86.41"
             message=""
@@ -1689,7 +1704,6 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           image="GreenPeaceNancy.jpg"
           titre="Green Peace Nancy"
           type="Association"
-          bref="Association"
           desc="Groupe Local"
           adresse=""
       />
