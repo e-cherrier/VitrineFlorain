@@ -672,7 +672,7 @@ function PrintAllCategories( $x ) {
         $marche = $marches[$mar];
 
         $myMar = new CategorieMarchePoche( $this, $marche );
-    //    $myMar->display();
+        $myMar->display();
     }
 }
 
