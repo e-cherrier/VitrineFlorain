@@ -88,10 +88,10 @@ function separator( $col, $deb_i ) {
 class ActeurPoche extends Acteur {
 
 function EnteteHeight() {
-    $h = $this->getAttributeHeight( "titre", 10, 'B' );
-    $h = $h + $this->getAttributeHeight( "bref",8 );
-    $h = $h + $this->getAttributeHeight( "adresse",8 );
-    $h = $h + $this->getAttributeHeight( "telephone",8 );
+    $h = $this->getAttributeHeight( "titre", 9, 'B' );
+    $h = $h + $this->getAttributeHeight( "bref",7 );
+    $h = $h + $this->getAttributeHeight( "adresse",7 );
+    $h = $h + $this->getAttributeHeight( "telephone",6 );
     $h = $h + $this->getAttributeHeight( "siteweb", 6 );
     return $h;
 }
@@ -121,26 +121,26 @@ function Entete() {
     $this->a->SetLeftMargin($left_entete);
 
     // Le nom
-    $this->a->PrintName( $titre,$this->a->GetColumnWidth(), 10 );
+    $this->a->PrintName( $titre,$this->a->GetColumnWidth(), 9 );
 
     if( $this->acteur_->hasAttribute( "bref" ) ) {
         $bref = utf8_decode( $this->acteur_->getAttribute( "bref" ) );
 	if( $bref != "" ) {
-            $this->a->PrintText( $bref, $this->a->GetColumnWidth(), 8 );
+            $this->a->PrintText( $bref, $this->a->GetColumnWidth(), 7 );
 	}
     }
 
     if( $this->acteur_->hasAttribute( "adresse" ) ) {
         $adresse = utf8_decode( $this->acteur_->getAttribute( "adresse" ) );
 	if( $adresse != "" ) {
-	    $this->a->PrintText( $adresse, $this->a->GetColumnWidth(), 8 );
+	    $this->a->PrintText( $adresse, $this->a->GetColumnWidth(), 7 );
 	}
     }
 
     if( $this->acteur_->hasAttribute( "telephone" ) ) {
         $telephone = utf8_decode( $this->acteur_->getAttribute( "telephone" ) );
 	if( $telephone != "" ) {
-		$this->a->PrintText( $telephone, $this->a->GetColumnWidth(), 8 );
+		$this->a->PrintText( $telephone, $this->a->GetColumnWidth(), 6 );
 	}
     }
     if( $this->acteur_->hasAttribute( "siteweb" ) ) {

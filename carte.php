@@ -101,34 +101,35 @@ $header->display_acteurs_nav();
         $categories = $x->getElementsByTagName( "categorie" );
         $nb_cat = $categories->length;
 
-        for($c=1; $c<=$nb_cat; $c++) {
+        $shift = 2;
+        for($c=$shift; $c<($nb_cat+$shift); $c++) {
           echo "<p>\n";
           echo "  <fieldset id='layer". $c . "'>\n";
           echo "    <label>&nbsp;</label>\n";
           echo "    <input id='visible". $c . "' class='visible' type='checkbox'/>\n";
-          echo "    <label class='css-label c".$c."' for='visible". $c . "'>" . $categories[$c-1]->getAttribute( "type" ) . " </label>\n";
+          echo "    <label class='css-label c".($c-$shift+1)."' for='visible". $c . "'>" . $categories[$c-$shift]->getAttribute( "type" ) . " </label>\n";
           echo "  </fieldset>\n";
           echo "</p>\n";
         }
           echo "<p>\n";
-          echo "  <fieldset id='layer". ($nb_cat+1) . "'>\n";
+          echo "  <fieldset id='layer". ($nb_cat+$shift) . "'>\n";
           echo "    <label>&nbsp;</label>\n";
-          echo "    <input id='visible". ($nb_cat+1) . "' class='visible' type='checkbox'/>\n";
-          echo "    <label class='css-label c".($nb_cat+1)."' for='visible". ($nb_cat+1) . "'> Les marchés </label>\n";
+          echo "    <input id='visible". ($nb_cat+$shift) . "' class='visible' type='checkbox'/>\n";
+          echo "    <label class='css-label c".($nb_cat+1)."' for='visible". ($nb_cat+$shift) . "'> Les marchés </label>\n";
           echo "  </fieldset>\n";
           echo "</p>\n";
+          echo "<p>\n";
+          echo "  <fieldset id='layer".($nb_cat+$shift+1)."'>\n";
+          echo "    <label>&nbsp;</label>\n";
+          echo "    <input id='visible".($nb_cat+$shift+1)."' class='visible' type='checkbox' value='false'/>\n";
+          echo "    <label class='css-label c".($nb_cat+2)."' for='visible".($nb_cat+$shift+1)."'>Nombres</label>\n";
+          echo "  </fieldset>\n";
+          echo "  <fieldset>\n";
+          echo "    <label style='margin-left: 20px; vertical-align: top;'>&nbsp;Distance:</label>\n";
+          echo "    <input id='distance' type='range' min='10' max='500' step='1' value='40' />\n";
+          echo " </fieldset>\n";
+          echo "</p>\n";
         ?>
-          <p>
-            <fieldset id='layer10'>
-              <label>&nbsp;</label>
-              <input id='visible10' class='visible' type='checkbox' value="false"/>
-              <label class='css-label c10' for='visible10'>Nombres</label>
-            </fieldset>
-            <fieldset>
-              <label style='margin-left: 20px; vertical-align: top;'>&nbsp;Distance:</label>
-              <input id="distance" type="range" min="10" max="500" step="1" value="40" />
-            </fieldset>
-          </p>
       </div>
     </div>
 
@@ -147,14 +148,9 @@ for($c=0; $c<$nb_cat+1; $c++) {
   echo "feature_array[" . $c . "] = new Array;\n";
 }
 
+
 function add_acteur( $f, $acteur ) {
   if( $acteur->hasAttribute( "attente" ) ) {
-      return;
-  }
-  if( ! $acteur->hasAttribute( "longitude" ) ) {
-      return;
-  }
-  if( ! $acteur->hasAttribute( "latitude" ) ) {
       return;
   }
   $titre = $acteur->getAttribute( "titre" );
@@ -207,13 +203,37 @@ afeature.setStyle(
 }
 
       // build features per categories
+      
+      $reflon = 48.91;
+      $reflat = 6.75;
+      $curlon = $reflon;
+      $curlat = $reflat;
+      $nblon = 1;
+      $nblat = 1;
+      $ref = 0;
 
       for($c=0; $c<$nb_cat; $c++) {
 
         $acteurs = $categories[$c]->getElementsByTagName( "acteur" );
         $nb = $acteurs->length;
         for( $pos=0; $pos<$nb; $pos++ ) {
-            add_acteur( $c, $acteurs[$pos] );
+            $acteur = $acteurs[$pos];
+            if( ! $acteur->hasAttribute( "longitude" ) || ! $acteur->hasAttribute( "latitude" ) ) {
+                $lon = $curlon;
+                $lat = $curlat;
+                $acteur->setAttribute("longitude", $lon);
+                $acteur->setAttribute("latitude", $lat);
+                $ref = ($ref + 1) % 4;
+                if( $ref == 0 ) {
+                  $curlon = $curlon + .005;
+                  $curlat = $reflat;
+                  $nblon = $nblon + 1;
+                } else {
+                  $curlat = $curlat + .005;
+                  $nblat = min( [4, $nblat+1] );
+                }
+            }
+            add_acteur( $c, $acteur );
         }
       }
 
@@ -235,12 +255,55 @@ afeature.setStyle(
         })
       });
 */
+      l = 0;
       layers = new Array;
-      layers[0]=new ol.layer.Tile({ preload: 4, source: new ol.source.OSM() });
+      layers[l++]=new ol.layer.Tile({ preload: 4, source: new ol.source.OSM() });
 
-        var styleCache = {};
+      var textStyle = new ol.style.Text({
+          textAlign: 'left',
+          font: '10px helvetica,sans-serif',
+          text: "Acteurs non geolocalises",
+          stroke: new ol.style.Stroke({color: '#fff', width: 3}),
+          offsetX: 10,
+          offsetY: 20
+      });
+      var square_style = new ol.style.Style({
+          stroke: new ol.style.Stroke({
+            color: 'blue',
+            width: 1
+          }),
+          fill: new ol.style.Fill({
+            color: 'rgba(0, 0, 255, 0.1)'
+          }),
+          text: textStyle
+    });
+
+      var vectorSource = new ol.source.Vector({});
+      layers[l++] = new ol.layer.Vector({
+          source: vectorSource,
+          style: square_style
+      });
+
+      var s = 0.005;
+      var x = <?php echo $reflat?> - s/2;
+      var y = <?php echo $reflon?> - s/2;
+      var thing = new ol.geom.Polygon( [[
+          ol.proj.transform([x,y], 'EPSG:4326', 'EPSG:3857'),
+          ol.proj.transform([x+s*<?php echo $nblat?>,y], 'EPSG:4326', 'EPSG:3857'),
+          ol.proj.transform([x+s*<?php echo $nblat?>,y+s*<?php echo $nblon?>], 'EPSG:4326', 'EPSG:3857'),
+          ol.proj.transform([x,y+s*<?php echo $nblon?>], 'EPSG:4326', 'EPSG:3857')
+      ]]);
+      var featuresquare = new ol.Feature({
+          name: "Square",
+          geometry: thing
+      });
+      vectorSource.addFeature( featuresquare );
+
+
+
+      var styleCache = {};
       for( f=0; f<feature_array.length;f++) {
-           layers[f+1] = new ol.layer.Vector({ source: new ol.source.Vector({ features: feature_array[f] }) });
+           layers[l++] = new ol.layer.Vector({ source: new ol.source.Vector({ features: feature_array[f] }) });
       }
 
 
@@ -285,7 +348,7 @@ afeature.setStyle(
             return style;
           }
         });
-        layers[feature_array.length+1] = clusters;
+        layers[l++] = clusters;
 
       var logoElement = document.createElement('a');
       logoElement.href = 'http://www.florain.fr/';
@@ -310,7 +373,7 @@ afeature.setStyle(
         }),
         logo: logoElement
       });
-
+      
       distance.addEventListener('input', function() {
         clusterSource.setDistance(parseInt(distance.value, 10));
       });

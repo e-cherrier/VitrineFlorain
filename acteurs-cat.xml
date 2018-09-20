@@ -530,7 +530,11 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           longitude="48.677501"
     />
 	 <acteur
+<<<<<<< HEAD
           siteweb="https://lacantoche.fr/"
+=======
+          siteweb="lacantoche.fr"
+>>>>>>> upstream/master
           image="LaCantoche.jpg"
           titre="La Cantoche"
           type="Alimentation"
@@ -901,6 +905,21 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
            longitude="48"
            telephone=""
       />
+      <acteur
+        date="0718"
+        siteweb="http://www.lepredenancy.fr"
+        image="lepredenancy.jpg"
+        titre="Maison du Tourisme Toul"
+        bref=""
+        type="Office Tourisme"
+        desc="Toul, Sion, Boucle de la Moselle"
+        adresse="Place Charles de Gaulle 54200 Toul"
+        latitude="5.893708"
+        longitude="48.675608"
+        telephone="03 83 64 90 60"
+        message=""
+        citation=""
+      />
 	  
 	  <acteur
             date="0718"
@@ -933,7 +952,11 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
 		  
 		   <acteur
             date="0818"
+<<<<<<< HEAD
             siteweb="http://www.grainedecarrosse.fr/"
+=======
+            siteweb="www.grainedecarrosse.fr"
+>>>>>>> upstream/master
             image="graineDeCarrosse.jpg"
             titre="Graine de carrosse"
             bref="Atelier d'impressions typographiques création d'objets poétiques"
@@ -948,12 +971,21 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             date="0818"
             siteweb="facebook dominique schweitzer Bouquiniste"
             image="DominiqueSchweitzer.jpg"
+<<<<<<< HEAD
             titre="Bouquiniste Dominique Schweitzer"
             bref="Au marché central de Nancy"
             desc="Bouquiniste"
             adresse="Marché central 52 Rue Saint-Dizier Nancy"
             latitude="6.182779000000000"
             longitude="48.689360000000000"
+=======
+            titre="Dominique Schweitzer"
+            bref="Bouquiniste"
+            desc="Bouquiniste"
+            adresse="Marché central 52 Rue Saint-Dizier Nancy"
+            latitude="6.182779"
+            longitude="48.68936"
+>>>>>>> upstream/master
             telephone=""
             message=""
           />
@@ -970,7 +1002,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             bref="Naturopathie"
             desc="Patrice Raganelli, Praticien de santé Naturopathe sur la région de Nancy, propose de vous  accompagner sur le chemin du bien-être et de la santé. Rééquilibrage alimentaire (plus saine et riche en nutriments), diabète, accompagnement cancers, allergies, diarrhée, constipation, mal de ventre, migraine, etc ...  Je vous propose mon savoir-faire en naturopathie afin de soulager vos troubles physiques, redynamiser votre corps afin de permettre à chacun de permettre l'auto-guérison et augmenter votre énergie vitale."
             adresse="65 rue carnot 54110 Dombasle sur Meurthe"
-            latitude="6.349915"
+            latitude="6.349945"
             longitude="48.622827"
             telephone="06.58.83.86.41"
             message=""
@@ -1183,7 +1215,11 @@ Villers-lès-Nancy"
 />
 		
 	<acteur
+<<<<<<< HEAD
           siteweb="https://www.studio-r-coiffure-nancy.fr/"
+=======
+          siteweb="www.studio-r-coiffure-nancy.fr"
+>>>>>>> upstream/master
           image="studioR.jpg"
           titre="Studio R"
           type="Coiffeur"
@@ -1689,7 +1725,6 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           image="GreenPeaceNancy.jpg"
           titre="Green Peace Nancy"
           type="Association"
-          bref="Association"
           desc="Groupe Local"
           adresse=""
       />
@@ -1717,7 +1752,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   adresse="2 rue Mathieu de Dombasle 54220 Malzeville"
   latitude="6.18107020855"
   longitude="48.7249652902"
-  telephone="0652198399"
+  telephone="06.52.19.83.99"
   message=""
 />
 <acteur
@@ -1733,7 +1768,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
 />
 <acteur
         date="1809"
-        siteweb="www.facebook.com/zerodechetnancy"
+        siteweb="facebook zerodechetnancy"
         image="zerodechet.jpg"
         titre="Zéro Déchet Nancy"
         bref="Zéro déchet"
@@ -1775,7 +1810,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
 />
         <acteur
 		  date="0818"
-          siteweb="www.colecosol.fr/accueil"
+          siteweb="www.colecosol.fr"
           image="colecosol.jpg"
           titre="Colecosol"
           bref="Association"
