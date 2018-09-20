@@ -531,7 +531,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
     />
 	 <acteur
           siteweb="lacantoche.fr"
-          image="LaCantoche.jpg"
+          image="laCantoche.jpg"
           titre="La Cantoche"
           type="Alimentation"
           bref="Traiteur"
@@ -605,7 +605,7 @@ et la sobriété énergétique."
           titre="Au P'tit BIO"
           type="Alimentation"
           bref="Restaurant"
-          desc="Restaurant"
+          desc="Restaurant bio esprit bistro et épicerie fine bio. Pour déguster une bonne soupe , des belles salades ou des bonnes tartes faites maison. Accueil du mardi au samedi de 7h a 19 h."
           adresse="Marché Couvert Place Henri Mangin Nancy"
           defi="Abonnement Enercoop"
           latitude="6.18302285671"
