@@ -530,11 +530,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           longitude="48.677501"
     />
 	 <acteur
-<<<<<<< HEAD
-          siteweb="https://lacantoche.fr/"
-=======
           siteweb="lacantoche.fr"
->>>>>>> upstream/master
           image="LaCantoche.jpg"
           titre="La Cantoche"
           type="Alimentation"
@@ -952,11 +948,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
 		  
 		   <acteur
             date="0818"
-<<<<<<< HEAD
-            siteweb="http://www.grainedecarrosse.fr/"
-=======
             siteweb="www.grainedecarrosse.fr"
->>>>>>> upstream/master
             image="graineDeCarrosse.jpg"
             titre="Graine de carrosse"
             bref="Atelier d'impressions typographiques création d'objets poétiques"
@@ -971,21 +963,12 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             date="0818"
             siteweb="facebook dominique schweitzer Bouquiniste"
             image="DominiqueSchweitzer.jpg"
-<<<<<<< HEAD
-            titre="Bouquiniste Dominique Schweitzer"
-            bref="Au marché central de Nancy"
-            desc="Bouquiniste"
-            adresse="Marché central 52 Rue Saint-Dizier Nancy"
-            latitude="6.182779000000000"
-            longitude="48.689360000000000"
-=======
             titre="Dominique Schweitzer"
             bref="Bouquiniste"
             desc="Bouquiniste"
             adresse="Marché central 52 Rue Saint-Dizier Nancy"
             latitude="6.182779"
             longitude="48.68936"
->>>>>>> upstream/master
             telephone=""
             message=""
           />
@@ -1215,11 +1198,7 @@ Villers-lès-Nancy"
 />
 		
 	<acteur
-<<<<<<< HEAD
-          siteweb="https://www.studio-r-coiffure-nancy.fr/"
-=======
           siteweb="www.studio-r-coiffure-nancy.fr"
->>>>>>> upstream/master
           image="studioR.jpg"
           titre="Studio R"
           type="Coiffeur"
