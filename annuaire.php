@@ -202,6 +202,13 @@ function PrintCouverture() {
     $this->SetTextColor(112,112,111);
     $this->Rect( 0, 0, $this->GetPageWidth(), $this->GetPageHeight(), "F" );
 
+    $this->SetY(5);
+    $this->SetFont('Futura','',10);
+    $w = $this->GetStringWidth("Impression CD 54 - Octobre 2018")+6;
+    $this->SetLeftMargin($this->GetPageWidth()-$w-30);
+    $this->Cell( $w, 10, "Impression CD 54 - Octobre 2018", 0, 1 );
+    $this->Image('images/Logo_Imprim_Vert-3.png',  $this->GetPageWidth()-30, 6, 30);
+
     $this->Image('images/FlorainFA5-vert.jpg',
         ($this->GetPageWidth()-60)/2, 20, 60
     );
@@ -209,6 +216,7 @@ function PrintCouverture() {
     $this->SetFont('Steelfish','',98);
 
     $this->SetY(120);
+    $this->SetX(0);
     $w = $this->GetStringWidth("Le Florain")+6;
     $this->SetLeftMargin(($this->GetPageWidth()-$w)/2);
     $this->Cell( $w, 30, "Le Florain", 0, 1 );
@@ -216,6 +224,14 @@ function PrintCouverture() {
     $this->Cell( $w, 20, "Monnaie Locale", 0, 1 );
     $this->SetFont('Futura','',19);
     $this->Cell( $w, 5, "de l'Aire de Vie Nancéienne"  );
+
+    // soutien CD54
+    $this->SetY($this->GetPageHeight()-105); 
+    $this->SetFont('Futura','',16);
+    $w = $this->GetStringWidth("Avec le soutien de ")+6;
+    $this->SetX($this->GetPageWidth()-$w);
+    $this->Cell( $w, 10, "Avec le soutien de ", 0, 1 );
+    $this->Image('images/fete/logoCR54.png', $this->GetPageWidth() -40, $this->GetPageHeight()-95, 20);
 
     $this->SetFont('Futura','',78);
     $this->SetY($this->GetPageHeight()/1.3);
@@ -544,14 +560,23 @@ function PrintCouverture() {
     $this->SetTextColor(112,112,111);
     $this->Rect( $margin-$this->colMargin, 0, $this->GetColumnWidth()*2+$this->colMargin*3, $this->GetPageHeight(), "F" );
 
+    $this->SetY(5);
+    $this->SetFont('Futura','',5);
+    $w = $this->GetStringWidth("Impression CD 54 - Octobre 2018")+6;
+    $this->SetLeftMargin($margin+$cellwidth-$w-10);
+    $this->Cell( $w, 7, "Impression CD 54 - Octobre 2018", 0, 1 );
+    $this->Image('images/Logo_Imprim_Vert-3.png',  $margin+$cellwidth-15, 6, 15);
+
     $this->Image('images/FlorainFA5-vert.jpg',  $margin + ($cellwidth-40)/2, 20, 40);
 
     $this->SetFont('Steelfish','',48);
 
     $this->SetY(80);
+    $this->SetX($margin);
     $w = $this->GetStringWidth("Le Florain")+6;
     $this->SetLeftMargin($margin+($cellwidth-$w)/2);
     $this->Cell( $w, 15, "Le Florain", 0, 1 );
+
 
     $this->SetFont('Futura','',17);
     $w = $this->GetStringWidth("Monnaie Locale")+6;
@@ -575,6 +600,14 @@ function PrintCouverture() {
     $this->SetFont('Futura','B',10);
     $this->SetXY( $margin+5,$this->GetPageHeight()-20);
     $this->MultiCell($cellwidth-10, $this->cellHeight, $sstitle, 0, 'C');
+
+    // soutien CD54
+    $this->SetY($this->GetPageHeight()-100); 
+    $this->SetFont('Futura','',8);
+    $w = $this->GetStringWidth("Avec le soutien de ")+6;
+    $this->SetX($margin+$cellwidth-$w);
+    $this->Cell( $w, 7, "Avec le soutien de ", 0, 1 );
+    $this->Image('images/fete/logoCR54.png',  $margin + $cellwidth-20, $this->GetPageHeight()-95, 10);
 
     $this->SetY($this->GetPageHeight()-40);
     // site web
