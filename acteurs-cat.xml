@@ -1332,7 +1332,7 @@ Villers-lès-Nancy"
           longitude="48.700735"
       />
 
-       <acteur
+       <acteur_en_attente
           siteweb="www.petitetre.com"
           image="petitetre.jpg"
           titre="Petit Etre"
