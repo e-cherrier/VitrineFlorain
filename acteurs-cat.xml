@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf8"?>
 <?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories titre ="Liste des acteurs agréés au 29 août 2018" sstitre="Mise à jour du 29 aout 2018 www.florain.fr pour la dernière version" comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert.">
+<categories
+    titre ="Liste des acteurs agréés au 26 septembre 2018"
+    sstitre="Mise à jour du 26 septembre 2018 www.florain.fr pour la dernière version"
+    comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert."
+    localisation="de l'Aire de vie Nancéienne">
 
     <categorie type="Se nourrir">
         <scat type="Épiceries">
@@ -459,6 +463,16 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           latitude="5.852342"
           longitude="48.574884"
     />
+    <acteur
+          siteweb="facebook Paul.Mougel88"
+          image="PaulMougel.jpg"
+          titre="Miel de Lorraine"
+          type="Alimentation"
+          desc="Apiculteur local , pollinisation des vergers et jardins. Production de miel de printemps et d'été selon les années. Ruchers  dans les coteaux de Houdemont et dans le Saintois."
+          adresse="10 rue du Vallon 54180 Houdemont"
+          latitude="6.174683"
+          longitude="48.650281"
+    />
         </scat>
         <scat type="Paysans Boulangers et Boulangers">
             <acteur
@@ -531,7 +545,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
     />
 	 <acteur
           siteweb="lacantoche.fr"
-          image="LaCantoche.jpg"
+          image="laCantoche.jpg"
           titre="La Cantoche"
           type="Alimentation"
           bref="Traiteur"
@@ -541,6 +555,16 @@ et la sobriété énergétique."
           defi="Enercoop"
           latitude="6.175713"
           longitude="48.679843"
+    />
+    <acteur
+          siteweb="facebook restomobilesamregalelespapilles"
+          image="samregalelespapilles.jpg"
+          titre="Sam Régale Les Papilles"
+          type="Alimentation"
+          bref="Food Truck"
+          desc="Restaurant mobile de cuisine traditionnelle, saine et mijotée avec amour...Valorisant les circuits-courts, les petits producteurs et la saisonnalité"
+          adresse=""
+          telephone="06 20 08 62 66"
     />
 </scat>
   </categorie>
@@ -605,7 +629,7 @@ et la sobriété énergétique."
           titre="Au P'tit BIO"
           type="Alimentation"
           bref="Restaurant"
-          desc="Restaurant"
+          desc="Restaurant bio esprit bistro et épicerie fine bio. Pour déguster une bonne soupe , des belles salades ou des bonnes tartes faites maison. Accueil du mardi au samedi de 7h a 19 h."
           adresse="Marché Couvert Place Henri Mangin Nancy"
           defi="Abonnement Enercoop"
           latitude="6.18302285671"
@@ -922,7 +946,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             siteweb="labridutemps.fr"
             image="abri_du_temps.jpg"
             titre="L'abri du temps"
-            bref="Livres d'occasion et livres neufs à prix réduits"
+            bref="Librairie d'occasion"
             desc="Repérable à sa devanture bleue à l'ancienne, la librairie abrite un joli panel de livres d'occasion et de livres neufs à prix réduits (soldes d'éditeurs). La littérature française et étrangère y côtoie les ouvrages de cinéma, de théâtre ou encore de sciences humaines et sociales. L'Abri du Temps fait également office de galerie d'art pour les quelques artistes locaux qui y exposent régulièrement leurs estampes."
             adresse="21 Grande Rue, Nancy"
             latitude="6.180943"
@@ -1068,17 +1092,17 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
     />
         <acteur
           anniv="oui"
-          siteweb="www.bienetreparleshiatsuetledoin.com"
+          siteweb="bienetreparleshiatsuetledoin.com"
           image="ludivinedumontet.jpg"
           titre="Ludivine Dumontet"
           type="Sante"
           bref="Shiatsu - Do In"
           desc="Écouter et comprendre les messages de son corps pour être bien avec soi-même et les autres au quotidien. Par des acupressions sur l'ensemble du corps, le shiatsu agit en prévention pour le maintien d'une bonne santé. A pratiquer sans modération !"
           defi="Compte en banque ouvert dans une banque éthique"
-          latitude="6.209393"
-          longitude="48.702895"
+          latitude="6.186402"
+          longitude="48.693312"
           telephone="06 44 03 35 17"
-          adresse="12 rue du clos pré, 54130 Saint Max"
+          adresse="2 bis rue Girardet, Place d'Alliance, Nancy"
           citation="'Tout seul on va plus vite, ensemble on va plus loin'. Tous les acteurs de la monnaie locale, particuliers comme professionnels, participent à cette grande aventure qui est le bien vivre et grandir ensemble dans une économie solidaire, respectueuse de l'être humain et de son environnement. Je suis très heureuse d'en faire partie."
         />
         <acteur_en_attente
@@ -1302,12 +1326,24 @@ Villers-lès-Nancy"
           image="lespetitescigognes.jpg"
           titre="Les Petites Cigognes"
           type="Puériculture"
-          bref="Puériculture, jeux durables et vêtements BIO"
+          bref="Puériculture BIO"
           desc="Puériculture, jeux durables et vêtements BIO"
           adresse="45 rue de Metz Nancy"
           defi="Trouver des fournisseurs plus locaux"
           latitude="6.172005"
           longitude="48.700735"
+      />
+
+       <acteur
+          siteweb="www.petitetre.com"
+          image="petitetre.jpg"
+          titre="Petit Etre"
+          type="Puériculture"
+          bref="Puériculture BIO"
+          desc="Articles pour bébés et enfants écologiques et locaux."
+          adresse="115 rue saint Dizier"
+          latitude="6.184457"
+          longitude="48.688366"
       />
 
          <acteur
@@ -1353,7 +1389,7 @@ Villers-lès-Nancy"
           bref="l'atelier du vélo."
           desc="Lassociation Dynamo, créée en juillet 2007, s'articule autour de questions environnementales, sociales et économiques. Environnementales dans le domaine du recyclage et de la réutilisation de vélos inutilisés; sociales à travers son projet d'apprentissage et d'échange de savoirs; économiques parce qu'elle permet à tous, quel que soit son budget de se déplacer à vélo et dans de bonnes conditions de sécurité."
           adresse="35 Gd rue Nancy"
-          defi="Développer une filière « locale » pour les pièces détachées"
+          defi="Développer une filière « locale » pour les pièces détachées"
           latitude="6.180453300486"
           longitude="48.6957619758"
       />
@@ -1401,7 +1437,6 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           defi=""
           latitude="6.179654"
           longitude="48.689233"
-          comptoir="oui"
           telephone="03 83 29 44 77"
     >
     <h l="du mardi au vendredi" t="11h00 - 19h00"/>
@@ -1552,7 +1587,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           bref="Textile et objets publicitaires éthiques"
           desc="Textile et objets publicitaires éthiques"
           adresse="58 rue de la commanderie Nancy"
-          defi="Gamme « artistes »"
+          defi="Gamme « artistes »"
           latitude="6.168219"
           longitude="48.685948"
     />
@@ -1746,6 +1781,17 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   message=""
 />
 <acteur
+  date="2609"
+  siteweb="www.lenversdumonde.com"
+  image="associationenversdumonde.jpg"
+  titre="L'Envers du Monde"
+  bref="Commerce équitable"
+  desc="Recycler et créer des objets de décoration originaux, former et accompagner des femmes et leurs familles, créer des emplois pour réduire la pauvreté à Madagascar et au Burkina Faso."
+  adresse="6 Grande Rue 54450 Reillon"
+  latitude="6.743543"
+  longitude=" 48.597969"
+/>
+<acteur
         date="1809"
         siteweb="facebook zerodechetnancy"
         image="zerodechet.jpg"
@@ -1781,9 +1827,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   image="racinescarrees.jpg"
   titre="Racines Carrées"
   bref="Agroécologie urbaine"
-  desc="association qui a pour objet
-     de sensibiliser et de développer l'agroécologie urbaine sur
-     le territoire du Grand Nancy"
+  desc="Association qui a pour objet de sensibiliser et de développer l'agroécologie urbaine sur le territoire du Grand Nancy"
   adresse=""
   telephone=""
 />

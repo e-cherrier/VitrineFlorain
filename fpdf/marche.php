@@ -164,10 +164,6 @@ function __construct( $a, $cat, $scat ) {
 		}
 }
 
-function title_height() {
-    return 10; //  -> cell height = 6 + ln(4)
-}
-
 function get_elements() {
     return $this->exposants;
 }
@@ -225,6 +221,9 @@ function displayType( $suite=false )
 
 class MarchePoche extends Marche {
 
+    public $titleCellHeight = 4;
+    public $titleCellBotMargin = 1;
+    
 function NewActeur( $annuaire, $acteur ) {
     $expo = new ExposantPoche( $annuaire, $acteur );
     $expo->setIsComptoir( $this->scat_->hasAttribute( "message_comptoir" ));
@@ -245,10 +244,10 @@ function displayType( $suite=false )
         $label = $label . "  (suite)";
     }
     $this->a->SetFont('Futura','I',10);
-    $this->a->SetFont('Steelfish','',14);
+    $this->a->SetFont('Steelfish','',12);
     $this->a->SetTextColor(0,0,0);
-    $this->a->Cell($this->a->GetColumnWidth()*2+$this->a->colMargin,5,"$label",'B',1,'L',false);
-    $this->a->Ln(2);
+    $this->a->Cell($this->a->GetColumnWidth()*2+$this->a->colMargin,$this->titleCellHeight,"$label",'B',1,'L',false);
+    $this->a->Ln($this->titleCellBotMargin);
 
     // Save ordinate
     $this->a->top_col = $this->a->GetY();

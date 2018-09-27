@@ -195,8 +195,21 @@ public $colMargin = 10;
 public $cellHeight = 5;
 public $marginLeft = 1; // 1 if there is a margin at left (and right) 0 if no margin.
 
+function PrintCD54Mention() {
+    // TODO make it right and call it on the last page
+    $this->SetY(5);
+    $this->SetFont('Futura','',10);
+    $w = $this->GetStringWidth("Impression CD 54 - Octobre 2018")+6;
+    $this->SetLeftMargin($this->GetPageWidth()-$w-30);
+    $this->Cell( $w, 10, "Impression CD 54 - Octobre 2018", 0, 1 );
+    $this->Image('images/fete/logoCR54.png', $this->GetPageWidth() -40, $this->GetPageHeight()-95, 20);
+
+    $this->Image('images/Logo_Imprim_Vert-3.png',  $this->GetPageWidth()-30, 6, 30);
+}
+
 function PrintCouverture() {
     global $title;
+    global $localisation;
 
     $this->SetFillColor(204,220,62);
     $this->SetTextColor(112,112,111);
@@ -215,7 +228,7 @@ function PrintCouverture() {
     $this->SetFont('Futura','',34);
     $this->Cell( $w, 20, "Monnaie Locale", 0, 1 );
     $this->SetFont('Futura','',19);
-    $this->Cell( $w, 5, "de l'Aire de Vie Nancéienne"  );
+    $this->Cell( $w, 5, $localisation );
 
     $this->SetFont('Futura','',78);
     $this->SetY($this->GetPageHeight()/1.3);
@@ -534,8 +547,22 @@ function AddSubPage()
     );
 }
 
+function PrintCD54Mention( $margin ) {
+    
+    $this->SetFont('Futura','',5);
+    $w = $this->GetStringWidth("Impression CD 54 - Octobre 2018")+6;
+    $this->SetLeftMargin( $margin );
+    $this->Ln();
+    $this->Ln();
+    $cur_y = $this->GetY();
+    $this->Cell( $w, $this->cellHeight, "Impression CD 54 - Octobre 2018", 0, 1 );
+    $this->Image('images/fete/logoCR54.png',  $margin+$w+20, $cur_y-4, 7);
+    $this->Image('images/Logo_Imprim_Vert-3.png',  $margin+$w, $cur_y-1, 15);
+}
+
 function PrintCouverture() {
     global $sstitle;
+    global $localisation;
 
     $margin = $this->GetX();
     $cellwidth = $this->GetColumnWidth()*2 + $this->colMargin;
@@ -544,14 +571,17 @@ function PrintCouverture() {
     $this->SetTextColor(112,112,111);
     $this->Rect( $margin-$this->colMargin, 0, $this->GetColumnWidth()*2+$this->colMargin*3, $this->GetPageHeight(), "F" );
 
+
     $this->Image('images/FlorainFA5-vert.jpg',  $margin + ($cellwidth-40)/2, 20, 40);
 
     $this->SetFont('Steelfish','',48);
 
     $this->SetY(80);
+    $this->SetX($margin);
     $w = $this->GetStringWidth("Le Florain")+6;
     $this->SetLeftMargin($margin+($cellwidth-$w)/2);
     $this->Cell( $w, 15, "Le Florain", 0, 1 );
+
 
     $this->SetFont('Futura','',17);
     $w = $this->GetStringWidth("Monnaie Locale")+6;
@@ -559,9 +589,9 @@ function PrintCouverture() {
     $this->Cell( $w, 7, "Monnaie Locale", 0, 1 );
 
     $this->SetFont('Futura','',9);
-    $w = $this->GetStringWidth("de l'Aire de Vie Nancéienne")+6;
+    $w = $this->GetStringWidth($localisation)+6;
     $this->SetLeftMargin($margin+($cellwidth-$w)/2);
-    $this->Cell( $w, 5, "de l'Aire de Vie Nancéienne"  );
+    $this->Cell( $w, 5, $localisation  );
 
     $this->SetFont('Futura','',40);
     $this->SetY($this->GetPageHeight()/1.5);
@@ -641,11 +671,15 @@ function PrintAnnuaire( $x ) {
     // for one line text $texte_width = $this->marginLeft + $this->colMargin*6 + $this->GetColumnWidth()*6;
     $texte_width = $this->GetColumnWidth()*2;
     $texte = utf8_decode( $x->getAttribute( "comptoirs" ) );
-    $h = $this->MultiCellHeight( $texte_width, 4, $texte, 0, 'C' );
+    $this->SetFont("futura","B",10);
+    $h = $this->MultiCellHeight( $texte_width, $this->cellHeight, $texte, 0, 'C' );
     $this->SetFillColor(234,250,180);
-    $this->Rect( $this->GetX()-1, $this->GetY()-3, $texte_width, $h+2, "F" );
+    $this->Rect( $this->GetX()-1, $this->GetY()-3, $texte_width, $h+4, "F" );
 
     $this->PrintName( $texte, $texte_width );
+
+    // Not used for now. $this->PrintCD54Mention( $this->GetX()+10 );
+    // if used: move the block above from 10 higher to make some place
 
     // at last print the couverture
     $this->AddSubPage();
@@ -720,6 +754,7 @@ $xmlDoc->load("acteurs-cat.xml");
 $x = $xmlDoc->documentElement;
 $title = utf8_decode( $x->getAttribute( "titre" ) );
 $sstitle = utf8_decode( $x->getAttribute( "sstitre" ) );
+$localisation = utf8_decode( $x->getAttribute( "localisation" ) );
 $a->SetTitle($title);
 $a->SetAuthor('Le Florain');
 

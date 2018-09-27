@@ -7,13 +7,16 @@ class Categorie {
 protected $a;
 protected $cat_;
 
+public $titleCellHeight = 6;
+public $titleCellBotMargin = 4;
+
 function __construct( $pdf, $cat ) {
     $this->a = $pdf;
     $this->cat_ = $cat;
 }
 
 function title_height() {
-    return 10; //  -> cell height = 6 + ln(4)
+    return $this->titleCellHeight + $this->titleCellBotMargin;
 }
 
 function needNewPage( $offset=0 ) {
@@ -90,8 +93,8 @@ function displayType( $suite=false )
     $this->a->SetFont('Futura','B',18);
     $this->a->SetFillColor(204,220,62);
     $this->a->SetTextColor(112,112,111);
-    $this->a->Cell($this->a->GetColumnWidth()*2+$this->a->colMargin,6,"$label",'B',1,'L',true);
-    $this->a->Ln(4);
+    $this->a->Cell($this->a->GetColumnWidth()*2+$this->a->colMargin,$this->titleCellHeight,"$label",'B',1,'L',true);
+    $this->a->Ln($this->titleCellBotMargin);
 
     // Save ordinate
     $this->a->top_col = $this->a->GetY();
@@ -129,6 +132,9 @@ function display() {
 
 class CategoriePoche extends Categorie {
 
+public $titleCellHeight = 4;
+public $titleCellBotMargin = 1;
+
 function NewSousCategorie( $a, $sscat ) {
     return new SousCategoriePoche( $a, $this, $sscat );
 }
@@ -153,8 +159,8 @@ function displayType( $suite=false )
     $this->a->SetFont('Steelfish','',14);
     $this->a->SetFillColor(204,220,62);
     $this->a->SetTextColor(112,112,111);
-    $this->a->Cell($this->a->GetColumnWidth()*2+$this->a->colMargin,4,"$label",'B',1,'L',true);
-    $this->a->Ln(2);
+    $this->a->Cell($this->a->GetColumnWidth()*2+$this->a->colMargin,$this->titleCellHeight,"$label",'B',1,'L',true);
+    $this->a->Ln($this->titleCellBotMargin);
 
     // Save ordinate
     $this->a->top_col = $this->a->GetY();

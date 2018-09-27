@@ -8,6 +8,8 @@ class SousCategorie {
 protected $a;
 protected $cat_;
 protected $scat_;
+public $titleCellHeight = 6;
+public $titleCellBotMargin = 4;
 
 function __construct( $pdf, $cat, $scat ) {
     $this->a = $pdf;
@@ -19,7 +21,7 @@ function title_height() {
     if( ! $this->scat_->hasAttribute( "type" ) ) {
         return 0;
     }
-    return 10; //  -> cell height = 6 + ln(4)
+    return $this->titleCellHeight + $this->titleCellBotMargin;
 }
 
 function get_elements() {
@@ -421,6 +423,9 @@ function displayType( $suite=false )
 
 class SousCategoriePoche extends SousCategorie {
 
+    public $titleCellHeight = 4;
+    public $titleCellBotMargin = 1;
+
 function NewActeur(  $annuaire, $acteur ) {
     return new ActeurPoche( $annuaire, $acteur );
 }
@@ -440,9 +445,9 @@ function displayType( $suite=false )
         $label = $label . "  (suite)";
     }
     $this->a->SetFont('Futura','I',10);
-    $this->a->SetFont('Steelfish','',14);
-    $this->a->Cell($this->a->GetColumnWidth()*2+$this->a->colMargin,5,"$label",'B',1,'C',false);
-    $this->a->Ln(2);
+    $this->a->SetFont('Steelfish','',12);
+    $this->a->Cell($this->a->GetColumnWidth()*2+$this->a->colMargin,$this->titleCellHeight,"$label",'B',1,'C',false);
+    $this->a->Ln($this->titleCellBotMargin);
 
     // Save ordinate
     $this->a->top_col = $this->a->GetY();
