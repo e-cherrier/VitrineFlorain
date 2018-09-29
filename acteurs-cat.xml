@@ -536,7 +536,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           image="LesFermiersDIci.jpg"
           titre="Les Fermiers d'Ici"
           type="Alimentation"
-          bref="Traiteur"
+          bref="Traiteur BIO"
           desc="Les Fermiers d'ici proposent un service traiteur avec des produits bio et locaux. Dégustez notre charcuterie sans conservateur produite par Sonia à Gondrexon. Cela vous aura mis en appétit pour déguster de savoureux légumes produits par Charly à Royaumeix. Appreciez un munster vosgien, accompagné du pain de Maryse et Vincent pétris avec la Farine du Moulin du petit Poucet. Enfin, nous vous laissons savourer ce tiramisu aux mirabelles cueillies par Eric dans les Vosges."
           adresse="87 av. Gal Leclerc Nancy"
           defi="Travail sur réduction des déchets"
@@ -549,8 +549,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           titre="La Cantoche"
           type="Alimentation"
           bref="Traiteur"
-          desc="Des repas sains et savoureux, préparés avec amour par des personnes passionnées. Une cantine de midi pour tous : bienvenue aux travailleurs, étudiants, habitants du quartier ou d'ailleurs ! Une cuisine responsable et respectueuse des êtres vivants et de la nature. Des ingrédients frais, de saison, bio, principalement d'origine locale, issus du commerce équitable et de l'agriculture paysanne. Une cuisine visant le zéro déchet
-et la sobriété énergétique."
+          desc="Des repas sains et savoureux, préparés avec amour par des personnes passionnées. Une cantine de midi pour tous : bienvenue aux travailleurs, étudiants, habitants du quartier ou d'ailleurs ! Une cuisine responsable et respectueuse des êtres vivants et de la nature. Des ingrédients frais, de saison, bio, principalement d'origine locale, issus du commerce équitable et de l'agriculture paysanne. Une cuisine visant le zéro déchet et la sobriété énergétique."
           adresse="180 rue Jeanne d'Arc Nancy"
           defi="Enercoop"
           latitude="6.175713"
@@ -561,9 +560,9 @@ et la sobriété énergétique."
           image="samregalelespapilles.jpg"
           titre="Sam Régale Les Papilles"
           type="Alimentation"
-          bref="Food Truck"
-          desc="Restaurant mobile de cuisine traditionnelle, saine et mijotée avec amour...Valorisant les circuits-courts, les petits producteurs et la saisonnalité"
-          adresse=""
+          bref="Cuisine locale et de saison"
+          desc="Restaurant - Camion mobile avec terrasse, sur place ou à emporter, développant le service traiteur pour des évènements personnels, professionnels, rassemblements... Possibilité de livraison à domicile sous certaines conditions. Devis personnalisé en fonction du budget Cuisine audacieuse et traditionnelle à base de produits frais, locaux et de saison."
+          adresse="9, rue de willermont 54540 Pexonne"
           telephone="06 20 08 62 66"
     />
 </scat>
@@ -891,6 +890,17 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
            longitude="48.660747"
            telephone="03 83 15 90 00"
       />
+         <acteur
+           siteweb="mjc-nomade.fr"
+           image="mjcnomade.jpg"
+           titre="MJC Centre social NOMADE"
+           type="MJC"
+           desc="MJC"
+           adresse="8 rue de Norvège - 54500 Vandoeuvre"
+           latitude="6.181145"
+           longitude="48.666985"
+           telephone="03 83 53 18 27"
+      />
              <acteur
                siteweb="www.mjc-etoile.com"
                image="mjcetoile.jpg"
@@ -911,19 +921,6 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
         desc="La Curionomie est l'art de s'émerveiller. Curionomie est une entreprise innovante qui propose des escapades mystères sous forme de pochette surprise. (Re)découvrez votre ville de manière authentique et ludique au gré des manifestations et des initiatives locales, des ateliers d'artistes et d'artisans"
         adresse=""
         telephone=""
-      />
-         <acteur_en_attente
-          attente="true"
-           siteweb=""
-           image="defaut.jpg"
-           titre="Centre socio-culturel Nomade"
-           bref=""
-           type=""
-           desc=""
-           adresse=""
-           latitude="6"
-           longitude="48"
-           telephone=""
       />
       <acteur
         date="0718"
@@ -1442,6 +1439,18 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
     <h l="du mardi au vendredi" t="11h00 - 19h00"/>
     <h l="le samedi" t="10h00 - 19h00"/>
     </acteur>
+    
+        <acteur
+          date="2609"
+          siteweb="www.lenversdumonde.com"
+          image="associationenversdumonde.jpg"
+          titre="L'Envers du Monde"
+          bref="Commerce équitable"
+          desc="Recycler et créer des objets de décoration originaux, former et accompagner des femmes et leurs familles, créer des emplois pour réduire la pauvreté à Madagascar et au Burkina Faso."
+          adresse="6 Grande Rue 54450 Reillon"
+          latitude="6.743543"
+          longitude=" 48.597969"
+        />
         <acteur
           siteweb="www.wellidjou.com"
           image="petiterecyclerie.jpg"
@@ -1779,17 +1788,6 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   longitude="48.692578"
   telephone=""
   message=""
-/>
-<acteur
-  date="2609"
-  siteweb="www.lenversdumonde.com"
-  image="associationenversdumonde.jpg"
-  titre="L'Envers du Monde"
-  bref="Commerce équitable"
-  desc="Recycler et créer des objets de décoration originaux, former et accompagner des femmes et leurs familles, créer des emplois pour réduire la pauvreté à Madagascar et au Burkina Faso."
-  adresse="6 Grande Rue 54450 Reillon"
-  latitude="6.743543"
-  longitude=" 48.597969"
 />
 <acteur
         date="1809"
