@@ -1408,7 +1408,7 @@ Villers-lès-Nancy"
     <categorie type ="Se meubler, décorer, aménager">
         <scat>
         <acteur
-		  date="0818"
+		      date="0818"
           siteweb="facebook recyclune"
           comptoir="oui"
           image="recyclune.jpg"
@@ -1419,9 +1419,12 @@ Villers-lès-Nancy"
           defi=""
           latitude="6.488517"
           longitude="48.586487"
-		  telephone="07.68.82.28.99"
-          message=""
-    />
+		      telephone="07.68.82.28.99"
+          message="">
+            <h l="le mercredi" t="14H00 - 18H00"/>
+            <h l="le vendredi" t="14H00 - 18H00"/>
+            <h l="le samedi" t="14H00 - 18H00"/>
+        </acteur>
         <acteur
           anniv="oui"
           siteweb="www.choeur-dartisans.com"
