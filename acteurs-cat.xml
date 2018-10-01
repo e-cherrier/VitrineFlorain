@@ -54,10 +54,11 @@
            telephone=""
 	/>
             <acteur
+          anniv="oui"
           siteweb="www.legoupilvert.fr"
           image="biocoop.jpg"
           titre="Biocoop Le Goupil Vert"
-	  code="3"
+	        code="3"
           bref="Magasin BIO"
           desc="Ouvert depuis janvier 2007, le magasin propose un grand choix alimentaire BIO, mais également des cosmétiques, un univers bébé, des articles pour la maison. C'est aussi un espace de vie, avec l'accueil d'associations et la mise à disposition d'une salle de réunion."
           type="Alimentation"
@@ -276,6 +277,7 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
           longitude="48.7068"
     />
        <acteur
+          anniv="oui"
           siteweb="www.lesfermesvertes.com"
           image="lesfermesvertes.jpg"
           titre="Jean-Paul André"
@@ -464,6 +466,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           longitude="48.574884"
     />
     <acteur
+          anniv="oui"
           siteweb="facebook Paul.Mougel88"
           image="PaulMougel.jpg"
           titre="Miel de Lorraine"
@@ -1426,7 +1429,6 @@ Villers-lès-Nancy"
             <h l="le samedi" t="14H00 - 18H00"/>
         </acteur>
         <acteur
-          anniv="oui"
           siteweb="www.choeur-dartisans.com"
           image="helmutetpetula.jpg"
           titre="Helmut et Pétula"
@@ -1446,6 +1448,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
     
         <acteur
           date="2609"
+          anniv="oui"
           siteweb="www.lenversdumonde.com"
           image="associationenversdumonde.jpg"
           titre="L'Envers du Monde"
@@ -1671,6 +1674,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
     <categorie type ="S'engager">
         <scat>
 		<acteur
+            anniv="oui"
             date="0818"
             siteweb="www.artisansdumonde.org"
             image="artisans.jpg"
@@ -1794,6 +1798,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   message=""
 />
 <acteur
+        anniv="oui"
         date="1809"
         siteweb="facebook zerodechetnancy"
         image="zerodechet.jpg"
