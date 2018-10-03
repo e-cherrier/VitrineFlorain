@@ -1016,6 +1016,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
           />
           <acteur
             date="0518"
+            anniv="oui"
             siteweb="www.bio-est-ethique.fr"
             image="bioestethique.jpg"
             titre="Bio Est Ethique"
