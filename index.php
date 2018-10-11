@@ -29,35 +29,29 @@ $header->display();
 
 
       <section id="accueil" class="main style2 right red fullscreen">
-        <div class="content box anniv style1">
+        <div class="content box style1">
           <header>
-            <h2>Le Florain: 1 an déjà!</h2>
+            <h2>Le Florain à un 1 an!</h2>
+            <h3>Les nouveautés</h3>
           </header>
-          <span>Venez fêter avec nous le premier anniversaire de votre monnaie locale!<br/>
-          <span><b>le 6 octobre 2018</b>
-          dans les locaux du Conseil Départemental -
-          48, Esplanade Jacques Baudot -
-          de 10h à 18h</span>
-
-          <img src="http://www.monnaielocalenancy.fr/images/fete/logoCR54.png" class="sf" width="100px" float="left"/>
-          <ul>
-          <li>&nbsp;Conférences,</li>
-          <li>&nbsp;&nbsp;&nbsp;Animations,</li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buvette,</li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Restauration (sur réservation)</li>
-          </ul>
-          <h3>Et le grand marché des acteurs du Florains.</h3>
-          <br/>
           <footer>
-            <ul >
-            <li>  <a href="anniversaire.php#reservation" class="button">Réserver son repas</a></li>
-            <li>  <a href="anniversaire.php#benevolat" class="button">Bénévolat</a></li>
-            <li>  <a href="anniversaire.php" class="button">Le programme</a></li>
+            <ul>
+            <li>  <a href="#unpourcent" class="button">Plus d'info</a></li>
             </ul>
           </footer>
+          <h4>le 1 % associatif</h4>
+          <p>Pour 100 Euros échangés en Florains, un Florain est reversé à une association de votre choix!</p>
+          <h4>le partenariat avec La Nef</h4>
+          <p>Notre partenaire financier s'engage à investir sur notre territoire au moins le double des Florains en circulation!</p>
+          <footer>
+            <ul>
+            <li>  <a target="blank" href="http://monnaie-locale-complementaire-citoyenne.net/convention-mlcc-sol-nef" class="button">Plus d'info</a></li>
+            </ul>
+          </footer>
+
         </div>
         <footer>
-          <a href="#monnaie" class="button style2 down anchored">More</a>
+          <a href="#unpourcent" class="button style2 down anchored">More</a>
         </footer>
       </section>
 
@@ -181,11 +175,30 @@ Vous êtes commerçant et vous voulez vous engager dans une transition écologiq
       </section>
 -->
 
+      <section id="unpourcent" class="main style2 left green">
+        <div class="content box style1">
+          <header>
+            <h2>le 1 % associatif</h2>
+          </header>
+
+          <h1>A partir du 1er janvier 2019, nous mettrons en place le dispositif "1% pour les associations".</h1>
+          <p class="onecolumn">
+
+Ce dernier fonctionne simplement: quand une personne viendra adhérer au Florain, elle désignera une association de son choix parmi la liste des associations membres du Florain.<br/><br/>
+
+Ensuite, à chaque fois que cette personne changera des euros contre des Florains nous ferons un don en Florain, correspondant à 1% de la somme changée, à son association destinataire. Pour un change de 100 euros, la personne recevra donc 100 Florains, et son association destinataire 1 Florain: une bonne manière de motiver les gens à changer régulièrement.<br/><br/>
+
+Le dispositif sera opérationnel à partir du 1er janvier, mais la campagne d'adhésions pour l'année 2019 a déjà commencée!</p>
+          <footer><a target="_blank" class="button icon first" href="http://monnaie-locale-complementaire-citoyenne.net/convention-mlcc-sol-nef"> Partenariat Nef</a><footer>
+        </div>
+        <a href="#monnaie" class="button style1 down anchored">Next</a>
+      </section>
+
     <!-- monnaie -->
       <section id="monnaie" class="main style1 left dark fullscreen">
         <div class="content box style1">
           <header>
-            <h2>Pourquoi ?</h2>
+            <h2>Pourquoi une monnaie locale?</h2>
           </header>
 
           <h3>Monnaie locale et acte de liberté citoyenne.</h3><br>
