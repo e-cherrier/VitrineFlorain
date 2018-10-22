@@ -119,7 +119,7 @@
           latitude="6.176497"
           longitude="48.700953"
     />
-   <acteur
+   <acteur_archive
           siteweb="facebook @legrammedefolie"
           image="grammedefolie.jpg"
           titre="Le Gramme de Folie"
@@ -354,7 +354,7 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
         <acteur
             fete="oui"
           anniv="oui"
-          siteweb="www.lecoindelabeletteunblog.fr"
+          siteweb="lecoindelabeletteunblog.fr"
           image="coinbelette.jpg"
           titre="Le coin de la belette"
           type="Alimentation"
@@ -642,7 +642,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           image="troispp-nancy.jpg"
           titre="Trois Petits Points"
           type="Alimentation"
-          bref="Restaurant"
+          bref="Restaurant Nancy"
           desc="Un bazar culturel, événementiel, culinaire et populaire. Bar Concert. Restauration Africaine 'Le Palais Exotique'. Catering (concert et film) : Cuisine du Monde. Expo, Débat, Evènement, Journée Découverte, Mise à disposition..."
           adresse="3 rue de l'île de Corse Nancy"
           defi=""
@@ -655,7 +655,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           image="3ppToul.jpg"
           titre="Les 3 Petits Points"
           type="Alimentation"
-          bref="Bar Brasserie"
+          bref="Bar Brasserie Toul"
       desc="Bar Brasserie, restauration avec des produits frais et maison. Diffusion des différents événements sportifs. Soirée à thème. Ouvert tous les jours. Du Lundi au Samedi de 11h à 2h. Le Dimanche de 11h à 23h. Restauration de 11h30 à 22h non stop tous les jours"
       message="Nous avons mis en place une formule repas pour les personnes qui nous paieront en Florain - 10% sur leur addition, ainsi qu'un repas cinéma 3.50E la place pour le cinéma de Toul valable 1 an."
           adresse="place du Couarail 54200 Toul"
@@ -875,7 +875,6 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
           image="ccam.jpg"
           titre="Centre Culturel André Malraux"
           type="Centre Culturel"
-          bref="Centre Culturel"
           desc="Le Centre Culturel André Malraux est un lieu de fabrique et de diffusion dédié à la création d'aujourd'hui. Pluridisciplinaire, le CCAM favorise la rencontre entre les citoyens et l'art de notre époque. Il porte Musique Action, un festival dédié aux musiques contemporaines. Le CCAM prête une attention particulière aux arts de la scène, à la photographie et aux arts graphiques. Il réserve une place singulière aux démarches artistiques qui s'adressent à l'enfance et à la jeunesse."
           adresse="Rue de Parme 54500 Vandoeuvre"
           defi=""
@@ -927,7 +926,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
       />
       <acteur
         date="0718"
-        siteweb="http://www.lepredenancy.fr"
+        siteweb="www.lepredenancy.fr"
         image="lepredenancy.jpg"
         titre="Maison du Tourisme Toul"
         bref=""
@@ -954,8 +953,6 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             telephone="09.54.96.63.36"
             message=""
           />
-		  
-		  
 	  <acteur
             date="0818"
             siteweb="www.rougge.com"
@@ -969,7 +966,6 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
             telephone=""
             message=""
           />
-		  
 		   <acteur
             date="0818"
             siteweb="www.grainedecarrosse.fr"
@@ -985,16 +981,18 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
           />
 		  <acteur
             date="0818"
+            marches="central"
             siteweb="facebook dominique schweitzer Bouquiniste"
             image="DominiqueSchweitzer.jpg"
-            titre="Dominique Schweitzer"
-            bref="Bouquiniste"
-            desc="Bouquiniste"
-            adresse="Marché central 52 Rue Saint-Dizier Nancy"
+            titre="Bouquiniste"
+            bref="Vente, achat, échange tous livres"
+            desc="Votre bouquiniste achète, vend et échange tous livres (Selon état et besoin). On peut également déposer ceux qui ne seront pas repris afin de les donner dans une école Nancéenne. Celle-ci se charge de les vendre une somme minime. Cela permet de financer une sortie éducative ou faire l'acquisition de matériel pour l'école. Une maman d'élève se charge de passer chaque fin de semaine."
+            adresse="Marché central 52 Rue Saint-Dizier, Nancy"
             latitude="6.182779"
             longitude="48.68936"
-            telephone=""
+            telephone="06 68 85 83 02 "
             message=""
+            citation="'Quand je pense à tous les livres qu'il me reste à lire, j'ai la certitude d'être encore heureux' Jules Renard"
           />
 		  
         </scat>
@@ -1182,7 +1180,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
         siteweb=""
         image="ernst.jpg"
         titre="Ghislaine Ernst"
-        bref="Méthode Feldenkrais™"
+        bref="Méthode Feldenkrais"
         type="Prendre soin de soi"
         desc="Méthode Feldenkrais. Méthode d'éducation somatique fondée sur la prise de conscience du corps en mouvement."
         adresse="10 rue Gustave Charpentier, Nancy"
@@ -1223,7 +1221,7 @@ Villers-lès-Nancy"
 />
 		
 	<acteur
-          siteweb="www.studio-r-coiffure-nancy.fr"
+          siteweb="studio-r-coiffure-nancy.fr"
           image="studioR.jpg"
           titre="Studio R"
           type="Coiffeur"
@@ -1597,7 +1595,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
            telephone="09 67 63 03 52"
       />
         <acteur
-          siteweb="www.adegemlafibreverte.com"
+          siteweb="adegemlafibreverte.com"
           image="LaFibreVerte.jpg"
           titre="La Fibre Verte"
           type="Marketing"
@@ -1730,7 +1728,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
           citation="Intégrer le Florain, c'est permettre à notre AMAP de renforcer sa démarche de soutien aux paysans locaux."
 	/>
         <acteur
-      siteweb="www.jardins-de-la-chaudeau.fr"
+          siteweb="jardins-de-la-chaudeau.fr"
           image="jardinschaudeau.jpg"
           titre="Jardins de la Chaudeau"
           bref="AMAP"
