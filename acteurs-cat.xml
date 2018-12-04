@@ -982,6 +982,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
 		  <acteur
             date="0818"
             marche="central"
+            comptoir="oui"
             siteweb="facebook dominique schweitzer Bouquiniste"
             image="DominiqueSchweitzer.jpg"
             titre="Bouquiniste"
@@ -1509,6 +1510,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
     />
     <acteur
       date="0418"
+      comptoir="oui"
       siteweb="facebook trocnancypulnoy"
       image="troc.jpg"
       titre="Troc"
