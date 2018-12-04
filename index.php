@@ -31,7 +31,7 @@ $header->display();
       <section id="accueil" class="main style2 right red fullscreen">
         <div class="content box style1">
           <header>
-            <h2>Le Florain à un 1 an!</h2>
+            <h2>Le Florain a un 1 an!</h2>
             <h3>Les nouveautés</h3>
           </header>
           <footer>
@@ -188,7 +188,7 @@ Ce dernier fonctionne simplement: quand une personne viendra adhérer au Florain
 
 Ensuite, à chaque fois que cette personne changera des euros contre des Florains nous ferons un don en Florain, correspondant à 1% de la somme changée, à son association destinataire. Pour un change de 100 euros, la personne recevra donc 100 Florains, et son association destinataire 1 Florain: une bonne manière de motiver les gens à changer régulièrement.<br/><br/>
 
-Le dispositif sera opérationnel à partir du 1er janvier, mais la campagne d'adhésions pour l'année 2019 a déjà commencée!</p>
+Le dispositif sera opérationnel à partir du 1er janvier, mais la campagne d'adhésions pour l'année 2019 a déjà commencé!</p>
           <footer><a target="_blank" class="button icon first" href="http://monnaie-locale-complementaire-citoyenne.net/convention-mlcc-sol-nef"> Partenariat Nef</a><footer>
         </div>
         <a href="#monnaie" class="button style1 down anchored">Next</a>
@@ -325,7 +325,7 @@ while(x=eval(x));
 //]]>
 </script>
 
-                  </strong>enrichi le reseau d'acteurs professionnels du Florain</li>
+                  </strong>enrichit le réseau d'acteurs professionnels du Florain</li>
 
         </div>
         <a href="#medias" class="button style2 down anchored">Next</a>
@@ -395,6 +395,10 @@ while(x=eval(x));
                 </div>
                 <div class="row 50%">
                   <div class="12u"><textarea name="message" placeholder="Message" rows="4"></textarea></div>
+                </div>
+                <div class="row 50%">
+                  <div class="6u 12u(mobile)"><h4>Veuillez entrer le resultat de un plus un:</h4></div>
+                  <div class="6u 12u(mobile)"><input type="text" name="calcul" id="calcul" placeholder="Un robot ne sais pas !"></div>
                 </div>
                 <div class="row">
                   <div class="12u">
