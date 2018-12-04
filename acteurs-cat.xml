@@ -506,17 +506,6 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
           latitude="5.870572328576"
           longitude="48.7816173421"
     />
-       <acteur
-            fete="oui"
-          image="charles.jpg"
-          marche="vandoeuvre"
-          titre="Charles Dimitriou"
-          type="Alimentation"
-          bref="Pains - Pizza"
-          desc="Pains - Pizza. Charles est présent au marché de Vandoeuvre le vendredi de 16h à 20h"
-          adresse="Ambulant sur marchés"
-          defi="Développer des circuits locaux avec magasins clients à Nancy"
-    />
         <acteur
           image="defaut.jpg"
           titre="La P'tite Laur'Reine du Pain"
