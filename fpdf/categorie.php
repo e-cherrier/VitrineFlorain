@@ -132,8 +132,8 @@ function display() {
 
 class CategoriePoche extends Categorie {
 
-public $titleCellHeight = 4;
-public $titleCellBotMargin = 1;
+public $titleCellHeight = 5;
+public $titleCellBotMargin = 2;
 
 function NewSousCategorie( $a, $sscat ) {
     return new SousCategoriePoche( $a, $this, $sscat );

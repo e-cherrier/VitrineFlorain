@@ -87,12 +87,21 @@ function separator( $col, $deb_i ) {
 
 class ActeurPoche extends Acteur {
 
+    private $titre_s = 10; 
+    private $bref_s = 8; 
+    private $info_s = 8; 
 function EnteteHeight() {
-    $h = $this->getAttributeHeight( "titre", 9, 'B' );
-    $h = $h + $this->getAttributeHeight( "bref",7 );
-    $h = $h + $this->getAttributeHeight( "adresse",7 );
-    $h = $h + $this->getAttributeHeight( "telephone",6 );
-    $h = $h + $this->getAttributeHeight( "siteweb", 6 );
+    $h = $this->getAttributeHeight( "titre", $this->titre_s, 'B' );
+    $h = $h + $this->getAttributeHeight( "bref",$this->bref_s );
+    $ah = $this->getAttributeHeight( "siteweb", $this->info_s );
+    if( $ah == 0 ) {
+        $ah = $this->getAttributeHeight( "telephone", $this->info_s );
+        if( $ah == 0 ) {
+            $ah = $this->getAttributeHeight( "adresse", $this->info_s );
+        }
+    }
+
+    $h = $h + $ah;
     return $h;
 }
 
@@ -121,34 +130,40 @@ function Entete() {
     $this->a->SetLeftMargin($left_entete);
 
     // Le nom
-    $this->a->PrintName( $titre,$this->a->GetColumnWidth(), 9 );
+    $this->a->PrintName( $titre,$this->a->GetColumnWidth(), $this->titre_s );
 
     if( $this->acteur_->hasAttribute( "bref" ) ) {
         $bref = utf8_decode( $this->acteur_->getAttribute( "bref" ) );
-	if( $bref != "" ) {
-            $this->a->PrintText( $bref, $this->a->GetColumnWidth(), 7 );
-	}
+        if( $bref != "" ) {
+            $this->a->PrintText( $bref, $this->a->GetColumnWidth(), $this->bref_s );
+        }
     }
 
-    if( $this->acteur_->hasAttribute( "adresse" ) ) {
-        $adresse = utf8_decode( $this->acteur_->getAttribute( "adresse" ) );
-	if( $adresse != "" ) {
-	    $this->a->PrintText( $adresse, $this->a->GetColumnWidth(), 7 );
-	}
-    }
-
-    if( $this->acteur_->hasAttribute( "telephone" ) ) {
-        $telephone = utf8_decode( $this->acteur_->getAttribute( "telephone" ) );
-	if( $telephone != "" ) {
-		$this->a->PrintText( $telephone, $this->a->GetColumnWidth(), 6 );
-	}
-    }
+    // print information by priority
+    // if siteweb is set print it else the phone, else the adress
+    $info = false;
     if( $this->acteur_->hasAttribute( "siteweb" ) ) {
         $siteweb = utf8_decode( $this->acteur_->getAttribute( "siteweb" ) );
-	if( $siteweb != "" ) {
-            $this->a->PrintText( $siteweb, $this->a->GetColumnWidth(), 6, 'C' );
-	}
+        if( $siteweb != "" ) {
+            $this->a->PrintText( $siteweb, $this->a->GetColumnWidth(), $this->info_s, 'C' );
+            $info = true;
+        }
     }
+    if( $info == false && $this->acteur_->hasAttribute( "telephone" ) ) {
+        $telephone = utf8_decode( $this->acteur_->getAttribute( "telephone" ) );
+        if( $telephone != "" ) {
+            $this->a->PrintText( $telephone, $this->a->GetColumnWidth(), $this->info_s );
+            $info = true;
+        }
+    }
+    if( $info == false && $this->acteur_->hasAttribute( "adresse" ) ) {
+        $adresse = utf8_decode( $this->acteur_->getAttribute( "adresse" ) );
+        if( $adresse != "" ) {
+            $this->a->PrintText( $adresse, $this->a->GetColumnWidth(), $this->info_s );
+            $info = true;
+        }
+    }
+
 
     $this->a->Ln( 2 );
 
@@ -210,7 +225,7 @@ function height() {
 
     if( $this->acteur_->hasAttribute( "message_comptoir" ) ) {
         $message = utf8_decode( $this->acteur_->getAttribute( "message_comptoir" ) );
-	$h = $h + $this->a->MultiCellHeight( $this->a->GetColumnWidth(), $this->a->cellHeight, $message ) +5;
+    	$h = $h + $this->a->MultiCellHeight( $this->a->GetColumnWidth(), $this->a->cellHeight, $message ) +5;
     }
 
     return $h + $this->EnteteHeight() ;
@@ -265,15 +280,15 @@ function Entete() {
 
     if( $this->acteur_->hasAttribute( "telephone" ) ) {
         $telephone = utf8_decode( $this->acteur_->getAttribute( "telephone" ) );
-	if( $telephone != "" ) {
-		$this->a->PrintText( $telephone );
-	}
+        if( $telephone != "" ) {
+            $this->a->PrintText( $telephone );
+        }
     }
     if( $this->acteur_->hasAttribute( "siteweb" ) ) {
         $siteweb = utf8_decode( $this->acteur_->getAttribute( "siteweb" ) );
-	if( $siteweb != "" ) {
+        if( $siteweb != "" ) {
             $this->a->PrintText( $siteweb, 60, 8, 'C' );
-	}
+        }
     }
 
     // reset position
@@ -283,7 +298,7 @@ function Entete() {
     $y = $top_entete + $this->EnteteHeight();
     // get the y max
     if( $cury < $y ) {
-        $this->a->SetY( $top_entete + $this->EnteteHeight() );
+        $this->a->SetY( $y );
     }
 }
 
@@ -300,15 +315,15 @@ function display_comptoir( $col, $c ) {
 
     if( $this->acteur_->hasAttribute( "telephone" ) ) {
         $telephone = utf8_decode( $this->acteur_->getAttribute( "telephone" ) );
-	if( $telephone != "" ) {
+        if( $telephone != "" ) {
             $this->a->PrintText( $telephone, $this->a->GetColumnWidth() );
-	}
+        }
     }
     if( $this->acteur_->hasAttribute( "siteweb" ) ) {
         $siteweb = utf8_decode( $this->acteur_->getAttribute( "siteweb" ));
-	if( $siteweb != "" ) {
+        if( $siteweb != "" ) {
             $this->a->PrintText( $siteweb, $this->a->GetColumnWidth(), 8, 'C' );
-	}
+        }
     }
     $horaires = $this->acteur_->getElementsByTagName( "h" );
     $nbh = $horaires->length;
@@ -319,7 +334,7 @@ function display_comptoir( $col, $c ) {
     $this->a->SetFont('Futura','',10);
     for($h=0; $h<$nbh; $h++) {
         $l = $horaires[$h]->getAttribute( "l" );
-	$t = $horaires[$h]->getAttribute( "t" );
+	    $t = $horaires[$h]->getAttribute( "t" );
         $this->a->Cell( 40, 5, $l, 0, 0, 'R');
         $this->a->Cell( 50, 5, $t, 0, 1, 'L');
     }

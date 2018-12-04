@@ -221,8 +221,8 @@ function displayType( $suite=false )
 
 class MarchePoche extends Marche {
 
-    public $titleCellHeight = 4;
-    public $titleCellBotMargin = 1;
+    public $titleCellHeight = 5;
+    public $titleCellBotMargin = 2;
     
 function NewActeur( $annuaire, $acteur ) {
     $expo = new ExposantPoche( $annuaire, $acteur );

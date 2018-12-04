@@ -423,8 +423,8 @@ function displayType( $suite=false )
 
 class SousCategoriePoche extends SousCategorie {
 
-    public $titleCellHeight = 4;
-    public $titleCellBotMargin = 1;
+    public $titleCellHeight = 5;
+    public $titleCellBotMargin = 2;
 
 function NewActeur(  $annuaire, $acteur ) {
     return new ActeurPoche( $annuaire, $acteur );
