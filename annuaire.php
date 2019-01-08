@@ -718,13 +718,11 @@ function NextPage() {
 
 /******************************************************************/
 
-if( isset($_GET) ) {
-    while(list($name, $value) = each($_GET)){
-        $$name = $value;
-    }
-}
-if (!isset($type)) $type = 'Livret';
-if (!isset($output)) $output = 'D';
+$type = 'Livret';
+$output = 'D';
+
+if(isset($_GET['type'])) $type = $_GET['type'];
+if(isset($_GET['output'])) $output = $_GET['output'];
 
 $no_footer = true;
 $no_header = true;

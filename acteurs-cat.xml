@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 26 septembre 2018" 
-  sstitre="Mise à jour du 26 septembre 2018 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 3 janvier 2019" 
+  sstitre="Mise à jour du 3 janvier 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="de l'Aire de vie Nancéienne">
   <categorie type="Se nourrir">
@@ -493,6 +493,14 @@
         message="" />
     </scat>
     <scat type="Traiteurs">
+      <acteur siteweb="facebook restomobilesamregalelespapilles" 
+        image="samregalelespapilles.jpg" 
+        titre="Sam Régale Les Papilles" 
+        type="Alimentation" 
+        bref="Cuisine locale et de saison" 
+        desc="Restaurant - Camion mobile avec terrasse, sur place ou à emporter, développant le service traiteur pour des évènements personnels, professionnels, rassemblements... Possibilité de livraison à domicile sous certaines conditions. Devis personnalisé en fonction du budget Cuisine audacieuse et traditionnelle à base de produits frais, locaux et de saison." 
+        adresse="9, rue de willermont 54540 Pexonne" 
+        telephone="06 20 08 62 66" />
       <acteur anniv="oui" 
         fete="oui" 
         siteweb="www.fermiersdici.com" 
@@ -515,14 +523,6 @@
         defi="Enercoop" 
         latitude="6.175713" 
         longitude="48.679843" />
-      <acteur siteweb="facebook restomobilesamregalelespapilles" 
-        image="samregalelespapilles.jpg" 
-        titre="Sam Régale Les Papilles" 
-        type="Alimentation" 
-        bref="Cuisine locale et de saison" 
-        desc="Restaurant - Camion mobile avec terrasse, sur place ou à emporter, développant le service traiteur pour des évènements personnels, professionnels, rassemblements... Possibilité de livraison à domicile sous certaines conditions. Devis personnalisé en fonction du budget Cuisine audacieuse et traditionnelle à base de produits frais, locaux et de saison." 
-        adresse="9, rue de willermont 54540 Pexonne" 
-        telephone="06 20 08 62 66" />
     </scat>
   </categorie>
   <marches type ="Les Marchés">
