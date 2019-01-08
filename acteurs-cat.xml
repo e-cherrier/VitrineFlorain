@@ -148,24 +148,50 @@
         telephone="03.83.34.19.50" />
     </scat>
     <scat type="Producteurs">
-    <acteur 
-      siteweb="facebook SweetGardenRogeville"
-      facebook="https://www.facebook.com/SweetGardenRogeville/"
-      image="defaut.jpg"
-      titre="Sweet Garden"
-      bref="Légumes bio et de saison"
-      type="Alimentation"
-      desc="Légumes bio et de saison distribués via l'AMAP la Soupe aux Cailloux"
-      adresse="Chemin de l'Orme, 54380 Rogéville"
-      latitude="5.980529"
-      longitude="48.819295"
-      telephone="06 19 84 18 14"
-      message=""
-      citation="Le Florain, clef d'épanouissement de nos richesses locales"
-    />
-      <acteur
-        siteweb="huileriedormes.fr"
-        fb="https://www.facebook.com/Huilerie-dOrmes-1050508558349166"
+      <acteur date="1018" 
+        siteweb="www.ruchersdelorraine.com" 
+        image="ruchersdelorraine.jpg" 
+        titre="Ruchers de Lorraine" 
+        bref="Apiculteur" 
+        type="Alimentation" 
+        desc="Apiculteur depuis 1947 nous produisons et commercialisons les produits de la ruche. Miels, pollen, gelée royale et propolis. Ainsi que tout le matériel apicole" 
+        adresse="21 rue de la salle, Nancy" 
+        latitude="6.190841" 
+        longitude="48.686558" 
+        telephone="03 83 32 29 74" 
+        message="" 
+        citation="" />
+
+      <acteur date="1018" 
+        siteweb="www.pomenpresse.fr" 
+        image="defaut.jpg" 
+        titre="Pom en Presse" 
+        bref="jus de fruits, jus de légumes" 
+        type="Alimentation" 
+        desc="Prestation de pressage de pommes pour particuliers et professionnels, fabrication et vente de jus de fruits et légumes." 
+        adresse="1, rue de l'Eglise, Moivrons" 
+        latitude="6.249102" 
+        longitude="48.823129" 
+        telephone="06 83 59 44 54" 
+        message="" 
+        citation="" />
+
+      <acteur date="1018" 
+        siteweb="facebook SweetGardenRogeville" 
+        facebook="https://www.facebook.com/SweetGardenRogeville/" 
+        image="defaut.jpg" 
+        titre="Sweet Garden" 
+        bref="Légumes bio et de saison" 
+        type="Alimentation" 
+        desc="Légumes bio et de saison distribués via l'AMAP la Soupe aux Cailloux" 
+        adresse="Chemin de l'Orme, 54380 Rogéville" 
+        latitude="5.980529" 
+        longitude="48.819295" 
+        telephone="06 19 84 18 14" 
+        message="" 
+        citation="Le Florain, clef d'épanouissement de nos richesses locales" />
+      <acteur siteweb="huileriedormes.fr" 
+        fb="https://www.facebook.com/Huilerie-dOrmes-1050508558349166" 
         image="huileriedormes.jpg" 
         titre="Huilerie d'Ormes" 
         bref="huiles première pression à froid" 
@@ -313,7 +339,7 @@
         bref="Vente Collective" 
         desc="Une organisation de vente collective de produits biologiques à la ferme. Les «Fermes Vertes», près de chez vous, vous accueillent. 8 fermes vous proposent leurs produits: Certifiés bio et d'abord Lorrains. Vente de proximité et en réseau. Vente sur commande et point de vente sur les fermes." 
         adresse="10 Rue de la Halle, 54760 Montenoy" 
-        defi=""          
+        defi=""
         latitude  ="6.22801" 
         longitude="48.79401" />
       <acteur siteweb="www.lesfermesvertes.com" 
@@ -1054,6 +1080,20 @@
   </categorie>
   <categorie type ="S'habiller, s'équiper">
     <scat>
+      <acteur date="1018" 
+        siteweb="http://www.cultures-et-partages.fr" 
+        image="defaut.jpg" 
+        titre="Cultures et partages - Amarrage" 
+        bref="Vêtements, accessoires textiles sensibles" 
+        type="Chantier d'insertion" 
+        desc="Fabrication et vente de vêtements sur mesure (création ou à la demande), retouche, relooking, cosplay et costumes de scène, d'objets textiles sensibles (vêtements, accessoires) pour la petite enfance, le handicap, la maladie et les personnes âgées." 
+        adresse="39 Avenue du Gard, 54460 Liverdun" 
+        latitude="6.060471" 
+        longitude="48.762886" 
+        telephone="03 83 24 56 60" 
+        message="" 
+        citation="" />
+
       <acteur siteweb="sni-pam.fr" 
         image="sni.jpg" 
         titre="Solidarités Nationales et Internationales" 
@@ -1302,6 +1342,34 @@
   <categorie type ="Et aussi...">
     <scat>
       <acteur date="0518" 
+        siteweb="www.sos-futur.fr" 
+        image="sos-futur.jpg" 
+        titre="SOS FUTUR" 
+        bref="Accompagnement technologique" 
+        type="Nouvelles Technologies" 
+        desc="SOS FUTUR veut vulgariser les technologies à tous. Pour faire cet accompagnement technologique, nous avons plusieurs métiers complémentaires: formation/ateliers, réparation, accompagnement, aide à l'achat, développement web et logiciel." 
+        adresse="67 rue Charles Keller, Nancy" 
+        latitude="6.173787" 
+        longitude="48.702193" 
+        telephone="03 72 47 04 49" 
+        message="" 
+        citation="" />
+
+      <acteur date="0518" 
+        siteweb="www.classe4.fr" 
+        image="classe4.jpg" 
+        titre="CLASSE 4" 
+        bref="Formation continue - Eco-construction" 
+        type="Architectes" 
+        desc="Formation continue pour les acteurs professionnels du cadre bâti à la qualité environnementale et à l'éco-construction" 
+        adresse="12 Grande Rue 55140 BUREY-LA-COTE" 
+        latitude="5.668779" 
+        longitude="48.562927" 
+        telephone="03 29 90 86 00" 
+        message="" 
+        citation="" />
+
+      <acteur date="0518" 
         siteweb="www.presle-architectes.com" 
         image="presle.jpg" 
         titre="atelier PRESLE architectes" 
@@ -1373,7 +1441,7 @@
         image="Conceptify.jpg" 
         titre="Conceptify" 
         bref="Imprimerie 3D" 
-        type="" 
+        type="Nouvelles Technologies" 
         desc="Imprimerie 3D. Vous souhaitez créer un objet sur mesure ? Une pièce d'un appareil électroménager est cassée ? Vous souhaitez développer des supports de communication uniques pour votre entreprise ? Nous trouverons ensemble une solution adaptée à votre besoin. Conceptify propose également des formations et dispose d'une gamme de scanners et imprimantes 3D, de bobines de filaments adaptées à vos machines." 
         adresse="159B Rue Saint-Dizier, Nancy" 
         latitude="6.185965" 
@@ -1596,4 +1664,4 @@
       message=""
       citation=""
     />
--->
+    -->
