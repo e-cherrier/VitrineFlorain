@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 26 septembre 2018" 
-  sstitre="Mise à jour du 26 septembre 2018 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 3 janvier 2019" 
+  sstitre="Mise à jour du 3 janvier 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="de l'Aire de vie Nancéienne">
   <categorie type="Se nourrir">
@@ -148,9 +148,50 @@
         telephone="03.83.34.19.50" />
     </scat>
     <scat type="Producteurs">
-      <acteur
-        siteweb="huileriedormes.fr"
-        fb="https://www.facebook.com/Huilerie-dOrmes-1050508558349166"
+      <acteur date="1018" 
+        siteweb="www.ruchersdelorraine.com" 
+        image="ruchersdelorraine.jpg" 
+        titre="Ruchers de Lorraine" 
+        bref="Apiculteur" 
+        type="Alimentation" 
+        desc="Apiculteur depuis 1947 nous produisons et commercialisons les produits de la ruche. Miels, pollen, gelée royale et propolis. Ainsi que tout le matériel apicole" 
+        adresse="21 rue de la salle, Nancy" 
+        latitude="6.190841" 
+        longitude="48.686558" 
+        telephone="03 83 32 29 74" 
+        message="" 
+        citation="" />
+
+      <acteur date="1018" 
+        siteweb="www.pomenpresse.fr" 
+        image="defaut.jpg" 
+        titre="Pom en Presse" 
+        bref="jus de fruits, jus de légumes" 
+        type="Alimentation" 
+        desc="Prestation de pressage de pommes pour particuliers et professionnels, fabrication et vente de jus de fruits et légumes." 
+        adresse="1, rue de l'Eglise, Moivrons" 
+        latitude="6.249102" 
+        longitude="48.823129" 
+        telephone="06 83 59 44 54" 
+        message="" 
+        citation="" />
+
+      <acteur date="1018" 
+        siteweb="facebook SweetGardenRogeville" 
+        facebook="https://www.facebook.com/SweetGardenRogeville/" 
+        image="defaut.jpg" 
+        titre="Sweet Garden" 
+        bref="Légumes bio et de saison" 
+        type="Alimentation" 
+        desc="Légumes bio et de saison distribués via l'AMAP la Soupe aux Cailloux" 
+        adresse="Chemin de l'Orme, 54380 Rogéville" 
+        latitude="5.980529" 
+        longitude="48.819295" 
+        telephone="06 19 84 18 14" 
+        message="" 
+        citation="Le Florain, clef d'épanouissement de nos richesses locales" />
+      <acteur siteweb="huileriedormes.fr" 
+        fb="https://www.facebook.com/Huilerie-dOrmes-1050508558349166" 
         image="huileriedormes.jpg" 
         titre="Huilerie d'Ormes" 
         bref="huiles première pression à froid" 
@@ -255,8 +296,7 @@
         titre="Le Domaine des Saveurs" 
         type="Alimentation" 
         bref="producteurs de volailles BIO" 
-        desc="Le Domaine des Saveurs propose des volailles issu de l'agriculture biologique.
-Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville." 
+        desc="Le Domaine des Saveurs propose des volailles issu de l'agriculture biologique. Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville." 
         adresse="18 chemin des Baillouteux 54220 Malzéville" 
         defi="" 
         latitude="6.193532" 
@@ -299,7 +339,7 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
         bref="Vente Collective" 
         desc="Une organisation de vente collective de produits biologiques à la ferme. Les «Fermes Vertes», près de chez vous, vous accueillent. 8 fermes vous proposent leurs produits: Certifiés bio et d'abord Lorrains. Vente de proximité et en réseau. Vente sur commande et point de vente sur les fermes." 
         adresse="10 Rue de la Halle, 54760 Montenoy" 
-        defi=""          
+        defi=""
         latitude  ="6.22801" 
         longitude="48.79401" />
       <acteur siteweb="www.lesfermesvertes.com" 
@@ -312,17 +352,6 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
         latitude="5.760585" 
         longitude="48.681191" 
         telephone="06 58 38 05 06" />
-      <acteur_archive fete="oui" 
-        siteweb="facebook lepetitatelieranancy" 
-        image="petitatelier.jpg" 
-        titre="Le Petit Atelier" 
-        type="Alimentation" 
-        bref="Patisserie Chocolaterie" 
-        desc="Atelier de boulangerie-pâtisserie-chocolaterie labellisé bio pour une gourmandise responsable.     Basé à Saulxures-Les-Nancy, c'est au coeur même de notre laboratoire de fabrication que nous vous accueillons. Nous travaillons à la commande pour éviter tout gaspillage alimentaire et avons le plaisir de ne choisir que des fruits de saison pour garnir nos pâtisseries. Nous sélectionnons avec soin les produits issus de l'agriculture biologique en favorisant les produits locaux au maximum." 
-        adresse="30 rue Louis Bleriot 54420 Saulxures Les Nancy" 
-        defi="Travailler à l'ouverture d'un point de vente en ville" 
-        latitude="6.24018073082" 
-        longitude="48.6888568976" />
       <acteur fete="oui" 
         anniv="oui" 
         siteweb="lecoindelabeletteunblog.fr" 
@@ -390,8 +419,7 @@ Retrouvez nous en Amap ou chaque Samedi matin au marché de Malzéville."
         type="Biere BIO Artisanale" 
         bref="Brasserie" 
         code="-1" 
-        desc="Toutes les bières de la Microbrasserie GRENAILLE sont brassées sur place à Jarville-La-Malgrange, selon une méthode artisanale, à la main.
-Ce sont des bières de fermentation haute, non filtrées, non pasteurisées et refermentées en bouteille. Elles sont produites sous mention Nature &amp; Progrès." 
+        desc="Toutes les bières de la Microbrasserie GRENAILLE sont brassées sur place à Jarville-La-Malgrange, selon une méthode artisanale, à la main. Ce sont des bières de fermentation haute, non filtrées, non pasteurisées et refermentées en bouteille. Elles sont produites sous mention Nature &amp; Progrès." 
         adresse="9 rue d'Alsace 54140 Jarville-la-Malgrange" 
         defi="" 
         latitude="6.199764" 
@@ -402,10 +430,7 @@ Ce sont des bières de fermentation haute, non filtrées, non pasteurisées et r
         titre="Brasserie Coin-Coin" 
         type="Brasserie" 
         bref="Brasserie Artisanale BIO" 
-        desc="Toutes nos bières sont élaborées, brassées et embouteillées à la main et de façon artisanale, dans notre local à Ménil-la-Tour par Mélaine COLSON.
-Ce sont des bières de garde dites 'vivantes', non-pasteurisées, non-filtrées, qui refermentent en bouteille. Les bières sont certifiées bio depuis septembre 2017.
-Depuis 2014, la brasserie est membre de l'Union des Brasseurs du Grand Est (anciennement l'UBL).
-Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des côtes de Toul." 
+        desc="Toutes nos bières sont élaborées, brassées et embouteillées à la main et de façon artisanale, dans notre local à Ménil-la-Tour par Mélaine COLSON. Ce sont des bières de garde dites 'vivantes', non-pasteurisées, non-filtrées, qui refermentent en bouteille. Les bières sont certifiées bio depuis septembre 2017. Depuis 2014, la brasserie est membre de l'Union des Brasseurs du Grand Est (anciennement l'UBL). Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des côtes de Toul." 
         adresse="5 Rue Saint Laurent 54200 Mènil-la-Tour" 
         latitude="5.864654" 
         longitude="48.766246" 
@@ -468,6 +493,14 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
         message="" />
     </scat>
     <scat type="Traiteurs">
+      <acteur siteweb="facebook restomobilesamregalelespapilles" 
+        image="samregalelespapilles.jpg" 
+        titre="Sam Régale Les Papilles" 
+        type="Alimentation" 
+        bref="Cuisine locale et de saison" 
+        desc="Restaurant - Camion mobile avec terrasse, sur place ou à emporter, développant le service traiteur pour des évènements personnels, professionnels, rassemblements... Possibilité de livraison à domicile sous certaines conditions. Devis personnalisé en fonction du budget Cuisine audacieuse et traditionnelle à base de produits frais, locaux et de saison." 
+        adresse="9, rue de willermont 54540 Pexonne" 
+        telephone="06 20 08 62 66" />
       <acteur anniv="oui" 
         fete="oui" 
         siteweb="www.fermiersdici.com" 
@@ -490,14 +523,6 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
         defi="Enercoop" 
         latitude="6.175713" 
         longitude="48.679843" />
-      <acteur siteweb="facebook restomobilesamregalelespapilles" 
-        image="samregalelespapilles.jpg" 
-        titre="Sam Régale Les Papilles" 
-        type="Alimentation" 
-        bref="Cuisine locale et de saison" 
-        desc="Restaurant - Camion mobile avec terrasse, sur place ou à emporter, développant le service traiteur pour des évènements personnels, professionnels, rassemblements... Possibilité de livraison à domicile sous certaines conditions. Devis personnalisé en fonction du budget Cuisine audacieuse et traditionnelle à base de produits frais, locaux et de saison." 
-        adresse="9, rue de willermont 54540 Pexonne" 
-        telephone="06 20 08 62 66" />
     </scat>
   </categorie>
   <marches type ="Les Marchés">
@@ -623,8 +648,7 @@ Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des 
         titre="Brasserie du marché" 
         bref="restaurant" 
         type="Alimentation" 
-        desc="À la BDM nous avons une charte, nous équilibrons les menus, nous respectons les saisons, nous varions les gouts, nos produits sont frais et fabriqués sur place.
-La BDM vous propose en plus un événement le premier jeudi du mois." 
+        desc="À la BDM nous avons une charte, nous équilibrons les menus, nous respectons les saisons, nous varions les gouts, nos produits sont frais et fabriqués sur place. La BDM vous propose en plus un événement le premier jeudi du mois." 
         adresse="2 Rue du Cardinal Mathieu, Nancy" 
         latitude="6.166836" 
         longitude="48.671391" 
@@ -1037,8 +1061,7 @@ La BDM vous propose en plus un événement le premier jeudi du mois."
         titre="La pharmacie Sainte Thérèse" 
         type="Pharmacie" 
         desc="La pharmacie Sainte Thérèse vous apporte une expertise en solutions naturelles en vous proposant une large gamme de produits ainsi que des mélanges d'huiles essentielles préparés sur demande." 
-        adresse="38 Boulevard de Baudricourt
-Villers-lès-Nancy" 
+        adresse="38 Boulevard de Baudricourt, Villers-lès-Nancy" 
         latitude="6.162236" 
         longitude="48.6753" 
         telephone="03 83 27 75 47" 
@@ -1057,6 +1080,20 @@ Villers-lès-Nancy"
   </categorie>
   <categorie type ="S'habiller, s'équiper">
     <scat>
+      <acteur date="1018" 
+        siteweb="http://www.cultures-et-partages.fr" 
+        image="defaut.jpg" 
+        titre="Cultures et partages - Amarrage" 
+        bref="Vêtements, accessoires textiles sensibles" 
+        type="Chantier d'insertion" 
+        desc="Fabrication et vente de vêtements sur mesure (création ou à la demande), retouche, relooking, cosplay et costumes de scène, d'objets textiles sensibles (vêtements, accessoires) pour la petite enfance, le handicap, la maladie et les personnes âgées." 
+        adresse="39 Avenue du Gard, 54460 Liverdun" 
+        latitude="6.060471" 
+        longitude="48.762886" 
+        telephone="03 83 24 56 60" 
+        message="" 
+        citation="" />
+
       <acteur siteweb="sni-pam.fr" 
         image="sni.jpg" 
         titre="Solidarités Nationales et Internationales" 
@@ -1225,8 +1262,7 @@ Villers-lès-Nancy"
         titre="Helmut et Pétula" 
         type="Art" 
         bref="Boutique de créateurs et d'artisans d'art" 
-        desc="Bijoux, décoration pour la maison ou le jardin, vêtements pour enfant, luminaires...
-Venez découvrir l'espace réservé aux stages donnés tout au long de l'année par des créateurs professionnels!    Des anniversaires sous forme d'ateliers sont également proposés." 
+        desc="Bijoux, décoration pour la maison ou le jardin, vêtements pour enfant, luminaires... Venez découvrir l'espace réservé aux stages donnés tout au long de l'année par des créateurs professionnels!    Des anniversaires sous forme d'ateliers sont également proposés." 
         adresse="Passage Bleu, 14 rue Notre-Dame Nancy" 
         defi="" 
         latitude="6.179654" 
@@ -1306,6 +1342,34 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
   <categorie type ="Et aussi...">
     <scat>
       <acteur date="0518" 
+        siteweb="www.sos-futur.fr" 
+        image="sos-futur.jpg" 
+        titre="SOS FUTUR" 
+        bref="Accompagnement technologique" 
+        type="Nouvelles Technologies" 
+        desc="SOS FUTUR veut vulgariser les technologies à tous. Pour faire cet accompagnement technologique, nous avons plusieurs métiers complémentaires: formation/ateliers, réparation, accompagnement, aide à l'achat, développement web et logiciel." 
+        adresse="67 rue Charles Keller, Nancy" 
+        latitude="6.173787" 
+        longitude="48.702193" 
+        telephone="03 72 47 04 49" 
+        message="" 
+        citation="" />
+
+      <acteur date="0518" 
+        siteweb="www.classe4.fr" 
+        image="classe4.jpg" 
+        titre="CLASSE 4" 
+        bref="Formation continue - Eco-construction" 
+        type="Architectes" 
+        desc="Formation continue pour les acteurs professionnels du cadre bâti à la qualité environnementale et à l'éco-construction" 
+        adresse="12 Grande Rue 55140 BUREY-LA-COTE" 
+        latitude="5.668779" 
+        longitude="48.562927" 
+        telephone="03 29 90 86 00" 
+        message="" 
+        citation="" />
+
+      <acteur date="0518" 
         siteweb="www.presle-architectes.com" 
         image="presle.jpg" 
         titre="atelier PRESLE architectes" 
@@ -1377,7 +1441,7 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
         image="Conceptify.jpg" 
         titre="Conceptify" 
         bref="Imprimerie 3D" 
-        type="" 
+        type="Nouvelles Technologies" 
         desc="Imprimerie 3D. Vous souhaitez créer un objet sur mesure ? Une pièce d'un appareil électroménager est cassée ? Vous souhaitez développer des supports de communication uniques pour votre entreprise ? Nous trouverons ensemble une solution adaptée à votre besoin. Conceptify propose également des formations et dispose d'une gamme de scanners et imprimantes 3D, de bobines de filaments adaptées à vos machines." 
         adresse="159B Rue Saint-Dizier, Nancy" 
         latitude="6.185965" 
@@ -1583,6 +1647,21 @@ Venez découvrir l'espace réservé aux stages donnés tout au long de l'année 
         message="" />
     </scat>
   </categorie>
-</categories><!--
-      <acteur date="0518" siteweb="" image="defaut.jpg" titre="" bref="" type="" desc="" adresse="" latitude="6" longitude="48" telephone="" message="" citation="" />
--->
+</categories>
+<!--
+    <acteur 
+      date="0518"
+      siteweb=""
+      image="defaut.jpg"
+      titre=""
+      bref=""
+      type=""
+      desc=""
+      adresse=""
+      latitude="6"
+      longitude="48"
+      telephone=""
+      message=""
+      citation=""
+    />
+    -->
