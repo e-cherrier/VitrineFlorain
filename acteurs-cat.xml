@@ -164,7 +164,7 @@
 
       <acteur date="1018" 
         siteweb="www.pomenpresse.fr" 
-        image="defaut.jpg" 
+        image="pomenpresse.jpg" 
         titre="Pom en Presse" 
         bref="jus de fruits, jus de légumes" 
         type="Alimentation" 
@@ -178,8 +178,8 @@
 
       <acteur date="1018" 
         siteweb="facebook SweetGardenRogeville" 
-        facebook="https://www.facebook.com/SweetGardenRogeville/" 
-        image="defaut.jpg" 
+        fb="https://www.facebook.com/SweetGardenRogeville/" 
+        image="sweetgarden.jpg" 
         titre="Sweet Garden" 
         bref="Légumes bio et de saison" 
         type="Alimentation" 
@@ -1082,7 +1082,7 @@
   <categorie type ="S'habiller, s'équiper">
     <scat>
       <acteur date="1018" 
-        siteweb="http://www.cultures-et-partages.fr" 
+        siteweb="www.cultures-et-partages.fr" 
         image="defaut.jpg" 
         titre="Cultures et partages - Amarrage" 
         bref="Vêtements, accessoires textiles sensibles" 
@@ -1344,7 +1344,7 @@
     <scat>
       <acteur date="0518" 
         siteweb="www.sos-futur.fr" 
-        image="sos-futur.jpg" 
+        image="sosfutur.jpg" 
         titre="SOS FUTUR" 
         bref="Accompagnement technologique" 
         type="Nouvelles Technologies" 
@@ -1547,7 +1547,7 @@
         latitude="5.931616" 
         longitude="48.643115" 
         telephone="" />
-      <acteur siteweb="http://lespaniersdeleopold.fr/" 
+      <acteur siteweb="lespaniersdeleopold.fr/" 
         image="lespaniersdeleopold.jpg" 
         titre="Les Paniers de Léopold" 
         bref="AMAP" 
