@@ -18,15 +18,15 @@ if( substr_count( $monmessage, "http") != 0 ) {
 } else
 if( $calcul != "2" ) {
   echo "Filtre Anti Robots:";
-  echo "Veuillez saisir le resultat de 'un plus un'. SVP.";
+  echo "Veuillez saisir le resultat de 'un plus un' en chiffre. SVP.";
 } else {
 
-  $to = "contact@monnaielocalenancy.fr";
+  $to = "contact@florain.fr";
   $subject = "[Formulaire monnaie citoyenne] demande de renseignements";
   $message = " Name: " . $name . "\r\n Prenom: " . $prenom . "\r\n Telephone: " . $phone . "\r\n Email: " . $email . "\r\n message: " . $monmessage;
   
   
-  $from = "MonnaieLocaleNancy.fr";
+  $from = "florain.fr";
   $headers = "From:" . $from . "\r\n";
   $headers .= "Content-type: text/plain; charset=UTF-8" . "\r\n"; 
   

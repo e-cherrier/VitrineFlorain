@@ -27,7 +27,25 @@ $header = new Header();
 $header->display();
 ?>
 
+      <section id="accueil" class="main style2 right red fullscreen">
+        <div class="content box style1">
+          <header>
+          <h4>Toute l'équipe du Florain vous souhaite</h4>
+          <h2>une très belle année 2019.</h2>
+          </header>
+          <p>Et qui dit nouvelle année dit ré-adhésion ! Nous vous invitons donc, si vous n'avez pas encore votre carte "2019", à vous rendre dans un <a href="http://www.monnaielocalenancy.fr/change.php">bureau de change</a> pour renouveler votre adhésion.</p>
+          <p>Comme en 2018, nous avons souhaité maintenir un montant minimum d'adhésion relativement modeste (5 €) pour permettre à chacun et chacune de s'inscrire dans la dynamique du Florain. Si vous en avez la possibilité et l'envie, n'hésitez surtout pas à adhérer pour un montant supérieur (maximum 50 €), les adhésions étant la principale source de financement de l'association !</p>
+          <h4>le 1 % associatif</h4>
+          <p>Nouveauté pour cette année, vous serez invité lors de votre adhésion à choisir une association qui recevra en fin d'année l'équivalent de 1% de ce que vous avez changé (des conversions Euros-Florains que vous aurez effectuées en 2019), sans que cela vous coûte quoi que ce soit. Tout est expliqué en détail <a href="http://beta.monnaielocalenancy.fr/2019/01/02/le-1-associatif-une-nouveaute-pour-2019">sur cet article.</a></p>
+          <h4>Assemblée Générale</h4>
+          <p>nous vous invitons d'ores et déjà à noter dans votre agenda la date du <b>dimanche 03 mars à 14h30</b> pour participer à un temps fort de la vie de notre association: son Assemblée Générale. Les détails vous seront communiqués dans quelques semaines.</p>
+        </div>
+        <footer>
+          <a href="#monnaie" class="button style2 down anchored">More</a>
+        </footer>
+      </section>
 
+<!--
       <section id="accueil" class="main style2 right red fullscreen">
         <div class="content box style1">
           <header>
@@ -55,7 +73,6 @@ $header->display();
         </footer>
       </section>
 
-<!--
       <section id="accueil" class="main style2 right dark fullscreen">
         <div class="content box style1">
           <header>
@@ -173,7 +190,6 @@ Vous êtes commerçant et vous voulez vous engager dans une transition écologiq
         </footer>
         </div>
       </section>
--->
 
       <section id="unpourcent" class="main style2 left green">
         <div class="content box style1">
@@ -193,6 +209,7 @@ Le dispositif sera opérationnel à partir du 1er janvier, mais la campagne d'ad
         </div>
         <a href="#monnaie" class="button style1 down anchored">Next</a>
       </section>
+-->
 
     <!-- monnaie -->
       <section id="monnaie" class="main style1 left dark fullscreen">
@@ -266,9 +283,9 @@ while(x=eval(x));
 
                                                 </strong> travaille actuellement
                         <ul>
-                            <li>sur les outils de communication.<li>
-                            <li>sur la communication autour du projet en général.</li>
-                            <li>participe à de nombreuses manifestions.</li>
+                            <li>sur les outils de communication, la charte graphique,<li>
+                            <li>la ligne éditoriale du Florain.</li>
+                            <li>et la communication autour du projet en général.</li>
                         </ul>
 
 
@@ -326,6 +343,7 @@ while(x=eval(x));
 </script>
 
                   </strong>enrichit le réseau d'acteurs professionnels du Florain</li>
+                  <li>Le groupe <strong><a>Evènements</a></strong> organise et assure la présence du Florain aux manifestations du territoire.</li>
 
         </div>
         <a href="#medias" class="button style2 down anchored">Next</a>
@@ -397,7 +415,7 @@ while(x=eval(x));
                   <div class="12u"><textarea name="message" placeholder="Message" rows="4"></textarea></div>
                 </div>
                 <div class="row 50%">
-                  <div class="6u 12u(mobile)"><h4>Veuillez entrer le resultat de un plus un:</h4></div>
+                  <div class="6u 12u(mobile)"><h4>Veuillez entrer le résultat de un plus un:</h4></div>
                   <div class="6u 12u(mobile)"><input type="text" name="calcul" id="calcul" placeholder="Un robot ne sais pas !"></div>
                 </div>
                 <div class="row">
