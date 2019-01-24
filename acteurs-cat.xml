@@ -1238,6 +1238,21 @@
   </categorie>
   <categorie type ="Se meubler, décorer, aménager">
     <scat>
+    <acteur 
+      date="1018"
+      siteweb="lecent9.fr"
+      image="lecent9.jpg"
+      titre="Le Cent 9"
+      bref="cadeau, déco, fabrication française"
+      type="Deco"
+      desc="Vente objets usuels revisités, des cadeaux de naissance, d'accessoires de mode, de la déco originale, de bijoux, de cadeaux de naissance... Les produits 0% importés proposés à la vente sont choisis selon 4 critères: l'éthique du créateur, l'atout écologique du produit, la qualité, le design et l'originalité. Laissez-vous séduire par cet univers singulier et chaleureux."
+      adresse="109B rue St dizier, Nancy"
+      latitude="6.184312"
+      longitude="48.688664"
+      telephone="08 80 55 97 57"
+      message=""
+      citation=""
+    />
       <acteur date="0818" 
         siteweb="facebook recyclune" 
         comptoir="oui" 
