@@ -6,15 +6,13 @@ $monmessage= trim($_POST['message']);
 
 if( strlen( $monmessage ) == 0 )
 {
-  echo "Desole! Veuillez saisir votre message.";
+  print "<script>document.location.href='erreur.php?message=Desole! Veuillez saisir votre slogan&page=slogan.php';</script>";
 } else {
 if( substr_count( $monmessage, "http") != 0 ) {
-  echo "Filtre Anti Spam: Votre message ne doit pas contenir de lien, merci.";
-  echo "veuillez supprimer l'entete http.";
+  print "<script>document.location.href='erreur.php?message=Filtre Anti Spam: Votre message ne doit pas contenir de lien, merci.</p><p>veuillez supprimer l'entete http.&page=slogan.php';</script>";
 } else
 if( $calcul != "2" && $calcul != "deux" ) {
-  echo "Filtre Anti Robots:";
-  echo "Veuillez saisir le resultat de 'un plus un' en chiffre. SVP.";
+  print "<script>document.location.href='erreur.php?message=Filtre Anti Robots:</p><p>Veuillez saisir le resultat de 'un plus un'. SVP.&page=slogan.php';</script>";
 } else {
 
   $filename = "les_slogans.html";
@@ -33,7 +31,7 @@ if( $calcul != "2" && $calcul != "deux" ) {
   {
     print "<script>document.location.href='merci_slogan.php';</script>";
   } else {
-    echo "Erreur! Veuillez Remplir les Champs Requis.";
+    print "<script>document.location.href='erreur.php?message=Veuillez Remplir les Champs Requis.&page=slogan.php';</script>";
   }
  
 } }

@@ -10,15 +10,14 @@ $monmessage= trim($_POST['message']);
 
 if( strlen( $monmessage ) == 0 )
 {
-  echo "Desole! Veuillez saisir votre message.";
+  print "<script>document.location.href='erreur.php?message=Desole! Veuillez saisir votre message&page=index.php#contact';</script>";
 } else {
 if( substr_count( $monmessage, "http") != 0 ) {
-  echo "Filtre Anti Spam: Votre message ne doit pas contenir de lien, merci.";
-  echo "veuillez supprimer l'entete http.";
+  print "<script>document.location.href='erreur.php?message=Filtre Anti Spam: Votre message ne doit pas contenir de lien, merci.</p><p>veuillez supprimer l'entete http.&page=index.php#contact';</script>";
+
 } else
-if( $calcul != "2" ) {
-  echo "Filtre Anti Robots:";
-  echo "Veuillez saisir le resultat de 'un plus un' en chiffre. SVP.";
+if( $calcul != "2" && $calcul != "deux") {
+  print "<script>document.location.href='erreur.php?message=Filtre Anti Robots:</p><p>Veuillez saisir le resultat de 'un plus un'. SVP.&page=index.php#contact';</script>";
 } else {
 
   $to = "contact@florain.fr";
@@ -34,7 +33,7 @@ if( $calcul != "2" ) {
   {
     print "<script>document.location.href='merci.php';</script>";
   } else {
-    echo "Erreur! Veuillez Remplir les Champs Requis.";
+    print "<script>document.location.href='erreur.php?message=Veuillez Remplir les Champs Requis.&page=index.php#contact';</script>";
   }
  
 } }
