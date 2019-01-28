@@ -17,6 +17,10 @@ if( $calcul != "2" && $calcul != "deux" ) {
   echo "Veuillez saisir le resultat de 'un plus un' en chiffre. SVP.";
 } else {
 
+  $filename = "les_slogans.html";
+  $contents = file_get_contents( $filename );
+  file_put_contents( $filename, $contents . "\r\n<li>" . $monmessage . "</li>" );
+
   $to = "groupe_com@florain.fr";
   $subject = "[Formulaire Florain] Proposition de Slogan";
   $message = "Ma proposition: " . $monmessage;

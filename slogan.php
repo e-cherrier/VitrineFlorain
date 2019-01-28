@@ -27,12 +27,12 @@ $header->display();
                       
 <?php
 
-$redirection = 'http://www.florain.fr/slogan_clos.php'; //  redirection quand le compteur arrive à 0
+$redirection = 'http://www.monnaielocalenancy.fr/slogan_clos.php'; //  redirection quand le compteur arrive à 0
 /*******************************************************************************
     * calcul des secondes
     ***************************************************************************/
     
-    $dateSrc = '2019-02-22 22:00 GMT';
+    $dateSrc = '2019-02-22 21:00 GMT';
     $dateTime = strtotime($dateSrc); 
 
 $secondes = $dateTime - time();
@@ -51,7 +51,7 @@ function CompteaRebour(){
                                                 (h<10 ? "0"+h : h) + ' h,  ' +
                                                 (m<10 ? "0"+m : m) + ' mn, ' +
                                                 (s<10 ? "0"+s : s) + ' s ';
-if ((j == 0 && s == 0 && m ==0 && h ==0)) {
+if ((j == 0 && s <= 0 && m ==0 && h ==0)) {
    clearInterval(timer);
    url = "<?php echo $redirection;?>"
    Redirection(url)
@@ -69,8 +69,8 @@ setTimeout("window.location=url", 500)
           <header>
             <h2>Votre slogan pour le Florain</h2>
             <p >Quelques mots pour montrer notre identité, une phrase rythmée pour définir les valeurs que font circuler nos billets!<br/>
-            C'est un appel à votre sens créatif et à votre imagination. Nous sommes déjà pressé de vous lire!</p>
-            <h1 class="red"><div>Lors de notre Assemblée Générale du 03 Mars,</div>un vote sera effectué parmi une sélection d'idées que nous espérons nombreuses!</h1>
+            C'est un appel à votre sens créatif et à votre imagination. Nous sommes déjà pressés de vous lire!</p>
+            <h1 class="red"><div>Lors de notre Assemblée Générale du 03 Mars,</div>un vote sera effectué parmi une sélection de vos nombreuses propositions!</h1>
           </header>
           <div class="box container 75%">
 <h1>Le sondage est ouvert encore
