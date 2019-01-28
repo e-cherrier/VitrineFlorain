@@ -17,7 +17,7 @@ if( substr_count( $monmessage, "http") != 0 ) {
 
 } else
 if( $calcul != "2" && $calcul != "deux") {
-  print "<script>document.location.href='erreur.php?message=Filtre Anti Robots:</p><p>Veuillez saisir le resultat de 'un plus un'. SVP.&page=index.php#contact';</script>";
+  print "<script>document.location.href='erreur.php?message=Filtre Anti Robots:</p><p>Veuillez saisir le resultat de un plus un. SVP.&page=index.php#contact';</script>";
 } else {
 
   $to = "contact@florain.fr";
