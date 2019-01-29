@@ -4057,6 +4057,15 @@ text-decoration: none; }
 		background-color: #fff;
 	}
 	#accueil {
+		background: url("../../images/com/idee_florain.png");
+		background-size: auto 80%;
+		background-attachment: fixed;
+		background-position: center left ;
+		background-repeat: no-repeat;
+		padding-top: 10;
+		background-color: #d7da23;
+	}
+	#readhesion {
 		background: url("../../images/mur.jpg");
 		background-size: auto 80%;
 		background-attachment: fixed;

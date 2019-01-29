@@ -30,10 +30,36 @@ $header->display();
       <section id="accueil" class="main style2 right red fullscreen">
         <div class="content box style1">
           <header>
-          <h4>Toute l'équipe du Florain vous souhaite</h4>
-          <h2>une très belle année 2019.</h2>
+          <h2>Le Florain a besoin de vous!</h2>
           </header>
-          <p>Et qui dit nouvelle année dit ré-adhésion ! Nous vous invitons donc, si vous n'avez pas encore votre carte "2019", à vous rendre dans un <a href="http://www.monnaielocalenancy.fr/change.php">bureau de change</a> pour renouveler votre adhésion.</p>
+          <p>L'équipe de bénévoles est à la recherche <b>d'un slogan</b> pour notre monnaie locale, complémentaire et citoyenne.
+Nous avons besoin en quelques mots de montrer notre identité.</p>
+<p>Une phrase rythmée, dans laquelle on comprend quelles sont les valeurs que font circuler nos billets!<p>
+
+<p>C'est un appel à votre sens créatif et à votre imagination. Nous sommes déjà pressés de vous lire!</p>
+
+          <footer>
+            <ul>
+            <li>  <a href="slogan.php" class="button">A vos claviers!</a></li>
+            </ul>
+          </footer>
+
+<p>Lors de notre Assemblée Générale du 03 Mars, un vote sera effectué parmi une sélection de vos nombreuses propositions!"</p>
+
+
+          
+        </div>
+        <footer>
+          <a href="#readhesion" class="button style2 down anchored">More</a>
+        </footer>
+      </section>
+
+      <section id="readhesion" class="main style2 right red fullscreen">
+        <div class="content box style1">
+          <header>
+          <h2>Campagne de ré-adhesion 2019.</h2>
+          </header>
+          <p>Qui dit nouvelle année dit ré-adhésion ! Nous vous invitons donc, si vous n'avez pas encore votre carte "2019", à vous rendre dans un <a href="http://www.monnaielocalenancy.fr/change.php">bureau de change</a> pour renouveler votre adhésion.</p>
           <p>Comme en 2018, nous avons souhaité maintenir un montant minimum d'adhésion relativement modeste (5 €) pour permettre à chacun et chacune de s'inscrire dans la dynamique du Florain. Si vous en avez la possibilité et l'envie, n'hésitez surtout pas à adhérer pour un montant supérieur (maximum 50 €), les adhésions étant la principale source de financement de l'association !</p>
           <h4>le 1 % associatif</h4>
           <p>Nouveauté pour cette année, vous serez invité lors de votre adhésion à choisir une association qui recevra en fin d'année l'équivalent de 1% de ce que vous avez changé (des conversions Euros-Florains que vous aurez effectuées en 2019), sans que cela vous coûte quoi que ce soit. Tout est expliqué en détail <a href="http://beta.monnaielocalenancy.fr/2019/01/02/le-1-associatif-une-nouveaute-pour-2019">sur cet article.</a></p>
