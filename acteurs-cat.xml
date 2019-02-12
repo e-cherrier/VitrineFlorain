@@ -353,10 +353,8 @@
         bref="Vente Collective" 
         desc="Une organisation de vente collective de produits biologiques à la ferme. Les «Fermes Vertes», près de chez vous, vous accueillent. 8 fermes vous proposent leurs produits: Certifiés bio et d'abord Lorrains. Vente de proximité et en réseau. Vente sur commande et point de vente sur les fermes." 
         adresse="10 Rue de la Halle, 54760 Montenoy" 
-        defi=""
-        
-        
-        latitude  ="6.22801" 
+        defi="" 
+        latitude="6.22801" 
         longitude="48.79401" />
       <acteur siteweb="www.lesfermesvertes.com" 
         image="lesfermesvertes.jpg" 
@@ -563,7 +561,6 @@
       longitude="48.6892039446" />
     <scat id="maxeville" 
       comptoir="oui" 
-      siteweb="" 
       image="marche.jpg" 
       titre="au Marché de Maxéville" 
       code="3" 
@@ -572,7 +569,8 @@
       desc="les jeudi de 16h à 19h" 
       adresse="Rue des brasseries Maxeville" 
       latitude="6.164457" 
-      longitude="48.706645">
+      longitude="48.706645" 
+      message_comptoir="Assuré par des bénévoles du Florain.">
       <h l="Le premier jeudi du mois" 
         t="16h00 - 19h00"/>
     </scat>
@@ -587,7 +585,7 @@
       adresse="  " 
       latitude="6.1737" 
       longitude="48.6653" 
-      telephone="06 41 21 49 69">
+      message_comptoir="Assuré par des bénévoles du Florain.">
       <h l="Le premier vendredi du mois" 
         t="16h00 - 20h00"/>
     </scat>
