@@ -57,12 +57,12 @@ Nous avons besoin en quelques mots de montrer notre identité.</p>
       <section id="readhesion" class="main style2 right red fullscreen">
         <div class="content box style1">
           <header>
-          <h2>Campagne de ré-adhesion 2019.</h2>
+          <h2>Campagne de ré-adhésion 2019.</h2>
           </header>
           <p>Qui dit nouvelle année dit ré-adhésion ! Nous vous invitons donc, si vous n'avez pas encore votre carte "2019", à vous rendre dans un <a href="http://www.monnaielocalenancy.fr/change.php">bureau de change</a> pour renouveler votre adhésion.</p>
           <p>Comme en 2018, nous avons souhaité maintenir un montant minimum d'adhésion relativement modeste (5 €) pour permettre à chacun et chacune de s'inscrire dans la dynamique du Florain. Si vous en avez la possibilité et l'envie, n'hésitez surtout pas à adhérer pour un montant supérieur (maximum 50 €), les adhésions étant la principale source de financement de l'association !</p>
           <h4>le 1 % associatif</h4>
-          <p>Nouveauté pour cette année, vous serez invité lors de votre adhésion à choisir une association qui recevra en fin d'année l'équivalent de 1% de ce que vous avez changé (des conversions Euros-Florains que vous aurez effectuées en 2019), sans que cela vous coûte quoi que ce soit. Tout est expliqué en détail <a href="http://beta.monnaielocalenancy.fr/2019/01/02/le-1-associatif-une-nouveaute-pour-2019">sur cet article.</a></p>
+          <p>Nouveauté pour cette année, vous serez invité lors de votre adhésion à <a href="http://www.monnaielocalenancy.fr/doc/UnPourCentAsso.pdf">choisir une association</a> qui recevra en fin d'année l'équivalent de 1% de ce que vous avez changé (des conversions Euros-Florains que vous aurez effectuées en 2019), sans que cela vous coûte quoi que ce soit. Tout est expliqué en détail <a href="http://beta.monnaielocalenancy.fr/2019/01/02/le-1-associatif-une-nouveaute-pour-2019">sur cet article.</a></p>
           <h4>Assemblée Générale</h4>
           <p>nous vous invitons d'ores et déjà à noter dans votre agenda la date du <b>dimanche 03 mars à 14h30</b> pour participer à un temps fort de la vie de notre association: son Assemblée Générale. Les détails vous seront communiqués dans quelques semaines.</p>
         </div>
