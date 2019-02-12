@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 3 janvier 2019" 
-  sstitre="Mise à jour du 3 janvier 2019 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 12 fevrier 2019" 
+  sstitre="Mise à jour du au 12 fevrier 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="de l'Aire de vie Nancéienne">
   <categorie type="Se nourrir">
@@ -127,7 +127,7 @@
         bref="Magasin BIO" 
         type="Alimentation" 
         desc="Magasin BIO. Produits frais, fruits et légumes, épicerie, pain bio cuit sur place, vrac, produits locaux, sans gluten, cosmétiques, compléments alimentaires... Des naturopathes vous conseillent, nhésitez pas à demander conseil !" 
-        adresse="Rue Roberval, 54500 Vandoeuvre-lès-Nancy" 
+        adresse="Rue Roberval, Vandoeuvre" 
         latitude="6.179869" 
         longitude="48.653389" 
         comptoir="oui" 
@@ -214,6 +214,20 @@
         longitude="48.781446" 
         telephone="06 50 63 79 65" 
         message="" />
+      <acteur marche="toul" 
+        date="" 
+        siteweb="" 
+        image="chevrerietournesols.jpg" 
+        titre="Chèvrerie des Tournesols" 
+        bref="Fromages de chèvres" 
+        type="Alimentation" 
+        desc="Transformation du lait de notre troupeau de chevres en fromages (frais, affines, demi sec et sec), faisselles. Tous nos fromages sont sans sel" 
+        adresse="1 rue de Mort Mare 54470 Flirey" 
+        latitude="5.847278" 
+        longitude="48.876716" 
+        telephone="06 83 58 45 25" 
+        message="" 
+        citation="" />
       <acteur siteweb="www.lafermerome.fr" 
         marche="vandoeuvre" 
         image="lafermerome.jpg" 
@@ -340,6 +354,8 @@
         desc="Une organisation de vente collective de produits biologiques à la ferme. Les «Fermes Vertes», près de chez vous, vous accueillent. 8 fermes vous proposent leurs produits: Certifiés bio et d'abord Lorrains. Vente de proximité et en réseau. Vente sur commande et point de vente sur les fermes." 
         adresse="10 Rue de la Halle, 54760 Montenoy" 
         defi=""
+        
+        
         latitude  ="6.22801" 
         longitude="48.79401" />
       <acteur siteweb="www.lesfermesvertes.com" 
@@ -527,6 +543,15 @@
     </scat>
   </categorie>
   <marches type ="Les Marchés">
+    <scat id="toul" 
+      image="marche.jpg" 
+      titre="au Marché de producteurs à Toul" 
+      bref="Marché" 
+      type="Marché" 
+      desc="les samedi de 8h à 12h" 
+      adresse="Place de la République" 
+      latitude="5.891304" 
+      longitude="48.672783" />
     <scat id="central" 
       image="marche.jpg" 
       titre="au Marché Central de Nancy" 
@@ -537,6 +562,7 @@
       latitude="6.18302285671" 
       longitude="48.6892039446" />
     <scat id="maxeville" 
+      comptoir="oui" 
       siteweb="" 
       image="marche.jpg" 
       titre="au Marché de Maxéville" 
@@ -546,8 +572,12 @@
       desc="les jeudi de 16h à 19h" 
       adresse="Rue des brasseries Maxeville" 
       latitude="6.164457" 
-      longitude="48.706645" />
+      longitude="48.706645">
+      <h l="Le premier jeudi du mois" 
+        t="16h00 - 19h00"/>
+    </scat>
     <scat id="vandoeuvre" 
+      comptoir="oui" 
       image="marche.jpg" 
       titre="au Marché Local BIO de Vandoeuvre" 
       bref="Marché" 
@@ -558,7 +588,7 @@
       latitude="6.1737" 
       longitude="48.6653" 
       telephone="06 41 21 49 69">
-      <h l="un vendredi sur deux" 
+      <h l="Le premier vendredi du mois" 
         t="16h00 - 20h00"/>
     </scat>
   </marches>
@@ -784,7 +814,7 @@
         titre="Centre Culturel André Malraux" 
         type="Centre Culturel" 
         desc="Le Centre Culturel André Malraux est un lieu de fabrique et de diffusion dédié à la création d'aujourd'hui. Pluridisciplinaire, le CCAM favorise la rencontre entre les citoyens et l'art de notre époque. Il porte Musique Action, un festival dédié aux musiques contemporaines. Le CCAM prête une attention particulière aux arts de la scène, à la photographie et aux arts graphiques. Il réserve une place singulière aux démarches artistiques qui s'adressent à l'enfance et à la jeunesse." 
-        adresse="Rue de Parme 54500 Vandoeuvre" 
+        adresse="Rue de Parme, Vandoeuvre" 
         defi="" 
         latitude="6.172948" 
         longitude="48.659714" />
@@ -793,7 +823,7 @@
         titre="MJC Lorraine" 
         type="MJC" 
         desc="Installée au coeur du quartier du même nom, la MJC Lorraine propose des actions envers les publics de tout âge, à partir de 2 ans. Le secteur Activités propose un éventail d'une soixantaine d'activités déclinées en sport, bien-être, danse, culture. Elle organise aussi des soirées débats, conférences, formations ... La MJC compte 5 grandes salles et un complexe d'escalade de 7,5 m de haut." 
-        adresse="1 Rue de Lorraine, 54500 Vandoeuvre-lès-Nancy" 
+        adresse="1 Rue de Lorraine, Vandoeuvre" 
         latitude="6.16816" 
         longitude="48.660747" 
         telephone="03 83 15 90 00" />
@@ -802,7 +832,7 @@
         titre="MJC Centre social NOMADE" 
         type="MJC" 
         desc="La MJC Centre social Nomade compte environ 900 adhérents, une cinquantaine de bénévoles et propose une trentaine d'activités. C'est une composante de la cité qui entend continuer à tisser de véritables partenariats avec la ville, les associations, les établissements scolaires et universitaires." 
-        adresse="8 rue de Norvège - 54500 Vandoeuvre" 
+        adresse="8 rue de Norvège, Vandoeuvre" 
         latitude="6.181145" 
         longitude="48.666985" 
         telephone="03 83 53 18 27" />
@@ -811,7 +841,7 @@
         titre="MJC Étoile" 
         bref="loisirs, convivialité, faire ensemble" 
         desc="Activités de loisirs, culturelles, sportives, éducatives, sociales pour tous publics. La MJC Étoile est aussi une scène culturelle de proximité ou le public peut aussi être acteur de ce qui se passe sur les planches du théâtre de l'Étoile" 
-        adresse="1 place de Londres, 54500 Vandoeuvre-lès-Nancy" 
+        adresse="1 place de Londres, Vandoeuvre" 
         latitude="6.182307" 
         longitude="48.659872" 
         telephone="03 83 55 53 35" />
@@ -1032,7 +1062,7 @@
         bref="Yoga - Cuisine végétarienne" 
         type="Bien etre" 
         desc="Yoga individuel: séance adaptée selon les besoins et capacités de la personne. Séance expliquée, faite sur place et donnée par écrit. 45 euros/h Yoga cours collectifs (6 personnes maxi) 10 euros pour 1h15, 7 euros étudiants, chômeurs Ateliers cuisine bio-végétarienne (option sans gluten ni produits laitiers ni oeufs). Cours et repas préparé ensemble : 25 euros. Conseils en phytothérapie, aromathérapie et diététique: 45 euros." 
-        adresse="24 Rue de Crévic, 54500 Vandoeuvre-lès-Nancy" 
+        adresse="24 Rue de Crévic, Vandoeuvre" 
         latitude="6.175754" 
         longitude="48.6512" 
         telephone="06 72 16 45 92" />
@@ -1059,7 +1089,7 @@
         message="" />
       <acteur siteweb="facebook pharmaciesaintetherese" 
         image="lapharmaciesaintetherese.jpg" 
-        titre="La pharmacie Sainte Thérèse" 
+        titre="Pharmacie Sainte Thérèse" 
         type="Pharmacie" 
         desc="La pharmacie Sainte Thérèse vous apporte une expertise en solutions naturelles en vous proposant une large gamme de produits ainsi que des mélanges d'huiles essentielles préparés sur demande." 
         adresse="38 Boulevard de Baudricourt, Villers-lès-Nancy" 
@@ -1067,6 +1097,19 @@
         longitude="48.6753" 
         telephone="03 83 27 75 47" 
         message="" />
+      <acteur date="" 
+        siteweb="pharmaciehommell.info" 
+        image="hommell.jpg" 
+        titre="Pharmacie Hommell" 
+        bref="la sante au naturel" 
+        type="Pharmacie" 
+        desc="Aromatherapie, phytotherapie, homeopathie, naturopathie et dietetique. Essayer tous les traitements et les methodes sans risque pour aller de mieux en mieux" 
+        adresse="Centre Montet Octroi, 8 square de liège, Vandoeuvre" 
+        latitude="6.169130" 
+        longitude="48.667649" 
+        telephone="03 83 55 13 46" 
+        message="" 
+        citation="" />
       <acteur siteweb="studio-r-coiffure-nancy.fr" 
         image="studioR.jpg" 
         titre="Studio R" 
@@ -1238,21 +1281,19 @@
   </categorie>
   <categorie type ="Se meubler, décorer, aménager">
     <scat>
-    <acteur 
-      date="1018"
-      siteweb="lecent9.fr"
-      image="lecent9.jpg"
-      titre="Le Cent 9"
-      bref="cadeau, déco, fabrication française"
-      type="Deco"
-      desc="Vente objets usuels revisités, des cadeaux de naissance, d'accessoires de mode, de la déco originale, de bijoux, de cadeaux de naissance... Les produits 0% importés proposés à la vente sont choisis selon 4 critères: l'éthique du créateur, l'atout écologique du produit, la qualité, le design et l'originalité. Laissez-vous séduire par cet univers singulier et chaleureux."
-      adresse="109B rue St dizier, Nancy"
-      latitude="6.184312"
-      longitude="48.688664"
-      telephone="08 80 55 97 57"
-      message=""
-      citation=""
-    />
+      <acteur date="1018" 
+        siteweb="lecent9.fr" 
+        image="lecent9.jpg" 
+        titre="Le Cent 9" 
+        bref="cadeau, déco, fabrication française" 
+        type="Deco" 
+        desc="Vente objets usuels revisités, des cadeaux de naissance, d'accessoires de mode, de la déco originale, de bijoux, de cadeaux de naissance... Les produits 0% importés proposés à la vente sont choisis selon 4 critères: l'éthique du créateur, l'atout écologique du produit, la qualité, le design et l'originalité. Laissez-vous séduire par cet univers singulier et chaleureux." 
+        adresse="109B rue St dizier, Nancy" 
+        latitude="6.184312" 
+        longitude="48.688664" 
+        telephone="08 80 55 97 57" 
+        message="" 
+        citation="" />
       <acteur date="0818" 
         siteweb="facebook recyclune" 
         comptoir="oui" 
@@ -1547,7 +1588,7 @@
         type="Association" 
         bref="(ex Provencal)" 
         desc="L'AMAP la Rainette (ex Provencal) distribue à ses adhérents des produits bios et locaux le vendredi de 18h à 19h45. Les adhérents peuvent obtenir des légumes produits par Fix Houillon, des fruits de Mirabio, des fromages d'Hélène Lebas, du pain du Moulin du Petit Poucet, des oeufs et de la volaille produits par Marie Gauvain." 
-        adresse="Mjc Centre Social Nomade 8 rue de Norvège 54500 Vandoeuvre" 
+        adresse="Mjc Centre Social Nomade 8 rue de Norvège, Vandoeuvre" 
         defi="" 
         latitude="6.181145" 
         longitude="48.666985" 
@@ -1583,7 +1624,7 @@
       <acteur anniv="oui" 
         siteweb="www.greenpeace.fr" 
         image="GreenPeaceNancy.jpg" 
-        titre="Green Peace Nancy" 
+        titre="Greenpeace Nancy" 
         type="Association" 
         desc="Groupe Local. Depuis plus de 45 ans, Greenpeace agit selon les principes de non-violence pour protéger l'environnement, la biodiversité et promouvoir la paix." 
         adresse="" />
@@ -1665,19 +1706,5 @@
   </categorie>
 </categories>
 <!--
-    <acteur 
-      date="0518"
-      siteweb=""
-      image="defaut.jpg"
-      titre=""
-      bref=""
-      type=""
-      desc=""
-      adresse=""
-      latitude="6"
-      longitude="48"
-      telephone=""
-      message=""
-      citation=""
-    />
+    <acteur date="0518" siteweb="" image="defaut.jpg" titre="" bref="" type="" desc="" adresse="" latitude="6" longitude="48" telephone="" message="" citation="" />
     -->
