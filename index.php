@@ -30,21 +30,28 @@ $header->display();
       <section id="accueil" class="main style2 right red fullscreen">
         <div class="content box style1">
           <header>
-          <h2>Le Florain a besoin de vous!</h2>
+          <h2>Assemblée Générale</h2>
+          <h4>Dimanche 3 mars - 14h</h4>
           </header>
-          <p>L'équipe de bénévoles est à la recherche <b>d'un slogan</b> pour notre monnaie locale, complémentaire et citoyenne.
-Nous avons besoin en quelques mots de montrer notre identité.</p>
-<p>Une phrase rythmée, dans laquelle on comprend quelles sont les valeurs que font circuler nos billets!<p>
 
-<p>C'est un appel à votre sens créatif et à votre imagination. Nous sommes déjà pressés de vous lire!</p>
+<p>Vous êtes convié à l'Assemblée Générale annuelle 2019 du Florain, qui aura lieu 
+le dimanche 03 mars à partir de 14h00<br/> à l'Institut des Sourds de la Malgrange<br/>
+<a href="https://www.openstreetmap.org/search?query=2%20rue%20Joseph%20Piroux%20%C3%A0%20Jarville%20la%20Malgrange%20-%20France#map=18/48.66052/6.19718&layers=H">2 rue Joseph Piroux à Jarville la Malgrange</a> - <b>Salle la Rotonde</b></p>
 
-          <footer>
-            <ul>
-            <li>  <a href="slogan.php" class="button">A vos claviers!</a></li>
-            </ul>
-          </footer>
 
-<p>Lors de notre Assemblée Générale du 03 Mars, un vote sera effectué parmi une sélection de vos nombreuses propositions!"</p>
+<p>L'ordre du jour prévisionnel de l'Assemblée Générale est le suivant:<p>
+<ul>
+ <li>   <b>14h00:</b> Accueil du public, présentation de l'association aux nouvelles personnes (café de l'amitié pour les autres)</li>
+ <li>   <b>14h45:</b> Perspectives 2019</li>
+ <li>   <b>15h15:</b> Présentation du travail mené par le Comité Stratégique et  validation des orientations pour les prochaines années</li>
+ <li>   <b>16h00:</b> Mise à jour des statuts de l'association</li>
+ <li>   <b>16h30:</b> Ré-élection des représentant-e-s de chaque collège au Comité Stratégique et à la Commission d'agrément</li>
+ <li>   <b>17h00:</b> Pot de l'amitié et sélection du slogan du Florain</li>
+ </ul>
+<p>
+Conformément aux statuts du Florain, vous pouvez donner procuration à une personne à jour d'adhésion pour vous représenter. Dans ce cas merci de remettre à cette personne le pouvoir ci-joint rempli et signé (attention, pas plus de deux pouvoirs par personne présente).
+</p>
+<p>  <a href="http://www.reseau-stan.com/horaires/?rub_code=23">Lignes de bus 10 ou 12</a> (arrêts Jarville Sion ou Léon Songeur) - Parking possible à l'intérieur de l'Institut.</p>
 
 
           
@@ -63,8 +70,6 @@ Nous avons besoin en quelques mots de montrer notre identité.</p>
           <p>Comme en 2018, nous avons souhaité maintenir un montant minimum d'adhésion relativement modeste (5 €) pour permettre à chacun et chacune de s'inscrire dans la dynamique du Florain. Si vous en avez la possibilité et l'envie, n'hésitez surtout pas à adhérer pour un montant supérieur (maximum 50 €), les adhésions étant la principale source de financement de l'association !</p>
           <h4>le 1 % associatif</h4>
           <p>Nouveauté pour cette année, vous serez invité lors de votre adhésion à <a href="http://www.monnaielocalenancy.fr/doc/UnPourCentAsso.pdf">choisir une association</a> qui recevra en fin d'année l'équivalent de 1% de ce que vous avez changé (des conversions Euros-Florains que vous aurez effectuées en 2019), sans que cela vous coûte quoi que ce soit. Tout est expliqué en détail <a href="http://beta.monnaielocalenancy.fr/2019/01/02/le-1-associatif-une-nouveaute-pour-2019">sur cet article.</a></p>
-          <h4>Assemblée Générale</h4>
-          <p>nous vous invitons d'ores et déjà à noter dans votre agenda la date du <b>dimanche 03 mars à 14h30</b> pour participer à un temps fort de la vie de notre association: son Assemblée Générale. Les détails vous seront communiqués dans quelques semaines.</p>
         </div>
         <footer>
           <a href="#monnaie" class="button style2 down anchored">More</a>
