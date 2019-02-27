@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 12 fevrier 2019" 
-  sstitre="Mise à jour du au 12 fevrier 2019 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 27 février 2019" 
+  sstitre="Mise à jour du au 27 février 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="de l'Aire de vie Nancéienne">
   <categorie type="Se nourrir">
@@ -45,6 +45,16 @@
         latitude="6.34754419327" 
         longitude="48.6257821472" 
         telephone="" />
+      <acteur siteweb="www.le-petit-francais.fr" 
+        image="le-petit-francais.jpg" 
+        titre="Le Petit Français" 
+        bref="Caviste BIO" 
+        type="Alimentation" 
+        adresse="1 rue Isabey, Nancy" 
+        desc="Caviste spécialisé en vins bio et naturels, une sélection de 150 vignerons y sont représentés dans l'année." 
+        latitude="6.172652" 
+        longitude="48.690786" 
+        telephone="07 82 99 84 70" />
       <acteur anniv="oui" 
         siteweb="www.legoupilvert.fr" 
         image="biocoop.jpg" 
@@ -592,6 +602,20 @@
   </marches>
   <categorie type ="Sortir">
     <scat type="Se restaurer et boire un verre">
+      <acteur date="0219" 
+        siteweb="www.appetit-bio-nancy.fr" 
+        image="appetitbio.jpg" 
+        titre="Appétit Bio" 
+        bref="Restaurant fast-food bio" 
+        type="Restaurant" 
+        desc="Burger BIO, omnivores végétariens ou vegan, plats végétariens ou vegan." 
+        adresse="153 rue Saint Dizier, Nancy" 
+        latitude="6.18598937988" 
+        longitude="48.6860875181" 
+        telephone="09 86 26 22 53" 
+        message="" 
+        citation="" />
+
       <acteur siteweb="facebook les7bourriches" 
         image="les7bourriches.jpg" 
         titre="Les 7 Bourriches" 
@@ -939,7 +963,7 @@
         telephone="06.81.24.49.40" 
         message="" />
       <acteur date="0518" 
-        siteweb="www.jphuber-osteopathe.com" 
+        siteweb="jphuber-osteopathe.com" 
         image="jeanphilippehuber.jpg" 
         titre="Huber Jean-Philippe" 
         bref="Ostéopathie Acupunture" 
@@ -959,6 +983,17 @@
         latitude="6.189856" 
         longitude="48.686635" 
         telephone="03 83 31 27 56" 
+        message="" />
+      <acteur date="0219" 
+        siteweb="fb.me/cheryosteokine" 
+        image="cheryosteokine.jpg" 
+        titre="Benjamin Chery" 
+        bref="Ostéopathie, Yoga" 
+        desc="Ostéopathie douce et énergétique chinoise. Cours de Yoga, type Viniyoga, axé sur la santé globale." 
+        adresse="16 avenue Anatole France, Nancy" 
+        latitude="6.164124" 
+        longitude="48.687785" 
+        telephone="06 73 11 22 29" 
         message="" />
       <acteur siteweb="" 
         image="defaut.jpg" 
