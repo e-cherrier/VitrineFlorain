@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 27 février 2019" 
-  sstitre="Mise à jour du au 27 février 2019 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 1er mars 2019" 
+  sstitre="Mise à jour du au 1er mars 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="de l'Aire de vie Nancéienne">
   <categorie type="Se nourrir">
@@ -22,6 +22,16 @@
         <h l="le samedi" 
           t="09h00 - 19h00"/>
       </acteur>
+      <acteur siteweb="facebook.com/elementrvrac" 
+        image="elementr.jpg" 
+        titre="Element'r" 
+        type="Epicerie" 
+        bref="Epicerie, sans emballage jetable" 
+        desc="La société Element’r est un commerce d’alimentation destiné à la vente sans emballage jetable. Le magasin pourrait s’apparenter à une épicerie à l’ancienne." 
+        adresse="espace commercial Bizet 3 Ter C rue Georges Bizet 54500 Vandoeuvre" 
+        telephone="06 20 67 01 46" 
+        latitude="6.184552" 
+        longitude="48.657648" />
       <acteur fete="oui" 
         siteweb="www.mrsimmsnancy.fr" 
         image="MrSimms.jpg" 
@@ -934,7 +944,10 @@
         longitude="48.68936" 
         telephone="06 68 85 83 02 " 
         message="" 
-        citation="'Quand je pense à tous les livres qu'il me reste à lire, j'ai la certitude d'être encore heureux' Jules Renard" />
+        citation="'Quand je pense à tous les livres qu'il me reste à lire, j'ai la certitude d'être encore heureux' Jules Renard">
+        <h l="du mardi au samedi" 
+          t="10h00 - 18h00"/>
+      </acteur>
     </scat>
   </categorie>
   <categorie type ="Prendre soin de soi">
@@ -1416,7 +1429,7 @@
         message="" />
       <acteur date="0418" 
         comptoir="oui" 
-        siteweb="facebook trocnancypulnoy" 
+        siteweb="troc-nancy.com" 
         image="troc.jpg" 
         titre="Troc" 
         bref="Depot vente meubles" 
@@ -1425,8 +1438,17 @@
         adresse="1 Rue des Trezelots, 54425 Pulnoy" 
         latitude="6.252521" 
         longitude="48.70635" 
-        telephone="03 83 33 17 83" 
-        message="" />
+        telephone="03 83 33 17 83"
+        message="">
+        <h l="le lundi" 
+          t="14h00 - 19h00"/>
+        <h l="du mardi au vendredi" 
+          t="10h00 - 12h00"/>
+        <h l="" 
+          t="14h00 - 19h00"/>
+        <h l="le samedi" 
+          t="09h00 - 19h00"/>
+          </acteur>
     </scat>
   </categorie>
   <categorie type ="Et aussi...">
