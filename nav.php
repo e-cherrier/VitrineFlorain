@@ -13,7 +13,7 @@ class Header {
 
 
         <!-- Nav -->
-            <nav id="nav">
+            <nav id="nav" class="desktop">
               <ul>
                 <li><a href="index.php#monnaie">Une Monnaie locale citoyenne</a>
                       <ul>
@@ -41,12 +41,24 @@ class Header {
                   </ul>
                 </li>
                 <li><a href="http://blog.florain.fr">Actualités</a></li>
-                <li><a class="button" href="">+</a>
+                <li><a><span class="icon fa fa-bars"/></a>
                   <ul>
                     <li><a href="index.php#contact">Contacts</a></li>
                     <li><a target="_blank" href="https://www.facebook.com/LeFlorain" class="icon fa-facebook">  Facebook</a></li>
                     <li><a target="_blank" href="https://twitter.com/LeFlorain" class="icon fa-twitter"> Twitter</a></li>
 		  </ul>
+                </li>
+              </ul>
+            </nav>
+            <nav id="nav" class="app">
+              <ul>
+                <li><a><span class="icon fa fa-bars"/></a>
+                  <ul>
+                    <li><a href="change.php">Où me les procurer?</a></li>
+                    <li> <a href="acteurs.php">Où les dépenser?</a></li>
+                    <li><a href="http://blog.florain.fr">Actualités</a></li>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </nav>
@@ -58,12 +70,19 @@ EOD;
 	function display_acteurs_nav() {
 
 	    $p = <<<EOD
-	    <div  class="actions dark " >
+	    <div  class="actions dark desktop" >
                <a id="press_liste" href="acteurs.php" class="button style2 icon first">Liste</a>
                <a id="press_carte" href="carte.php" class="button style2 icon first">Carte</a>
                <a id="press_comptoirs" href="change.php" class="button style2 icon first">Comptoirs</a>
                <a id="press_imprim" target="_blank" href="annuaire.php?type=Poche" class="button style2 icon first">Annuaire de Poche</a>
                <a id="press_annuaire" target="_blank" href="annuaire.php?type=Livret" class="button style2 icon first">Annuaire en Livret</a>
+            </div>
+            <div  class="actions dark app" >
+               <a id="press_liste" href="acteurs.php" ><span class="icon nav fa fa-server"/></a>
+               <a id="press_carte" href="carte.php" ><span class="icon nav fa fa-compass"/></a>
+               <a id="press_comptoirs" href="change.php" ><span class="icon nav fa fa-calculator"/></a>
+               <a id="press_imprim" href="annuaire.php?type=Poche&output="><span class="icon nav fa fa-book" style="font-size:12;"/></a>
+               <a id="press_annuaire" href="annuaire.php?type=Livret&output="><span class="icon nav fa fa-book" /></a>
             </div>
 EOD;
    	    print $p;

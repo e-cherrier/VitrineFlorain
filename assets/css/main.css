@@ -3857,6 +3857,15 @@ text-decoration: none; }
 			display: none;
 		}
 
+		.icon.nav {
+			color: #39454B;
+			margin: 12px;
+		}
+		.icon.nav:hover {
+
+			color: rgb(206, 216, 221);
+		}
+
 /* Header */
 
 	#header {
@@ -3890,8 +3899,9 @@ text-decoration: none; }
 
 			#logo a span {
 				color: #6e6e6e;
-			    font-weight: normal;
-			    float: right;
+				font-weight: normal;
+				vertical-align: center;
+		        float: left;
 		}
 
 				#logo a:hover span {
@@ -4875,6 +4885,12 @@ h5:hover a {
 				display:none;
 			}
 
+			.desktop {
+				display: block;
+			}
+			.app {
+				display: none;
+			}
 			
 	}
 
@@ -4992,9 +5008,13 @@ h5:hover a {
 					font-size: 1em;
 				}
 
-			#nav {
-				display: none;
-			}
+			
+				.desktop {
+					display: none;
+				}
+				.app {
+					display: block;
+				}
 
 
 
