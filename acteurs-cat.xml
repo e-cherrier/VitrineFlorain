@@ -1068,10 +1068,11 @@
         type="Sante" 
         bref="Ostéopathe" 
         desc="Ostéopathe" 
-        adresse="820 av. du Bon Curé, Ludres" 
-        latitude="6.172953" 
-        longitude="48.616185" 
-        telephone="09 61 30 82 10" 
+        adresse="2 ter rue du Parc, 54510 Art s/ Meurthe" 
+        latitude="6.268271" 
+        longitude="48.65809" 
+        telephone="03 83 54 82 93" 
+        message="Changement d'adresse!" 
         defi="" />
       <acteur_en_attente siteweb="" 
         attente="true" 
@@ -1185,6 +1186,7 @@
         citation="" />
 
       <acteur siteweb="sni-pam.fr" 
+        comptoir="oui" 
         image="sni.jpg" 
         titre="Solidarités Nationales et Internationales" 
         bref="Vente, réemploi, prestations" 
@@ -1192,7 +1194,14 @@
         adresse="13 Rue du Four" 
         latitude="6.055855" 
         longitude="48.900468" 
-        telephone="03 83 83 12 06" />
+        telephone="03 83 83 12 06">
+        <h l="du lundi au vendredi" 
+          t="08h00 - 12h00"/>
+        <h l="" 
+          t="14h00 - 18h00"/>
+        <h l="le samedi" 
+          t="09h00 - 17h00"/>
+      </acteur>
       <acteur siteweb="www.un-des-sens-atelier.fr" 
         image="undessens.jpg" 
         titre="Un Des Sens" 
@@ -1438,7 +1447,7 @@
         adresse="1 Rue des Trezelots, 54425 Pulnoy" 
         latitude="6.252521" 
         longitude="48.70635" 
-        telephone="03 83 33 17 83"
+        telephone="03 83 33 17 83" 
         message="">
         <h l="le lundi" 
           t="14h00 - 19h00"/>
@@ -1448,7 +1457,7 @@
           t="14h00 - 19h00"/>
         <h l="le samedi" 
           t="09h00 - 19h00"/>
-          </acteur>
+      </acteur>
     </scat>
   </categorie>
   <categorie type ="Et aussi...">
@@ -1602,6 +1611,20 @@
   </categorie>
   <categorie type ="S'engager">
     <scat>
+      <acteur date="0219" 
+        siteweb="" 
+        image="gaspar.jpg" 
+        titre="G.A.S.P.A.R." 
+        bref="AMAP et groupement d'achats" 
+        type="AMAP" 
+        desc="L'association GASPAR distribue à ses adhérents, tous les mardis soirs, de 17h45 à 18h45, dans le cadre de son activité AMAP, des légumes du GAEC Romé, des fruits de Mirabio, du pain de la boulangerie 'Un pain de côté' et de la bière de la brasserie coincoin. Elle propose ponctuellement des groupements de commandes avec Artisans du monde." 
+        adresse="48 Esplanade Jacques Baudot, NANCY" 
+        latitude="6.166754" 
+        longitude="48.679425" 
+        telephone="06 02 00 56 62" 
+        message="" 
+        citation="" />
+
       <acteur anniv="oui" 
         date="0818" 
         siteweb="www.artisansdumonde.org" 
