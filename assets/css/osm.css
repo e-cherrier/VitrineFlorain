@@ -1,0 +1,49 @@
+.fullscreen:-moz-full-screen {
+  height: 100%;
+}
+.fullscreen:-webkit-full-screen {
+  height: 100%;
+}
+.fullscreen:-ms-fullscreen {
+  height: 100%;
+}
+
+.fullscreen:fullscreen {
+  height: 100%;
+}
+
+.fullscreen {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 70%;
+}
+
+.ol-rotate {
+  top: 3em;
+}
+
+.map {
+  width: 75%;
+  height: 100%;
+  float: right;
+}
+
+.sidepanel {
+  background: #cfdd3f;
+  width: 25%;
+  height: 100%;
+  float: right;
+}
+
+#popup {
+  background-color: white;
+}
+
+@media screen and (max-width: 736px) {
+  .sidepanel {
+    display:none;
+  }
+  .map {
+    width: 100%;
+  }
+}

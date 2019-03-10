@@ -12,7 +12,8 @@ include('nav.php');
     <meta name="description" content="Site web dedié a la création de la monnaie locale solidaire et citoyenne pour Nancy et ses environs. Le Florain est la dénomination désignée par les futurs usagés!"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/comptoirs.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/nav.css" />
 <!--OSM-->
     <link rel="stylesheet" href="./assets/css/ol.css" type="text/css">
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
@@ -22,50 +23,8 @@ include('nav.php');
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="assets/css/popover.css" />
     <link rel="stylesheet" href="assets/css/cb.css" />
+    <link rel="stylesheet" href="assets/css/osm.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <style>
-    
-    .fullscreen:-moz-full-screen {
-        height: 100%;
-      }
-      .fullscreen:-webkit-full-screen {
-        height: 100%;
-      }
-      .fullscreen:-ms-fullscreen {
-        height: 100%;
-      }
-
-      .fullscreen:fullscreen {
-        height: 100%;
-      }
-
-      .fullscreen {
-        margin-bottom: 10px;
-        width: 100%;
-        height: 70%;
-      }
-
-      .ol-rotate {
-        top: 3em;
-      }
-
-      .map {
-        width: 75%;
-        height: 100%;
-        float: right;
-      }
-
-      .sidepanel {
-        background: #cfdd3f;
-        width: 25%;
-        height: 100%;
-        float: right;
-      }
-
-      #popup {
-        background-color: white;
-      }
-    </style>
 <!--OSM-->
   </head>
 

@@ -54,8 +54,9 @@ class Header {
               <ul>
                 <li><a><span class="icon fa fa-bars"/></a>
                   <ul>
-                    <li><a href="change.php">Où me les procurer?</a></li>
-                    <li> <a href="acteurs.php">Où les dépenser?</a></li>
+                    <li><a href="change.php"><span class="icon fa fa-calculator"/>  Où me les procurer?</a></li>
+                    <li><a href="acteurs.php"><span class="icon fa fa-server"/>  Où les dépenser?</a></li>
+                    <li><a href="carte.php"><span class="icon fa fa-compass"/>  La carte</a></li>
                     <li><a href="http://blog.florain.fr">Actualités</a></li>
                     </li>
                   </ul>
@@ -76,13 +77,6 @@ EOD;
                <a id="press_comptoirs" href="change.php" class="button style2 icon first">Comptoirs</a>
                <a id="press_imprim" target="_blank" href="annuaire.php?type=Poche" class="button style2 icon first">Annuaire de Poche</a>
                <a id="press_annuaire" target="_blank" href="annuaire.php?type=Livret" class="button style2 icon first">Annuaire en Livret</a>
-            </div>
-            <div  class="actions dark app" >
-               <a id="press_liste" href="acteurs.php" ><span class="icon nav fa fa-server"/></a>
-               <a id="press_carte" href="carte.php" ><span class="icon nav fa fa-compass"/></a>
-               <a id="press_comptoirs" href="change.php" ><span class="icon nav fa fa-calculator"/></a>
-               <a id="press_imprim" href="annuaire.php?type=Poche&output="><span class="icon nav fa fa-book" style="font-size:12;"/></a>
-               <a id="press_annuaire" href="annuaire.php?type=Livret&output="><span class="icon nav fa fa-book" /></a>
             </div>
 EOD;
    	    print $p;

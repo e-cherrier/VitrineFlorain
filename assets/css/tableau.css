@@ -1934,11 +1934,6 @@ text-decoration: none; }
 			padding: 0 0 0.5em 0;
 		}
 
-
-	footer {
-		
-	}
-
 	br.clear {
 		clear: both;
 	}
@@ -2279,13 +2274,6 @@ text-decoration: none; }
 
 			}
 
-			input[type="button"].style2.down,
-			input[type="submit"].style2.down,
-			input[type="reset"].style2.down,
-			.button.style2.down,
-			button.style2.down {
-		
-			}
 
 /* Box */
 
@@ -3032,8 +3020,6 @@ text-decoration: none; }
 	}
 
 
-		#logo a {
-		}
 
 			#logo a span {
 				color: #6e6e6e;
@@ -3093,7 +3079,6 @@ text-decoration: none; }
 				}
 
 				#nav ul li a.icon {
-					float: left;
 					display: inline;
 				}
 
@@ -3290,7 +3275,7 @@ text-decoration: none; }
 		list-style-type: disc;
         }
 	#faq p {
-		color=#fff;
+		color:#fff;
 	}
 
 /* One */
