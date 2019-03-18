@@ -243,7 +243,7 @@ Les adhésions prises après le 1er octobre d'une année sont également valable
                 </div>
                 <div class="row 50%">
                   <div class="6u 12u(mobile)"><h4>Veuillez entrer le resultat de un plus un:</h4></div>
-                  <div class="6u 12u(mobile)"><input type="text" name="calcul" id="calcul" placeholder="Un robot ne sais pas !"></div>
+                  <div class="6u 12u(mobile)"><input type="text" name="calcul" id="calcul" placeholder="Un robot ne sait pas !"></div>
                 </div>
                 <div class="row">
                   <div class="12u">

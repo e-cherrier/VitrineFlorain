@@ -28,83 +28,36 @@ $header = new Header();
 $header->display();
 ?>
 
-      <section id="accueil" class="main style2 right red fullscreen">
+      <section id="accueil" class="main style2 right dark fullscreen">
         <div class="content box style1">
           <header>
-          <h2>Assemblée Générale</h2>
-          <h4>Dimanche 3 mars - 14h</h4>
+<h2>Le Florain</h2>
+<h4>La monnaie locale du sud de la Meurthe et Moselle</h4>
           </header>
+<h3>Depuis la fete de lancement le 7 octobre 2017, le Florain c'est:</h3>
 
-<p>Vous êtes convié à l'Assemblée Générale annuelle 2019 du Florain, qui aura lieu 
-le dimanche 03 mars à partir de 14h00<br/> à l'Institut des Sourds de la Malgrange<br/>
-<a href="https://www.openstreetmap.org/search?query=2%20rue%20Joseph%20Piroux%20%C3%A0%20Jarville%20la%20Malgrange%20-%20France#map=18/48.66052/6.19718&layers=H">2 rue Joseph Piroux à Jarville la Malgrange</a> - <b>Salle la Rotonde</b></p>
-
-
-<p>L'ordre du jour prévisionnel de l'Assemblée Générale est le suivant:<p>
-<ul>
- <li>   <b>14h00:</b> Accueil du public, présentation de l'association aux nouvelles personnes (café de l'amitié pour les autres)</li>
- <li>   <b>14h45:</b> Perspectives 2019</li>
- <li>   <b>15h15:</b> Présentation du travail mené par le Comité Stratégique et  validation des orientations pour les prochaines années</li>
- <li>   <b>16h00:</b> Mise à jour des statuts de l'association</li>
- <li>   <b>16h30:</b> Ré-élection des représentant-e-s de chaque collège au Comité Stratégique et à la Commission d'agrément</li>
- <li>   <b>17h00:</b> Pot de l'amitié et sélection du slogan du Florain</li>
- </ul>
-<p>
-Conformément aux statuts du Florain, vous pouvez donner procuration à une personne à jour d'adhésion pour vous représenter. Dans ce cas merci de remettre à cette personne le pouvoir ci-joint rempli et signé (attention, pas plus de deux pouvoirs par personne présente).
-</p>
-<p>  <a href="http://www.reseau-stan.com/horaires/?rub_code=23">Lignes de bus 10 ou 12</a> (arrêts Jarville Sion ou Léon Songeur) - Parking possible à l'intérieur de l'Institut.</p>
-
-
-          
-        </div>
+<h4>Un réseau de plus de 140 professionnels,</h4>
+<h4>11 comptoirs de change,</h4>
+<h4>80.000 Florains en circulation,</h4>
+<h4>1000 Florains de plus par semaine dans le circuit,</h4>
+<h4>des groupes locaux à Toul et Lunéville
+<br/>
+<h3>Vous aussi, entrez dans la dynamique !</h3>
+<br/>
+      <footer>
+	<ul class="style2">
+  <li>  <a href="#readhesion" class="button style2">ré-adhésion</a></li>
+	 <li>  <a href="http://beta.monnaielocalenancy.fr/que-puis-je-faire/" class="button style2">Bénévolat</a></li>
+	 <li>  <a href="#contact" class="button style2">Contact Pros</a></li>
+	 <li>  <a href="http://beta.monnaielocalenancy.fr/lettredinformations" class="button style2">Recevoir les info</a></li>
+	</ul>
+      </footer>
+  </div>
         <footer>
           <a href="#readhesion" class="button style2 down anchored">More</a>
         </footer>
       </section>
-
-      <section id="readhesion" class="main style2 right red fullscreen">
-        <div class="content box style1">
-          <header>
-          <h2>Campagne de ré-adhésion 2019.</h2>
-          </header>
-          <p>Qui dit nouvelle année dit ré-adhésion ! Nous vous invitons donc, si vous n'avez pas encore votre carte "2019", à vous rendre dans un <a href="http://www.monnaielocalenancy.fr/change.php">bureau de change</a> pour renouveler votre adhésion.</p>
-          <p>Comme en 2018, nous avons souhaité maintenir un montant minimum d'adhésion relativement modeste (5 €) pour permettre à chacun et chacune de s'inscrire dans la dynamique du Florain. Si vous en avez la possibilité et l'envie, n'hésitez surtout pas à adhérer pour un montant supérieur (maximum 50 €), les adhésions étant la principale source de financement de l'association !</p>
-          <h4>le 1 % associatif</h4>
-          <p>Nouveauté pour cette année, vous serez invité lors de votre adhésion à <a href="http://www.monnaielocalenancy.fr/doc/UnPourCentAsso.pdf">choisir une association</a> qui recevra en fin d'année l'équivalent de 1% de ce que vous avez changé (des conversions Euros-Florains que vous aurez effectuées en 2019), sans que cela vous coûte quoi que ce soit. Tout est expliqué en détail <a href="http://beta.monnaielocalenancy.fr/2019/01/02/le-1-associatif-une-nouveaute-pour-2019">sur cet article.</a></p>
-        </div>
-        <footer>
-          <a href="#monnaie" class="button style2 down anchored">More</a>
-        </footer>
-      </section>
-
 <!--
-      <section id="accueil" class="main style2 right red fullscreen">
-        <div class="content box style1">
-          <header>
-            <h2>Le Florain a un 1 an!</h2>
-            <h3>Les nouveautés</h3>
-          </header>
-          <footer>
-            <ul>
-            <li>  <a href="#unpourcent" class="button">Plus d'info</a></li>
-            </ul>
-          </footer>
-          <h4>le 1 % associatif</h4>
-          <p>Pour 100 Euros échangés en Florains, un Florain est reversé à une association de votre choix!</p>
-          <h4>le partenariat avec La Nef</h4>
-          <p>Notre partenaire financier s'engage à investir sur notre territoire au moins le double des Florains en circulation!</p>
-          <footer>
-            <ul>
-            <li>  <a target="blank" href="http://monnaie-locale-complementaire-citoyenne.net/convention-mlcc-sol-nef" class="button">Plus d'info</a></li>
-            </ul>
-          </footer>
-
-        </div>
-        <footer>
-          <a href="#unpourcent" class="button style2 down anchored">More</a>
-        </footer>
-      </section>
-
       <section id="accueil" class="main style2 right dark fullscreen">
         <div class="content box style1">
           <header>
@@ -180,6 +133,23 @@ Conformément aux statuts du Florain, vous pouvez donner procuration à une pers
         </footer>
       </section>
 -->
+
+      <section id="readhesion" class="main style2 right red fullscreen">
+        <div class="content box style1">
+          <header>
+          <h2>Campagne de ré-adhésion 2019.</h2>
+          </header>
+          <p>Qui dit nouvelle année dit ré-adhésion ! Nous vous invitons donc, si vous n'avez pas encore votre carte "2019", à vous rendre dans un <a href="http://www.monnaielocalenancy.fr/change.php">bureau de change</a> pour renouveler votre adhésion.</p>
+          <p>Comme en 2018, nous avons souhaité maintenir un montant minimum d'adhésion relativement modeste (5 €) pour permettre à chacun et chacune de s'inscrire dans la dynamique du Florain. Si vous en avez la possibilité et l'envie, n'hésitez surtout pas à adhérer pour un montant supérieur (maximum 50 €), les adhésions étant la principale source de financement de l'association !</p>
+          <h4>le 1 % associatif</h4>
+          <p>Nouveauté pour cette année, vous serez invité lors de votre adhésion à <a href="http://www.monnaielocalenancy.fr/doc/UnPourCentAsso.pdf">choisir une association</a> qui recevra en fin d'année l'équivalent de 1% de ce que vous avez changé (des conversions Euros-Florains que vous aurez effectuées en 2019), sans que cela vous coûte quoi que ce soit. Tout est expliqué en détail <a href="http://beta.monnaielocalenancy.fr/2019/01/02/le-1-associatif-une-nouveaute-pour-2019">sur cet article.</a></p>
+        </div>
+        <footer>
+          <a href="#monnaie" class="button style2 down anchored">More</a>
+        </footer>
+      </section>
+
+
 
 <!--
       <section id="accueil" class="main style2 right dark fullscreen">
@@ -448,7 +418,7 @@ while(x=eval(x));
                 </div>
                 <div class="row 50%">
                   <div class="6u 12u(mobile)"><h4>Veuillez entrer le résultat de un plus un:</h4></div>
-                  <div class="6u 12u(mobile)"><input type="text" name="calcul" id="calcul" placeholder="Un robot ne sais pas !"></div>
+                  <div class="6u 12u(mobile)"><input type="text" name="calcul" id="calcul" placeholder="Un robot ne sait pas !"></div>
                 </div>
                 <div class="row">
                   <div class="12u">

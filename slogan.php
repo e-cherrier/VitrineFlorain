@@ -84,7 +84,7 @@ setTimeout("window.location=url", 500)
                 </div>
                 <div class="row 50%">
                   <div class="6u 12u(mobile)"><h4>Veuillez entrer le résultat de un plus un:</h4></div>
-                  <div class="6u 12u(mobile)"><input type="text" name="calcul" id="calcul" placeholder="Un robot ne sais pas !"></div>
+                  <div class="6u 12u(mobile)"><input type="text" name="calcul" id="calcul" placeholder="Un robot ne sait pas !"></div>
                 </div>
                 <div class="row">
                   <div class="12u">
