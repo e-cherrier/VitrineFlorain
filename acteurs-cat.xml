@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 1er mars 2019" 
-  sstitre="Mise à jour du au 1er mars 2019 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 12 avril 2019" 
+  sstitre="Mise à jour du au 12 avril 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="de l'Aire de vie Nancéienne">
   <categorie type="Se nourrir">
@@ -1461,6 +1461,31 @@
   </categorie>
   <categorie type ="S'engager">
     <scat>
+      <acteur date="0419" 
+        siteweb="https://dynamap54.wordpress.com" 
+        image="dynamap.jpg" 
+        titre="Dyn'amap"
+        bref="Paniers légumes et bières bio" 
+        desc="Distribution hebdomadaire de paniers légumes (ferme du Vallet Bona) et mensuelle de bières artisanales bio de la brasserie COIN-COIN." 
+        adresse="35, Grande Rue, NANCY" 
+        latitude="6.18045330048" 
+        longitude="48.6957619758" 
+        telephone="06 78 39 42 74" 
+        message="" 
+        citation="" />
+      <acteur date="0319" 
+        siteweb="www.fermeduplateau.fr" 
+        image="lafermeduplateau.jpg" 
+        titre="La Ferme du Plateau de Haye" 
+        bref="Permaculture,Oasis urbaine, éducative et participative" 
+        desc="L’association de La Ferme du Plateau de Haye est une ferme pédagogique ouverte à tous. C’est un lieu d’échanges de connaissances et de savoir-faire. L’endroit se veut naturel et relaxant." 
+        adresse="557 rue Henry Brun, Maxéville." 
+        latitude="6.1447042" 
+        longitude="48.7059214" 
+        telephone="06.35.29.27.72" 
+        message="" 
+        citation="" />
+
       <acteur date="0219" 
         siteweb="" 
         image="gaspar.jpg" 
@@ -1531,7 +1556,7 @@
         latitude="5.931616" 
         longitude="48.643115" 
         telephone="" />
-      <acteur siteweb="lespaniersdeleopold.fr/" 
+      <acteur siteweb="lespaniersdeleopold.fr" 
         image="lespaniersdeleopold.jpg" 
         titre="Les Paniers de Léopold" 
         bref="AMAP" 
@@ -1635,4 +1660,4 @@
 </categories>
 <!--
     <acteur date="0518" siteweb="" image="defaut.jpg" titre="" bref="" type="" desc="" adresse="" latitude="6" longitude="48" telephone="" message="" citation="" />
-    -->
+-->
