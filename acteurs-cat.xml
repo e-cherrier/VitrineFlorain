@@ -5,7 +5,7 @@
   localisation="de l'Aire de vie Nancéienne">
   <categorie type="Se nourrir">
     <scat type="Épiceries">
-      <acteur date="0419" 
+      <acteur date="22-04-2019" 
         siteweb="facebook gustovinolaxou" 
         image="gustovino.jpg" 
         titre="Gusto Vino" 
@@ -159,7 +159,7 @@
         telephone="03.83.34.19.50" />
     </scat>
     <scat type="Producteurs">
-      <acteur date="0519" 
+      <acteur date="10-5-2019" 
         siteweb="ceciledeblic.com/fruits" 
         image="pomazane.jpg" 
         titre="Pomazane" 
@@ -171,7 +171,7 @@
         telephone="06 78 11 43 65" 
         message="" 
         citation="La production de jus et de confitures n'est pas mon activité principale, mais je suis fière de pouvoir commercialiser ces bons produits naturels ( non traités) en florains pour régaler petits et grands, développer une économie locale, circulaire, et non financiarisée!! " />
-      <acteur date="0419" 
+      <acteur date="22-04-2019" 
         siteweb="facebook @lesjardinsdephilibert" 
         image="lesjardinsdephilibert.jpg" 
         titre="Les Jardins de Philibert" 
@@ -740,7 +740,7 @@
         message="" />
     </scat>
     <scat type="Se cultiver, se divertir, se détendre">
-      <acteur date="0519" 
+      <acteur date="10-5-2019" 
         siteweb="" 
         image="giteenroulotte.jpg" 
         titre="Gîte en roulotte" 
@@ -752,7 +752,7 @@
         telephone="06 86 87 20 24" 
         message="" 
         citation="" />
-      <acteur date="0419" 
+      <acteur date="22-04-2019" 
         siteweb="facebook zestprod" 
         image="zest.jpg" 
         titre="Z'est Productions" 
@@ -929,7 +929,7 @@
   </categorie>
   <categorie type ="Prendre soin de soi">
     <scat>
-      <acteur date="0419" 
+      <acteur date="22-04-2019" 
         siteweb="www.letempsde.fr" 
         image="letempsde.jpg" 
         titre="Le Temps De..." 
@@ -1404,7 +1404,7 @@
   </categorie>
   <categorie type ="Et aussi...">
     <scat>
-      <acteur date="0519" 
+      <acteur date="10-5-2019" 
         siteweb="mariusetleon.fr" 
         image="mariusetleon.jpg" 
         titre="Marius et Léon" 
@@ -1416,7 +1416,7 @@
         telephone="07 67 65 93 29" 
         message="" 
         citation="La réduction des déchets et la remise en question de notre société de consommation sont aujourd'hui indispensables face à l'urgence climatique. Les produits lavables Marius et Léon vous accompagneront dans votre démarche de réduction des déchets!" />
-      <acteur date="0419" 
+      <acteur date="22-04-2019" 
         siteweb="www.3idfx.fr" 
         image="3idfx.jpg" 
         titre="3IDFx" 
@@ -1569,8 +1569,8 @@
   </categorie>
   <categorie type ="S'engager">
     <scat>
-      <acteur date="0419" 
-        siteweb="https://dynamap54.wordpress.com" 
+      <acteur date="22-04-2019" 
+        siteweb="dynamap54.wordpress.com" 
         image="dynamap.jpg" 
         titre="Dyn'amap" 
         bref="Paniers légumes et bières bio" 

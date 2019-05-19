@@ -50,11 +50,17 @@ $header->display();
       $acteurs = $x->getElementsByTagName('acteur');
       $nb_acteurs = $acteurs->length;
 
+      $today = new DateTime;
+      $today->setTimestamp( time() );
+      $oneMonthAgo = $today->sub(DateInterval::createFromDateString('1 month'));
+
       for ($a = 0; $a < $nb_acteurs; ++$a) {
           $acteur = $acteurs[$a];
           $date = $acteur->getAttribute('date');
+          // $datetime2 = date_create('2009-10-13');
+          $aggDate = DateTime::createFromFormat("d-m-Y", $date);
           $titre = str_replace("'", '', $acteur->getAttribute('titre'));
-          if ($date == '0419') {
+          if ($oneMonthAgo < $aggDate ) {
               $nouveaux[$idx] = $acteur;
               $idx = $idx + 1;
           }
