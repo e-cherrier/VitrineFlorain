@@ -1,5 +1,5 @@
 ﻿<?php
-include('nav.php');
+include 'nav.php';
 ?>
 <!--
   Big Picture by HTML5 UP
@@ -13,13 +13,18 @@ include('nav.php');
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style_accueil.css" />
     <link rel="stylesheet" href="assets/css/nav.css" />
-    <link rel="stylesheet" href="assets/css/slider.css" />
+    <link rel="stylesheet" href="assets/css/bs_carousel.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   </head>
   <body id="top">
 
@@ -28,9 +33,103 @@ $header = new Header();
 $header->display();
 ?>
 
-      <section id="accueil" class="main style2 right dark fullscreen">
+      <section id="accueil" class="main styleAcceuil right dark fullscreen">
         <div class="content box style1">
-          <header>
+          <h2> Les derniers acteurs agréés </h2>
+<div id="myCarousel" class="carousel slide">
+
+    <?php
+
+      $xmlDoc = new DOMDocument();
+      $xmlDoc->load('acteurs-cat.xml');
+      $x = $xmlDoc->documentElement;
+
+      $nouveaux = array();
+      $idx = 0;
+
+      $acteurs = $x->getElementsByTagName('acteur');
+      $nb_acteurs = $acteurs->length;
+
+      for ($a = 0; $a < $nb_acteurs; ++$a) {
+          $acteur = $acteurs[$a];
+          $date = $acteur->getAttribute('date');
+          $titre = str_replace("'", '', $acteur->getAttribute('titre'));
+          if ($date == '0419') {
+              $nouveaux[$idx] = $acteur;
+              $idx = $idx + 1;
+          }
+      }
+      // <!-- Indicators -->
+      echo "<ol class='carousel-indicators'>\n";
+      echo "<li data-target='#myCarousel' data-slide-to='0' class='active'></li>\n";
+      for ($a = 1; $a < count($nouveaux); ++$a) {
+          echo "<li data-target='#myCarousel' data-slide-to='".$a."' ></li>\n";
+      }
+      echo "</ol>\n";
+
+      // <!-- Wrapper for slides -->
+      echo "<div class='carousel-inner'>\n";
+      $acteur = $nouveaux[0];
+      $image = $acteur->getAttribute('image');
+      $titre = str_replace("'", '', $acteur->getAttribute('titre'));
+      $desc = $acteur->getAttribute('desc');
+      $adresse = $acteur->getAttribute('adresse');
+      $siteweb = $acteur->getAttribute('siteweb');
+      echo "  <div class='item active'>\n";
+      echo "     <img src='images/acteurs/".$image."' alt='".$titre."'/>\n";
+      echo "     <div>\n";
+      echo "       <h1 align='center'>".$titre."</h1>\n";
+      echo '       <p >'.$desc."</p>\n";
+      echo "       <div class='coordonnees'>\n";
+      echo '         <p >'.$adresse."<br/>\n";
+      echo "         <a href='http://".$siteweb."'>".$siteweb."</a></p>\n";
+      echo "       </div>\n";
+      echo "     </div>\n";
+      echo "  </div>\n";
+      for ($a = 1; $a < count($nouveaux); ++$a) {
+          $acteur = $nouveaux[$a];
+          $image = $acteur->getAttribute('image');
+          $titre = str_replace("'", '', $acteur->getAttribute('titre'));
+          $desc = $acteur->getAttribute('desc');
+          $adresse = $acteur->getAttribute('adresse');
+          $siteweb = $acteur->getAttribute('siteweb');
+          echo "  <div class='item'>\n";
+          echo "    <img src='images/acteurs/".$image."' alt='".$titre."'/>\n";
+          echo "     <div>\n";
+          echo "      <h1 align='center'>".$titre."</h1>\n";
+          echo '      <p >'.$desc."</p>\n";
+          echo "      <div class='coordonnees'>\n";
+          echo '        <p >'.$adresse."<br/>\n";
+          echo "        <a href='http://".$siteweb."'>".$siteweb."</a></p>\n";
+          echo "      </div>\n";
+          echo "     </div>\n";
+          echo "  </div>\n";
+      }
+      echo "</div>\n";
+    ?>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+  
+  </div>
+        <footer>
+          <a href="#recap" class="button style2 down anchored">More</a>
+        </footer>
+  </section>
+
+      <section id="recap" class="main style2 right dark fullscreen">
+        <div class="content box style1">
+          
+  <header>
 <h2>Le Florain</h2>
 <h4>La monnaie locale du sud de la Meurthe et Moselle</h4>
           </header>
@@ -57,7 +156,8 @@ $header->display();
           <a href="#readhesion" class="button style2 down anchored">More</a>
         </footer>
       </section>
-<!--
+
+      <!--
       <section id="accueil" class="main style2 right dark fullscreen">
         <div class="content box style1">
           <header>
@@ -87,40 +187,36 @@ $header->display();
           <h3> Les dernières nouvelles</h3>
         <table>
         <php
-        require_once( "../wp.monnaielocalenancy.fr/wp-load.php");
+        require_once '../wp.monnaielocalenancy.fr/wp-load.php';
         // Connexion a la base de donnees
-        try
-        {
-        	$str = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME;
-        	$bdd = new PDO( $str, DB_USER, DB_PASSWORD );
-        }
-        catch(Exception $e)
-        {
-                die('Erreur : '.$e->getMessage());
+        try {
+            $str = 'mysql:host='.DB_HOST.';dbname='.DB_NAME;
+            $bdd = new PDO($str, DB_USER, DB_PASSWORD);
+        } catch (Exception $e) {
+            die('Erreur : '.$e->getMessage());
         }
 
         // Recuperation des 3 derniers messages
         $reponse = $bdd->query("SELECT guid, post_title, post_content FROM wp_posts WHERE post_status='publish' ORDER BY post_date DESC LIMIT 3") or die(print_r($bdd->errorInfo()));
 
         // Affichage de chaque message (toutes les donnï¿½es sont protï¿½gï¿½es par htmlspecialchars)
-        while ($donnees = $reponse->fetch())
-        {
-        	$post_content = $donnees['post_content'];
-          $xmlDoc = new DOMDocument();
-          $xmlDoc->loadHTML( $post_content );
-          $x = $xmlDoc->documentElement;
-          $images = $x->getElementsByTagName( "img" );
-        	if( count( $images ) > 0 ) {
-        	    print '<tr>';
-        	    print ' <td>';
-              print " <a href='" . $donnees['guid'] . "'>";
-        	    print '  <h2>' . iconv( "CP1252", "UTF-8",  $donnees['post_title'] ) . '</h2>' ;
-        	    $src = $images[0]->getAttribute( "src" );
-        	    print "  <img src='" . $src . "' />";
-        	    print ' </a>';
-        	    print ' </td>';
-        	    print '</tr>';
-        	}
+        while ($donnees = $reponse->fetch()) {
+            $post_content = $donnees['post_content'];
+            $xmlDoc = new DOMDocument();
+            $xmlDoc->loadHTML($post_content);
+            $x = $xmlDoc->documentElement;
+            $images = $x->getElementsByTagName('img');
+            if (count($images) > 0) {
+                echo '<tr>';
+                echo ' <td>';
+                echo " <a href='".$donnees['guid']."'>";
+                echo '  <h2>'.iconv('CP1252', 'UTF-8', $donnees['post_title']).'</h2>';
+                $src = $images[0]->getAttribute('src');
+                echo "  <img src='".$src."' />";
+                echo ' </a>';
+                echo ' </td>';
+                echo '</tr>';
+            }
         }
 
         $reponse->closeCursor();
@@ -149,69 +245,6 @@ $header->display();
         </footer>
       </section>
 
-
-
-<!--
-      <section id="accueil" class="main style2 right dark fullscreen">
-        <div class="content box style1">
-          <header>
-	  <h2>Le Florain vient d'éclore!</h2>
-          </header>
-	<p>
-	<h4 style="font-size:20pt"><b>C'est grâce à vous, tous ensemble nous avons rempli les objectifs fixés.</b></h4>
-
-<p>Plus de 140 contributeurs ont permis de donner naissance à cette initiative citoyenne!</p>
-
-
-	<p>Nancy aura avec le Florain un outil pour construire une économie écologiquement et humainement responsable.</p>
-
-	<p>C'est une aventure collective qui commence remplie d'enthousiasme et de volonté pour construire une société durable!
-
-A vous tous qui avez contribué, à vous qui en avez parlé à vos proches et qui vous êtes fait porte parole de ce projet,<p>
-<p><b>le Florain vous dit MERCI! Vous êtes super!</b></p>
-
-<p>
-Continuez à vivre cette aventure en suivant l'actualité du Florain sur les réseaux sociaux et sur ce site internet. Rejoignez les équipes de bénévoles qui travaillent au projet: <a href="#contact">laissez nous un message.</a>
-
-
-Vous êtes commerçant et vous voulez vous engager dans une transition écologique et sociale? Vous connaissez des commerçants qui souhaitent s'y engager? <a href="#contact">laissez nous un message.</a>
-
-</p>
-
-      <footer>
-	<ul class="style2">
-	 <li>  <a href="http://beta.monnaielocalenancy.fr" class="button">En savoir plus</a></li>
-	 <li>  <a href="http://beta.monnaielocalenancy.fr/que-puis-je-faire/" class="button">Adhésions</a></li>
-	 <li>  <a href="#contact" class="button">Contact Pros</a></li>
-	 <li>  <a href="https://listes.lautre.net/cgi-bin/mailman/listinfo/mlc" class="button">Recevoir les info</a></li>
-	</ul>
-      </footer>
-        </div>
-        <footer>
-          <a href="#monnaie" class="button style2 down anchored">More</a>
-        </footer>
-        </div>
-      </section>
-
-      <section id="unpourcent" class="main style2 left green">
-        <div class="content box style1">
-          <header>
-            <h2>le 1 % associatif</h2>
-          </header>
-
-          <h1>A partir du 1er janvier 2019, nous mettrons en place le dispositif "1% pour les associations".</h1>
-          <p class="onecolumn">
-
-Ce dernier fonctionne simplement: quand une personne viendra adhérer au Florain, elle désignera une association de son choix parmi la liste des associations membres du Florain.<br/><br/>
-
-Ensuite, à chaque fois que cette personne changera des euros contre des Florains nous ferons un don en Florain, correspondant à 1% de la somme changée, à son association destinataire. Pour un change de 100 euros, la personne recevra donc 100 Florains, et son association destinataire 1 Florain: une bonne manière de motiver les gens à changer régulièrement.<br/><br/>
-
-Le dispositif sera opérationnel à partir du 1er janvier, mais la campagne d'adhésions pour l'année 2019 a déjà commencé!</p>
-          <footer><a target="_blank" class="button icon first" href="http://monnaie-locale-complementaire-citoyenne.net/convention-mlcc-sol-nef"> Partenariat Nef</a><footer>
-        </div>
-        <a href="#monnaie" class="button style1 down anchored">Next</a>
-      </section>
--->
 
     <!-- monnaie -->
       <section id="monnaie" class="main style1 left dark fullscreen">

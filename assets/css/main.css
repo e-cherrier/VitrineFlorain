@@ -660,7 +660,7 @@
 		}
 
 		.container {
-			width: 1360px;
+			width: 100%;
 		}
 
 	}
@@ -686,7 +686,7 @@
 		}
 
 		.container {
-			width: 1200px;
+			width: 100%;
 		}
 
 	}
@@ -712,7 +712,7 @@
 		}
 
 		.container {
-			width: 960px;
+			width: 100%;
 		}
 
 	}
@@ -738,7 +738,7 @@
 		}
 
 		.container {
-			width: 95%;
+			width: 100%;
 		}
 	.column {
              -webkit-column-count: 2; /* Chrome, Safari, Opera */
@@ -770,7 +770,7 @@
 		}
 
 		.container {
-			width: 95%;
+			width: 100%;
 		}
 /* colums */
 
@@ -2389,7 +2389,7 @@
 		}
 	#one footer{
 
-				margin-top: 0;
+		margin-top: 0;
 
 
 	}
@@ -3926,15 +3926,6 @@ text-decoration: none; }
 		padding-top: 0;
 		background-color: #fff;
 	}
-	#accueil {
-		background: url("../../images/com/idee_florain.png");
-		background-size: auto 80%;
-		background-attachment: fixed;
-		background-position: center left ;
-		background-repeat: no-repeat;
-		padding-top: 10;
-		background-color: #d7da23;
-	}
 	#readhesion {
 		background: url("../../images/mur.jpg");
 		background-size: auto 80%;
@@ -4758,9 +4749,6 @@ h5:hover a {
 
 	@media screen and (max-width: 736px) {
 
-		    .slide {
-				display: none;
-			}
 			.anniv img.sf {
 				display: block;
 			}

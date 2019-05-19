@@ -1,0 +1,151 @@
+#accueil {
+  background: url("../../images/mur.jpg");
+  background-size: auto 80%;
+  background-attachment: fixed;
+  background-position: center left;
+  background-repeat: no-repeat;
+  padding-top: 10;
+  background-color: #d7da23;
+}
+
+.main.styleAcceuil {
+  padding: 3em 0 3em 0;
+  overflow: hidden;
+}
+
+.main.styleAcceuil .content {
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  -moz-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  position: relative;
+  width: 90%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main.styleAcceuil.left:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.main.styleAcceuil.left .content {
+  left: 0;
+}
+
+.main.styleAcceuil.right:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.main.styleAcceuil.right .content {
+  left: 10%;
+}
+
+.main.styleAcceuil.inactive.left .content {
+  left: -90%;
+}
+
+.main.styleAcceuil.inactive.right .content {
+  left: 100%;
+}
+
+/* Wide */
+
+@media screen and (min-width: 1921px) {
+  .main.styleAcceuil .content {
+    width: 80%;
+  }
+
+  .main.styleAcceuil.right .content {
+    left: 10%;
+  }
+
+  .main.styleAcceuil.inactive.left .content {
+    left: -90%;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .main.styleAcceuil .content {
+    width: 80%;
+  }
+
+  .main.styleAcceuil.right .content {
+    left: 10%;
+  }
+
+  .main.styleAcceuil.inactive.left .content {
+    left: -90%;
+  }
+}
+
+/* Narrow */
+
+@media screen and (max-width: 1280px) {
+  /* Main */
+
+  .main.styleAcceuil .content {
+    width: 80%;
+  }
+
+  .main.styleAcceuil.right .content {
+    left: 10%;
+  }
+
+  .main.styleAcceuil.inactive.left .content {
+    left: -90%;
+  }
+}
+
+/* Narrower */
+
+@media screen and (max-width: 1000px) {
+  .main.styleAcceuil .content {
+    width: 80%;
+  }
+
+  .main.styleAcceuil.right .content {
+    left: 10%;
+  }
+
+  .main.styleAcceuil.inactive.left .content {
+    left: -90%;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+  .main.styleAcceuil {
+    padding: 6em 15px 6em 15px;
+  }
+
+  .main.styleAcceuil:before,
+  .main.styleAcceuil:after {
+    display: none !important;
+  }
+
+  .main.styleAcceuil .button.anchored {
+    display: none;
+  }
+
+  .main.styleAcceuil .content {
+    width: 100%;
+    left: 0% !important;
+    text-align: center;
+  }
+
+  .main.styleAcceuil .tmp {
+    width: 100%;
+    height: 10em;
+    background-size: cover;
+  }
+}
