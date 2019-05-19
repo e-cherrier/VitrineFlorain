@@ -3908,6 +3908,15 @@ text-decoration: none; }
 	#acteurs h2 {
 		text-align: center;
 	}
+	#recap {
+		background: url("../../images/Billets.jpg");
+		background-size: 100% auto;
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		padding-top: 0;
+		background-color: #fff;
+	}
 	#medias {
 		background: url("../../images/media-bg.jpg");
 		background-size: 100% auto;
