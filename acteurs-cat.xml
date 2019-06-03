@@ -554,7 +554,6 @@
       latitude="6.18302285671" 
       longitude="48.6892039446" />
     <scat id="maxeville" 
-      comptoir="oui" 
       image="marche.jpg" 
       titre="au Marché de Maxéville" 
       code="3" 
@@ -563,11 +562,7 @@
       desc="les jeudi de 16h à 19h" 
       adresse="Rue des brasseries Maxeville" 
       latitude="6.164457" 
-      longitude="48.706645" 
-      message_comptoir="Assuré par des bénévoles du Florain.">
-      <h l="Le premier jeudi du mois" 
-        t="16h00 - 19h00"/>
-    </scat>
+      longitude="48.706645" />
     <scat id="vandoeuvre" 
       comptoir="oui" 
       image="marche.jpg" 
@@ -1162,7 +1157,7 @@
         titre="Solidarités Nationales et Internationales" 
         bref="Vente, réemploi, prestations" 
         desc="A travers ses chantiers d'insertion, SNI propose la vente de mobiliers, de décorations et de vêtements issues du réemploi. L'association propose également des prestations dans le domaine du nettoyage, des déménagements/débarras, des petits travaux, ou encore de l'entretien des espaces verts. Pour finir, l'association vend diverses productions de légumes issues de ses Jardins." 
-        adresse="13 Rue du Four" 
+        adresse="13 Rue du Four, Pont à Mousson" 
         latitude="6.055855" 
         longitude="48.900468" 
         telephone="03 83 83 12 06">
