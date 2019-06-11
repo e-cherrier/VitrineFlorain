@@ -159,11 +159,25 @@
         telephone="03.83.34.19.50" />
     </scat>
     <scat type="Producteurs">
+      <acteur date="11-6-2019" 
+        siteweb="www.labergerieduouchy.fr" 
+        marche="vandoeuvre haroue" 
+        image="bergerieduouchy.jpg" 
+        titre="La Bergerie du Ouchy" 
+        bref="élevage, viande d'agneau" 
+        desc="bergère, j'élève mes agneaux et vends leur viande en direct après avoir assuré par mes soins la découpe et la transformation." 
+        adresse="17 rue Saint Joseph, Vroncourt" 
+        latitude="6.07528" 
+        longitude="48.4631" 
+        telephone="06 81 96 95 50" 
+        message="" 
+        citation="" />
+
       <acteur date="10-5-2019" 
         siteweb="ceciledeblic.com/fruits" 
         image="pomazane.jpg" 
         titre="Pomazane" 
-        bref="Jus de fruit et confitures"
+        bref="Jus de fruit et confitures" 
         desc="Production et transformation en jus et confitures de bons fruits issus du terroir de germiny ( près de Nancy, en pays Terres de Lorraine) et du soleil de la Drôme. Jus de pomme de poire et de pomme coing, 14 parfums de confiture." 
         adresse="15 grande rue, Germiny" 
         latitude="5.997584" 
@@ -175,7 +189,7 @@
         siteweb="facebook @lesjardinsdephilibert" 
         image="lesjardinsdephilibert.jpg" 
         titre="Les Jardins de Philibert" 
-        bref="Maraichage bio"
+        bref="Maraichage bio" 
         desc="Maraichage  biologique diversifié avec plus de 30 légumes différents, en projet: des poules pondeuses." 
         adresse="route de Moivron, Nomeny" 
         latitude="6.225163" 
@@ -407,7 +421,7 @@
         telephone="" 
         message="" />
       <acteur anniv="oui" 
-        fete="oui"
+        fete="oui" 
         comptoir="oui" 
         siteweb="" 
         marche="maxeville" 
@@ -494,7 +508,7 @@
         marche="vandoeuvre" 
         titre="Le Moulin du Petit Poucet" 
         type="Alimentation" 
-        bref="paysans - boulangers" 
+        bref="paysans-boulangers BIO" 
         desc="Notre pain et nos farines sont issus des céréales produites localement et transformées sur notre ferme. Les céréales sont moulues sur meule de pierre. Nos pains au levain naturel sont façonnés à la main et cuits dans un four chauffé au bois.      Christelle est présente au marché de Vandoeuvre le vendredi de 16h à 20h" 
         adresse="10b rue d'Alsace 54200 Royaumeix" 
         defi="Intégrer produits du commerce équitable" 
@@ -503,6 +517,7 @@
       <acteur image="defaut.jpg" 
         titre="La P'tite Laur'Reine du Pain" 
         bref="Boulangere" 
+        marche="haroue" 
         type="Alimentation" 
         desc="Fabrication artisanale de pains et viennoiseries avec de la farine biologique locale et cuit au feu de bois" 
         adresse="3 rue de la ferme 54170 Germiny" 
@@ -535,6 +550,15 @@
     </scat>
   </categorie>
   <marches type ="Les Marchés">
+    <scat id="haroue" 
+      image="marche.jpg" 
+      titre="au Marché fermier à Haroué" 
+      bref="Marché" 
+      type="Marché" 
+      desc="les derniers dimanche du mois de 9h à 12h" 
+      adresse="Place du Château" 
+      latitude="6.180246" 
+      longitude="48.46663" />
     <scat id="toul" 
       image="marche.jpg" 
       titre="au Marché de producteurs à Toul" 
@@ -791,7 +815,7 @@
         adresse="16 Rue de la Commanderie, Nancy" 
         latitude="6.172233" 
         longitude="48.68707" 
-        telephone="03 83 28 41 00"
+        telephone="03 83 28 41 00" 
         message="" />
       <acteur siteweb="www.paulettepubrock.com" 
         image="chezpaulette.jpg" 
@@ -1404,7 +1428,7 @@
         image="mariusetleon.jpg" 
         titre="Marius et Léon" 
         bref="Textiles Zéro Déchet" 
-        desc="Chez Marius et Léon, vous trouverez un large éventail de produits Zéro Déchet visant à remplacer les produits jetables au quotidien! Notre gamme se compose de produits traditionnels comme les mouchoirs et les lingettes lavables, de produits qui éveilleront votre curiosité comme les tawashis et les bee wraps, ou encore de produits audacieux comme les serviettes hygiéniques lavables! Sensible à mon environnement, j'utilise des tissus majoritairement certifiés Oekotex (sans substances nocives pour la santé et l'environnement) ou GOTS (certification biologique), et je travaille également à partir de tissus de récupération pour leur offrir une seconde vie!."
+        desc="Chez Marius et Léon, vous trouverez un large éventail de produits Zéro Déchet visant à remplacer les produits jetables au quotidien! Notre gamme se compose de produits traditionnels comme les mouchoirs et les lingettes lavables, de produits qui éveilleront votre curiosité comme les tawashis et les bee wraps, ou encore de produits audacieux comme les serviettes hygiéniques lavables! Sensible à mon environnement, j'utilise des tissus majoritairement certifiés Oekotex (sans substances nocives pour la santé et l'environnement) ou GOTS (certification biologique), et je travaille également à partir de tissus de récupération pour leur offrir une seconde vie!." 
         adresse="70 rue Jules Ferry, Maison 4, Saint Max" 
         latitude="" 
         longitude="" 
@@ -1564,6 +1588,18 @@
   </categorie>
   <categorie type ="S'engager">
     <scat>
+      <acteur date="11-06-2019" 
+        siteweb="clid.nursit.com" 
+        image="clid.jpg" 
+        titre="CLID" 
+        bref="Ressources Développement Solidarité Internationale" 
+        desc="Centre de ressources et d'Information sur le Développement Durable et la Solidarité Internationale - Education au développement et animations" 
+        adresse="29, rue Guilbert de Pixérécourt Nancy" 
+        latitude="6.192762" 
+        longitude="48.698734" 
+        telephone="03 83 37 44 86" 
+        message="" 
+        citation="" />
       <acteur date="22-04-2019" 
         siteweb="dynamap54.wordpress.com" 
         image="dynamap.jpg" 
