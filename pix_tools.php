@@ -1,29 +1,31 @@
 <?php
 
-function supported_image( $file ) {
+function supported_image($file)
+{
     $len = strlen($file);
-    $f_type = substr( $file, $len-3, 3 );
-    return $f_type == 'JPG' || $f_type == "jpg";
+    $f_type = substr($file, $len - 3, 3);
+
+    return $f_type == 'JPG' || $f_type == 'jpg';
 }
 
-function find_thumbnail( $site, $jour )
+function find_thumbnail($site, $jour)
 {
-    $fullpath = $site . "/" . $jour . "/thumbs/in.jpg";
-    if( is_file( $fullpath ) ) {
+    $fullpath = $site.'/'.$jour.'/thumbs/in.jpg';
+    if (is_file($fullpath)) {
         return $fullpath;
     }
-    $fullpath = $site . "/" . $jour . "/in.jpg";
-    if( is_file( $fullpath ) ) {
+    $fullpath = $site.'/'.$jour.'/in.jpg';
+    if (is_file($fullpath)) {
         return $fullpath;
     }
 
-    $thumbpath = $site . "/" . $jour . "/thumbs";
-    if( is_dir( $thumbpath ) ) {
-        $rep=opendir( $thumbpath );
-        while( $file = readdir( $rep ) ) {
-            $fullpath = $thumbpath . "/" . $file;
-            if( is_file( $fullpath ) ) {
-                if( supported_image( $file ) == true ) {
+    $thumbpath = $site.'/'.$jour.'/thumbs';
+    if (is_dir($thumbpath)) {
+        $rep = opendir($thumbpath);
+        while ($file = readdir($rep)) {
+            $fullpath = $thumbpath.'/'.$file;
+            if (is_file($fullpath)) {
+                if (supported_image($file) == true) {
                     return $fullpath;
                 }
             }
@@ -32,16 +34,19 @@ function find_thumbnail( $site, $jour )
     }
 }
 
-
-function makeSmallerImage($filePath, $thumbPath, $small_width, $small_height ) {
-
-    $quality = 85;    
-// Get the image dimensions.
+function makeSmallerImage($filePath, $thumbPath, $small_width, $small_height)
+{
+    $quality = 85;
+    // Get the image dimensions.
     $dimensions = @getimagesize($filePath);
-    $width        = $dimensions[0];
-    $height        = $dimensions[1];
+    $width = $dimensions[0];
+    $height = $dimensions[1];
+    if ($width == 0 || $height == 0) {
+        return false;
+    }
     $smallerSide = min($width, $height);
-    if( $width < $height ) {
+
+    if ($width < $height) {
         $small_width = $width / $height * $small_height;
     } else {
         $small_height = $height / $width * $small_width;
@@ -49,39 +54,51 @@ function makeSmallerImage($filePath, $thumbPath, $small_width, $small_height ) {
     $deltaX = 0;
     $deltaY = 0;
     // get image identifier for source image
-    $imageSrc  = @imagecreatefromjpeg($filePath);
+    $len = strlen($filePath);
+    if (substr($filePath, $len - 3) == 'jpg') {
+        $imageSrc = @imagecreatefromjpeg($filePath);
+    } elseif (substr($filePath, $len - 3) == 'png') {
+        $imageSrc = @imagecreatefrompng($filePath);
+    } else {
+        return false;
+    }
+
     $imageDest = @imagecreatetruecolor($small_width, $small_height);
+
     $success = @imagecopyresampled($imageDest, $imageSrc, 0, 0, $deltaX, $deltaY, $small_width, $small_height, $width, $height);
-    if( ! $success ) {
-    return false;
+    if (!$success) {
+        return false;
     }
     // save the thumbnail image into a file.
     $success = @imagejpeg($imageDest, $thumbPath, $quality);
 
     // Delete both image resources.
     @imagedestroy($imageSrc);
-    @imagedestroy($imageDest);                        
+    @imagedestroy($imageDest);
 
     return $success;
 }
-  
-function makeThumb( $filePath, $thumbPath ) {
-    return makeSmallerImage( $filePath, $thumbPath, 150, 150 );
+
+function makeThumb($filePath, $thumbPath)
+{
+    return makeSmallerImage($filePath, $thumbPath, 150, 150);
 }
 
-function smallImage( $filePath, $thumbPath ) {
-    return makeSmallerImage( $filePath, $thumbPath, 600, 600 );
+function smallImage($filePath, $thumbPath)
+{
+    return makeSmallerImage($filePath, $thumbPath, 600, 600);
 }
 
-function rotateImage( $filePath, $alpha ) {
-    if( is_file( $filePath ) ) {
-        $imageSrc = @imagecreatefromjpeg( $filePath );
-	$imageRot = @imagerotate( $imageSrc, $alpha, 0 );
-	$quality=85;
-	$success = @imagejpeg($imageRot, $filePath, $quality);
+function rotateImage($filePath, $alpha)
+{
+    if (is_file($filePath)) {
+        $imageSrc = @imagecreatefromjpeg($filePath);
+        $imageRot = @imagerotate($imageSrc, $alpha, 0);
+        $quality = 85;
+        $success = @imagejpeg($imageRot, $filePath, $quality);
 
-	@imagedestroy($imageSrc);
-	@imagedestroy($imageRot);
+        @imagedestroy($imageSrc);
+        @imagedestroy($imageRot);
     }
 }
 
