@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 11 juin 2019" 
-  sstitre="Mise à jour du au 11 juin 2019 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 20 juin 2019" 
+  sstitre="Mise à jour du 20 juin 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="de l'Aire de vie Nancéienne">
   <categorie type="Se nourrir">
@@ -1423,6 +1423,18 @@
   </categorie>
   <categorie type ="Et aussi...">
     <scat>
+     <acteur date="20-6-2019" 
+        siteweb="www.tmarquis.fr" 
+        image="thibaut-marquis-logo-noir.jpg" 
+        titre="Thibaut Marquis" 
+        bref="Graphiste" 
+        desc="Thibaut Marquis est graphiste / webdesigner expert en ergonomie. Récompensé à plusieurs reprises pour son travail, il crée des logos, affiches, sites web, app. mobiles (...) toujours plus modernes, simples et pertinents." 
+        adresse="6 rue Erckmann Chatrian, 54000 Nancy" 
+        latitude="6.178021" 
+        longitude="48.684057" 
+        telephone="06 07 82 65 07" 
+        message="" 
+        citation="" />
       <acteur date="10-5-2019" 
         siteweb="mariusetleon.fr" 
         image="mariusetleon.jpg" 
