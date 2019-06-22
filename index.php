@@ -25,6 +25,15 @@ include 'nav.php';
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+ol.carousel-indicators li {
+  background: #d7da23;
+}
+
+ol.carousel-indicators li.active {
+  background: #615f5f;
+}
+</style>
   </head>
   <body id="top">
 
@@ -50,21 +59,22 @@ $header->display();
       $acteurs = $x->getElementsByTagName('acteur');
       $nb_acteurs = $acteurs->length;
 
-      $today = new DateTime;
-      $today->setTimestamp( time() );
-      $oneMonthAgo = $today->sub(DateInterval::createFromDateString('1 month'));
+      $today = new DateTime();
+      $today->setTimestamp(time());
+      $oneMonthAgo = $today->sub(DateInterval::createFromDateString('2 month'));
 
       for ($a = 0; $a < $nb_acteurs; ++$a) {
           $acteur = $acteurs[$a];
           $date = $acteur->getAttribute('date');
           // $datetime2 = date_create('2009-10-13');
-          $aggDate = DateTime::createFromFormat("d-m-Y", $date);
+          $aggDate = DateTime::createFromFormat('d-m-Y', $date);
           $titre = str_replace("'", '', $acteur->getAttribute('titre'));
-          if ($oneMonthAgo < $aggDate ) {
+          if ($oneMonthAgo < $aggDate) {
               $nouveaux[$idx] = $acteur;
               $idx = $idx + 1;
           }
       }
+
       // <!-- Indicators -->
       echo "<ol class='carousel-indicators'>\n";
       echo "<li data-target='#myCarousel' data-slide-to='0' class='active'></li>\n";
@@ -73,12 +83,18 @@ $header->display();
       }
       echo "</ol>\n";
 
+      $indexes = range(0, count($nouveaux) - 1);
+      shuffle($indexes);
       // <!-- Wrapper for slides -->
       echo "<div class='carousel-inner'>\n";
-      $acteur = $nouveaux[0];
+      $acteur = $nouveaux[$indexes[0]];
       $image = $acteur->getAttribute('image');
       $titre = str_replace("'", '', $acteur->getAttribute('titre'));
       $desc = $acteur->getAttribute('desc');
+      $lenmax = 260;
+      if (strlen($desc) > $lenmax) {
+          $desc = substr($desc, 0, $lenmax - 7).' [...]';
+      }
       $adresse = $acteur->getAttribute('adresse');
       $siteweb = $acteur->getAttribute('siteweb');
       echo "  <div class='item active'>\n";
@@ -93,10 +109,13 @@ $header->display();
       echo "     </div>\n";
       echo "  </div>\n";
       for ($a = 1; $a < count($nouveaux); ++$a) {
-          $acteur = $nouveaux[$a];
+          $acteur = $nouveaux[$indexes[$a]];
           $image = $acteur->getAttribute('image');
           $titre = str_replace("'", '', $acteur->getAttribute('titre'));
           $desc = $acteur->getAttribute('desc');
+          if (strlen($desc) > $lenmax) {
+              $desc = substr($desc, 0, $lenmax - 7).' [...]';
+          }
           $adresse = $acteur->getAttribute('adresse');
           $siteweb = $acteur->getAttribute('siteweb');
           echo "  <div class='item'>\n";
@@ -124,6 +143,13 @@ $header->display();
       <span class="sr-only">Next</span>
     </a>
   </div>
+      <footer>
+	<ul class="style2">
+   <li>  <a href="#recap" class="button style2">En savoir plus</a></li>
+   <li>  <a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button style2">J'adhère en ligne</a></li>
+	
+	</ul>
+      </footer>
   </div>
   
   </div>
@@ -241,7 +267,7 @@ $header->display();
           <header>
           <h2>Campagne de ré-adhésion 2019.</h2>
           </header>
-          <p>Qui dit nouvelle année dit ré-adhésion ! Nous vous invitons donc, si vous n'avez pas encore votre carte "2019", à vous rendre dans un <a href="http://www.monnaielocalenancy.fr/change.php">bureau de change</a> pour renouveler votre adhésion.</p>
+          <p>Qui dit nouvelle année dit ré-adhésion ! Nous vous invitons donc, si vous n'avez pas encore votre carte "2019", à vous rendre dans un <a href="http://www.monnaielocalenancy.fr/change.php">bureau de change</a> pour renouveler votre adhésion.<br/><b class="dark">&nbsp;NOUVEAU!&nbsp;</b> Vous pouvez egalement le faire en ligne en suivant <a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs">ce lien!</a></p>
           <p>Comme en 2018, nous avons souhaité maintenir un montant minimum d'adhésion relativement modeste (5 €) pour permettre à chacun et chacune de s'inscrire dans la dynamique du Florain. Si vous en avez la possibilité et l'envie, n'hésitez surtout pas à adhérer pour un montant supérieur (maximum 50 €), les adhésions étant la principale source de financement de l'association !</p>
           <h4>le 1 % associatif</h4>
           <p>Nouveauté pour cette année, vous serez invité lors de votre adhésion à <a href="http://www.monnaielocalenancy.fr/doc/UnPourCentAsso.pdf">choisir une association</a> qui recevra en fin d'année l'équivalent de 1% de ce que vous avez changé (des conversions Euros-Florains que vous aurez effectuées en 2019), sans que cela vous coûte quoi que ce soit. Tout est expliqué en détail <a href="http://beta.monnaielocalenancy.fr/2019/01/02/le-1-associatif-une-nouveaute-pour-2019">sur cet article.</a></p>
