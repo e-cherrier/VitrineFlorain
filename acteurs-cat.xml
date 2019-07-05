@@ -758,6 +758,18 @@
         message="" />
     </scat>
     <scat type="Se cultiver, se divertir, se détendre">
+      <acteur date="29-6-2019" 
+        siteweb="www.fifnl.com" 
+        image="ayeayevo.jpg" 
+        titre="Aye Aye VO" 
+        bref="Cinéma, éducation à l'image" 
+        desc="Festival International du Film de Nancy (30 août - 8 septembre 2019) / en direction de tout public. Festival de la Petite école du film court (fin mai - début juin), pour les scolaires et centres de loisirs. Education à l'image." 
+        adresse="44 b rue Hermite, Nancy" 
+        latitude="6.172591" 
+        longitude="48.69899" 
+        telephone="03 83 30 50 61" 
+        message="" 
+        citation="" />
       <acteur date="10-5-2019" 
         siteweb="" 
         image="giteenroulotte.jpg" 
