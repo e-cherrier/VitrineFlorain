@@ -576,9 +576,9 @@
       bref="Marché" 
       type="Marché" 
       desc="les samedi de 8h à 12h" 
-      adresse="Place de la République" 
-      latitude="5.891304" 
-      longitude="48.672783" />
+      adresse="rue Carnot, Toul" 
+      latitude="5.889508" 
+      longitude="48.674648" />
     <scat id="central" 
       image="marche.jpg" 
       titre="au Marché Central de Nancy" 
