@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 20 juin 2019" 
-  sstitre="Mise à jour du 20 juin 2019 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 6 juillet 2019" 
+  sstitre="Mise à jour du 6 juillet 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
-  localisation="de l'Aire de vie Nancéienne">
+  localisation="du Sud de la Meurthe et Moselle"
+  slogan="La monnaie qui crée du lien!">
   <categorie type="Se nourrir">
     <scat type="Épiceries">
       <acteur date="22-04-2019" 
@@ -490,6 +491,18 @@
         longitude="48.650281" />
     </scat>
     <scat type="Paysans Boulangers et Boulangers">
+      <acteur date="05-07-2019" 
+        siteweb="www.lamichetranquille.fr" 
+        image="lamichetranquille.jpg" 
+        titre="La Miche Tranquille" 
+        marche="saizerais" 
+        bref="Pain bio, au naturel !" 
+        desc="Fabrication de pains bio au levain naturel, issus de farines du Moulin du Petit Poucet à Royaumeix. Je produis également des brioches, des pains briochés, et des biscuits salés et sucrés." 
+        adresse="1 Route de Bezaumont, Sainte Genevieve" 
+        defi="" 
+        latitude="6.115212" 
+        longitude="48.868934" 
+        telephone="06 10 56 98 47"/>
       <acteur fete="oui" 
         anniv="oui" 
         siteweb="unpaindecote.free.fr" 
@@ -631,9 +644,9 @@
       bref="Marché" 
       type="Marché" 
       desc="les samedi de 8h à 12h" 
-      adresse="Place de la République" 
-      latitude="5.891304" 
-      longitude="48.672783" />
+      adresse="rue Carnot, Toul" 
+      latitude="5.889508" 
+      longitude="48.674648" />
     <scat id="central" 
       image="marche.jpg" 
       titre="au Marché Central de Nancy" 
@@ -1501,7 +1514,7 @@
   </categorie>
   <categorie type ="Et aussi...">
     <scat>
-     <acteur date="20-6-2019" 
+      <acteur date="20-6-2019" 
         siteweb="www.tmarquis.fr" 
         image="thibaut-marquis.jpg" 
         titre="Thibaut Marquis" 
@@ -1520,8 +1533,8 @@
         bref="Basket pour tous" 
         desc="Pratique du basket pour tous(tes). Dès 6 ans, aussi bien en garçons qu'en filles. Des équipes en compétition pour toutes les catégories et notamment pour les féminines (jusqu'en nationale 3). Du basket loisirs..." 
         adresse="13, rue Rouget De Lisle, Tomblaine" 
-        latitude="6.229561"
-        longitude="48.674026"
+        latitude="6.229561" 
+        longitude="48.674026" 
         telephone="06 68 10 45 38" 
         message="" 
         citation="" />
@@ -1532,8 +1545,8 @@
         bref="illustratrice, graphiste et créatrice textile" 
         desc="Kiki Youplaboum est illustratrice, graphiste et créatrice textile. Elle crée pour les professionnels: presse, publicité, édition jeunesse, marques de vêtements… et les particuliers : Objets illustrés, illustrations personnalisées, faire-parts,... Tous se prêtent au jeu de son coup de crayon pas comme les autres !" 
         adresse="10, rue Pierre Chalnot Nancy" 
-        latitude="6.172783"
-        longitude="48.686105"
+        latitude="6.172783" 
+        longitude="48.686105" 
         telephone="07 81 88 83 90" 
         message="" 
         citation="L'argent est une énergie qui circule entre nos mains" />
