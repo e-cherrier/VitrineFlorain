@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 6 juillet 2019" 
-  sstitre="Mise à jour du 6 juillet 2019 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 6 aout 2019" 
+  sstitre="Mise à jour du 6 aout 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="du Sud de la Meurthe et Moselle"
   slogan="La monnaie qui crée du lien!">
@@ -159,6 +159,30 @@
         telephone="03.83.34.19.50" />
     </scat>
     <scat type="Producteurs">
+      <acteur date="06-08-2019" 
+        image="ptitoeufdusaintois.jpg"
+        titre="P'tit oeuf du saintois" 
+        bref="oeufs de caille, éleveur" 
+        desc="J'élève et je vends des cailles de chair et oeufs de caille." 
+        adresse="14 Grande Rue 54330 Vroncourt" 
+        latitude="6.079876" 
+        longitude="48.464673" 
+        telephone="06 84 05 07 47"
+        marche="vandoeuvre"
+        message="" 
+        citation="" />
+
+      <acteur date="06-08-2019" 
+        image="jardinsarbrevert.jpg" 
+        titre="Les Jardins de L'Arbre Vert" 
+        bref="Producteurs de légumes biologiques" 
+        desc="Producteurs de légumes biologiques diversifiés de saisons, choisis dans des variétés anciennes pour leur qualités gustatives. Vente directe les mardis et vendredis de 17h30 à 19h30 ou sur commande." 
+        adresse="Lieu-Dit L'Arbre Vert 54300 Croismare" 
+        latitude="6.568463" 
+        longitude="48.592579" 
+        telephone="03 83 71 23 61" 
+        message="" 
+        citation="La nature offre à la fois ce qui nourrit le corps et le guérit, émerveille l'âme, le coeur et l'esprit. Pierre Rabhi." />
       <acteur date="11-6-2019" 
         siteweb="www.labergerieduouchy.fr" 
         marche="vandoeuvre haroue" 
@@ -433,8 +457,8 @@
         desc="Mise en avant des brasseries bio de la région en proposant leurs différentes bières sur les marchés et foires locales." 
         adresse="Vente sur marchés" 
         defi="Ecocups et triporteur élec pour livraisons" 
-        latitude="6.164457" 
-        longitude="48.706645" />
+        latitude="6.1644" 
+        longitude="48.7066" />
       <acteur siteweb="chaouette.blogspot.fr" 
         image="chaouette.jpg" 
         titre="Brasserie la Châouette " 
@@ -1039,6 +1063,19 @@
   </categorie>
   <categorie type ="Prendre soin de soi">
     <scat>
+      <acteur date="06-08-2019" 
+        siteweb="hatha-yogarmonie.blogspot.com" 
+        image="hathayogarmonie.jpg" 
+        titre="Hatha Yogarmonie" 
+        bref="Yoga Ayurvéda Méditation" 
+        desc="Yoga avec approche ayurvédique, cours adapté, massage adapté à votre constitution, hygiène de vie, alimentation et méditation." 
+        adresse="7 rue de Flavigny, Maron" 
+        latitude="6.050052" 
+        longitude="48.630552" 
+        telephone="06.78.42.30.94" 
+        message=""
+        citation="Soyez le changement que vous voulez voir..." />
+
       <acteur date="22-04-2019" 
         siteweb="www.letempsde.fr" 
         image="letempsde.jpg" 
@@ -1364,7 +1401,7 @@
         adresse="9, rue d'Alsace 54140 Jarville-la-Malgrange" 
         defi="Labelisation bio d'ici 2-3 ans" 
         latitude="6.199764" 
-        longitude="48.675132" />
+        longitude="48.675162" />
       <acteur siteweb="daodavy.com" 
         image="dao.jpg" 
         titre="DAO" 
@@ -1715,6 +1752,41 @@
   </categorie>
   <categorie type ="S'engager">
     <scat>
+      <acteur date="06-08-2019" 
+        siteweb="www.lespetitsdebrouillardsgrandest.org" 
+        image="lespetitsdeb.jpg" 
+        titre="Les Petits Débrouillards" 
+        bref="Événements culturels, animations" 
+        desc="Activités éducatives pour les plus jeunes. Formations à l'animation, à la menée de débats, aux techniques d'intelligence collective. Buvette associative, événements culturels et petite restauration à la Piscine, notre tiers-lieu." 
+        adresse="33 Rue des Brasseries, 54320 Maxéville"
+        latitude="6.165661"
+        longitude="48.707399" 
+        telephone="03 83 96 38 94" 
+        message="" 
+        citation="En tant qu'acteurs de l'éducation populaire, nous sommes ravis de montrer notre attachement aux valeurs de solidarité territoriale, de reprise en main de l'économie par les citoyen-nes, et de construction des résiliences locales. Nous pensons que les monnaies locales sont un outil de transition et une façon de provoquer une réflexion collective sur les enjeux liés à l'économie, il était donc naturel pour nous de nous engager dans ce processus." />
+      <acteur date="06-08-2019" 
+        siteweb="www.planbnancy.fr" 
+        image="planb.jpg" 
+        titre="Plan B Nancy" 
+        bref="Association d'écologie sociale" 
+        desc="Association ayant pour objectif de créer des outils afin de faire passer l'alternative à la norme." 
+        adresse="51 rue de la République, Jarville"
+        latitude="6.204853" 
+        longitude="48.672018" 
+        telephone="06 86 10 83 45" 
+        message="" 
+        citation="Il n'y a pas de planète B, il y a le Plan B" />
+      <acteur date="06-08-2019" 
+        siteweb="facebook AntipubNancy" 
+        fb="www.facebook.com/pg/AntipubNancy" 
+        image="antipubnancy.jpg" 
+        titre="Résistance à l'Agression Publicitaire" 
+        bref="Lutte contre le système publicitaire" 
+        desc="R.A.P Nancy a pour objet de lutter contre les effets négatifs de la publicité sur la société et l'environnement." 
+        adresse=""
+        telephone="" 
+        message="" 
+        citation="" />
       <acteur date="11-06-2019" 
         siteweb="clid.nursit.com" 
         image="clid.jpg" 
