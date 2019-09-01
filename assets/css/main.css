@@ -2993,7 +2993,8 @@ text-decoration: none; }
 
 
 		.box footer {
-			position: absolute;
+			/* position: absolute; */
+			position: relative;
 			right: 0;
 			bottom: 0;
 
@@ -3073,8 +3074,14 @@ text-decoration: none; }
 			padding: 3em 0 3em 0;
 		}
 
-			.main.style1 h2 {
+			.main.style1 h1 {
 				font-size: 4.25em;
+				line-height: 1em;
+				letter-spacing: -4px;
+			}
+			
+			.main.style1 h2 {
+				font-size: 3.25em;
 				line-height: 1em;
 				letter-spacing: -4px;
 			}
@@ -3953,6 +3960,33 @@ text-decoration: none; }
 		padding-top: 10;
 		background-color: #d7da23;
 	}
+	#brocante {
+		background: url("../../images/brocante.png");
+		background-size: auto 80%;
+		background-attachment: fixed;
+		background-position: center left ;
+		background-repeat: no-repeat;
+		padding-top: 0;
+		background-color: #d7da23;
+	}
+	#paiement {
+		background: url("../../images/Billets.jpg");
+		background-size: auto 20%;
+		background-attachment: fixed;
+		background-position: center right ;
+		background-repeat: repeat;
+		padding-right: -500;
+		background-color: #d7da23;
+	}
+	#jyvais {
+		background: url("https://www.nancy.fr/fileadmin/images/Actualites/2017/10-octobre/2017-10-10-pepiniere-culturelle-creative-916.jpg");
+		background-size: auto 80%;
+		background-attachment: fixed;
+		background-position: center left ;
+		background-repeat: no-repeat;
+		padding-top: 0;
+		background-color: #d7da23;
+	}
 	#fete {
 		background: url("../../images/anniversaire.jpg");
 		background-size: auto 80%;
@@ -4787,7 +4821,7 @@ h5:hover a {
 
 				.box.style2 {
 					padding: 1.5em 1.25em 1.5em 1.25em;
-					background-color: rgba(255, 255, 255, 0.9);
+					background-color: #6e6e6e;
 				}
 
 		/* Main */
@@ -4801,8 +4835,11 @@ h5:hover a {
 			}
 
 				.main.style1 h2 {
-					font-size: 3em;
+					font-size: 2.5em;
 					letter-spacing: -3px;
+				}
+				.main.style1 .content.mobile {
+					width: 100%;
 				}
 
 			.main.style2 {
