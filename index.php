@@ -44,7 +44,17 @@ $header->display();
 
       <section id="accueil" class="main styleAcceuil right dark fullscreen">
         <div class="content box style1">
-          <h2> Les derniers acteurs agréés </h2>
+          <header>
+            <h2>Participez à notre première brocante!</h2>
+            <h4>Le Florain organise une brocante et une bourse aux instruments</h4>
+            <h4>Le dimanche 13 octobre de 9h à 17h</h4>
+      <footer>
+        <ul class="style2">
+        <li>  <a href="./brocante.php" class="button style2">Informations et inscriptions</a></li>
+        </ul>
+      </footer>
+</header>
+          <br/><h2> Les derniers acteurs agréés </h2>
 <div id="myCarousel" class="carousel slide">
 
     <?php
