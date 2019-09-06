@@ -151,12 +151,12 @@ $header->display();
     </div>
 
           <p>avec le soutien précieux de <a href="https://lautrecanalnancy.fr">l’Autre Canal</a>,
-          le Florain organise une brocante sous la Halle ouverte de l’Octroi (quartier Rives de Meurthe à Nancy).<br/>
+          le Florain organise une brocante à l'Autre Canal (quartier Rives de Meurthe à Nancy).<br/>
           Une excellente occasion de développer notre partenariat avec ce haut lieu culturel, tout en proposant 
           aux adhérent.e.s du Florain la possibilité de vendre des objets d’occasion et ainsi collecter des florains
           sans passer par la case du change ;).<br/><br/>
           En cohérence avec notre charte de valeur, nous organiserons aussi ce jour-là une bourse aux instruments
-          de musique ouverte à toutes et tous : un parfait mélange entre réemploi et accès à la culture.<br/><br/>
+          de musique ouverte à toutes et tous: un parfait mélange entre réemploi et accès à la culture.<br/><br/>
           Ce dimanche 13 octobre se tiendra également la Foire aux Disques dans la grande Halle de l’Octroi,
           à deux pas de notre brocante.</p>
           
@@ -246,14 +246,14 @@ $header->display();
         <div class="content box style1 mobile">
           <header>
             <h2>Comment s'y rendre ?</h2>
-            <h4>la Halle ouverte de l’Octroi</h4>
+            <h4>Parking de l'Autre Canal</h4>
             <h4>quartier Rives de Meurthe</h4>
             <h4>Boulevard d'Austrasie à Nancy</h4>
           </header>
           
           <div class="anniv menu" >
             <div>
-              <p>la Halle sera ouverte au public de 9 à 17h.<br/><br/>
+              <p>La brocante sera ouverte au public de 9 à 17h.<br/><br/>
                  L’entrée est libre.<br/><br/>
                  En transport en commun : tram arrêt St Georges.<br/><br/>
                  Pour vous garer, deux parking sont à disposition sur le pole.
@@ -274,8 +274,8 @@ $header->display();
 
               var features = new Array;
               afeature = new ol.Feature({
-                  geometry: new ol.geom.Point(ol.proj.fromLonLat([6.198621, 48.693816])),
-                  name: "la Halle ouverte de l’Octroi",
+                  geometry: new ol.geom.Point(ol.proj.fromLonLat([6.198188, 48.694065])),
+                  name: "L'Autre Canal",
                   desc: "Boulevard d'Austrasie à Nancy"
               });
 
@@ -298,7 +298,7 @@ $header->display();
                 ],
                 target: document.getElementById('map'),
                 view: new ol.View({
-                  center: ol.proj.fromLonLat([6.198621, 48.693816]),
+                  center: ol.proj.fromLonLat([6.198188, 48.694065]),
                   zoom: 17
                 }),
                 logo: logoElement
