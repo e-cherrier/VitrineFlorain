@@ -150,7 +150,7 @@ $header->display();
             <li>12h-14h: repas <b>sur réservation</b></li>
             <li>10h-18h: marché varié, comptoirs de change et d'adhésions, buvette</li>
           </ul>
-    <p>et toute la journée:</a>
+    <p>et toute la journée:</p>
           <img class="sf" src="http://www.monnaielocalenancy.fr/images/fete/logoCR54.png" width="100px" float="left"/>
     <div class="bigref">
     <p><a href="#animations">Défilés de mode</a><br/>
