@@ -136,7 +136,7 @@
         telephone="03.83.34.19.50" />
     </scat>
     <scat type="Producteurs">
-      <acteur_vide date="22-09-2019"
+      <acteur date="22-09-2019"
         siteweb="" 
         bref="Fromage de chèvre" 
         image="defaut.jpg" 
@@ -1117,7 +1117,7 @@
   </categorie>
   <categorie type ="Prendre soin de soi">
     <scat>
-      <acteur_vide date="22-09-2019"
+      <acteur date="22-09-2019"
         siteweb="" 
         image="defaut.jpg"
         bref="Art thérapeuthe"

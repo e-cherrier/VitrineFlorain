@@ -286,7 +286,7 @@ class ActeurCompact extends Acteur
                 $ratio_titre = .15;
                 $ratio_bref = .85;
             }
-            $this->titre_width = $this->a->GetColumnWidth() * ($ratio_titre + .1);
+            $this->titre_width = $this->a->GetColumnWidth() * ($ratio_titre+.05);
             $this->bref_width = $this->a->GetColumnWidth() * $ratio_bref;
             $h = max(
                 $this->getStringHeight($this->new_bullet.$this->titre, $this->titre_s, 'B', 'Futura', $this->titre_width),
