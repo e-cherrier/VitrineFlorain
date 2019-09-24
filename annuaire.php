@@ -709,12 +709,17 @@ class AnnuairePoche extends Annuaire
         $this->PrintAllCategories($x);
 
         // print the charte if enough space
-        if ($this->subPage <= 2) {
-            if ($this->subPage == 1) {
-                $this->AddSubPage();
-            }
+        if ($this->subPage == 1) {
+            $this->AddSubPage();
             $this->SetCol(0);
             $this->PrintCharte();
+        }
+        if ($this->subPage == 2) {
+            $cstart = $this->GetPageHeight() * .35;
+            if ($this->GetY() < $cstart) {
+                $this->SetCol(0);
+                $this->PrintCharte();
+            }
         }
 
         // print the comptoir advice
