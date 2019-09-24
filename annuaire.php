@@ -64,7 +64,11 @@ public function Header()
         // ( $this->colMargin*(2*$this->subPage+1) + $this->GetColumnWidth()*$this->subPage*2),
         // Set position at a given column
         $this->col = $col;
-        $x = $col * $this->GetColumnWidth() + $this->GetColumnWidth() * $this->subPage * 2 + ($col + $this->marginLeft + 2 * $this->subPage) * $this->colMargin;
+        // $x = $col * $this->GetColumnWidth() + $this->GetSubPageWidth() * $this->subPage + ($col + $this->marginLeft + 2 * $this->subPage) * $this->colMargin;
+        $x = $col * ($this->GetColumnWidth() + $this->colMargin);
+        $x = $x + ($this->GetSubPageWidth() + $this->colMargin) * ($this->subPage);
+        $x = $x + ($this->marginLeft);
+
         $this->SetLeftMargin($x);
         $this->SetX($x);
     }
@@ -110,6 +114,14 @@ public function Header()
         $this->MultiCell($s, $this->cellHeight, $texte, 0, $align);
     }
 
+    public function PrintBullet($name, $s = 6, $size = 10, $c = 'C', $f = 'Futura', $w = 'B')
+    {
+        // Font
+        $this->SetTextColor(255, 0, 0);
+        $this->SetFont($f, $w, $size);
+        $this->Cell($s, $this->cellHeight, $name);
+    }
+
     public function PrintName($name, $s = 60, $size = 10, $c = 'C', $f = 'Futura', $w = 'B')
     {
         // Font
@@ -122,8 +134,8 @@ public function Header()
     {
         // logo
         $this->Image('images/logo-monnaie-disquevert.png',
-        $this->GetX() - 7, $this->GetY() + 7, 5
-    );
+            $this->GetX() - 7, $this->GetY() + 3, 5
+        );
 
         // Font
         $this->SetFont('Futura', '', $f);
@@ -224,8 +236,8 @@ class AnnuaireLivret extends Annuaire
         $this->Rect(0, 0, $this->GetPageWidth(), $this->GetPageHeight(), 'F');
 
         $this->Image('images/FlorainFA5-vert.jpg',
-        ($this->GetPageWidth() - 60) / 2, 20, 60
-    );
+            ($this->GetPageWidth() - 60) / 2, 20, 60
+        );
 
         $this->SetFont('Steelfish', '', 98);
 
@@ -294,8 +306,8 @@ class AnnuaireLivret extends Annuaire
 
         // logo
         $this->Image('images/FlorainFA5-vert.jpg',
-        ($this->GetPageWidth() / 2 - 20) / 2, $this->GetPageheight() * .2, 20
-    );
+            ($this->GetPageWidth() / 2 - 20) / 2, $this->GetPageheight() * .2, 20
+        );
 
         // site web
         $this->SetFont('Futura', 'B', 28);
@@ -423,7 +435,7 @@ class AnnuaireLivret extends Annuaire
         $this->SetFont('Futura', 'B', 18);
         $this->SetFillColor(204, 220, 62);
         $this->SetTextColor(112, 112, 111);
-        $this->Cell($this->GetColumnWidth() * 2 + $this->colMargin, 6, ' Les comptoirs de change', 'B', 1, 'L', true);
+        $this->Cell($this->GetSubPageWidth() + $this->colMargin, 6, ' Les comptoirs de change', 'B', 1, 'L', true);
         $this->Ln(4);
 
         // Save ordinate
@@ -484,8 +496,8 @@ class AnnuaireLivret extends Annuaire
 
         $largeur = 200;
         $this->Image('images/logo-monnaie-gray.png',
-        ($this->GetPageWidth() - $largeur) / 2, ($this->GetPageHeight() - 200) / 2, $largeur
-    );
+            ($this->GetPageWidth() - $largeur) / 2, ($this->GetPageHeight() - 200) / 2, $largeur
+        );
         for ($l = 0; $l < 20; ++$l) {
             $this->Cell(160, 12, ' ', 'B', 1, 'L', false);
         }
@@ -519,7 +531,7 @@ class AnnuaireLivret extends Annuaire
         }
 
         // $this->Ln(10);
-    // $this->PrintComptoirsTOC( $toc );
+        // $this->PrintComptoirsTOC( $toc );
     }
 
     public function NextPage()
@@ -533,6 +545,11 @@ class AnnuaireLivret extends Annuaire
     {
         return ($this->GetPageWidth() - $this->colMargin * 3) / 2;
     }
+
+    public function GetSubPageWidth()
+    {
+        return $this->GetColumnWidth() * 2 + $this->colMargin;
+    }
 } // Class AnnuaireLivret
 
 /*********************************************************************/
@@ -543,6 +560,11 @@ class AnnuairePoche extends Annuaire
     public $colMargin = 2;
     public $cellHeight = 3;
     public $marginLeft = 0; // 1 if there is a margin at left (and right) 0 if no margin.
+
+    public function GetSubPageWidth()
+    {
+        return $this->GetColumnWidth() * 2 + $this->colMargin;
+    }
 
     public function GetColumnWidth()
     {
@@ -565,9 +587,9 @@ class AnnuairePoche extends Annuaire
             $this->subPage = $this->subPage + 1;
         }
         $this->setXY(
-        ($this->colMargin * 2 * $this->subPage + $this->GetColumnWidth() * $this->subPage * 2),
-        $this->topSubPage
-    );
+            $this->colMargin + $this->GetSubPageWidth() * $this->subPage,
+            $this->topSubPage
+        );
     }
 
     public function PrintCD54Mention($margin)
@@ -590,11 +612,11 @@ class AnnuairePoche extends Annuaire
         global $slogan;
 
         $margin = $this->GetX();
-        $cellwidth = $this->GetColumnWidth() * 2 + $this->colMargin;
+        $cellwidth = $this->GetSubPageWidth() + $this->colMargin;
 
         $this->SetFillColor(204, 220, 62);
         $this->SetTextColor(112, 112, 111);
-        $this->Rect($margin - $this->colMargin, 0, $this->GetColumnWidth() * 2 + $this->colMargin * 3, $this->GetPageHeight(), 'F');
+        $this->Rect($margin - $this->colMargin, 0, $this->GetSubPageWidth() + $this->colMargin * 3, $this->GetPageHeight(), 'F');
 
         $this->Image('images/FlorainFA5-vert.jpg', $margin + ($cellwidth - 40) / 2, 20, 40);
 
@@ -660,22 +682,22 @@ class AnnuairePoche extends Annuaire
         $this->Rect($margin + $this->GetColumnWidth() * 1.65, 0, $this->GetColumnWidth() * .39, $this->GetPageHeight(), 'F');
 
         // charte
-        $this->SetY($this->GetPageHeight() * .05);
+        $this->SetY($this->GetPageHeight() * .35);
         $this->SetLeftMargin($margin);
         $xmlDoc = new DOMDocument();
         $xmlDoc->load('charte.xml');
         $x = $xmlDoc->documentElement;
         $titre = $x->getAttribute('titre');
-        $this->PrintName(utf8_decode($titre), $this->GetColumnWidth() * 2, 16, 'C', 'steelfish', '');
+        $this->PrintName(utf8_decode($titre), $this->GetSubPageWidth(), 16, 'C', 'steelfish', '');
         $this->Ln(5);
         $intro = $x->getAttribute('intro');
-        $this->PrintText(utf8_decode($intro), $this->GetColumnWidth() * 2, 10, 'J');
+        $this->PrintText(utf8_decode($intro), $this->GetSubPageWidth(), 10, 'J');
 
         $this->SetLeftMargin($margin + 8);
         $valeurs = $x->getElementsByTagName('valeur');
         $nb_v = $valeurs->length;
         for ($v = 0; $v < $nb_v; ++$v) {
-            $this->PrintValue(utf8_decode($valeurs[$v]->nodeValue), $this->GetColumnWidth() * 1.8, 10);
+            $this->PrintValue(utf8_decode($valeurs[$v]->nodeValue), $this->GetSubPageWidth() * .85, 10);
         }
     }
 
@@ -687,8 +709,10 @@ class AnnuairePoche extends Annuaire
         $this->PrintAllCategories($x);
 
         // print the charte if enough space
-        if ($this->subPage == 1) {
-            $this->AddSubPage();
+        if ($this->subPage <= 2) {
+            if ($this->subPage == 1) {
+                $this->AddSubPage();
+            }
             $this->SetCol(0);
             $this->PrintCharte();
         }
@@ -698,7 +722,7 @@ class AnnuairePoche extends Annuaire
         $this->SetY($this->GetPageheight() - 15);
 
         // for one line text $texte_width = $this->marginLeft + $this->colMargin*6 + $this->GetColumnWidth()*6;
-        $texte_width = $this->GetColumnWidth() * 2;
+        $texte_width = $this->GetSubPageWidth();
         $texte = utf8_decode($x->getAttribute('comptoirs'));
         $this->SetFont('futura', 'B', 10);
         $h = $this->MultiCellHeight($texte_width, $this->cellHeight, $texte, 0, 'C');
@@ -723,7 +747,7 @@ class AnnuairePoche extends Annuaire
         for ($cat = 0; $cat < $nb_cat; ++$cat) {
             $categorie = $categories[$cat];
 
-            $myCat = new CategoriePoche($this, $categorie);
+            $myCat = $this->NewCategorie($categorie);
             $myCat->display();
         }
 
@@ -732,7 +756,7 @@ class AnnuairePoche extends Annuaire
         for ($mar = 0; $mar < $nb_mar; ++$mar) {
             $marche = $marches[$mar];
 
-            $myMar = new CategorieMarchePoche($this, $marche);
+            $myMar = $this->NewCategorieMarchePoche($marche);
             $myMar->display();
         }
     }
@@ -740,6 +764,41 @@ class AnnuairePoche extends Annuaire
     public function NextPage()
     {
         $this->AddSubPage();
+    }
+
+    public function NewCategorie($categorie)
+    {
+        return new CategoriePoche($this, $categorie);
+    }
+
+    public function NewCategorieMarchePoche($marche)
+    {
+        return new CategorieMarchePoche($this, $marche);
+    }
+}
+
+class AnnuaireCompact extends AnnuairePoche
+{
+    public function NewCategorie($categorie)
+    {
+        return new CategorieCompact($this, $categorie);
+    }
+
+    public function NewCategorieMarchePoche($marche)
+    {
+        return new CategorieMarcheCompact($this, $marche);
+    }
+
+    public function GetSubPageWidth()
+    {
+        return $this->GetColumnWidth();
+    }
+
+    public function GetColumnWidth()
+    {
+        // Divides pages in 8 columns if nbSubPages = 4
+        // take into account margins between columns only: no left/right margins
+        return ($this->GetPageWidth() - $this->colMargin * ($this->nbSubPages - 1)) / ($this->nbSubPages);
     }
 }
 
@@ -764,6 +823,9 @@ if ($type == 'Poche') {
 } elseif ($type == 'Livret') {
     $a = new AnnuaireLivret();
     $filename = 'Annuaire du Florain - format livret.pdf';
+} elseif ($type == 'Compact') {
+    $a = new AnnuaireCompact();
+    $filename = 'Annuaire du Florain - format compact.pdf';
 } else {
     $a = new AnnuaireFiches();
     $filename = 'Annuaire du Florain - format fiches.pdf';

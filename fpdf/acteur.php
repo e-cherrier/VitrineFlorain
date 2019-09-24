@@ -48,16 +48,38 @@ class Acteur
         return 1;
     }
 
+    public function attributeDefined($attr)
+    {
+        if ($this->acteur_->hasAttribute($attr)) {
+            $att = utf8_decode($this->acteur_->getAttribute($attr));
+            if ($att != '') {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public function getStringHeight($att, $s = 10, $m = '', $f = 'Futura', $width = -1)
+    {
+        $this->a->SetFont($f, $m, $s);
+
+        if ($width == -1) {
+            $width = $this->a->GetColumnWidth();
+        }
+
+        return $this->a->MultiCellHeight($width, $this->a->cellHeight, $att, 0, 'C');
+    }
+
     public function getAttributeHeight($attr, $s = 10, $m = '', $f = 'Futura')
     {
         $h = 0;
         if ($this->acteur_->hasAttribute($attr)) {
-            $a = utf8_decode($this->acteur_->getAttribute($attr));
-            if ($a == '') {
+            $att = utf8_decode($this->acteur_->getAttribute($attr));
+            if ($att == '') {
                 return $h;
             }
-            $this->a->SetFont($f, $m, $s);
-            $h = $this->a->MultiCellHeight($this->a->GetColumnWidth(), $this->a->cellHeight, $a, 0, 'C');
+            $h = $this->getStringHeight($att, $s, $m, $f);
         }
 
         return $h;
@@ -71,9 +93,9 @@ class Acteur
             if ($deb_i > 1) {
                 $this->a->SetDrawColor(127);
                 $this->a->Line(
-                $this->a->GetX() - 1, $this->a->GetY() - 1,
-        $this->a->GetX() - 1 + $this->a->GetColumnWidth() + $this->a->colMargin / 2, $this->a->GetY() - 1
-            );
+                    $this->a->GetX() - 1, $this->a->GetY() - 1,
+                    $this->a->GetX() - 1 + $this->a->GetColumnWidth() + 2, $this->a->GetY() - 1
+                );
                 $this->a->Ln(2);
                 $this->a->SetDrawColor(0);
             }
@@ -82,9 +104,9 @@ class Acteur
             if ($deb_i > 1) {
                 $this->a->SetDrawColor(127);
                 $this->a->Line(
-                $this->a->GetX() - 1, $this->a->GetY() - 1,
-        $this->a->GetX() - 1 + $this->a->GetColumnWidth() + $this->a->colMargin / 2, $this->a->GetY() - 1
-            );
+                    $this->a->GetX() - 1, $this->a->GetY() - 1,
+                    $this->a->GetX() - 1 + $this->a->GetColumnWidth() + 2, $this->a->GetY() - 1
+                );
                 $this->a->Ln(2);
                 $this->a->SetDrawColor(0);
             }
@@ -130,11 +152,11 @@ class ActeurPoche extends Acteur
         if ($this->isComptoir()) {
             $this->a->SetFillColor(234, 250, 180);
             $this->a->Rect(
-        $this->a->GetX() - 1,
-        $this->a->GetY() - 1,
-        $this->a->GetColumnWidth(),
-        $this->height() + 2, 'F'
-    );
+                $this->a->GetX() - 1,
+                $this->a->GetY() - 1,
+                $this->a->GetColumnWidth(),
+                $this->height() + 2, 'F'
+            );
         }
 
         $titre = utf8_decode($this->acteur_->getAttribute('titre'));
@@ -206,6 +228,170 @@ class ActeurPoche extends Acteur
         } else {
             $this->a->bas_col1 = $this->a->GetY();
         }
+    }
+}
+/**************************************************************************/
+
+class ActeurCompact extends Acteur
+{
+    private $new_bullet = '';
+
+    private $titre_s = 10;
+    private $titre = '';
+    private $titre_width = -1;
+
+    private $bref_s = 8;
+    private $bref = '';
+    private $bref_width = -1;
+
+    private $tel_or_web = '';
+    private $ville = '';
+
+    public function isNew()
+    {
+        $today = new DateTime();
+        $today->setTimestamp(time());
+        $oneMonthAgo = $today->sub(DateInterval::createFromDateString('2 month'));
+
+        $date = $this->acteur_->getAttribute('date');
+        $aggDate = DateTime::createFromFormat('d-m-Y', $date);
+
+        return $oneMonthAgo < $aggDate;
+    }
+
+    public function EnteteHeight()
+    {
+        if ($this->isNew()) {
+            $this->new_bullet = 'Nouveau!';
+        }
+        $h = 0;
+        if ($this->attributeDefined('titre')) {
+            $this->titre = utf8_decode($this->acteur_->getAttribute('titre'));
+            $h = $this->getStringHeight($this->titre, $this->titre_s);
+        }
+        if ($this->attributeDefined('bref')) {
+            $this->bref = utf8_decode($this->acteur_->getAttribute('bref'));
+        }
+
+        $h0 = $this->getStringHeight($this->new_bullet.$this->titre.$this->bref, $this->titre_s);
+        $this->titre_width = $this->a->GetColumnWidth();
+        $this->bref_width = $this->a->GetColumnWidth();
+        if ($h0 > $h) {
+            // not enough space for title and bref on the same single line
+            $titre_len = strlen($this->new_bullet.$this->titre);
+            $bref_len = strlen($this->bref);
+            $ratio_titre = $titre_len / ($titre_len + $bref_len);
+            $ratio_bref = $bref_len / ($titre_len + $bref_len);
+            if ($ratio_titre < .15) {
+                $ratio_titre = .15;
+                $ratio_bref = .85;
+            }
+            $this->titre_width = $this->a->GetColumnWidth() * ($ratio_titre + .1);
+            $this->bref_width = $this->a->GetColumnWidth() * $ratio_bref;
+            $h = max(
+                $this->getStringHeight($this->new_bullet.$this->titre, $this->titre_s, 'B', 'Futura', $this->titre_width),
+                $this->getStringHeight($this->bref, $this->bref_s, 'B', 'Futura', $this->bref_width)
+            );
+        }
+
+        $h1 = 0;
+        $h2 = 0;
+        if ($this->attributeDefined('siteweb')) {
+            $this->tel_or_web = utf8_decode($this->acteur_->getAttribute('siteweb'));
+            $h1 = $this->getStringHeight($this->tel_or_web, $this->bref_s);
+        }
+        if ($h1 == 0) {
+            if ($this->attributeDefined('telephone')) {
+                $this->tel_or_web = utf8_decode($this->acteur_->getAttribute('telephone'));
+                $h1 = $this->getStringHeight($this->tel_or_web, $this->bref_s);
+            }
+        }
+
+        if ($this->attributeDefined('adresse')) {
+            $adresse = utf8_decode($this->acteur_->getAttribute('adresse'));
+            $elts = explode(',', $adresse);
+            $elts = explode('0', $elts[count($elts) - 1]); // get right side from the ','
+            $elts = explode('3', $elts[count($elts) - 1]); // get right side from the ','
+            $elts = explode('5', $elts[count($elts) - 1]); // get right side from the ','
+            $this->ville = trim($elts[count($elts) - 1]);  // get right side from the '0'
+            $h2 = $this->getStringHeight($this->ville, $this->bref_s);
+        }
+        $h = $h + max($h1, $h2);
+
+        return $h;
+    }
+
+    public function height()
+    {
+        return $this->EnteteHeight();
+    }
+
+    public function Entete()
+    {
+        $left_entete = $this->a->GetX();
+        $top_entete = $this->a->GetY();
+
+        if ($this->isComptoir()) {
+            $this->a->SetFillColor(234, 250, 180);
+            $this->a->Rect(
+                $this->a->GetX(),
+                $this->a->GetY(),
+                $this->a->GetColumnWidth(),
+                $this->height(), 'F'
+            );
+        }
+
+        $this->a->SetXY($left_entete, $top_entete);
+        $this->a->SetLeftMargin($left_entete);
+
+        // Le nom a gauche
+        $shift = 0;
+        if (strlen($this->new_bullet) > 0) {
+            $shift = 16;
+            $this->a->PrintBullet($this->new_bullet, $shift);
+        }
+        $this->a->PrintName($this->titre, $this->titre_width - $shift, $this->titre_s, 'L');
+
+        $saved_y = $this->a->GetY();
+        // la description a droite
+        if ($this->bref != '') {
+            $this->a->SetXY($left_entete + $this->a->GetColumnWidth() - $this->bref_width, $top_entete);
+            $this->a->PrintName($this->bref, $this->bref_width, $this->bref_s, 'R');
+        }
+        $this->a->SetY(max($this->a->GetY(), $saved_y));
+
+        // en dessous
+        $saved_y = $this->a->GetY();
+        // l'adresse a gauche
+        if ($this->ville != '') {
+            $this->a->PrintText($this->ville, $this->a->GetColumnWidth(), $this->bref_s, 'L');
+        }
+        // tel a droite
+        if ($this->tel_or_web != '') {
+            $this->a->SetY($saved_y);
+            $this->a->PrintText($this->tel_or_web, $this->a->GetColumnWidth(), $this->bref_s, 'R');
+        }
+
+        // reset position
+        $this->a->SetLeftMargin($left_entete);
+        $this->a->SetX($left_entete);
+        $cury = $this->a->GetY();
+        $y = $top_entete + $this->EnteteHeight();
+        // get the y max
+        if ($cury < $y) {
+            //$this->a->SetY( $top_entete + $this->EnteteHeight() );
+            $this->a->debug('Curry : '.$cury.' ; y '.$y);
+        }
+    }
+
+    public function display($col, $deb_i)
+    {
+        $this->separator(0, 0);
+
+        $this->Entete();
+        $this->acteur_->setAttribute('displayed', 'true');
+
+        $this->a->bas_col0 = $this->a->GetY();
     }
 }
 
