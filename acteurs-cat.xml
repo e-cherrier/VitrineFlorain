@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 24 septembre 2019" 
-  sstitre="Mise à jour du 24 septembre 2019 www.florain.fr pour la dernière version" 
-  comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
-  localisation="du Sud de la Meurthe et Moselle"
+<categories    titre ="Liste des acteurs agréés au 2 octobre 2019" 
+  sstitre="Mise à jour du 2 octobre 2019 www.florain.fr pour la dernière version" 
+  comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert."
+  localisation="du Sud de la Meurthe et Moselle" 
   slogan="La monnaie qui crée du lien!">
   <categorie type="Se nourrir">
     <scat type="Épiceries">
@@ -136,24 +136,50 @@
         telephone="03.83.34.19.50" />
     </scat>
     <scat type="Producteurs">
-      <acteur date="22-09-2019"
+      <acteur date="02-10-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Les Terrasses d'Amance" 
+        bref="Fruits" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="39 bis, rue du faubourg St Jean 54770 Amance" 
+        latitude="6.284614" 
+        longitude="48.755377" 
+        telephone="" 
+        message="" 
+        citation="" />
+      <acteur date="02-10-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Mirabeille" 
+        bref="Apiculteur" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="1 route de Saint-Firmin, 54740 Xirocourt" 
+        latitude="6.168721" 
+        longitude="48.430223" 
+        telephone="06 47 78 58 44" 
+        message="" 
+        citation="" />
+      <acteur date="22-09-2019" 
         siteweb="" 
         bref="Fromage de chèvre" 
         image="defaut.jpg" 
         titre="Chèvrerie d'Amandine" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
         adresse="12 Rue de Geleau, 54230 Chaligny" 
+        latitude="6.083825" 
+        longitude="48.625505" 
         telephone="06 15 98 41 85" />
       <acteur date="06-08-2019" 
-        image="ptitoeufdusaintois.jpg"
+        image="ptitoeufdusaintois.jpg" 
         titre="P'tit oeuf du saintois" 
         bref="oeufs de caille, éleveur" 
         desc="J'élève et je vends des cailles de chair et oeufs de caille." 
         adresse="14 Grande Rue 54330 Vroncourt" 
         latitude="6.079876" 
         longitude="48.464673" 
-        telephone="06 84 05 07 47"
-        marche="vandoeuvre"
+        telephone="06 84 05 07 47" 
+        marche="vandoeuvre" 
         message="" 
         citation="" />
 
@@ -693,14 +719,14 @@
   </marches>
   <categorie type ="Sortir">
     <scat type="Se restaurer et boire un verre">
-      <acteur date="22-09-2019"
+      <acteur date="22-09-2019" 
         siteweb="" 
         image="defaut.jpg" 
         titre="Bar Stanislas" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
         adresse="7 Place de la 2ème Division de Cavalerie, 54300 Lunéville" 
         latitude="6.489897" 
-        longitude="48.594721"
+        longitude="48.594721" 
         telephone="03 83 74 19 94" />
       <acteur siteweb="lacantoche.fr" 
         image="laCantoche.jpg" 
@@ -856,34 +882,33 @@
         message="" />
     </scat>
     <scat type="Maisons des jeunes et de la culture">
-      <acteur date="22-09-2019"
+      <acteur date="22-09-2019" 
         siteweb="www.mjc3maisons.fr" 
         image="defaut.jpg" 
         titre="MJC 3 maisons" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
         adresse="2-14 rue de Fontenoy, Nancy" 
+        latitude="6.17603" 
+        longitude="48.705913" 
         telephone="03 83 32 80 52" />
-      <acteur  date="22-09-2019"
+      <acteur date="22-09-2019" 
         siteweb="www.mjcbazin.com" 
         image="defaut.jpg" 
         titre="MJC Bazin" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
         adresse="47 rue Henri Bazin, Nancy" 
+        latitude="6.194358" 
+        longitude="48.697001" 
         telephone="03 83 36 56 65" />
-      <acteur  date="22-09-2019"
+      <acteur date="22-09-2019" 
         siteweb="www.mjclillebonne.org" 
-        image="defaut.jpg" 
+        image="mjclillebonne.jpg" 
         titre="MJC Lillebonne" 
-        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
-        adresse="14, rue du Cheval Blanc, Nancy" 
+        desc="Plus d'une centaine d'activités: danse, théâtre, sports, détente, langues, école des musiques... pour les enfants, adolescents, adultes. Et des expositions, conférences, concerts, manifestations diverses..." 
+        adresse="14 rue du Cheval Blanc, Nancy" 
+        latitude="6.178361" 
+        longitude="48.695217" 
         telephone="03 83 36 82 82" />
-      <acteur_vide date="22-09-2019"
-        siteweb="" 
-        image="defaut.jpg" 
-        titre=" " 
-        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
-        adresse="" 
-        telephone="" />
       <acteur siteweb="www.mjclorraine.com" 
         image="mjclorraine.jpg" 
         titre="MJC Lorraine" 
@@ -912,16 +937,16 @@
     </scat>
     <scat type="Se cultiver, se divertir, se détendre">
       <acteur date="30-08-2019" 
-        siteweb="nancyjazzhot.fr"
-        fb="https://fr-fr.facebook.com/pages/category/Artist/Pierre-Reboud-158175251468473"
-        image="preboud.jpg"
+        siteweb="nancyjazzhot.fr" 
+        fb="https://fr-fr.facebook.com/pages/category/Artist/Pierre-Reboud-158175251468473" 
+        image="preboud.jpg" 
         titre="Pierre Reboud" 
         bref="Musicien Arrangeur Chef d'orchestres" 
         desc="Musicien, arrangeur et chef d'orchestres. Propose de nombreuses formules d'orchestre du duo au big-band, pour toutes les occasions: animations, concerts, mariages, apéros... Pierre enseigne le trombone et le tuba, et dirige les ateliers fanfare et combos de l’EMAN. Il intervient en milieu scolaire pour des projets ponctuels en maternelle (Batucada – Composition d’illustrations sonores)." 
         adresse="43 rue Sigisbert Adam, Nancy" 
         latitude="6.17372" 
         longitude="48.689646" 
-        telephone="06 63 33 98 79"
+        telephone="06 63 33 98 79" 
         message="" />
       <acteur date="30-08-2019" 
         siteweb="www.nancyjazzpulsations.com" 
@@ -1049,8 +1074,25 @@
           t="10h00 - 18h00"/>
       </acteur>
     </scat>
-    
+
     <scat type ="Tourisme, Vacances, WE">
+      <acteur_vide date="xx-xx-xxxx" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre=" " 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="" 
+        telephone="" />
+    
+      <acteur date="02-10-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="La Bottée" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="Viéville sous les Côtes, 55210 Vigneulles-lès-Hattonchâtel" 
+        latitude="5.689531" 
+        longitude="49.002565" 
+        telephone="" />
       <acteur date="10-5-2019" 
         siteweb="" 
         image="giteenroulotte.jpg" 
@@ -1117,10 +1159,20 @@
   </categorie>
   <categorie type ="Prendre soin de soi">
     <scat>
-      <acteur date="22-09-2019"
+      <acteur date="22-09-2019" 
         siteweb="" 
-        image="defaut.jpg"
-        bref="Art thérapeuthe"
+        image="defaut.jpg" 
+        titre="Millet Patricia" 
+        bref="Salon de coiffure" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        latitude="5.897825" 
+        longitude="48.529031" 
+        telephone="03 83 52 01 65" 
+        adresse="1 rue de l'Eglise 54170 Colombey les Belles" />
+      <acteur date="22-09-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        bref="Art thérapeuthe" 
         titre="Valérie Rambour" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
         adresse="57 rue Maréchal Foch, 54130 Saint-Max" 
@@ -1135,7 +1187,7 @@
         latitude="6.050052" 
         longitude="48.630552" 
         telephone="06.78.42.30.94" 
-        message=""
+        message="" 
         citation="Soyez le changement que vous voulez voir..." />
 
       <acteur date="22-04-2019" 
@@ -1613,6 +1665,30 @@
   </categorie>
   <categorie type ="Et aussi...">
     <scat>
+      <acteur date="02-10-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="L'endroit du monde" 
+        bref="Création projets éthiques et solidaires" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="6 Grande Rue, 54450 Reillon" 
+        latitude="6.74239" 
+        longitude="48.598036" 
+        telephone="" 
+        message="" 
+        citation="" />
+      <acteur date="02-10-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Philippe Millet" 
+        bref="Electricien" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="42 rue Pasteur 54170 Colombey les Belles" 
+        latitude="5.898761" 
+        longitude="48.527631" 
+        telephone="" 
+        message="" 
+        citation="" />
       <acteur date="20-6-2019" 
         siteweb="www.tmarquis.fr" 
         image="thibaut-marquis.jpg" 
@@ -1770,7 +1846,7 @@
         image="montetibou.jpg" 
         titre="Montetibou" 
         bref="Espace Montessori pour les familles" 
-        desc="Ouvert en 2007, cet espace se compose d'une école Montessori (enfants de 2 à 12 ans), d'ateliers parents/enfants (0 à 5 ans), d'ateliers d'éducation positive à destination des parents, d'un accueil de loisirs les mercredis des périodes scolaires et d'une pépinière de projets liés à Montessori et au bien-être des enfants" 
+        desc="Ouvert en 2007, cet espace se compose d'une école Montessori (enfants de 2 à 12 ans), d'ateliers parents/enfants (0 à 3 ans), d'ateliers d'éducation positive à destination des parents et d'une pépinière de projets liés à Montessori et au bien-être des enfants." 
         adresse="39 Rue de Laxou, Nancy" 
         latitude="6.161976" 
         longitude="48.685101" 
@@ -1795,8 +1871,8 @@
         titre="Les Petits Débrouillards" 
         bref="Événements culturels, animations" 
         desc="Activités éducatives pour les plus jeunes. Formations à l'animation, à la menée de débats, aux techniques d'intelligence collective. Buvette associative, événements culturels et petite restauration à la Piscine, notre tiers-lieu." 
-        adresse="33 Rue des Brasseries, 54320 Maxéville"
-        latitude="6.165661"
+        adresse="33 Rue des Brasseries, 54320 Maxéville" 
+        latitude="6.165661" 
         longitude="48.707399" 
         telephone="03 83 96 38 94" 
         message="" 
@@ -1807,7 +1883,7 @@
         titre="Plan B Nancy" 
         bref="Association d'écologie sociale" 
         desc="Association ayant pour objectif de créer des outils afin de faire passer l'alternative à la norme." 
-        adresse="51 rue de la République, Jarville"
+        adresse="51 rue de la République, Jarville" 
         latitude="6.204853" 
         longitude="48.672018" 
         telephone="06 86 10 83 45" 
@@ -1820,7 +1896,7 @@
         titre="Résistance à l'Agression Publicitaire" 
         bref="Lutte contre le système publicitaire" 
         desc="R.A.P Nancy a pour objet de lutter contre les effets négatifs de la publicité sur la société et l'environnement." 
-        adresse="Nancy"
+        adresse="Nancy" 
         telephone="" 
         message="" 
         citation="" />
