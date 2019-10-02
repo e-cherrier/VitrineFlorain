@@ -47,7 +47,7 @@ $header->display();
           <header>
             <h2>Participez à notre première brocante!</h2>
             <h4>Le Florain organise une brocante et une bourse aux instruments</h4>
-            <h4>Le dimanche 13 octobre de 9h à 17h</h4>
+            <h4>Le dimanche 13 octobre de 10h à 18h</h4>
       <footer>
         <ul class="style2">
         <li>  <a href="./brocante.php" class="button style2">Informations et inscriptions</a></li>
