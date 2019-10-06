@@ -124,16 +124,6 @@
         <h l="du lundi au samedi" 
           t="9H30 - 19H15"/>
       </acteur>
-      <acteur siteweb="envie-sante.fr" 
-        image="envie-bien-etre.jpg" 
-        titre="Envie de bien être" 
-        bref="Épicerie" 
-        type="Alimentation" 
-        desc="Une boutique chaleureuse qui vous propose de nombreux produits bio, en alimentation ( Fruits et légumes, Épicerie  bio, Pain bio, produits frais, Alimentation sans gluten) mais aussi  pour le bien-être de toute la famille" 
-        adresse="65 rue Carnot 54110 Dombasle sur Meurthe" 
-        latitude="6.349915" 
-        longitude="48.622827" 
-        telephone="03.83.34.19.50" />
     </scat>
     <scat type="Producteurs">
       <acteur date="02-10-2019" 
@@ -419,22 +409,6 @@
         latitude="6.22801" 
         longitude="48.79401" />
       <acteur fete="oui" 
-        anniv="oui" 
-        siteweb="lecoindelabeletteunblog.fr" 
-        image="coinbelette.jpg" 
-        titre="Le coin de la belette" 
-        type="Alimentation" 
-        bref="Plantes sauvages" 
-        desc="Préparations maison à l'ancienne et de façon traditionnelle, à base de plantes sauvages ou cultivées: confitures, sirops... Préparations de plantes séchées: reine des prés, achillée.... Nous cueillons à la main, dans le respect de l'environnement, les plantes sauvages pour nos préparations." 
-        adresse="3 rue François EVRARD  54140 Jarville" 
-        defi="Augmenter les achats locaux et baisser les achats en grande surface" 
-        latitude="6.202037" 
-        longitude="48.667067" 
-        telephone="06 41 21 49 69">
-        <h l="un vendredi sur deux" 
-          t="16h30 - 20h00"/>
-      </acteur>
-      <acteur fete="oui" 
         marche="vandoeuvre maxeville" 
         image="marianne.jpg" 
         titre="Marianne Louis" 
@@ -563,7 +537,7 @@
         longitude="48.7816173421" />
       <acteur image="defaut.jpg" 
         titre="La P'tite Laur'Reine du Pain" 
-        bref="Boulangere" 
+        bref="Boulangère" 
         marche="haroue" 
         type="Alimentation" 
         desc="Fabrication artisanale de pains et viennoiseries avec de la farine biologique locale et cuit au feu de bois" 
@@ -1204,17 +1178,6 @@
         citation="J'adore la proximité, le côté petit commerçant qui se bats pour gagner sa vie. Cette monnaie locale, est un vrai bonus en tant que pro ou perso d'ailleurs." />
 
       <acteur date="0518" 
-        siteweb="www.essencielonaturel.fr" 
-        image="essencielonaturel.jpg" 
-        titre="Essenciel O Naturel" 
-        bref="Naturopathie" 
-        desc="Patrice Raganelli, Praticien de santé Naturopathe sur la région de Nancy, propose de vous  accompagner sur le chemin du bien-être et de la santé. Rééquilibrage alimentaire (plus saine et riche en nutriments), diabète, accompagnement cancers, allergies, diarrhée, constipation, mal de ventre, migraine, etc ...  Je vous propose mon savoir-faire en naturopathie afin de soulager vos troubles physiques, redynamiser votre corps afin de permettre à chacun de permettre l'auto-guérison et augmenter votre énergie vitale." 
-        adresse="65 rue carnot 54110 Dombasle sur Meurthe" 
-        latitude="6.349945" 
-        longitude="48.622827" 
-        telephone="06.58.83.86.41" 
-        message="" />
-      <acteur date="0518" 
         anniv="oui" 
         siteweb="www.bio-est-ethique.fr" 
         image="bioestethique.jpg" 
@@ -1259,16 +1222,6 @@
         longitude="48.687785" 
         telephone="06 73 11 22 29" 
         message="" />
-      <acteur siteweb="" 
-        image="defaut.jpg" 
-        titre="Guy Fischer" 
-        bref="Shiatsu" 
-        desc="Praticien certifié de Shiatsu traditionnel. D'origine japonaise, ce soin holistique de bien-être s'inscrit dans la prévention de la santé. Ainsi, par des techniques de pressions et d'étirements, le Shiatsu s'inspire de la médecine traditionnelle chinoise. Il utilise les points d'acupuncture pour traiter les excès de la vie moderne, faire circuler l'énergie subtile du corps, harmoniser la force de vie et  contribuer à diffuser la joie de vivre" 
-        adresse="200 rue Marguerite Roblot 54230 Chaligny" 
-        defi="" 
-        latitude="6.073814" 
-        longitude="48.627313" 
-        telephone="06 41 84 35 07" />
       <acteur fete="oui" 
         siteweb="www.shiatsu54.com" 
         image="nathalieMartin.jpg" 
@@ -1315,16 +1268,6 @@
         telephone="03 83 54 82 93" 
         message="Changement d'adresse!" 
         defi="" />
-      <acteur siteweb="www.monpilatesanancy.fr" 
-        image="pilatesinspire.jpg" 
-        titre="Home Studio Pilates Inspire" 
-        type="Sante" 
-        desc="Vous serez accueilli.e dans un cadre très privilégié pour des cours individuels ou semi-collectifs (5 personnes maximum). Laurence enseigne la Méthode Pilates comme approche préventive en matière de santé et de bien-être. Vous apprendrez aussi de façon très concrète comment changer vos habitudes de mouvement au quotidien pour pallier les effets de la sédentarité." 
-        adresse="47 rue Charles Martel, Nancy" 
-        telephone="06 45 09 27 89" 
-        defi="" 
-        latitude="6.174116000" 
-        longitude="48.6763350" />
       <acteur siteweb="www.ish-a.fr" 
         image="isha.jpg" 
         titre="Isabelle Hameau" 
@@ -1356,15 +1299,6 @@
         latitude="6.139228" 
         longitude="48.690946" 
         telephone="06.07.60.78.32" 
-        message="" />
-      <acteur siteweb="www.viesensetmouvement.fr" 
-        image="viesensetmouvement.jpg" 
-        titre="Nathalie Boulliung" 
-        bref="Massages -  Qi Gong" 
-        type="Bien etre" 
-        desc="Enseignante certifiée de Qi Gong et d'Idogo et praticienne de massages bien-être. Le Qi Gong art énergétique ancestral permet par la respiration et le mouvement, un relâchement et une dynamisation. La prise de contact avec son corps est un chemin de découvertes sensorielles et posturales. Les bienfaits sont multiples: une meilleure vitalité, une meilleure récupération en cas de fatigue, plus de souplesse et d'équilibre. Le tout dans un esprit non compétitif." 
-        adresse="ONPA Jardins d'Arcadie, MJC Pichon et Toul" 
-        telephone="06 01 75 53 14" 
         message="" />
       <acteur siteweb="facebook pharmaciesaintetherese" 
         image="lapharmaciesaintetherese.jpg" 
