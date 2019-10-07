@@ -528,9 +528,6 @@ while(x=eval(x));
       </footer>
 
     <!-- Scripts -->
-
-
-
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/jquery.poptrox.min.js"></script>
       <script src="assets/js/jquery.dropotron.min.js"></script>
@@ -542,56 +539,72 @@ while(x=eval(x));
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script src="assets/js/main.js"></script>
       <script src="assets/js/main2.js"></script>
-<!--
+      
+    <script>
+    	function hideMessage() {
+          $('.crowdf').fadeOut(600);
+          $('.phone').fadeOut(600);
+          $('.crowdf').removeClass( "crowdf" );
+          $('.phone').removeClass( "phone" );
+      };
+		</script>
 		<script type="text/javascript">
-
-	 		/* une fois le document chargÃ©, executer la fonction suivante */
+ 
+ 
+	 		/* une fois le document charge, executer la fonction suivante */
 	 		$(document).ready(function() {
-
-	 			/* On crÃ©e l'Ã©lÃ©ment html Ã  la fin de la page */
+        
+	 			/* On cree l'element html a la fin de la page 
 				$('body').append('<a class="crowdf nav fa-angle-up nav scrollTo"> <p><b><font size="+2">Assemblée générale</font></b><br/> <font size="+1"><b> le 3 septembre 2017</b><br/> 15h à la MJC des 3 maisons<br> Nouveaux statuts,<br> projet de gouvernance...<br> Soyons nombreux,<br> parlez en autour de vous.<br> <b><font size="+2">Fête de lancement</font><br> le 7 Octobre 2017</b><br> 14h - minuit<br> <i><font size="-1">Le lieu sera communiqué<br> ultérieurement</font></i><br> le Florain sera émis,<br> de nombreux partenaires<br> seront présents!</p> </a>');
-
 				$('body').append('<a class="phone ban_tel"> <b> <font size="+1"> <font size="+2"> Assemblée générale </font> le 3 septembre 2017 <br/> <font size="+2"> Fête de lancement </font> le 7 Octobre 2017 </font> </b> </a>');
+*/
+$('body').append('<footer class="crowdf"><p>&nbsp;Le Florain à besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">Je fais un don</a></footer>');
+  $('body').append('<footer class="phone ban_tel"><p>&nbsp;Le Florain à besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">Je fais un don</a></footer>');
 
-	     		/* au scroll dans la fenÃªtre */
-			$(window).scroll(function(){
+	     	/* au scroll dans la fenetre */
+			  $(window).scroll(function(){
 
-				var p = $( "article:last" );
-                                var offset = p.offset();
-	  			var posScroll = $(document).scrollTop();
+				var p = $( "section:last" );
+        var offset = p.offset();
+	  		var posScroll = $(document).scrollTop();
 
 				if(
 					offset.top + 500 > posScroll &&
 					offset.top - 500 < posScroll
 				) {
-		        		$('.crowdf').fadeOut(600);
-	        			$('.phone').fadeOut(600);
-			        	return;
+		        $('.crowdf').fadeOut(600);
+	        	$('.phone').fadeOut(600);
+			      return;
 				}
 
+        $('.crowdf').removeClass( "crowdf_right" ).addClass( "crowdf_left" );
+
+/*
 				if( posScroll < $('body').height() ) {
-				        $('.crowdf').removeClass( "crowdf_right" ).addClass( "crowdf_left" );
+				    $('.crowdf').removeClass( "crowdf_right" ).addClass( "crowdf_left" );
 				} else {
-				        $('.crowdf').removeClass( "crowdf_left" ).addClass( "crowdf_right" );
+				    $('.crowdf').removeClass( "crowdf_left" ).addClass( "crowdf_right" );
 				}
+  */      
 
 				if( $('body').width() > 737 )  {
-	        			$('.crowdf').fadeIn(600);
-		        		$('.phone').fadeOut(600);
-		        		$('.nophone').fadeIn(600);
-					$('.ban_nophone').width( $('.box').width() * .7 );
+	        	$('.crowdf').fadeIn(600);
+		        $('.phone').fadeOut(600);
+		        $('.nophone').fadeIn(600);
+					  $('.ban_nophone').width( $('.box').width() * .7 );
 				}
 				else {
-		        		$('.crowdf').fadeOut(600);
-	        			$('.phone').fadeIn(600);
-					$('.ban_tel').width( $('body').width() );
-	        			$('.nophone').fadeOut(600);
+		        $('.crowdf').fadeOut(600);
+	        	$('.phone').fadeIn(600);
+					  $('.ban_tel').width( $('body').width() );
+	        	$('.nophone').fadeOut(600);
 				}
-
-				});
-		   	});
+        });
+        
+		});
 
 		</script>
+    <!--
      <script>
         var Images = new Array('images/accueil.png', 'images/cerclevertueux.png');
         var Pointeur = 0;
@@ -601,6 +614,6 @@ while(x=eval(x));
          Pointeur++;
         }
     </script>
--->
+    -->
   </body>
 </html>
