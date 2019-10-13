@@ -5,22 +5,26 @@ require 'souscategorie.php';
 class Categorie
 {
     protected $a;
-    protected $cat_;
+    public $cat_;
+    protected $tag_ = 'acteur';
 
     public $titleCellHeight = 6;
     public $titleCellBotMargin = 4;
 
+    // Categorie
     public function __construct($pdf, $cat)
     {
         $this->a = $pdf;
         $this->cat_ = $cat;
     }
 
+    // Categorie
     public function title_height()
     {
         return $this->titleCellHeight + $this->titleCellBotMargin;
     }
 
+    // Categorie
     public function needNewPage($offset = 0)
     {
         $sscategories = $this->cat_->getElementsByTagName('scat');
@@ -36,6 +40,7 @@ class Categorie
         return $mySsCat->needNewPage($offset + $this->title_height());
     }
 
+    // Categorie
     public function type()
     {
         if (!$this->cat_->hasAttribute($this->typeAttribute())) {
@@ -45,6 +50,7 @@ class Categorie
         return $this->cat_->getAttribute($this->typeAttribute());
     }
 
+    // Categorie
     public function typeAttribute()
     {
         return 'type';
@@ -53,11 +59,13 @@ class Categorie
 
 class CategorieFiches extends Categorie
 {
+    // CategorieFiches
     public function NewSousCategorie($a, $sscat)
     {
         return new SousCategorieFiches($a, $this, $sscat);
     }
 
+    // CategorieFiches
     public function display()
     {
         $sscategories = $this->cat_->getElementsByTagName('scat');
@@ -74,11 +82,13 @@ class CategorieFiches extends Categorie
 
 class CategorieLivret extends Categorie
 {
+    // CategorieLivret
     public function NewSousCategorie($a, $sscat)
     {
         return new SousCategorieLivret($a, $this, $sscat);
     }
 
+    // CategorieLivret
     public function displayType($suite = false)
     {
         if (!$this->cat_->hasAttribute($this->typeAttribute())) {
@@ -110,6 +120,7 @@ class CategorieLivret extends Categorie
         return $type;
     }
 
+    // CategorieLivret
     public function display()
     {
         $toc = array();
@@ -140,11 +151,13 @@ class CategoriePoche extends Categorie
     public $titleCellHeight = 5;
     public $titleCellBotMargin = 2;
 
+    // CategoriePoche
     public function NewSousCategorie($a, $sscat)
     {
         return new SousCategoriePoche($a, $this, $sscat);
     }
 
+    // CategoriePoche
     public function displayType($suite = false)
     {
         if (!$this->cat_->hasAttribute($this->typeAttribute())) {
@@ -177,28 +190,39 @@ class CategoriePoche extends Categorie
         return $type;
     }
 
+    // CategoriePoche
     public function display()
     {
+        $nb = $this->a->get_elements_to_display_count($this->cat_, $this->cat_, $this->tag_);
+        if ($nb == 0) {
+            return;
+        }
+
         $this->a->resetColumn();
         if ($this->needNewPage()) {
             $this->a->AddSubPage();
         }
 
         $this->displayType();
-
         $sscategories = $this->cat_->getElementsByTagName('scat');
         $nb_sscat = $sscategories->length;
 
         for ($sscat = 0; $sscat < $nb_sscat; ++$sscat) {
             $sscategorie = $sscategories[$sscat];
+            if ($sscategorie->hasAttribute('tooFar')) {
+                continue;
+            }
             $mySsCat = $this->NewSousCategorie($this->a, $sscategorie);
-            $mySsCat->display();
+            if ($mySsCat->get_elements_count() > 0) {
+                $mySsCat->display();
+            }
         }
     }
 }
 
 class CategorieCompact extends CategoriePoche
 {
+    // CategorieCompact
     public function NewSousCategorie($a, $sscat)
     {
         return new SousCategorieCompact($a, $this, $sscat);

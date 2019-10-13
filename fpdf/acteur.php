@@ -261,8 +261,10 @@ class ActeurCompact extends Acteur
 
     public function EnteteHeight()
     {
+        $columnWidth = $this->a->GetColumnWidth();
         if ($this->isNew()) {
             $this->new_bullet = 'Nouveau!';
+            $columnWidth = $columnWidth - 16;
         }
         $h = 0;
         if ($this->attributeDefined('titre')) {
@@ -274,22 +276,22 @@ class ActeurCompact extends Acteur
         }
 
         $h0 = $this->getStringHeight($this->new_bullet.$this->titre.$this->bref, $this->titre_s);
-        $this->titre_width = $this->a->GetColumnWidth();
-        $this->bref_width = $this->a->GetColumnWidth();
+        $this->titre_width = $columnWidth;
+        $this->bref_width = $columnWidth;
         if ($h0 > $h) {
             // not enough space for title and bref on the same single line
-            $titre_len = strlen($this->new_bullet.$this->titre);
-            $bref_len = strlen($this->bref);
+            $titre_len = strlen($this->titre);
+            $bref_len = strlen($this->bref) * .8; // magic font size multiplier
             $ratio_titre = $titre_len / ($titre_len + $bref_len);
-            $ratio_bref = $bref_len / ($titre_len + $bref_len);
+            $ratio_bref = 1 - $ratio_titre;
             if ($ratio_titre < .15) {
                 $ratio_titre = .15;
                 $ratio_bref = .85;
             }
-            $this->titre_width = $this->a->GetColumnWidth() * ($ratio_titre+.05);
-            $this->bref_width = $this->a->GetColumnWidth() * $ratio_bref;
+            $this->titre_width = $columnWidth * $ratio_titre;
+            $this->bref_width = $columnWidth * $ratio_bref;
             $h = max(
-                $this->getStringHeight($this->new_bullet.$this->titre, $this->titre_s, 'B', 'Futura', $this->titre_width),
+                $this->getStringHeight($this->titre, $this->titre_s, 'B', 'Futura', $this->titre_width),
                 $this->getStringHeight($this->bref, $this->bref_s, 'B', 'Futura', $this->bref_width)
             );
         }
@@ -331,12 +333,24 @@ class ActeurCompact extends Acteur
         $left_entete = $this->a->GetX();
         $top_entete = $this->a->GetY();
 
+        $lc = 1;
+        $r = $this->a->getColor($this->acteur_);
+        $c = $r['town']->col;
+        $r['town']->add();
+        $this->a->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
+        $this->a->Rect(
+            $this->a->GetX(),
+            $this->a->GetY(),
+            $lc,
+            $this->height() - 1, 'F'
+        );
+
         if ($this->isComptoir()) {
             $this->a->SetFillColor(234, 250, 180);
             $this->a->Rect(
-                $this->a->GetX(),
+                $this->a->GetX() + $lc,
                 $this->a->GetY(),
-                $this->a->GetColumnWidth(),
+                $this->a->GetColumnWidth() - $lc,
                 $this->height(), 'F'
             );
         }
@@ -345,12 +359,11 @@ class ActeurCompact extends Acteur
         $this->a->SetLeftMargin($left_entete);
 
         // Le nom a gauche
-        $shift = 0;
         if (strlen($this->new_bullet) > 0) {
             $shift = 16;
             $this->a->PrintBullet($this->new_bullet, $shift);
         }
-        $this->a->PrintName($this->titre, $this->titre_width - $shift, $this->titre_s, 'L');
+        $this->a->PrintName($this->titre, $this->titre_width, $this->titre_s, 'L');
 
         $saved_y = $this->a->GetY();
         // la description a droite

@@ -209,13 +209,16 @@ class ExposantLivret extends Exposant
 
 class Marche extends SousCategorie
 {
+    protected $tag_ = 'scat';
     protected $exposants = array();
 
+    // SousCategorie Marche
     public function __construct($a, $cat, $scat)
     {
         $this->a = $a;
         $this->cat_ = $cat;
         $this->scat_ = $scat;
+        $this->tag_ = 'scat';
         $id = utf8_decode($this->scat_->getAttribute('id'));
         $acteurs = $a->doc->getElementsByTagName('acteur');
         $nb_a = $acteurs->length;
@@ -241,16 +244,19 @@ class Marche extends SousCategorie
         }
     }
 
+    // SousCategorie Marche
     public function get_elements()
     {
         return $this->exposants;
     }
 
+    // SousCategorie Marche
     public function get_elements_count()
     {
         return count($this->exposants);
     }
 
+    // SousCategorie Marche
     public function typeAttribute()
     {
         return 'titre';
@@ -259,6 +265,7 @@ class Marche extends SousCategorie
 
 class MarcheLivret extends Marche
 {
+    // SousCategorie MarcheLivret
     public function NewActeur($annuaire, $acteur)
     {
         $expo = new ExposantLivret($annuaire, $acteur);
@@ -267,6 +274,7 @@ class MarcheLivret extends Marche
         return $expo;
     }
 
+    // SousCategorie MarcheLivret
     public function displayType($suite = false)
     {
         if (!$this->scat_->hasAttribute($this->typeAttribute())) {
@@ -303,6 +311,7 @@ class MarchePoche extends Marche
     public $titleCellHeight = 5;
     public $titleCellBotMargin = 2;
 
+    // SousCategorie MarchePoche
     public function NewActeur($annuaire, $acteur)
     {
         $expo = new ExposantPoche($annuaire, $acteur);
@@ -311,6 +320,7 @@ class MarchePoche extends Marche
         return $expo;
     }
 
+    // SousCategorie MarchePoche
     public function displayType($suite = false)
     {
         if (!$this->scat_->hasAttribute($this->typeAttribute())) {
@@ -344,6 +354,7 @@ class MarcheCompact extends Marche
     public $titleCellHeight = 5;
     public $titleCellBotMargin = 2;
 
+    // SousCategorie MarcheCompact
     public function NewActeur($annuaire, $acteur)
     {
         $expo = new ExposantCompact($annuaire, $acteur);
@@ -352,6 +363,36 @@ class MarcheCompact extends Marche
         return $expo;
     }
 
+    /*
+         * Return true if we need to begin a new page before displaying the sub categorie
+         *
+         * The minimum height left needed is:
+         * - the heigth of the ss cat title
+         * - plus the max height of a pair of acteurs (one per column)
+         */
+    public function needNewPage($offset = 0)
+    {
+        $offset = $offset + $this->title_height();
+        $acteurs = $this->get_elements();
+        $nb = $this->get_elements_count();
+
+        for ($pos = 0; $pos < $nb; ++$pos) {
+            $acteur = $acteurs[$pos];
+            if (!$this->candidate($acteur)) {
+                continue;
+            }
+            $myActeur = $this->NewActeur($this->a, $acteur);
+
+            if ($myActeur->height() > $this->a->SpaceLeftCol0(0)) {
+                return true;
+            }
+            break;
+        }
+
+        return false;
+    }
+
+    // SousCategorie MarcheCompact
     public function displayType($suite = false)
     {
         if (!$this->scat_->hasAttribute($this->typeAttribute())) {
@@ -360,6 +401,16 @@ class MarcheCompact extends Marche
 
         $type = utf8_decode($this->scat_->getAttribute($this->typeAttribute()));
 
+        $lc = 1;
+        $r = $this->a->getColor($this->scat_);
+        $c = $r['town']->col;
+        $this->a->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
+        $this->a->Rect(
+            $this->a->GetX(),
+            $this->a->GetY() + 1,
+            $lc,
+            4, 'F'
+        );
         // Title
         $label = $type;
         if ($suite == true) {
@@ -380,10 +431,14 @@ class MarcheCompact extends Marche
         return $type;
     }
 
-    // MarcheCompact
+    // SousCategorie MarcheCompact
     public function display()
     {
-        $this->a->resetColumn();
+        $nb = $this->get_elements_count();
+        if ($nb == 0) {
+            return;
+        }
+
         if ($this->needNewPage()) {
             $this->a->NextPage();
             $this->cat_->displayType(true);
@@ -392,13 +447,9 @@ class MarcheCompact extends Marche
 
         $deb_i = 1;
         $acteurs = $this->get_elements();
-        $nb = $this->get_elements_count();
         for ($pos = 0; $pos < $nb; ++$pos) {
             $acteur = $acteurs[$pos];
-            if ($acteur->hasAttribute('attente')) {
-                continue;
-            }
-            if ($acteur->hasAttribute('displayed')) {
+            if (!$this->candidate($acteur)) {
                 continue;
             }
             $myActeur = $this->NewActeur($this->a, $acteur);
@@ -425,6 +476,8 @@ class MarcheCompact extends Marche
 
 class CategorieMarcheLivret extends CategorieLivret
 {
+    protected $tag_ = 'scat';
+
     public function typeAttribute()
     {
         return 'type';
@@ -438,6 +491,8 @@ class CategorieMarcheLivret extends CategorieLivret
 
 class CategorieMarchePoche extends CategoriePoche
 {
+    protected $tag_ = 'scat';
+
     public function typeAttribute()
     {
         return 'type';
@@ -451,6 +506,8 @@ class CategorieMarchePoche extends CategoriePoche
 
 class CategorieMarcheCompact extends CategorieCompact
 {
+    protected $tag_ = 'scat';
+
     public function typeAttribute()
     {
         return 'type';

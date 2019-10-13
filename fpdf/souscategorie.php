@@ -7,8 +7,9 @@ require 'acteur.php';
 class SousCategorie
 {
     protected $a;
-    protected $cat_;
+    public $cat_;
     protected $scat_;
+    protected $tag_ = 'acteur';
     public $titleCellHeight = 6;
     public $titleCellBotMargin = 4;
 
@@ -30,12 +31,24 @@ class SousCategorie
 
     public function get_elements()
     {
-        return $this->scat_->getElementsByTagName('acteur');
+        return $this->scat_->getElementsByTagName($this->tag_);
     }
 
     public function get_elements_count()
     {
-        return $this->scat_->getElementsByTagName('acteur')->length;
+        return $this->scat_->getElementsByTagName($this->tag_)->length;
+    }
+
+    public function candidate($acteur)
+    {
+        if ($acteur->hasAttribute('attente') ||
+            $acteur->hasAttribute('displayed') ||
+            $acteur->hasAttribute('tooFar')
+        ) {
+            return false;
+        }
+
+        return true;
     }
 
     // SousCategorie
@@ -266,10 +279,7 @@ class SousCategorie
         $nb = $this->get_elements_count();
         for ($pos = 0; $pos < $nb; ++$pos) {
             $acteur = $acteurs[$pos];
-            if ($acteur->hasAttribute('attente')) {
-                continue;
-            }
-            if ($acteur->hasAttribute('displayed')) {
+            if (!$this->candidate($acteur)) {
                 continue;
             }
             $myActeur = $this->NewActeur($this->a, $acteur);
@@ -314,6 +324,10 @@ class SousCategorie
     public function display()
     {
         $toc = array();
+        $nb = $this->a->get_elements_to_display_count($this->cat_->cat_, $this->scat_, $this->tag_);
+        if ($nb == 0) {
+            return $toc;
+        }
         $this->a->resetColumn();
         if ($this->needNewPage()) {
             $this->a->NextPage();
@@ -324,7 +338,6 @@ class SousCategorie
         $toc['type'] = $type;
         $toc['page'] = $this->a->PageNo() - 1;
 
-        $nb = $this->get_elements_count();
         $nb_displayed = 0;
         $deb_i = 1;
         while ($nb_displayed < $nb) {
@@ -397,10 +410,7 @@ class SousCategorieFiches extends SousCategorie
         $nb = $this->get_elements_count();
         for ($a = 0; $a < $nb; ++$a) {
             $acteur = $acteurs[$a];
-            if ($acteur->hasAttribute('attente')) {
-                continue;
-            }
-            if ($acteur->hasAttribute('displayed')) {
+            if (!$this->candidate($acteur)) {
                 continue;
             }
             $myActeur = $this->NewActeur($this->a, $acteur);
@@ -494,18 +504,19 @@ class SousCategorieCompact extends SousCategoriePoche
         $nb = $this->get_elements_count();
         for ($pos = 0; $pos < $nb; ++$pos) {
             $acteur = $acteurs[$pos];
-            if ($acteur->hasAttribute('attente')) {
-                continue;
-            }
-            if ($acteur->hasAttribute('displayed')) {
+            if (!$this->candidate($acteur)) {
                 continue;
             }
             $myActeur = $this->NewActeur($this->a, $acteur);
             if ($myActeur->height() > $this->a->SpaceLeftCol0($offset)) {
+                //$this->a->debug('height '.$myActeur->height());
+
                 return true;
             }
             break;
         }
+
+        return false;
     }
 
     public function NewActeur($annuaire, $acteur)
@@ -516,6 +527,11 @@ class SousCategorieCompact extends SousCategoriePoche
     // SousCategorieCompact
     public function display()
     {
+        $nb = $this->a->get_elements_to_display_count($this->cat_->cat_, $this->scat_, $this->tag_);
+        if ($nb == 0) {
+            return [];
+        }
+
         $this->a->resetColumn();
         if ($this->needNewPage()) {
             $this->a->NextPage();
@@ -528,10 +544,7 @@ class SousCategorieCompact extends SousCategoriePoche
         $nb = $this->get_elements_count();
         for ($pos = 0; $pos < $nb; ++$pos) {
             $acteur = $acteurs[$pos];
-            if ($acteur->hasAttribute('attente')) {
-                continue;
-            }
-            if ($acteur->hasAttribute('displayed')) {
+            if (!$this->candidate($acteur)) {
                 continue;
             }
             $myActeur = $this->NewActeur($this->a, $acteur);
