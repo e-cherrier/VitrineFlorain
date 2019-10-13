@@ -1,5 +1,18 @@
 ﻿<?php
-include('nav.php');
+include 'nav.php';
+$latRef = -1;
+$lonRef = -1;
+$km = -1;
+if (
+  isset($_GET['km']) &&
+  isset($_GET['lat']) &&
+  isset($_GET['lon'])
+) {
+    $km = $_GET['km'];
+    $latRef = $_GET['lat'];
+    $lonRef = $_GET['lon'];
+}
+
 ?>
 <!--
   Big Picture by HTML5 UP
@@ -54,34 +67,34 @@ $header->display_acteurs_nav();
         <?php
 
         $xmlDoc = new DOMDocument();
-        $xmlDoc->load("acteurs-cat.xml");
+        $xmlDoc->load('acteurs-cat.xml');
 
         $x = $xmlDoc->documentElement;
-        $categories = $x->getElementsByTagName( "categorie" );
+        $categories = $x->getElementsByTagName('categorie');
         $nb_cat = $categories->length;
 
         $shift = 2;
-        for($c=$shift; $c<($nb_cat+$shift); $c++) {
-          echo "<p>\n";
-          echo "  <fieldset id='layer". $c . "'>\n";
-          echo "    <label>&nbsp;</label>\n";
-          echo "    <input id='visible". $c . "' class='visible' type='checkbox'/>\n";
-          echo "    <label class='css-label c".($c-$shift+1)."' for='visible". $c . "'>" . $categories[$c-$shift]->getAttribute( "type" ) . " </label>\n";
-          echo "  </fieldset>\n";
-          echo "</p>\n";
+        for ($c = $shift; $c < ($nb_cat + $shift); ++$c) {
+            echo "<p>\n";
+            echo "  <fieldset id='layer".$c."'>\n";
+            echo "    <label>&nbsp;</label>\n";
+            echo "    <input id='visible".$c."' class='visible' type='checkbox'/>\n";
+            echo "    <label class='css-label c".($c - $shift + 1)."' for='visible".$c."'>".$categories[$c - $shift]->getAttribute('type')." </label>\n";
+            echo "  </fieldset>\n";
+            echo "</p>\n";
         }
           echo "<p>\n";
-          echo "  <fieldset id='layer". ($nb_cat+$shift) . "'>\n";
+          echo "  <fieldset id='layer".($nb_cat + $shift)."'>\n";
           echo "    <label>&nbsp;</label>\n";
-          echo "    <input id='visible". ($nb_cat+$shift) . "' class='visible' type='checkbox'/>\n";
-          echo "    <label class='css-label c".($nb_cat+1)."' for='visible". ($nb_cat+$shift) . "'> Les marchés </label>\n";
+          echo "    <input id='visible".($nb_cat + $shift)."' class='visible' type='checkbox'/>\n";
+          echo "    <label class='css-label c".($nb_cat + 1)."' for='visible".($nb_cat + $shift)."'> Les marchés </label>\n";
           echo "  </fieldset>\n";
           echo "</p>\n";
           echo "<p>\n";
-          echo "  <fieldset id='layer".($nb_cat+$shift+1)."'>\n";
+          echo "  <fieldset id='layer".($nb_cat + $shift + 1)."'>\n";
           echo "    <label>&nbsp;</label>\n";
-          echo "    <input id='visible".($nb_cat+$shift+1)."' class='visible' type='checkbox' value='false'/>\n";
-          echo "    <label class='css-label c".($nb_cat+2)."' for='visible".($nb_cat+$shift+1)."'>Nombres</label>\n";
+          echo "    <input id='visible".($nb_cat + $shift + 1)."' class='visible' type='checkbox' value='false'/>\n";
+          echo "    <label class='css-label c".($nb_cat + 2)."' for='visible".($nb_cat + $shift + 1)."'>Nombres</label>\n";
           echo "  </fieldset>\n";
           echo "  <fieldset>\n";
           echo "    <label style='margin-left: 20px; vertical-align: top;'>&nbsp;Distance:</label>\n";
@@ -103,66 +116,97 @@ $header->display_acteurs_nav();
              var feature_array = new Array;
              var all_features = new Array;
 <?php
-for($c=0; $c<$nb_cat+1; $c++) {
-  echo "feature_array[" . $c . "] = new Array;\n";
+for ($c = 0; $c < $nb_cat + 1; ++$c) {
+            echo 'feature_array['.$c."] = new Array;\n";
+        }
+
+function calcCrow($lat1, $lon1, $lat2, $lon2)
+{
+    $R = 6371; // km
+    $dLat = toRad($lat2 - $lat1);
+    $dLon = toRad($lon2 - $lon1);
+    $lat1 = toRad($lat1);
+    $lat2 = toRad($lat2);
+
+    $a = sin($dLat / 2) * sin($dLat / 2) + sin($dLon / 2) * sin($dLon / 2) * cos($lat1) * cos($lat2);
+    $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
+    $d = $R * $c;
+
+    return $d;
 }
 
+// Converts numeric degrees to radians
+function toRad($Value)
+{
+    return $Value * pi() / 180;
+}
 
-function add_acteur( $f, $acteur ) {
-  if( $acteur->hasAttribute( "attente" ) ) {
-      return;
-  }
-  $titre = $acteur->getAttribute( "titre" );
-  $desc = $acteur->getAttribute( "bref" );
-  $web = $acteur->getAttribute( "siteweb" );
-  $lon = $acteur->getAttribute( "longitude" );
-  $lat = $acteur->getAttribute( "latitude" );
+function add_acteur($f, $acteur)
+{
+    if ($acteur->hasAttribute('attente')) {
+        return;
+    }
 
-  // kriptic method to dispach colors
-  $color = array(
-    0 => array( "r" => 255, "g" => 0, "b" => 0 ),
-    1 => array( "r" => 255, "g" => 255, "b" => 0 ),
-    2 => array( "r" => 255, "g" => 170, "b" => 234 ),
-    3 => array( "r" => 174, "g" => 0, "b" => 255 ),
-    4 => array( "r" => 0, "g" => 255, "b" => 255 ),
-    5 => array( "r" => 119, "g" => 74, "b" => 74 ),
-    7 => array( "r" => 0, "g" => 0, "b" => 255 ),
-    6 => array( "r" => 255, "g" => 192, "b" => 0 ),
-    8 => array( "r" => 0, "g" => 255, "b" => 0 ),
+    $lon = $acteur->getAttribute('longitude');
+    $lat = $acteur->getAttribute('latitude');
+    global $km;
+    global $latRef;
+    global $lonRef;
+    if ($km > 0) {
+        $dist = calcCrow($lat, $lon, $latRef, $lonRef);
+        if( $dist > $km ) {
+          return;
+        }
+    }
+
+    $titre = $acteur->getAttribute('titre');
+    $desc = $acteur->getAttribute('bref');
+    $web = $acteur->getAttribute('siteweb');
+
+    // kriptic method to dispach colors
+    $color = array(
+    0 => array('r' => 255, 'g' => 0, 'b' => 0),
+    1 => array('r' => 255, 'g' => 255, 'b' => 0),
+    2 => array('r' => 255, 'g' => 170, 'b' => 234),
+    3 => array('r' => 174, 'g' => 0, 'b' => 255),
+    4 => array('r' => 0, 'g' => 255, 'b' => 255),
+    5 => array('r' => 119, 'g' => 74, 'b' => 74),
+    7 => array('r' => 0, 'g' => 0, 'b' => 255),
+    6 => array('r' => 255, 'g' => 192, 'b' => 0),
+    8 => array('r' => 0, 'g' => 255, 'b' => 0),
   );
-  $r =  $color[$f]["r"];
-  $g =  $color[$f]["g"];
-  $b =  $color[$f]["b"];
+    $r = $color[$f]['r'];
+    $g = $color[$f]['g'];
+    $b = $color[$f]['b'];
 
-  $punaise = "'./assets/css/images/dot.png'";
-  if( $desc == "Marché" ) {
-      $desc = $acteur->getAttribute( "desc" );
-  }
-?>
+    $punaise = "'./assets/css/images/dot.png'";
+    if ($desc == 'Marché') {
+        $desc = $acteur->getAttribute('desc');
+    } ?>
 afeature = new ol.Feature({
-geometry: new ol.geom.Point(ol.proj.fromLonLat([<?php echo $lat?>, <?php echo $lon?>])),
-name: "<?php echo $titre?>",
-desc: "<?php echo $desc . " <br/><a href='http://" . $web . "'>".$web."</a>" ?>"
+geometry: new ol.geom.Point(ol.proj.fromLonLat([<?php echo $lat; ?>, <?php echo $lon; ?>])),
+name: "<?php echo $titre; ?>",
+desc: "<?php echo $desc." <br/><a href='http://".$web."'>".$web.'</a>'; ?>"
 });
 
 
 afeature.setStyle(
   new ol.style.Style({
     image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-      color: [<?php echo $r . "," . $g . "," . $b?> ],
+      color: [<?php echo $r.','.$g.','.$b; ?> ],
       crossOrigin: 'anonymous',
-      src: <?php echo $punaise ?>
+      src: <?php echo $punaise; ?>
     }))
   })
 );
 
 <?php
-    echo "feature_array[" . $f . "].push( afeature );\n";
+    echo 'feature_array['.$f."].push( afeature );\n";
     echo "all_features.push( afeature );\n";
 }
 
       // build features per categories
-      
+
       $reflon = 48.91;
       $reflat = 6.75;
       $curlon = $reflon;
@@ -171,38 +215,37 @@ afeature.setStyle(
       $nblat = 1;
       $ref = 0;
 
-      for($c=0; $c<$nb_cat; $c++) {
-
-        $acteurs = $categories[$c]->getElementsByTagName( "acteur" );
-        $nb = $acteurs->length;
-        for( $pos=0; $pos<$nb; $pos++ ) {
-            $acteur = $acteurs[$pos];
-            if( ! $acteur->hasAttribute( "longitude" ) || ! $acteur->hasAttribute( "latitude" ) ) {
-                $lon = $curlon;
-                $lat = $curlat;
-                $acteur->setAttribute("longitude", $lon);
-                $acteur->setAttribute("latitude", $lat);
-                $ref = ($ref + 1) % 4;
-                if( $ref == 0 ) {
-                  $curlon = $curlon + .005;
-                  $curlat = $reflat;
-                  $nblon = $nblon + 1;
-                } else {
-                  $curlat = $curlat + .005;
-                  $nblat = min( [4, $nblat+1] );
-                }
-            }
-            add_acteur( $c, $acteur );
-        }
+      for ($c = 0; $c < $nb_cat; ++$c) {
+          $acteurs = $categories[$c]->getElementsByTagName('acteur');
+          $nb = $acteurs->length;
+          for ($pos = 0; $pos < $nb; ++$pos) {
+              $acteur = $acteurs[$pos];
+              if (!$acteur->hasAttribute('longitude') || !$acteur->hasAttribute('latitude')) {
+                  $lon = $curlon;
+                  $lat = $curlat;
+                  $acteur->setAttribute('longitude', $lon);
+                  $acteur->setAttribute('latitude', $lat);
+                  $ref = ($ref + 1) % 4;
+                  if ($ref == 0) {
+                      $curlon = $curlon + .005;
+                      $curlat = $reflat;
+                      $nblon = $nblon + 1;
+                  } else {
+                      $curlat = $curlat + .005;
+                      $nblat = min([4, $nblat + 1]);
+                  }
+              }
+              add_acteur($c, $acteur);
+          }
       }
 
-      $marche_cat = $x->getElementsByTagName( "marches" );
-      $marches = $marche_cat[0]->getElementsByTagName( "scat" );
+      $marche_cat = $x->getElementsByTagName('marches');
+      $marches = $marche_cat[0]->getElementsByTagName('scat');
       $nb_marches = $marches->length;
 
-      for($pos=0; $pos<$nb_marches; $pos++) {
-        // all marche must be added to the last feature.
-        add_acteur( $nb_cat, $marches[$pos] );
+      for ($pos = 0; $pos < $nb_marches; ++$pos) {
+          // all marche must be added to the last feature.
+          add_acteur($nb_cat, $marches[$pos]);
       }
 ?>
 
@@ -244,13 +287,13 @@ afeature.setStyle(
       });
 
       var s = 0.005;
-      var x = <?php echo $reflat?> - s/2;
-      var y = <?php echo $reflon?> - s/2;
+      var x = <?php echo $reflat; ?> - s/2;
+      var y = <?php echo $reflon; ?> - s/2;
       var thing = new ol.geom.Polygon( [[
           ol.proj.transform([x,y], 'EPSG:4326', 'EPSG:3857'),
-          ol.proj.transform([x+s*<?php echo $nblat?>,y], 'EPSG:4326', 'EPSG:3857'),
-          ol.proj.transform([x+s*<?php echo $nblat?>,y+s*<?php echo $nblon?>], 'EPSG:4326', 'EPSG:3857'),
-          ol.proj.transform([x,y+s*<?php echo $nblon?>], 'EPSG:4326', 'EPSG:3857')
+          ol.proj.transform([x+s*<?php echo $nblat; ?>,y], 'EPSG:4326', 'EPSG:3857'),
+          ol.proj.transform([x+s*<?php echo $nblat; ?>,y+s*<?php echo $nblon; ?>], 'EPSG:4326', 'EPSG:3857'),
+          ol.proj.transform([x,y+s*<?php echo $nblon; ?>], 'EPSG:4326', 'EPSG:3857')
       ]]);
       var featuresquare = new ol.Feature({
           name: "Square",
