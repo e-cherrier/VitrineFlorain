@@ -1,11 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 2 octobre 2019" 
-  sstitre="Mise à jour du 2 octobre 2019 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 13 octobre 2019" 
+  sstitre="Mise à jour du 13 octobre 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert."
   localisation="du Sud de la Meurthe et Moselle" 
   slogan="La monnaie qui crée du lien!">
   <categorie type="Se nourrir">
     <scat type="Épiceries">
+      <acteur date="13-10-2019" 
+        siteweb="www.pambio.fr" 
+        image="pambio.jpg" 
+        titre="PAMbio"
+        bref="Une épicerie BIO et bien d'avantage"
+        desc="Une épicerie avec des produits bio, locaux et en vrac, un espace convivial et des animations pour avancer ensemble sur le chemin de la transition." 
+        adresse="7-9 rue du 26ème BCP, 54700 Pont-à-Mousson" 
+        telephone="03 54 79 06 34"
+        latitude="6.052317" 
+        longitude="48.902364"  />
       <acteur date="22-04-2019" 
         siteweb="facebook gustovinolaxou" 
         image="gustovino.jpg" 
@@ -429,6 +439,27 @@
         longitude="48.114156" 
         telephone="" 
         message="" />
+        
+      <acteur date="13-10-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Brasserie d'Austrasie"
+        bref=""
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="27 bis rue Maréchal Ney, Jarville" 
+        telephone="06 61 77 97 80"
+        latitude="6.199783" 
+        longitude="48.667236"  />
+      <acteur_vide date="xx-xx-xxxx" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre=""
+        bref=""
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="" 
+        telephone=""
+        latitude="6." 
+        longitude="48."  />
       <acteur anniv="oui" 
         fete="oui" 
         comptoir="oui" 
@@ -1050,13 +1081,6 @@
     </scat>
 
     <scat type ="Tourisme, Vacances, WE">
-      <acteur_vide date="xx-xx-xxxx" 
-        siteweb="" 
-        image="defaut.jpg" 
-        titre=" " 
-        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
-        adresse="" 
-        telephone="" />
     
       <acteur date="02-10-2019" 
         siteweb="" 
@@ -1337,6 +1361,16 @@
   </categorie>
   <categorie type ="S'habiller, s'équiper">
     <scat>
+      <acteur date="13-10-2019" 
+        siteweb="www.so-authentic.com" 
+        image="soauthentic.jpg" 
+        titre="So Authentic"
+        bref="Savonnerie, Cosmétiques"
+        desc="Savonnerie artisanale, et fabrication de produits cosmétiques naturels à bas d'ingrédients bio et locaux." 
+        adresse="1 rue de la cour, 54760 Leyr" 
+        telephone="06 32 06 38 57"
+        latitude="6.265191" 
+        longitude="48.799813"  />
       <acteur date="1018" 
         siteweb="www.cultures-et-partages.fr" 
         image="defaut.jpg" 
@@ -1599,6 +1633,14 @@
   </categorie>
   <categorie type ="Et aussi...">
     <scat>
+      <acteur date="13-10-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Sandrine Voisin"
+        bref="Consultante en création/reprise d'entreprises"
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="" 
+        telephone="06 11 89 88 10"  />
       <acteur date="02-10-2019" 
         siteweb="" 
         image="defaut.jpg" 
