@@ -44,16 +44,6 @@ $header->display();
 
       <section id="accueil" class="main styleAcceuil right dark fullscreen">
         <div class="content box style1">
-          <header>
-            <h2>Participez à notre première brocante!</h2>
-            <h4>Le Florain organise une brocante et une bourse aux instruments</h4>
-            <h4>Le dimanche 13 octobre de 10h à 18h</h4>
-      <footer>
-        <ul class="style2">
-        <li>  <a href="./brocante.php" class="button style2">Informations et inscriptions</a></li>
-        </ul>
-      </footer>
-</header>
           <br/><h2> Les derniers acteurs agréés </h2>
 <div id="myCarousel" class="carousel slide">
 
@@ -78,7 +68,6 @@ $header->display();
           $date = $acteur->getAttribute('date');
           // $datetime2 = date_create('2009-10-13');
           $aggDate = DateTime::createFromFormat('d-m-Y', $date);
-          $titre = str_replace("'", '', $acteur->getAttribute('titre'));
           if ($oneMonthAgo < $aggDate) {
               $nouveaux[$idx] = $acteur;
               $idx = $idx + 1;
@@ -99,7 +88,8 @@ $header->display();
       echo "<div class='carousel-inner'>\n";
       $acteur = $nouveaux[$indexes[0]];
       $image = $acteur->getAttribute('image');
-      $titre = str_replace("'", '', $acteur->getAttribute('titre'));
+      $titre = $acteur->getAttribute('titre');
+      $bref = $acteur->getAttribute('bref');
       $desc = $acteur->getAttribute('desc');
       $lenmax = 260;
       if (strlen($desc) > $lenmax) {
@@ -110,7 +100,8 @@ $header->display();
       echo "  <div class='item active'>\n";
       echo "     <img src='images/acteurs/".$image."' alt='".$titre."'/>\n";
       echo "     <div>\n";
-      echo "       <h1 align='center'>".$titre."</h1>\n";
+      echo "       <h3 align='left'>".$bref.'</h3>';
+      echo "       <h1 align='center'>".$titre.'</h1>';
       echo '       <p >'.$desc."</p>\n";
       echo "       <div class='coordonnees'>\n";
       echo '         <p >'.$adresse."<br/>\n";
@@ -121,7 +112,9 @@ $header->display();
       for ($a = 1; $a < count($nouveaux); ++$a) {
           $acteur = $nouveaux[$indexes[$a]];
           $image = $acteur->getAttribute('image');
-          $titre = str_replace("'", '', $acteur->getAttribute('titre'));
+          $titre = $acteur->getAttribute('titre');
+          $bref = $acteur->getAttribute('bref');
+
           $desc = $acteur->getAttribute('desc');
           if (strlen($desc) > $lenmax) {
               $desc = substr($desc, 0, $lenmax - 7).' [...]';
@@ -131,7 +124,8 @@ $header->display();
           echo "  <div class='item'>\n";
           echo "    <img src='images/acteurs/".$image."' alt='".$titre."'/>\n";
           echo "     <div>\n";
-          echo "      <h1 align='center'>".$titre."</h1>\n";
+          echo "       <h3 align='left'>".$bref.'</h3>';
+          echo "      <h1 align='center'>".$titre.'</h1>';
           echo '      <p >'.$desc."</p>\n";
           echo "      <div class='coordonnees'>\n";
           echo '        <p >'.$adresse."<br/>\n";
