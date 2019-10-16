@@ -171,11 +171,10 @@ $header->display();
           </header>
 <h3>Depuis la fete de lancement le 7 octobre 2017, le Florain c'est:</h3>
 
-<h4>Un réseau de plus de 140 professionnels,</h4>
-<h4>11 comptoirs de change,</h4>
-<h4>80.000 Florains en circulation,</h4>
-<h4>1000 Florains de plus par semaine dans le circuit,</h4>
-<h4>des groupes locaux à Toul et Lunéville
+<h4>Un réseau de plus de 180 professionnels,</h4>
+<h4>12 comptoirs de change,</h4>
+<h4>90.000 Florains en circulation,</h4>
+<h4>des groupes locaux à Toul et Lunéville.</h4>
 <br/>
 <h3>Vous aussi, entrez dans la dynamique !</h3>
 <br/>
@@ -292,8 +291,8 @@ $header->display();
           <h3>Monnaie locale et acte de liberté citoyenne.</h3><br>
           <p class="onecolumn">Une monnaie locale citoyenne permet de relocaliser l'économie, de rendre les citoyens maîtres de leurs échanges, acteurs du fonctionnement de leur économie et libres d'en définir les valeurs. <br> Pour plus d'informations sur les monnaies locales et sur leur rôle dans le système économique actuel :<br>
 
-          <a target="_blank" href="http://monnaie-locale-complementaire.net/">Site Monnaie locale complémentaire</a> -
-              <a target="_blank" href="https://mrmondialisation.org/la-monnaie-locale-cest-quoi/">Infographie </a></p>
+          <a rel="noopener noreferrer" target="_blank" href="http://monnaie-locale-complementaire.net/">Site Monnaie locale complémentaire</a> -
+              <a rel="noopener noreferrer" target="_blank" href="https://mrmondialisation.org/la-monnaie-locale-cest-quoi/">Infographie </a></p>
           <footer><a target="_blank" class="button icon first" href="#orga">Les groupes de travail</a><footer>
         </div>
         <a href="#orga" class="button style2 down anchored">Next</a>
@@ -508,9 +507,9 @@ while(x=eval(x));
         <!-- Icons -->
           <ul class="actions">
 
-            <li><a target="_blank" href="https://www.facebook.com/LeFlorain" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/LeFlorain" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 
-            <li><a target="_blank" href="https://twitter.com/LeFlorain" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a rel="noopener noreferrer" target="_blank" href="https://twitter.com/LeFlorain" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 
 
           </ul>
