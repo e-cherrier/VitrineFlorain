@@ -364,12 +364,12 @@ class MarcheCompact extends Marche
     }
 
     /*
-         * Return true if we need to begin a new page before displaying the sub categorie
-         *
-         * The minimum height left needed is:
-         * - the heigth of the ss cat title
-         * - plus the max height of a pair of acteurs (one per column)
-         */
+    * Return true if we need to begin a new page before displaying the sub categorie
+    *
+    * The minimum height left needed is:
+    * - the heigth of the ss cat title
+    * - plus the max height of a pair of acteurs (one per column)
+    */
     public function needNewPage($offset = 0)
     {
         $offset = $offset + $this->title_height();
@@ -383,7 +383,7 @@ class MarcheCompact extends Marche
             }
             $myActeur = $this->NewActeur($this->a, $acteur);
 
-            if ($myActeur->height() > $this->a->SpaceLeftCol0(0)) {
+            if ($myActeur->height()+$offset > $this->a->SpaceLeftCol0(0)) {
                 return true;
             }
             break;
