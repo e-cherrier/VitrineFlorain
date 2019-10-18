@@ -10,7 +10,7 @@ $towns = array(
     new Ville('Nancy', 6.180794, 48.692442, [90.6, 45.1, 62]),
     new Ville('Toul', 5.891387, 48.675334, [32.5, 73.7, 71]),
     new Ville('Pont-à-Mousson', 6.053787, 48.902677, [62.4, 78.8, 87.5]),
-    new Ville('Lunéville', 6.495079, 48.591822, [96.1, 61.2, 21.2]),
+    new Ville('Lunéville', 6.495079, 48.591822, [96.1, 61.2, 21.2], 'L'),
     new Ville('Tezey-St-Martin', 6.294456, 48.900973, [61.2, 73.3, 24.3], 'B'),
     new Ville('Colombey-les-Belles', 5.897124, 48.528123, [32.5, 96.1, 45.1]),
     new Ville('Vézelise', 6.092136, 48.481914, [96.1, 96.1, 45.1], 'B'),
@@ -235,7 +235,7 @@ public function Header()
         $y = $this->GetY();
         $tot = 0;
 
-        for ($lon = 49.01; $lon > 48.43; $lon -= .01) {
+        for ($lon = 49.00; $lon > 48.41; $lon -= .01) {
             $x = $this->GetX();
             for ($lat = 5.78; $lat < 6.60; $lat += .01) {
                 $r = $this->doGetColor($lat, $lon);
@@ -245,11 +245,15 @@ public function Header()
                     $savedX = $this->GetX();
                     $savedY = $this->GetY();
                     $xt = max($x - 5, 0);
-                    if ($town->pos == 'A') {
-                        $town->SetXY($xt, $y - 3);
+                    if ($town->pos == 'B') {
+                        $yt = $y + .5;
                     } else {
-                        $town->SetXY($xt, $y + .5);
+                        $yt = $y - 3;
                     }
+                    if ($town->pos == 'L') {
+                        $xt = $xt - 3;
+                    }
+                    $town->SetXY($xt, $yt);
 
                     $tot = $tot + $town->nb;
 
@@ -271,7 +275,7 @@ public function Header()
         global $towns;
         foreach ($towns as $town) {
             $this->SetXY($town->x, $town->y);
-            $this->PrintText(utf8_decode($town->nom).' '.$town->nb, 18, 5, 'L');
+            $this->PrintText(utf8_decode($town->nom).' '.$town->nb, 25, 6, 'L');
         }
 
         $this->SetXY($x - 2, $y - 2);
