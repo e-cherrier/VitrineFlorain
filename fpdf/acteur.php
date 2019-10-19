@@ -37,6 +37,18 @@ class Acteur
         return false;
     }
 
+    public function isNew()
+    {
+        $today = new DateTime();
+        $today->setTimestamp(time());
+        $oneMonthAgo = $today->sub(DateInterval::createFromDateString('2 month'));
+
+        $date = $this->acteur_->getAttribute('date');
+        $aggDate = DateTime::createFromFormat('d-m-Y', $date);
+
+        return $oneMonthAgo < $aggDate;
+    }
+
     public function priority()
     {
         if ($this->acteur_->hasAttribute('code')) {
@@ -247,18 +259,6 @@ class ActeurCompact extends Acteur
     private $tel_or_web = '';
     private $ville = '';
 
-    public function isNew()
-    {
-        $today = new DateTime();
-        $today->setTimestamp(time());
-        $oneMonthAgo = $today->sub(DateInterval::createFromDateString('2 month'));
-
-        $date = $this->acteur_->getAttribute('date');
-        $aggDate = DateTime::createFromFormat('d-m-Y', $date);
-
-        return $oneMonthAgo < $aggDate;
-    }
-
     public function EnteteHeight()
     {
         $columnWidth = $this->a->GetColumnWidth();
@@ -424,6 +424,9 @@ class ActeurLivret extends Acteur
         if ($this->isComptoir()) {
             $hi = $hi + 5;
         }
+        if ($this->isNew()) {
+            $hi = $hi + 5;
+        }
 
         if ($h < $hi) {
             $h = $hi;
@@ -472,6 +475,16 @@ class ActeurLivret extends Acteur
         $this->a->Cell(30, 5, 'Comptoir de Change', 0, 1, 'C', true);
     }
 
+    public function PrintNew()
+    {
+        // Font
+        $this->a->SetFont('Steelfish', '', 14);
+        $this->a->SetFillColor(255, 255, 255);
+        $this->a->SetTextColor(255, 0, 0);
+        // Output text in a 3 cm width column
+        $this->a->Cell(30, 5, 'Nouveau !', 0, 1, 'L', true);
+    }
+
     public function Entete()
     {
         $left_entete = $this->a->GetX();
@@ -482,6 +495,9 @@ class ActeurLivret extends Acteur
             $this->a->SetFillColor(234, 250, 180);
             $this->a->Rect($this->a->GetX() - 1, $this->a->GetY() - 1, $this->a->GetColumnWidth() + 2, $this->height() + 2, 'F');
             $this->PrintComptoir();
+        }
+        if ($this->isNew()) {
+            $this->PrintNew();
         }
 
         $image = utf8_decode($this->acteur_->getAttribute('image'));
