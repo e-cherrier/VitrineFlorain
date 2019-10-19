@@ -1035,6 +1035,27 @@ class AnnuaireCompact extends AnnuairePoche
         // take into account margins between columns only: no left/right margins
         return ($this->GetPageWidth() - $this->colMargin * ($this->nbSubPages - 1)) / ($this->nbSubPages);
     }
+
+    public function PrintAllCategories($x)
+    {
+        $categories = $x->getElementsByTagName('categorie');
+        $nb_cat = $categories->length;
+        for ($cat = 0; $cat < $nb_cat; ++$cat) {
+            $categorie = $categories[$cat];
+
+            $myCat = $this->NewCategorie($categorie);
+            $myCat->display();
+        }
+
+        $marches = $x->getElementsByTagName('marches');
+        $nb_mar = $marches->length;
+        for ($mar = 0; $mar < $nb_mar; ++$mar) {
+            $marche = $marches[$mar];
+
+            $myMar = $this->NewCategorieMarchePoche($marche);
+            $myMar->display();
+        }
+    }
 }
 
 /******************************************************************/
