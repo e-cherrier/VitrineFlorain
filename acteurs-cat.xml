@@ -4,6 +4,16 @@
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert."
   localisation="du Sud de la Meurthe et Moselle" 
   slogan="La monnaie qui crée du lien!">
+      <acteur_vide date="xx-xx-xxxx" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre=""
+        bref=""
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="" 
+        telephone=""
+        latitude="6." 
+        longitude="48." />
   <categorie type="Se nourrir">
     <scat type="Épiceries">
       <acteur date="18-10-2019" 
@@ -146,6 +156,16 @@
       </acteur>
     </scat>
     <scat type="Producteurs">
+      <acteur date="19-10-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Ferme du Cytise"
+        bref="Elevage"
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="58 rue Saint-Martin 54470 Mandres-aux-Quatre-Tours" 
+        telephone="06 46 28 34 32"
+        latitude="5.799115" 
+        longitude="48.844057" />
       <acteur date="02-10-2019" 
         siteweb="" 
         image="defaut.jpg" 
@@ -579,6 +599,17 @@
         message="" />
     </scat>
     <scat type="Traiteurs">
+      <acteur date="19-10-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="La Tournée du Crousti"
+        marche="vandoeuvre"
+        bref="Traiteur"
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="88 rue du Val de Fer, 54230 Neuves Maison" 
+        telephone="06 12 24 15 29"
+        latitude="6.107991" 
+        longitude="48.626437" />
       <acteur siteweb="facebook restomobilesamregalelespapilles" 
         image="samregalelespapilles.jpg" 
         titre="Sam Régale Les Papilles" 
@@ -724,6 +755,26 @@
   </marches>
   <categorie type ="Sortir">
     <scat type="Se restaurer et boire un verre">
+      <acteur date="19-10-2019" 
+        siteweb="www.le-made-in-france.fr" 
+        image="defaut.jpg" 
+        titre="Made in France"
+        bref="Sandwicherie"
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="Nancy St Epvre" 
+        telephone="03 83 37 33 36"
+        latitude="6.179201" 
+        longitude="48.696634" />
+      <acteur date="19-10-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="L'Auberge du Fort"
+        bref="Hébergement, restauration"
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="Fort Pélissier, 54550 Bainville sur Madon" 
+        telephone="03 83 25 07 07"
+        latitude="6.090545" 
+        longitude="48.597017" />
       <acteur date="18-10-2019" 
         siteweb="" 
         image="defaut.jpg" 
@@ -971,6 +1022,16 @@
         telephone="03 83 55 53 35" />
     </scat>
     <scat type="Se cultiver, se divertir, se détendre">
+      <acteur date="19-10-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Fort Aventure"
+        bref="Parc de loisirs"
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="Fort Pélissier, 54550 Bainville sur Madon" 
+        telephone="03 83 25 07 07"
+        latitude="6.090545" 
+        longitude="48.597017" />
       <acteur date="16-10-2019" 
         siteweb="" 
         image="defaut.jpg"
@@ -1200,7 +1261,7 @@
       <acteur date="22-09-2019" 
         siteweb="" 
         image="defaut.jpg" 
-        titre="Millet Patricia" 
+        titre="Mode et Création" 
         bref="Salon de coiffure" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
         latitude="5.897825" 
@@ -1452,6 +1513,17 @@
         <h l="le samedi" 
           t="09h00 - 17h00"/>
       </acteur>
+      
+      <acteur date="19-10-2019" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Bloom"
+        bref="Vente cosmétiques"
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="1 bis rue Gustave Simon, Nancy" 
+        telephone="06 24 19 19 15"
+        latitude="6.180409" 
+        longitude="48.693709" />
       <acteur siteweb="www.un-des-sens-atelier.fr" 
         image="undessens.jpg" 
         titre="Un Des Sens" 
@@ -1683,16 +1755,6 @@
   </categorie>
   <categorie type ="Et aussi...">
     <scat>
-      <acteur_vide date="xx-xx-xxxx" 
-        siteweb="" 
-        image="defaut.jpg" 
-        titre=""
-        bref=""
-        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
-        adresse="" 
-        telephone=""
-        latitude="6." 
-        longitude="48." />
       <acteur date="18-10-2019" 
         siteweb="" 
         image="defaut.jpg" 
@@ -1911,6 +1973,14 @@
   </categorie>
   <categorie type ="S'engager">
     <scat>
+      <acteur date="19-10-2019" 
+        siteweb="www.flore54.org" 
+        image="defaut.jpg" 
+        titre="Flore 54"
+        bref="Association"
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="" 
+        telephone="06 86 05 04 31" />
       <acteur date="06-08-2019" 
         siteweb="www.lespetitsdebrouillardsgrandest.org" 
         image="lespetitsdeb.jpg" 
