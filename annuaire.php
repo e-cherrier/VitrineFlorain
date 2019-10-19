@@ -984,6 +984,7 @@ class AnnuairePoche extends Annuaire
             $myCat->display();
         }
 
+        /*
         $marches = $x->getElementsByTagName('marches');
         $nb_mar = $marches->length;
         for ($mar = 0; $mar < $nb_mar; ++$mar) {
@@ -992,6 +993,7 @@ class AnnuairePoche extends Annuaire
             $myMar = $this->NewCategorieMarchePoche($marche);
             $myMar->display();
         }
+        */
     }
 
     public function NextPage()
