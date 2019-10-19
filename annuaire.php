@@ -419,7 +419,7 @@ class AnnuaireLivret extends Annuaire
     public $bottomMargin = 20;
     public $colMargin = 10;
     public $cellHeight = 5;
-    public $marginLeft = 1; // 1 if there is a margin at left (and right) 0 if no margin.
+    public $marginLeft = 10;
 
     public function PrintCD54Mention()
     {
@@ -592,6 +592,7 @@ class AnnuaireLivret extends Annuaire
     public function PrintAllCategories($x)
     {
         $toc = array();
+        $cat = 0;
         $categories = $x->getElementsByTagName('categorie');
         $nb_cat = $categories->length;
         for ($cat = 0; $cat < $nb_cat; ++$cat) {
@@ -601,6 +602,7 @@ class AnnuaireLivret extends Annuaire
             $toc[$cat] = $myCat->display();
         }
 
+        /*
         $marches = $x->getElementsByTagName('marches');
         $nb_mar = $marches->length;
         for ($mar = 0; $mar < $nb_mar; ++$mar) {
@@ -608,7 +610,7 @@ class AnnuaireLivret extends Annuaire
 
             $myMar = new CategorieMarcheLivret($this, $marche);
             $toc[$cat + $mar] = $myMar->display();
-        }
+        }*/
 
         return $toc;
     }
