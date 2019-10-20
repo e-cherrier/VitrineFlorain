@@ -31,12 +31,9 @@ class SousCategorie
 
     public function get_elements()
     {
-        return $this->scat_->getElementsByTagName($this->tag_);
-    }
+        $full_list = $this->scat_->getElementsByTagName($this->tag_);
 
-    public function get_elements_count()
-    {
-        return $this->scat_->getElementsByTagName($this->tag_)->length;
+        return $this->a->entries_to_display($full_list);
     }
 
     public function candidate($acteur)
@@ -55,7 +52,7 @@ class SousCategorie
     public function full_height()
     {
         $acteurs = $this->get_elements();
-        $nb = $this->get_elements_count();
+        $nb = count($acteurs);
         $indexes = range(0, $nb - 1);
         $height = 0;
         for ($pos = 0; $pos < $nb; ++$pos) {
@@ -276,7 +273,7 @@ class SousCategorie
     {
         $pair = array('none', 'none');
         $acteurs = $this->get_elements();
-        $nb = $this->get_elements_count();
+        $nb = count($acteurs);
         for ($pos = 0; $pos < $nb; ++$pos) {
             $acteur = $acteurs[$pos];
             if (!$this->candidate($acteur)) {
@@ -302,8 +299,7 @@ class SousCategorie
         $offset = $offset + $this->title_height();
         $pair = $this->findBestActeurPair($offset);
 
-        $acteurs = $this->get_elements();
-        $nb = $this->get_elements_count();
+        $nb = count($this->get_elements());
 
         $p1 = $pair[1] == null || $pair[1] == 'none';
         $p0 = $pair[0] == null || $pair[0] == 'none';
@@ -324,7 +320,7 @@ class SousCategorie
     public function display()
     {
         $toc = array();
-        $nb = $this->a->get_elements_to_display_count($this->cat_->cat_, $this->scat_, $this->tag_);
+        $nb = count($this->get_elements());
         if ($nb == 0) {
             return $toc;
         }
@@ -407,7 +403,7 @@ class SousCategorieFiches extends SousCategorie
     public function display()
     {
         $acteurs = $this->get_elements();
-        $nb = $this->get_elements_count();
+        $nb = count($acteurs);
         for ($a = 0; $a < $nb; ++$a) {
             $acteur = $acteurs[$a];
             if (!$this->candidate($acteur)) {
@@ -501,7 +497,7 @@ class SousCategorieCompact extends SousCategoriePoche
         $offset = $offset + $this->title_height();
 
         $acteurs = $this->get_elements();
-        $nb = $this->get_elements_count();
+        $nb = count($acteurs);
         for ($pos = 0; $pos < $nb; ++$pos) {
             $acteur = $acteurs[$pos];
             if (!$this->candidate($acteur)) {
@@ -527,7 +523,8 @@ class SousCategorieCompact extends SousCategoriePoche
     // SousCategorieCompact
     public function display()
     {
-        $nb = $this->a->get_elements_to_display_count($this->cat_->cat_, $this->scat_, $this->tag_);
+        $acteurs = $this->get_elements();
+        $nb = count($acteurs);
         if ($nb == 0) {
             return [];
         }
@@ -540,8 +537,6 @@ class SousCategorieCompact extends SousCategoriePoche
         $type = $this->displayType();
 
         $deb_i = 1;
-        $acteurs = $this->get_elements();
-        $nb = $this->get_elements_count();
         for ($pos = 0; $pos < $nb; ++$pos) {
             $acteur = $acteurs[$pos];
             if (!$this->candidate($acteur)) {

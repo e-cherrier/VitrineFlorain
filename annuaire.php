@@ -60,34 +60,34 @@ class Annuaire extends FPDF
     public $subPage = 0; // Current ssPage
     public $topSubPage = 3; // Ordinate of sub page start
 
-public function Header()
-{
-    // Save ordinate
-    $this->top_col = $this->GetY() + $this->topSubPage;
-    $this->bas_col0 = $this->GetY() + $this->topSubPage;
-    $this->bas_col1 = $this->GetY() + $this->topSubPage;
+    public function Header()
+    {
+        // Save ordinate
+        $this->top_col = $this->GetY() + $this->topSubPage;
+        $this->bas_col0 = $this->GetY() + $this->topSubPage;
+        $this->bas_col1 = $this->GetY() + $this->topSubPage;
 
-    global $no_header;
-    if ($no_header) {
-        return;
+        global $no_header;
+        if ($no_header) {
+            return;
+        }
+
+        // Page header
+        global $title;
+
+        $this->SetFont('Futura', '', 10);
+        $w = $this->GetStringWidth($title) + 6;
+        $this->SetX((210 - $w) / 2);
+        $this->SetTextColor(0, 0, 0);
+        $this->SetLineWidth(1);
+        $this->Cell($w, 9, $title, 0, 1, 'C', false);
+        $this->Ln(5);
+        // Save ordinate
+        $this->top_col = $this->GetY();
+        $this->bas_col0 = $this->GetY();
+        $this->bas_col1 = $this->GetY();
+        $this->col = 0;
     }
-
-    // Page header
-    global $title;
-
-    $this->SetFont('Futura', '', 10);
-    $w = $this->GetStringWidth($title) + 6;
-    $this->SetX((210 - $w) / 2);
-    $this->SetTextColor(0, 0, 0);
-    $this->SetLineWidth(1);
-    $this->Cell($w, 9, $title, 0, 1, 'C', false);
-    $this->Ln(5);
-    // Save ordinate
-    $this->top_col = $this->GetY();
-    $this->bas_col0 = $this->GetY();
-    $this->bas_col1 = $this->GetY();
-    $this->col = 0;
-}
 
     public function Footer()
     {
@@ -186,32 +186,42 @@ public function Header()
         $this->MultiCell($s, $this->cellHeight, $texte, 0, $align);
     }
 
-    public function get_elements_to_display_count($parent, $xml, $tag)
+    /* return true if at least one entry will be print
+    */
+    public function is_category_represented($parent, $xml, $tag)
     {
-        global $km;
-        global $latRef;
-        global $lonRef;
-
         if ($tag == 'scat') {
             $xml = $parent;
         }
 
         $acteurs = $xml->getElementsByTagName($tag);
-        $nb = $acteurs->length;
+
+        return count($this->entries_to_display($acteurs));
+    }
+
+    public function entries_to_display($list)
+    {
+        global $km;
+        global $latRef;
+        global $lonRef;
+        $nb = $list->length;
         if ($km < 0) {
-            return $nb;
+            return $list;
         }
+
+        $acteurs = [];
 
         $count = 0;
         for ($pos = 0; $pos < $nb; ++$pos) {
-            $acteur = $acteurs[$pos];
+            $acteur = $list[$pos];
             if ($acteur->hasAttribute('tooFar')) {
                 continue;
             }
             if (!$acteur->hasAttribute('longitude') ||
                 !$acteur->hasAttribute('latitude')
             ) {
-                $acteur->setAttribute('tooFar', 'noCoord');
+                $acteurs[$count] = $acteur;
+                ++$count;
                 continue;
             }
 
@@ -222,10 +232,11 @@ public function Header()
                 $acteur->setAttribute('tooFar', 'really');
                 continue;
             }
+            $acteurs[$count] = $acteur;
             ++$count;
         }
 
-        return $count;
+        return $acteurs;
     }
 
     public function printLegend()
@@ -984,7 +995,6 @@ class AnnuairePoche extends Annuaire
             $myCat->display();
         }
 
-        /*
         $marches = $x->getElementsByTagName('marches');
         $nb_mar = $marches->length;
         for ($mar = 0; $mar < $nb_mar; ++$mar) {
@@ -993,7 +1003,6 @@ class AnnuairePoche extends Annuaire
             $myMar = $this->NewCategorieMarchePoche($marche);
             $myMar->display();
         }
-        */
     }
 
     public function NextPage()

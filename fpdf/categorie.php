@@ -68,6 +68,10 @@ class CategorieFiches extends Categorie
     // CategorieFiches
     public function display()
     {
+        $nb = $this->a->is_category_represented($this->cat_, $this->cat_, $this->tag_);
+        if ($nb == 0) {
+            return;
+        }
         $sscategories = $this->cat_->getElementsByTagName('scat');
         $nb_sscat = $sscategories->length;
 
@@ -124,6 +128,10 @@ class CategorieLivret extends Categorie
     public function display()
     {
         $toc = array();
+        $nb = $this->a->is_category_represented($this->cat_, $this->cat_, $this->tag_);
+        if ($nb == 0) {
+            return $toc;
+        }
         $this->a->resetColumn();
         if ($this->needNewPage()) {
             $this->a->addPage();
@@ -135,11 +143,14 @@ class CategorieLivret extends Categorie
         $sscategories = $this->cat_->getElementsByTagName('scat');
         $nb_sscat = $sscategories->length;
 
+        $tocSScat = 0;
         for ($sscat = 0; $sscat < $nb_sscat; ++$sscat) {
             $sscategorie = $sscategories[$sscat];
 
             $mySsCat = $this->NewSousCategorie($this->a, $sscategorie);
-            $toc[$sscat] = $mySsCat->display();
+            if (count($mySsCat->get_elements()) > 0) {
+                $toc[$tocSScat++] = $mySsCat->display();
+            }
         }
 
         return $toc;
@@ -193,7 +204,7 @@ class CategoriePoche extends Categorie
     // CategoriePoche
     public function display()
     {
-        $nb = $this->a->get_elements_to_display_count($this->cat_, $this->cat_, $this->tag_);
+        $nb = $this->a->is_category_represented($this->cat_, $this->cat_, $this->tag_);
         if ($nb == 0) {
             return;
         }
@@ -213,7 +224,7 @@ class CategoriePoche extends Categorie
                 continue;
             }
             $mySsCat = $this->NewSousCategorie($this->a, $sscategorie);
-            if ($mySsCat->get_elements_count() > 0) {
+            if (count($mySsCat->get_elements()) > 0) {
                 $mySsCat->display();
             }
         }
