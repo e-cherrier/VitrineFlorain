@@ -1755,6 +1755,16 @@
   </categorie>
   <categorie type ="Et aussi...">
     <scat>
+      <acteur date="23-10-2019" 
+        siteweb="www.kepos.fr" 
+        image="kepos.jpg" 
+        titre="Kèpos"
+        bref="Coopérative de transition écologique"
+        desc="Kèpos est une coopérative d'entreprises engagées dans la transition écologique de notre société. Les entreprises qui font partie de Kèpos coopèrent et bénéficient de services leur permettant de développer leur activité dans de meilleures conditions. Par ailleurs, la coopérative déploie également des services d'accompagnement à la transition écologique à destination des entreprises désireuses de prendre en compte la préservation de l'environnement dans leur activité." 
+        adresse="51 rue de la République, 54140 Jarville-la-Malgrange" 
+        telephone="06 83 89 17 08"
+        latitude="6.20487" 
+        longitude="48.67203" />
       <acteur date="18-10-2019" 
         siteweb="" 
         image="defaut.jpg" 
