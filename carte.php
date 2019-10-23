@@ -154,8 +154,8 @@ function add_acteur($f, $acteur)
     global $lonRef;
     if ($km > 0) {
         $dist = calcCrow($lat, $lon, $latRef, $lonRef);
-        if( $dist > $km ) {
-          return;
+        if ($dist > $km) {
+            return;
         }
     }
 
@@ -321,6 +321,9 @@ afeature.setStyle(
           source: clusterSource,
           style: function(feature) {
             var size = feature.get('features').length;
+            if( size == 1 ) {
+              return null;
+            }
             var style = styleCache[size];
             if (!style) {
               style = new ol.style.Style({
