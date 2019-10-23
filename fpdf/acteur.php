@@ -284,9 +284,9 @@ class ActeurCompact extends Acteur
             $bref_len = strlen($this->bref) * .8; // magic font size multiplier
             $ratio_titre = $titre_len / ($titre_len + $bref_len);
             $ratio_bref = 1 - $ratio_titre;
-            if ($ratio_titre < .15) {
-                $ratio_titre = .15;
-                $ratio_bref = .85;
+            if ($ratio_titre < .25) {
+                $ratio_titre = .25;
+                $ratio_bref = .75;
             }
             $this->titre_width = $columnWidth * $ratio_titre;
             $this->bref_width = $columnWidth * $ratio_bref;
