@@ -180,11 +180,13 @@ function is_hidden($cat, $cat_displayed)
                   $siteweb = '';
 
                   $titre = $acteur->getAttribute('titre');
+                  $bref = $acteur->getAttribute('bref');
                   $desc = $acteur->getAttribute('desc');
                   $adresse = $acteur->getAttribute('adresse');
 
                   $p = <<<EOD
                   <acteur class="$acteur_class">
+                  <p align='right'><u>$bref</u></p>
                     <h2>$titre</h2>
                     <img src="images/acteurs/$image" alt="$titre" />
 EOD;
