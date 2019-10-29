@@ -1657,6 +1657,16 @@
   </categorie>
   <categorie type ="Se meubler, décorer, aménager">
     <scat>
+      <acteur date="29-10-2019" 
+        siteweb="www.de-laine-en-reves.fr" 
+        image="de-laine-en-reves.jpg" 
+        titre="De Laine en Rêves" 
+        bref="Literie saine et naturelle" 
+        desc="Nous fabriquons de la literie saine et naturelle avec des laines de moutons récoltées exclusivement en Lorraine. Matelas, sur-matelas, couettes, oreillers, traversins, nous vendons également plusieurs type de sommiers, à lattes ou à ressorts, tous fabriqués par un partenaire local avec des matériaux locaux. Les tissus utilisés sont 100 % naturels (lin pour les coutils matelas et coton-lin pour les enveloppes de couettes et d'oreillers)." 
+        adresse="Impasse de l'Estournel, ZAE en Prave, Allain" 
+        telephone="03 83 52 78 24" 
+        latitude="5.895135" 
+        longitude="48.551257" />
       <acteur date="1018" 
         siteweb="lecent9.fr" 
         comptoir="oui" 
