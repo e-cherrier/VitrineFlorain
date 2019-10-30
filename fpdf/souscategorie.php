@@ -234,7 +234,7 @@ class SousCategorie
         if ($pair[0] == null || $pair[0] == 'none') {
             if ($this->a->SpaceLeftCol0($offset) > $height) {
                 $pair[0] = $acteur;
-                $pair = $this->priority_swap($pair);
+                $pair = $this->simple_swap($pair);
 
                 return $pair;
             }
@@ -245,7 +245,7 @@ class SousCategorie
         if ($pair[1] == null || $pair[1] == 'none') {
             if ($this->a->SpaceLeftCol1($offset) > $height) {
                 $pair[1] = $acteur;
-                $pair = $this->priority_swap($pair);
+                $pair = $this->simple_swap($pair);
 
                 return $pair;
             }
@@ -263,8 +263,8 @@ class SousCategorie
             return $pair;
         }
 
-        $pair = $this->priority_insert($offset, $pair, $p0, $p1, $h0, $h1, $acteur);
-        $pair = $this->priority_swap($pair);
+        // BUGGY :( $pair = $this->priority_insert($offset, $pair, $p0, $p1, $h0, $h1, $acteur);
+        $pair = $this->simple_swap($pair);
 
         return $pair;
     }
