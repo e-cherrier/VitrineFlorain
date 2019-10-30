@@ -33,11 +33,18 @@ class Categorie
             return false;
         }
 
-        $sscategorie = $sscategories[0];
+        for ($sscat = 0; $sscat < $nb_sscat; ++$sscat) {
+            $sscategorie = $sscategories[$sscat];
 
-        $mySsCat = $this->NewSousCategorie($this->a, $sscategorie);
+            $mySsCat = $this->NewSousCategorie($this->a, $sscategorie);
+            if (count($mySsCat->get_elements()) == 0) {
+                continue;
+            }
 
-        return $mySsCat->needNewPage($offset + $this->title_height());
+            return $mySsCat->needNewPage($offset + $this->title_height());
+        }
+
+        return false;
     }
 
     // Categorie

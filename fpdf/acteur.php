@@ -138,15 +138,9 @@ class ActeurPoche extends Acteur
     {
         $h = $this->getAttributeHeight('titre', $this->titre_s, 'B');
         $h = $h + $this->getAttributeHeight('bref', $this->bref_s);
-        $ah = $this->getAttributeHeight('siteweb', $this->info_s);
-        if ($ah == 0) {
-            $ah = $this->getAttributeHeight('telephone', $this->info_s);
-            if ($ah == 0) {
-                $ah = $this->getAttributeHeight('adresse', $this->info_s);
-            }
-        }
-
-        $h = $h + $ah;
+        $h = $h + $this->getAttributeHeight('siteweb', $this->info_s);
+        $h = $h + $this->getAttributeHeight('telephone', $this->info_s);
+        $h = $h + $this->getAttributeHeight('adresse', $this->info_s);
 
         return $h;
     }
@@ -170,6 +164,17 @@ class ActeurPoche extends Acteur
                 $this->height() + 2, 'F'
             );
         }
+        $lc = 1;
+        $r = $this->a->getColor($this->acteur_);
+        $c = $r['town']->getColor();
+        $r['town']->add();
+        $this->a->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
+        $this->a->Rect(
+            $this->a->GetX(),
+            $this->a->GetY(),
+            $lc,
+            $this->height() - 1, 'F'
+        );
 
         $titre = utf8_decode($this->acteur_->getAttribute('titre'));
 
@@ -187,28 +192,22 @@ class ActeurPoche extends Acteur
             }
         }
 
-        // print information by priority
-        // if siteweb is set print it else the phone, else the adress
-        $info = false;
+        if ($this->acteur_->hasAttribute('adresse')) {
+            $adresse = utf8_decode($this->acteur_->getAttribute('adresse'));
+            if ($adresse != '') {
+                $this->a->PrintText($adresse, $this->a->GetColumnWidth(), $this->info_s);
+            }
+        }
+        if ($this->acteur_->hasAttribute('telephone')) {
+            $telephone = utf8_decode($this->acteur_->getAttribute('telephone'));
+            if ($telephone != '') {
+                $this->a->PrintText($telephone, $this->a->GetColumnWidth(), $this->info_s);
+            }
+        }
         if ($this->acteur_->hasAttribute('siteweb')) {
             $siteweb = utf8_decode($this->acteur_->getAttribute('siteweb'));
             if ($siteweb != '') {
                 $this->a->PrintText($siteweb, $this->a->GetColumnWidth(), $this->info_s, 'C');
-                $info = true;
-            }
-        }
-        if ($info == false && $this->acteur_->hasAttribute('telephone')) {
-            $telephone = utf8_decode($this->acteur_->getAttribute('telephone'));
-            if ($telephone != '') {
-                $this->a->PrintText($telephone, $this->a->GetColumnWidth(), $this->info_s);
-                $info = true;
-            }
-        }
-        if ($info == false && $this->acteur_->hasAttribute('adresse')) {
-            $adresse = utf8_decode($this->acteur_->getAttribute('adresse'));
-            if ($adresse != '') {
-                $this->a->PrintText($adresse, $this->a->GetColumnWidth(), $this->info_s);
-                $info = true;
             }
         }
 
@@ -335,7 +334,7 @@ class ActeurCompact extends Acteur
 
         $lc = 1;
         $r = $this->a->getColor($this->acteur_);
-        $c = $r['town']->col;
+        $c = $r['town']->getColor();
         $r['town']->add();
         $this->a->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
         $this->a->Rect(

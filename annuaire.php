@@ -5,35 +5,54 @@ require 'fpdf/categorie.php';
 require 'fpdf/marche.php';
 include 'pix_tools.php';
 
-$townArea = .59;
-$towns = array(
-    new Ville('Nancy', 6.180794, 48.692442, [90.6, 45.1, 62]),
-    new Ville('Toul', 5.891387, 48.675334, [32.5, 73.7, 71]),
-    new Ville('Pont-à-Mousson', 6.053787, 48.902677, [62.4, 78.8, 87.5]),
-    new Ville('Lunéville', 6.495079, 48.591822, [96.1, 61.2, 21.2], 'L'),
-    new Ville('Tezey-St-Martin', 6.294456, 48.900973, [61.2, 73.3, 24.3], 'B'),
-    new Ville('Colombey-les-Belles', 5.897124, 48.528123, [32.5, 96.1, 45.1]),
-    new Ville('Vézelise', 6.092136, 48.481914, [96.1, 96.1, 45.1], 'B'),
+$townArea = .63;
+$areaColor = array(
+    [90.6, 45.1, 62],
+    [32.5, 73.7, 71],
+    [62.4, 78.8, 87.5],
+    [96.1, 61.2, 21.2],
+    [61.2, 73.3, 24.3],
+    [32.5, 96.1, 45.1],
+    [96.1, 96.1, 45.1],
+    [65.1, 45.1, 20.1],
+    [96.1, 20.1, 96.1],
+    [96.1, 20.1, 45.1],
 );
-$blank = new Ville('blank', 6, 48, [100, 100, 100]);
+$indexCol = 0;
+$maxIndexCol = 9;
+
+$towns = array(
+    new Ville('Nancy', 6.180794, 48.692442),
+    new Ville('Toul', 5.891387, 48.675334),
+    new Ville('Pont-à-Mousson', 6.053787, 48.902677),
+    new Ville('Lunéville', 6.495079, 48.591822, 'L'),
+    new Ville('Tezey-St-Martin', 6.294456, 48.900973, 'B'),
+    new Ville('Colombey-les-Belles', 5.897124, 48.528123),
+    new Ville('Vézelise', 6.092136, 48.481914, 'B'),
+    new Ville('Commercy', 5.591207, 48.762711),
+    new Ville('Baccarat', 6.740270, 48.450055),
+    new Ville('Bayon', 6.313295, 48.476239),
+    new Ville('Chateau-Salin', 6.508031, 48.822719, 'B'),
+);
+$blank = new Ville('blank', 6, 48);
+$blank->setColor([100, 100, 100]);
 
 class Ville
 {
     public $nom;
     public $lat;
     public $lon;
-    public $col;
+    private $col;
     public $nb = 0;
     public $pos;
     public $x;
     public $y;
 
-    public function __construct($nom, $lat, $lon, $col, $pos = 'A')
+    public function __construct($nom, $lat, $lon, $pos = 'A')
     {
         $this->nom = $nom;
         $this->lat = $lat;
         $this->lon = $lon;
-        $this->col = $col;
         $this->pos = $pos;
     }
 
@@ -46,6 +65,28 @@ class Ville
     {
         $this->x = $x;
         $this->y = $y;
+    }
+
+    public function getColor()
+    {
+        global $indexCol;
+        global $maxIndexCol;
+        global $areaColor;
+
+        if (!$this->col) {
+            $this->col = $areaColor[$indexCol];
+            ++$indexCol;
+            if ($indexCol > $maxIndexCol) {
+                $indexCol = 0;
+            }
+        }
+
+        return $this->col;
+    }
+
+    public function setColor($col)
+    {
+        $this->col = $col;
     }
 }
 /**************************************************************************/
@@ -239,19 +280,82 @@ class Annuaire extends FPDF
         return $acteurs;
     }
 
-    public function printLegend()
+    /* Returns the town label to display in the legend
+    * - empty if there is not enough place
+    * - with the number of actors if any.
+    */
+    public function getTextToDisplay($town, $ox)
     {
+        $t = utf8_decode($town->nom);
+        if ($town->nb > 0) {
+            $t = $t.' '.$town->nb;
+        }
+
+        if ($this->TextWidth($t, 6) + $town->x > $ox + $this->GetSubPageWidth() / 2) {
+            return '';
+        }
+
+        return $t;
+    }
+
+    /* print the legend
+     * Legend is in two parts : the localisation with colors and the comptoir sentence
+     */
+    public function printLegend($x)
+    {
+        $this->setCol(0);
+        $this->SetY($this->GetPageheight() - 30);
+
+        // map colors
+        $this->printMapColors();
+
+        // print the comptoir advice
+        $this->SetY($this->GetPageheight() - 27);
+        $textMargin = 36;
+        $this->SetX($this->GetX() + $textMargin);
+        // for one line text $texte_width = $this->marginLeft + $this->colMargin*6 + $this->GetColumnWidth()*6;
+        $texte_width = $this->GetSubPageWidth() - $textMargin - 2;
+        $texte = utf8_decode($x->getAttribute('comptoirs'));
+        $this->SetFont('futura', 'B', 10);
+        $h = $this->MultiCellHeight($texte_width, $this->cellHeight, $texte, 0, 'C');
+        $this->SetFillColor(234, 250, 180);
+        $this->Rect($this->GetX() - 1, $this->GetY() - 3, $texte_width, $h + 4, 'F');
+
+        $this->PrintName($texte, $texte_width);
+    }
+
+    /* print the geolocalistion map
+     * centered according the lon and lat parameters if provided.
+     * by default it is centered at Nancy center.
+     */
+    public function printMapColors()
+    {
+        global $km;
+        global $latRef;
+        global $lonRef;
+
         $this->SetLineWidth(0);
         $lc = .5;
-        $y = $this->GetY();
+        $ox = $this->GetX();
+        $oy = $this->GetY();
         $tot = 0;
 
-        for ($lon = 49.00; $lon > 48.41; $lon -= .01) {
+        $middleLat = 6.180794;
+        $middleLon = 48.692442;
+
+        if ($km > 0) {
+            $middleLat = $latRef;
+            $middleLon = $lonRef;
+        }
+
+        $y = $oy;
+        for ($lon = $middleLon + .3; $lon > $middleLon - .3; $lon -= .01) {
             $x = $this->GetX();
-            for ($lat = 5.78; $lat < 6.60; $lat += .01) {
+            for ($lat = $middleLat - .41; $lat < $middleLat + .41; $lat += .01) {
                 $r = $this->doGetColor($lat, $lon);
                 $town = $r['town'];
-                $c = $town->col;
+                $c = $town->getColor();
+                $plot = true;
                 if ($r['black']) {
                     $savedX = $this->GetX();
                     $savedY = $this->GetY();
@@ -270,14 +374,18 @@ class Annuaire extends FPDF
 
                     $c = [0, 0, 0];
                     $this->SetXY($savedX, $savedY);
+                    $t = $this->getTextToDisplay($town, $ox);
+                    $plot = $t != '';
                 }
 
-                $this->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
-                $this->SetDrawColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
-                $this->Rect($x, $y,
+                if ($plot) {
+                    $this->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
+                    $this->SetDrawColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
+                    $this->Rect($x, $y,
                     $lc,
                     $lc, 'F'
                 );
+                }
                 $x = $x + $lc - .1;
             }
             $y = $y + $lc - .1;
@@ -285,15 +393,26 @@ class Annuaire extends FPDF
 
         global $towns;
         foreach ($towns as $town) {
+            if (!$town->x) {
+                continue;
+            }
+            $t = $this->getTextToDisplay($town, $ox);
+            if ($t == '') {
+                continue;
+            }
             $this->SetXY($town->x, $town->y);
-            $this->PrintText(utf8_decode($town->nom).' '.$town->nb, 25, 6, 'L');
+            $this->PrintText($t, 25, 6, 'L');
         }
 
-        $this->SetXY($x - 2, $y - 2);
+        $this->SetXY($ox, $y - 2);
         global $blank;
         $this->ln();
         $tot = $tot + $blank->nb;
-        $this->PrintText('Nombre total d\'acteurs: '.$tot.', dont '.$blank->nb.utf8_decode(' non géolocalisés'), 90, 6, 'L');
+        $text = 'Nombre total d\'acteurs: '.$tot;
+        if ($blank->nb > 0) {
+            $text = $text.', dont '.$blank->nb.utf8_decode(' non géolocalisés');
+        }
+        $this->PrintText($text, 90, 6, 'L');
     }
 
     public function getColor($acteur)
@@ -317,15 +436,21 @@ class Annuaire extends FPDF
     {
         global $townArea;
         global $towns;
+        global $blank;
+        global $km;
+        global $latRef;
+        global $lonRef;
+
+        $ret = array();
+        $ret['black'] = false;
+        $ret['town'] = null;
         $minDist = 9999;
         $minKey = 0;
-        $ret = array();
-        $ret['black'] = true;
-        $ret['town'] = null;
         foreach ($towns as $key => $town) {
             $dist = $this->calcCrow($lat, $lon, $town->lat, $town->lon);
             if ($dist < $townArea) {
                 $ret['town'] = $town;
+                $ret['black'] = true;
 
                 return $ret;
             }
@@ -336,7 +461,15 @@ class Annuaire extends FPDF
             }
         }
 
-        $ret['black'] = false;
+        if ($km > 0) {
+            $distRef = $this->calcCrow($lat, $lon, $latRef, $lonRef);
+            if ($distRef > $km) {
+                $ret['town'] = $blank;
+
+                return $ret;
+            }
+        }
+
         $ret['town'] = $towns[$minKey];
 
         return $ret;
@@ -613,7 +746,6 @@ class AnnuaireLivret extends Annuaire
             $toc[$cat] = $myCat->display();
         }
 
-        /*
         $marches = $x->getElementsByTagName('marches');
         $nb_mar = $marches->length;
         for ($mar = 0; $mar < $nb_mar; ++$mar) {
@@ -621,7 +753,7 @@ class AnnuaireLivret extends Annuaire
 
             $myMar = new CategorieMarcheLivret($this, $marche);
             $toc[$cat + $mar] = $myMar->display();
-        }*/
+        }
 
         return $toc;
     }
@@ -930,6 +1062,7 @@ class AnnuairePoche extends Annuaire
         }
     }
 
+    // Poche
     public function PrintAnnuaire($x)
     {
         $this->doc = $x;
@@ -937,9 +1070,28 @@ class AnnuairePoche extends Annuaire
 
         $this->PrintAllCategories($x);
 
+        $legendDisplayed = false;
+
+        if ($this->PageNo() == 1) {
+            // still place for legend ?
+            if ($this->getY() < $this->GetPageheight() - 30) {
+                $legendDisplayed = true;
+                $this->printLegend($x);
+            } elseif ($this->subPage < $this->nbSubPages - 1) {
+                $this->AddSubPage();
+                $legendDisplayed = true;
+                $this->printLegend($x);
+            }
+
+            // force a new page
+            $this->subPage = $this->nbSubPages - 1;
+            $this->AddSubPage();
+        }
+
         if ($this->subPage == 0) {
             $this->AddSubPage();
         }
+
         // print the charte if enough space
         if ($this->subPage == 1) {
             $this->AddSubPage();
@@ -954,27 +1106,9 @@ class AnnuairePoche extends Annuaire
             }
         }
 
-        // legend
-        $this->setCol(0);
-        $this->SetY($this->GetPageheight() - 30);
-
-        // map colors
-        $this->printLegend();
-
-        // print the comptoir advice
-        $this->SetY($this->GetPageheight() - 27);
-        $textMargin = 36;
-        $this->SetX($this->GetX() + $textMargin);
-        // for one line text $texte_width = $this->marginLeft + $this->colMargin*6 + $this->GetColumnWidth()*6;
-        $texte_width = $this->GetSubPageWidth() - $textMargin - 2;
-        $texte = utf8_decode($x->getAttribute('comptoirs'));
-        $this->SetFont('futura', 'B', 10);
-        $h = $this->MultiCellHeight($texte_width, $this->cellHeight, $texte, 0, 'C');
-        $this->SetFillColor(234, 250, 180);
-        $this->Rect($this->GetX() - 1, $this->GetY() - 3, $texte_width, $h + 4, 'F');
-
-        $this->PrintName($texte, $texte_width);
-
+        if (!$legendDisplayed) {
+            $this->printLegend($x);
+        }
         // Not used for now. $this->PrintCD54Mention( $this->GetX()+10 );
         // if used: move the block above from 10 higher to make some place
 
@@ -1043,27 +1177,6 @@ class AnnuaireCompact extends AnnuairePoche
         // Divides pages in 8 columns if nbSubPages = 4
         // take into account margins between columns only: no left/right margins
         return ($this->GetPageWidth() - $this->colMargin * ($this->nbSubPages - 1)) / ($this->nbSubPages);
-    }
-
-    public function PrintAllCategories($x)
-    {
-        $categories = $x->getElementsByTagName('categorie');
-        $nb_cat = $categories->length;
-        for ($cat = 0; $cat < $nb_cat; ++$cat) {
-            $categorie = $categories[$cat];
-
-            $myCat = $this->NewCategorie($categorie);
-            $myCat->display();
-        }
-
-        $marches = $x->getElementsByTagName('marches');
-        $nb_mar = $marches->length;
-        for ($mar = 0; $mar < $nb_mar; ++$mar) {
-            $marche = $marches[$mar];
-
-            $myMar = $this->NewCategorieMarchePoche($marche);
-            $myMar->display();
-        }
     }
 }
 

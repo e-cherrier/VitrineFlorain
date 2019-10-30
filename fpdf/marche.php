@@ -239,6 +239,7 @@ class Marche extends SousCategorie
                     $idx = $idx + 1;
                     // remove displayed attribute
                     $acteur->removeAttribute('displayed');
+                    $acteur->removeAttribute('tooFar');
                 }
             }
         }
@@ -326,6 +327,16 @@ class MarchePoche extends Marche
         if (!$this->scat_->hasAttribute($this->typeAttribute())) {
             return 'none';
         }
+        $lc = 1;
+        $r = $this->a->getColor($this->scat_);
+        $c = $r['town']->getColor();
+        $this->a->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
+        $this->a->Rect(
+            $this->a->GetX(),
+            $this->a->GetY() + 1,
+            $lc,
+            4, 'F'
+        );
 
         $type = utf8_decode($this->scat_->getAttribute($this->typeAttribute()));
 
@@ -346,6 +357,35 @@ class MarchePoche extends Marche
         $this->a->bas_col1 = $this->a->GetY();
 
         return $type;
+    }
+
+    /*
+    * Return true if we need to begin a new page before displaying the sub categorie
+    *
+    * The minimum height left needed is:
+    * - the heigth of the ss cat title
+    * - plus the max height of a pair of acteurs (one per column)
+    */
+    public function needNewPage($offset = 0)
+    {
+        $offset = $offset + $this->title_height();
+        $acteurs = $this->get_elements();
+        $nb = $this->get_elements_count();
+
+        for ($pos = 0; $pos < $nb; ++$pos) {
+            $acteur = $acteurs[$pos];
+            if (!$this->candidate($acteur)) {
+                continue;
+            }
+            $myActeur = $this->NewActeur($this->a, $acteur);
+
+            if ($myActeur->height() + $offset > $this->a->SpaceLeftCol0(0)) {
+                return true;
+            }
+            break;
+        }
+
+        return false;
     }
 }
 
@@ -383,7 +423,7 @@ class MarcheCompact extends Marche
             }
             $myActeur = $this->NewActeur($this->a, $acteur);
 
-            if ($myActeur->height()+$offset > $this->a->SpaceLeftCol0(0)) {
+            if ($myActeur->height() + $offset > $this->a->SpaceLeftCol0(0)) {
                 return true;
             }
             break;
@@ -403,7 +443,7 @@ class MarcheCompact extends Marche
 
         $lc = 1;
         $r = $this->a->getColor($this->scat_);
-        $c = $r['town']->col;
+        $c = $r['town']->getColor();
         $this->a->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
         $this->a->Rect(
             $this->a->GetX(),
