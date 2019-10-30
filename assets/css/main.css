@@ -2972,6 +2972,24 @@ text-decoration: none; }
 			button.style2.down {
 				background-color: inherit;
 			}
+			
+		a.button.styleDon,
+		button.styleDon {
+			background-color: #777;
+			color: white;
+			border: none;
+			opacity: 1;
+			border: 1;
+			border-radius: 1em;
+			height: 1.5em;
+			line-height: 1.5em;
+			outline: 0;
+		}
+		a.button.styleDon:hover,
+		button.styleDon:hover {
+			background-color: #d7da23;
+			color: #777;
+		}
 
 /* Box */
 
@@ -4755,16 +4773,17 @@ h5:hover a {
 		                line-height: 1.5;
 			}
                         .crowdf_left {
-                        	background-color: rgba(51, 51, 51, 0.5);
-                        	border-color: rgba(255, 255, 255, 0.5);
+                        	background-color: #c1a544;
+							border-color: rgba(255, 255, 255, 0);
+							border: 2px solid #FFF;
                         	top: 0;
-                        	color: #FFF;
+                        	color: #000;
                         	display: block;
                         	position: fixed;
                         	left: 0;
-                        	margin-top: 30px;
+                        	margin-top: 60px;
 
-                        	transition: all 0.2s linear;;
+							border-radius: 0 0 1em 1em;
                         }
                         .crowdf_left {
 				text-align: left;
@@ -4941,18 +4960,18 @@ h5:hover a {
 
                         }
 			.phone {
-                        	background-color: rgba(51, 51, 51, 0.5);
+                        	background-color:  #c1a544;
                         	border-color: rgba(255, 255, 255, 0.5);
                         	top: 0;
                         	color: #FFF;
                         	display: block;
                         	position: fixed;
                         	left: 0;
-                        	margin-top: 0px;
+                        	margin-top: 40px;
 
 				text-align: center;
                         	transition: all 0.2s linear;;
-                        }
+						}
 
 
 

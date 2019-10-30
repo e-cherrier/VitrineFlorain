@@ -44,16 +44,6 @@ $header->display();
 
       <section id="accueil" class="main styleAcceuil right dark fullscreen">
         <div class="content box style1">
-          <header>
-            <h2>Participez à notre première brocante!</h2>
-            <h4>Le Florain organise une brocante et une bourse aux instruments</h4>
-            <h4>Le dimanche 13 octobre de 9h à 17h</h4>
-      <footer>
-        <ul class="style2">
-        <li>  <a href="./brocante.php" class="button style2">Informations et inscriptions</a></li>
-        </ul>
-      </footer>
-</header>
           <br/><h2> Les derniers acteurs agréés </h2>
 <div id="myCarousel" class="carousel slide">
 
@@ -78,7 +68,6 @@ $header->display();
           $date = $acteur->getAttribute('date');
           // $datetime2 = date_create('2009-10-13');
           $aggDate = DateTime::createFromFormat('d-m-Y', $date);
-          $titre = str_replace("'", '', $acteur->getAttribute('titre'));
           if ($oneMonthAgo < $aggDate) {
               $nouveaux[$idx] = $acteur;
               $idx = $idx + 1;
@@ -99,7 +88,8 @@ $header->display();
       echo "<div class='carousel-inner'>\n";
       $acteur = $nouveaux[$indexes[0]];
       $image = $acteur->getAttribute('image');
-      $titre = str_replace("'", '', $acteur->getAttribute('titre'));
+      $titre = $acteur->getAttribute('titre');
+      $bref = $acteur->getAttribute('bref');
       $desc = $acteur->getAttribute('desc');
       $lenmax = 260;
       if (strlen($desc) > $lenmax) {
@@ -110,7 +100,8 @@ $header->display();
       echo "  <div class='item active'>\n";
       echo "     <img src='images/acteurs/".$image."' alt='".$titre."'/>\n";
       echo "     <div>\n";
-      echo "       <h1 align='center'>".$titre."</h1>\n";
+      echo "       <h3 align='left'>".$bref.'</h3>';
+      echo "       <h1 align='center'>".$titre.'</h1>';
       echo '       <p >'.$desc."</p>\n";
       echo "       <div class='coordonnees'>\n";
       echo '         <p >'.$adresse."<br/>\n";
@@ -121,7 +112,9 @@ $header->display();
       for ($a = 1; $a < count($nouveaux); ++$a) {
           $acteur = $nouveaux[$indexes[$a]];
           $image = $acteur->getAttribute('image');
-          $titre = str_replace("'", '', $acteur->getAttribute('titre'));
+          $titre = $acteur->getAttribute('titre');
+          $bref = $acteur->getAttribute('bref');
+
           $desc = $acteur->getAttribute('desc');
           if (strlen($desc) > $lenmax) {
               $desc = substr($desc, 0, $lenmax - 7).' [...]';
@@ -131,7 +124,8 @@ $header->display();
           echo "  <div class='item'>\n";
           echo "    <img src='images/acteurs/".$image."' alt='".$titre."'/>\n";
           echo "     <div>\n";
-          echo "      <h1 align='center'>".$titre."</h1>\n";
+          echo "       <h3 align='left'>".$bref.'</h3>';
+          echo "      <h1 align='center'>".$titre.'</h1>';
           echo '      <p >'.$desc."</p>\n";
           echo "      <div class='coordonnees'>\n";
           echo '        <p >'.$adresse."<br/>\n";
@@ -177,11 +171,10 @@ $header->display();
           </header>
 <h3>Depuis la fete de lancement le 7 octobre 2017, le Florain c'est:</h3>
 
-<h4>Un réseau de plus de 140 professionnels,</h4>
-<h4>11 comptoirs de change,</h4>
-<h4>80.000 Florains en circulation,</h4>
-<h4>1000 Florains de plus par semaine dans le circuit,</h4>
-<h4>des groupes locaux à Toul et Lunéville
+<h4>Un réseau de plus de 180 professionnels,</h4>
+<h4>12 comptoirs de change,</h4>
+<h4>90.000 Florains en circulation,</h4>
+<h4>des groupes locaux à Toul et Lunéville.</h4>
 <br/>
 <h3>Vous aussi, entrez dans la dynamique !</h3>
 <br/>
@@ -298,8 +291,8 @@ $header->display();
           <h3>Monnaie locale et acte de liberté citoyenne.</h3><br>
           <p class="onecolumn">Une monnaie locale citoyenne permet de relocaliser l'économie, de rendre les citoyens maîtres de leurs échanges, acteurs du fonctionnement de leur économie et libres d'en définir les valeurs. <br> Pour plus d'informations sur les monnaies locales et sur leur rôle dans le système économique actuel :<br>
 
-          <a target="_blank" href="http://monnaie-locale-complementaire.net/">Site Monnaie locale complémentaire</a> -
-              <a target="_blank" href="https://mrmondialisation.org/la-monnaie-locale-cest-quoi/">Infographie </a></p>
+          <a rel="noopener noreferrer" target="_blank" href="http://monnaie-locale-complementaire.net/">Site Monnaie locale complémentaire</a> -
+              <a rel="noopener noreferrer" target="_blank" href="https://mrmondialisation.org/la-monnaie-locale-cest-quoi/">Infographie </a></p>
           <footer><a target="_blank" class="button icon first" href="#orga">Les groupes de travail</a><footer>
         </div>
         <a href="#orga" class="button style2 down anchored">Next</a>
@@ -514,9 +507,9 @@ while(x=eval(x));
         <!-- Icons -->
           <ul class="actions">
 
-            <li><a target="_blank" href="https://www.facebook.com/LeFlorain" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/LeFlorain" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 
-            <li><a target="_blank" href="https://twitter.com/LeFlorain" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a rel="noopener noreferrer" target="_blank" href="https://twitter.com/LeFlorain" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 
 
           </ul>
@@ -528,9 +521,6 @@ while(x=eval(x));
       </footer>
 
     <!-- Scripts -->
-
-
-
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/jquery.poptrox.min.js"></script>
       <script src="assets/js/jquery.dropotron.min.js"></script>
@@ -542,56 +532,72 @@ while(x=eval(x));
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script src="assets/js/main.js"></script>
       <script src="assets/js/main2.js"></script>
-<!--
+      
+    <script>
+    	function hideMessage() {
+          $('.crowdf').fadeOut(600);
+          $('.phone').fadeOut(600);
+          $('.crowdf').removeClass( "crowdf" );
+          $('.phone').removeClass( "phone" );
+      };
+		</script>
 		<script type="text/javascript">
-
-	 		/* une fois le document chargÃ©, executer la fonction suivante */
+ 
+ 
+	 		/* une fois le document charge, executer la fonction suivante */
 	 		$(document).ready(function() {
-
-	 			/* On crÃ©e l'Ã©lÃ©ment html Ã  la fin de la page */
+        
+	 			/* On cree l'element html a la fin de la page 
 				$('body').append('<a class="crowdf nav fa-angle-up nav scrollTo"> <p><b><font size="+2">Assemblée générale</font></b><br/> <font size="+1"><b> le 3 septembre 2017</b><br/> 15h à la MJC des 3 maisons<br> Nouveaux statuts,<br> projet de gouvernance...<br> Soyons nombreux,<br> parlez en autour de vous.<br> <b><font size="+2">Fête de lancement</font><br> le 7 Octobre 2017</b><br> 14h - minuit<br> <i><font size="-1">Le lieu sera communiqué<br> ultérieurement</font></i><br> le Florain sera émis,<br> de nombreux partenaires<br> seront présents!</p> </a>');
-
 				$('body').append('<a class="phone ban_tel"> <b> <font size="+1"> <font size="+2"> Assemblée générale </font> le 3 septembre 2017 <br/> <font size="+2"> Fête de lancement </font> le 7 Octobre 2017 </font> </b> </a>');
+*/
+$('body').append('<footer class="crowdf"><p>&nbsp;Le Florain à besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/formulaires/1/widget" class="button styleDon">Je fais un don</a></footer>');
+  $('body').append('<footer class="phone ban_tel"><p>&nbsp;Le Florain à besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/formulaires/1/widget" class="button styleDon">Je fais un don</a></footer>');
 
-	     		/* au scroll dans la fenÃªtre */
-			$(window).scroll(function(){
+	     	/* au scroll dans la fenetre */
+			  $(window).scroll(function(){
 
-				var p = $( "article:last" );
-                                var offset = p.offset();
-	  			var posScroll = $(document).scrollTop();
+				var p = $( "section:last" );
+        var offset = p.offset();
+	  		var posScroll = $(document).scrollTop();
 
 				if(
 					offset.top + 500 > posScroll &&
 					offset.top - 500 < posScroll
 				) {
-		        		$('.crowdf').fadeOut(600);
-	        			$('.phone').fadeOut(600);
-			        	return;
+		        $('.crowdf').fadeOut(600);
+	        	$('.phone').fadeOut(600);
+			      return;
 				}
 
+        $('.crowdf').removeClass( "crowdf_right" ).addClass( "crowdf_left" );
+
+/*
 				if( posScroll < $('body').height() ) {
-				        $('.crowdf').removeClass( "crowdf_right" ).addClass( "crowdf_left" );
+				    $('.crowdf').removeClass( "crowdf_right" ).addClass( "crowdf_left" );
 				} else {
-				        $('.crowdf').removeClass( "crowdf_left" ).addClass( "crowdf_right" );
+				    $('.crowdf').removeClass( "crowdf_left" ).addClass( "crowdf_right" );
 				}
+  */      
 
 				if( $('body').width() > 737 )  {
-	        			$('.crowdf').fadeIn(600);
-		        		$('.phone').fadeOut(600);
-		        		$('.nophone').fadeIn(600);
-					$('.ban_nophone').width( $('.box').width() * .7 );
+	        	$('.crowdf').fadeIn(600);
+		        $('.phone').fadeOut(600);
+		        $('.nophone').fadeIn(600);
+					  $('.ban_nophone').width( $('.box').width() * .7 );
 				}
 				else {
-		        		$('.crowdf').fadeOut(600);
-	        			$('.phone').fadeIn(600);
-					$('.ban_tel').width( $('body').width() );
-	        			$('.nophone').fadeOut(600);
+		        $('.crowdf').fadeOut(600);
+	        	$('.phone').fadeIn(600);
+					  $('.ban_tel').width( $('body').width() );
+	        	$('.nophone').fadeOut(600);
 				}
-
-				});
-		   	});
+        });
+        
+		});
 
 		</script>
+    <!--
      <script>
         var Images = new Array('images/accueil.png', 'images/cerclevertueux.png');
         var Pointeur = 0;
@@ -601,6 +607,6 @@ while(x=eval(x));
          Pointeur++;
         }
     </script>
--->
+    -->
   </body>
 </html>

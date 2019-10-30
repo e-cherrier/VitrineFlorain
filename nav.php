@@ -1,10 +1,11 @@
 ﻿
 <?php
 
-class Header {
-	function display() {
-
-	    $p = <<<EOD
+class Header
+{
+    public function display()
+    {
+        $p = <<<EOD
     <!-- Header -->
       <header id="header">
 
@@ -35,7 +36,7 @@ class Header {
                 <li><a href="acteurs.php">Où les dépenser?</a>
                   <ul>
                     <li> <a href="acteurs.php">la liste détaillée</a></li>
-                    <li> <a target="_blank" href="annuaire.php?type=Poche">l'annuaire de poche</a></li>
+                    <li> <a target="_blank" href="annuaire.php?type=Compact">l'annuaire de poche</a></li>
                     <li> <a target="_blank" href="annuaire.php?type=Livret">l'annuaire en livret</a></li>
                     <li> <a href="carte.php">la carte</a></li>
                   </ul>
@@ -64,20 +65,20 @@ class Header {
             </nav>
       </header>
 EOD;
-   	    print $p;
-	}
+        echo $p;
+    }
 
-	function display_acteurs_nav() {
-
-	    $p = <<<EOD
+    public function display_acteurs_nav()
+    {
+        $p = <<<EOD
 	    <div  class="actions dark desktop" >
                <a id="press_liste" href="acteurs.php" class="button style2 icon first">Liste</a>
                <a id="press_carte" href="carte.php" class="button style2 icon first">Carte</a>
                <a id="press_comptoirs" href="change.php" class="button style2 icon first">Comptoirs</a>
-               <a id="press_imprim" target="_blank" href="annuaire.php?type=Poche" class="button style2 icon first">Annuaire de Poche</a>
+               <a id="press_imprim" target="_blank" href="annuaire.php?type=Compact" class="button style2 icon first">Annuaire de Poche</a>
                <a id="press_annuaire" target="_blank" href="annuaire.php?type=Livret" class="button style2 icon first">Annuaire en Livret</a>
             </div>
 EOD;
-   	    print $p;
-	}
+        echo $p;
+    }
 }

@@ -143,7 +143,7 @@ $header->display();
         <div class="content box style1">
           <header>
             <h2>La Brocante du Florain</h2>
-            <h4>Le 13 octobre prochain de 9h à 17h</h4>
+            <h4>Le 13 octobre prochain de 10h à 18h</h4>
           </header>
 
           <div class="anniv" >
@@ -151,16 +151,16 @@ $header->display();
     </div>
 
           <p>avec le soutien précieux de <a href="https://lautrecanalnancy.fr">l’Autre Canal</a>,
-          le Florain organise une brocante à l'Autre Canal (quartier Rives de Meurthe à Nancy).<br/>
+          le 13 octobre de 10h à 18h dans la Grande Halle de l'Octroi (quartier Rives de Meurthe à Nancy), aux côtés de la Foire aux Disques.<br/>
           Une excellente occasion de développer notre partenariat avec ce haut lieu culturel, tout en proposant 
           aux adhérent.e.s du Florain la possibilité de vendre des objets d’occasion et ainsi collecter des florains
           sans passer par la case du change ;).<br/><br/>
           En cohérence avec notre charte de valeur, nous organiserons aussi ce jour-là une bourse aux instruments
-          de musique ouverte à toutes et tous: un parfait mélange entre réemploi et accès à la culture.<br/><br/>
-          Ce dimanche 13 octobre se tiendra également la Foire aux Disques dans la grande Halle de l’Octroi,
-          à deux pas de notre brocante.</p>
+          de musique ouverte à toutes et tous : un parfait mélange entre réemploi et accès à la culture.<br/>
+          Venez déposer vos instruments de musique à vendre sur le stand du Florain à partir de 9h.
+          Les instruments invendus et les recettes des ventes (moins 10% reversés au Florain) 
+          pourront être récupérés de 18h à 19h.</p>
           
-
       <footer>
 	<ul class="anniv">
 	 <li>  <a href="#jyvais" class="button"><span class="icon fa-compass"></span>&nbsp;&nbsp;Comment s'y rendre ?</a></li>
@@ -211,9 +211,9 @@ $header->display();
           </header>
          <p>
 <ul>
-  <li>•	1 table : 20 € / 10 € pour les adhérents au Florain </li>
-  <li>•	2 tables : 50 € / 30 € pour les adhérents au Florain </li>
-  <li>•	3ème table (en option selon la place disponible) : 50 €</li>
+  <li>•	1 table : 20 € / 10 € pour les adhérent.e.s au Florain</li>
+  <li>•	2 tables : 40 € / 20 € pour les adhérent.e.s au Florain</li>
+  <li>•	3ème table en option pour les adhérent.e.s : 10 €</li>
 </ul>
 </p>
 <p>Si vous souhaitez bénéficier des tarifs adhérents, vous pouvez adhérer au Florain <a target="_blank" href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs">en cliquant ici.</a><br/>
@@ -246,14 +246,14 @@ $header->display();
         <div class="content box style1 mobile">
           <header>
             <h2>Comment s'y rendre ?</h2>
-            <h4>Parking de l'Autre Canal</h4>
+            <h4>Grande Halle de l'Octroi</h4>
             <h4>quartier Rives de Meurthe</h4>
             <h4>Boulevard d'Austrasie à Nancy</h4>
           </header>
           
           <div class="anniv menu" >
             <div>
-              <p>La brocante sera ouverte au public de 9 à 17h.<br/><br/>
+              <p>la Halle sera ouverte au public de 10 à 18h.<br/><br/>
                  L’entrée est libre.<br/><br/>
                  En transport en commun : tram arrêt St Georges.<br/><br/>
                  Pour vous garer, deux parking sont à disposition sur le pole.
@@ -274,8 +274,8 @@ $header->display();
 
               var features = new Array;
               afeature = new ol.Feature({
-                  geometry: new ol.geom.Point(ol.proj.fromLonLat([6.198188, 48.694065])),
-                  name: "L'Autre Canal",
+                  geometry: new ol.geom.Point(ol.proj.fromLonLat([6.199138, 48.693938])),
+                  name: "la Halle ouverte de l’Octroi",
                   desc: "Boulevard d'Austrasie à Nancy"
               });
 
@@ -298,7 +298,7 @@ $header->display();
                 ],
                 target: document.getElementById('map'),
                 view: new ol.View({
-                  center: ol.proj.fromLonLat([6.198188, 48.694065]),
+                  center: ol.proj.fromLonLat([6.199138, 48.693938]),
                   zoom: 17
                 }),
                 logo: logoElement
