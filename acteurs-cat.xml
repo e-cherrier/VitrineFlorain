@@ -156,9 +156,19 @@
       </acteur>
     </scat>
     <scat type="Producteurs">
+      <acteur date="07-11-2019" 
+        siteweb="" 
+        image="ambroisie.jpg" 
+        titre="Domaine de l'Ambroisie" 
+        bref="Vigneron" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="45 impasse Victor Hugo, Toul" 
+        telephone="03 83 63 80 53" 
+        latitude="5.88184" 
+        longitude="48.677426" />
       <acteur date="19-10-2019" 
         siteweb="" 
-        image="defaut.jpg" 
+        image="cytise.jpg" 
         titre="Ferme du Cytise" 
         bref="Elevage" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
@@ -168,7 +178,7 @@
         longitude="48.844057" />
       <acteur date="02-10-2019" 
         siteweb="" 
-        image="defaut.jpg" 
+        image="terrassesdamance.jpg" 
         titre="Les Terrasses d'Amance" 
         bref="Fruits" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
@@ -193,7 +203,7 @@
       <acteur date="22-09-2019" 
         siteweb="" 
         bref="Fromage de chèvre" 
-        image="defaut.jpg" 
+        image="chevreriedamandine.jpg" 
         titre="Chèvrerie d'Amandine" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
         adresse="12 Rue de Geleau, 54230 Chaligny" 
@@ -472,7 +482,7 @@
 
       <acteur date="13-10-2019" 
         siteweb="" 
-        image="defaut.jpg" 
+        image="brasseriedaustrasie.jpg" 
         titre="Brasserie d'Austrasie" 
         bref="" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
@@ -586,7 +596,7 @@
         defi="Intégrer produits du commerce équitable" 
         latitude="5.870572328576" 
         longitude="48.7816173421" />
-      <acteur image="defaut.jpg" 
+      <acteur image="laurereine.jpg" 
         titre="La P'tite Laur'Reine du Pain" 
         bref="Boulangère" 
         marche="haroue" 
@@ -601,7 +611,7 @@
     <scat type="Traiteurs">
       <acteur date="19-10-2019" 
         siteweb="" 
-        image="defaut.jpg" 
+        image="tourneecrousti.jpg" 
         titre="La Tournée du Crousti" 
         marche="vandoeuvre" 
         bref="Traiteur" 
@@ -757,7 +767,7 @@
     <scat type="Se restaurer et boire un verre">
       <acteur date="19-10-2019" 
         siteweb="www.le-made-in-france.fr" 
-        image="defaut.jpg" 
+        image="madeinfrance.jpg" 
         titre="Made in France" 
         bref="Sandwicherie" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
@@ -767,7 +777,7 @@
         longitude="48.696634" />
       <acteur date="19-10-2019" 
         siteweb="" 
-        image="defaut.jpg" 
+        image="aubergedufort.jpg" 
         titre="L'Auberge du Fort" 
         bref="Hébergement, restauration" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
@@ -1197,6 +1207,7 @@
         siteweb="" 
         image="defaut.jpg" 
         titre="La Bottée" 
+        bref="Chambres d'hôtes" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
         adresse="Viéville sous les Côtes, 55210 Vigneulles-lès-Hattonchâtel" 
         latitude="5.689531" 
