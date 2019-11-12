@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 23 octobre 2019" 
-  sstitre="Mise à jour du 23 octobre 2019 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 12 novembre 2019" 
+  sstitre="Mise à jour du 12 novembre 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="du Sud de la Meurthe et Moselle" 
   slogan="La monnaie qui crée du lien!">
@@ -9,7 +9,8 @@
     image="defaut.jpg" 
     titre="" 
     bref="" 
-    desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+    desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations."
+    citation=""
     adresse="" 
     telephone="" 
     latitude="6." 
@@ -786,8 +787,8 @@
         latitude="6.090545" 
         longitude="48.597017" />
       <acteur date="18-10-2019" 
-        siteweb="" 
-        image="defaut.jpg" 
+        siteweb="www.lesdelicesdetometwale.fr" 
+        image="lesdelicesdetometwale.jpg" 
         titre="Les délices de Tom et Walé" 
         bref="" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
@@ -1031,6 +1032,17 @@
         longitude="48.659872" 
         telephone="03 83 55 53 35" />
     </scat>
+  <acteur date="12-11-2019" 
+    siteweb="www.divertyloc.com" 
+    image="divertyloc.jpg" 
+    titre="Divertyloc" 
+    bref="Location de jeux en bois" 
+    desc="Pour tous vos événements, nous louons des jeux en bois, pour adultes et enfants. Le fondateur est un bricoleur passionné qui démarrât la société en fabriquant des jeux en bois avec des matériaux de récupération."
+    citation="Le Florain permet de créer du lien social et de la solidarité. Il nous propose de nous rencontrer et ainsi localement de recréer du lien. Il s’agit d’envisager un mieux vivre ensemble et d’affronter collectivement les défis de demain. nous sommes ravis d'y contribuer."
+    adresse="1 Allée Lounes Matoub, Nancy" 
+    telephone="06 24 11 94 95" 
+    latitude="6.159536" 
+    longitude="48.702323" />
     <scat type="Se cultiver, se divertir, se détendre">
       <acteur date="24-10-2019" 
         siteweb="facebook vininyoga" 
