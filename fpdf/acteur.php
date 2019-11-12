@@ -41,7 +41,7 @@ class Acteur
     {
         $today = new DateTime();
         $today->setTimestamp(time());
-        $oneMonthAgo = $today->sub(DateInterval::createFromDateString('2 month'));
+        $oneMonthAgo = $today->sub(DateInterval::createFromDateString('1 month'));
 
         $date = $this->acteur_->getAttribute('date');
         $aggDate = DateTime::createFromFormat('d-m-Y', $date);
@@ -168,7 +168,7 @@ class ActeurPoche extends Acteur
         $r = $this->a->getColor($this->acteur_);
         $c = $r['town']->getColor();
         $r['town']->add();
-        $this->a->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
+        $this->a->SetFillColor($c[0] * 255, $c[1] * 255, $c[2] * 255);
         $this->a->Rect(
             $this->a->GetX(),
             $this->a->GetY(),
@@ -336,7 +336,7 @@ class ActeurCompact extends Acteur
         $r = $this->a->getColor($this->acteur_);
         $c = $r['town']->getColor();
         $r['town']->add();
-        $this->a->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
+        $this->a->SetFillColor($c[0] * 255, $c[1] * 255, $c[2] * 255);
         $this->a->Rect(
             $this->a->GetX(),
             $this->a->GetY(),

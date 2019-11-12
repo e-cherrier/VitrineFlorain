@@ -5,21 +5,30 @@ require 'fpdf/categorie.php';
 require 'fpdf/marche.php';
 include 'pix_tools.php';
 
+$light = 1;
+$cMin = .4 * $light;
+$cMax = .9 * $light;
+$cMid = .6 * $light;
 $townArea = .63;
 $areaColor = array(
-    [90.6, 45.1, 62],
-    [32.5, 73.7, 71],
-    [62.4, 78.8, 87.5],
-    [96.1, 61.2, 21.2],
-    [61.2, 73.3, 24.3],
-    [32.5, 96.1, 45.1],
-    [96.1, 96.1, 45.1],
-    [65.1, 45.1, 20.1],
-    [96.1, 20.1, 96.1],
-    [96.1, 20.1, 45.1],
+    [$cMax, $cMin, $cMin], // Red
+    [$cMin, $cMax, $cMin], // Green
+    [$cMin, $cMin, $cMax], // Blue
+    [$cMax, $cMin, $cMax], // Magenta
+    [$cMax, $cMax, $cMin], // Yellow
+    [$cMin, $cMax, $cMax], // Cyan
+    [$cMax, $cMid, $cMin], // Orange
+    [$cMid, $cMin, $cMax], // Violet
+    [$cMin, $cMid, $cMid], // Dark green
+    [$cMid, $cMin, $cMid], // Purple
+    [$cMid, $cMid, $cMin], // Kaki
+
+    [$cMax, $cMid, $cMax], // Rose
+    [$cMid, $cMax, $cMax], // Light cyan
+    [$cMid, $cMax, $cMid], // Light Green
 );
 $indexCol = 0;
-$maxIndexCol = 9;
+$maxIndexCol = 10;
 
 $towns = array(
     new Ville('Nancy', 6.180794, 48.692442),
@@ -29,13 +38,13 @@ $towns = array(
     new Ville('Tezey-St-Martin', 6.294456, 48.900973, 'B'),
     new Ville('Colombey-les-Belles', 5.897124, 48.528123),
     new Ville('Vézelise', 6.092136, 48.481914, 'B'),
-    new Ville('Commercy', 5.591207, 48.762711),
-    new Ville('Baccarat', 6.740270, 48.450055),
-    new Ville('Bayon', 6.313295, 48.476239),
-    new Ville('Chateau-Salin', 6.508031, 48.822719, 'B'),
+    //new Ville('Commercy', 5.591207, 48.762711),
+    //new Ville('Baccarat', 6.740270, 48.450055),
+    //new Ville('Bayon', 6.313295, 48.476239),
+    //new Ville('Chateau-Salin', 6.508031, 48.822719, 'B'),
 );
 $blank = new Ville('blank', 6, 48);
-$blank->setColor([100, 100, 100]);
+$blank->setColor([1, 1, 1]);
 
 class Ville
 {
@@ -379,8 +388,8 @@ class Annuaire extends FPDF
                 }
 
                 if ($plot) {
-                    $this->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
-                    $this->SetDrawColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
+                    $this->SetFillColor($c[0] * 255, $c[1] * 255, $c[2] * 255);
+                    $this->SetDrawColor($c[0] * 255, $c[1] * 255, $c[2] * 255);
                     $this->Rect($x, $y,
                     $lc,
                     $lc, 'F'

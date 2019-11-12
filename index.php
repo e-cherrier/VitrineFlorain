@@ -61,7 +61,7 @@ $header->display();
 
       $today = new DateTime();
       $today->setTimestamp(time());
-      $oneMonthAgo = $today->sub(DateInterval::createFromDateString('2 month'));
+      $oneMonthAgo = $today->sub(DateInterval::createFromDateString('1 month'));
 
       for ($a = 0; $a < $nb_acteurs; ++$a) {
           $acteur = $acteurs[$a];

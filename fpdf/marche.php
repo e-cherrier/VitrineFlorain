@@ -330,7 +330,7 @@ class MarchePoche extends Marche
         $lc = 1;
         $r = $this->a->getColor($this->scat_);
         $c = $r['town']->getColor();
-        $this->a->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
+        $this->a->SetFillColor($c[0] * 255, $c[1] * 255, $c[2] * 255);
         $this->a->Rect(
             $this->a->GetX(),
             $this->a->GetY() + 1,
@@ -444,7 +444,7 @@ class MarcheCompact extends Marche
         $lc = 1;
         $r = $this->a->getColor($this->scat_);
         $c = $r['town']->getColor();
-        $this->a->SetFillColor($c[0] * 2.56, $c[1] * 2.56, $c[2] * 2.56);
+        $this->a->SetFillColor($c[0] * 255, $c[1] * 255, $c[2] * 255);
         $this->a->Rect(
             $this->a->GetX(),
             $this->a->GetY() + 1,
