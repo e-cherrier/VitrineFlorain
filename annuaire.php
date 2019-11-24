@@ -31,37 +31,53 @@ $indexCol = 0;
 $maxIndexCol = 10;
 
 $towns = array(
-    new Ville('Nancy', 6.180794, 48.692442),
+    new Ville('Nancy', 6.180794, 48.692442, 30, 'Compact'),
     new Ville('Toul', 5.891387, 48.675334),
-    new Ville('Pont-à-Mousson', 6.053787, 48.902677),
-    new Ville('Lunéville', 6.495079, 48.591822, 'L'),
-    new Ville('Tezey-St-Martin', 6.294456, 48.900973, 'B'),
+    new Ville('Pont-à-Mousson', 6.053787, 48.902677, 25),
+    new Ville('Lunéville', 6.495079, 48.591822, 30, 'Poche', 'L'),
+    new Ville('Tezey-St-Martin', 6.294456, 48.900973, 30, 'Poche', 'B'),
     new Ville('Colombey-les-Belles', 5.897124, 48.528123),
-    new Ville('Vézelise', 6.092136, 48.481914, 'B'),
+    new Ville('Vézelise', 6.092136, 48.481914, 30, 'Poche', 'B'),
     //new Ville('Commercy', 5.591207, 48.762711),
     //new Ville('Baccarat', 6.740270, 48.450055),
     //new Ville('Bayon', 6.313295, 48.476239),
-    //new Ville('Chateau-Salin', 6.508031, 48.822719, 'B'),
+    //new Ville('Chateau-Salin', 6.508031, 48.822719, 30, 'Poche', 'B'),
 );
 $blank = new Ville('blank', 6, 48);
 $blank->setColor([1, 1, 1]);
 
+function findTown($name)
+{
+    global $towns;
+    foreach ($towns as $town) {
+        if ($town->nom == $name) {
+            return $town;
+        }
+    }
+
+    return findTown('Nancy');
+}
+
 class Ville
 {
     public $nom;
+    public $type;
     public $lat;
     public $lon;
+    public $km;
     private $col;
     public $nb = 0;
     public $pos;
     public $x;
     public $y;
 
-    public function __construct($nom, $lat, $lon, $pos = 'A')
+    public function __construct($nom, $lat, $lon, $km = 30, $type = 'Poche', $pos = 'A')
     {
         $this->nom = $nom;
+        $this->type = $type;
         $this->lat = $lat;
         $this->lon = $lon;
+        $this->km = $km;
         $this->pos = $pos;
     }
 
@@ -974,6 +990,7 @@ class AnnuairePoche extends Annuaire
         global $sstitle;
         global $localisation;
         global $slogan;
+        global $edition;
 
         $margin = $this->GetX();
         $cellwidth = $this->GetSubPageWidth() + $this->colMargin;
@@ -981,8 +998,37 @@ class AnnuairePoche extends Annuaire
         $this->SetFillColor(204, 220, 62);
         $this->SetTextColor(112, 112, 111);
         $this->Rect($margin - $this->colMargin, 0, $this->GetSubPageWidth() + $this->colMargin * 3, $this->GetPageHeight(), 'F');
-
         $this->Image('images/FlorainFA5-vert.jpg', $margin + ($cellwidth - 40) / 2, 20, 40);
+
+        if ($edition != 'globale') {
+            // print edition
+
+            $this->SetAlpha(0.7);
+            $this->SetDrawColor(255, 204, 0);
+            $this->SetFillColor(255, 204, 0);
+            $this->SetLineWidth(0);
+            $x1 = $margin - $this->colMargin;
+            $x2 = $x1 + $this->GetSubPageWidth() + $this->colMargin;
+            $y1 = $this->GetPageHeight() * .25;
+            $y2 = $y1 - 30;
+            $yh = 20;
+            $this->Polygon(array($x1, $y1, $x1, $y1 - $yh, $x2, $y2 - $yh, $x2, $y2), 'FD');
+            $this->SetAlpha(1);
+
+            $fsize = 42;
+            $this->SetFont('Steelfish', '', 42);
+            $texte = "Edition de ".utf8_decode($edition);
+            $xmarge = ($this->GetSubPageWidth()-$this->GetStringWidth($texte)*.8)/2;
+            if( $xmarge < 1 ) {
+                // case of PAM
+                $fsize = 30;
+                $this->SetFont('Steelfish', '', $fsize);
+                $xmarge = ($this->GetSubPageWidth()-$this->GetStringWidth($texte)*.8)/2;
+            }
+            
+            $this->RotatedText( $x1+$xmarge, $y1-$xmarge/1.8 - (42-$fsize)/2, $texte, 21.8 );
+        }
+
 
         $this->SetFont('Steelfish', '', 48);
 
@@ -1191,27 +1237,63 @@ class AnnuaireCompact extends AnnuairePoche
 
 /******************************************************************/
 
-$type = 'Livret';
-$output = 'D';
+/*
+ * Il y a actuellement plusieurs resultats possibles selon le parametre type
+ * - Fiche: une page A4 par acteur. c'est la valeur par defaut.
+ * - Livret: cree un livret (A4 pliee en deux), avec une page de couverture, un quatrieme de couverture.
+ *           en fonction de la place dispobible, le nombre de page etant un multiple de 4, d'autre page sont ajoutee:
+ *           la charte de valeurs, la liste des comptoirs de change, une page de notes.
+ * - Poche: cree un annuaire avec le maximum d'info pour tenir sur une page A4.
+ * - Compact: c'est le Poche remanie et compacte pour tenir sur une page A4.
+ *
+ * la geolocalisation:
+ * On peu limiter la liste des acteur en fonction d'une geolocalisation et d'un perimetre donne:
+ * specifier les parametres lon, lat et km, pour ne garder que les acteurs situes a moins du nombre de kilometres
+ * donnes des coordonnees lon/lat voulues.
+ *
+ * les editions speciales:
+ * Elles simplifient la gestion des parametres de geolocalisation pour les editions des groupes locaux et determinent
+ * le type de format adapte en fonction du nombre d'acteurs concernes.
+ * edition=Nancy|Toul|Pont-à-Mousson|Lunéville
+ *
+ * le parametre output
+ * - pour ne pas creer un fichier systematiquement sur le disque local, mettre ce parametre a vide.
+ *   Le fichier pdf sera envoye au navigateur
+ *
+ */
 
-if (isset($_GET['type'])) {
-    $type = $_GET['type'];
-}
-if (isset($_GET['output'])) {
-    $output = $_GET['output'];
-}
+$type = 'Livret';
+$edition = 'globale';
+$output = 'D';
 
 $latRef = -1;
 $lonRef = -1;
 $km = -1;
-if (
-  isset($_GET['km']) &&
-  isset($_GET['lat']) &&
-  isset($_GET['lon'])
-) {
-    $km = $_GET['km'];
-    $latRef = $_GET['lat'];
-    $lonRef = $_GET['lon'];
+if (isset($_GET['edition'])) {
+    // if edition parameter is set: ignore type and manual geolocalisation
+    $edition = $_GET['edition'];
+    $town = findTown($edition);
+    $type = $town->type;
+    $km = $town->km;
+    $latRef = $town->lat;
+    $lonRef = $town->lon;
+} else {
+    if (isset($_GET['type'])) {
+        $type = $_GET['type'];
+    }
+    if (
+        isset($_GET['km']) &&
+        isset($_GET['lat']) &&
+        isset($_GET['lon'])
+    ) {
+        $km = $_GET['km'];
+        $latRef = $_GET['lat'];
+        $lonRef = $_GET['lon'];
+    }
+}
+
+if (isset($_GET['output'])) {
+    $output = $_GET['output'];
 }
 
 $no_footer = true;
