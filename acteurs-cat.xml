@@ -17,7 +17,29 @@
     longitude="48." />
   <categorie type="Se nourrir">
     <scat type="Épiceries">
+      <acteur date="25-11-2019" 
+        siteweb="facebook LATOUTVRAC" 
+        image="latoutvrac.jpg" 
+        titre="L'Atout Vrac" 
+        bref="Epicerie Vrac" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="3 Rue Thiers, Toul" 
+        telephone="" 
+        latitude="5.887285" 
+        longitude="48.673957" />
 
+      <acteur date="25-11-2019" 
+        siteweb="" 
+        image="grainsdarome.jpg" 
+        titre="Grains D'Arôme" 
+        bref="Épicerie" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="7 rue Banaudon, Lunéville" 
+        telephone="09 67 11 86 59" 
+        latitude="6.492649" 
+        longitude="48.591527" />
       <acteur date="25-11-2019" 
         siteweb="facebook Proxi Tantonville" 
         image="proxitantonville.jpg" 
@@ -778,6 +800,17 @@
   </marches>
   <categorie type ="Sortir">
     <scat type="Se restaurer et boire un verre">
+      <acteur date="25-11-2019" 
+        siteweb="facebook Amore-mio-Toul" 
+        image="amoremio.jpg" 
+        titre="Amore Mio" 
+        bref="Pizzeria – Sandwiches" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="22 rue carnot, Toul" 
+        telephone="" 
+        latitude="5.88943" 
+        longitude="48.674415" />
       <acteur date="19-10-2019" 
         siteweb="www.le-made-in-france.fr" 
         image="madeinfrance.jpg" 
@@ -1238,7 +1271,7 @@
         longitude="49.002565" 
         telephone="" />
       <acteur date="10-5-2019" 
-        siteweb="" 
+        siteweb="facebook Roulotte-de-la-loutre-noire" 
         image="giteenroulotte.jpg" 
         titre="Gîte en roulotte" 
         bref="Hébergement en roulotte" 
@@ -1303,7 +1336,7 @@
   </categorie>
   <categorie type ="Prendre soin de soi">
     <scat>
-      <acteur_vide date="25-11-2019" 
+      <acteur date="25-11-2019" 
         siteweb="www.fleurs-de-bach.net" 
         image="fleurs-de-bach.jpg" 
         titre="Fleurs de Bach" 
