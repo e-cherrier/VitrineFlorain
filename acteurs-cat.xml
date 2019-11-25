@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 12 novembre 2019" 
-  sstitre="Mise à jour du 12 novembre 2019 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 25 novembre 2019" 
+  sstitre="Mise à jour du 25 novembre 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="du Sud de la Meurthe et Moselle" 
   slogan="La monnaie qui crée du lien!">
@@ -9,14 +9,26 @@
     image="defaut.jpg" 
     titre="" 
     bref="" 
-    desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations."
-    citation=""
+    desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+    citation="" 
     adresse="" 
     telephone="" 
     latitude="6." 
     longitude="48." />
   <categorie type="Se nourrir">
     <scat type="Épiceries">
+
+      <acteur date="25-11-2019" 
+        siteweb="facebook Proxi Tantonville" 
+        image="proxitantonville.jpg" 
+        titre="Proxi Tantonville" 
+        bref="Épicerie multiservices" 
+        desc="Superette de proximité avec des produits locaux, de l'épicerie et divers services (Retrait d'argent, Café, Relais PickUP...)." 
+        citation="" 
+        adresse="41 rue Tourtel Frères, Tantonville" 
+        telephone="03 83 55 19 88" 
+        latitude="6.140104" 
+        longitude="48.470098" />
       <acteur date="18-10-2019" 
         siteweb="" 
         image="defaut.jpg" 
@@ -1032,18 +1044,18 @@
         longitude="48.659872" 
         telephone="03 83 55 53 35" />
     </scat>
-  <acteur date="12-11-2019" 
-    siteweb="www.divertyloc.com" 
-    image="divertyloc.jpg" 
-    titre="Divertyloc" 
-    bref="Location de jeux en bois" 
-    desc="Pour tous vos événements, nous louons des jeux en bois, pour adultes et enfants. Le fondateur est un bricoleur passionné qui démarrât la société en fabriquant des jeux en bois avec des matériaux de récupération."
-    citation="Le Florain permet de créer du lien social et de la solidarité. Il nous propose de nous rencontrer et ainsi localement de recréer du lien. Il s’agit d’envisager un mieux vivre ensemble et d’affronter collectivement les défis de demain. nous sommes ravis d'y contribuer."
-    adresse="1 Allée Lounes Matoub, Nancy" 
-    telephone="06 24 11 94 95" 
-    latitude="6.159536" 
-    longitude="48.702323" />
     <scat type="Se cultiver, se divertir, se détendre">
+      <acteur date="12-11-2019" 
+        siteweb="www.divertyloc.com" 
+        image="divertyloc.jpg" 
+        titre="Divertyloc" 
+        bref="Location de jeux en bois" 
+        desc="Pour tous vos événements, nous louons des jeux en bois, pour adultes et enfants. Le fondateur est un bricoleur passionné qui démarrât la société en fabriquant des jeux en bois avec des matériaux de récupération." 
+        citation="Le Florain permet de créer du lien social et de la solidarité. Il nous propose de nous rencontrer et ainsi localement de recréer du lien. Il s’agit d’envisager un mieux vivre ensemble et d’affronter collectivement les défis de demain. nous sommes ravis d'y contribuer." 
+        adresse="1 Allée Lounes Matoub, Nancy" 
+        telephone="06 24 11 94 95" 
+        latitude="6.159536" 
+        longitude="48.702323" />
       <acteur date="24-10-2019" 
         siteweb="facebook vininyoga" 
         image="vininyoga.jpg" 
@@ -1291,6 +1303,17 @@
   </categorie>
   <categorie type ="Prendre soin de soi">
     <scat>
+      <acteur_vide date="25-11-2019" 
+        siteweb="www.fleurs-de-bach.net" 
+        image="fleurs-de-bach.jpg" 
+        titre="Fleurs de Bach" 
+        bref="les Fleurs du Docteur Bach" 
+        desc="Afin de vous accompagner vers plus de mieux-être, lors d'un rendez-vous, je compose pour vous les Fleurs de Bach qui harmoniseront vos émotions négatives. Une thérapie simple, naturelle, sans toxicité ni accoutumance." 
+        citation="En totale adéquation avec ma philosophie de vie! Le Florain est pour moi l'occasion de me recentrer sur mes valeurs, de favoriser les échanges locaux et d'éviter tout ce qui touche à la mondialisation, être consom-acteur, puisque nous avons le choix. Le Docteur Bach lui-même aurait adhéré j'en suis sûre." 
+        adresse="41 Bis Rue Sainte Geneviève, Dommartemont" 
+        telephone="06 08 65 33 04" 
+        latitude="6.216563" 
+        longitude="48.714056" />
       <acteur date="22-09-2019" 
         siteweb="" 
         image="defaut.jpg" 
