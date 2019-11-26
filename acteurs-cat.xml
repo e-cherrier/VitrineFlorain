@@ -191,6 +191,17 @@
       </acteur>
     </scat>
     <scat type="Producteurs">
+      <acteur date="26-11-2019" 
+        siteweb="" 
+        image="aupichou.jpg" 
+        titre="Au Pichou" 
+        bref="Fruits et légumes biologiques" 
+        desc="Maraîchage diversifié et arboriculture BIO. Production d'une cinquantaine de légumes différents et de fruits en tous genres. Producteur pour l'Amap du PICHOU à Amance." 
+        citation="" 
+        adresse="29 rue Saint Jean, Amance" 
+        telephone="y.doridant@orange.fr" 
+        latitude="6.279895" 
+        longitude="48.753712" />
       <acteur date="07-11-2019" 
         siteweb="" 
         image="ambroisie.jpg" 
@@ -500,8 +511,10 @@
         bref="Fromagère" 
         type="Alimentation" 
         desc="Fromagère - Tommes - Munsters. Marianne est présente au marché de Maxéville le jeudi de 16h à 19h et au marché de Vandoeuvre le vendredi de 16h à 20h" 
-        adresse="Ambulante sur marchés" 
-        defi="Faire dans le local / écolo pour les outils de communication" />
+        adresse="Saint-Étienne-lès-Remiremont" 
+        defi="Faire dans le local / écolo pour les outils de communication" 
+        latitude="6.621513" 
+        longitude="47.99621" />
       <acteur siteweb="www.fontenellebio.fr" 
         marche="vandoeuvre" 
         image="fontenelle.jpg" 
@@ -662,7 +675,9 @@
         bref="Cuisine locale et de saison" 
         desc="Restaurant - Camion mobile avec terrasse, sur place ou à emporter, développant le service traiteur pour des évènements personnels, professionnels, rassemblements... Possibilité de livraison à domicile sous certaines conditions. Devis personnalisé en fonction du budget Cuisine audacieuse et traditionnelle à base de produits frais, locaux et de saison." 
         adresse="9, rue de willermont 54540 Pexonne" 
-        telephone="06 20 08 62 66" />
+        telephone="06 20 08 62 66" 
+        latitude="6.868491" 
+        longitude="48.484537" />
       <acteur anniv="oui" 
         fete="oui" 
         siteweb="www.fermiersdici.com" 
@@ -1364,7 +1379,9 @@
         titre="Valérie Rambour" 
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
         adresse="57 rue Maréchal Foch, 54130 Saint-Max" 
-        telephone="06 71 95 17 99" />
+        telephone="06 71 95 17 99" 
+        latitude="6.211419" 
+        longitude="48.704404" />
       <acteur date="06-08-2019" 
         siteweb="hatha-yogarmonie.blogspot.com" 
         image="hathayogarmonie.jpg" 
@@ -1516,10 +1533,10 @@
         message="" />
       <acteur date="18-10-2019" 
         siteweb="" 
-        image="defaut.jpg" 
+        image="pharmaciestpierre.jpg" 
         titre="Pharmacie St Pierre" 
         bref="Pharmacie" 
-        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        desc="Pharmacie d'officine classique mais avec une spécialisation dans l'orthopédie, phytothérapie et aromathérapie car diplômé de la faculté de Nancy pour l'ensemble de ces DU. Spécialiste Tire Lait et tout ce qui concerne la femme enceinte." 
         adresse="rue de lattre de Tassigny, Nancy" 
         telephone="" 
         latitude="6.115421" 
