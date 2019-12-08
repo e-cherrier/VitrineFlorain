@@ -1482,18 +1482,22 @@ if (isset($_GET['output'])) {
 $no_footer = true;
 $no_header = true;
 $a = null;
+$filename = 'Annuaire du Florain';
+if ($edition !== 'toutes') {
+    $filename = $filename.' - Edition de '.utf8_decode($edition);
+}
 if ($type == 'Poche') {
     $a = new AnnuairePoche();
-    $filename = 'Annuaire du Florain - format poche.pdf';
+    $filename = $filename.' - format poche.pdf';
 } elseif ($type == 'Livret') {
     $a = new AnnuaireLivret();
-    $filename = 'Annuaire du Florain - format livret.pdf';
+    $filename = $filename.' - format livret.pdf';
 } elseif ($type == 'Compact') {
     $a = new AnnuaireCompact();
-    $filename = 'Annuaire du Florain - format compact.pdf';
+    $filename = $filename.' - format compact.pdf';
 } else {
     $a = new AnnuaireFiches();
-    $filename = 'Annuaire du Florain - format fiches.pdf';
+    $filename = $filename.' - format fiches.pdf';
 }
 
 $a->AddFont('Steelfish', '', 'steelfishrg.php');
