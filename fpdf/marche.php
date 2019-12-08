@@ -92,7 +92,7 @@ class ExposantPoche extends Exposant
         $this->separator($col, $deb_i);
 
         $this->Entete();
-        $this->acteur_->setAttribute('displayed', 'true');
+        $this->a->setDisplayed($this->acteur_);
 
         if ($col == 0) {
             $this->a->bas_col0 = $this->a->GetY();
@@ -167,7 +167,7 @@ class ExposantCompact extends Exposant
         //$this->separator(0, 0);
 
         $this->Entete();
-        $this->acteur_->setAttribute('displayed', 'true');
+        $this->a->setDisplayed($this->acteur_);
 
         $this->a->bas_col0 = $this->a->GetY();
     }
@@ -197,7 +197,7 @@ class ExposantLivret extends Exposant
         $this->a->PrintText($bref, 90);
         $this->a->Ln();
 
-        $this->acteur_->setAttribute('displayed', 'true');
+        $this->a->setDisplayed($this->acteur_);
 
         if ($col == 0) {
             $this->a->bas_col0 = $this->a->GetY();

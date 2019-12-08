@@ -35,7 +35,7 @@ $towns = array(
     new Ville('Toul', 5.891387, 48.675334),
     new Ville('Pont-à-Mousson', 6.053787, 48.902677, 25),
     new Ville('Lunéville', 6.495079, 48.591822, 30, 'Poche', 'L'),
-    new Ville('Tezey-St-Martin', 6.294456, 48.900973, 30, 'Poche', 'B'),
+    new Ville('Tezey-St-Martin', 6.294456, 48.900973, 30, 'Poche', 'BL'),
     new Ville('Colombey-les-Belles', 5.897124, 48.528123),
     new Ville('Vézelise', 6.092136, 48.481914, 30, 'Poche', 'B'),
     //new Ville('Commercy', 5.591207, 48.762711),
@@ -45,6 +45,8 @@ $towns = array(
 );
 $blank = new Ville('blank', 6, 48);
 $blank->setColor([1, 1, 1]);
+
+$toutes = new Ville('', 6.180794, 48.692442, 3000, 'Compact');
 
 function findTown($name)
 {
@@ -265,13 +267,89 @@ class Annuaire extends FPDF
         return count($this->entries_to_display($acteurs));
     }
 
+    /* when printing all local edition, collect actors that has not been included
+     * and print an additionnal page with them.
+     */
+    public function PrintOrphans($x)
+    {
+        $orphans = array();
+        $acteurs = $x->getElementsByTagName('acteur');
+        $nb_acteurs = $acteurs->length;
+        for ($a = 0; $a < $nb_acteurs; ++$a) {
+            $acteur = $acteurs[$a];
+            if (!$acteur->hasAttribute('editions')) {
+                $name = utf8_decode($acteur->getAttribute('titre'));
+                $orphans[] = $name;
+            }
+        }
+
+        if (count($orphans) === 0) {
+            return;
+        }
+        $this->AddPage();
+
+        $this->resetColumn();
+
+        $this->SetFont('Futura', 'B', 18);
+        $this->SetFillColor(255, 255, 255);
+
+        $this->SetTextColor(112, 112, 111);
+        $this->Cell(0, 6, 'Voici les acteurs non couverts par un annuaire local:', 'B', 1, 'L', true);
+        $this->Ln(3);
+
+        $this->SetFont('Futura', 'B', 12);
+        foreach ($orphans as  $name) {
+            $this->Cell(0, 6, $name, '', 1);
+        }
+    }
+
+    /* factorize the set display status, and store the displayed edition as well
+    */
+    public function setDisplayed($acteur)
+    {
+        $acteur->setAttribute('displayed', 'true');
+
+        $editions = $acteur->getAttribute('editions').' '.$this->edition;
+
+        $acteur->setAttribute('editions', $editions);
+    }
+
+    /* reset working attribute tobe ready for the next edition 
+    */
+    public function reset_attributes($x)
+    {
+        $acteurs = $x->getElementsByTagName('acteur');
+        $nb_acteurs = $acteurs->length;
+        for ($a = 0; $a < $nb_acteurs; ++$a) {
+            $acteur = $acteurs[$a];
+            $acteur->removeAttribute('tooFar');
+            $acteur->removeAttribute('displayed');
+        }
+
+        $marches = $x->getElementsByTagName('scat');
+        $nb_marches = $marches->length;
+        for ($m = 0; $m < $nb_marches; ++$m) {
+            $marche = $marches[$m];
+            $marche->removeAttribute('tooFar');
+            $marche->removeAttribute('displayed');
+        }
+
+        $this->subPage = 0;
+
+        global $blank;
+        global $towns;
+
+        foreach ($towns as $town) {
+            $town->nb = 0;
+        }
+
+        $blank->nb = 0;
+    }
+
     public function entries_to_display($list)
     {
-        global $km;
-        global $latRef;
-        global $lonRef;
         $nb = $list->length;
-        if ($km < 0) {
+        if ($this->km < 0) {
             return $list;
         }
 
@@ -291,12 +369,17 @@ class Annuaire extends FPDF
                 continue;
             }
 
-            $lon = $acteur->getAttribute('longitude');
-            $lat = $acteur->getAttribute('latitude');
-            $dist = $this->calcCrow($lat, $lon, $latRef, $lonRef);
-            if ($dist > $km) {
-                $acteur->setAttribute('tooFar', 'really');
-                continue;
+            // edition is set to 'toutes' for actors too far for any edition
+            // so they appears on every one!
+            $edition = $acteur->getAttribute('edition');
+            if ($edition !== 'toutes') {
+                $lon = $acteur->getAttribute('longitude');
+                $lat = $acteur->getAttribute('latitude');
+                $dist = $this->calcCrow($lat, $lon, $this->latRef, $this->lonRef);
+                if ($dist > $this->km) {
+                    $acteur->setAttribute('tooFar', 'really');
+                    continue;
+                }
             }
             $acteurs[$count] = $acteur;
             ++$count;
@@ -355,10 +438,6 @@ class Annuaire extends FPDF
      */
     public function printMapColors()
     {
-        global $km;
-        global $latRef;
-        global $lonRef;
-
         $this->SetLineWidth(0);
         $lc = .5;
         $ox = $this->GetX();
@@ -368,9 +447,14 @@ class Annuaire extends FPDF
         $middleLat = 6.180794;
         $middleLon = 48.692442;
 
-        if ($km > 0) {
-            $middleLat = $latRef;
-            $middleLon = $lonRef;
+        if ($this->km > 0) {
+            $middleLat = $this->latRef;
+            $middleLon = $this->lonRef;
+        }
+
+        global $towns;
+        foreach ($towns as $town) {
+            $town->x = null;
         }
 
         $y = $oy;
@@ -385,12 +469,14 @@ class Annuaire extends FPDF
                     $savedX = $this->GetX();
                     $savedY = $this->GetY();
                     $xt = max($x - 5, 0);
-                    if ($town->pos == 'B') {
-                        $yt = $y + .5;
-                    } else {
+                    if (strpos($town->pos, 'B') === false) {
                         $yt = $y - 3;
+                    } else {
+                        $yt = $y + .5;
                     }
-                    if ($town->pos == 'L') {
+                    if (strpos($town->pos, 'L') === false) {
+                        $xt = $xt - 0;
+                    } else {
                         $xt = $xt - 3;
                     }
                     $town->SetXY($xt, $yt);
@@ -416,7 +502,6 @@ class Annuaire extends FPDF
             $y = $y + $lc - .1;
         }
 
-        global $towns;
         foreach ($towns as $town) {
             if (!$town->x) {
                 continue;
@@ -462,9 +547,6 @@ class Annuaire extends FPDF
         global $townArea;
         global $towns;
         global $blank;
-        global $km;
-        global $latRef;
-        global $lonRef;
 
         $ret = array();
         $ret['black'] = false;
@@ -486,9 +568,9 @@ class Annuaire extends FPDF
             }
         }
 
-        if ($km > 0) {
-            $distRef = $this->calcCrow($lat, $lon, $latRef, $lonRef);
-            if ($distRef > $km) {
+        if ($this->km > 0) {
+            $distRef = $this->calcCrow($lat, $lon, $this->latRef, $this->lonRef);
+            if ($distRef > $this->km) {
                 $ret['town'] = $blank;
 
                 return $ret;
@@ -550,7 +632,7 @@ class AnnuaireFiches extends Annuaire
     public $cellHeight = 12;
     public $marginLeft = 1; // 1 if there is a margin at left (and right) 0 if no margin.
 
-    public function PrintAnnuaire($x)
+    public function PrintAnnuaire($x, $town)
     {
         global $no_footer;
         global $no_header;
@@ -560,7 +642,13 @@ class AnnuaireFiches extends Annuaire
         $no_footer = true;
         $no_header = true;
 
+        $this->edition = $town->name;
+        $this->km = $town->km;
+        $this->latRef = $town->lat;
+        $this->lonRef = $town->lon;
+
         $this->PrintAllCategories($x);
+        $this->reset_attributes($x);
     }
 
     public function PrintAllCategories($x)
@@ -702,10 +790,15 @@ class AnnuaireLivret extends Annuaire
         $this->Cell($w, 20, 'contact@florain.fr');
     }
 
-    public function PrintAnnuaire($x)
+    public function PrintAnnuaire($x, $town)
     {
         global $no_footer;
         global $no_header;
+
+        $this->edition = $town->name;
+        $this->km = $town->km;
+        $this->latRef = $town->lat;
+        $this->lonRef = $town->lon;
 
         $this->doc = $x;
         $this->AddPage();
@@ -756,6 +849,7 @@ class AnnuaireLivret extends Annuaire
         $this->AddPage();
         $no_footer = true;
         $this->PrintCharte();
+        $this->reset_attributes($x);
     }
 
     public function PrintAllCategories($x)
@@ -1009,26 +1103,34 @@ class AnnuairePoche extends Annuaire
             $this->SetLineWidth(0);
             $x1 = $margin - $this->colMargin;
             $x2 = $x1 + $this->GetSubPageWidth() + $this->colMargin;
-            $y1 = $this->GetPageHeight() * .25;
-            $y2 = $y1 - 30;
+            $y1 = $this->GetPageHeight() * .15;
+            $y2 = $y1 - 10;
             $yh = 20;
             $this->Polygon(array($x1, $y1, $x1, $y1 - $yh, $x2, $y2 - $yh, $x2, $y2), 'FD');
             $this->SetAlpha(1);
+            $this->SetDrawColor(0, 0, 0);
 
             $fsize = 42;
             $this->SetFont('Steelfish', '', 42);
-            $texte = "Edition de ".utf8_decode($edition);
-            $xmarge = ($this->GetSubPageWidth()-$this->GetStringWidth($texte)*.8)/2;
-            if( $xmarge < 1 ) {
+            $texte = 'Edition de '.utf8_decode($this->edition);
+            $xmarge = ($this->GetSubPageWidth() - $this->GetStringWidth($texte) * .9) / 2;
+            if ($xmarge < 6) {
                 // case of PAM
                 $fsize = 30;
                 $this->SetFont('Steelfish', '', $fsize);
-                $xmarge = ($this->GetSubPageWidth()-$this->GetStringWidth($texte)*.8)/2;
+                $xmarge = ($this->GetSubPageWidth() - $this->GetStringWidth($texte) * .9) / 2;
             }
-            
-            $this->RotatedText( $x1+$xmarge, $y1-$xmarge/1.8 - (42-$fsize)/2, $texte, 21.8 );
-        }
 
+            $this->RotatedText($x1 + $xmarge, $y1 - $xmarge / 1.8 - (42 - $fsize) / 2, $texte, 8);
+
+            $texte = utf8_decode('à moins de '.$this->km.' km de '.$this->edition);
+            $y1 = $y1 + 5;
+            $this->SetFont('Futura', '', 12);
+
+            $xmarge = ($this->GetSubPageWidth() - $this->GetStringWidth($texte) * .9) / 2;
+
+            $this->RotatedText($x1 + $xmarge, $y1 - $xmarge / 1.8 - (42 - $fsize) / 2, $texte, 8);
+        }
 
         $this->SetFont('Steelfish', '', 48);
 
@@ -1069,6 +1171,7 @@ class AnnuairePoche extends Annuaire
         $w = $this->GetStringWidth('www.florain.fr') + 6;
         $this->SetX($margin);
         $this->PrintName('www.florain.fr', $cellwidth, 10, 'C');
+        $this->ln();
         // mail
         $this->SetFont('Futura', 'B', 14);
         $w = $this->GetStringWidth('contact@florain.fr') + 6;
@@ -1078,7 +1181,7 @@ class AnnuairePoche extends Annuaire
 
         $this->SetFont('Futura', 'B', 10);
         $this->SetXY($margin + 5, $this->GetPageHeight() - 20);
-        $this->MultiCell($cellwidth - 10, $this->cellHeight, $sstitle, 0, 'C');
+        $this->MultiCell($cellwidth - 10, $this->cellHeight + 1, $sstitle, 0, 'C');
     }
 
     public function PrintCharte()
@@ -1095,7 +1198,7 @@ class AnnuairePoche extends Annuaire
         // green bg
         $this->SetFillColor(204, 220, 62);
         $this->SetTextColor(112, 112, 111);
-        $this->Rect($margin + $this->GetColumnWidth() * 1.65, 0, $this->GetColumnWidth() * .39, $this->GetPageHeight(), 'F');
+        $this->Rect($margin + $this->GetColumnWidth() * 0.69, 0, $this->GetColumnWidth() * .30, $this->GetPageHeight(), 'F');
 
         // charte
         $this->SetY(($curY + $maxY) / 2);
@@ -1117,17 +1220,99 @@ class AnnuairePoche extends Annuaire
         }
     }
 
+    public function addParagraphe($titre, $texte)
+    {
+        $this->SetX($this->lMargin);
+        $this->PrintName(utf8_decode($titre), 100, 16, 'L');
+        $this->ln(2);
+
+        $this->SetX($this->lMargin + 10);
+        $this->PrintText(utf8_decode($texte), 100, 12, 'L');
+        $this->ln(4);
+    }
+
+    /* Argumentaire sur deux colonnes
+    */
+    public function displayEngagezVous()
+    {
+        $margin = $this->GetX();
+        $l = $this->GetColumnWidth() * .39;
+        // green bg
+        $this->SetFillColor(204, 220, 62);
+        $this->Rect($margin, 0, $l, $this->GetPageHeight(), 'F');
+        $this->SetAlpha(0.6);
+        $this->SetDrawColor(255, 204, 0);
+        $this->SetLineWidth(2);
+        $this->Rect($margin + $l + 1, 1, $this->GetSubPageWidth() * 2 - $l, $this->GetPageHeight() - 2, 'D');
+        $this->SetAlpha(1);
+        $this->SetTextColor(255, 112, 111);
+
+        $this->SetLeftMargin($margin + 35);
+
+        $availableWidth = $this->GetSubPageWidth() * 2 - $l - 1;
+
+        $this->ln(14);
+        $this->PrintName(utf8_decode('Vous adhérez aux valeurs du Florain ?'), $availableWidth, 16, 'L', 'steelfish', '');
+        $this->ln(4);
+        $this->PrintName(utf8_decode('Vous voulez dynamiser votre Territoire ?'), $availableWidth, 18, 'L', 'steelfish', '');
+        $this->ln(10);
+        $this->PrintName(utf8_decode('Participez à son développement:'), $availableWidth, 24, 'L', 'steelfish', '');
+        $this->ln(12);
+        $this->PrintName(utf8_decode('rejoignez ou créez votre groupe local !'), $availableWidth, 30, 'C', 'steelfish', '');
+        $this->ln(15);
+
+        $this->SetLeftMargin($margin + 25);
+        $this->ln();
+        $SVGHeight = $this->cellHeight;
+        $this->cellHeight = 6;
+        $this->addParagraphe(
+            'Démarcher les professionnels pour agrandir le réseau:',
+            'Aller en binômes à la rencontre des acteurs du territoire.', $availableWidth
+        );
+        $this->addParagraphe(
+            'Organiser les évènements:',
+            "Tout le long de l'année, assurer la participation du Florain aux manifestations du territoire, pour en faire la promotion.", $availableWidth
+        );
+        $this->addParagraphe(
+            'Travailler sur les outils de communication:',
+            "Tracts, Réseaux Sociaux, Site internet, Lettre d'infos. Nul besoin d'être rédacteur ou graphiste, lancez vous!", $availableWidth
+        );
+        $this->addParagraphe(
+            'Participer occasionnellement:',
+            'Répondre selon ses disponibilités aux différents appels à bénévoles - distributions de tracts - tenues de stand.', $availableWidth
+        );
+        $this->cellHeight = $SVGHeight;
+
+        $this->SetY($this->GetPageHeight() - 20);
+        // site web
+        $this->SetX($margin + 15);
+        $this->PrintName('www.florain.fr', $availableWidth, 12, 'C');
+        // mail
+        $this->ln();
+        $this->SetX($margin + 15);
+        $this->PrintName('contact@florain.fr', $availableWidth, 12, 'C');
+
+        $this->AddSubPage();
+    }
+
     // Poche
-    public function PrintAnnuaire($x)
+    public function PrintAnnuaire($x, $town)
     {
         $this->doc = $x;
+
+        $this->edition = $town->nom;
+        $this->km = $town->km;
+        $this->latRef = $town->lat;
+        $this->lonRef = $town->lon;
+
         $this->AddPage('L');
 
         $this->PrintAllCategories($x);
 
+        $charteDisplayed = false;
         $legendDisplayed = false;
-
-        if ($this->PageNo() == 1) {
+        $blankNewPage = false;
+        if ($this->PageNo() % 2 == 1) {
             // still place for legend ?
             if ($this->getY() < $this->GetPageheight() - 30) {
                 $legendDisplayed = true;
@@ -1141,23 +1326,34 @@ class AnnuairePoche extends Annuaire
             // force a new page
             $this->subPage = $this->nbSubPages - 1;
             $this->AddSubPage();
+            $blankNewPage = true;
         }
 
         if ($this->subPage == 0) {
-            $this->AddSubPage();
+            if ($blankNewPage) {
+                $this->SetCol(0);
+                $this->PrintCharte();
+                $this->AddSubPage();
+                $this->displayEngagezVous();
+                $charteDisplayed = true;
+            } else {
+                $this->AddSubPage();
+            }
         }
 
         // print the charte if enough space
-        if ($this->subPage == 1) {
-            $this->AddSubPage();
-            $this->SetCol(0);
-            $this->PrintCharte();
-        }
-        if ($this->subPage == 2) {
-            $cstart = $this->GetPageHeight() * .35;
-            if ($this->GetY() < $cstart) {
+        if (!$charteDisplayed) {
+            if ($this->subPage == 1) {
+                $this->AddSubPage();
                 $this->SetCol(0);
                 $this->PrintCharte();
+            }
+            if ($this->subPage == 2) {
+                $cstart = $this->GetPageHeight() * .35;
+                if ($this->GetY() < $cstart) {
+                    $this->SetCol(0);
+                    $this->PrintCharte();
+                }
             }
         }
 
@@ -1171,6 +1367,7 @@ class AnnuairePoche extends Annuaire
         $this->AddSubPage();
         $this->SetCol(0);
         $this->PrintCouverture();
+        $this->reset_attributes($x);
     }
 
     public function PrintAllCategories($x)
@@ -1266,29 +1463,15 @@ $type = 'Livret';
 $edition = 'globale';
 $output = 'D';
 
-$latRef = -1;
-$lonRef = -1;
-$km = -1;
+$town = $toutes;
 if (isset($_GET['edition'])) {
     // if edition parameter is set: ignore type and manual geolocalisation
     $edition = $_GET['edition'];
     $town = findTown($edition);
     $type = $town->type;
-    $km = $town->km;
-    $latRef = $town->lat;
-    $lonRef = $town->lon;
 } else {
     if (isset($_GET['type'])) {
         $type = $_GET['type'];
-    }
-    if (
-        isset($_GET['km']) &&
-        isset($_GET['lat']) &&
-        isset($_GET['lon'])
-    ) {
-        $km = $_GET['km'];
-        $latRef = $_GET['lat'];
-        $lonRef = $_GET['lon'];
     }
 }
 
@@ -1333,7 +1516,20 @@ $slogan = utf8_decode($x->getAttribute('slogan'));
 $a->SetTitle($title);
 $a->SetAuthor('Le Florain');
 
-$a->PrintAnnuaire($x);
+if ($edition == 'toutes') {
+    $town = findTown('Nancy');
+    $a->PrintAnnuaire($x, $town);
+    $town = findTown('Toul');
+    $a->PrintAnnuaire($x, $town);
+    $town = findTown('Pont-à-Mousson');
+    $a->PrintAnnuaire($x, $town);
+    $town = findTown('Lunéville');
+    $a->PrintAnnuaire($x, $town);
+
+    $a->PrintOrphans($x);
+} else {
+    $a->PrintAnnuaire($x, $town);
+}
 
 $a->SetDisplayMode('fullpage', 'two');
 $a->Output($output, $filename);
