@@ -314,7 +314,7 @@ class Annuaire extends FPDF
         $acteur->setAttribute('editions', $editions);
     }
 
-    /* reset working attribute tobe ready for the next edition 
+    /* reset working attribute tobe ready for the next edition
     */
     public function reset_attributes($x)
     {
@@ -1198,7 +1198,7 @@ class AnnuairePoche extends Annuaire
         // green bg
         $this->SetFillColor(204, 220, 62);
         $this->SetTextColor(112, 112, 111);
-        $this->Rect($margin + $this->GetColumnWidth() * 0.69, 0, $this->GetColumnWidth() * .30, $this->GetPageHeight(), 'F');
+        $this->Rect($margin + $this->GetSubPageWidth() * 0.69, 0, $this->GetSubPageWidth() * .30, $this->GetPageHeight(), 'F');
 
         // charte
         $this->SetY(($curY + $maxY) / 2);

@@ -36,7 +36,14 @@ class Header
                 <li><a href="acteurs.php">Où les dépenser?</a>
                   <ul>
                     <li> <a href="acteurs.php">la liste détaillée</a></li>
-                    <li> <a target="_blank" href="annuaire.php?type=Compact">l'annuaire de poche</a></li>
+                    <li> <a>les annuaires de poche</a>
+                      <ul>
+                        <li> <a target="_blank" href="annuaire.php?edition=Lunéville">Edition de Lunéville</a></li>
+                        <li> <a target="_blank" href="annuaire.php?edition=Nancy">Edition de Nancy</a></li>
+                        <li> <a target="_blank" href="annuaire.php?edition=Pont-à-Mousson">Edition de Pont-à-Mousson</a></li>
+                        <li> <a target="_blank" href="annuaire.php?edition=Toul">Edition de Toul</a></li>
+                      </ul>
+                    </li>
                     <li> <a target="_blank" href="annuaire.php?type=Livret">l'annuaire en livret</a></li>
                     <li> <a href="carte.php">la carte</a></li>
                   </ul>

@@ -3960,6 +3960,15 @@ text-decoration: none; }
 		padding-top: 0;
 		background-color: #fff;
 	}
+	#reedition {
+		background: url("../../images/ImprimerieFlorain.jpg");
+		background-size: auto 80%;
+		background-attachment: fixed;
+		background-position: center left ;
+		background-repeat: no-repeat;
+		padding-top: 10;
+		background-color: #d7da23;
+	}
 	#readhesion {
 		background: url("../../images/mur.jpg");
 		background-size: auto 80%;

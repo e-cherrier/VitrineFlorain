@@ -42,6 +42,21 @@ $header = new Header();
 $header->display();
 ?>
 
+<section id="reedition" class="main style2 right red fullscreen">
+        <div class="content box style1">
+          <header>
+          <h2>DEUXIÈME IMPRESSION DE FLORAINS !</h2>
+          <h4>Nous atteignons près de 100 000 Florains en circulation ... pour continuer à grandir, il nous faut réimprimer !</h4>
+          </header>
+          <p>Réimprimer, ça coûte des sous ! Entre le salaire de notre super coordinatrice, le loyer, et nos autres frais de fonctionnement, on arrive tout juste à équilibrer notre budget.</p>
+          <p>Vous nous voyez venir ;) ? Si des dizaines de petites souris pouvaient se mobiliser et apporter leur pièce à l’édifice, histoire de pouvoir sortir 100 000 Florains tout frais de la presse à billets, ce serait génial.</p>
+          <p>Pour plus d'info, rendez vous sur la plateforme <a href="https://www.zeste.coop/fr/faire-grandir-le-florain">Zeste</a><p>
+        </div>
+        <footer>
+          <a href="#accueil" class="button style2 down anchored">More</a>
+        </footer>
+      </section>
+
       <section id="accueil" class="main styleAcceuil right dark fullscreen">
         <div class="content box style1">
           <br/><h2> Les derniers acteurs agréés </h2>
@@ -173,14 +188,14 @@ $header->display();
 
 <h4>Un réseau de plus de 180 professionnels,</h4>
 <h4>12 comptoirs de change,</h4>
-<h4>90.000 Florains en circulation,</h4>
+<h4>95.000 Florains en circulation,</h4>
 <h4>des groupes locaux à Toul et Lunéville.</h4>
 <br/>
 <h3>Vous aussi, entrez dans la dynamique !</h3>
 <br/>
       <footer>
 	<ul class="style2">
-  <li>  <a href="#readhesion" class="button style2">ré-adhésion</a></li>
+  <li>  <a href="#readhesion" class="button style2">(ré)adhésion</a></li>
 	 <li>  <a href="http://beta.monnaielocalenancy.fr/que-puis-je-faire/" class="button style2">Bénévolat</a></li>
 	 <li>  <a href="#contact" class="button style2">Contact Pros</a></li>
 	 <li>  <a href="http://beta.monnaielocalenancy.fr/lettredinformations" class="button style2">Recevoir les info</a></li>
@@ -270,7 +285,7 @@ $header->display();
           <header>
           <h2>Campagne de ré-adhésion 2019.</h2>
           </header>
-          <p>Qui dit nouvelle année dit ré-adhésion ! Nous vous invitons donc, si vous n'avez pas encore votre carte "2019", à vous rendre dans un <a href="http://www.monnaielocalenancy.fr/change.php">bureau de change</a> pour renouveler votre adhésion.<br/><b class="dark">&nbsp;NOUVEAU!&nbsp;</b> Vous pouvez egalement le faire en ligne en suivant <a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs">ce lien!</a></p>
+          <p>Qui dit nouvelle année dit ré-adhésion ! Nous vous invitons donc, si vous n'avez pas encore votre carte "2019", à vous rendre dans un <a href="http://www.monnaielocalenancy.fr/change.php">bureau de change</a> pour renouveler votre adhésion.<br/><b class="dark">&nbsp;NOUVEAU!&nbsp;</b> Vous pouvez également le faire en ligne en suivant <a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs">ce lien!</a></p>
           <p>Comme en 2018, nous avons souhaité maintenir un montant minimum d'adhésion relativement modeste (5 €) pour permettre à chacun et chacune de s'inscrire dans la dynamique du Florain. Si vous en avez la possibilité et l'envie, n'hésitez surtout pas à adhérer pour un montant supérieur (maximum 50 €), les adhésions étant la principale source de financement de l'association !</p>
           <h4>le 1 % associatif</h4>
           <p>Nouveauté pour cette année, vous serez invité lors de votre adhésion à <a href="http://www.monnaielocalenancy.fr/doc/UnPourCentAsso.pdf">choisir une association</a> qui recevra en fin d'année l'équivalent de 1% de ce que vous avez changé (des conversions Euros-Florains que vous aurez effectuées en 2019), sans que cela vous coûte quoi que ce soit. Tout est expliqué en détail <a href="http://beta.monnaielocalenancy.fr/2019/01/02/le-1-associatif-une-nouveaute-pour-2019">sur cet article.</a></p>
@@ -550,11 +565,15 @@ while(x=eval(x));
 	 			/* On cree l'element html a la fin de la page 
 				$('body').append('<a class="crowdf nav fa-angle-up nav scrollTo"> <p><b><font size="+2">Assemblée générale</font></b><br/> <font size="+1"><b> le 3 septembre 2017</b><br/> 15h à la MJC des 3 maisons<br> Nouveaux statuts,<br> projet de gouvernance...<br> Soyons nombreux,<br> parlez en autour de vous.<br> <b><font size="+2">Fête de lancement</font><br> le 7 Octobre 2017</b><br> 14h - minuit<br> <i><font size="-1">Le lieu sera communiqué<br> ultérieurement</font></i><br> le Florain sera émis,<br> de nombreux partenaires<br> seront présents!</p> </a>');
 				$('body').append('<a class="phone ban_tel"> <b> <font size="+1"> <font size="+2"> Assemblée générale </font> le 3 septembre 2017 <br/> <font size="+2"> Fête de lancement </font> le 7 Octobre 2017 </font> </b> </a>');
-*/
+
 $('body').append('<footer class="crowdf"><p>&nbsp;Le Florain à besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/formulaires/1/widget" class="button styleDon">Je fais un don</a></footer>');
   $('body').append('<footer class="phone ban_tel"><p>&nbsp;Le Florain à besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/formulaires/1/widget" class="button styleDon">Je fais un don</a></footer>');
+*/
 
-	     	/* au scroll dans la fenetre */
+$('body').append('<footer class="crowdf"><p>&nbsp;Contribuez à faire grandir le Florain.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.zeste.coop/fr/faire-grandir-le-florain" class="button styleDon">Financement participatif sur Zeste</a></footer>');
+  $('body').append('<footer class="phone ban_tel"><p>&nbsp;Contribuez à faire grandir le Florain.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.zeste.coop/fr/faire-grandir-le-florain" class="button styleDon">Financement participatif sur Zeste</a></footer>');
+
+        /* au scroll dans la fenetre */
 			  $(window).scroll(function(){
 
 				var p = $( "section:last" );
