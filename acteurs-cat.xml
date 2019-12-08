@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 25 novembre 2019" 
-  sstitre="Mise à jour du 25 novembre 2019 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 8 decembre 2019" 
+  sstitre="Mise à jour du 8 decembre 2019 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="du Sud de la Meurthe et Moselle" 
   slogan="La monnaie qui crée du lien!">
@@ -418,7 +418,8 @@
         adresse="St Maurice sous les Côtes" 
         defi="Passer au ENR pour l'électricité" 
         latitude="5.677933" 
-        longitude="49.015167" />
+        longitude="49.015167" 
+        edition="toutes" />
       <acteur anniv="oui" 
         fete="oui" 
         siteweb="www.glaces-marchetto.fr" 
@@ -609,6 +610,17 @@
         longitude="48.650281" />
     </scat>
     <scat type="Paysans Boulangers et Boulangers">
+      <acteur date="07-12-2019" 
+        siteweb="regainpainsaulevain.fr" 
+        image="regain.jpg" 
+        titre="Regain - Pains au levain" 
+        bref=" Boulangerie, farine locale, fermentation longue" 
+        desc="boulangerie artisanale qui réalise des pains au levain et des brioches. Nous travaillons avec des farines de meules issues du Moulin d'Hénaménil (54). Les blés qui servent à réaliser les farines sont issues de l'agriculture de conservation des sols. Cette agriculture repose sur trois piliers: Rotation longue - Couvert permanent sur le sols - Non-labour" 
+        citation="" 
+        adresse="61 boulevard Emile Zola, Laxou" 
+        telephone="06 48 67 25 51" 
+        latitude="6.156101" 
+        longitude="48.682232" />
       <acteur date="05-07-2019" 
         siteweb="www.lamichetranquille.fr" 
         image="lamichetranquille.jpg" 
@@ -677,7 +689,8 @@
         adresse="9, rue de willermont 54540 Pexonne" 
         telephone="06 20 08 62 66" 
         latitude="6.868491" 
-        longitude="48.484537" />
+        longitude="48.484537" 
+        edition="toutes"/>
       <acteur anniv="oui" 
         fete="oui" 
         siteweb="www.fermiersdici.com" 
@@ -841,7 +854,7 @@
         image="aubergedufort.jpg" 
         titre="L'Auberge du Fort" 
         bref="Hébergement, restauration" 
-        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        desc="L'Auberge du Fort, un restaurant panoramique situé à 420 m d'altitude avec une vue imprenable sur le Saintois. Notre chef propose des menus élaborés à partir de produits frais et de saison." 
         adresse="Fort Pélissier, 54550 Bainville sur Madon" 
         telephone="03 83 25 07 07" 
         latitude="6.090545" 
@@ -1116,10 +1129,10 @@
         longitude="48.684454"/>
       <acteur date="19-10-2019" 
         siteweb="" 
-        image="defaut.jpg" 
-        titre="Fort Aventure" 
+        image="fortpelissier.jpg" 
+        titre="Fort Pélissier" 
         bref="Parc de loisirs" 
-        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        desc="Le Fort Pélissier est un complexe de loisirs et de détente situé à 15 min de Nancy à Bainville-sur-madon réalisé entièrement dans un fort du XIXe siècle !" 
         adresse="Fort Pélissier, 54550 Bainville sur Madon" 
         telephone="03 83 25 07 07" 
         latitude="6.090545" 
@@ -1272,9 +1285,7 @@
           t="10h00 - 18h00"/>
       </acteur>
     </scat>
-
     <scat type ="Tourisme, Vacances, WE">
-
       <acteur date="02-10-2019" 
         siteweb="" 
         image="defaut.jpg" 
@@ -1284,7 +1295,8 @@
         adresse="Viéville sous les Côtes, 55210 Vigneulles-lès-Hattonchâtel" 
         latitude="5.689531" 
         longitude="49.002565" 
-        telephone="" />
+        telephone="" 
+        edition="toutes" />
       <acteur date="10-5-2019" 
         siteweb="facebook Roulotte-de-la-loutre-noire" 
         image="giteenroulotte.jpg" 
@@ -1351,6 +1363,15 @@
   </categorie>
   <categorie type ="Prendre soin de soi">
     <scat>
+      <acteur date="29-11-2019" 
+        siteweb="" 
+        image="kabao.jpg" 
+        titre="KABAO" 
+        bref="baobab, karité, hibiscus" 
+        desc="Kabao, de l'Afrique à la Lorraine, vous propose des produits issus du fruit du baobab, de la fleur d'hibiscus, du karité. Tisanes, cosmétiques, compléments alimentaires dans le cadre d'un commerce équitable." 
+        citation="" 
+        adresse="marchés et manisfestations" 
+        telephone="06 44 07 63 76" />
       <acteur date="25-11-2019" 
         siteweb="www.fleurs-de-bach.net" 
         image="fleurs-de-bach.jpg" 
@@ -2208,7 +2229,7 @@
         image="man.jpg" 
         titre="Mouvement pour une alternative non violente" 
         type="Association" 
-        bref="Formations, soirées-débats, actions" 
+        bref="Formations, actions, soirées-débats" 
         desc="Le MAN Nancy organise et propose : - des soirées-débats sur des questions de société, - des interventions dans les quartiers, les établissements scolaires et la vie associative, - des actions de solidarité, - des formations à la régulation non-violente des conflits et à l'action non-violente, - un bimestriel « les Échos du MAN Nancy », - une newsletter mensuelle MAN Nancy Actions. Vous pouvez aussi nous retrouver sur Facebook" 
         adresse="man.nancy@nonviolence.fr" 
         defi="" />
