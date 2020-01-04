@@ -41,22 +41,6 @@ ol.carousel-indicators li.active {
 $header = new Header();
 $header->display();
 ?>
-
-<section id="reedition" class="main style2 right red fullscreen">
-        <div class="content box style1">
-          <header>
-          <h2>DEUXIÈME IMPRESSION DE FLORAINS !</h2>
-          <h4>Nous atteignons près de 100 000 Florains en circulation ... pour continuer à grandir, il nous faut réimprimer !</h4>
-          </header>
-          <p>Réimprimer, ça coûte des sous ! Entre le salaire de notre super coordinatrice, le loyer, et nos autres frais de fonctionnement, on arrive tout juste à équilibrer notre budget.</p>
-          <p>Vous nous voyez venir ;) ? Si des dizaines de petites souris pouvaient se mobiliser et apporter leur pièce à l’édifice, histoire de pouvoir sortir 100 000 Florains tout frais de la presse à billets, ce serait génial.</p>
-          <p>Pour plus d'info, rendez vous sur la plateforme <a href="https://www.zeste.coop/fr/faire-grandir-le-florain">Zeste</a><p>
-        </div>
-        <footer>
-          <a href="#accueil" class="button style2 down anchored">More</a>
-        </footer>
-      </section>
-
       <section id="accueil" class="main styleAcceuil right dark fullscreen">
         <div class="content box style1">
           <br/><h2> Les derniers acteurs agréés </h2>
@@ -76,12 +60,11 @@ $header->display();
 
       $today = new DateTime();
       $today->setTimestamp(time());
-      $oneMonthAgo = $today->sub(DateInterval::createFromDateString('1 month'));
+      $oneMonthAgo = $today->sub(DateInterval::createFromDateString('2 month'));
 
       for ($a = 0; $a < $nb_acteurs; ++$a) {
           $acteur = $acteurs[$a];
           $date = $acteur->getAttribute('date');
-          // $datetime2 = date_create('2009-10-13');
           $aggDate = DateTime::createFromFormat('d-m-Y', $date);
           if ($oneMonthAgo < $aggDate) {
               $nouveaux[$idx] = $acteur;
@@ -548,6 +531,7 @@ while(x=eval(x));
       <script src="assets/js/main.js"></script>
       <script src="assets/js/main2.js"></script>
       
+      <!--
     <script>
     	function hideMessage() {
           $('.crowdf').fadeOut(600);
@@ -616,6 +600,7 @@ $('body').append('<footer class="crowdf"><p>&nbsp;Contribuez à faire grandir le
 		});
 
 		</script>
+    -->
     <!--
      <script>
         var Images = new Array('images/accueil.png', 'images/cerclevertueux.png');
