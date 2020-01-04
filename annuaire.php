@@ -60,6 +60,54 @@ function findTown($name)
     return findTown('Nancy');
 }
 
+ /**
+  * Send a GET request using cURL.
+  *
+  * @param string $url     to request
+  * @param array  $get     values to send
+  * @param array  $options for cURL
+  *
+  * @return string
+  */
+ function curl_get($url, array $get = null, array $options = array())
+ {
+     $defaults = array(
+            CURLOPT_URL => $url,
+            CURLOPT_HEADER => 0,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT => 4,
+        );
+
+     $ch = curl_init();
+     curl_setopt_array($ch, ($options + $defaults));
+     if (!$result = curl_exec($ch)) {
+         return '<xml><town>chez moi!</town></xml>';
+     }
+     curl_close($ch);
+
+     return $result;
+ }
+
+ function getEditionName($lon, $lat)
+ {
+     $url = 'https://nominatim.openstreetmap.org/reverse?format=xml&lon='.$lat.'&lat='.$lon.'&zoom=18&addressdetails=1';
+
+     $xml = curl_get($url);
+
+     $xmlDoc = new DOMDocument();
+     $xmlDoc->loadXML($xml);
+     $x = $xmlDoc->documentElement;
+     $ville = $x->getElementsByTagName('town');
+     $ret = 'chez moi!';
+
+     $nb_v = $ville->length;
+     for ($v = 0; $v < $nb_v; ++$v) {
+         $ret = $ville[$v]->nodeValue;
+     }
+
+     return $ret;
+ }
+
 class Ville
 {
     public $nom;
@@ -691,7 +739,7 @@ class AnnuaireLivret extends Annuaire
         $this->Image('images/Logo_Imprim_Vert-3.png', $this->GetPageWidth() - 30, 6, 30);
     }
 
-    public function PrintCouverture()
+    public function PrintCouverture($town)
     {
         global $title;
         global $localisation;
@@ -803,7 +851,7 @@ class AnnuaireLivret extends Annuaire
         $this->doc = $x;
         $this->AddPage();
 
-        $this->PrintCouverture();
+        $this->PrintCouverture($town);
 
         // print header for the next page but no footer for the first page
         $no_footer = true;
@@ -1079,7 +1127,7 @@ class AnnuairePoche extends Annuaire
         $this->Image('images/Logo_Imprim_Vert-3.png', $margin + $w, $cur_y - 1, 15);
     }
 
-    public function PrintCouverture()
+    public function PrintCouverture($town)
     {
         global $sstitle;
         global $localisation;
@@ -1113,6 +1161,9 @@ class AnnuairePoche extends Annuaire
             $fsize = 42;
             $this->SetFont('Steelfish', '', 42);
             $texte = 'Edition de '.utf8_decode($this->edition);
+            if ($edition === 'perso') {
+                $texte = utf8_decode('Edition personnalisée');
+            }
             $xmarge = ($this->GetSubPageWidth() - $this->GetStringWidth($texte) * .9) / 2;
             if ($xmarge < 6) {
                 // case of PAM
@@ -1366,7 +1417,7 @@ class AnnuairePoche extends Annuaire
         // at last print the couverture
         $this->AddSubPage();
         $this->SetCol(0);
-        $this->PrintCouverture();
+        $this->PrintCouverture($town);
         $this->reset_attributes($x);
     }
 
@@ -1464,15 +1515,31 @@ $edition = 'globale';
 $output = 'D';
 
 $town = $toutes;
+if (isset($_GET['type'])) {
+    $type = $_GET['type'];
+}
 if (isset($_GET['edition'])) {
     // if edition parameter is set: ignore type and manual geolocalisation
     $edition = $_GET['edition'];
-    $town = findTown($edition);
-    $type = $town->type;
-} else {
-    if (isset($_GET['type'])) {
-        $type = $_GET['type'];
+    if ($edition === 'perso') {
+        $lat = 6.180794;
+        $lon = 48.692442;
+        $km = 30;
+        if (isset($_GET['lat'])) {
+            $lat = $_GET['lat'];
+        }
+        if (isset($_GET['lon'])) {
+            $lon = $_GET['lon'];
+        }
+        if (isset($_GET['km'])) {
+            $km = $_GET['km'];
+        }
+        $ville = getEditionName($lat, $lon);
+        $town = new Ville($ville, $lat, $lon, $km, $type);
+    } else {
+        $town = findTown($edition);
     }
+    $type = $town->type;
 }
 
 if (isset($_GET['output'])) {
