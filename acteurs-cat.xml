@@ -970,7 +970,7 @@
         <h l="le dimanche" 
           t="11h00 - 23h00"/>
       </acteur>
-      <acteur siteweb="Facebook Le-Royal-Royal" 
+      <acteur siteweb="facebook Le-Royal-Royal" 
         image="royalroyal.jpg" 
         titre="Le Royal Royal" 
         bref="Bar Restaurant" 
@@ -1599,6 +1599,29 @@
   </categorie>
   <categorie type ="S'habiller, s'équiper">
     <scat>
+      <acteur date="04-01-2020" 
+        siteweb="facebook Cordonnerie de la Forêt" 
+        marche="vandoeuvre" 
+        image="savelli.jpg" 
+        titre="Cordonnerie Savelli" 
+        bref="Artisan Cordonnier" 
+        desc="Artisan cordonnier depuis 2008, je répare tout type de chaussures, qu'elles soient de montages traditionnels ou plus modernes. J'interviens également sur tout type d'articles en cuir (maroquinerie, blouson, objets anciens..) pour des réparations, de l'entretien, voir des rénovations. Je peux aussi effectuer certaines fabrications à la demande. Retrouvez moi tous les mercredi, de 16h30 à 19h, à la Savonnerie Clandestine, 125 rue de Mon Désert et au marché de Vandoeuvre les vendredi de 16h à 19h." 
+        citation="" 
+        adresse="125 rue de Mon Désert, Nancy" 
+        telephone="07 83 98 52 61" 
+        latitude="6.169048" 
+        longitude="48.682685" />
+      <acteur date="04-01-2020" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Mille Et Une Perles" 
+        bref="perles fantaisies" 
+        desc="Boutique spécialisée dans les perles fantaisies, pierres naturelles, fils et accessoires pour la confection des bijoux et autres créations." 
+        citation="" 
+        adresse="29, Rue Saint Michel, Nancy" 
+        telephone="03 83 30 63 00" 
+        latitude="6.177522" 
+        longitude="48.69596" />
       <acteur date="13-10-2019" 
         siteweb="www.so-authentic.com" 
         image="soauthentic.jpg" 
@@ -1725,7 +1748,7 @@
         siteweb="www.savonnerieclandestine.com" 
         marche="vandoeuvre" 
         image="savClan.jpg" 
-        titre="La Savonnerie clandestine" 
+        titre="La Savonnerie Clandestine" 
         type="Sante" 
         bref="Savonnerie artisanale" 
         desc="Petite fabrique artisanale, privilégiant les circuits courts et une consommation responsable. Savons et shampooings sont créés avec des ingrédients végétaux ou issus du minéral. Nos produits sont 100 % artisanaux, naturels et végans!      Vous nous trouverez aussi au marché de Vandoeuvre le vendredi de 16h à 20h" 
