@@ -129,20 +129,12 @@
         desc="Ouvert depuis janvier 2007, le magasin propose un grand choix alimentaire BIO, mais également des cosmétiques, un univers bébé, des articles pour la maison. C'est aussi un espace de vie, avec l'accueil d'associations et la mise à disposition d'une salle de réunion." 
         type="Alimentation" 
         comptoir="oui" 
-        telephone="03 83 39 01 99" 
-        latitude="6.20315551758" 
-        longitude="48.68223421510" 
-        adresse="34-38, rue Marcel Brot, Nancy" 
+        telephone="03 83 38 44 26" 
+        latitude="6.2453421" 
+        longitude="48.7064972" 
+        adresse="4 rue des Tarbes, Essey-lès-Nancy" 
         defi="Bureau de change">
-        <h l="le lundi" 
-          t="14H00 - 19H00"/>
-        <h l="du mardi au jeudi" 
-          t="09H30 - 12H30"/>
-        <h l="" 
-          t="14H00 - 19H00"/>
-        <h l="le vendredi" 
-          t="09H30 - 19H00"/>
-        <h l="le samedi" 
+        <h l="du lundi au samedi" 
           t="09H00 - 19H00"/>
       </acteur>
       <acteur siteweb="www.croc-us.fr" 
