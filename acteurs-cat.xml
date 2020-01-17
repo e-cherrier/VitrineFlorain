@@ -1799,25 +1799,6 @@
         telephone="03 83 52 78 24" 
         latitude="5.895135" 
         longitude="48.551257" />
-      <acteur date="1018" 
-        siteweb="lecent9.fr" 
-        comptoir="oui" 
-        image="lecent9.jpg" 
-        titre="Le Cent 9" 
-        bref="cadeau, déco, fabrication française" 
-        type="Deco" 
-        desc="Vente objets usuels revisités, des cadeaux de naissance, d'accessoires de mode, de la déco originale, de bijoux, de cadeaux de naissance... Les produits 0% importés proposés à la vente sont choisis selon 4 critères: l'éthique du créateur, l'atout écologique du produit, la qualité, le design et l'originalité. Laissez-vous séduire par cet univers singulier et chaleureux." 
-        adresse="109B rue St dizier, Nancy" 
-        latitude="6.184312" 
-        longitude="48.688664" 
-        telephone="09 80 55 97 57" 
-        message="" 
-        citation="">
-        <h l="le mardi" 
-          t="14H00 - 19H00"/>
-        <h l="du mercredi au samedi" 
-          t="10H00 - 19H00"/>
-      </acteur>
       <acteur date="0818" 
         siteweb="facebook recyclune" 
         comptoir="oui" 
