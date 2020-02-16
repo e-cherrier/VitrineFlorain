@@ -60,6 +60,16 @@ function findTown($name)
     return findTown('Nancy');
 }
 
+function debug_to_console($data)
+{
+    $output = $data;
+    if (is_array($output)) {
+        $output = implode(',', $output);
+    }
+
+    echo "<script>console.log('Debug Objects: ".$output."' );</script>";
+}
+
  /**
   * Send a GET request using cURL.
   *
@@ -71,41 +81,61 @@ function findTown($name)
   */
  function curl_get($url, array $get = null, array $options = array())
  {
+     $agent = 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:17.0) Gecko/20100101 Firefox/17.0';
+     $dir = dirname(__FILE__);
+     $cookie_file = $dir.'/cookies/'.md5($_SERVER['REMOTE_ADDR']).'.txt';
+
      $defaults = array(
             CURLOPT_URL => $url,
             CURLOPT_HEADER => 0,
-            CURLOPT_RETURNTRANSFER => true,
             CURLOPT_TIMEOUT => 4,
+            CURLOPT_USERAGENT => $agent,
+            CURLOPT_REFERER => 'http://www.monnaielocalenancy.fr',
+            CURLOPT_COOKIEFILE => $cookie_file,
+            CURLOPT_COOKIEJAR => $cookie_file,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_RETURNTRANSFER => true,
         );
 
      $ch = curl_init();
      curl_setopt_array($ch, ($options + $defaults));
+
      if (!$result = curl_exec($ch)) {
-         return '<xml><town>chez moi!</town></xml>';
+         $result = '<xml><town>chez moi!</town></xml>';
      }
+
      curl_close($ch);
 
      return $result;
  }
 
+ function findTownName($x)
+ {
+     $tags = array('village', 'town', 'city');
+     foreach ($tags as $t) {
+         $r = $x->getElementsByTagName($t);
+         if (count($r) === 1) {
+             $v = $r[0]->nodeValue;
+             if ($v !== null) {
+                 return $v;
+             }
+         }
+     }
+
+     return 'chez moi!';
+ }
+
  function getEditionName($lon, $lat)
  {
-     $url = 'https://nominatim.openstreetmap.org/reverse?format=xml&lon='.$lat.'&lat='.$lon.'&zoom=18&addressdetails=1';
+     $url = 'https://nominatim.openstreetmap.org/reverse?format=xml&lon='.$lon.'&lat='.$lat.'&zoom=18&addressdetails=1';
 
      $xml = curl_get($url);
 
      $xmlDoc = new DOMDocument();
      $xmlDoc->loadXML($xml);
      $x = $xmlDoc->documentElement;
-     $ville = $x->getElementsByTagName('town');
-     $ret = 'chez moi!';
 
-     $nb_v = $ville->length;
-     for ($v = 0; $v < $nb_v; ++$v) {
-         $ret = $ville[$v]->nodeValue;
-     }
-
-     return $ret;
+     return findTownName($x);
  }
 
 class Ville
@@ -1249,7 +1279,7 @@ class AnnuairePoche extends Annuaire
         // green bg
         $this->SetFillColor(204, 220, 62);
         $this->SetTextColor(112, 112, 111);
-        $this->Rect($margin + $this->GetSubPageWidth() * 0.69, 0, $this->GetSubPageWidth() * .30, $this->GetPageHeight(), 'F');
+        $this->Rect($margin + $this->GetSubPageWidth() * 0.69, $this->getY(), $this->GetSubPageWidth() * .30, $this->GetPageHeight(), 'F');
 
         // charte
         $this->SetY(($curY + $maxY) / 2);
