@@ -17,6 +17,17 @@
     longitude="48." />
   <categorie type="Se nourrir">
     <scat type="Épiceries">
+      <acteur date="16-02-2020" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Graines d'Essentielle" 
+        bref="Epicerie itinérante" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="1 bis chemin des amoureux, Reillon" 
+        telephone="06 27 41 35 94" 
+        latitude="6.743731" 
+        longitude="48.599677" />
       <acteur date="25-11-2019" 
         siteweb="facebook LATOUTVRAC" 
         image="latoutvrac.jpg" 
@@ -183,18 +194,17 @@
       </acteur>
     </scat>
     <scat type="Producteurs">
-    
-  <acteur date="16-02-2020" 
-    siteweb="lesjardinsdarnaville.com" 
-    image="jardinsarnaville.jpg" 
-    titre="Les Jardins d'Arnaville" 
-    bref="légumes bio" 
-    desc="Je suis installée en tant que maraichère bio depuis 2014. Je propose les légumes bio à l Amap d'Arnaville et au détail sur mon site tous les mardis soir. Mon site internet permet de réserver les légumes  et venir les chercher en fin de semaine. il est ouvert toute l année. Très sensible au respect de la nature, j'amende la terre avec du guano de chauve souris des Vosges et du fumier bio de bovins. J accueille des classes verte ou école ou groupe sur réservation ayant un projet en relation avec mon métier."
-    citation="" 
-    adresse="Pré de la ville, Arnaville" 
-    telephone="06 79 26 69 52" 
-    latitude="6.040118" 
-    longitude="49.008351" />
+      <acteur date="16-02-2020" 
+        siteweb="lesjardinsdarnaville.com" 
+        image="jardinsarnaville.jpg" 
+        titre="Les Jardins d'Arnaville" 
+        bref="légumes bio" 
+        desc="Je suis installée en tant que maraichère bio depuis 2014. Je propose les légumes bio à l Amap d'Arnaville et au détail sur mon site tous les mardis soir. Mon site internet permet de réserver les légumes  et venir les chercher en fin de semaine. il est ouvert toute l année. Très sensible au respect de la nature, j'amende la terre avec du guano de chauve souris des Vosges et du fumier bio de bovins. J accueille des classes verte ou école ou groupe sur réservation ayant un projet en relation avec mon métier." 
+        citation="" 
+        adresse="Pré de la ville, Arnaville" 
+        telephone="06 79 26 69 52" 
+        latitude="6.040118" 
+        longitude="49.008351" />
       <acteur date="26-11-2019" 
         siteweb="" 
         image="aupichou.jpg" 
@@ -832,6 +842,17 @@
   </marches>
   <categorie type ="Sortir">
     <scat type="Se restaurer et boire un verre">
+      <acteur date="16-02-2020" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Point Gé" 
+        bref="Restaurant/Salon de thé" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="31 rue des 4 églises, Nancy" 
+        telephone="06 18 55 52 44" 
+        latitude="6.183296" 
+        longitude="48.687935" />
       <acteur date="25-11-2019" 
         siteweb="facebook Amore-mio-Toul" 
         image="amoremio.jpg" 
@@ -1110,6 +1131,17 @@
         telephone="03 83 55 53 35" />
     </scat>
     <scat type="Se cultiver, se divertir, se détendre">
+      <acteur date="16-02-2020" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Association culturelle du val de Lorraine" 
+        bref="festivals" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="Frouard" 
+        telephone="06 45 04 55 50" 
+        latitude="6.129379" 
+        longitude="48.760176" />
       <acteur date="12-11-2019" 
         siteweb="www.divertyloc.com" 
         image="divertyloc.jpg" 
@@ -1444,6 +1476,17 @@
         latitude="6.061597" 
         longitude="48.906857" 
         telephone="06.81.24.49.40" 
+        message="" />
+      <acteur date="16-02-2020" 
+        siteweb="www.claudelosteo.fr" 
+        image="defaut.jpg" 
+        titre="Corinne Claudel" 
+        bref="Ostéopathie" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        adresse="14 Rue Sophie de Bar 54770 Laître sous Amance" 
+        latitude="6.272254" 
+        longitude="48.745529" 
+        telephone="06 21 04 82 97" 
         message="" />
       <acteur date="0518" 
         siteweb="jphuber-osteopathe.com" 
@@ -1801,6 +1844,17 @@
   </categorie>
   <categorie type ="Se meubler, décorer, aménager">
     <scat>
+      <acteur date="16-02-2020" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Tropical Seeds 971" 
+        bref="artisanat en graines et callebasses" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="17 bis av de Metz, Maxeville" 
+        telephone="06 32 65 72 43" 
+        latitude="6.1696" 
+        longitude="48.717095" />
       <acteur date="16-02-2020" 
         siteweb="www.caroline-antoine.com" 
         image="carolineantoine.jpg" 
