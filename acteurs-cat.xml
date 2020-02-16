@@ -183,6 +183,18 @@
       </acteur>
     </scat>
     <scat type="Producteurs">
+    
+  <acteur date="16-02-2020" 
+    siteweb="lesjardinsdarnaville.com" 
+    image="jardinsarnaville.jpg" 
+    titre="Les Jardins d'Arnaville" 
+    bref="légumes bio" 
+    desc="Je suis installée en tant que maraichère bio depuis 2014. Je propose les légumes bio à l Amap d'Arnaville et au détail sur mon site tous les mardis soir. Mon site internet permet de réserver les légumes  et venir les chercher en fin de semaine. il est ouvert toute l année. Très sensible au respect de la nature, j'amende la terre avec du guano de chauve souris des Vosges et du fumier bio de bovins. J accueille des classes verte ou école ou groupe sur réservation ayant un projet en relation avec mon métier."
+    citation="" 
+    adresse="Pré de la ville, Arnaville" 
+    telephone="06 79 26 69 52" 
+    latitude="6.040118" 
+    longitude="49.008351" />
       <acteur date="26-11-2019" 
         siteweb="" 
         image="aupichou.jpg" 
@@ -385,7 +397,7 @@
         titre="La Ferme Romé" 
         type="Alimentation" 
         bref="Maraicher BIO" 
-        desc="Exploitation agricole de production laitière et maraîchère en agriculture biologique depuis 1989 et certifié Biocohérence (approche éthique de l'AB) depuis 2016. Nous produisons une grande variété de légumes en tunnel et en plein champ tout au long de l'année et sommes présents dans différents points de vente Amap/marché. Charly est présent au marché de Vandoeuvre le vendredi de 16h à 20h" 
+        desc="Exploitation agricole de production laitière et maraîchère en agriculture biologique depuis 1989 et certifié Biocohérence (approche éthique de l'AB) depuis 2016. Nous produisons une grande variété de légumes en tunnel et en plein champ tout au long de l'année et sommes présents dans différents points de vente Amap/marché. Charly est présent au marché de Vandoeuvre le vendredi de 16h à 19h" 
         adresse="8 Rue de la République, 54200 Royaumeix" 
         defi="" 
         latitude="5.868389" 
@@ -437,7 +449,7 @@
         titre="Marie Gauvain" 
         type="Alimentation" 
         bref="Volaille et Porc BIO" 
-        desc="Marie propose des volailles: Poulets, pintades, dindes, poulardes... ainsi que du porc élevé en plein air et ses charcuteries. Marie est présente au marché de Vandoeuvre le vendredi de 16h à 20h" 
+        desc="Marie propose des volailles: Poulets, pintades, dindes, poulardes... ainsi que du porc élevé en plein air et ses charcuteries. Marie est présente au marché de Vandoeuvre le vendredi de 16h à 19h" 
         adresse="2 r Derrière l'Eglise 54470 Grosrouvres" 
         telephone="03 83 23 37 76" 
         defi="Pérenniser l'activité" 
@@ -451,7 +463,7 @@
         titre="La Ferme du porc qui dore" 
         type="Alimentation" 
         bref="Élevage de Porcs" 
-        desc="Sonia RIGOT a mis en place un élevage de porcs gascons, reconnus pour la qualité gustative de leur chair, de plusieurs races rustiques adaptées à l'élevage en plein air, des génisses et broutards de race à viande également. Les conditions d'élevage en plein air et sa conduite de façon extensive créent cette différence. Exploitation en conversion BIO, 100% BIO pour 2019. Sonia est présente au marché de Vandoeuvre le vendredi de 16h à 20h" 
+        desc="Sonia RIGOT a mis en place un élevage de porcs gascons, reconnus pour la qualité gustative de leur chair, de plusieurs races rustiques adaptées à l'élevage en plein air, des génisses et broutards de race à viande également. Les conditions d'élevage en plein air et sa conduite de façon extensive créent cette différence. Exploitation en conversion BIO, 100% BIO pour 2019. Sonia est présente au marché de Vandoeuvre le vendredi de 16h à 19h" 
         adresse="3 Grande Rue 54450 Gondrexon" 
         defi="Accueil de classes et d'actions pédagogiques" 
         latitude="6.76985263824" 
@@ -503,7 +515,7 @@
         titre="Marianne Louis" 
         bref="Fromagère" 
         type="Alimentation" 
-        desc="Fromagère - Tommes - Munsters. Marianne est présente au marché de Maxéville le jeudi de 16h à 19h et au marché de Vandoeuvre le vendredi de 16h à 20h" 
+        desc="Fromagère - Tommes - Munsters. Marianne est présente au marché de Maxéville le jeudi de 16h à 19h et au marché de Vandoeuvre le vendredi de 16h à 19h" 
         adresse="Saint-Étienne-lès-Remiremont" 
         defi="Faire dans le local / écolo pour les outils de communication" 
         latitude="6.621513" 
@@ -643,7 +655,7 @@
         titre="Le Moulin du Petit Poucet" 
         type="Alimentation" 
         bref="paysans-boulangers BIO" 
-        desc="Notre pain et nos farines sont issus des céréales produites localement et transformées sur notre ferme. Les céréales sont moulues sur meule de pierre. Nos pains au levain naturel sont façonnés à la main et cuits dans un four chauffé au bois.      Christelle est présente au marché de Vandoeuvre le vendredi de 16h à 20h" 
+        desc="Notre pain et nos farines sont issus des céréales produites localement et transformées sur notre ferme. Les céréales sont moulues sur meule de pierre. Nos pains au levain naturel sont façonnés à la main et cuits dans un four chauffé au bois.      Christelle est présente au marché de Vandoeuvre le vendredi de 16h à 19h" 
         adresse="10b rue d'Alsace 54200 Royaumeix" 
         defi="Intégrer produits du commerce équitable" 
         latitude="5.870572328576" 
@@ -809,13 +821,13 @@
       bref="Marché" 
       type="Marché" 
       code="2" 
-      desc="les vendredi de 16h à 20h" 
+      desc="les vendredi de 16h à 19h" 
       adresse="  " 
       latitude="6.1737" 
       longitude="48.6653" 
       message_comptoir="Assuré par des bénévoles du Florain.">
       <h l="Le premier vendredi du mois" 
-        t="16h00 - 20h00"/>
+        t="16h00 - 19h00"/>
     </scat>
   </marches>
   <categorie type ="Sortir">
@@ -1377,14 +1389,14 @@
         longitude="48.714056" />
       <acteur date="22-09-2019" 
         siteweb="" 
-        image="defaut.jpg" 
-        titre="Mode et Création" 
+        image="modetcreation.jpg" 
+        titre="Mod'et création coiffure" 
         bref="Salon de coiffure" 
-        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        desc="Conseil, coiffeur, visagiste. Travaille avec une gamme de produits intéressants tels que la marque alter ego, global kératine, Hair borist." 
         latitude="5.897825" 
         longitude="48.529031" 
         telephone="03 83 52 01 65" 
-        adresse="1 rue de l'Eglise 54170 Colombey les Belles" />
+        adresse="1 rue de l'Eglise, Colombey les Belles" />
       <acteur date="22-09-2019" 
         siteweb="" 
         image="defaut.jpg" 
@@ -1743,7 +1755,7 @@
         titre="La Savonnerie Clandestine" 
         type="Sante" 
         bref="Savonnerie artisanale" 
-        desc="Petite fabrique artisanale, privilégiant les circuits courts et une consommation responsable. Savons et shampooings sont créés avec des ingrédients végétaux ou issus du minéral. Nos produits sont 100 % artisanaux, naturels et végans!      Vous nous trouverez aussi au marché de Vandoeuvre le vendredi de 16h à 20h" 
+        desc="Petite fabrique artisanale, privilégiant les circuits courts et une consommation responsable. Savons et shampooings sont créés avec des ingrédients végétaux ou issus du minéral. Nos produits sont 100 % artisanaux, naturels et végans!      Vous nous trouverez aussi au marché de Vandoeuvre le vendredi de 16h à 19h" 
         adresse="9, rue d'Alsace 54140 Jarville-la-Malgrange" 
         defi="Labelisation bio d'ici 2-3 ans" 
         latitude="6.199764" 
@@ -1789,6 +1801,17 @@
   </categorie>
   <categorie type ="Se meubler, décorer, aménager">
     <scat>
+      <acteur date="16-02-2020" 
+        siteweb="www.caroline-antoine.com" 
+        image="carolineantoine.jpg" 
+        titre="Caroline Antoine" 
+        bref="Artiste - paysagiste" 
+        desc="'Les dessins de Caroline Antoine, telle une écriture automatique, aux lignes fluides, suggèrent des tracés, des réseaux… Ils incarnent le mouvement, la circulation, des promenades, une quête de comprendre le monde et au-delà de témoigner, de parler de la nature, fragile, nourricière. Nourrie de sa pratique de paysagiste, cette artiste a appris les potentialités et vertus des végétaux. Elle continue d’aiguiser son regard sur leurs capacités à nous émerveiller, à marquer nos parcours du quotidien. (...)' Texte de Pauline Lisowski - Critique d'art." 
+        citation="La monnaie locale est pour moi un emblème, le signe d'un espoir vivant et vibrant qui transmet des valeurs humaines, sociales et écologiques sans avoir besoin de mots pour le dire." 
+        adresse="34 quai choiseul, Nancy" 
+        telephone="06 10 25 14 22" 
+        latitude="6.168273" 
+        longitude="48.702268" />
       <acteur date="29-10-2019" 
         siteweb="www.de-laine-en-reves.fr" 
         image="de-laine-en-reves.jpg" 
