@@ -290,10 +290,13 @@ EOD;
           $p = <<<EOD
         <p><b>Retrouvez:</b></p>
 EOD;
-          echo $p;
 
           $id = $acteur->getAttribute('id');
-          $nb_e = count($exposants[$id]);
+          $nb_e = 0;
+          if( array_key_exists( $id, $exposants ) ){
+            $nb_e = count($exposants[$id]);
+            echo $p;
+          }
           $idx_e = range(0, $nb_e - 1);
           shuffle($idx_e);
           for ($e = 0; $e < $nb_e; ++$e) {

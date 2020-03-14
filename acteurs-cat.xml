@@ -832,6 +832,15 @@
     </scat>
   </categorie>
   <marches type ="Les Marchés">
+    <scat id="sotres" 
+      image="sotres.jpg" 
+      titre="à Sotrés et Potailloux" 
+      bref="Marché" 
+      type="Marché" 
+      desc="un samedi, fin juin, à partir de 10h et jusqu'au bout de la nuit!" 
+      adresse="entre Chaillon et Heudicourt" 
+      latitude="5.664894" 
+      longitude="48.937163" />
     <scat id="sarrebourg" 
       image="marche.jpg" 
       titre="au Marché couvert de Sarrebourg" 
@@ -1185,6 +1194,15 @@
         telephone="03 83 55 53 35" />
     </scat>
     <scat type="Se cultiver, se divertir, se détendre">
+      <acteur date="14-03-2020" 
+        siteweb="www.sotresetpotailloux.fr" 
+        image="sotres.jpg" 
+        titre="Sotrés et Potailloux" 
+        bref="Marché Paysan Festif" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="entre Chaillon et Heudicourt" 
+        telephone="07 83 52 82 51" />
       <acteur date="16-02-2020" 
         siteweb="" 
         image="defaut.jpg" 
@@ -1453,6 +1471,17 @@
   </categorie>
   <categorie type ="Prendre soin de soi">
     <scat>
+      <acteur date="14-03-2020" 
+        siteweb="www.sophro-existentielle-nancy.fr" 
+        image="defaut.jpg" 
+        titre="Anne Lebrun" 
+        bref="Sophrologue" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="7, rue René Cassin, Nancy" 
+        telephone="06.15.83.27.66" 
+        latitude="6.187457" 
+        longitude="48.683468" />
       <acteur date="18-02-2020" 
         siteweb="lebouriffee-luneville.fr" 
         image="defaut.jpg" 
@@ -1711,6 +1740,17 @@
   </categorie>
   <categorie type ="S'habiller, s'équiper">
     <scat>
+      <acteur date="14-03-2020" 
+        siteweb="fb lescousettesdeninie" 
+        image="defaut.jpg" 
+        titre="Les cousettes de Ninie" 
+        bref="créations zéro dechet" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="19 rue Claude Beauregard, Xirocourt" 
+        telephone="03 83 26 83 35" 
+        latitude="6.174204" 
+        longitude="48.432153" />
       <acteur date="04-01-2020" 
         siteweb="facebook Cordonnerie de la Forêt" 
         marche="vandoeuvre" 
