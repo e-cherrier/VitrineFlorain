@@ -720,7 +720,7 @@ class AnnuaireFiches extends Annuaire
         $no_footer = true;
         $no_header = true;
 
-        $this->edition = $town->name;
+        $this->edition = $town->nom;
         $this->km = $town->km;
         $this->latRef = $town->lat;
         $this->lonRef = $town->lon;
@@ -873,7 +873,7 @@ class AnnuaireLivret extends Annuaire
         global $no_footer;
         global $no_header;
 
-        $this->edition = $town->name;
+        $this->edition = $town->nom;
         $this->km = $town->km;
         $this->latRef = $town->lat;
         $this->lonRef = $town->lon;
@@ -1540,7 +1540,7 @@ class AnnuaireCompact extends AnnuairePoche
  *
  */
 
-$type = 'Livret';
+$type = '';
 $edition = 'globale';
 $output = 'D';
 
@@ -1569,7 +1569,9 @@ if (isset($_GET['edition'])) {
     } else {
         $town = findTown($edition);
     }
-    $type = $town->type;
+    if( $type === "") {
+      $type = $town->type;
+    }
 }
 
 if (isset($_GET['output'])) {
