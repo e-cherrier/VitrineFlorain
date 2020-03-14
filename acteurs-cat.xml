@@ -195,6 +195,28 @@
     </scat>
     <scat type="Producteurs">
       <acteur date="14-03-2020" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Ferme du Val Saint-Martin" 
+        bref="Elevage" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="7 Grande Rue, Thuilley-aux-Groseilles" 
+        telephone="03 83 52 42 79" 
+        latitude="5.972604" 
+        longitude="48.572943" />
+      <acteur date="14-03-2020" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="La Belle Campagne" 
+        bref="Magasin de Producteurs" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="8 rue Roberval, Vandoeuvre" 
+        telephone="" 
+        latitude="6.179411" 
+        longitude="48.652889" />
+      <acteur date="14-03-2020" 
         siteweb="fermedelasouleuvre.fr" 
         image="fermedelasouleuvre.jpg" 
         titre="Ferme de la Souleuvre" 
@@ -905,6 +927,18 @@
   </marches>
   <categorie type ="Sortir">
     <scat type="Se restaurer et boire un verre">
+
+      <acteur date="14-03-2020" 
+        siteweb="" 
+        image="defaut.jpg" 
+        titre="Escabelle" 
+        bref="restaurant d'insertion" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="place Emile Zola, Tomblaine" 
+        telephone="" 
+        latitude="6.218628" 
+        longitude="48.679265" />
       <acteur date="16-02-2020" 
         siteweb="" 
         image="defaut.jpg" 
@@ -1741,6 +1775,17 @@
   <categorie type ="S'habiller, s'équiper">
     <scat>
       <acteur date="14-03-2020" 
+        siteweb="www.idprojets.com" 
+        image="defaut.jpg" 
+        titre="ID Projets" 
+        bref="cuisiniste chauffagiste" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="46 av dela Paix, Tomblaine" 
+        telephone="03 83 31 15 50" 
+        latitude="6.212204" 
+        longitude="48.686208" />
+      <acteur date="14-03-2020" 
         siteweb="fb lescousettesdeninie" 
         image="defaut.jpg" 
         titre="Les cousettes de Ninie" 
@@ -2070,6 +2115,18 @@
   </categorie>
   <categorie type ="Et aussi...">
     <scat>
+
+      <acteur date="14-03-2020" 
+        siteweb="aupulso.fr" 
+        image="defaut.jpg" 
+        titre="Aupulso" 
+        bref="Experte Comptable" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="20 bis rue Villebois Mareuil, Nancy" 
+        telephone="06 44 21 70 47" 
+        latitude="6.178442" 
+        longitude="48.68349" />
       <acteur date="23-10-2019" 
         siteweb="www.kepos.fr" 
         image="kepos.jpg" 
@@ -2298,6 +2355,16 @@
   </categorie>
   <categorie type ="S'engager">
     <scat>
+
+      <acteur date="14-03-2020" 
+        siteweb="fb OLA-Organisation-Locale-dAutosuffisance-Nancy" 
+        image="defaut.jpg" 
+        titre="Organisation Locale d'Autosuffisance" 
+        bref="résilience territoriale" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="" 
+        telephone="07 86 27 07 27" />
       <acteur date="19-10-2019" 
         siteweb="www.flore54.org" 
         image="defaut.jpg" 
