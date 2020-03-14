@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 16 février 2020" 
-  sstitre="Mise à jour du 16 février 2020 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 14 mars 2020" 
+  sstitre="Mise à jour du 14 mars 2020 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="du Sud de la Meurthe et Moselle" 
   slogan="La monnaie qui crée du lien!">
@@ -194,6 +194,40 @@
       </acteur>
     </scat>
     <scat type="Producteurs">
+      <acteur date="14-03-2020" 
+        siteweb="fermedelasouleuvre.fr" 
+        image="fermedelasouleuvre.jpg" 
+        titre="Ferme de la Souleuvre" 
+        bref="Pain et fromage fermiers" 
+        desc="Ferme en polyculture élevage, avec ateliers de transformation et vente directe: Fromages de vache au lait cru et pain bio au levain." 
+        citation="Promoteurs du consommer local et fermier depuis 20 ans, nous voici nouveaux adhérents du Florain" 
+        adresse="54530 Prény" 
+        telephone="06 01 72 28 22" 
+        latitude="5.996764" 
+        longitude="48.978624" />
+      <acteur date="14-03-2020" 
+        siteweb="www.levergerdepapy1.simplesite.com" 
+        marche="sarrebourg" 
+        image="levergerdepapy1.jpg" 
+        titre="Le Verger de Papy" 
+        bref="Artisan Transformateur de végétaux locaux" 
+        desc="Artisan Transformateur de végétaux locaux: confitures, gelées, sirop, compote, fruits au sirop, pâtes de fruits, champignons séchés..." 
+        citation="" 
+        adresse="13 bis rue du mont 54120 Hablainville" 
+        telephone="06.46.05.16.08" 
+        latitude="6.727008" 
+        longitude="48.516129" />
+      <acteur date="14-03-2020" 
+        siteweb="www.lesjardinscitoyens.fr" 
+        image="lesjardinscitoyens.jpg" 
+        titre="Les jardins citoyens" 
+        bref="jardin associatif" 
+        desc="Jardin associatif en permaculture qui a pour objectif d'accompagner la transition écologique à partir d'actions concrètes en milieu urbain:production de légumes, éducation populaire, événements festifs." 
+        citation="Viens faire ta part" 
+        adresse="Sentier des Clos, Laxou" 
+        telephone="06 79 93 26 40" 
+        latitude="6.145169" 
+        longitude="48.684011" />
       <acteur date="16-02-2020" 
         siteweb="lesjardinsdarnaville.com" 
         image="jardinsarnaville.jpg" 
@@ -719,6 +753,17 @@
         longitude="48.677501" />
     </scat>
     <scat type="AMAP">
+      <acteur date="14-03-2020" 
+        siteweb="www.crapaudsonneur.lautre.net" 
+        image="crapaudsonneur.jpg" 
+        titre="AMAP du Crapaud Sonneur" 
+        bref="manger bio local solidaire" 
+        desc="Une consommation responsable et engagée pour changer notre système alimentaire et agricole en une alternative locale, durable, éthique, solidaire et résiliente." 
+        citation="" 
+        adresse="MJC Trois-Maisons rue de Fontenoy, NANCY" 
+        telephone="06 73 77 94 75" 
+        latitude="6.174987" 
+        longitude="48.706063" />
       <acteur date="22-04-2019" 
         siteweb="dynamap54.wordpress.com" 
         image="dynamap.jpg" 
@@ -760,7 +805,7 @@
         titre="Jardins de la Chaudeau" 
         bref="AMAP" 
         type="Association" 
-        desc="Association pour le Maintien de l'Agriculture Paysanne à Pierre la Treiche" 
+        desc="Tous les jeudi soirs venez découvrir nos paniers de légumes produits sur place par Sébastien Zehnacker. L'AMAP distribue aussi les fruits et glaces de Ô Maribelle (Ochey), le pain de Laurence Rouyer (Germiny), les volailles et œufs de la Ferme Saint Martin (Thuilley-aux-Groseilles), du porc et du bœuf du Gaec des Raillis (Nancois-le-grand) et la bière de la Brasserie Coin-Coin (Ménil-La-Tour) et le Vin de Camille Migot (Lucey)." 
         adresse="54200 Pierre-la-Treiche" 
         latitude="5.931616" 
         longitude="48.643115" 
@@ -787,6 +832,15 @@
     </scat>
   </categorie>
   <marches type ="Les Marchés">
+    <scat id="sarrebourg" 
+      image="marche.jpg" 
+      titre="au Marché couvert de Sarrebourg" 
+      bref="Marché" 
+      type="Marché" 
+      desc="les mardis et vendredis de 8h à 12h" 
+      adresse="Centre ville" 
+      latitude="7.051183" 
+      longitude="48.735012" />
     <scat id="haroue" 
       image="marche.jpg" 
       titre="au Marché fermier à Haroué" 
@@ -1399,6 +1453,17 @@
   </categorie>
   <categorie type ="Prendre soin de soi">
     <scat>
+      <acteur date="18-02-2020" 
+        siteweb="lebouriffee-luneville.fr" 
+        image="defaut.jpg" 
+        titre="L'ébouriffé" 
+        bref="Salon de coiffure" 
+        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="1 rue Germain charier, Lunéville" 
+        telephone="03 83 74 23 59" 
+        latitude="6.491326" 
+        longitude="48.592787" />
       <acteur date="29-11-2019" 
         siteweb="" 
         image="kabao.jpg" 
