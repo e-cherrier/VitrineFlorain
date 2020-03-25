@@ -206,11 +206,11 @@
         latitude="5.972604" 
         longitude="48.572943" />
       <acteur date="14-03-2020" 
-        siteweb="" 
-        image="defaut.jpg" 
+        siteweb="FB La-Belle-Campagne" 
+        image="labellecampagne.jpg" 
         titre="La Belle Campagne" 
         bref="Magasin de Producteurs" 
-        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        desc="Le meilleur de nos campagnes. Plus de 20 producteurs fermiers lorrains vous proposent un large choix de produits de qualité issus de leurs fermes. Venez découvrir la fraîcheur, la qualité et le goût de la vente directe du producteur au consommateur.Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
         citation="" 
         adresse="8 rue Roberval, Vandoeuvre" 
         telephone="" 
@@ -763,7 +763,7 @@
         edition="toutes"/>
       <acteur anniv="oui" 
         fete="oui" 
-        siteweb="www.fermiersdici.com" 
+        siteweb="www.lesfermiersdici.com" 
         image="LesFermiersDIci.jpg" 
         titre="Les Fermiers d'Ici" 
         type="Alimentation" 
