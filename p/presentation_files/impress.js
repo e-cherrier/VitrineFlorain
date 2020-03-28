@@ -587,6 +587,13 @@ var innerBg = document.querySelector('.innerBg');
             return goto(next);
         };
         
+        // `select` API function goes to step
+        var select = function ( step ) {
+            select = step < steps.length || step >= 0 ? steps[ step ] : steps[ 0 ];
+            
+            return goto(select);
+        };
+        
         // Adding some useful classes to step elements.
         //
         // All the steps that have not been shown yet are given `future` class.
@@ -658,7 +665,8 @@ var innerBg = document.querySelector('.innerBg');
             init: init,
             goto: goto,
             next: next,
-            prev: prev
+            prev: prev,
+            select: select
         });
 
     };
@@ -704,7 +712,7 @@ var innerBg = document.querySelector('.innerBg');
         
         // Prevent default keydown action when one of supported key is pressed.
         document.addEventListener("keydown", function ( event ) {
-            if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) ) {
+            if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) || (event.keyCode >= 48 && event.keyCode <= 57) ) {
                 event.preventDefault();
             }
         }, false);
@@ -725,7 +733,7 @@ var innerBg = document.querySelector('.innerBg');
         //   as another way to moving to next step... And yes, I know that for the sake of
         //   consistency I should add [shift+tab] as opposite action...
         document.addEventListener("keyup", function ( event ) {
-            if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) ) {
+            if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40)|| (event.keyCode >= 48 && event.keyCode <= 57) ) {
                 switch( event.keyCode ) {
                     case 33: // pg up
                     case 37: // left
@@ -738,6 +746,18 @@ var innerBg = document.querySelector('.innerBg');
                     case 39: // right
                     case 40: // down
                              api.next();
+                             break;
+                    case 48: // 0
+                    case 49: // 1
+                    case 50: // 2
+                    case 51: // 3
+                    case 52: // 4
+                    case 53: // 5
+                    case 54: // 6
+                    case 55: // 7
+                    case 56: // 8
+                    case 57: // 9 
+                             api.select( event.keyCode - 49 );
                              break;
                 }
                 

@@ -25,22 +25,31 @@
 <slide data-x="7632.213333333333" data-y="1336.32" data-scale="2"
        style="position: absolute; transform: translate(-50%, -50%) translate3d(7632.21px, 1336.32px, 0px) scale(2);"
        width="1024px" height="768px">
-
-  <title>Quels sont les intérêts ?</title>
-
+  <title>Ca ressemble à quoi ?</title>
   <text>
   <![CDATA[
      <ul>
-      <li>Mettre en valeur les circuits courts</li>
-      <li>Maintenir les commerces de proximité</li>
-      <li>Garantir aux utilisateurs du Florain le respect<br/>d'une charte de valeurs</li>
-      <ul class="sub">
-      <li>Utiliser une monnaie non spéculative</li>
-      <li>Contribuer à l'émergence de la transition écologique et citoyenne sur le territoire</li>
-     </ul></ul>
+      <li>Des billets à 5 valeurs faciales:<br/> 1, 2, 5, 10 et 20 Florains.<br/><br/></li>
+      <li>Sécurisés, réalisés par une imprimerie agréé Banque de France.<br/><br/></li>
+      <li>La dématérialisation devrait être mise en oeuvre prochainement.</li>
+     </ul>
      ]]>
   </text>
+</slide>
 
+<slide data-x="7632.213333333333" data-y="1336.32" data-scale="2"
+       style="position: absolute; transform: translate(-50%, -50%) translate3d(7632.21px, 1336.32px, 0px) scale(2);"
+       width="1024px" height="768px">
+  <title>Quels sont les intérêts ?</title>
+  <text>
+  <![CDATA[<b>Pour le territoire</b><br/><br/>
+     <ul>
+      <li>Conserver les richesses localement.<br/><br/></li>
+      <li>Contribuer à l'émergence de la transition<br/>écologique et citoyenne<br/><br/></li>
+      <li>Dans le respect d'une <a target="_blank" href="http://monnaielocalenancy.fr/doc/Charte de Valeurs.pdf">charte de valeurs</a></li>
+     </ul>
+     ]]>
+  </text>
 </slide>
 
 <slide data-x="7632.213333333333" data-y="1336.32" data-scale="2"
@@ -48,7 +57,13 @@
        width="1024px" height="768px">
   <title>Pour les particuliers</title>
   <text>
-  <![CDATA[<ul><li>Avoir la garantie de consommer auprès d'acteurs<br/>qui portent les valeurs de la charte.</li></ul><p><br/></p><ul><li>Agir pour le développement du territoire,<br/>soutenir les commerces de proximité.</li></ul><p><br/></p><ul><li>Investir dans des projets locaux .</li></ul><p><br/></p><ul><li>Découvrir de nouveaux circuits de consommation.</li></ul>
+  <![CDATA[
+    <ul>
+      <li>Avoir la garantie de consommer auprès d'acteurs<br/>qui portent les valeurs de la charte.<br/><br/></li>
+      <li>Soutenir les circuits courts, les commerces de proximité.<br/><br/></li>
+      <li>Découvrir de nouveaux circuits de consommation.<br/><br/></li>
+      <li>Avoir la satisfaction d'agir pour le développement de son territoire.</li>
+    </ul>
      ]]>
   </text>
 </slide>
@@ -59,7 +74,24 @@
   <title>Pour les pros</title>
   <text>
   <![CDATA[
-<ul><li>Bénéficier du "label" Florain garantissant les<br/>valeurs de la charte.</li><li>Trouver une nouvelle clientèle fidélisée par<br/>l'usage de la monnaie locale.</li></ul><ul><li>Un partenariat avec Le Florain:<br/>- outils de communications<br/>- aide pour s'insérer dans le réseau.</li></ul><ul><li>Faire partie d'un réseau de professionnels<br/>qui partagent les même valeurs.<br/></li></ul>
+    <ul>
+      <li>Bénéficier du "label" Florain.<br/><br/></li>
+      <li>Trouver une nouvelle clientèle fidélisée par<br/>l'usage de la monnaie locale.<br/><br/></li>
+      <li>Un partenariat avec Le Florain.<br/><br/></li>
+      <li>Faire partie d'un réseau de professionnels<br/>qui partagent les même valeurs.<br/></li>
+    </ul>
+     ]]>
+  </text>
+</slide>
+
+<slide data-x="7632.213333333333" data-y="1336.32" data-scale="2"
+       style="position: absolute; transform: translate(-50%, -50%) translate3d(7632.21px, 1336.32px, 0px) scale(2);"
+       width="1024px" height="768px">
+  <title></title>
+  <text>
+  <![CDATA[
+  <table width="105%"><tbody><tr><td style="color:#ccdc3e; vertical-align:top; width=300px;">Pour être utiles, les Florains ont vocation à circuler.</td>
+  <td ><img style="position: relative; top:-240px;" src="http://www.monnaielocalenancy.fr/images/cerclevertueux.png"/></td></tr></tbody></table>
      ]]>
   </text>
 </slide>
@@ -70,7 +102,12 @@
   <title>Comment ca marche ?</title>
   <text>
   <![CDATA[
-Pour le particulier<br/><br/><ul><li>Adhérer à l'association.</li><li>Changer ses Euros en Florains.</li><li>Les faire circuler dans le réseau.<br/>Il n'y a pas de rendu de monnaie en Euros lors<br/>d'un paiement en Florains. Les rendus de centimes<br/>sont autorisés.</li></ul>
+    <b>Pour le particulier</b><br/><br/>
+    <ul>
+      <li>Adhérer à l'association.<br/><br/></li>
+      <li>Changer ses Euros en Florains.<br/><br/></li>
+      <li>Les faire circuler dans le réseau.</li>
+    </ul>
      ]]>
   </text>
 </slide>
@@ -81,7 +118,14 @@ Pour le particulier<br/><br/><ul><li>Adhérer à l'association.</li><li>Changer 
   <title>Comment ca marche ?</title>
   <text>
   <![CDATA[
-Pour le professionnel<br/><br/><ul><li>Obtenir l'agrément</li><li>Adhérer à l'association</li><li>Accepter les paiements en Florains</li><li>Continuer à faire sa comptabilité en Euros</li><li>Faire circuler ses Florains dans le réseau:</li><ul class="sub"><li>Payer ses fournisseurs agréés</li><li>Payer une partie des salaires</li><li>(Payer des charges et services)</li></ul></ul>
+    <b>Pour le professionnel</b><br/><br/>
+    <ul>
+      <li>Obtenir l'agrément.<br/><br/></li>
+      <li>Adhérer à l'association.<br/><br/></li>
+      <li>Accepter les paiements en Florains.<br/><br/></li>
+      <li>Continuer à faire sa comptabilité en Euros.<br/><br/></li>
+      <li>Faire circuler ses Florains dans le réseau.</li>
+    </ul>
      ]]>
   </text>
 </slide>
@@ -91,13 +135,33 @@ Pour le professionnel<br/><br/><ul><li>Obtenir l'agrément</li><li>Adhérer à l
        width="1024px" height="768px">
   <title>Comment ca marche ?</title>
   <text>
+  <![CDATA[<b>Le rendu de monnaie?</b><br/><br/>
+Il n'y a pas de rendu de monnaie en Euros lors<br/>d'un paiement en Florains.<br/><br/>
+<ul>
+ <li>Les rendus de centimes d'Euros sont autorisés.<br/></li>
+ <li>Les adhérents sont invités à faire l'appoint.</li>
+</ul>
+     ]]>
+  </text>
+</slide>
+
+<slide data-x="7632.213333333333" data-y="1336.32" data-scale="2"
+       style="position: absolute; transform: translate(-50%, -50%) translate3d(7632.21px, 1336.32px, 0px) scale(2);"
+       width="1024px" height="768px">
+  <title>Comment ca marche ?</title>
+  <text>
+  <![CDATA[<b>La reconversion?</b><br/><br/>
+La reconversion en Euros est impossible<br/>pour les particuliers.<br/><br/><br/>
+Pour les professionnels elle est possible<br/>moyennant une commission de 2%.
+     ]]>
+  </text>
+  <memo>
   <![CDATA[
-Pour être utiles, les Florains ont vocation à circuler.<br/><br/>
 La reconversion en Euros est impossible pour les particuliers.<br/><br/>
 Pour les professionnels elle est possible moyennant une commission de 2%.<br/><br/>
 La commission d’agrément examine les demandes d’exonération au cas par cas. Une contribution forfaitaire annuelle de 20 Florains est alors appliquée.
      ]]>
-  </text>
+  </memo>
 </slide>
 
 <slide data-x="7632.213333333333" data-y="1336.32" data-scale="2"
@@ -115,13 +179,20 @@ La commission d’agrément examine les demandes d’exonération au cas par cas
 <li>de 10 à 100€ pour les associations</li>
 <li>de 40 à 250€ pour les entreprises</li>
 </ul><br/>
+      <li>Les Euros échangés vont sur un compte de garantie établi à <a target="_blank" href="https://www.lanef.com">la Nef</a>.</li>
+     </ul>
+     ]]>
+  </text>
+  <memo>
+  <![CDATA[
+     <ul>
       <li>Les Euros échangés vont sur un compte de garantie. Le Florain à choisi d'établir ce compte à La Nef.</li>
      <ul class="sub">
       <li>La Nef s'est engagée à investir sur les territoires des monnaies locales francaises le double de l'argent qui lui est confié.</li>
      </ul>
      </ul>
      ]]>
-  </text>
+  </memo>
 
 </slide>
 
@@ -131,9 +202,16 @@ La commission d’agrément examine les demandes d’exonération au cas par cas
   <title>Où m'en procurer ?</title>
   <text>
   <![CDATA[
-Les Florains sont disponibles dans les comptoirs<br/>de change.<br/><br/>Ces comptoirs sont tenus par des commerçants<br/>volontaires bénévoles du réseau.<br/><br/>Leurs missions:<ul><li>Prendre les nouvelles adhésions.</li><li>Faire les échanges Euros/Florains.</li></ul>
+  <table width="105%"><tbody><tr>
+  <td style="color:#ccdc3e; vertical-align:top; width=300px;">Les Florains peuvent être retirés actuellement dans <a target="_blank" href="http://www.monnaielocalenancy.fr/change.php">12 comptoirs de change</a>.</td>
+  <td ><img src="http://www.monnaielocalenancy.fr/images/carteComptoirs.JPG"/></td></tr></tbody></table>
      ]]>
   </text>
+  <memo>
+  <![CDATA[
+Les Florains sont disponibles dans les comptoirs<br/>de change.<br/><br/>Ces comptoirs sont tenus par des commerçants<br/>volontaires bénévoles du réseau.<br/><br/>Leurs missions:<ul><li>Prendre les nouvelles adhésions.</li><li>Faire les échanges Euros/Florains.</li></ul>
+     ]]>
+  </memo>
 </slide>
 
 
@@ -144,9 +222,17 @@ Les Florains sont disponibles dans les comptoirs<br/>de change.<br/><br/>Ces com
   <title>Où les faire circuler ?</title>
   <text>
   <![CDATA[
-La liste des&nbsp; acteurs du réseau qui acceptent<br/>les paiements en Florain est en évolution constante.<br/><br/>Elle est disponible sur le site internet sous forme de<br/>liste ou de catalogue.<br/>Une carte aide à la géolocalisation.<br/><br/>Fournissez nous aussi vos adresses pour<br/>agrandir le réseau.<br/>
+  <table width="105%"><tbody><tr>
+  <td style="vertical-align:top;"><p style="color:#ccdc3e; width:450px;">La liste des acteurs du réseau qui acceptent les paiements en Florain est en évolution constante.</p><br/><br/>
+  <a target="_blank" href="http://www.monnaielocalenancy.fr/annuaire.php?type=Compact&edition=Nancy&output="><img style="position: relative; left:-200px; " src="http://www.monnaielocalenancy.fr/images/annuaireActeurs.JPG"/></a></td>
+  <td ><a target="_blank" href="http://www.monnaielocalenancy.fr/carte.php"><img style="position: relative; left:-200px; "src="http://www.monnaielocalenancy.fr/images/carteActeurs.JPG"/></a></td></tr></tbody></table>
      ]]>
   </text>
+  <memo>
+  <![CDATA[
+La liste des&nbsp; acteurs du réseau qui acceptent<br/>les paiements en Florain est en évolution constante.<br/><br/>Elle est disponible sur le site internet sous forme de<br/>liste ou de catalogue.<br/>Une carte aide à la géolocalisation.<br/><br/>Fournissez nous aussi vos adresses pour<br/>agrandir le réseau.<br/>
+     ]]>
+  </memo>
 </slide>
 
 <slide data-x="7632.213333333333" data-y="1336.32" data-scale="2"
@@ -155,7 +241,11 @@ La liste des&nbsp; acteurs du réseau qui acceptent<br/>les paiements en Florain
   <title>Comment s'investir ?</title>
   <text>
   <![CDATA[
-L'association est organisée en groupes de travail <br/>qui évoluent en fonction des besoins.<br/><br/>Une page sur notre site liste les travaux en cours.<br/>Des adresses de contact y sont associées.<br/><br/>Pour des appels à bénévoles plus ponctuels une liste<br/>d'information dédiée est utilisée.
+L'association est organisée en groupes de travail <br/>
+qui évoluent en fonction des besoins.<br/><br/>
+<a target="_blank" href="http://www.monnaielocalenancy.fr/index.php#orga">Une page</a> sur notre site liste les travaux en cours.<br/>
+Des adresses de contact y sont associées.<br/><br/>
+Pour des appels à bénévoles plus ponctuels une liste<br/>d'information dédiée est utilisée.
      ]]>
   </text>
 </slide>

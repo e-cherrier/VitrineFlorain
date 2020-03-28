@@ -68,7 +68,7 @@ ready(function() {
 
     if ("ontouchstart" in document.documentElement) { 
         document.querySelector(".hint").innerHTML = 
-            "<p>Tap on the left or right to navigate</p>";
+            "<p>Utilisez la barre d'espace, les flèches et ESC</p>";
     }
 });
 </script>
@@ -78,6 +78,17 @@ ready(function() {
 /*.example {
 	border: 4px groove orange;
 }*/
+
+a {
+    color: #ccdc3e;
+    target: "_blank";
+}
+a:after {
+  content:" *";
+}
+a:hover {
+    color: yellow;
+}
 
 ul {
     margin-left: 40px;
@@ -93,6 +104,11 @@ ul.sub {
   //background-color: #70706f;
   background-color: #ccdc3e;
   //color: #ccdc3e;
+}
+
+.strut-surface .index {
+  background-color: #443C4D;
+  color: #ccdc3e;
 }
 
 .strut-surface .titre1, .strut-surface .titre2 {
@@ -177,8 +193,8 @@ ul.sub {
           $w = (int) substr($width, 0, strlen($width) - 2);
           $h = (int) substr($height, 0, strlen($height) - 2);
           $alpha = $alpha + $delta;
-          $datax = $ox + $rayon * cos($alpha) + $w / 2;
-          $datay = $oy + $rayon * sin($alpha) + $h / 2;
+          $datax = $ox + $rayon * cos($alpha) *1.2 + $w / 2;
+          $datay = $oy + $rayon * sin($alpha) *.9+ $h / 2;
       } else {
           $datax = $slide->getAttribute('data-x');
           $datay = $slide->getAttribute('data-y');
@@ -199,24 +215,27 @@ ul.sub {
 
       echo '<div class="step future" data-state="'.$datastate.'" data-x="'.$datax.'" data-y="'.$datay.'" data-scale="'.$datascale.'" id="'.$id."\"\n";
       echo ' style="'.$style."\">\n";
-      echo '<div class="bg-solid-lavender slideContainer '.$datastate.'" style="width:'.$width.'; height:'.$height.";\">\n";
+      echo ' <div class="bg-solid-lavender slideContainer '.$datastate.'" style="width:'.$width.'; height:'.$height.";\">\n";
 
-      echo "<div class=\"componentContainer florain\" style=\"top: 38px; left: 41px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;\">\n";
-      echo "<div class=\"transformContainer\" style=\"-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)\">\n";
-      echo "<div style=\"font-size: 128px;\" class=\"antialias\">\n";
+      echo "  <div class=\"componentContainer florain\" style=\"top: 38px; left: 41px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;\">\n";
+      echo "   <div class=\"transformContainer\" style=\"-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)\">\n";
+      echo "    <div style=\"font-size: 128px;\" class=\"antialias\">\n";
+      echo '     <table width="'.$width.'" cellspacing="20" cellpadding="20" border="1"><tbody><tr>';
+      echo '      <td class="florain" valign="top"><font face="'.$steelfish.'", sans-serif\">&nbsp;Le Florain</font></td>';
+      echo '      <td valign="top"><span  style="font-size: 58px;"><font color="#ffffff"><b>'.$title.'</b></font></span></td>';
+      echo '     </tr></tbody></table>';
+      echo "  </div></div></div>\n\n";
 
-      echo '<table width="'.$width.'" cellspacing="20" cellpadding="20" border="1"><tbody><tr>';
-      echo '<td class="florain" valign="top"><font face="'.$steelfish.'", sans-serif\">&nbsp;Le Florain</font></td>';
-      echo '<td valign="top"><span  style="font-size: 58px;"><font color="#ffffff"><b>'.$title.'</b></font></span></td>';
-      echo '</tr>  </tbody></table>';
+      echo "  <div class=\"componentContainer\" style=\"top: 43px; left: 948px; width: 148.7947444174683px; height: 149.45312824232437px;\">\n";
+      echo "   <div class=\"transformContainer\" style=\"-webkit-transform: scale(, ); -moz-transform: scale(, ); transform: scale(, )\">\n";
+      echo "    <img src=\"presentation_files/logo-monnaie.svg\" style=\"width: 100%; height: 100%\">\n";
+      echo "  </div></div>\n\n";
 
-      // echo '<font face="'.$steelfish.", sans-serif\">&nbsp;Le Florain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></font>\n";
-      echo "</div></div></div>\n\n";
-
-      echo "<div class=\"componentContainer\" style=\"top: 43px; left: 948px; width: 148.7947444174683px; height: 149.45312824232437px;\">\n";
-      echo "<div class=\"transformContainer\" style=\"-webkit-transform: scale(, ); -moz-transform: scale(, ); transform: scale(, )\">\n";
-      echo "<img src=\"presentation_files/logo-monnaie.svg\" style=\"width: 100%; height: 100%\">\n";
-      echo "</div></div>\n\n";
+      echo "  <div class=\"componentContainer index\" style=\"top: ".((int)$height-77)."px; left: ".((int)$width-105)."px;\">\n";
+      echo "   <div class=\"transformContainer\" style=\"-webkit-transform: scale(, ); -moz-transform: scale(, ); transform: scale(, )\">\n";
+      echo "    <div style=\"font-size: 64px; align:center;\" class=\"antialias\">\n";
+      echo "    <p>&nbsp;".($pos+1)."</p>\n";
+      echo "  </div></div></div>\n\n";
 
       /*
       echo "<div class=\"componentContainer titre1\" style=\"top: 250px; left: 153px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;\">\n";
@@ -229,7 +248,7 @@ ul.sub {
       echo "<div class=\"componentContainer texte\" style=\"top: 250px; left: 100px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;\">\n";
       echo "<div class=\"transformContainer\" style=\"-webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); transform: scale(1, 1)\">\n";
       echo "<div style=\"font-size: 36px;\" class=\"antialias\">\n";
-      echo '<font face="'.$ubuntu.', sans-serif">'.$text."</font><br>\n";
+      echo '<font face="'.$ubuntu.', sans-serif">'.$text."<br/></font>\n";
       echo "</div></div></div>\n\n";
 
       echo "</div></div>\n\n\n";
