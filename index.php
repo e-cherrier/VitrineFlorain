@@ -41,7 +41,47 @@ ol.carousel-indicators li.active {
 $header = new Header();
 $header->display();
 ?>
-      <section id="accueil" class="main styleAcceuil right dark fullscreen">
+
+<section id="accueil" class="main style1 left red fullscreen">
+  <div class="content box style1">
+          
+    <header>
+      <h2>COVID-19</h2>
+      <h4>Solidarité avec les commerces locaux</h4>
+    </header>
+    
+    <div class="anniv menu" >
+      <div>
+        <p>La crise sanitaire qui s’ajoute à la crise climatique et sociale vient accentuer l’importance de la résilience économique des territoires locaux. Un certain nombre de commerces et associations adhérents au Florain traversent actuellement des difficultés bien compréhensibles.
+
+        <br/><br/>La crise économique et financière qui s’amorce confirme notre analyse : oui la monnaie locale est un des outils essentiels de résilience des territoires !
+        </p>
+      </div>
+      <footer>
+      <ul>
+        <li><a href="http://beta.monnaielocalenancy.fr/2020/03/23/solidarite-avec-les-commerces-locaux/" class="button">Lire l'article</a></li>	
+      </ul>
+      </footer>
+    </div>
+      <img src="http://beta.monnaielocalenancy.fr/wp-content/uploads/Image-Solidarit%C3%A9-Florain-300x300.png"/>
+    
+    
+      <footer>
+      <ul>
+        <li><a href="http://beta.monnaielocalenancy.fr/2020/03/23/solidarite-avec-les-commerces-locaux/" class="button">Les partenaires du Florain ouverts</a></li>	
+      </ul>
+      </footer>
+
+  </div>
+  <footer>
+    <a href="#agrees" class="button style2 down anchored">More</a>
+  </footer>
+</section>
+
+
+
+
+      <section id="agrees" class="main styleAcceuil right dark fullscreen">
         <div class="content box style1">
           <br/><h2> Les derniers acteurs agréés </h2>
 <div id="myCarousel" class="carousel slide">
@@ -412,6 +452,7 @@ while(x=eval(x));
 
                   </strong>enrichit le réseau d'acteurs professionnels du Florain</li>
                   <li>Le groupe <strong><a>Evènements</a></strong> organise et assure la présence du Florain aux manifestations du territoire.</li>
+                  <li>Le groupe <strong><a>Informatique</a></strong> étudie les outils diponibles pour mettre en place la dématerialisation.</li>
 
         </div>
         <a href="#medias" class="button style2 down anchored">Next</a>
@@ -531,7 +572,6 @@ while(x=eval(x));
       <script src="assets/js/main.js"></script>
       <script src="assets/js/main2.js"></script>
       
-      <!--
     <script>
     	function hideMessage() {
           $('.crowdf').fadeOut(600);
@@ -550,12 +590,12 @@ while(x=eval(x));
 				$('body').append('<a class="crowdf nav fa-angle-up nav scrollTo"> <p><b><font size="+2">Assemblée générale</font></b><br/> <font size="+1"><b> le 3 septembre 2017</b><br/> 15h à la MJC des 3 maisons<br> Nouveaux statuts,<br> projet de gouvernance...<br> Soyons nombreux,<br> parlez en autour de vous.<br> <b><font size="+2">Fête de lancement</font><br> le 7 Octobre 2017</b><br> 14h - minuit<br> <i><font size="-1">Le lieu sera communiqué<br> ultérieurement</font></i><br> le Florain sera émis,<br> de nombreux partenaires<br> seront présents!</p> </a>');
 				$('body').append('<a class="phone ban_tel"> <b> <font size="+1"> <font size="+2"> Assemblée générale </font> le 3 septembre 2017 <br/> <font size="+2"> Fête de lancement </font> le 7 Octobre 2017 </font> </b> </a>');
 
-$('body').append('<footer class="crowdf"><p>&nbsp;Le Florain à besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/formulaires/1/widget" class="button styleDon">Je fais un don</a></footer>');
-  $('body').append('<footer class="phone ban_tel"><p>&nbsp;Le Florain à besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/formulaires/1/widget" class="button styleDon">Je fais un don</a></footer>');
-*/
-
 $('body').append('<footer class="crowdf"><p>&nbsp;Contribuez à faire grandir le Florain.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.zeste.coop/fr/faire-grandir-le-florain" class="button styleDon">Financement participatif sur Zeste</a></footer>');
   $('body').append('<footer class="phone ban_tel"><p>&nbsp;Contribuez à faire grandir le Florain.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.zeste.coop/fr/faire-grandir-le-florain" class="button styleDon">Financement participatif sur Zeste</a></footer>');
+*/
+$('body').append('<footer class="crowdf"><p>&nbsp;Le Florain à besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/formulaires/1/widget" class="button styleDon">Je fais un don</a></footer>');
+  $('body').append('<footer class="phone ban_tel"><p>&nbsp;Le Florain à besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/formulaires/1/widget" class="button styleDon">Je fais un don</a></footer>');
+
 
         /* au scroll dans la fenetre */
 			  $(window).scroll(function(){
@@ -600,7 +640,6 @@ $('body').append('<footer class="crowdf"><p>&nbsp;Contribuez à faire grandir le
 		});
 
 		</script>
-    -->
     <!--
      <script>
         var Images = new Array('images/accueil.png', 'images/cerclevertueux.png');
