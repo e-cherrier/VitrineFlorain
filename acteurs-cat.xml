@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 14 mars 2020" 
-  sstitre="Mise à jour du 14 mars 2020 www.florain.fr pour la dernière version" 
+<categories    titre ="Liste des acteurs agréés au 17 mai 2020" 
+  sstitre="Mise à jour du 17 mai 2020 www.florain.fr pour la dernière version" 
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert." 
   localisation="du Sud de la Meurthe et Moselle" 
   slogan="La monnaie qui crée du lien!">
@@ -1173,7 +1173,17 @@
         telephone="" 
         message="" />
     </scat>
-    <scat type="Maisons des jeunes et de la culture">
+    <scat type="Associations d'éducation populaire">
+      <acteur date="15-05-2020" 
+        siteweb="" 
+        image="foyerfrolois.jpg" 
+        titre="Foyer Rural de Frolois" 
+        bref="Animation Lien Social" 
+        desc="Animation et développement de la vie du village, visant à créer des liens entre les habitants pour mieux se connaître, partager ses idées et ses expériences et élaborer collectivement des actions ou activités." 
+        adresse="12 impasse du Château, Frolois" 
+        latitude="6.123555" 
+        longitude="48.565013" 
+        telephone="06 31 14 24 32" />
       <acteur date="22-09-2019" 
         siteweb="www.mjc3maisons.fr" 
         image="defaut.jpg" 
@@ -1428,6 +1438,17 @@
       </acteur>
     </scat>
     <scat type ="Tourisme, Vacances, WE">
+      <acteur date="17-05-2020" 
+        siteweb="fb LaCompagnieDesAnes" 
+        image="lacompagniedesanes.jpg" 
+        titre="La Compagnie des Anes" 
+        bref="randonnées, environnement" 
+        desc="Animations nature, accueil de groupes, balades avec les ânes et chèvres. Découverte faune et flore. Education à l'environnement. Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations." 
+        citation="" 
+        adresse="161 rue de Nancy, Eulmont" 
+        telephone="06 82 13 29 16" 
+        latitude="6.223756" 
+        longitude="48.749592" />
       <acteur date="02-10-2019" 
         siteweb="" 
         image="defaut.jpg" 
@@ -1819,16 +1840,6 @@
         telephone="03 83 30 63 00" 
         latitude="6.177522" 
         longitude="48.69596" />
-      <acteur date="13-10-2019" 
-        siteweb="www.so-authentic.com" 
-        image="soauthentic.jpg" 
-        titre="So Authentic" 
-        bref="Savonnerie, Cosmétiques" 
-        desc="Savonnerie artisanale, et fabrication de produits cosmétiques naturels à bas d'ingrédients bio et locaux." 
-        adresse="1 rue de la cour, 54760 Leyr" 
-        telephone="06 32 06 38 57" 
-        latitude="6.265191" 
-        longitude="48.799813" />
       <acteur date="1018" 
         siteweb="www.cultures-et-partages.fr" 
         image="defaut.jpg" 
@@ -2115,7 +2126,6 @@
   </categorie>
   <categorie type ="Et aussi...">
     <scat>
-
       <acteur date="14-03-2020" 
         siteweb="aupulso.fr" 
         image="defaut.jpg" 
@@ -2239,7 +2249,6 @@
         telephone="09 86 42 96 98" 
         message="" 
         citation="" />
-
       <acteur date="0518" 
         siteweb="www.sos-futur.fr" 
         image="sosfutur.jpg" 
@@ -2253,32 +2262,6 @@
         telephone="03 72 47 04 49" 
         message="" 
         citation="" />
-
-      <acteur date="0518" 
-        siteweb="www.classe4.fr" 
-        image="classe4.jpg" 
-        titre="CLASSE 4" 
-        bref="Formation continue - Eco-construction" 
-        type="Architectes" 
-        desc="Formation continue pour les acteurs professionnels du cadre bâti à la qualité environnementale et à l'éco-construction" 
-        adresse="12 Grande Rue 55140 Burey-la-Cote" 
-        latitude="5.668779" 
-        longitude="48.562927" 
-        telephone="03 29 90 86 00" 
-        message="" 
-        citation="" />
-
-      <acteur date="0518" 
-        siteweb="www.presle-architectes.com" 
-        image="presle.jpg" 
-        titre="atelier PRESLE architectes" 
-        bref="Architectes" 
-        desc="Architectes" 
-        adresse="50 Rue Raymond Poincaré, Nancy" 
-        latitude="6.169833" 
-        longitude="48.689544" 
-        telephone="06 74 28 99 38" 
-        message="" />
       <acteur date="0518" 
         siteweb="www.xipio.fr" 
         image="xipio.jpg" 
@@ -2355,7 +2338,15 @@
   </categorie>
   <categorie type ="S'engager">
     <scat>
-
+      <acteur date="15-05-2020" 
+        siteweb="colibris-nancy.fr" 
+        image="colibris.jpg" 
+        titre="Colibris Nancy" 
+        bref="Inspirer-Relier-Soutenir" 
+        desc="Un Mouvement facilitateur de la transition citoyenne, pour inventer des formes de vie respectueuses de la nature et de l'être humain." 
+        citation="" 
+        adresse="" 
+        telephone="06 41 38 59 43" />
       <acteur date="14-03-2020" 
         siteweb="fb OLA-Organisation-Locale-dAutosuffisance-Nancy" 
         image="defaut.jpg" 
