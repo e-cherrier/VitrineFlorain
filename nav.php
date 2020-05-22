@@ -16,9 +16,11 @@ class Header
         <!-- Nav -->
             <nav id="nav" class="desktop">
               <ul>
-                <li><a href="index.php#monnaie">Une Monnaie locale citoyenne</a>
+                <li><a href="index.php#monnaie">Pourquoi ?</a>
                       <ul>
-                        <li> <a href="index.php#monnaie">Pourquoi ?</a></li>
+                        <li> <a href="index.php#monnaie">Pourquoi une Monnaie locale citoyenne?</a></li>
+                        <li> <a href="index.php#comment">Comment ca marche ?</a></li>
+
                         <li> <a href="http://beta.monnaielocalenancy.fr/bienvenue-a-la-rencontre-de-notre-future-monnaie-citoyenne/notre-charte/">Notre Charte</a></li>
                         <li> <a href="http://beta.monnaielocalenancy.fr/bienvenue-a-la-rencontre-de-notre-future-monnaie-citoyenne/statuts-de-lassociation">Les statuts de l'association</a></li>
                         <li> <a href="documents.php">Télécharger les plaquettes, logos et bien plus...</a></li>

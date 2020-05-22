@@ -331,9 +331,54 @@ $header->display();
 
           <a rel="noopener noreferrer" target="_blank" href="http://monnaie-locale-complementaire.net/">Site Monnaie locale complémentaire</a> -
               <a rel="noopener noreferrer" target="_blank" href="https://mrmondialisation.org/la-monnaie-locale-cest-quoi/">Infographie </a></p>
-          <footer><a target="_blank" class="button icon first" href="#orga">Les groupes de travail</a><footer>
+          <footer><a target="_blank" class="button icon first" href="#comment">Et concretement ?</a><footer>
         </div>
-        <a href="#orga" class="button style2 down anchored">Next</a>
+        <a href="#comment" class="button style2 down anchored">Next</a>
+      </section>
+
+
+      <section id="comment" class="main style2 left fullscreen">
+        <div class="content box style1 ">
+          <header>
+            <h2>Comment ca marche ?</h2>
+          </header>
+	        <h3>Le Florain, qu'est-ce que c'est ?</h3>
+          <p>Le Florain est une Monnaie Locale Citoyenne  et Complémentaire à l'Euro qui circule sur Nancy et le Sud de la Meurthe-et-Moselle depuis octobre 2017.
+          <br/>
+          Sa valeur est très simple:
+          1 Florain =  1 Euro.
+          <br/>
+          Cette monnaie n'est utilisable que dans le réseau des entreprises et associations adhérentes
+          au Florain. A consulter <a href="acteurs.php">ici</a>.</p>
+          <h3>Oui, mais à quoi ça sert?</h3>
+          <p>A chaque fois que je dépense un Florain, je consomme auprès d'un acteur local qui partage des valeurs de solidarité et de respect des êtres humains et de leur environnement.
+<br/>
+Je contribue à renforcer l'économie locale, puisque ces acteurs sont également incités à re-dépenser dans le réseau les Florains qu'ils recoivent.
+<br/>
+Je favorise ainsi la consommation en circuits-courts auprès d'acteurs engagés.</p>
+<p>Tous les euros échangés sont placés sur un compte de réserve à la <a href="https://www.lanef.com">Nef</a>, une coopérative financière qui partage les valeurs du Florain.
+La Nef s'engage à investir, sur le territoire du Florain, le double de la valeur du fonds de réserve dans des projets correspondants à nos valeurs.
+          <h3>Je me lance!</h3>
+          <h4>J'adhère à l'association</h4>
+          <p>
+          Coût de l'adhésion annuelle: Adultes: entre 5 et 50 euros. Mineurs de moins de 16 ans: entre 1 et 50 euros. Le montant est au libre choix de chaque personne.
+          <br/>
+          <h4>Je convertis mes euros en Florains</h4>
+          <p>contre des coupures de 1, 2, 5, 10 et 20 Florains dans les comptoirs de change à retrouver <a href="change.php">ici</a></p>
+          <h4>Je fais circuler mes Florains dans le réseau:  </h4>
+          <p>
+          - à consulter en ligne <a href="acteurs.php">ici</a><br/>
+          - ou des annuaires locaux à imprimer
+          <a href="annuaire.php?edition=Lun%C3%A9ville">Lunéville</a>,
+          <a href="annuaire.php?edition=Nancy">Nancy</a>,
+          <a href="annuaire.php?edition=Pont-%C3%A0-Mousson">Pont-à-Mousson</a> et 
+          <a href="annuaire.php?edition=Toul">Toul</a><br/>
+          - un <a href="annuaire.php?type=Livret">catalogue</a> complet et détaillé<br/>
+          - une <a href="carte.php">carte interactive </a>
+          </p>
+            
+        </div>
+        <a href="#orga" class="button style3 down anchored">Next</a>
       </section>
 
       <!-- One -->
@@ -593,8 +638,8 @@ while(x=eval(x));
 $('body').append('<footer class="crowdf"><p>&nbsp;Contribuez à faire grandir le Florain.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.zeste.coop/fr/faire-grandir-le-florain" class="button styleDon">Financement participatif sur Zeste</a></footer>');
   $('body').append('<footer class="phone ban_tel"><p>&nbsp;Contribuez à faire grandir le Florain.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.zeste.coop/fr/faire-grandir-le-florain" class="button styleDon">Financement participatif sur Zeste</a></footer>');
 */
-$('body').append('<footer class="crowdf"><p>&nbsp;Le Florain à besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/formulaires/1/widget" class="button styleDon">Je fais un don</a></footer>');
-  $('body').append('<footer class="phone ban_tel"><p>&nbsp;Le Florain à besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/formulaires/1/widget" class="button styleDon">Je fais un don</a></footer>');
+$('body').append('<footer class="crowdf"><p>&nbsp;Le Florain a besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/formulaires/1/widget" class="button styleDon">Je fais un don</a></footer>');
+  $('body').append('<footer class="phone ban_tel"><p>&nbsp;Le Florain a besoin de votre soutien.&nbsp;&nbsp;<span style="color:red;" class=" icon fa-angle-double-left" onclick="hideMessage()"/></p><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J\'adhère</a><a href="https://www.helloasso.com/associations/le-florain/formulaires/1/widget" class="button styleDon">Je fais un don</a></footer>');
 
 
         /* au scroll dans la fenetre */
