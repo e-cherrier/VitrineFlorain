@@ -57,20 +57,8 @@ $header->display();
         <br/><br/>La crise économique et financière qui s’amorce confirme notre analyse : oui la monnaie locale est un des outils essentiels de résilience des territoires !
         </p>
       </div>
-      <footer>
-      <ul>
-        <li><a href="http://beta.monnaielocalenancy.fr/2020/03/23/solidarite-avec-les-commerces-locaux/" class="button">Lire l'article</a></li>	
-      </ul>
-      </footer>
     </div>
       <img src="http://beta.monnaielocalenancy.fr/wp-content/uploads/Image-Solidarit%C3%A9-Florain-300x300.png"/>
-    
-    
-      <footer>
-      <ul>
-        <li><a href="http://beta.monnaielocalenancy.fr/2020/03/23/solidarite-avec-les-commerces-locaux/" class="button">Les partenaires du Florain ouverts</a></li>	
-      </ul>
-      </footer>
 
   </div>
   <footer>
@@ -185,13 +173,6 @@ $header->display();
       <span class="sr-only">Next</span>
     </a>
   </div>
-      <footer>
-	<ul class="style2">
-   <li>  <a href="#recap" class="button style2">En savoir plus</a></li>
-   <li>  <a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button style2">J'adhère en ligne</a></li>
-	
-	</ul>
-      </footer>
   </div>
   
   </div>
@@ -219,8 +200,7 @@ $header->display();
       <footer>
 	<ul class="style2">
   <li>  <a href="#readhesion" class="button style2">(ré)adhésion</a></li>
-	 <li>  <a href="http://beta.monnaielocalenancy.fr/que-puis-je-faire/" class="button style2">Bénévolat</a></li>
-	 <li>  <a href="#contact" class="button style2">Contact Pros</a></li>
+	 <li>  <a href="#contact" class="button style2">Contact</a></li>
 	 <li>  <a href="http://beta.monnaielocalenancy.fr/lettredinformations" class="button style2">Recevoir les info</a></li>
 	</ul>
       </footer>
@@ -327,10 +307,8 @@ $header->display();
           </header>
 
           <h3>Monnaie locale et acte de liberté citoyenne.</h3><br>
-          <p class="onecolumn">Une monnaie locale citoyenne permet de relocaliser l'économie, de rendre les citoyens maîtres de leurs échanges, acteurs du fonctionnement de leur économie et libres d'en définir les valeurs. <br> Pour plus d'informations sur les monnaies locales et sur leur rôle dans le système économique actuel :<br>
-
-          <a rel="noopener noreferrer" target="_blank" href="http://monnaie-locale-complementaire.net/">Site Monnaie locale complémentaire</a> -
-              <a rel="noopener noreferrer" target="_blank" href="https://mrmondialisation.org/la-monnaie-locale-cest-quoi/">Infographie </a></p>
+          <p class="onecolumn">Une monnaie locale citoyenne permet de relocaliser l'économie, de rendre les citoyens maîtres de leurs échanges, acteurs du fonctionnement de leur économie et libres d'en définir les valeurs.
+</p>
           <footer><a target="_blank" class="button icon first" href="#comment">Et concretement ?</a><footer>
         </div>
         <a href="#comment" class="button style2 down anchored">Next</a>
@@ -362,6 +340,8 @@ La Nef s'engage à investir, sur le territoire du Florain, le double de la valeu
           <h4>J'adhère à l'association</h4>
           <p>
           Coût de l'adhésion annuelle: Adultes: entre 5 et 50 euros. Mineurs de moins de 16 ans: entre 1 et 50 euros. Le montant est au libre choix de chaque personne.
+          <span style="float:right;"><a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs" class="button styleDon">J'adhère en ligne</a><span>
+
           <br/>
           <h4>Je convertis mes euros en Florains</h4>
           <p>contre des coupures de 1, 2, 5, 10 et 20 Florains dans les comptoirs de change à retrouver <a href="change.php">ici</a></p>
@@ -378,129 +358,7 @@ La Nef s'engage à investir, sur le territoire du Florain, le double de la valeu
           </p>
             
         </div>
-        <a href="#orga" class="button style3 down anchored">Next</a>
-      </section>
-
-      <!-- One -->
-      <section id="orga" class="main style2 left fullscreen">
-        <div class="content box style1">
-          <header>
-            <h2>GROUPES DE TRAVAIL</h2>
-          </header>
-	  <p>Pour échanger sur la monnaie locale à Nancy, vous pouvez vous <b><a href="http://beta.monnaielocalenancy.fr/lettredinformations">inscrire à la lettre d'informations</a></b> ou rejoindre un groupe thématique :</p>
-
-	    <!--
-            <li>Le groupe <strong>
-<script type="text/javascript">
-//<![CDATA[
-!--
-var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
-"=92){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o" +
-".substr(0,ol);}f(\")701,\\\"LFN]QL020\\\\_S310\\\\030\\\\530\\\\200\\\\200\\"+
-"\\530\\\\S200\\\\220\\\\020\\\\700\\\\200\\\\700\\\\G@:*/=3130\\\\gz310\\\\" +
-"3!&2:2p*>8#9-i-+f7!7! 4QQ^630\\\\g700\\\\\\\\\\\\TC_A420\\\\120\\\\nCV100\\" +
-"\\WNBJDLDFEJHFK@Nqqp\\\\\\\\~nky771\\\\uJqcg~bh4bxgche%Z8bfpi 730\\\\A^S420" +
-"\\\\520\\\\530\\\\300\\\\730\\\\700\\\\300\\\\]600\\\\730\\\\520\\\\200\\\\" +
-"330\\\\610\\\\300\\\\710\\\\\\\"(f};o nruter};))++y(^)i(tAedoCrahc.x(edoCra" +
-"hCmorf.gnirtS=+o;721=%y{)++i;l<i;0=i(rof;htgnel.x=l,\\\"\\\"=o,i rav{)y,x(f" +
-" noitcnuf\")"                                                                ;
-while(x=eval(x));
-//--
-//]]>
-</script>
-
-
-            </strong> a pour r&ocirc;le de déterminer les valeurs portées par la monnaie locale et les conditions à remplir pour pouvoir commercer avec cette monnaie.</li>
-	    -->
-            <li>Le groupe <strong>
-<script type="text/javascript">
-//<![CDATA[
-<!--
-var x="function f(x){var i,o=\"\",l=x.length;for(i=l-1;i>=0;i--) {try{o+=x.c" +
-"harAt(i);}catch(e){}}return o;}f(\")\\\"function f(x,y){var i,o=\\\"\\\\\\\""+
-"\\\\,l=x.length;for(i=0;i<l;i++){y%=127;o+=String.fromCharCode(x.charCodeAt" +
-"(i)^(y++));}return o;}f(\\\"\\\\\\\\\\\\024\\\\\\\\036\\\\\\\\021\\\\\\\\00" +
-"6\\\\\\\\031\\\\\\\\020\\\\\\\\030\\\\\\\\003V\\\\\\\\016\\\\\\\\010\\\\\\\\"+
-"022\\\\\\\\010\\\\\\\\030\\\\\\\\022n) ?e%numo7W.`of|e})sgybh|Exsp^rOOLBM@J" +
-"HKHFNBL@LI\\\\\\\\037TAh\\\\\\\\027\\\\\\\\026CQMV^\\\\\\\\001a\\\\\\\\034\\"+
-"\\\\\\\\\\\\\\//6\\\\\\\\\\\"\\\\'1#5h%/k+?!: 4r0;8;\\\\\\\\\\\"\\\\609:(41" +
-"1<C\\\\\\\\\\\\\\\\ \\\\\\\\013\\\\\\\\010\\\\\\\\013\\\\\\\\022\\\\\\\\006" +
-"\\\\\\\\000\\\\\\\\t\\\\\\\\n\\\\\\\\030\\\\\\\\004\\\\\\\\001\\\\\\\\001L^" +
-"\\\\\\\\023MV\\\\\\\\\\\\\\\\MGC\\\"\\\\,112)\\\"(f};)lo,0(rtsbus.o nruter}" +
-";)i(tArahc.x=+o{)--i;0=>i;1-l=i(rof}}{)e(hctac};l=+l;x=+x{yrt{)25=!)31/l(tA" +
-"edoCrahc.x(elihw;lo=l,htgnel.x=lo,\\\"\\\"=o,i rav{)x(f noitcnuf\")"         ;
-while(x=eval(x));
-//-->
-//]]>
-</script>
-
-                                                </strong> travaille actuellement
-                        <ul>
-                            <li>sur les outils de communication, la charte graphique,<li>
-                            <li>la ligne éditoriale du Florain.</li>
-                            <li>et la communication autour du projet en général.</li>
-                        </ul>
-
-
-				</li>
-            <li>Le groupe <strong>
-<script type="text/javascript">
-//<![CDATA[
-<!--
-var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
-"x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av" +
-" r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!64{)rt{y+xx=l;=+;" +
-"lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\" +
-"\"(7),4\\\"\\\\2=W;34\\\\0 \\\\)oe>35\\\\0P\\\\77\\\\1`\\\\gt3v01\\\\\\\\yQ" +
-"r. g20\\\\02\\\\02\\\\\\\\25\\\\07\\\\01\\\\\\\\33\\\\03\\\\01\\\\\\\\\\\\r" +
-"3\\\\00\\\\\\\\25\\\\00\\\\00\\\\\\\\06\\\\07\\\\00\\\\\\\\O!3R13\\\\06\\\\" +
-"01\\\\\\\\02\\\\0n\\\\\\\\\\\\04\\\\03\\\\03\\\\\\\\\\\\r1\\\\02\\\\\\\\23\\"+
-"\\0n\\\\\\\\\\\\03\\\\0C\\\\26\\\\04\\\\00\\\\\\\\1@41:(,(4,'#  4r: ?!k+%/5" +
-"h1#\\\\'\\\\\\\"6\\\\//\\\\\\\\\\\\\\\\34\\\\0B\\\\c3tn27\\\\0t\\\\\\\\\\\\" +
-"\\\\\\\\\\\\\\\\&Y13\\\\06\\\\03\\\\\\\\7Y01\\\\\\\\26\\\\02\\\\03\\\\\\\\2" +
-"2\\\\04\\\\03\\\\\\\\24\\\\04\\\\03\\\\\\\\16\\\\0r\\\\\\\\\\\\02\\\\00\\\\" +
-"00\\\\\\\\16\\\\03\\\\00\\\\\\\\10\\\\06\\\\00\\\\\\\\\\\\tt\\\\\\\\\\\\10\\"+
-"\\0$\\\\06\\\\01\\\\00\\\\\\\\17\\\\01\\\\00\\\\\\\\,1*85.7>00\\\\\\\\&2; 5" +
-"!?k\\\\;\\\\\\\"$\\\\&-5h02\\\\\\\\!u7#c,}#7b02\\\\\\\\QPOYKS1O03\\\\\\\\[B" +
-"^QRGK_\\\"\\\\f(;} ornture;}))++(y)^(iAtdeCoarchx.e(odrChamCro.fngriSt+=;o2" +
-"7=1y%2;*=)yy)7+(4i>f({i+)i+l;i<0;i=r(foh;gten.l=x,l\\\"\\\\\\\"\\\\o=i,r va" +
-"){,y(x fontincfu)\\\"\")"                                                    ;
-while(x=eval(x));
-//-->
-//]]>
-</script>
-
-              </strong> a pour r&ocirc;le de déterminer et de monter la structure juridique de la monnaie locale à Nancy et de proposer un mode de gouvernance citoyen.</li>
-                <li>Le groupe <strong>
-<script type="text/javascript">
-//<![CDATA[
-<!--
-var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
-"x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av" +
-" r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!84{)rt{y+xx=l;=+;" +
-"lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\" +
-"\"(5),4\\\"\\\\AIFKSL\\\\rD\\\\2V03\\\\\\\\\\\\r5\\\\02\\\\\\\\17\\\\04\\\\" +
-"00\\\\\\\\\\\\n6\\\\00\\\\\\\\26\\\\03\\\\02\\\\\\\\01\\\\07\\\\01\\\\\\\\7" +
-"`17\\\\\\\\00\\\\0(\\\\+?6108! !3*p8>9#i-+-7f7! !Q4}QZ,e?22\\\\0t\\\\\\\\\\" +
-"\\25\\\\07\\\\01\\\\\\\\[Z5$00\\\\\\\\20\\\\0[\\\\\\\\r0\\\\02\\\\\\\\34\\\\"+
-"00\\\\02\\\\\\\\36\\\\0n\\\\\\\\\\\\02\\\\04\\\\01\\\\\\\\17\\\\04\\\\00\\\\"+
-"\\\\06\\\\04\\\\01\\\\\\\\01\\\\06\\\\00\\\\\\\\10\\\\03\\\\01\\\\\\\\13\\\\"+
-"06\\\\01\\\\\\\\\\\"\\\\\\\\\\\\22\\\\05\\\\00\\\\\\\\7-2<.>9+t'\\\\\\\\$0=" +
-"&7#!u 9\\\"\\\\\\\\\\\\$+3j03\\\\\\\\#{1!a*3!00\\\\\\\\34\\\\05\\\\02\\\\\\" +
-"\\WRM_EQ3A03\\\\\\\\]@\\\\W\\\\\\\\E\\\\AL\\\\I(\\\"}fo;n uret}r);+)y+^(i)t" +
-"(eAodrCha.c(xdeCoarChomfrg.intr=So+7;12%=;y=2y*))+y45>((iif){++;i<l;i=0(ior" +
-";fthnglex.l=\\\\,\\\\\\\"=\\\",o iar{vy)x,f(n ioctun\\\"f)\")"               ;
-while(x=eval(x));
-//-->
-//]]>
-</script>
-
-                  </strong>enrichit le réseau d'acteurs professionnels du Florain</li>
-                  <li>Le groupe <strong><a>Evènements</a></strong> organise et assure la présence du Florain aux manifestations du territoire.</li>
-                  <li>Le groupe <strong><a>Informatique</a></strong> étudie les outils diponibles pour mettre en place la dématerialisation.</li>
-
-        </div>
-        <a href="#medias" class="button style2 down anchored">Next</a>
+        <a href="#medias" class="button style3 down anchored">Next</a>
       </section>
 
       <!-- One -->
@@ -551,7 +409,7 @@ while(x=eval(x));
         <div class="content container">
           <header>
             <h2>Nous contacter.</h2>
-            <p>Utilisez ce formulaire pour toute demande d'informations. Vous pouvez également communiquer directement avec <strong><a href="#orga" class="anchored">les groupes de travail thématiques</a></strong>.</p>
+            <p>Utilisez ce formulaire pour toute demande d'informations.</a></strong>.</p>
           </header>
           <div class="box container 75%">
 

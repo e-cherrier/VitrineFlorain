@@ -34,8 +34,8 @@ class Header
                         </li>
                       </ul>
                 </li>
-                <li><a href="change.php">Où me les procurer?</a></li>
-                <li><a href="acteurs.php">Où les dépenser?</a>
+                <li><a href="change.php">Où me les procurer ?</a></li>
+                <li><a href="acteurs.php">Où les dépenser ?</a>
                   <ul>
                     <li> <a href="acteurs.php">la liste détaillée</a></li>
                     <li> <a>les annuaires de poche</a>
@@ -50,13 +50,14 @@ class Header
                     <li> <a href="carte.php">la carte</a></li>
                   </ul>
                 </li>
-                <li><a href="http://blog.florain.fr">Actualités</a></li>
+                <li><a href="http://beta.monnaielocalenancy.fr">Actualités</a></li>
+                <li><a href="index.php#contact">Contacts</a></li>
+
                 <li><a><span class="icon fa fa-bars"></span></a>
                   <ul>
-                    <li><a href="index.php#contact">Contacts</a></li>
                     <li><a target="_blank" href="https://www.facebook.com/LeFlorain" class="icon fa-facebook">  Facebook</a></li>
                     <li><a target="_blank" href="https://twitter.com/LeFlorain" class="icon fa-twitter"> Twitter</a></li>
-		  </ul>
+		              </ul>
                 </li>
               </ul>
             </nav>
@@ -67,7 +68,8 @@ class Header
                     <li><a href="change.php"><span class="icon fa fa-calculator"></span>  Où me les procurer?</a></li>
                     <li><a href="acteurs.php"><span class="icon fa fa-server"></span>  Où les dépenser?</a></li>
                     <li><a href="carte.php"><span class="icon fa fa-compass"></span>  La carte</a></li>
-                    <li><a href="http://blog.florain.fr">Actualités</a></li>
+                    <li><a href="http://beta.monnaielocalenancy.fr">Actualités</a></li>
+                    <li><a href="index.php#contact">Contacts</a></li>
                   </ul>
                 </li>
               </ul>
