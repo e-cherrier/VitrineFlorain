@@ -183,6 +183,7 @@ function is_hidden($cat, $cat_displayed)
                   $bref = $acteur->getAttribute('bref');
                   $desc = $acteur->getAttribute('desc');
                   $adresse = $acteur->getAttribute('adresse');
+                  $tel = $acteur->getAttribute('telephone');
 
                   $p = <<<EOD
                   <acteur class="$acteur_class">
@@ -202,6 +203,12 @@ EOD;
                   <p>$adresse</p>
 EOD;
                   echo $p;
+                  if ($tel !== "") {
+                      $p = <<<EOD
+                      <p>$tel</p>
+EOD;
+                      echo $p;
+                  }
                   if ($acteur->hasAttribute('siteweb')) {
                       $siteweb = $acteur->getAttribute('siteweb');
                       $p = <<<EOD

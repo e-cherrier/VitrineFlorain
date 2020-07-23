@@ -18,6 +18,8 @@ include 'nav.php';
     <link rel="stylesheet" href="assets/css/style_accueil.css" />
     <link rel="stylesheet" href="assets/css/nav.css" />
     <link rel="stylesheet" href="assets/css/bs_carousel.css" />
+    <link rel="stylesheet" href="style.css" />
+
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
@@ -88,7 +90,7 @@ $header->display();
 
       $today = new DateTime();
       $today->setTimestamp(time());
-      $oneMonthAgo = $today->sub(DateInterval::createFromDateString('2 month'));
+      $oneMonthAgo = $today->sub(DateInterval::createFromDateString('4 month'));
 
       for ($a = 0; $a < $nb_acteurs; ++$a) {
           $acteur = $acteurs[$a];

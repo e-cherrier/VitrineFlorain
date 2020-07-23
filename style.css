@@ -110,8 +110,14 @@ acteur p {
 	color: #000000;
 	line-height: 1.25em;
 }
-acteur p.message {
+
+acteur.comptoir p.message {
 	color: #fff;
+	font-weight: bold;
+}
+
+acteur.commerce p.message {
+	color: #c1a544;
 	font-weight: bold;
 }
 
