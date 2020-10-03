@@ -3,7 +3,6 @@
 require 'fpdf/fpdf.php';
 require 'fpdf/categorie.php';
 require 'fpdf/marche.php';
-require 'fpdf/card.php';
 include 'pix_tools.php';
 
 $light = 1;
@@ -207,11 +206,6 @@ class Annuaire extends FPDF
     public $nbSubPages = 4; // A page is split in 4 ssPages containing 2 columns each => 8 columns
     public $subPage = 0; // Current ssPage
     public $topSubPage = 3; // Ordinate of sub page start
-
-    public function color( $i ) {
-        global $areaColor;
-        return [$areaColor[$i][0]*256,$areaColor[$i][1]*256,$areaColor[$i][2]*256] ;
-    }
 
     public function Header()
     {
@@ -753,149 +747,6 @@ class AnnuaireFiches extends Annuaire
     public function GetColumnWidth()
     {
         return $this->GetPageWidth() - $this->colMargin * 2;
-    }
-}
-
-
-class PolygonCards extends Annuaire {
-    
-    public $bottomMargin = 20;
-    public $colMargin = 10;
-    public $cellHeight = 5;
-    public $marginLeft = 10;
-    
-    
-    public function PrintAnnuaire($x, $town)
-    {
-        $this->doc = $x;
-        $this->PrintCards($x);
-
-        $this->PrintEvenements($x, 'carte');
-
-        $this->addPage();
-        $b = new ValuesBoard( $this, $x );
-        $b->display();
-
-        $this->addPage();
-        $b = new Plateau( $this, $x );
-        $b->display();
-
-        $this->reset_attributes($x);
-    }
-
-    
-    public function PrintEvenements($x, $tag) {
-        $evts = $x->getElementsByTagName($tag);
-        $nb_evts = $evts->length;
-        
-        $template = new EvenementCardTemplate( $this );
-
-        for ($e = 0; $e < $nb_evts; ++$e) {
-            $evt = $evts[$e];
-            $idE = fmod( $e, $template->nbPerPage);
-            $myE = new EvenementCardRecto($this, $evt, $template);
-            $myE->display( $idE );
-            if( $idE == $template->nbPerPage-1 ) {
-                // display the back
-                for( $i = 0; $i < $template->nbPerPage; $i++ ) {
-                    
-                    $myE = new EvenementCardVerso(
-                        $this, $evts[$e-$template->nbPerPage+$i+1], $template
-                    );
-                    $myE->display( $i );
-                }
-            }
-        }
-    }
-
-    public function PrintCards($x)
-    {
-        global $slogan;
-        $nbPage = 1;
-        $a = 0;
-        $skip = 0;
-        $acteurs = $x->getElementsByTagName('acteur');
-        $nb_acteurs = $acteurs->length;
-        $indexes = range(0, $nb_acteurs - 1);
-        shuffle($indexes);
-        $template = new PolygonCardTemplate0( $this );
-        $nb_max = $nbPage * $template->nbPerPage;
-        for ($a = 0; $a < $nb_acteurs; ++$a) {
-            if( $a - $skip == $nb_max ) {
-               break;
-            }
-            $acteur = $acteurs[$indexes[$a]];
-
-            $image = $acteur->getAttribute('image');
-            if( $image === "defaut.jpg" ) {
-                $skip++;
-                continue;
-            }
-
-            $idA = fmod( $a-$skip, $template->nbPerPage);
-            $myA = new PolygonCard($this, $acteur, $template);
-            $myA->display( $idA );
-            if( $idA == $template->nbPerPage-1 ) {
-                // display the back
-                for( $i = 0; $i < $template->nbPerPage; $i++ ) {
-                    
-                    $myE = new EmptyPolygonCard(
-                        $this, $slogan, $template
-                    );
-                    $myE->display( $i );
-                }
-            }
-
-        }
-
-
-        $template = new PolygonCardTemplate90( $this );
-        $nb_max2 = $nbPage * $template->nbPerPage;
-        $skip2 = 0;
-        for (; $a < $nb_acteurs; ++$a) {
-            if( $a - $skip - $nb_max - $skip2 == $nb_max2 ) {
-               break;
-            }
-            $acteur = $acteurs[$indexes[$a]];
-
-            $image = $acteur->getAttribute('image');
-            if( $image === "defaut.jpg" ) {
-                $skip2++;
-                continue;
-            }
-
-            $idA = fmod( $a-$skip- $nb_max-$skip2, $template->nbPerPage);
-            $myA = new PolygonCard($this, $acteur, $template);
-            $myA->display( $idA );
-            if( $idA == $template->nbPerPage-1 ) {
-                // display the back
-                for( $i = 0; $i < $template->nbPerPage; $i++ ) {
-                    
-                    $myE = new EmptyPolygonCard(
-                        $this, $slogan, $template
-                    );
-                    $myE->display( $i );
-                }
-            }
-
-        }
-    }
-    
-    public function NextPage()
-    {
-        $this->addPage();
-    }
-
-    // the column width is the half of the page without the margin size
-    // we have 3 margin: left,right and middle.
-    public function GetColumnWidth()
-    {
-        return ($this->GetPageWidth() - $this->colMargin * 3) / 2;
-    }
-
-    public function GetSubPageWidth()
-    {
-        return $this->GetColumnWidth() * 2 + $this->colMargin;
     }
 }
 
@@ -1744,9 +1595,6 @@ if ($type == 'Poche') {
 } elseif ($type == 'Compact') {
     $a = new AnnuaireCompact();
     $filename = $filename.' - format compact.pdf';
-}elseif ($type == 'Polygons') {
-    $a = new PolygonCards();
-    $filename = $filename.' - polygones.pdf';
 } else {
     $a = new AnnuaireFiches();
     $filename = $filename.' - format fiches.pdf';
@@ -1761,13 +1609,8 @@ $a->AddFont('FreeScript', '', 'FREESCPT.php');
 $a->SetTopMargin(1);
 $a->SetAutoPageBreak(false, $a->bottomMargin);
 
-
 $xmlDoc = new DOMDocument();
-if ($type == 'Polygons') {
-   $xmlDoc->load('cartesJeu.xml');
-} else {
-   $xmlDoc->load('acteurs-cat.xml');
-}
+$xmlDoc->load('acteurs-cat.xml');
 
 $x = $xmlDoc->documentElement;
 $title = utf8_decode($x->getAttribute('titre'));
