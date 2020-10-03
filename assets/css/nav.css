@@ -96,6 +96,11 @@
 	line-height: 3em;
 }
 
+#nav.dark {
+
+	position: relative;
+}
+
 	#nav ul {
 		margin: 0;
 	}

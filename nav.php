@@ -40,14 +40,14 @@ class Header
                     <li> <a href="acteurs.php">la liste détaillée</a></li>
                     <li> <a>les annuaires de poche</a>
                       <ul>
-                        <li> <a target="_blank" href="annuaire.php?edition=Lunéville">Edition de Lunéville</a></li>
-                        <li> <a target="_blank" href="annuaire.php?edition=Nancy">Edition de Nancy</a></li>
-                        <li> <a target="_blank" href="annuaire.php?edition=Pont-à-Mousson">Edition de Pont-à-Mousson</a></li>
-                        <li> <a target="_blank" href="annuaire.php?edition=Toul">Edition de Toul</a></li>
-                        <li> <a target="_blank" href="annuaire.php?edition=Badonviller">Edition de Badonviller</a></li>
+                        <li> <a href="annuaire.php?edition=Lunéville">Edition de Lunéville</a></li>
+                        <li> <a href="annuaire.php?edition=Nancy">Edition de Nancy</a></li>
+                        <li> <a href="annuaire.php?edition=Pont-à-Mousson">Edition de Pont-à-Mousson</a></li>
+                        <li> <a href="annuaire.php?edition=Toul">Edition de Toul</a></li>
+                        <li> <a href="annuaire.php?edition=Badonviller">Edition de Badonviller</a></li>
                       </ul>
                     </li>
-                    <li> <a target="_blank" href="annuaire.php?type=Livret">l'annuaire en livret</a></li>
+                    <li> <a href="annuaire.php?type=Livret">l'annuaire en livret</a></li>
                     <li> <a href="carte.php">la carte</a></li>
                   </ul>
                 </li>
@@ -82,14 +82,24 @@ EOD;
 
     public function display_acteurs_nav()
     {
-        $p = <<<EOD
-	    <div  class="actions dark desktop" >
-               <a id="press_liste" href="acteurs.php" class="button style2 icon first">Liste</a>
-               <a id="press_carte" href="carte.php" class="button style2 icon first">Carte</a>
-               <a id="press_comptoirs" href="change.php" class="button style2 icon first">Comptoirs</a>
-               <a id="press_imprim" target="_blank" href="annuaire.php?type=Compact" class="button style2 icon first">Annuaire de Poche</a>
-               <a id="press_annuaire" target="_blank" href="annuaire.php?type=Livret" class="button style2 icon first">Annuaire en Livret</a>
-            </div>
+      $p = <<<EOD
+        <nav id="nav" class="actions dark desktop">
+          <ul>
+            <li> <a id="press_liste" href="acteurs.php" class=" style2 icon first">Liste</a> </li>
+            <li> <a id="press_carte" href="carte.php" class=" style2 icon first">Carte</a></li>
+            <li> <a id="press_comptoirs" href="change.php" class=" style2 icon first">Comptoirs</a></li>
+            <li> <a id="press_imprim" target="_blank" class=" style2 icon first">Annuaires de Poche</a>
+              <ul>
+                <li> <a href="annuaire.php?edition=Lunéville" class=" style2 icon first">Edition de Lunéville</a></li>
+                <li> <a href="annuaire.php?edition=Nancy" class=" style2 icon first">Edition de Nancy</a></li>
+                <li> <a href="annuaire.php?edition=Pont-à-Mousson" class=" style2 icon first">Edition de Pont-à-Mousson</a></li>
+                <li> <a href="annuaire.php?edition=Toul" class=" style2 icon first">Edition de Toul</a></li>
+                <li> <a href="annuaire.php?edition=Badonviller" class=" style2 icon first">Edition de Badonviller</a></li>
+              </ul>
+            </li>
+            <li> <a id="press_annuaire" target="_blank" href="annuaire.php?type=Livret" class=" style2 icon first">Annuaire en Livret</a></li>
+          </ul>
+        </nav>
 EOD;
         echo $p;
     }
