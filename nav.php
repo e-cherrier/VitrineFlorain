@@ -44,6 +44,7 @@ class Header
                         <li> <a target="_blank" href="annuaire.php?edition=Nancy">Edition de Nancy</a></li>
                         <li> <a target="_blank" href="annuaire.php?edition=Pont-à-Mousson">Edition de Pont-à-Mousson</a></li>
                         <li> <a target="_blank" href="annuaire.php?edition=Toul">Edition de Toul</a></li>
+                        <li> <a target="_blank" href="annuaire.php?edition=Badonviller">Edition de Badonviller</a></li>
                       </ul>
                     </li>
                     <li> <a target="_blank" href="annuaire.php?type=Livret">l'annuaire en livret</a></li>

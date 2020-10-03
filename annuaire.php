@@ -39,6 +39,7 @@ $towns = array(
     new Ville('Tezey-St-Martin', 6.294456, 48.900973, 30, 'Poche', 'BL'),
     new Ville('Colombey-les-Belles', 5.897124, 48.528123),
     new Ville('Vézelise', 6.092136, 48.481914, 30, 'Poche', 'B'),
+    new Ville('Badonviller', 6.893152, 48.498444, 50, 'Poche', 'B'),
     //new Ville('Commercy', 5.591207, 48.762711),
     //new Ville('Baccarat', 6.740270, 48.450055),
     //new Ville('Bayon', 6.313295, 48.476239),
@@ -1681,7 +1682,7 @@ class AnnuaireCompact extends AnnuairePoche
  * les editions speciales:
  * Elles simplifient la gestion des parametres de geolocalisation pour les editions des groupes locaux et determinent
  * le type de format adapte en fonction du nombre d'acteurs concernes.
- * edition=Nancy|Toul|Pont-à-Mousson|Lunéville
+ * edition=Nancy|Toul|Pont-à-Mousson|Lunéville|Badonviller
  *
  * le parametre output
  * - pour ne pas creer un fichier systematiquement sur le disque local, mettre ce parametre a vide.
@@ -1784,6 +1785,8 @@ if ($edition == 'toutes') {
     $town = findTown('Pont-à-Mousson');
     $a->PrintAnnuaire($x, $town);
     $town = findTown('Lunéville');
+    $a->PrintAnnuaire($x, $town);
+    $town = findTown('Badonviller');
     $a->PrintAnnuaire($x, $town);
 
     $a->PrintOrphans($x);
