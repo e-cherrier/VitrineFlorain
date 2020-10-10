@@ -1,23 +1,26 @@
 <?php
  
 // Get values from the form
-$name=$_POST['name'];
-$prenom=$_POST['prenom'];
+$name=trim($_POST['name']);
+$prenom=trim($_POST['prenom']);
 $phone=$_POST['phone'];
 $email=$_POST['email'];
 $calcul=$_POST['calcul'];
 $monmessage= trim($_POST['message']);
 
+if( substr_count( $name, $prenom ) != 0 || substr_count( $prenom, $name ) ) {
+  print "<script>document.location.href='erreur.php?message=Filtre Anti Spam: noms identiques</p>&page=index.php#contact';</script>";
+} else
 if( strlen( $monmessage ) == 0 )
 {
   print "<script>document.location.href='erreur.php?message=Desole! Veuillez saisir votre message&page=index.php#contact';</script>";
 } else {
 if( substr_count( $monmessage, "http") != 0 ) {
-  print "<script>document.location.href='erreur.php?message=Filtre Anti Spam: Votre message ne doit pas contenir de lien, merci.</p><p>veuillez supprimer l'entete http.&page=index.php#contact';</script>";
+  print "<script>document.location.href='erreur.php?message=Filtre Anti Spam: Votre message ne doit pas contenir de lien, merci.<p>veuillez supprimer l'entete http.</p>&page=index.php#contact';</script>";
 
 } else
 if( $calcul != "2" && $calcul != "deux") {
-  print "<script>document.location.href='erreur.php?message=Filtre Anti Robots:</p><p>Veuillez saisir le resultat de un plus un. SVP.&page=index.php#contact';</script>";
+  print "<script>document.location.href='erreur.php?message=Filtre Anti Robots:<p>Veuillez saisir le resultat de un plus un. SVP.</p>&page=index.php#contact';</script>";
 } else {
 
   $to = "contact@florain.fr";
