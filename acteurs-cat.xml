@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 3 octobre 2020"
-  sstitre="Mise à jour du 3 octobre 2020 www.florain.fr pour la dernière version"
+<categories    titre ="Liste des acteurs agréés au 10 octobre 2020"
+  sstitre="Mise à jour du 10 octobre 2020 www.florain.fr pour la dernière version"
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert."
   localisation="du Sud de la Meurthe et Moselle"
   slogan="La monnaie qui crée du lien!">
@@ -212,7 +212,7 @@
         bref="Paysan-Herboriste"
         desc="Production de plantes aromatiques et médicinales, tisanes, sirops, sel et huiles aromatisées, aromates naturels, huile de soin, plants à repiquer."
         citation=""
-        adresse="3 rue de l'église, 54118 Moyen"
+        adresse="3 rue de l'église, 54110 Moyen"
         telephone="06 89 98 12 75"
         latitude="6.56793"
         longitude="48.483714" />
@@ -398,7 +398,7 @@
         telephone="06 78 11 43 65"
         message=""
         citation="La production de jus et de confitures n'est pas mon activité principale, mais je suis fière de pouvoir commercialiser ces bons produits naturels ( non traités) en florains pour régaler petits et grands, développer une économie locale, circulaire, et non financiarisée!! " />
-      
+
 
 
       <acteur date="1018"
@@ -574,7 +574,7 @@
         titre="Brasserie Tumulte"
         bref="Bière artisanale"
         desc="La Brasserie Tumulte est une fabrique de bières qui cultive ses houblons (en partie pour l'instant) et ses levures. Nos bières (bio pour la plupart) se veulent des bières de consommation courante sans concession: des styles de bière originaux et affirmés sans en faire des bières à déguster avec parcimonie. Régalez vous!"
-        adresse="19 grande rue 54129 Magnières"
+        adresse="19 Grande Rue 54120 Magnières"
         telephone="06 84 77 33 89"
         latitude="6.565955"
         longitude="48.445157" />
@@ -705,7 +705,8 @@
         adresse="88 rue du Val de Fer, 54230 Neuves Maison"
         telephone="06 12 24 15 29"
         latitude="6.107991"
-        longitude="48.626437" />
+        longitude="48.626437"
+        edition="toutes" />
       <acteur siteweb="facebook restomobilesamregalelespapilles"
         image="samregalelespapilles.jpg"
         titre="Sam Régale Les Papilles"
@@ -729,7 +730,8 @@
         defi="Travail sur réduction des déchets"
         telephone="06 52 00 29 04"
         latitude="6.17137"
-        longitude="48.66919" />
+        longitude="48.66919"
+        edition="toutes" />
     </scat>
     <scat type="AMAP">
       <acteur date="14-03-2020"
@@ -799,7 +801,7 @@
     </scat>
   </categorie>
   <marches type ="Les Marchés">
-    <scat id="sotres"
+    <scat_en_attente id="sotres"
       image="sotres.jpg"
       titre="à Sotrés et Potailloux"
       bref="Marché"
@@ -1116,7 +1118,10 @@
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations."
         citation=""
         adresse="entre Chaillon et Heudicourt"
-        telephone="07 83 52 82 51" />
+        telephone="07 83 52 82 51"
+        latitude="5.663479"
+        longitude="48.937868"
+        edition="toutes" />
       <acteur date="16-02-2020"
         siteweb=""
         image="defaut.jpg"
@@ -1301,7 +1306,8 @@
         adresse="161 rue de Nancy, Eulmont"
         telephone="06 82 13 29 16"
         latitude="6.223756"
-        longitude="48.749592" />
+        longitude="48.749592"
+        edition="toutes" />
       <acteur date="0418"
         anniv="oui"
         siteweb="lacasavictoria.fr"
@@ -1314,7 +1320,8 @@
         latitude="6.184349"
         longitude="48.690618"
         telephone="06 22 53 09 75"
-        message="" />
+        message=""
+        edition="toutes" />
       <acteur date="0718"
         siteweb="www.colline-soleole.com"
         image="soleole.jpg"
@@ -1325,8 +1332,9 @@
         adresse="Route de Bezaumont, 54380 Landremont"
         latitude="6.12537145615"
         longitude="48.8552139955"
-        telephone="03.83.23.64.26"
-        message="" />
+        telephone="03 83 23 64 26"
+        message=""
+        edition="toutes" />
     </scat>
   </categorie>
   <categorie type ="Prendre soin de soi">
@@ -1629,6 +1637,28 @@
   </categorie>
   <categorie type ="S'habiller, s'équiper">
     <scat>
+      <acteur date="10-10-2020"
+        siteweb="7PLIS.fr "
+        image="7plis.jpg"
+        titre="7PLIS"
+        bref="skateboard recyclé"
+        desc="Accessoires en skateboard recyclé. Lunettes, montre, couteau, bague, boucle d'oreille, stylo, jeu d'échecs, clé USB etc..."
+        citation=""
+        adresse="12 avenue de Montréal, 54280 Seichamps"
+        telephone="06 47 53 12 45"
+        latitude="6.258808"
+        longitude="48.715694" />
+      <acteur date="10-10-2020"
+        siteweb="zdtev.fr"
+        image="zdtev.jpg"
+        titre="Zéro Déchet Tout Est Valorisé"
+        bref="Valorisation du textile"
+        desc="Projet de développement d'une structure d'insertion qui valorise les déchets textiles des blanchisseries industrielles pour créer des objets utiles venant en remplacement des objets à usages uniques."
+        citation=""
+        adresse="24 cours Léopold, Nancy"
+        telephone="06 58 32 81 00"
+        latitude="6.17752"
+        longitude="48.694389" />
       <acteur date="14-03-2020"
         siteweb="www.idprojets.com"
         image="defaut.jpg"
