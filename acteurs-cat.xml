@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 10 octobre 2020"
-  sstitre="Mise à jour du 10 octobre 2020 www.florain.fr pour la dernière version"
+<categories    titre ="Liste des acteurs agréés au 11 décembre 2020"
+  sstitre="Mise à jour du 11 décembre 2020 www.florain.fr pour la dernière version"
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert."
   localisation="du Sud de la Meurthe et Moselle"
   slogan="La monnaie qui crée du lien!">
@@ -39,7 +39,7 @@
         telephone="03 83 63 17 43"
         latitude="5.868088"
         longitude="48.780505" />
-      <acteur date="16-02-2020"
+      <acteur date="27-11-2020"
         siteweb=""
         image="grainesdessentiel.jpg"
         titre="Graines d'Essentiel"
@@ -498,8 +498,8 @@
         marche="vandoeuvre"
         titre="La Ferme de Marie"
         type="Alimentation"
-        bref="Volaille et Porc BIO"
-        desc="Elodie propose des volailles: Poulets, pintades, dindes, poulardes... ainsi que du porc élevé en plein air et ses charcuteries. Elodie est présente au marché de Vandoeuvre le vendredi de 16h à 19h"
+        bref="Volaille BIO"
+        desc="Elodie propose des volailles: Poulets, pintades, dindes, poulardes... Elodie est présente au marché de Vandoeuvre le vendredi de 16h à 19h"
         adresse="2 r Derrière l'Eglise 54470 Grosrouvres"
         telephone="06 89 94 91 29"
         defi="Pérenniser l'activité"
@@ -662,6 +662,7 @@
       <acteur fete="oui"
         anniv="oui"
         siteweb="unpaindecote.free.fr"
+        comptoir="oui"
         image="un-pain-de-cote.jpg"
         titre="Un Pain de Côté"
         marche="maxeville"
@@ -671,7 +672,16 @@
         adresse="7, rue Saint Arnou 54690 Lay St Christophe"
         defi="Réactivité sur les commandes"
         latitude="6.191482543956"
-        longitude="48.7489453434" />
+        longitude="48.7489453434">
+        <h l="les vendredi"
+          t="17h30 - 19h30"/>
+        <h l=""
+          t="au fournil"/>
+        <h l="lors des distributions aux AMAP"
+          t=""/>
+        <h l="(Crapaud Sonneur et MJC Lorraine)"
+          t=""/>
+      </acteur>
       <acteur image="moulinpetitpoucet.jpg"
         marche="vandoeuvre"
         titre="Le Moulin du Petit Poucet"
@@ -875,6 +885,17 @@
   <categorie type ="Sortir">
     <scat type="Se restaurer et boire un verre">
 
+      <acteur date="27-11-2020"
+        siteweb="brasseurs2papilles.com"
+        image="brasseurs2papilles.jpg"
+        titre="Brasserie des Papilles"
+        bref="Bières artisanales bio Punch lorrain"
+        desc="Fabrication de bières artisanales et bio et de punch lorrain ! Location de tirage pression et futs. Vous pouvez aussi vous rendre à la brasserie pour venir visiter et découvrir les secrets de fabrication de nos elixirs. Venez également nous retrouver pour prendre l'art de la dégustation de la bière, idéal pour réunir vos équipes, amis, autour d'un atelier original!"
+        citation=""
+        adresse="45 rue de la Chapelle, Anthelupt"
+        telephone="06 66 71 81 96"
+        latitude="6.409233"
+        longitude="48.606896" />
       <acteur date="14-03-2020"
         siteweb=""
         image="defaut.jpg"
@@ -1110,6 +1131,28 @@
         telephone="03 83 55 53 35" />
     </scat>
     <scat type="Se cultiver, se divertir, se détendre">
+      <acteur date="11-12-2020"
+        siteweb="curionomie.fr"
+        image="curionomie.jpg"
+        titre="Curionomie"
+        bref="Escapades mystères personnalisées"
+        desc="Sorties découvertes atypiques, à réaliser en famille, entre amis ou entre collègues pour (re)découvrir la ville autrement. Curionomie propose une nouvelle approche du cadeau à offrir ou à s'offrir en même temps qu’une mise en valeur des pépites cachées de la ville."
+        citation="Agence évènementielle 100% locale, originale et responsable"
+        adresse="1 rue de la Vologne, Laxou"
+        telephone="06 45 34 21 91"
+        latitude="6.132542"
+        longitude="48.695428" />
+      <acteur date="27-11-2020"
+        siteweb="leverttygo.fr"
+        image="leverttygo.jpg"
+        titre="Le Vert t'y go!"
+        bref="Mixité, Solidarité, Créativité"
+        desc="Le Vert t'y go est un tiers-lieu alternatif et solidaire visant à fédérer toutes les initiatives locales afin de faciliter l'accueil et l'intégration des personnes venues d'ailleurs."
+        citation=""
+        adresse="222 avenue Général Leclerc, Nancy"
+        telephone="06 52 89 34 53"
+        latitude="6.173942"
+        longitude="48.673468" />
       <acteur date="14-03-2020"
         siteweb="www.sotresetpotailloux.fr"
         image="sotres.jpg"
@@ -1286,8 +1329,8 @@
         bref="Vente, achat, échange tous livres"
         desc="Votre bouquiniste achète, vend et échange tous livres (Selon état et besoin). On peut également déposer ceux qui ne seront pas repris afin de les donner dans une école Nancéenne. Celle-ci se charge de les vendre une somme minime. Cela permet de financer une sortie éducative ou faire l'acquisition de matériel pour l'école. Une maman d'élève se charge de passer chaque fin de semaine."
         adresse="Marché central 52 Rue Saint-Dizier, Nancy"
-        latitude="6.182779"
-        longitude="48.68936"
+        latitude="6.18323"
+        longitude="48.68961"
         telephone="06 68 85 83 02 "
         message=""
         citation="'Quand je pense à tous les livres qu'il me reste à lire, j'ai la certitude d'être encore heureux' Jules Renard">
@@ -1756,8 +1799,8 @@
         desc="Depuis 8 ans à Nancy et dans la région VET'ETHIC diffuse des vêtements issus du commerce équitable et agit avec ses coopérateurs militants pour la promotion de ce commerce équitable (Nord/Sud mais aussi local)"
         comptoir="oui"
         telephone="06 88 56 91 95"
-        latitude="6.183756"
-        longitude="48.689058"
+        latitude="6.18423"
+        longitude="48.688573"
         adresse="109 bis rue Saint-Dizier, Nancy"
         defi="Créer un second emploi">
         <h l="le lundi"
@@ -1836,6 +1879,17 @@
   </categorie>
   <categorie type ="Se meubler, décorer, aménager">
     <scat>
+      <acteur date="06-08-2020"
+        siteweb="desracinesetdesliens.fr"
+        image="desracinesetdesliens.jpg"
+        titre="Des Racines &amp; Des Liens"
+        bref="Jardins nourriciers pour l'Humain et la biodiversité"
+        desc="Nous proposons la création de jardins participatifs et pédagogiques à visée nourricière, pour l'Humain (jardins comestibles) et pour la biodiversité (la faune et la flore)."
+        citation="Développer grâce au Florain un circuit vertueux qui participe au développement des circuits courts et par là même occasion, à la diminution des émissions de gaz à effet de serre engendrés par les transports."
+        adresse="51 rue du colombier, Clémery"
+        latitude="6.186336"
+        longitude="48.892007"
+        telephone="06 61 03 79 82" />
       <acteur date="16-02-2020"
         siteweb="www.caroline-antoine.com"
         image="carolineantoine.jpg"
@@ -1946,15 +2000,31 @@
   </categorie>
   <categorie type ="Et aussi...">
     <scat>
-      <acteur date="06-08-2020"
-        siteweb=""
-        image="defaut.jpg"
-        titre="Des racines et des Liens"
-        bref="Accompagnement jardins partagés"
-        desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations."
+      <acteur date="11-12-2020"
+        siteweb="sehoruniversmusical.com"
+        image="sehoruniversmusical.jpg"
+        titre="SEHOR, L'univers Musical"
+        bref="Musique pour tous"
+        desc="Vulgarisation musicale et partage de la pratique de la musique pour renforcer lien social et le lien intergénérationnel, la cohésion d’équipe, la confiance en soi et le développement personnel."
         citation=""
         adresse=""
-        telephone="06 61 03 79 82" />
+        telephone="06 06 83 87 22" />
+      <acteur date="14-11-2020"
+        siteweb="5f9c45885054f.site123.me"
+        comptoir="oui"
+        image="nosmondes.jpg"
+        titre="Nos MondeS"
+        bref="Créations Artisanat Art"
+        desc="La boutique Nos MondeS offre une large palette de créations locales artisanales et d'artisanat d'art pour tous les budgets: végétaux, bijoux, vêtements et accessoires femmes et enfants, objets déco, saveurs sucrées, peinture, photo, art graphique..."
+        citation=""
+        adresse="10 rue Montesquieu, Nancy"
+        telephone=""
+        latitude="6.185486"
+        longitude="48.6908">
+
+        <h l="du mercredi au samedi"
+          t="13h00 - 19h00"/>
+      </acteur>
       <acteur date="14-03-2020"
         siteweb="aupulso.fr"
         image="defaut.jpg"
