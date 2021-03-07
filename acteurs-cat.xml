@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 11 décembre 2020"
-  sstitre="Mise à jour du 11 décembre 2020 www.florain.fr pour la dernière version"
+<categories    titre ="Liste des acteurs agréés au 7 mars 2021"
+  sstitre="Mise à jour du 7 mars 2021 www.florain.fr pour la dernière version"
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert."
   localisation="du Sud de la Meurthe et Moselle"
   slogan="La monnaie qui crée du lien!">
@@ -873,13 +873,13 @@
       bref="Marché"
       type="Marché"
       code="2"
-      desc="les vendredi de 16h à 19h"
+      desc="les vendredi de 14h à 17h30"
       adresse="  "
       latitude="6.1737"
       longitude="48.6653"
       message_comptoir="Assuré par des bénévoles du Florain.">
       <h l="le vendredi"
-        t="16h00 - 19h00"/>
+        t="14h00 - 17h30"/>
     </scat>
   </marches>
   <categorie type ="Sortir">
@@ -1235,11 +1235,11 @@
         siteweb="www.fifnl.com"
         image="ayeayevo.jpg"
         titre="Aye Aye VO"
-        bref="Cinéma, éducation à l'image"
-        desc="Festival International du Film de Nancy (30 août - 8 septembre 2019) / en direction de tout public. Festival de la Petite école du film court (fin mai - début juin), pour les scolaires et centres de loisirs. Education à l'image."
-        adresse="44 b rue Hermite, Nancy"
-        latitude="6.172591"
-        longitude="48.69899"
+        bref="Festival, cinéma, éducation à l'image"
+        desc="Festival International du Film de Nancy (27 août - 5 septembre 2021) / en direction de tout public. Festival de la Petite école du film court (novembre 2021), pour les scolaires et centres de loisirs. Education à l'image."
+        adresse="9 rue Michel Ney, Nancy"
+        latitude="6.172114"
+        longitude="48.697051"
         telephone="03 83 30 50 61"
         message=""
         citation="" />
@@ -1339,6 +1339,18 @@
       </acteur>
     </scat>
     <scat type ="Tourisme, Vacances, WE">
+
+      <acteur date="07-03-2021"
+        siteweb=""
+        image="baladesetbotanique.jpg"
+        titre="Balades &amp; Botanique"
+        bref="balades, plantes sauvages"
+        desc="Je propose, entre Nancy et Metz inclus, des balades de découvertes des plantes sauvages: comestibles, orchidées, patrimoniales, sauvages en ville (un peu comme le programme 'sauvages dans ma rue'). Je propose en plus des ateliers de cuisine sauvage en lien avec les comestibles sauvages. J'essaie de faire un lien aussi entre les plantes et l'histoire locale quand c'est possible."
+        citation=""
+        adresse="28 rue Pasteur, Pont-à-Mousson"
+        telephone="06 61 58 11 78"
+        latitude="6.051634"
+        longitude="48.903787" />
       <acteur date="17-05-2020"
         siteweb="fb LaCompagnieDesAnes"
         image="lacompagniedesanes.jpg"
@@ -1526,7 +1538,7 @@
         adresse="75 Avenue de Strasbourg, Nancy"
         latitude="6.191995"
         longitude="48.682416"
-        telephone="06.41.61.75.88"
+        telephone="06 41 61 75 88"
         message=""
         citation="J'adore la proximité, le côté petit commerçant qui se bats pour gagner sa vie. Cette monnaie locale, est un vrai bonus en tant que pro ou perso d'ailleurs." />
 
@@ -1537,10 +1549,10 @@
         titre="Bio Est Ethique"
         bref="Bio Estheticienne"
         desc="Beauté et bien-être au naturel Soins du visage et du corps, modelages et soins ayurvediques. Tous les soins sont doux pour la peau et doux pour la planète. Vente de cosmétiques bio et accessoires de beauté et de bien-être écologiques et zéro déchet."
-        adresse="14 avenue Général Leclerc 54700 Pont à Mousson"
-        latitude="6.061597"
-        longitude="48.906857"
-        telephone="06.81.24.49.40"
+        adresse="11 av. du Général Leclerc, Maidières"
+        latitude="6.043694"
+        longitude="48.901166"
+        telephone="06 81 24 49 40"
         message="" />
       <acteur date="16-02-2020"
         siteweb="www.claudelosteo.fr"
@@ -2195,6 +2207,17 @@
   </categorie>
   <categorie type ="S'engager">
     <scat>
+      <acteur date="07-03-2021"
+        siteweb="echogestes.org"
+        image="echogestes.jpg"
+        titre="Echogestes"
+        bref="Faire écho des bons gestes"
+        desc="Echogestes c'est: Repair Cafe, ateliers DIY, interventions dans les écoles, un collectif 'No Mégot', 2 stations de lavage de gobelets réutilisables, un projet de valorisation des masques jetables, des éco-préconisations pour les organisateurs d'événement et bien plus encore ..."
+        citation=""
+        adresse="75 av du 20ème Corps, Nancy"
+        telephone="06 27 34 10 93"
+        latitude="6.197311"
+        longitude="48.696789" />
       <acteur date="27-07-2020"
         siteweb="www.natureetprogres.org"
         image="natureetprogres.jpg"

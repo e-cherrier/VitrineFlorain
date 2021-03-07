@@ -74,114 +74,113 @@ $header->display();
       <section id="agrees" class="main styleAcceuil right dark fullscreen">
         <div class="content box style1">
           <br/><h2> Les derniers acteurs agréés </h2>
-<div id="myCarousel" class="carousel slide">
+          <div id="myCarousel" class="carousel slide">
 
-    <?php
+            <?php
 
-      $xmlDoc = new DOMDocument();
-      $xmlDoc->load('acteurs-cat.xml');
-      $x = $xmlDoc->documentElement;
+              $xmlDoc = new DOMDocument();
+              $xmlDoc->load('acteurs-cat.xml');
+              $x = $xmlDoc->documentElement;
 
-      $nouveaux = array();
-      $idx = 0;
+              $nouveaux = [];
+              $idx = 0;
 
-      $acteurs = $x->getElementsByTagName('acteur');
-      $nb_acteurs = $acteurs->length;
+              $acteurs = $x->getElementsByTagName('acteur');
+              $nb_acteurs = $acteurs->length;
 
-      $today = new DateTime();
-      $today->setTimestamp(time());
-      $oneMonthAgo = $today->sub(DateInterval::createFromDateString('4 month'));
+              $today = new DateTime();
+              $today->setTimestamp(time());
+              $oneMonthAgo = $today->sub(DateInterval::createFromDateString('4 month'));
 
-      for ($a = 0; $a < $nb_acteurs; ++$a) {
-          $acteur = $acteurs[$a];
-          $date = $acteur->getAttribute('date');
-          $aggDate = DateTime::createFromFormat('d-m-Y', $date);
-          if ($oneMonthAgo < $aggDate) {
-              $nouveaux[$idx] = $acteur;
-              $idx = $idx + 1;
-          }
-      }
+              for ($a = 0; $a < $nb_acteurs; ++$a) {
+                  $acteur = $acteurs[$a];
+                  $date = $acteur->getAttribute('date');
+                  $aggDate = DateTime::createFromFormat('d-m-Y', $date);
+                  if ($oneMonthAgo < $aggDate) {
+                      $nouveaux[$idx] = $acteur;
+                      $idx = $idx + 1;
+                  }
+              }
 
-      // <!-- Indicators -->
-      echo "<ol class='carousel-indicators'>\n";
-      echo "<li data-target='#myCarousel' data-slide-to='0' class='active'></li>\n";
-      for ($a = 1; $a < count($nouveaux); ++$a) {
-          echo "<li data-target='#myCarousel' data-slide-to='".$a."' ></li>\n";
-      }
-      echo "</ol>\n";
+              // <!-- Indicators -->
+              echo "<ol class='carousel-indicators'>\n";
+              echo "<li data-target='#myCarousel' data-slide-to='0' class='active'></li>\n";
+              for ($a = 1; $a < count($nouveaux); ++$a) {
+                  echo "<li data-target='#myCarousel' data-slide-to='".$a."' ></li>\n";
+              }
+              echo "</ol>\n";
 
-      $indexes = range(0, count($nouveaux) - 1);
-      shuffle($indexes);
-      // <!-- Wrapper for slides -->
-      echo "<div class='carousel-inner'>\n";
-      $acteur = $nouveaux[$indexes[0]];
-      $image = $acteur->getAttribute('image');
-      $titre = $acteur->getAttribute('titre');
-      $bref = $acteur->getAttribute('bref');
-      $desc = $acteur->getAttribute('desc');
-      $lenmax = 260;
-      if (strlen($desc) > $lenmax) {
-          $desc = substr($desc, 0, $lenmax - 7).' [...]';
-      }
-      $adresse = $acteur->getAttribute('adresse');
-      $siteweb = $acteur->getAttribute('siteweb');
-      echo "  <div class='item active'>\n";
-      echo "     <img src='images/acteurs/".$image."' alt='".$titre."'/>\n";
-      echo "     <div>\n";
-      echo "       <h3 align='left'>".$bref.'</h3>';
-      echo "       <h1 align='center'>".$titre.'</h1>';
-      echo '       <p >'.$desc."</p>\n";
-      echo "       <div class='coordonnees'>\n";
-      echo '         <p >'.$adresse."<br/>\n";
-      echo "         <a href='http://".$siteweb."'>".$siteweb."</a></p>\n";
-      echo "       </div>\n";
-      echo "     </div>\n";
-      echo "  </div>\n";
-      for ($a = 1; $a < count($nouveaux); ++$a) {
-          $acteur = $nouveaux[$indexes[$a]];
-          $image = $acteur->getAttribute('image');
-          $titre = $acteur->getAttribute('titre');
-          $bref = $acteur->getAttribute('bref');
+              $indexes = range(0, count($nouveaux) - 1);
+              shuffle($indexes);
+              // <!-- Wrapper for slides -->
+              echo "<div class='carousel-inner'>\n";
+              $acteur = $nouveaux[$indexes[0]];
+              $image = $acteur->getAttribute('image');
+              $titre = $acteur->getAttribute('titre');
+              $bref = $acteur->getAttribute('bref');
+              $desc = $acteur->getAttribute('desc');
+              $lenmax = 260;
+              if (strlen($desc) > $lenmax) {
+                  $desc = substr($desc, 0, $lenmax - 7).' [...]';
+              }
+              $adresse = $acteur->getAttribute('adresse');
+              $siteweb = $acteur->getAttribute('siteweb');
+              echo "  <div class='item active'>\n";
+              echo "     <img src='images/acteurs/".$image."' alt='".$titre."'/>\n";
+              echo "     <div>\n";
+              echo "       <h3 align='left'>".$bref.'</h3>';
+              echo "       <h1 align='center'>".$titre.'</h1>';
+              echo '       <p >'.$desc."</p>\n";
+              echo "       <div class='coordonnees'>\n";
+              echo '         <p >'.$adresse."<br/>\n";
+              echo "         <a href='http://".$siteweb."'>".$siteweb."</a></p>\n";
+              echo "       </div>\n";
+              echo "     </div>\n";
+              echo "  </div>\n";
+              for ($a = 1; $a < count($nouveaux); ++$a) {
+                  $acteur = $nouveaux[$indexes[$a]];
+                  $image = $acteur->getAttribute('image');
+                  $titre = $acteur->getAttribute('titre');
+                  $bref = $acteur->getAttribute('bref');
 
-          $desc = $acteur->getAttribute('desc');
-          if (strlen($desc) > $lenmax) {
-              $desc = substr($desc, 0, $lenmax - 7).' [...]';
-          }
-          $adresse = $acteur->getAttribute('adresse');
-          $siteweb = $acteur->getAttribute('siteweb');
-          echo "  <div class='item'>\n";
-          echo "    <img src='images/acteurs/".$image."' alt='".$titre."'/>\n";
-          echo "     <div>\n";
-          echo "       <h3 align='left'>".$bref.'</h3>';
-          echo "      <h1 align='center'>".$titre.'</h1>';
-          echo '      <p >'.$desc."</p>\n";
-          echo "      <div class='coordonnees'>\n";
-          echo '        <p >'.$adresse."<br/>\n";
-          echo "        <a href='http://".$siteweb."'>".$siteweb."</a></p>\n";
-          echo "      </div>\n";
-          echo "     </div>\n";
-          echo "  </div>\n";
-      }
-      echo "</div>\n";
-    ?>
+                  $desc = $acteur->getAttribute('desc');
+                  if (strlen($desc) > $lenmax) {
+                      $desc = substr($desc, 0, $lenmax - 7).' [...]';
+                  }
+                  $adresse = $acteur->getAttribute('adresse');
+                  $siteweb = $acteur->getAttribute('siteweb');
+                  echo "  <div class='item'>\n";
+                  echo "    <img src='images/acteurs/".$image."' alt='".$titre."'/>\n";
+                  echo "     <div>\n";
+                  echo "       <h3 align='left'>".$bref.'</h3>';
+                  echo "      <h1 align='center'>".$titre.'</h1>';
+                  echo '      <p >'.$desc."</p>\n";
+                  echo "      <div class='coordonnees'>\n";
+                  echo '        <p >'.$adresse."<br/>\n";
+                  echo "        <a href='http://".$siteweb."'>".$siteweb."</a></p>\n";
+                  echo "      </div>\n";
+                  echo "     </div>\n";
+                  echo "  </div>\n";
+              }
+              echo "</div>\n";
+            ?>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
   
-  </div>
+        </div>
         <footer>
           <a href="#recap" class="button style2 down anchored">More</a>
         </footer>
-  </section>
+      </section>
 
       <section id="recap" class="main style2 right dark fullscreen">
         <div class="content box style1">
@@ -193,8 +192,8 @@ $header->display();
 <h3>Depuis la fete de lancement le 7 octobre 2017, le Florain c'est:</h3>
 
 <h4>Un réseau de plus de 200 professionnels,</h4>
-<h4>12 comptoirs de change,</h4>
-<h4>110.000 Florains en circulation,</h4>
+<h4>16 comptoirs de change,</h4>
+<h4>140.000 Florains en circulation,</h4>
 <h4>des groupes locaux à Toul et Lunéville</h4>
 <br/>
 <h3>Vous aussi, entrez dans la dynamique !</h3>
@@ -288,12 +287,13 @@ $header->display();
       <section id="readhesion" class="main style2 right red fullscreen">
         <div class="content box style1">
           <header>
-          <h2>Campagne de ré-adhésion 2020.</h2>
+          <h2>Campagne de ré-adhésion 2021.</h2>
           </header>
-          <p>Qui dit nouvelle année dit ré-adhésion ! Nous vous invitons donc, si vous n'avez pas encore votre carte "2020", à vous rendre dans un <a href="http://www.monnaielocalenancy.fr/change.php">bureau de change</a> pour renouveler votre adhésion.<br/><b class="dark">&nbsp;NOUVEAU!&nbsp;</b> Vous pouvez également le faire en ligne en suivant <a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs">ce lien!</a></p>
+          <p>Qui dit nouvelle année dit ré-adhésion ! Nous vous invitons donc, si vous n'avez pas encore votre carte "2021", à vous rendre dans un <a href="http://www.monnaielocalenancy.fr/change.php">bureau de change</a> pour renouveler votre adhésion.<br/><b class="dark">&nbsp;NOUVEAU!&nbsp;</b> Vous pouvez également le faire en ligne en suivant <a href="https://www.helloasso.com/associations/le-florain/adhesions/le-florain-formulaire-d-adhesion-utilisateurs">ce lien!</a></p>
           <p>Comme les années passées, nous avons souhaité maintenir un montant minimum d'adhésion relativement modeste (5 €) pour permettre à chacun et chacune de s'inscrire dans la dynamique du Florain. Si vous en avez la possibilité et l'envie, n'hésitez surtout pas à adhérer pour un montant supérieur (maximum 50 €), les adhésions étant la principale source de financement de l'association !</p>
           <h4>le 1 % associatif se poursuit!</h4>
           <p>Lors de votre adhésion vous serez invité à <a href="http://www.monnaielocalenancy.fr/doc/UnPourCentAsso.pdf">choisir une association</a> qui recevra en fin d'année l'équivalent de 1% de ce que vous avez changé (des conversions Euros-Florains que vous aurez effectuées en 2020), sans que cela vous coûte quoi que ce soit. Tout est expliqué en détail <a href="http://beta.monnaielocalenancy.fr/2019/01/02/le-1-associatif-une-nouveaute-pour-2019">sur cet article.</a></p>
+          <p>En 2020 le Florain a versé grâce à vous plus de 800 euros à ses associations partenaires!</p>
         </div>
         <footer>
           <a href="#monnaie" class="button style2 down anchored">More</a>
