@@ -23,8 +23,10 @@
   <category id="fonct" title="Fonctionnement">
     <doc name="Charte de valeur" url="doc/Charte de Valeurs.pdf"
       desc="Charte de l'association, acceptée par chaque membre particulier comme professionnel."/>
-    <doc name="Statuts" url="doc/Statuts Florain - MAJ AG 2019.pdf"
-      desc="Statuts de l'association, votes à l'AG de janvier 2019."/>
+    <doc name="Statuts" url="doc/Statuts Florain - MAJ 2021.pdf"
+      desc="Statuts de l'association, votés à l'AG de février 2021."/>
+    <doc name="Rapport d'activité" url="doc/Rapport d activité 2020.pdf"
+      desc="Rapport d'activité 2020."/>
     <doc name="Les 36 points de fonctionnement" url="doc/Fonctionnement Florain.pdf"
       desc="Règles de fonctionnements du Florain."/>
   </category>
