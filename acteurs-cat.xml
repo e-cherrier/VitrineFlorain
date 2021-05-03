@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 7 mars 2021"
-  sstitre="Mise à jour du 7 mars 2021 www.florain.fr pour la dernière version"
+<categories    titre ="Liste des acteurs agréés au 3 mai 2021"
+  sstitre="Mise à jour du 3 mai 2021 www.florain.fr pour la dernière version"
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert."
   localisation="du Sud de la Meurthe et Moselle"
   slogan="La monnaie qui crée du lien!">
@@ -17,6 +17,28 @@
     longitude="48." />
   <categorie type="Se nourrir">
     <scat type="Épiceries">
+      <acteur date="03-05-2021"
+        siteweb=""
+        image="ofilduvrac.jpg"
+        titre="Ô fil du vrac"
+        bref="Épicerie vrac zéro déchet"
+        desc="Légumineuses, pâtes, riz, farines, thé, café, confiserie, miel, cosmétiques, droguerie, le tout en vrac et avec le maximum de producteurs locaux."
+        citation="Le local dans le bocal, facile chez Ô fil du vrac"
+        adresse="25 rue Maréchal leclerc, 54360 Blainville sur l'Eau"
+        telephone="06 50 41 62 23"
+        latitude="6.405851"
+        longitude="48.555545" />
+      <acteur date="03-05-2021"
+        siteweb="www.courtcircuitnancy.fr"
+        image="court-circuit.jpg"
+        titre="Court Circuit"
+        bref="Epicerie vrac bio local bar"
+        desc="Lieu de vie associant une épicerie de produits locaux et bio vendus en vrac ainsi qu'un espace café/bar. Ateliers, rencontre avec les producteurs, exposition d'artistes locaux."
+        citation=""
+        adresse="47 rue Voltaire, 54520 Laxou"
+        telephone="06 11 58 90 43"
+        latitude="6.161231"
+        longitude="48.681285" />
       <acteur date="20-09-2020"
         siteweb="FB Kalina.lorraine54"
         image="kalina.jpg"
@@ -1394,6 +1416,18 @@
   </categorie>
   <categorie type ="Prendre soin de soi">
     <scat>
+      <acteur date="03-05-2021"
+        siteweb="FB sophrocaudron"
+        fb="https://www.facebook.com/sophrocaudron"
+        image="ccsophrologue.jpg"
+        titre="Caroline Caudron"
+        bref="Sophrologue"
+        desc="Relaxation, gestion du stress et émotions, contre les troubles du sommeil, mieux être pour les défis du quotidien, préparation mentale, accompagnement à l'accouchement, connaissance de soi... Je propose des séances personnalisées en solo ou en groupe de sophrologie."
+        citation=""
+        adresse="13 bis rue de la croix gagnée, Nancy"
+        telephone="06 79 50 45 37"
+        latitude="6.159971"
+        longitude="48.699107" />
       <acteur date="27-07-2020"
         siteweb="pharmacie-des-3-forets.fr"
         image="pharmacie-des-3-forets.jpg"
@@ -2012,6 +2046,28 @@
   </categorie>
   <categorie type ="Et aussi...">
     <scat>
+      <acteur date="03-05-2021"
+        siteweb="www.aureliemarzoc.fr"
+        image="marzoc.jpg"
+        titre="Aurélie Marzoc"
+        bref="design graphique, éducation à environnement"
+        desc="Aurélie Marzoc est designer basée à Nancy et s’inspire dans les Vosges. Elle imagine et commercialise des outils pédagogiques à propos des environnements naturels, réalise des aménagements d'espace et crée des supports de communication visuelle."
+        citation=""
+        adresse="57 rue de lorraine, Nancy"
+        telephone="06 73 15 80 79"
+        latitude="6.167543"
+        longitude="48.660178" />
+      <acteur date="03-05-2021"
+        siteweb=""
+        image="communavenir.jpg"
+        titre="Comm' un avenir"
+        bref="Communication éco-responsable"
+        desc="Comm’ un avenir est une agence de communication éco-responsable engagée dans la transition écologique et solidaire. Elle propose des alternatives visant à réduire l'impact de la communication sur l'environnement, et s'adresse aux associations, entreprises, institutions publiques et autres organisations concrètement positionnées sur les questions environnementales."
+        citation=""
+        adresse="173, rue du Sergent Blandan, Nancy"
+        telephone="06 65 02 86 26"
+        latitude="6.172382"
+        longitude="48.672538" />
       <acteur date="11-12-2020"
         siteweb="sehoruniversmusical.com"
         image="sehoruniversmusical.jpg"
