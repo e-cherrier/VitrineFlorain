@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf8"?><?xml-stylesheet type="text/xsl" href="acteurs.xsl"?>
-<categories    titre ="Liste des acteurs agréés au 3 mai 2021"
-  sstitre="Mise à jour du 3 mai 2021 www.florain.fr pour la dernière version"
+<categories    titre ="Liste des acteurs agréés au 28 mai 2021"
+  sstitre="Mise à jour du 28 mai 2021 www.florain.fr pour la dernière version"
   comptoirs="L'adhésion à l'association et le retrait de Florains se font aux comptoirs de changes surlignés en vert."
   localisation="du Sud de la Meurthe et Moselle"
   slogan="La monnaie qui crée du lien!">
@@ -17,6 +17,28 @@
     longitude="48." />
   <categorie type="Se nourrir">
     <scat type="Épiceries">
+      <acteur date="14-05-2021"
+        siteweb="www.lesmalicesdesuzette.fr"
+        image="lesmalicesdesuzette.jpg"
+        titre="Les Malices de Suzette"
+        bref="Épicerie vivante"
+        desc="Les Malices de Suzette est une sorte de boutique 'Vivante', un concept 100% Local à Dombasle-sur-Meurthe. L'activité principale est la Vente en boutique et en ligne de produits du terroir de producteurs régionaux et objets d'artisanat d'art Lorrains. Et surtout, au cœur de ce projet, l'idée est de créer du lien entre les habitants et les acteurs locaux grâce à la rencontre, l'échange et le partage par le biais d'atelier et événements organisés au sein du magasin."
+        citation=""
+        adresse="14 rue Mathieu de Dombasle, 54110 Dombasle-sur-Meurthe"
+        telephone="09 81 14 85 87"
+        latitude="6.34754419327"
+        longitude="48.6257821472"
+        comptoir="oui">
+        <h l="le mardi" t="09h30 - 12h30"/>
+        <h l=""          t="14h30 - 18h30"/>
+        <h l="le mercredi" t="14h30 - 18h30"/>
+        <h l="le jeudi"  t="09h30 - 12h30"/>
+        <h l=""          t="14h30 - 19h30"/>
+        <h l="le vendredi" t="09h30 - 12h30"/>
+        <h l=""            t="14h30 - 18h30"/>
+        <h l="le samedi" t="09h30 - 12h30"/>
+        <h l=""          t="14h30 - 18h30"/>
+      </acteur>
       <acteur date="03-05-2021"
         siteweb=""
         image="ofilduvrac.jpg"
@@ -38,7 +60,10 @@
         adresse="47 rue Voltaire, 54520 Laxou"
         telephone="06 11 58 90 43"
         latitude="6.161231"
-        longitude="48.681285" />
+        longitude="48.681285"
+        comptoir="oui">
+        <h l="du mardi au samedi" t="10h00 - 20h00"/>
+      </acteur>
       <acteur date="20-09-2020"
         siteweb="FB Kalina.lorraine54"
         image="kalina.jpg"
@@ -1417,17 +1442,14 @@
   <categorie type ="Prendre soin de soi">
     <scat>
       <acteur date="03-05-2021"
-        siteweb="FB sophrocaudron"
         fb="https://www.facebook.com/sophrocaudron"
         image="ccsophrologue.jpg"
         titre="Caroline Caudron"
         bref="Sophrologue"
         desc="Relaxation, gestion du stress et émotions, contre les troubles du sommeil, mieux être pour les défis du quotidien, préparation mentale, accompagnement à l'accouchement, connaissance de soi... Je propose des séances personnalisées en solo ou en groupe de sophrologie."
         citation=""
-        adresse="13 bis rue de la croix gagnée, Nancy"
-        telephone="06 79 50 45 37"
-        latitude="6.159971"
-        longitude="48.699107" />
+        adresse="consultation à domicile, visio et cabinet."
+        telephone="06 79 50 45 37" />
       <acteur date="27-07-2020"
         siteweb="pharmacie-des-3-forets.fr"
         image="pharmacie-des-3-forets.jpg"
@@ -2263,6 +2285,17 @@
   </categorie>
   <categorie type ="S'engager">
     <scat>
+      <acteur date="28-05-2021"
+        siteweb="effetmouche.wixsite.com/website"
+        image="ecoledespossibles.jpg"
+        titre="L'école des possibles"
+        bref="Ecole inspiration Freinet"
+        desc="Ecole maternelle et primaire, parentale, accueillant aussi des enfants non scolarisés (en instruction en famille), basée sur une pédagogie du 3ème type (inspiration Freinet), avec une immersion en nature une journée et demi par semaine."
+        citation="Notre action d’éducation est basée sur l’autonomie, la bienveillance, la coopération; les enfants développent des compétences indispensables à la transition. Notre adhésion aux valeurs du Florain est d’une telle évidence, et pourtant il a fallu que notre directrice nous demande de se faire rémunérer en Florains pour franchir le pas! Depuis cela nous a fait rencontrer des acteurs proches d’ici; ce sentiment partagé de construire le monde de demain qui nous relie est un sain carburant."
+        adresse="7 rue de l'église, 54112 Uruffe"
+        telephone="03 83 25 47 11"
+        latitude="5.743553"
+        longitude="48.568461" />
       <acteur date="07-03-2021"
         siteweb="echogestes.org"
         image="echogestes.jpg"
