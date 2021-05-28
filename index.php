@@ -35,6 +35,40 @@ ol.carousel-indicators li {
 ol.carousel-indicators li.active {
   background: #615f5f;
 }
+ul.b{
+  position:relative;
+}
+ul>ul.b::before {
+  /* content: " 18h-19h30 "; */
+  content:  attr(data-heure);
+  position: absolute;
+  left: -2.4em;
+  top:2.2em;
+  transform:  rotate(-90deg);
+  background-color: #ffff00;
+  color: #000000;
+  padding: 0 .2em
+}
+
+ul.b li {
+  list-style: square inside;
+  display: list-item;
+  margin-left: 2em;
+  color: "white";
+  font-size: 1em;
+}
+
+ul.b li em {
+  color: #ffff00;
+}
+
+ul.c li {
+  list-style: circle inside;
+  display: list-item;
+  margin-left: 4em;
+  color: "white";
+}
+
 </style>
   </head>
   <body id="top">
@@ -44,7 +78,68 @@ $header = new Header();
 $header->display();
 ?>
 
-<section id="accueil" class="main style1 left red fullscreen">
+
+<section id="accueil" class="main style2 right red fullscreen">
+  <div class="content box style2">
+          
+    <header>
+      <h2>Journées Change tes Billets!</h2>
+      <h4 style="font-size:1.5em;">Les 4, 5 et 6 Juin</h4>
+    </header>
+    
+    <div class="column">
+    <div style="padding:0.5em 0.2em 0.2em 0em;background-color:#555555">
+    <ul>
+      <li style="font-size:1em">📅 VENDREDI 4</li>
+        <ul class="b" data-heure='18h à 19h30'>
+          <li>Comptoir de change et d'adhésion à <b>l'Autre Marché</b> à Nancy - Halle Ouverte de l'Octroi</li>
+          <li><b>Conférence débat à l'Autre Canal</b>&nbsp;<em>retransmis en direct en ligne!</em><br/>
+          <em>"Les monnaies locales : monnaie d’intérêt général"</em><br/>
+          <b>D'après une étude détaillée du mouvement Sol.</b>
+          </li>
+        </ul>
+    </ul>
+    </div>
+    <div style="margin-top:0.2em;padding:0.5em 0.2em 0.2em 0em;background-color:#555555">
+    <ul>
+      <li style="font-size:1em">📅 SAMEDI 5</li>
+        <ul class="b" data-heure='10h à 19h00'>
+          <li><b>Marchés des acteurs du Florain</b></li>
+          <ul class="c">
+            <li> à Nancy, Place Charles III.</li>
+            <li> à Colombey-les-Belles, sous les Halles (en face de la mairie).</li>
+          </ul>
+          <li><b>Animations et offres spéciales</b> dans nos comptoirs de change.</li>
+          <li><b>Rallye photo</b> dans la ville à Nancy.</li>
+        </ul>
+    </ul>
+    </div>
+    <div style="margin-top:0.2em;padding:0.5em 0.2em 0.2em 0em;background-color:#555555">
+    <ul>
+      <li style="font-size:1em">📅 DIMANCHE 6</li>
+        <ul class="b" data-heure='10h à 19h00'>
+          <li>Comptoir de change et d'adhésion au <b>Marché de Vandœuvre</b>.</li>
+          <li>Participation à <b>"Désir de Nature"</b> Parc du Charmois à Vandœuvre.</li>
+          <ul class="c">
+            <li><em>15 h</em>: Ciné - débat <em>"Et si mon argent changeait le monde ?"</em> salle Dinet - Ferme.</li>
+            <li>Comptoir de change et d'adhésion.</li>
+          </ul>
+        </ul>
+    </ul>
+    </div>
+
+      <p style="margin-top:0.2em;font-size:1em">Toute l'équipe du Florain est impatiente de pouvoir vous rencontrer à nouveau lors d'évènements à travers le territoire.</p>
+      <p style="font-size:1em">Venez nombreuses et nombreux!</p>
+
+    </div>
+
+  </div>
+  <footer>
+    <a href="#covid" class="button style2 down anchored">More</a>
+  </footer>
+</section>
+
+<section id="covid" class="main style2 left red fullscreen">
   <div class="content box style1">
           
     <header>
@@ -52,15 +147,15 @@ $header->display();
       <h4>Solidarité avec les commerces locaux</h4>
     </header>
     
-    <div class="anniv menu" >
+    <div class="anniv" >
       <div>
+      <img float="right" class="nophone" src="http://beta.monnaielocalenancy.fr/wp-content/uploads/Image-Solidarit%C3%A9-Florain-300x300.png"/>
         <p>La crise sanitaire qui s’ajoute à la crise climatique et sociale vient accentuer l’importance de la résilience économique des territoires locaux. Un certain nombre de commerces et associations adhérents au Florain traversent actuellement des difficultés bien compréhensibles.
 
         <br/><br/>La crise économique et financière qui s’amorce confirme notre analyse : oui la monnaie locale est un des outils essentiels de résilience des territoires !
         </p>
       </div>
     </div>
-      <img src="http://beta.monnaielocalenancy.fr/wp-content/uploads/Image-Solidarit%C3%A9-Florain-300x300.png"/>
 
   </div>
   <footer>

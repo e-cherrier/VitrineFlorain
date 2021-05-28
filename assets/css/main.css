@@ -3123,7 +3123,7 @@ text-decoration: none; }
 				opacity: 0.95;
 				display: inline-block;
 				vertical-align: middle;
-				width: 70%;
+				width: 90%;
 			}
 
 			.main.style1.inactive .content {
@@ -4626,15 +4626,15 @@ h5:hover a {
 
 	@media screen and (min-width: 1921px) {
 			.main.style2 .content {
-				width: 70%;
+				width: 90%;
 			}
 
 			.main.style2.right .content {
-				left: 30%;
+				left: 10%;
 			}
 
 			.main.style2.inactive.left .content {
-				left: -70%;
+				left: -90%;
 			}
 	}
 	@media screen and (max-width: 1920px) {
@@ -4648,15 +4648,15 @@ h5:hover a {
 		/* Main */
 
 			.main.style2 .content {
-				width: 70%;
+				width: 90%;
 			}
 
 			.main.style2.right .content {
-				left: 30%;
+				left: 10%;
 			}
 
 			.main.style2.inactive.left .content {
-				left: -70%;
+				left: -90%;
 			}
 
 	}
@@ -4686,15 +4686,15 @@ h5:hover a {
 		/* Main */
 
 			.main.style2 .content {
-				width: 70%;
+				width: 90%;
 			}
 
 			.main.style2.right .content {
-				left: 30%;
+				left: 10%;
 			}
 
 			.main.style2.inactive.left .content {
-				left: -70%;
+				left: -90%;
 			}
 
 	}
@@ -4718,15 +4718,15 @@ h5:hover a {
 		/* Main */
 
 			.main.style2 .content {
-				width: 70%;
+				width: 90%;
 			}
 
 			.main.style2.right .content {
-				left: 30%;
+				left: 10%;
 			}
 
 			.main.style2.inactive.left .content {
-				left: -70%;
+				left: -90%;
 			}
 
 		/* Footer */
@@ -4852,6 +4852,9 @@ h5:hover a {
 					background-color: #6e6e6e;
 				}
 
+				.anniv.menu {
+					width: 100%;
+				} 
 		/* Main */
 
 			.main.fullscreen {
@@ -4868,6 +4871,10 @@ h5:hover a {
 				}
 				.main.style1 .content.mobile {
 					width: 100%;
+				}
+				.main.style1 .content {
+					width: 100%;
+					left: 0% !important;
 				}
 
 			.main.style2 {
@@ -4968,6 +4975,9 @@ h5:hover a {
                         	display: none;
 
                         }
+						.nophone {
+							display:none;
+						}
 			.phone {
                         	background-color:  #c1a544;
                         	border-color: rgba(255, 255, 255, 0.5);
