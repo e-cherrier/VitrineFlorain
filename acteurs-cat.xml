@@ -17,6 +17,18 @@
     longitude="48." />
   <categorie type="Se nourrir">
     <scat type="Épiceries">
+      <acteur date="31-05-2021"
+        siteweb=""
+        image="lemarchefermier.jpg"
+        titre="Le Marché Fermier"
+        bref="épicerie bio locale et vrac"
+        desc="épicerie rurale qui propose des produits locaux, bio et en vrac issus du territoire sud lorrain."
+        citation=""
+        telephone=""
+        latitude="5.944890"
+        longitude="48.583797"
+        adresse="44, rue Andre David, 54170 Ochey"
+        colombey_ctb21="14h-18h"/>    
       <acteur date="14-05-2021"
         siteweb="www.lesmalicesdesuzette.fr"
         image="lesmalicesdesuzette.jpg"
@@ -61,7 +73,9 @@
         telephone="06 11 58 90 43"
         latitude="6.161231"
         longitude="48.681285"
-        comptoir="oui">
+        comptoir="oui"
+        offre-ctb21="Offre et réduction sur les achats en Florain"
+      >
         <h l="du mardi au samedi" t="10h00 - 20h00"/>
       </acteur>
       <acteur date="20-09-2020"
@@ -72,6 +86,7 @@
         desc="Kalina est une marque française de croquettes naturelles. Nous sommes axés sur la nutrition-santé de l'animal. Nous livrons gratuitement sur votre domicile ou votre lieu de travail."
         citation="Revenir à la base de nos échanges"
         adresse="31 rue de la republique, Nancy"
+        nancy-ctb21="oui"
         telephone="06 95 55 43 29"
         latitude="6.17847"
         longitude="48.682398" />
@@ -201,6 +216,7 @@
         latitude="6.2453421"
         longitude="48.7064972"
         adresse="4 rue des Tarbes, Essey-lès-Nancy"
+        offre-ctb21=""
         defi="Bureau de change">
         <h l="du lundi au samedi"
           t="09H00 - 19H00"/>
@@ -375,7 +391,7 @@
         citation="" />
       <acteur date="02-10-2019"
         siteweb=""
-        image="defaut.jpg"
+        image="mirabeille.jpg"
         titre="Mirabeille"
         bref="Apiculteur"
         desc="Vous êtes responsable de cette structure ? Contactez-nous pour mettre à jour vos informations."
@@ -384,7 +400,8 @@
         longitude="48.430223"
         telephone="06 47 78 58 44"
         message=""
-        citation="" />
+        citation=""
+        nancy-ctb21="oui"/>
       <acteur date="22-09-2019"
         siteweb=""
         bref="Fromage de chèvre"
@@ -444,9 +461,8 @@
         longitude="48.548081"
         telephone="06 78 11 43 65"
         message=""
+        colombey_ctb21="oui"
         citation="La production de jus et de confitures n'est pas mon activité principale, mais je suis fière de pouvoir commercialiser ces bons produits naturels ( non traités) en florains pour régaler petits et grands, développer une économie locale, circulaire, et non financiarisée!! " />
-
-
 
       <acteur date="1018"
         siteweb="www.pomenpresse.fr"
@@ -533,7 +549,8 @@
         latitude="5.94489097595"
         longitude="48.5837972914"
         adresse="44, rue Andre David, 54170 Ochey"
-        defi="Bureau de change">
+        colombey_ctb21="16h-18h"
+      >
         <h l="du mardi au vendredi"
           t="16h00 - 19h00"/>
         <h l="le samedi"
@@ -636,7 +653,8 @@
         defi=""
         telephone="06 49 92 89 83"
         latitude="6.335543"
-        longitude="48.595922" />
+        longitude="48.595922"
+        offre-ctb21="Vendredi soir de 16h à 20h à la brasserie, un décapsuleur offert pour l'achat en Florain de 6 bouteilles de bière." />
       <acteur anniv="oui"
         siteweb="www.brasseriecoincoin.fr"
         image="coincoin.jpg"
@@ -645,6 +663,7 @@
         bref="Brasserie Artisanale BIO"
         desc="Toutes nos bières sont élaborées, brassées et embouteillées à la main et de façon artisanale, dans notre local à Ménil-la-Tour par Mélaine COLSON. Ce sont des bières de garde dites 'vivantes', non-pasteurisées, non-filtrées, qui refermentent en bouteille. Les bières sont certifiées bio depuis septembre 2017. Depuis 2014, la brasserie est membre de l'Union des Brasseurs du Grand Est (anciennement l'UBL). Nous sommes situés dans le Parc Naturel Régional de Lorraine, tout proche des côtes de Toul."
         adresse="5 Rue Saint Laurent 54200 Mènil-la-Tour"
+        nancy-ctb21="oui"
         latitude="5.864654"
         longitude="48.766246"
         telephone="06 20 02 04 00"
@@ -710,6 +729,7 @@
         anniv="oui"
         siteweb="unpaindecote.free.fr"
         comptoir="oui"
+        nancy-ctb21="oui"
         image="un-pain-de-cote.jpg"
         titre="Un Pain de Côté"
         marche="maxeville"
@@ -749,9 +769,23 @@
         latitude="5.99810600281"
         longitude="48.5474101183"
         telephone="06 66 32 91 51"
-        message="" />
+        message=""
+        colombey_ctb21="10h-12h" />
     </scat>
     <scat type="Traiteurs">
+      <acteur date="28-05-2021"
+        siteweb="www.lesplatsdegaia.com"
+        image="lesplatsdegaia.jpg"
+        titre="Les plats de Gaia"
+        bref="Traiteur"
+        desc="Traiteur écologique à Cerville, produits frais, locaux et de saison. Ateliers ludiques et gustatifs sur l'alimentation responsable."
+        citation=""
+        adresse="2 ter rue des Meix, 54420 Cerville"
+        telephone="06 69 21 63 08"
+        latitude="6.313654"
+        longitude="48.697718"
+        nancy-ctb21="oui"
+      />
       <acteur date="19-10-2019"
         siteweb=""
         image="tourneecrousti.jpg"
@@ -825,6 +859,7 @@
         defi=""
         latitude="6.181145"
         longitude="48.666985"
+        nancy-ctb21="oui"
         citation="Intégrer le Florain, c'est permettre à notre AMAP de renforcer sa démarche de soutien aux paysans locaux." />
       <acteur siteweb="jardins-de-la-chaudeau.fr"
         image="jardinschaudeau.jpg"
@@ -1187,6 +1222,7 @@
         citation="Agence évènementielle 100% locale, originale et responsable"
         adresse="1 rue de la Vologne, Laxou"
         telephone="06 45 34 21 91"
+        nancy-ctb21="oui"
         latitude="6.132542"
         longitude="48.695428" />
       <acteur date="27-11-2020"
@@ -1533,6 +1569,8 @@
         bref="baobab, karité, hibiscus"
         desc="Kabao, de l'Afrique à la Lorraine, vous propose des produits issus du fruit du baobab, de la fleur d'hibiscus, du karité. Tisanes, cosmétiques, compléments alimentaires dans le cadre d'un commerce équitable."
         citation=""
+        nancy-ctb21="oui"
+        offre-ctb21="5 graines de baobab offertes pour 30 Florains d'achat"
         adresse="marchés et manisfestations"
         telephone="06 44 07 63 76" />
       <acteur date="25-11-2019"
@@ -1556,6 +1594,7 @@
         latitude="5.897825"
         longitude="48.529031"
         telephone="03 83 52 01 65"
+        colombey_ctb21="oui"
         adresse="1 rue de l'Eglise, Colombey les Belles">
         <h l="le mardi"
           t="09h00 - 12h00"/>
@@ -1696,6 +1735,7 @@
         type="Sante"
         desc="Massages bien-être: polarités, pressions shiatsu, relaxation coréenne, harmonisation corporelle à l'huile, en particulier pour les futures mamans, massage bébé avec ses parents, massage sur chaise ergonomique en entreprise. Non thérapeutique. Relation d'aide par le toucher, ou somatothérapie. Éducation kinesthésique ou Brain Gym. Formation d'adultes des métiers de l'humain, ateliers d'analyse de pratique professionnelle."
         adresse="8, rue du Moulin, 54113 Bulligny"
+        colombey_ctb21="oui"
         latitude="5.849798"
         longitude="48.573944"
         telephone="06 79 98 48 69" />
@@ -1870,7 +1910,9 @@
         latitude="6.18423"
         longitude="48.688573"
         adresse="109 bis rue Saint-Dizier, Nancy"
-        defi="Créer un second emploi">
+        defi="Créer un second emploi"
+        offre-ctb21="Une paire de chaussette bio équitable pour chaque adhésion faite à la boutique le 5 juin
+">
         <h l="le lundi"
           t="14h00 - 19h00"/>
         <h l="du mardi au samedi"
@@ -1883,6 +1925,7 @@
         type=""
         desc="artisanat péruvien équitable au profit des enfants des rues du Pérou"
         adresse="26B Rue Hermite, Nancy"
+        nancy-ctb21="oui"
         latitude="6.173063"
         longitude="48.696527"
         telephone="" />
@@ -1942,6 +1985,7 @@
         adresse="27 rue Montesquieu, Nancy"
         latitude="6.186219"
         longitude="48.690082"
+        nancy-ctb21="oui"
         telephone="" />
     </scat>
   </categorie>
@@ -2038,6 +2082,7 @@
         type="Créations"
         desc="Cadeaux et/ou déco uniques et personnalisés pour tous types d'occasions (anniversaire, baptême, remerciements, félicitations, déclaration d'amour, encouragements, demande en mariage...) --> Sculptures en papier, mobiles en origami... "
         adresse="Malzéville"
+        nancy-ctb21="oui"
         latitude="6.183463"
         longitude="48.708323"
         telephone=""
@@ -2193,6 +2238,8 @@
         adresse="70 rue Jules Ferry, Maison 4, Saint Max"
         latitude="6.210044"
         longitude="48.703844"
+        nancy-ctb21="oui"
+        offre-ctb21="Remise de 5% pour tout paiement en Florain"
         telephone="07 67 65 93 29"
         message=""
         citation="La réduction des déchets et la remise en question de notre société de consommation sont aujourd'hui indispensables face à l'urgence climatique. Les produits lavables Marius et Léon vous accompagneront dans votre démarche de réduction des déchets!" />
@@ -2295,7 +2342,8 @@
         adresse="7 rue de l'église, 54112 Uruffe"
         telephone="03 83 25 47 11"
         latitude="5.743553"
-        longitude="48.568461" />
+        longitude="48.568461"
+        colombey_ctb21="oui" />
       <acteur date="07-03-2021"
         siteweb="echogestes.org"
         image="echogestes.jpg"
@@ -2434,6 +2482,7 @@
         bref="Formations, actions, soirées-débats"
         desc="Le MAN Nancy organise et propose : - des soirées-débats sur des questions de société, - des interventions dans les quartiers, les établissements scolaires et la vie associative, - des actions de solidarité, - des formations à la régulation non-violente des conflits et à l'action non-violente, - un bimestriel « les Échos du MAN Nancy », - une newsletter mensuelle MAN Nancy Actions. Vous pouvez aussi nous retrouver sur Facebook"
         adresse="man.nancy@nonviolence.fr"
+        nancy-ctb21="oui"
         defi="" />
       <acteur anniv="oui"
         siteweb="www.greenpeace.fr"
@@ -2484,6 +2533,7 @@
         latitude="6.258527"
         longitude="48.775695"
         telephone="06.11.53.01.45"
+        nancy-ctb21="oui"
         message=""
         citation="Le développement d'une monnaie locale par nature permet la valorisation et la création d'un réseau d'artisans, commerçants et d'associations locales fort. Mais il peut également favoriser le développement de projets aux même valeurs au travers du Monde" />
       <acteur anniv="oui"

@@ -117,11 +117,11 @@ $header->display();
     <div style="margin-top:0.2em;padding:0.5em 0.2em 0.2em 0em;background-color:#555555">
     <ul>
       <li style="font-size:1em">📅 DIMANCHE 6</li>
-        <ul class="b" data-heure='10h à 19h00'>
+        <ul class="b" data-heure='10h à 18h00'>
           <li>Comptoir de change et d'adhésion au <b>Marché de Vandœuvre</b>.</li>
           <li>Participation à <b>"Désir de Nature"</b> Parc du Charmois à Vandœuvre.</li>
           <ul class="c">
-            <li><em>15 h</em>: Ciné - débat <em>"Et si mon argent changeait le monde ?"</em> salle Dinet - Ferme.</li>
+            <li><em>15 h</em>: Ciné - débat <em>"Et si mon argent changeait le monde ?"</em> salle Dinet - Ferme du Charmois.</li>
             <li>Comptoir de change et d'adhésion.</li>
           </ul>
         </ul>
@@ -417,6 +417,7 @@ $header->display();
           <header>
             <h2>Comment ca marche ?</h2>
           </header>
+          <div class="column">
 	        <h3>Le Florain, qu'est-ce que c'est ?</h3>
           <p>Le Florain est une Monnaie Locale Citoyenne  et Complémentaire à l'Euro qui circule sur Nancy et le Sud de la Meurthe-et-Moselle depuis octobre 2017.
           <br/>
@@ -427,12 +428,12 @@ $header->display();
           au Florain. A consulter <a href="acteurs.php">ici</a>.</p>
           <h3>Oui, mais à quoi ça sert?</h3>
           <p>A chaque fois que je dépense un Florain, je consomme auprès d'un acteur local qui partage des valeurs de solidarité et de respect des êtres humains et de leur environnement.
-<br/>
-Je contribue à renforcer l'économie locale, puisque ces acteurs sont également incités à re-dépenser dans le réseau les Florains qu'ils recoivent.
-<br/>
-Je favorise ainsi la consommation en circuits-courts auprès d'acteurs engagés.</p>
-<p>Tous les euros échangés sont placés sur un compte de réserve à la <a href="https://www.lanef.com">Nef</a>, une coopérative financière qui partage les valeurs du Florain.
-La Nef s'engage à investir, sur le territoire du Florain, le double de la valeur du fonds de réserve dans des projets correspondants à nos valeurs.
+          <br/>
+          Je contribue à renforcer l'économie locale, puisque ces acteurs sont également incités à re-dépenser dans le réseau les Florains qu'ils recoivent.
+          <br/>
+          Je favorise ainsi la consommation en circuits-courts auprès d'acteurs engagés.</p>
+          <p>Tous les euros échangés sont placés sur un compte de réserve à la <a href="https://www.lanef.com">Nef</a>, une coopérative financière qui partage les valeurs du Florain.
+          La Nef s'engage à investir, sur le territoire du Florain, le double de la valeur du fonds de réserve dans des projets correspondants à nos valeurs.
           <h3>Je me lance!</h3>
           <h4>J'adhère à l'association</h4>
           <p>
@@ -454,6 +455,7 @@ La Nef s'engage à investir, sur le territoire du Florain, le double de la valeu
           - une <a href="carte.php">carte interactive </a>
           </p>
             
+        </div>
         </div>
         <a href="#medias" class="button style3 down anchored">Next</a>
       </section>

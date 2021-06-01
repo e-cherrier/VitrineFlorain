@@ -3307,7 +3307,7 @@ text-decoration: none; }
 		background: #615f5f;
 		width: 47%;
 		float: left;
-	} 
+	}
 	.anniv.texte {
 		margin-left: 1em;
 		background: #615f5f;
@@ -3933,14 +3933,14 @@ text-decoration: none; }
 	#acteurs h2 {
 		text-align: center;
 	}
-	#recap {
-		background: url("../../images/Billets.jpg");
+	#recap, #changetesbillets {
+		background: url("../../images/eclate.png");
 		background-size: 100% auto;
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
 		padding-top: 0;
-		background-color: #fff;
+		background-color: #d7da23;
 	}
 	#medias {
 		background: url("../../images/media-bg.jpg");
@@ -3969,16 +3969,8 @@ text-decoration: none; }
 		padding-top: 10;
 		background-color: #d7da23;
 	}
-	#readhesion {
-		background: url("../../images/mur.jpg");
-		background-size: auto 80%;
-		background-attachment: fixed;
-		background-position: center left ;
-		background-repeat: no-repeat;
-		padding-top: 10;
-		background-color: #d7da23;
-	}
-	#unpourcent {
+	#readhesion,
+	#unpourcent  {
 		background: url("../../images/mur.jpg");
 		background-size: auto 80%;
 		background-attachment: fixed;
@@ -4005,7 +3997,7 @@ text-decoration: none; }
 		padding-right: -500;
 		background-color: #d7da23;
 	}
-	#jyvais {
+	#jyvais, #vendredi {
 		background: url("https://static.ticketmaster.fr/static/images/salle/8759_img.gif");
 		background-size: auto 80%;
 		background-attachment: fixed;
@@ -4048,14 +4040,23 @@ text-decoration: none; }
 		padding-top: 0;
 		background-color: #000;
 	}
-	#lenom {
+	#lenom, #nancyctb21 {
 		background: url("../../images/Place-Charles-III.jpg");
 		background-size: 100% auto;
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
 		padding-top: 0;
-		background-color: #000;
+		background-color: #d7da23;
+	}
+	#dimanche {
+		background: url("../../images/desirdenature2021.jpg");
+		background-size: 100% auto;
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		padding-top: 0;
+		background-color: #d7da23;
 	}
 	#comment {
 		background: url("../../images/fete/cercle.png");
@@ -4622,6 +4623,17 @@ h5:hover a {
 		opacity: 1.0 !important;
 	}
 
+	.map {
+		width: 50%;
+		height: 70%;
+		float: right;
+	  }
+
+	.fullmap {
+	width: 85%;
+	height: 50%;
+	}
+
 /* Wide */
 
 	@media screen and (min-width: 1921px) {
@@ -4757,7 +4769,8 @@ h5:hover a {
 			}
 
 	@media screen and (min-width: 737px) {
-		        .slide {
+
+		    .slide {
 				display: block;
 			}
 			.anniv img.sf {
@@ -4814,6 +4827,12 @@ h5:hover a {
 /* Mobile */
 
 	@media screen and (max-width: 736px) {
+
+		
+	    .map {
+			width: 100%;
+			height: 50%;
+		}
 
 			.anniv img.sf {
 				display: block;
@@ -5006,12 +5025,12 @@ h5:hover a {
 		}
 
 
-slider {
-    position: absolute;
-    left: 2em;
-    top: 8em;
-}
+		slider {
+			position: absolute;
+			left: 2em;
+			top: 8em;
+		}
 
-slider img {
-	width: 50%;
-}
+		slider img {
+			width: 50%;
+		}
