@@ -129,6 +129,16 @@ include('nav.php');
       .popover-title {
         background-color: #555;
       }
+      .red a:hover {
+        color: #555;
+      }
+			a.ahover span {
+			  color: yellow;
+			}
+			a.ahover:hover span {
+			  color: #555;
+        transform: rotate(180deg);
+			}
     </style>
 <!--OSM-->
   </head>
@@ -172,7 +182,14 @@ $header->display();
         <h3>Conférence débat à l'Autre Canal<h3>
         <h4> <em>"Les monnaies locales : monnaie d’intérêt général"</em> de 18h à 19h30</h4>
         <li>D'après une étude détaillée du mouvement Sol.</li>
-        <li>retransmis en direct en ligne!</li><br/>
+        <li>retransmis en direct en ligne:
+          <a href="https://zoom.us/j/93554021513" class="ahover button fab fa-mdb" style="height:1.2em;padding: 0em 0.4em 1em 0.4em;">
+            <span class="icon fa fa-phone"></span>
+          </a>
+        </li>
+        <a href="https://sol-monnaies-locales.org/l-impact-social" class="ahover button" style="border-radius:0px;">Plus d'info sur le site du mouvement Sol</a>
+        <br/>
+        <br/>
 
         <h3>Point d'info, Comptoir de change et d'adhésion à <b>l'Autre Marché</b> </h3>
         <h4>Halle Ouverte de l'Octroi</h4>
@@ -231,8 +248,9 @@ $header->display();
 
         <div class="anniv menu" >
           <div>
+          <a href="#nancyctb21" class="button" style="float:right; border-radius:0px;">Voir les exposants</a>
             <p>A Nancy de 10h à 19h00</p>
-              <li><b>Rallye photo</b> dans la ville.</li>
+              <li><b>Rallye photo</b> à la découverte des partenaires du Florain.</li>
               <li><b>Marchés des acteurs du Florain,</b></li>
               <li>point d'info, Comptoir de change et d'adhésion.</li>
               <li>Place Charles III.</li>
@@ -243,6 +261,7 @@ $header->display();
 
         <div style="margin-left:1em;" class="ctb anniv menu" >
           <div>
+          <a href="#colombey" class="button" style="float:right; border-radius:0px;">Voir les exposants</a>
             <p>A Colombey-les-Belles de 10h à 19h00</p>
               <li><b>Marchés des acteurs du Florain,</b></li>
               <li>point d'info, Comptoir de change et d'adhésion.</li>
@@ -351,6 +370,7 @@ $header->display();
 
         print "<article>\n";
         print "<a href='". $a->getAttribute( "siteweb" ) . "' class='image featured'>\n";
+        print "<span class='mention'>" . $a->getAttribute( "type" ) . "</span>\n";
         print "  <img src='images/acteurs/" . $a->getAttribute( "image" ) . "'/></a>\n"; 
         print "  <header>\n";
         print "    <h4>" . $a->getAttribute( "titre" ) . "</h4>\n"; 
@@ -408,7 +428,8 @@ $header->display();
 
 <section id="offres" class="carousel style3 primary">
   <header>
-    <h2>Offres Speciales</h2>
+    <h2>Offres Spéciales</h2>
+    <p>Le Florain offre des <em>goodies</em> pour toutes nouvelles adhésions :)</p>
   </header>
 	<div class="reel">
 
@@ -421,17 +442,26 @@ $header->display();
       $nb = $acteurs->length;
       $indexes = range(0, $nb-1);
       for($pos=0; $pos<$nb; $pos++) {
-        if( ! $acteurs[$indexes[$pos]]->hasAttribute( "offre-ctb21" ) ) {
+        $a = $acteurs[$indexes[$pos]];
+        if( ! $a->hasAttribute( "offre-ctb21" ) ) {
           continue;
         }
+  
+        $adresse = $a->getAttribute('adresse');
+        $elts = explode(',', $adresse);
         print "<article>\n";
-        print "<a href='". $acteurs[$indexes[$pos]]->getAttribute( "siteweb" ) . "' class='image featured'>\n";
-        print "<span class='mention'>" . $acteurs[$indexes[$pos]]->getAttribute( "type" ) . "</span>\n";
-        print "  <img src='images/acteurs/" . $acteurs[$indexes[$pos]]->getAttribute( "image" ) . "'/></a>\n"; 
+        print "<a href='". $a->getAttribute( "siteweb" ) . "' class='image featured'>\n";
+        print "<span class='mention'>" . $a->getAttribute( "type" ) . "</span>\n";
+        print "  <img src='images/acteurs/" . $a->getAttribute( "image" ) . "'/></a>\n"; 
         print "  <header>\n";
-        print "    <h4>" . $acteurs[$indexes[$pos]]->getAttribute( "titre" ) . "</h4>\n"; 
+        print "    <h4>" . $a->getAttribute( "titre" ) . "</h4>\n"; 
         print "  </header>\n";
-        print "  <p>" . $acteurs[$indexes[$pos]]->getAttribute( "offre-ctb21" ) . "</p>\n"; 
+        print "  <p style='border: medium solid #555;'>" . $a->getAttribute( "offre-ctb21" ) . "</p>\n"; 
+        print "  <p>" . $a->getAttribute( "bref" ) . "<br/>\n";
+        print "     " . $elts[0] . "<br/>\n";
+        if( sizeof($elts) > 1 ) { 
+          print "     " . $elts[1] . "</p>\n";
+        }
         print "</article>\n";
       }
     ?> 
@@ -554,151 +584,6 @@ $header->display();
   </footer>
 </section>
 
-<!--
-<section id="conferences" class="carousel style3 primary">
-          <header>
-            <h2>Conférences - Tables rondes</h2>
-          </header>
-	<div class="reel">
-
-		<?php
-      $xmlDoc = new DOMDocument();
-      $xmlDoc->load("conferences1an.xml");
-
-      $x = $xmlDoc->documentElement;
-      $acteurs = $x->getElementsByTagName( "acteur" );
-      $nb = $acteurs->length;
-      $indexes = range(0, $nb-1);
-      for($pos=0; $pos<$nb; $pos++) {
-        print "<article>\n";
-        print "<a href='". $acteurs[$indexes[$pos]]->getAttribute( "siteweb" ) . "' class='image featured'>\n";
-        print "<span class='mention'>" . $acteurs[$indexes[$pos]]->getAttribute( "type" ) . "</span>\n";
-        print "  <img src='" . $acteurs[$indexes[$pos]]->getAttribute( "image" ) . "'/></a>\n"; 
-        print "  <header>\n";
-        print "    <h4>" . $acteurs[$indexes[$pos]]->getAttribute( "horaire" ) . "</h4>\n"; 
-        print "    <h3>" . $acteurs[$indexes[$pos]]->getAttribute( "nom" ) . "</h3>\n"; 
-        print "  </header>\n";
-        print "  <p>" . $acteurs[$indexes[$pos]]->getAttribute( "desc" ) . "</p>\n"; 
-        print "</article>\n";
-      }
-    ?> 
-  </div>
-  <a href="#restauration" class="button style2 down anchored">Next</a>
-</section>
-
-      <section id="restauration" class="main style1 left red fullscreen">
-        <div class="content box style1">
-          <header>
-            <h2>Restauration</h2>
-          </header>
-          
-          <div>
-            <div class="anniv texte">
-              <div>
-                <ul>
-                  <li>Buvette avec des produits bio et/ou locaux ouverte toute la journée.</li>
-                  <br/>
-                  <li>Le repas est confectionné à partir de produits bio et locaux par <a href="https://lesfermiersdici.com/traiteur">Les Fermiers d’ici</a>.</li>
-                </ul>
-                <img float="left" src="http://www.monnaielocalenancy.fr/images/acteurs/LesFermiersDIci.jpg" width="130px"/>
-                <footer>
-                  <ul class="anniv">
-                    <li><a target="_blank" href="#reservation" class="button">Je reserve mes repas!</a></li>
-                  </ul>
-                </footer>
-                <br/>
-                <br/>
-              </div>
-            </div>
-            <div class="anniv menu">
-              <div>
-                <p>Repas de 12h à 14h sur réservation:</p>
-                <ul>
-                  <li> Entrée </li>
-                  <ul><li class="plat">Tarte aux poireaux et aux noix</li></ul>
-                  <li> Plat </li>
-                  <ul><li class="plat">Hachis parmentier de potimarron</li></ul>
-                  <li> Dessert </li>
-                  <ul><li class="plat">Crapuleux à la quetsche</li></ul>
-                </ul>
-                <p>15 euros/florains</p>
-              <div>
-           </div>
-         </div>
-            
-        </div>
-        <a href="#reservation" class="button style2 down anchored">Next</a>
-      </section>
-
-
-      <section id="reservation" class="main style1 left dark fullscreen">
-        <div class="content box style1">
-          <header class="anniv">
-            <h2>Je réserve mes repas</h2><h3>réservations possibles jusqu'au 1er octobre</h3>
-          </header>
-          <div class="warning"><p>Les réservations nous permettent de limiter le gaspillage alimentaire en prévoyant
-             le nombre exact de repas, il ne sera donc pas possible de manger sur place sans réservation préalable.</p></div>
-	
-          <p>Réservez en ligne avec le formulaire, le reglement pourra se faire sur place.<br/>
-          Ou venez rencontrer les bénévoles du Florain lors des manifestations de septembre:<p>
-
-          <div class="anniv left">
-          <table class="calendar">
-            <caption>passez la souris sur les cases surlignées</caption>
-            <tr>
-              <th>Jeudi</th>
-              <th>Vendredi</th>
-              <th>Samedi</th>
-              <th>Dimanche</th>
-            </tr><tr>
-              <td class="tooltip">6<span class="tooltiptext">Le 6 septembre au marché de Maxéville (Brasseries)</span></td>
-              <td class="tooltip">7<span class="tooltiptext">Le 7 septembre au marché de Vandoeuvre</span></td>
-              <td class="tooltip">8<span class="tooltiptext">Les 8 et 9 septembre à la Fête de la Bière à Maxéville (Brasseries)</span></td>
-              <td class="tooltip">9<span class="tooltiptext">Les 8 et 9 septembre à la Fête de la Bière à Maxéville (Brasseries)</span></td>
-            </tr><tr>
-              <td>13</td>
-              <td>14</td>
-              <td>15</td>
-              <td class="tooltip">16<span class="tooltiptext">Le 16 septembre à la Fête de la Nature: La campagne à la ville à Laxou</span></td>
-            </tr><tr>
-              <td>20</td>
-              <td>21</td>
-              <td class="tooltip">22<span class="tooltiptext">Les 22 et 23 septembre à Jardins de Ville / Jardins de Vie à Jarville (parc de Montaigu)</span></td>
-              <td class="tooltip">23<span class="tooltiptext">Les 22 et 23 septembre à Jardins de Ville / Jardins de Vie à Jarville (parc de Montaigu)</span></td>
-            </tr><tr>
-              <td>27</td>
-              <td>28</td>
-              <td class="tooltip">29<span class="tooltiptext">Les 29 et 30 septembre à Jardins Extraordinaires au CD 54 (Nancy - Blandan)</span></td>
-              <td class="tooltip">30<span class="tooltiptext">Les 29 et 30 septembre à Jardins Extraordinaires au CD 54 (Nancy - Blandan) et Le 30 septembre au marché d'automne de Villey le Sec (dans l'enceinte du fort)</span></td>
-            </tr>
-          </table>
-          </div>
-          <--
-          <ul class="anniv">
-            <li>•	jeudi 6 septembre au marché de Maxéville (Brasseries)</li>
-            <li>•	vendredi 7 septembre au marché de Vandoeuvre</li>
-            <li>•	samedi 08 et dimanche 09 septembre à la Fête de la Bière à Maxéville (Brasseries)</li>
-            <li>•	samedi 16 septembre à la Fête de la Nature à Laxou</li>
-            <li>•	samedi 22 et dimanche 23 septembre à Jardins de Ville / Jardins de Vie à Jarville (parc de Montaigu)</li>
-            <li>•	samedi 29 et dimanche 30 septembre à Jardins Extraordinaires au CD 54 (Nancy - Blandan)</li>
-            <li>•	dimanche 30 septembre au marché d'automne de Villey le Sec (dans l'enceinte du fort)</li>
-          </ul>
-           ->
-          <div class="bottom">
-                <footer>
-                  <ul class="anniv">
-                    <li><a target="_blank" href="https://framaforms.org/inscription-repas-fete-anniversaire-1-an-florain-1535628289" class="button tooltip resa">Réserver en ligne<span class="tooltiptext">Le paiement pourra se faire sur place.</span></a></li>
-                  </ul>
-                  <ul class="anniv">
-                    <li><a target="_blank" href="#restauration" class="button tooltip resa">Le Menu</a></li>
-                  </ul>
-                  
-                </footer>
-         </div>
-          </div>
-        <a href="#jyvais" class="button style2 down anchored">Next</a>
-      </section>
-    -->
 
       <section id="contact" class="main style3 dark secondary">
         <div class="content container">

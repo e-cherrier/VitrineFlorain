@@ -129,7 +129,9 @@ $header->display();
     </div>
 
       <p style="margin-top:0.2em;font-size:1em">Toute l'équipe du Florain est impatiente de pouvoir vous rencontrer à nouveau lors d'évènements à travers le territoire.</p>
+      <a href="./changetesbillets.php" class="button" style="float:right; border-radius:0px; background-color:#555;">En savoir plus...</a>
       <p style="font-size:1em">Venez nombreuses et nombreux!</p>
+
 
     </div>
 
