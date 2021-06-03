@@ -186,7 +186,7 @@ function is_hidden($cat, $cat_displayed)
                   $tel = $acteur->getAttribute('telephone');
 
                   $p = <<<EOD
-                  <acteur class="$acteur_class">
+                  <acteur class="$acteur_class" style="width:100%;">
                   <p align='right'><u>$bref</u></p>
                     <h2>$titre</h2>
                     <img src="images/acteurs/$image" alt="$titre" />
@@ -270,9 +270,9 @@ EOD;
           $adresse = $acteur->getAttribute('adresse');
 
           $p = <<<EOD
-        <acteur class="$acteur_class">
+        <acteur class="$acteur_class" style="width:100%;">
           <h2>$titre</h2>
-          <img src="images/acteurs/$image" alt="$titre" />
+          <img src="images/acteurs/$image" alt="$titre"/>
 EOD;
           echo $p;
           if ($acteur_class == 'comptoir') {
@@ -314,12 +314,11 @@ EOD;
               }
               $message_comptoir = 'none';
               $acteur_class = 'commerce';
-              if ($expo->hasAttribute('comptoir') &&
-              $expo->getAttribute('comptoir') == 'oui') {
+              if( $expo->hasAttribute('comptoir') &&
+                  $expo->getAttribute('comptoir') == 'oui') {
                   if ($acteur->hasAttribute('message_comptoir')) {
-                      $acteur_class = 'comptoir';
-                      $message_comptoir = $acteur->getAttribute('message_comptoir');
-
+                    $acteur_class = 'comptoir';
+                    $message_comptoir = $acteur->getAttribute('message_comptoir');
                       $p = <<<EOD
 EOD;
                       echo $p;

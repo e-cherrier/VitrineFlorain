@@ -78,7 +78,7 @@ function print_comptoir( $acteur ) {
   $adresse = $acteur->getAttribute( "adresse" );
 
   $p = <<<EOD
-      <acteur class="comptoir">
+      <acteur class="comptoir" style="width:100%;">
       <img src="images/acteurs/$image" alt="$titre" />
   <p>
       <b>Nom:</b> $titre<br/>
