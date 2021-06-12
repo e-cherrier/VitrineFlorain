@@ -4,6 +4,7 @@ require 'fpdf/fpdf.php';
 require 'fpdf/categorie.php';
 require 'fpdf/marche.php';
 require 'fpdf/card.php';
+require './annuaire_impl.php';
 include 'pix_tools.php';
 
 $light = 1;
@@ -115,7 +116,7 @@ function debug_to_console($data)
  {
      $tags = array('village', 'town', 'city');
      foreach ($tags as $t) {
-         $r = $x->getElementsByTagName($t);
+         $r = $x->getRecords($t);
          if (count($r) === 1) {
              $v = $r[0]->nodeValue;
              if ($v !== null) {
@@ -343,13 +344,15 @@ class Annuaire extends FPDF
     */
     public function is_category_represented($parent, $xml, $tag)
     {
+        $list = array();
         if ($tag == 'scat') {
             $xml = $parent;
+            $list = $xml->getSousCategories($tag);
+        } else{
+            $list = $xml->getActeurs($tag);
         }
 
-        $acteurs = $xml->getElementsByTagName($tag);
-
-        return count($this->entries_to_display($acteurs));
+        return count($this->entries_to_display($list));
     }
 
     /* when printing all local edition, collect actors that has not been included
@@ -358,8 +361,8 @@ class Annuaire extends FPDF
     public function PrintOrphans($x)
     {
         $orphans = array();
-        $acteurs = $x->getElementsByTagName('acteur');
-        $nb_acteurs = $acteurs->length;
+        $acteurs = $x->getActeurs();
+        $nb_acteurs = count($acteurs);
         for ($a = 0; $a < $nb_acteurs; ++$a) {
             $acteur = $acteurs[$a];
             if (!$acteur->hasAttribute('editions')) {
@@ -403,16 +406,16 @@ class Annuaire extends FPDF
     */
     public function reset_attributes($x)
     {
-        $acteurs = $x->getElementsByTagName('acteur');
-        $nb_acteurs = $acteurs->length;
+        $acteurs = $x->getActeurs();
+        $nb_acteurs = count($acteurs);
         for ($a = 0; $a < $nb_acteurs; ++$a) {
             $acteur = $acteurs[$a];
             $acteur->removeAttribute('tooFar');
             $acteur->removeAttribute('displayed');
         }
 
-        $marches = $x->getElementsByTagName('scat');
-        $nb_marches = $marches->length;
+        $marches = $x->getMarches();
+        $nb_marches = count($marches);
         for ($m = 0; $m < $nb_marches; ++$m) {
             $marche = $marches[$m];
             $marche->removeAttribute('tooFar');
@@ -433,7 +436,7 @@ class Annuaire extends FPDF
 
     public function entries_to_display($list)
     {
-        $nb = $list->length;
+        $nb = count($list);
         if ($this->km < 0) {
             return $list;
         }
@@ -738,8 +741,8 @@ class AnnuaireFiches extends Annuaire
 
     public function PrintAllCategories($x)
     {
-        $categories = $x->getElementsByTagName('categorie');
-        $nb_cat = $categories->length;
+        $categories = $x->getCategories();
+        $nb_cat = count($categories);
         for ($cat = 0; $cat < $nb_cat; ++$cat) {
             $categorie = $categories[$cat];
 
@@ -773,19 +776,19 @@ class PolygonCards extends Annuaire {
         $this->PrintEvenements($x, 'carte');
 
         $this->addPage();
-        $b = new ValuesBoard( $this, $x );
+        $b = new ValuesBoard( $this, $x->x );
         $b->display();
 
         $this->addPage('L');
-        $b = new ValuesComparisonBoard( $this, $x );
+        $b = new ValuesComparisonBoard( $this, $x->x );
         $b->display();
 
         $this->addPage();
-        $b = new Plateau( $this, $x );
+        $b = new Plateau( $this, $x->x );
         $b->display();
         
         $this->addPage('L');
-        $b = new Regles( $this, $x );
+        $b = new Regles( $this, $x->x );
         $b->display();
 
         $this->reset_attributes($x);
@@ -793,7 +796,7 @@ class PolygonCards extends Annuaire {
 
     
     public function PrintEvenements($x, $tag) {
-        $evts = $x->getElementsByTagName($tag);
+        $evts = $x->x->getElementsByTagName($tag);
         $nb_evts = $evts->length;
         
         $template = new EvenementCardTemplate( $this );
@@ -822,8 +825,8 @@ class PolygonCards extends Annuaire {
         $nbPage = 1;
         $a = 0;
         $skip = 0;
-        $acteurs = $x->getElementsByTagName('acteur');
-        $nb_acteurs = $acteurs->length;
+        $acteurs = $x->getActeurs();
+        $nb_acteurs = count($acteurs);
         $indexes = range(0, $nb_acteurs - 1);
         shuffle($indexes);
         $template = new PolygonCardTemplate0( $this );
@@ -1060,6 +1063,7 @@ class AnnuaireLivret extends Annuaire
 
         // we want a multiple of 4 to print it as a booklet.
         $reste4 = $nbpages % 4;
+        $reste4 = 1;
 
         if ($reste4 > 0) {
             $nb = 4 - $reste4;
@@ -1092,8 +1096,8 @@ class AnnuaireLivret extends Annuaire
     {
         $toc = array();
         $cat = 0;
-        $categories = $x->getElementsByTagName('categorie');
-        $nb_cat = $categories->length;
+        $categories = $x->getCategories();
+        $nb_cat = count($categories);
         for ($cat = 0; $cat < $nb_cat; ++$cat) {
             $categorie = $categories[$cat];
 
@@ -1101,8 +1105,8 @@ class AnnuaireLivret extends Annuaire
             $toc[$cat] = $myCat->display();
         }
 
-        $marches = $x->getElementsByTagName('marches');
-        $nb_mar = $marches->length;
+        $marches = $x->getMarches();
+        $nb_mar = count($marches);
         for ($mar = 0; $mar < $nb_mar; ++$mar) {
             $marche = $marches[$mar];
 
@@ -1152,8 +1156,8 @@ class AnnuaireLivret extends Annuaire
         $this->bas_col1 = $this->GetY();
 
         $toc = array();
-        $acteurs = $x->getElementsByTagName('acteur');
-        $nb_acteurs = $acteurs->length;
+        $acteurs = $x->getActeurs();
+        $nb_acteurs = count($acteurs);
         $c = 0;
         for ($a = 0; $a < $nb_acteurs; ++$a) {
             $acteur = $acteurs[$a];
@@ -1611,8 +1615,8 @@ class AnnuairePoche extends Annuaire
 
     public function PrintAllCategories($x)
     {
-        $categories = $x->getElementsByTagName('categorie');
-        $nb_cat = $categories->length;
+        $categories = $x->getCategories();
+        $nb_cat = count($categories);
         for ($cat = 0; $cat < $nb_cat; ++$cat) {
             $categorie = $categories[$cat];
 
@@ -1620,8 +1624,8 @@ class AnnuairePoche extends Annuaire
             $myCat->display();
         }
 
-        $marches = $x->getElementsByTagName('marches');
-        $nb_mar = $marches->length;
+        $marches = $x->getMarches();
+        $nb_mar = count($marches);
         for ($mar = 0; $mar < $nb_mar; ++$mar) {
             $marche = $marches[$mar];
 
@@ -1769,36 +1773,33 @@ $a->AddFont('FreeScript', '', 'FREESCPT.php');
 $a->SetTopMargin(1);
 $a->SetAutoPageBreak(false, $a->bottomMargin);
 
-$xmlDoc = new DOMDocument();
-if ($type == 'Polygons') {
-   $xmlDoc->load('cartesJeu.xml');
-} else {
-   $xmlDoc->load('acteurs-cat.xml');
-}
+$impl = new AnnuaireImpl( $type );
 
-$x = $xmlDoc->documentElement;
-$title = utf8_decode($x->getAttribute('titre'));
-$sstitle = utf8_decode($x->getAttribute('sstitre'));
-$localisation = utf8_decode($x->getAttribute('localisation'));
-$slogan = utf8_decode($x->getAttribute('slogan'));
+$h = $impl->getHeader();
+
+$title = $h['titre'];
+$sstitle = $h['sstitre'];
+$localisation = $h['localisation'];
+$slogan = $h['slogan'];
+
 $a->SetTitle($title);
 $a->SetAuthor('Le Florain');
 
 if ($edition == 'toutes') {
     $town = findTown('Nancy');
-    $a->PrintAnnuaire($x, $town);
+    $a->PrintAnnuaire($impl, $town);
     $town = findTown('Toul');
-    $a->PrintAnnuaire($x, $town);
+    $a->PrintAnnuaire($impl, $town);
     $town = findTown('Pont-à-Mousson');
-    $a->PrintAnnuaire($x, $town);
+    $a->PrintAnnuaire($impl, $town);
     $town = findTown('Lunéville');
-    $a->PrintAnnuaire($x, $town);
+    $a->PrintAnnuaire($impl, $town);
     $town = findTown('Badonviller');
-    $a->PrintAnnuaire($x, $town);
+    $a->PrintAnnuaire($impl, $town);
 
-    $a->PrintOrphans($x);
+    $a->PrintOrphans($impl);
 } else {
-    $a->PrintAnnuaire($x, $town);
+    $a->PrintAnnuaire($impl, $town);
 }
 
 $a->SetDisplayMode('fullpage', 'two');

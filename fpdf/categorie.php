@@ -4,15 +4,15 @@ require 'souscategorie.php';
 
 class Categorie
 {
-    protected $a;
-    public $cat_;
-    protected $tag_ = 'acteur';
+    protected Annuaire $a;
+    public CategorieImpl $cat_;
+    protected string $tag_ = 'acteur';
 
-    public $titleCellHeight = 6;
-    public $titleCellBotMargin = 4;
+    public int $titleCellHeight = 6;
+    public int $titleCellBotMargin = 4;
 
     // Categorie
-    public function __construct($pdf, $cat)
+    public function __construct($pdf, CategorieImpl $cat)
     {
         $this->a = $pdf;
         $this->cat_ = $cat;
@@ -27,8 +27,8 @@ class Categorie
     // Categorie
     public function needNewPage($offset = 0)
     {
-        $sscategories = $this->cat_->getElementsByTagName('scat');
-        $nb_sscat = $sscategories->length;
+        $sscategories = $this->cat_->getSousCategories();
+        $nb_sscat = count($sscategories);
         if ($nb_sscat == 0) {
             return false;
         }
@@ -79,8 +79,8 @@ class CategorieFiches extends Categorie
         if ($nb == 0) {
             return;
         }
-        $sscategories = $this->cat_->getElementsByTagName('scat');
-        $nb_sscat = $sscategories->length;
+        $sscategories = $this->cat_->getSousCategories();
+        $nb_sscat = count($sscategories);
 
         for ($sscat = 0; $sscat < $nb_sscat; ++$sscat) {
             $sscategorie = $sscategories[$sscat];
@@ -147,8 +147,8 @@ class CategorieLivret extends Categorie
         $toc['type'] = $this->displayType();
         $toc['page'] = $this->a->PageNo() - 1;
 
-        $sscategories = $this->cat_->getElementsByTagName('scat');
-        $nb_sscat = $sscategories->length;
+        $sscategories = $this->cat_->getSousCategories();
+        $nb_sscat = count($sscategories);
 
         $tocSScat = 0;
         for ($sscat = 0; $sscat < $nb_sscat; ++$sscat) {
@@ -166,8 +166,8 @@ class CategorieLivret extends Categorie
 
 class CategoriePoche extends Categorie
 {
-    public $titleCellHeight = 5;
-    public $titleCellBotMargin = 2;
+    public int $titleCellHeight = 5;
+    public int $titleCellBotMargin = 2;
 
     // CategoriePoche
     public function NewSousCategorie($a, $sscat)
@@ -222,8 +222,8 @@ class CategoriePoche extends Categorie
         }
 
         $this->displayType();
-        $sscategories = $this->cat_->getElementsByTagName('scat');
-        $nb_sscat = $sscategories->length;
+        $sscategories = $this->cat_->getSousCategories();
+        $nb_sscat = count($sscategories);
 
         for ($sscat = 0; $sscat < $nb_sscat; ++$sscat) {
             $sscategorie = $sscategories[$sscat];

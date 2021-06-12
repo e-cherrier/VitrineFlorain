@@ -4,7 +4,7 @@ require_once 'souscategorie.php';
 
 class Exposant extends Acteur
 {
-    protected $is_comptoir_;
+    protected bool $is_comptoir_;
 
     public function setIsComptoir($is_comptoir)
     {
@@ -209,7 +209,7 @@ class ExposantLivret extends Exposant
 
 class Marche extends SousCategorie
 {
-    protected $tag_ = 'scat';
+    protected string $tag_ = 'scat';
     protected $exposants = array();
 
     // SousCategorie Marche
@@ -220,10 +220,9 @@ class Marche extends SousCategorie
         $this->scat_ = $scat;
         $this->tag_ = 'scat';
         $id = utf8_decode($this->scat_->getAttribute('id'));
-        $acteurs = $a->doc->getElementsByTagName('acteur');
-        $nb_a = $acteurs->length;
+        $acteurs = $a->doc->getActeurs();
+        $nb_a = count($acteurs);
 
-        $idx = 0;
         for ($a = 0; $a < $nb_a; ++$a) {
             $acteur = $acteurs[$a];
             if (!$acteur->hasAttribute('marche')) {
@@ -235,8 +234,7 @@ class Marche extends SousCategorie
 
             for ($i = 0; $i < $nb_ids; ++$i) {
                 if ($ids[$i] == $id) {
-                    $this->exposants[$idx] = $acteur;
-                    $idx = $idx + 1;
+                    $this->exposants[] = $acteur;
                     // remove displayed attribute
                     $acteur->removeAttribute('displayed');
                     $acteur->removeAttribute('tooFar');
@@ -309,8 +307,8 @@ class MarcheLivret extends Marche
 
 class MarchePoche extends Marche
 {
-    public $titleCellHeight = 5;
-    public $titleCellBotMargin = 2;
+    public int $titleCellHeight = 5;
+    public int $titleCellBotMargin = 2;
 
     // SousCategorie MarchePoche
     public function NewActeur($annuaire, $acteur)
@@ -391,8 +389,8 @@ class MarchePoche extends Marche
 
 class MarcheCompact extends Marche
 {
-    public $titleCellHeight = 5;
-    public $titleCellBotMargin = 2;
+    public int $titleCellHeight = 5;
+    public int $titleCellBotMargin = 2;
 
     // SousCategorie MarcheCompact
     public function NewActeur($annuaire, $acteur)
@@ -516,7 +514,7 @@ class MarcheCompact extends Marche
 
 class CategorieMarcheLivret extends CategorieLivret
 {
-    protected $tag_ = 'scat';
+    protected string $tag_ = 'scat';
 
     public function typeAttribute()
     {
@@ -531,7 +529,7 @@ class CategorieMarcheLivret extends CategorieLivret
 
 class CategorieMarchePoche extends CategoriePoche
 {
-    protected $tag_ = 'scat';
+    protected string $tag_ = 'scat';
 
     public function typeAttribute()
     {
@@ -546,7 +544,7 @@ class CategorieMarchePoche extends CategoriePoche
 
 class CategorieMarcheCompact extends CategorieCompact
 {
-    protected $tag_ = 'scat';
+    protected string $tag_ = 'scat';
 
     public function typeAttribute()
     {

@@ -6,12 +6,11 @@ require 'acteur.php';
 
 class SousCategorie
 {
-    protected $a;
-    public $cat_;
-    protected $scat_;
-    protected $tag_ = 'acteur';
-    public $titleCellHeight = 6;
-    public $titleCellBotMargin = 4;
+    protected Annuaire $a;
+    public Categorie $cat_;
+    protected SousCategorieImpl $scat_;
+    public int $titleCellHeight = 6;
+    public int $titleCellBotMargin = 4;
 
     public function __construct($pdf, $cat, $scat)
     {
@@ -31,7 +30,7 @@ class SousCategorie
 
     public function get_elements()
     {
-        $full_list = $this->scat_->getElementsByTagName($this->tag_);
+        $full_list = $this->scat_->getActeurs();
 
         return $this->a->entries_to_display($full_list);
     }
@@ -454,8 +453,8 @@ class SousCategorieLivret extends SousCategorie
 
 class SousCategoriePoche extends SousCategorie
 {
-    public $titleCellHeight = 5;
-    public $titleCellBotMargin = 2;
+    public int $titleCellHeight = 5;
+    public int $titleCellBotMargin = 2;
 
     public function NewActeur($annuaire, $acteur)
     {

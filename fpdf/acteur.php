@@ -6,8 +6,8 @@ require 'roundedrect.php';
 
 class Acteur
 {
-    protected $a;
-    public $acteur_;
+    protected Annuaire $a;
+    public ActeurImpl $acteur_;
 
     public function __construct($pdf, $acteur)
     {
@@ -130,9 +130,9 @@ class Acteur
 
 class ActeurPoche extends Acteur
 {
-    private $titre_s = 10;
-    private $bref_s = 8;
-    private $info_s = 8;
+    private int $titre_s = 10;
+    private int $bref_s = 8;
+    private int $info_s = 8;
 
     public function EnteteHeight()
     {
@@ -244,18 +244,18 @@ class ActeurPoche extends Acteur
 
 class ActeurCompact extends Acteur
 {
-    private $new_bullet = '';
+    private string $new_bullet = '';
 
-    private $titre_s = 10;
-    private $titre = '';
-    private $titre_width = -1;
+    private int $titre_s = 10;
+    private string $titre = '';
+    private int $titre_width = -1;
 
-    private $bref_s = 8;
-    private $bref = '';
-    private $bref_width = -1;
+    private int $bref_s = 8;
+    private string $bref = '';
+    private int $bref_width = -1;
 
-    private $tel_or_web = '';
-    private $ville = '';
+    private string $tel_or_web = '';
+    private string $ville = '';
 
     public function EnteteHeight()
     {
@@ -559,7 +559,7 @@ class ActeurLivret extends Acteur
                 $this->a->PrintText($siteweb, $this->a->GetColumnWidth(), 8, 'C');
             }
         }
-        $horaires = $this->acteur_->getElementsByTagName('h');
+        $horaires = $this->acteur_->getHoraires();
         $nbh = $horaires->length;
 
         $this->a->SetFont('Futura', 'B', 10);
@@ -592,7 +592,7 @@ class ActeurLivret extends Acteur
     {
         $this->a->SetCol($col);
         $this->separator($col, $deb_i);
-        $this->Entete();
+        //$this->Entete();
 
         $desc = utf8_decode($this->acteur_->getAttribute('desc'));
         // Font
