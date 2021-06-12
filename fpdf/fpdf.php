@@ -1156,9 +1156,6 @@ protected function _dochecks()
 	// Check mbstring overloading
 	if(ini_get('mbstring.func_overload') & 2)
 		$this->Error('mbstring overloading must be disabled');
-	// Ensure runtime magic quotes are disabled
-	if(get_magic_quotes_runtime())
-		@set_magic_quotes_runtime(0);
 }
 
 protected function _checkoutput()
@@ -2129,5 +2126,108 @@ function RotatedText($x,$y,$txt,$angle)
     $this->Rotate(0);
 }
 
+
+    // Draws a polygon
+    // Parameters:
+    // - p: Points. Array with values x0, y0, x1, y1,..., x(np-1), y(np - 1)
+    // - style: Style of polygon (draw and/or fill) (D, F, DF, FD)
+    // - line_style: Line style. Array with one of this index
+    //   . all: Line style of all lines. Array like for SetLineStyle
+    //   . 0..np-1: Line style of each line. Item is 0 (not line) or like for SetLineStyle
+    // - fill_color: Fill color. Array with components (red, green, blue)
+    function StyledPolygon($p, $style = '', $line_style = null, $fill_color = null) {
+        $np = count($p) / 2;
+        if (!(false === strpos($style, 'F')) && $fill_color) {
+            list($r, $g, $b) = $fill_color;
+            $this->SetFillColor($r, $g, $b);
+        }
+        switch ($style) {
+            case 'F':
+                $line_style = null;
+                $op = 'f';
+                break;
+            case 'FD': case 'DF':
+                $op = 'B';
+                break;
+            default:
+                $op = 'S';
+                break;
+        }
+        $draw = true;
+        if ($line_style)
+            if (isset($line_style['all']))
+                $this->SetLineStyle($line_style['all']);
+            else { // 0 .. (np - 1), op = {B, S}
+                $draw = false;
+                if ('B' == $op) {
+                    $op = 'f';
+                    $this->_Point($p[0], $p[1]);
+                    for ($i = 2; $i < ($np * 2); $i = $i + 2)
+                        $this->_Line($p[$i], $p[$i + 1]);
+                    $this->_Line($p[0], $p[1]);
+                    $this->_out($op);
+                }
+                $p[$np * 2] = $p[0];
+                $p[($np * 2) + 1] = $p[1];
+                for ($i = 0; $i < $np; $i++)
+                    if (!empty($line_style[$i]))
+                        $this->Line($p[$i * 2], $p[($i * 2) + 1], $p[($i * 2) + 2], $p[($i * 2) + 3], $line_style[$i]);
+            }
+
+        if ($draw) {
+            $this->_Point($p[0], $p[1]);
+            for ($i = 2; $i < ($np * 2); $i = $i + 2)
+                $this->_Line($p[$i], $p[$i + 1]);
+            $this->_Line($p[0], $p[1]);
+            $this->_out($op);
+        }
+    }
+
+    // Draws a regular polygon
+    // Parameters:
+    // - x0, y0: Center point
+    // - r: Radius of circumscribed circle
+    // - ns: Number of sides
+    // - angle: Orientation angle (anti-clockwise)
+    // - style: Style of polygon (draw and/or fill) (D, F, DF, FD)
+    // - line_style: Line style. Array with one of this index
+    //   . all: Line style of all lines. Array like for SetLineStyle
+    //   . 0..ns-1: Line style of each line. Item is 0 (not line) or like for SetLineStyle
+    // - fill_color: Fill color. Array with components (red, green, blue)
+    function RegularPolygon($x0, $y0, $r, $ns, $angle = 0, $style = '', $line_style = null, $fill_color = null) {
+        if ($ns < 3)
+            $ns = 3;
+        $p = null;
+        for ($i = 0; $i < $ns; $i++) {
+            $a = $angle + ($i * 360 / $ns);
+            $a_rad = deg2rad((float) $a);
+            $p[] = $x0 + ($r * sin($a_rad));
+            $p[] = $y0 + ($r * cos($a_rad));
+        }
+        $this->StyledPolygon($p, $style, $line_style, $fill_color);
+    }
+
+    // Sets a draw point
+    // Parameters:
+    // - x, y: Point
+    function _Point($x, $y) {
+        $this->_out(sprintf('%.2F %.2F m', $x * $this->k, ($this->h - $y) * $this->k));
+    }
+
+    // Draws a line from last draw point
+    // Parameters:
+    // - x, y: End point
+    function _Line($x, $y) {
+        $this->_out(sprintf('%.2F %.2F l', $x * $this->k, ($this->h - $y) * $this->k));
+    }
+
+    // Draws a Bézier curve from last draw point
+    // Parameters:
+    // - x1, y1: Control point 1
+    // - x2, y2: Control point 2
+    // - x3, y3: End point
+    function _Curve($x1, $y1, $x2, $y2, $x3, $y3) {
+        $this->_out(sprintf('%.2F %.2F %.2F %.2F %.2F %.2F c', $x1 * $this->k, ($this->h - $y1) * $this->k, $x2 * $this->k, ($this->h - $y2) * $this->k, $x3 * $this->k, ($this->h - $y3) * $this->k));
+    }
 }
 ?>
