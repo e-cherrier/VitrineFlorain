@@ -41,7 +41,7 @@ class Acteur
     {
         $today = new DateTime();
         $today->setTimestamp(time());
-        $oneMonthAgo = $today->sub(DateInterval::createFromDateString('1 month'));
+        $oneMonthAgo = $today->sub(DateInterval::createFromDateString('3 months'));
 
         $date = $this->acteur_->getAttribute('date');
         $aggDate = DateTime::createFromFormat('d-m-Y', $date);
