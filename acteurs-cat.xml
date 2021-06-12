@@ -25,8 +25,8 @@
         desc="épicerie rurale qui propose des produits locaux, bio et en vrac issus du territoire sud lorrain."
         citation=""
         telephone=""
-        latitude="5.944890"
-        longitude="48.583797"
+        latitude="5.944926712522731"
+        longitude="48.58378758810858"
         adresse="44, rue Andre David, 54170 Ochey"
         colombey_ctb21="14h-18h"/>    
       <acteur date="14-05-2021"
@@ -526,7 +526,8 @@
         defi="Passer au ENR pour l'électricité"
         latitude="5.677933"
         longitude="49.015167"
-        edition="toutes" />
+        edition="toutes"
+        nancy-ctb21="oui" />
       <acteur anniv="oui"
         fete="oui"
         siteweb="www.glaces-marchetto.fr"
@@ -536,18 +537,10 @@
         bref="Paysan Glacier BIO"
         desc="Paysan Glacier en agriculture biologique. Production fruitière: mirabelle, quetsche, cerise, pomme, fraise, petits fruits. Transformation en: sorbets-glaces - pâtisseries glacées - nectar/jus de fruit - confitures."
         telephone="06 29 60 17 40"
-        latitude="5.94489097595"
-        longitude="48.5837972914"
+        latitude="5.94511617115458"
+        longitude="48.5838890467988"
         adresse="44, rue Andre David, 54170 Ochey"
-        colombey_ctb21="16h-18h"
-      >
-        <h l="du mardi au vendredi"
-          t="16h00 - 19h00"/>
-        <h l="le samedi"
-          t="10h00 - 19h00"/>
-        <h l="le dimanche"
-          t="10h00 - 13h00"/>
-      </acteur>
+        colombey_ctb21="16h-18h"/>
       <acteur image="mariegauvain.jpg"
         marche="vandoeuvre"
         titre="La Ferme de Marie"
@@ -1032,9 +1025,10 @@
         desc="L'Auberge du Fort, un restaurant panoramique situé à 420 m d'altitude avec une vue imprenable sur le Saintois. Notre chef propose des menus élaborés à partir de produits frais et de saison."
         adresse="Fort Pélissier, 54550 Bainville sur Madon"
         telephone="03 83 25 07 07"
-        latitude="6.090545"
-        longitude="48.597017" />
+        latitude="6.0915369788586595"
+        longitude="48.59741095936268" />
       <acteur date="18-10-2019"
+        nancy-ctb21="oui"
         siteweb="www.lesdelicesdetometwale.fr"
         image="lesdelicesdetometwale.jpg"
         titre="Les délices de Tom &amp; Walé"
